@@ -11,10 +11,11 @@ function etToUtc(dateStr: string, timeStr: string): Date {
 
 export async function GET() {
   const now = new Date();
-  const all = await prisma.event.findMany({
+  type EventRecord = { eventAt: Date };
+  const all = (await prisma.event.findMany({
     where: { showOnHomepage: true },
     orderBy: { eventAt: "desc" },
-  });
+  })) as EventRecord[];
   const upcoming = all.filter((e) => e.eventAt >= now).sort((a, b) => a.eventAt.getTime() - b.eventAt.getTime());
   const past = all.filter((e) => e.eventAt < now);
   return NextResponse.json({ upcoming, past });
