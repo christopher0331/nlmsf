@@ -33,6 +33,14 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "media.nlmsf.org",
+      },
+      {
+        protocol: "http",
+        hostname: "media.nlmsf.org",
+      },
+      {
+        protocol: "https",
         hostname: "via.placeholder.com",
       },
       {
