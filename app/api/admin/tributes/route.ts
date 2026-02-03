@@ -26,9 +26,20 @@ export async function GET() {
     }
   }
 
-  const tributes = await prisma.tribute.findMany({
+  type TributeRecord = {
+    id: string;
+    name: string;
+    slug: string;
+    biography: string;
+    imageUrl: string | null;
+    displayOrder: number;
+    isPublished: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+  };
+  const tributes = (await prisma.tribute.findMany({
     orderBy: [{ displayOrder: "asc" }, { name: "asc" }],
-  });
+  })) as TributeRecord[];
   return NextResponse.json(
     tributes.map((t) => ({
       id: t.id,
