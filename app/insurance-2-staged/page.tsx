@@ -151,7 +151,7 @@ export default function Insurance2StagedPage() {
           </p>
           <p className="ins2-para">
             <Image
-              src="https://media.nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
+              src="https://nlsmf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
               alt="Triage Cancer"
               className="ins2-img-inline"
               width={110}

@@ -133,7 +133,7 @@ export default function CoSurvivorTipsPage() {
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="shrink-0 w-full md:w-[200px]">
                   <Image
-                    src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
+                    src="https://nlsmf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
                     alt="Co-Survivors Supporting Cancer Patients"
                     className="w-full rounded-lg"
                     width={640}

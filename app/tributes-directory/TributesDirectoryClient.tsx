@@ -13,7 +13,7 @@ type Tribute = {
   created_at: string;
 };
 
-const BANNER_IMAGE = "https://media.nlmsf.org/wp-content/uploads/2025/10/people-scaled.jpg";
+const BANNER_IMAGE = "https://nlsmf.org/wp-content/uploads/2025/10/people-scaled.jpg";
 
 function stripHtml(html: string): string {
   if (typeof document === "undefined") {

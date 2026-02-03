@@ -162,7 +162,7 @@ export default function BeASuccessfulCaregiverAdvocatePage() {
                   <figure className="resource-image">
                     <a href="https://nlmsf.org/caregiver-traits/" target="_blank" rel="noopener noreferrer">
                       <Image
-                        src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-55.jpg"
+                        src="https://nlsmf.org/wp-content/uploads/2020/06/unnamed-55.jpg"
                         alt="Special Traits of Caregivers"
                         width={640}
                         height={360}
@@ -190,7 +190,7 @@ export default function BeASuccessfulCaregiverAdvocatePage() {
                   <figure className="resource-image">
                     <a href="https://nlmsf.org/resource-support/" target="_blank" rel="noopener noreferrer">
                       <Image
-                        src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-56.jpg"
+                        src="https://nlsmf.org/wp-content/uploads/2020/06/unnamed-56.jpg"
                         alt="Resource Support"
                         width={640}
                         height={360}
@@ -215,7 +215,7 @@ export default function BeASuccessfulCaregiverAdvocatePage() {
                   <figure className="resource-image">
                     <a href="https://nlmsf.org/co-survivors-tips/" target="_blank" rel="noopener noreferrer">
                       <Image
-                        src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
+                        src="https://nlsmf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
                         alt="Co-Survivor Tips"
                         width={640}
                         height={360}
@@ -252,7 +252,7 @@ export default function BeASuccessfulCaregiverAdvocatePage() {
               <div className="universal-caregiving">
                 <div className="image-container">
                   <Image
-                    src="https://media.nlmsf.org/wp-content/uploads/2021/01/CargivingisUniversal.jpg"
+                    src="https://nlsmf.org/wp-content/uploads/2021/01/CargivingisUniversal.jpg"
                     alt="Caregiving is Universal"
                     width={640}
                     height={360}
@@ -474,7 +474,7 @@ export default function BeASuccessfulCaregiverAdvocatePage() {
               <div className="resource-highlight">
                 <div className="highlight-image">
                   <Image
-                    src="https://media.nlmsf.org/wp-content/uploads/2020/10/books-300x200.png"
+                    src="https://nlsmf.org/wp-content/uploads/2020/10/books-300x200.png"
                     alt="Caregiver Books"
                     width={640}
                     height={360}
@@ -509,7 +509,7 @@ export default function BeASuccessfulCaregiverAdvocatePage() {
               <div className="caregiver-care">
                 <div className="image-container">
                   <Image
-                    src="https://media.nlmsf.org/wp-content/uploads/2021/01/carinfgFortheCaregiver.jpg"
+                    src="https://nlsmf.org/wp-content/uploads/2021/01/carinfgFortheCaregiver.jpg"
                     alt="Caring For The Caregiver"
                     width={640}
                     height={360}

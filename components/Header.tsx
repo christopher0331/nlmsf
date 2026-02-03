@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const LOGO_SRC =
-  "https://media.nlmsf.org/wp-content/uploads/2023/10/NLMSF-Logo-Updated-30-Apr-2023.png";
+  "https://nlsmf.org/wp-content/uploads/2023/10/NLMSF-Logo-Updated-30-Apr-2023.png";
 const PHONE = "(303) 808-3437";
 const DONATE_URL = "https://nlmsf.org/?form=DONATE";
 

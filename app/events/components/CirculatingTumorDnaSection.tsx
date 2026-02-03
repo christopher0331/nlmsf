@@ -34,7 +34,7 @@ export default function CirculatingTumorDnaSection() {
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-4.43.49 PM.png"
+                  src="https://nlsmf.org/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-4.43.49 PM.png"
                   alt="Video Thumbnail"
                   width={640}
                   height={360}

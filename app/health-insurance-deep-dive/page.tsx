@@ -247,7 +247,7 @@ export default function HealthInsuranceDeepDivePage() {
               </div>
               <div className="resource-highlight">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
                   alt="Triage Cancer Logo"
                   className="resource-icon"
                   width={240}

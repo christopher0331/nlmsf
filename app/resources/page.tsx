@@ -194,7 +194,7 @@ export default function ResourcesPage() {
                 </p>
                 <div className="text-center">
                   <a
-                    href="https://media.nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.pdf"
+                    href="https://nlsmf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.pdf"
                     className="resource-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -249,7 +249,7 @@ export default function ResourcesPage() {
                   </p>
                   <div className="text-center">
                     <a
-                      href="https://media.nlmsf.org/wp-content/uploads/2021/09/NLMSF-IMERMAN-ANGELS-PARTNERSHIP.pdf"
+                      href="https://nlsmf.org/wp-content/uploads/2021/09/NLMSF-IMERMAN-ANGELS-PARTNERSHIP.pdf"
                       className="resource-link"
                       target="_blank"
                       rel="noopener noreferrer"

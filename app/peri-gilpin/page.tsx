@@ -16,7 +16,7 @@ export default function PeriGilpinPage() {
         <div className="peri-hero-inner">
           <div className="peri-image-wrap">
             <Image
-              src="https://media.nlmsf.org/wp-content/uploads/2020/03/peri-197x300-1.jpg"
+              src="https://nlsmf.org/wp-content/uploads/2020/03/peri-197x300-1.jpg"
               alt="Peri Gilpin"
               width={197}
               height={300}

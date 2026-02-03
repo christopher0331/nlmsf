@@ -56,12 +56,12 @@ export default function SupportPage() {
           </p>
           <ul className="support-report-links">
             <li><a href="https://bit.ly/31O7obA" {...ext}>NLMSF Annual Report 2021</a></li>
-            <li><a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2020-Final.docx" {...ext}>NLMSF Annual Report 2020</a></li>
-            <li><a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2019-2020-1-2-1.docx" {...ext}>NLMSF Annual Report 2019</a></li>
-            <li><a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2018-1.docx" {...ext}>NLMSF Annual Report 2018</a></li>
-            <li><a href="https://media.nlmsf.org/wp-content/uploads/2021/02/NLMSF-Annual-Report-2017-.docx.pdf" {...ext}><strong>NLMSF Annual Report 2017</strong></a></li>
-            <li><a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2016.pdf" {...ext}>NLMSF Annual Report 2016</a></li>
-            <li><a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2015.pdf" {...ext}>NLMSF Annual Report 2015</a></li>
+            <li><a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2020-Final.docx" {...ext}>NLMSF Annual Report 2020</a></li>
+            <li><a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2019-2020-1-2-1.docx" {...ext}>NLMSF Annual Report 2019</a></li>
+            <li><a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2018-1.docx" {...ext}>NLMSF Annual Report 2018</a></li>
+            <li><a href="https://nlsmf.org/wp-content/uploads/2021/02/NLMSF-Annual-Report-2017-.docx.pdf" {...ext}><strong>NLMSF Annual Report 2017</strong></a></li>
+            <li><a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2016.pdf" {...ext}>NLMSF Annual Report 2016</a></li>
+            <li><a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2015.pdf" {...ext}>NLMSF Annual Report 2015</a></li>
           </ul>
         </section>
       </div>

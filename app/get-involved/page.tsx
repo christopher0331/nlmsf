@@ -52,7 +52,7 @@ export default function GetInvolvedPage() {
               <a href="https://nlmsf.org/donate/" {...ext}>
                 <Image
                   className="sidebar-widget-image"
-                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2021/01/donate-circle.jpg"
                   alt="Donate"
                   width={240}
                   height={240}
@@ -115,7 +115,7 @@ export default function GetInvolvedPage() {
             <div className="sidebar-widget-content">
               <Image
                 className="sidebar-widget-image"
-                src="https://media.nlmsf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg"
+                src="https://nlsmf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg"
                 alt="NLMSF Logo"
                 width={240}
                 height={240}
@@ -132,7 +132,7 @@ export default function GetInvolvedPage() {
             <div className="sidebar-widget-content">
               <Image
                 className="sidebar-widget-image"
-                src="https://media.nlmsf.org/wp-content/uploads/2021/02/PeriGilpin.jpg"
+                src="https://nlsmf.org/wp-content/uploads/2021/02/PeriGilpin.jpg"
                 alt="Peri Gilpin"
                 width={240}
                 height={240}
@@ -151,16 +151,16 @@ export default function GetInvolvedPage() {
               <a href="https://sarcomacoalition.us/" {...ext}>
                 <Image
                   className="sidebar-widget-image"
-                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-15.42.31.png"
+                  src="https://nlsmf.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-15.42.31.png"
                   alt="Sarcoma Coalition"
                   width={240}
                   height={240}
                 />
               </a>
               <div className="seals-row">
-                <Image src="https://media.nlmsf.org/wp-content/uploads/2021/03/Seals.jpg" alt="Seal" width={240} height={240} />
-                <Image src="https://media.nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg" alt="GuideStar Seal" width={240} height={240} />
-                <Image src="https://media.nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg" alt="Top Rated Seal" width={240} height={240} />
+                <Image src="https://nlsmf.org/wp-content/uploads/2021/03/Seals.jpg" alt="Seal" width={240} height={240} />
+                <Image src="https://nlsmf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg" alt="GuideStar Seal" width={240} height={240} />
+                <Image src="https://nlsmf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg" alt="Top Rated Seal" width={240} height={240} />
               </div>
               <p>
                 Bridging collaborations through advocacy, with organizations to amplify resources and support for patients and families.
@@ -186,17 +186,17 @@ export default function GetInvolvedPage() {
             <h3>Past Fundraising Events</h3>
             <ul className="past-events-list">
               <li>
-                <a href="https://media.nlmsf.org/wp-content/uploads/2021/07/NLMSF-Jim-Grim-and-Tom-Minnock-Tribute-Fundraiser-2.docx.pdf" {...ext}>
+                <a href="https://nlsmf.org/wp-content/uploads/2021/07/NLMSF-Jim-Grim-and-Tom-Minnock-Tribute-Fundraiser-2.docx.pdf" {...ext}>
                   The English Channel Swim in Memory of Jim Grimm
                 </a>
               </li>
               <li>
-                <a href="https://media.nlmsf.org/wp-content/uploads/2021/07/NLMSF-Rodney-Williams-Golf-Outing-for-Tom.docx.pdf" {...ext}>
+                <a href="https://nlsmf.org/wp-content/uploads/2021/07/NLMSF-Rodney-Williams-Golf-Outing-for-Tom.docx.pdf" {...ext}>
                   The Golf Outing in Memory of Ted Cimafranca
                 </a>
               </li>
               <li>
-                <a href="https://media.nlmsf.org/wp-content/uploads/2021/08/Neal-Jacobs-Golf-Tournament-2021.docx.pdf" className="highlight" {...ext}>
+                <a href="https://nlsmf.org/wp-content/uploads/2021/08/Neal-Jacobs-Golf-Tournament-2021.docx.pdf" className="highlight" {...ext}>
                   <strong>Golf Outing in Memory of Neal Jacobs (Annual)</strong>
                 </a>
               </li>
@@ -215,7 +215,7 @@ export default function GetInvolvedPage() {
             </ul>
             <div className="roundtable-wrap" style={{ textAlign: "center", marginTop: "30px" }}>
               <Image
-                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Roundtable-2022-Group-Photo-resized-jpeg-2-300x200.jpeg"
+                src="https://nlsmf.org/wp-content/uploads/2023/02/Roundtable-2022-Group-Photo-resized-jpeg-2-300x200.jpeg"
                 alt="Roundtable 2022 Group Photo"
                 style={{ borderRadius: "8px" }}
                 width={1200}
@@ -236,7 +236,7 @@ export default function GetInvolvedPage() {
             <div className="action-card purple">
               <div className="action-card-image">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-8.png"
+                  src="https://nlsmf.org/wp-content/uploads/2020/07/unnamed-8.png"
                   alt="Donate"
                   width={640}
                   height={360}
@@ -256,7 +256,7 @@ export default function GetInvolvedPage() {
             <div className="action-card blue">
               <div className="action-card-image">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/06/austin-kehmeier-lyiKExA4zQA-unsplash-scaled.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2020/06/austin-kehmeier-lyiKExA4zQA-unsplash-scaled.jpg"
                   alt="Learn How you can help"
                   width={640}
                   height={360}
@@ -279,7 +279,7 @@ export default function GetInvolvedPage() {
             <div className="action-card teal">
               <div className="action-card-image">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2020/07/unnamed-70.jpg"
                   alt="Gift Shop"
                   width={640}
                   height={360}
@@ -299,7 +299,7 @@ export default function GetInvolvedPage() {
             <div className="action-card amber">
               <div className="action-card-image">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/08/unnamed-71.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2020/08/unnamed-71.jpg"
                   alt="Your Voice Matters"
                   width={640}
                   height={360}
@@ -322,7 +322,7 @@ export default function GetInvolvedPage() {
             <div className="gallery-grid">
               <div className="gallery-item">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-64.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2020/07/unnamed-64.jpg"
                   alt="NLMSF Event"
                   width={640}
                   height={360}
@@ -330,7 +330,7 @@ export default function GetInvolvedPage() {
               </div>
               <div className="gallery-item">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-65.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2020/07/unnamed-65.jpg"
                   alt="NLMSF Event"
                   width={640}
                   height={360}
@@ -338,7 +338,7 @@ export default function GetInvolvedPage() {
               </div>
               <div className="gallery-item">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-62.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2020/07/unnamed-62.jpg"
                   alt="NLMSF Event"
                   width={640}
                   height={360}
@@ -346,7 +346,7 @@ export default function GetInvolvedPage() {
               </div>
               <div className="gallery-item">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-63.jpg"
+                  src="https://nlsmf.org/wp-content/uploads/2020/07/unnamed-63.jpg"
                   alt="NLMSF Event"
                   width={640}
                   height={360}
@@ -354,7 +354,7 @@ export default function GetInvolvedPage() {
               </div>
               <div className="gallery-item">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2021/03/Support-group.jpeg"
+                  src="https://nlsmf.org/wp-content/uploads/2021/03/Support-group.jpeg"
                   alt="Support group"
                   width={640}
                   height={360}
