@@ -111,7 +111,7 @@ export default function NewDiagnosisPage() {
             <h3 className="sidebar-subtitle">Featured Resource</h3>
             <div className="featured-resource">
               <Image
-                src="https://nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.jpg"
                 alt="NLMSF Brochure"
                 className="featured-image"
                 width={240}
@@ -120,7 +120,7 @@ export default function NewDiagnosisPage() {
               <h4>NLMSF Patient &amp; Family Brochure</h4>
               <p>Access our comprehensive guide for patients and families newly diagnosed with LMS.</p>
               <a
-                href="https://nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.pdf"
+                href="https://media.nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.pdf"
                 className="resource-button"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -201,7 +201,7 @@ export default function NewDiagnosisPage() {
             <div className="donate-cta">
               <a href="https://nlmsf.org/donate/" className="donate-link">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
                   alt="Donate to NLMSF"
                   className="donate-image"
                   width={240}
@@ -239,7 +239,7 @@ export default function NewDiagnosisPage() {
           <div className="sidebar-section">
             <div className="nlmsf-logo">
               <Image
-                src="https://nlmsf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg"
                 alt="NLMSF Logo"
                 width={240}
                 height={240}
@@ -267,7 +267,7 @@ export default function NewDiagnosisPage() {
             <div className="peri-section">
               <div className="peri-image">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/02/PeriGilpin.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/PeriGilpin.jpg"
                   alt="Peri Gilpin"
                   width={240}
                   height={240}
@@ -288,7 +288,7 @@ export default function NewDiagnosisPage() {
               <div className="certification-logos">
                 <a href="https://sarcomacoalition.us/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-15.42.31.png"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-15.42.31.png"
                     alt="Sarcoma Coalition"
                     className="certification-logo"
                     width={240}
@@ -298,21 +298,21 @@ export default function NewDiagnosisPage() {
 
                 <div className="certification-seals">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2021/03/Seals.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/03/Seals.jpg"
                     alt="Certification Seal"
                     className="certification-seal"
                     width={240}
                     height={240}
                   />
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
                     alt="GuideStar Seal"
                     className="certification-seal"
                     width={240}
                     height={240}
                   />
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
                     alt="Top Rated Seal"
                     className="certification-seal"
                     width={240}
@@ -339,7 +339,7 @@ export default function NewDiagnosisPage() {
                 <div className="card-image">
                   <a href="https://nlmsf.org/what-is-lms/">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-44.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-44.jpg"
                       alt="What is LMS?"
                       width={640}
                       height={360}
@@ -360,7 +360,7 @@ export default function NewDiagnosisPage() {
                 <div className="card-image">
                   <a href="https://nlmsf.org/navigating-leiomyosarcoma-treatment-after-treatment/">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-41.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-41.jpg"
                       alt="New Diagnosis/Treatment"
                       width={640}
                       height={360}
@@ -381,7 +381,7 @@ export default function NewDiagnosisPage() {
                 <div className="card-image">
                   <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7924026/">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/03/Cancers.png"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/03/Cancers.png"
                       alt="NLMSF-SPAEN Publication"
                       width={640}
                       height={360}
@@ -409,7 +409,7 @@ export default function NewDiagnosisPage() {
                 <div className="card-image">
                   <a href="https://nlmsf.org/find-a-sarcoma-specialist/">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2020/06/cancer-cells-541954__480-1.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2020/06/cancer-cells-541954__480-1.jpg"
                       alt="Finding a Sarcoma Center of Excellence"
                       width={640}
                       height={360}
@@ -430,7 +430,7 @@ export default function NewDiagnosisPage() {
                 <div className="card-image">
                   <a href="https://nlmsf.org/staging-lms-tumors/">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-32.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-32.jpg"
                       alt="LMS Tumor Assessment"
                       width={640}
                       height={360}
@@ -453,7 +453,7 @@ export default function NewDiagnosisPage() {
                 <div className="card-image">
                   <a href="https://nlmsf.org/molecular-tumor-testing/">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2020/11/blue-box.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2020/11/blue-box.jpg"
                       alt="Molecular Tumor Testing"
                       width={640}
                       height={360}
@@ -538,7 +538,7 @@ export default function NewDiagnosisPage() {
                   </li>
                   <li>
                     <a
-                      href="https://nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.pdf"
+                      href="https://media.nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.pdf"
                       className="resource-link"
                       target="_blank"
                       rel="noopener noreferrer"

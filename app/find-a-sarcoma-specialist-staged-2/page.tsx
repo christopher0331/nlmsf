@@ -31,7 +31,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
             <section className="nlmsf-specialist-block">
               <figure className="nlmsf-block-figure nlmsf-figure-center">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/02/sarc_logo_web.gif"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/sarc_logo_web.gif"
                   alt="SARC logo"
                   width={304}
                   height={74}
@@ -59,7 +59,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
             <section className="nlmsf-specialist-block">
               <div className="nlmsf-block-with-image">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/03/NIH.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/03/NIH.jpg"
                   alt="NIH"
                   width={200}
                   height={110}
@@ -87,7 +87,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
             <section id="telemedicine" className="nlmsf-specialist-block">
               <div className="nlmsf-block-with-image">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/02/SARCpage.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/SARCpage.jpg"
                   alt="SARC page"
                   width={237}
                   height={300}
@@ -123,7 +123,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
 
               <div className="nlmsf-resource-card">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/02/PartnersHealthcare.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/PartnersHealthcare.jpg"
                   alt="Partners Healthcare"
                   width={160}
                   height={96}
@@ -150,7 +150,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
 
               <div className="nlmsf-resource-card">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/02/GrandRounds.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/GrandRounds.jpg"
                   alt="Grand Rounds"
                   width={320}
                   height={58}

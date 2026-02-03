@@ -205,7 +205,7 @@ export default function NutritionAndPhysicalActivityClient() {
               </div>
               <div className="savor-infographic">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2025/12/1765933344411blob.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2025/12/1765933344411blob.png"
                   alt="SAVOR Health nutrition program infographic"
                   width={1200}
                   height={800}

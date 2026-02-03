@@ -192,7 +192,7 @@ export default function TransportationLodgingPage() {
             <h4>Featured Resource</h4>
             <div className="tl-featured-resource">
               <Image
-                src="https://nlmsf.org/wp-content/uploads/2021/05/hope-lodge.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/05/hope-lodge.jpg"
                 alt="Hope Lodge"
                 className="tl-featured-image"
                 width={320}
@@ -236,7 +236,7 @@ export default function TransportationLodgingPage() {
             <div className="tl-donate">
               <a href="https://nlmsf.org/donate/" className="tl-donate-link">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
                   alt="Donate to NLMSF"
                   width={120}
                   height={120}

@@ -366,7 +366,7 @@ export default function DonatePage() {
               <div className="overflow-hidden rounded-2xl border-l-4 border-[#7e22ce] border border-gray-200/80 bg-white p-6 md:p-8 shadow-lg shadow-gray-200/50 transition-all duration-300 hover:shadow-xl hover:border-violet-200">
                 <div className="flex flex-wrap items-center gap-4 mb-5">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2021/02/JustGivings.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/02/JustGivings.jpg"
                     alt="Just Giving"
                     className="max-h-14 w-auto object-contain rounded-lg"
                     width={240}
@@ -392,7 +392,7 @@ export default function DonatePage() {
                 </div>
                 <div className="flex flex-col gap-6 md:flex-row md:items-start mb-6">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2022/06/Cars.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2022/06/Cars.jpg"
                     alt="CARS"
                     className="max-w-full h-auto md:max-w-[220px] rounded-xl shadow-md shrink-0"
                     width={640}
@@ -407,7 +407,7 @@ export default function DonatePage() {
                 </div>
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-100 bg-gray-50/80 p-5 md:flex-row md:items-center">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2022/06/HomeCars.png"
+                    src="https://media.nlmsf.org/wp-content/uploads/2022/06/HomeCars.png"
                     alt="Home CARS"
                     className="max-w-[150px] h-auto shrink-0"
                     width={240}
@@ -456,7 +456,7 @@ export default function DonatePage() {
                 </div>
                 <div className="flex flex-col gap-6 md:flex-row md:items-center">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2020/12/stocks.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2020/12/stocks.jpg"
                     alt="Securities Donations"
                     className="max-w-[200px] h-auto rounded-xl shadow-md shrink-0"
                     width={640}
@@ -478,7 +478,7 @@ export default function DonatePage() {
                 </div>
                 <div className="flex flex-col gap-6 md:flex-row md:items-start">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2020/12/planned-giving.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2020/12/planned-giving.jpg"
                     alt="Planned Giving"
                     className="max-w-[200px] h-auto rounded-xl shadow-md shrink-0"
                     width={640}
@@ -531,7 +531,7 @@ export default function DonatePage() {
                 <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-6 md:p-8 shadow-lg shadow-gray-200/50 transition-all duration-300 hover:shadow-xl">
                   <div className="flex items-center gap-4 mb-5">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2020/12/ebay.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2020/12/ebay.jpg"
                       alt="eBay"
                       className="max-h-14 w-auto object-contain rounded-lg"
                       width={240}
@@ -547,7 +547,7 @@ export default function DonatePage() {
                 <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-6 md:p-8 shadow-lg shadow-gray-200/50 transition-all duration-300 hover:shadow-xl">
                   <div className="flex items-center gap-4 mb-5">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2022/08/kroger.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2022/08/kroger.jpg"
                       alt="Kroger"
                       className="max-h-14 w-auto object-contain rounded-lg"
                       width={240}

@@ -17,7 +17,7 @@ export default function LmsCountMeInProjectPage() {
         <h2 className="count-me-in-section-title">Patients Take Action</h2>
         <div className="count-me-in-logo">
           <Image
-            src="https://nlmsf.org/wp-content/uploads/2023/02/Coun-Me-In-Logo-1.png"
+            src="https://media.nlmsf.org/wp-content/uploads/2023/02/Coun-Me-In-Logo-1.png"
             alt="Count Me In logo"
             width={300}
             height={120}

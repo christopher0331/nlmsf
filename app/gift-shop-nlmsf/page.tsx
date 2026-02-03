@@ -104,7 +104,7 @@ export default function GiftShopNlmsfPage() {
                 </div>
                 <div className="featured-book-image">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2026/01/Goodnight-Mama-FRONT.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2026/01/Goodnight-Mama-FRONT.jpg"
                     alt="Goodnight Mama - A book supporting the National Leiomyosarcoma Foundation"
                     loading="lazy"
                     width={640}
@@ -352,7 +352,7 @@ export default function GiftShopNlmsfPage() {
                   <div className="product-card">
                     <div className="product-image">
                       <Image
-                        src="https://nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg"
                         alt="NLMSF Purple Support Bands"
                         width={640}
                         height={360}
@@ -373,7 +373,7 @@ export default function GiftShopNlmsfPage() {
                   <div className="product-card">
                     <div className="product-image">
                       <Image
-                        src="https://nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png"
+                        src="https://media.nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png"
                         alt="NLMSF Ball Cap"
                         width={640}
                         height={360}

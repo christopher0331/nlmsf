@@ -283,7 +283,7 @@ export default function ResearchInitiativesPage() {
                 </div>
               </div>
               <Image
-                src="https://nlmsf.org/wp-content/uploads/2025/10/pub-med-logo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2025/10/pub-med-logo.jpg"
                 alt="PubMed"
                 className="ri-badge-logo"
                 width={260}

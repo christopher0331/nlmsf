@@ -208,7 +208,7 @@ export default function FindASarcomaSpecialistPage() {
                   <div className="center-card">
                     <div className="center-card-inner">
                       <Image
-                        src="https://nlmsf.org/wp-content/uploads/2021/02/SARC.jpg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2021/02/SARC.jpg"
                         alt="SARC Logo"
                         className="center-card-img"
                         width={240}
