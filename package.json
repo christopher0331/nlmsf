@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
+    "db:clone-to-turso": "node scripts/clone-local-db-to-turso.js",
     "seed:community-news": "node scripts/seed-community-news-from-wp-csv.js"
   },
   "dependencies": {
     "@prisma/adapter-better-sqlite3": "^7.3.0",
+    "@prisma/adapter-libsql": "^7.3.0",
     "@prisma/client": "^7.3.0",
     "better-sqlite3": "^12.6.2",
     "mysql2": "^3.16.2",
