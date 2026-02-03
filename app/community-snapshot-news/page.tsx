@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getFullFeed } from "@/lib/community-news";
 import CommunityNewsFeed from "./CommunityNewsFeed";
@@ -186,11 +187,12 @@ export default async function CommunitySnapshotNewsPage() {
 
         <div className="min-w-0 order-1 lg:order-2">
           <div className="hero-badge flex justify-center mb-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2025/08/snapshotlogo.png"
               alt="Community Snapshot Logo"
               className="snapshot-logo-badge max-w-[35%] h-auto drop-shadow-md transition-transform duration-300 hover:scale-105"
+              width={240}
+              height={240}
             />
           </div>
 

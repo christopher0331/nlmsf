@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./gift-shop.css";
 
 export const metadata: Metadata = {
@@ -37,7 +38,12 @@ export default function GiftShopPage() {
           </div>
         </div>
         <div className="hero-image">
-          <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg" alt="NLMSF Gift Shop" />
+          <Image
+            src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg"
+            alt="NLMSF Gift Shop"
+            width={1200}
+            height={800}
+          />
         </div>
       </section>
 
@@ -98,7 +104,12 @@ export default function GiftShopPage() {
                 </div>
               </div>
               <div className="featured-book-image">
-                <img src="https://nlmsf.org/wp-content/uploads/2026/01/Goodnight-Mama-FRONT.jpg" alt="Goodnight Mama - A book supporting the National Leiomyosarcoma Foundation" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2026/01/Goodnight-Mama-FRONT.jpg"
+                  alt="Goodnight Mama - A book supporting the National Leiomyosarcoma Foundation"
+                  width={640}
+                  height={360}
+                />
               </div>
             </div>
           </section>
@@ -112,7 +123,12 @@ export default function GiftShopPage() {
             <div className="content-panel">
               <div className="intro-content">
                 <div className="intro-logo">
-                  <img src="https://nlmsf.org/wp-content/uploads/2021/02/Gift-shop-box.jpg" alt="Gift Shop Box" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2021/02/Gift-shop-box.jpg"
+                    alt="Gift Shop Box"
+                    width={640}
+                    height={360}
+                  />
                 </div>
                 <div className="intro-text">
                   <p className="highlight">Many of the items at the store have been donated to the Foundation by companies, friends, families of survivors and LMS Angels.</p>
@@ -142,7 +158,12 @@ export default function GiftShopPage() {
               <div className="product-row">
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6015.jpg" alt="NLMSF Support T-shirts" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6015.jpg"
+                      alt="NLMSF Support T-shirts"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>NLMSF Support T-shirts</h3>
@@ -157,7 +178,12 @@ export default function GiftShopPage() {
                 </div>
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_5487.jpg" alt="Handmade Jewelry Clips" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_5487.jpg"
+                      alt="Handmade Jewelry Clips"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>Handmade Jewelry Clips</h3>
@@ -170,7 +196,12 @@ export default function GiftShopPage() {
               <div className="product-row">
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6650.jpg" alt="Fall Tree Notecard" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6650.jpg"
+                      alt="Fall Tree Notecard"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>Fall Tree Notecard</h3>
@@ -184,7 +215,12 @@ export default function GiftShopPage() {
                 </div>
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6210.jpg" alt="Purple Flower Notecard" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6210.jpg"
+                      alt="Purple Flower Notecard"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>Purple Flower Notecard</h3>
@@ -200,7 +236,12 @@ export default function GiftShopPage() {
               <div className="product-row">
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6338-scaled.jpg" alt="Sunset Notecard" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6338-scaled.jpg"
+                      alt="Sunset Notecard"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>Sunset Notecard</h3>
@@ -214,7 +255,12 @@ export default function GiftShopPage() {
                 </div>
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_8096.jpeg" alt="Hand Painted Throw Pillow" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_8096.jpeg"
+                      alt="Hand Painted Throw Pillow"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>Hand Painted Throw Pillow</h3>
@@ -229,7 +275,12 @@ export default function GiftShopPage() {
               <div className="product-row">
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/06/Ceramic-Mugs.jpg" alt="Ceramic Cup" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/06/Ceramic-Mugs.jpg"
+                      alt="Ceramic Cup"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>Ceramic Cup</h3>
@@ -242,7 +293,12 @@ export default function GiftShopPage() {
                 </div>
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/07/NLMSF-Sign.jpg" alt="NLMSF Support Yard Sign" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/07/NLMSF-Sign.jpg"
+                      alt="NLMSF Support Yard Sign"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>NLMSF Support Yard Sign</h3>
@@ -257,7 +313,12 @@ export default function GiftShopPage() {
               <div className="product-row">
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2022/04/Keyring.png" alt="LMS Wrist Bands or KeyChain" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2022/04/Keyring.png"
+                      alt="LMS Wrist Bands or KeyChain"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>LMS Wrist Bands or KeyChain</h3>
@@ -268,7 +329,12 @@ export default function GiftShopPage() {
                 </div>
                 <div className="product-item">
                   <div className="product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2022/04/IMG-9029-scaled.jpg" alt="NLMSF Nite Oils" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2022/04/IMG-9029-scaled.jpg"
+                      alt="NLMSF Nite Oils"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="product-info">
                     <h3>NLMSF Nite Oils</h3>
@@ -291,7 +357,12 @@ export default function GiftShopPage() {
               <div className="special-products-grid">
                 <div className="special-product">
                   <div className="special-product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg" alt="NLMSF Purple Support Bands" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg"
+                      alt="NLMSF Purple Support Bands"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="special-product-info">
                     <h3>NLMSF Purple Support Bands</h3>
@@ -302,7 +373,12 @@ export default function GiftShopPage() {
                 </div>
                 <div className="special-product">
                   <div className="special-product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png" alt="NLMSF Ball Cap" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png"
+                      alt="NLMSF Ball Cap"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="special-product-info">
                     <h3>NLMSF Ball Cap</h3>
@@ -313,7 +389,12 @@ export default function GiftShopPage() {
                 </div>
                 <div className="special-product">
                   <div className="special-product-image">
-                    <img src="https://nlmsf.org/wp-content/uploads/2022/08/Soap-For-The-Cure.png" alt="Soap For The Cure" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2022/08/Soap-For-The-Cure.png"
+                      alt="Soap For The Cure"
+                      width={640}
+                      height={360}
+                    />
                   </div>
                   <div className="special-product-info">
                     <h3>Soap For The Cure</h3>
@@ -324,8 +405,18 @@ export default function GiftShopPage() {
                 <div className="special-product">
                   <div className="special-product-image">
                     <div className="multi-image">
-                      <img src="https://nlmsf.org/wp-content/uploads/2022/02/Nlmsf-T-Shirt.jpg" alt="NLMSF T-Shirt" />
-                      <img src="https://nlmsf.org/wp-content/uploads/2022/02/NLMSF-hoodie.jpg" alt="NLMSF Hoodie" />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2022/02/Nlmsf-T-Shirt.jpg"
+                        alt="NLMSF T-Shirt"
+                        width={640}
+                        height={360}
+                      />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2022/02/NLMSF-hoodie.jpg"
+                        alt="NLMSF Hoodie"
+                        width={640}
+                        height={360}
+                      />
                     </div>
                   </div>
                   <div className="special-product-info">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./find-a-sarcoma-specialist-staged-2.css";
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
             {/* SARC Centers */}
             <section className="nlmsf-specialist-block">
               <figure className="nlmsf-block-figure nlmsf-figure-center">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2021/02/sarc_logo_web.gif"
                   alt="SARC logo"
                   width={304}
@@ -57,7 +58,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
             {/* NCI Designated Cancer Centers */}
             <section className="nlmsf-specialist-block">
               <div className="nlmsf-block-with-image">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2021/03/NIH.jpg"
                   alt="NIH"
                   width={200}
@@ -85,7 +86,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
             {/* Sarcoma Centers of Excellence – Telemedicine Clinics */}
             <section id="telemedicine" className="nlmsf-specialist-block">
               <div className="nlmsf-block-with-image">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2021/02/SARCpage.jpg"
                   alt="SARC page"
                   width={237}
@@ -121,7 +122,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
               </h2>
 
               <div className="nlmsf-resource-card">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2021/02/PartnersHealthcare.jpg"
                   alt="Partners Healthcare"
                   width={160}
@@ -148,7 +149,7 @@ export default function FindASarcomaSpecialistStaged2Page() {
               </div>
 
               <div className="nlmsf-resource-card">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2021/02/GrandRounds.jpg"
                   alt="Grand Rounds"
                   width={320}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -364,7 +365,13 @@ export default function DonatePage() {
               {/* Just Giving */}
               <div className="overflow-hidden rounded-2xl border-l-4 border-[#7e22ce] border border-gray-200/80 bg-white p-6 md:p-8 shadow-lg shadow-gray-200/50 transition-all duration-300 hover:shadow-xl hover:border-violet-200">
                 <div className="flex flex-wrap items-center gap-4 mb-5">
-                  <img src="https://nlmsf.org/wp-content/uploads/2021/02/JustGivings.jpg" alt="Just Giving" className="max-h-14 w-auto object-contain rounded-lg" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2021/02/JustGivings.jpg"
+                    alt="Just Giving"
+                    className="max-h-14 w-auto object-contain rounded-lg"
+                    width={240}
+                    height={240}
+                  />
                   <h3 className="text-xl font-bold text-gray-900">Just Giving</h3>
                 </div>
                 <p className="text-gray-600 text-base leading-relaxed mb-6">
@@ -384,7 +391,13 @@ export default function DonatePage() {
                   <h3 className="text-xl font-bold text-gray-900">Donate Your Car or Real Estate</h3>
                 </div>
                 <div className="flex flex-col gap-6 md:flex-row md:items-start mb-6">
-                  <img src="https://nlmsf.org/wp-content/uploads/2022/06/Cars.jpg" alt="CARS" className="max-w-full h-auto md:max-w-[220px] rounded-xl shadow-md shrink-0" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2022/06/Cars.jpg"
+                    alt="CARS"
+                    className="max-w-full h-auto md:max-w-[220px] rounded-xl shadow-md shrink-0"
+                    width={640}
+                    height={360}
+                  />
                   <div className="text-gray-600 text-base leading-relaxed space-y-3">
                     <p><strong className="text-[#7e22ce]">Select the National Leiomyosarcoma Foundation</strong> — select state of Colorado; select &quot;health&quot; category and follow the procedures outlined by <span className="font-semibold text-[#7e22ce]">CARS</span>.</p>
                     <p>CARS makes donating your car easy. We take care of everything from the pick-up and sale to sending you the donation receipt and necessary tax documents. CARS is committed to treating every vehicle donor with gratitude and great service while delivering the highest possible returns to our partners.</p>
@@ -393,7 +406,13 @@ export default function DonatePage() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-100 bg-gray-50/80 p-5 md:flex-row md:items-center">
-                  <img src="https://nlmsf.org/wp-content/uploads/2022/06/HomeCars.png" alt="Home CARS" className="max-w-[150px] h-auto shrink-0" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2022/06/HomeCars.png"
+                    alt="Home CARS"
+                    className="max-w-[150px] h-auto shrink-0"
+                    width={240}
+                    height={240}
+                  />
                   <div className="flex flex-col gap-2">
                     <a href="https://careasy.org/home" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>https://careasy.org/home</a>
                     <a href="https://careasy.org/choose-a-nonprofit" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>https://careasy.org/choose-a-nonprofit</a>
@@ -436,7 +455,13 @@ export default function DonatePage() {
                   <h3 className="text-xl font-bold text-gray-900">Securities Donations</h3>
                 </div>
                 <div className="flex flex-col gap-6 md:flex-row md:items-center">
-                  <img src="https://nlmsf.org/wp-content/uploads/2020/12/stocks.jpg" alt="Securities Donations" className="max-w-[200px] h-auto rounded-xl shadow-md shrink-0" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2020/12/stocks.jpg"
+                    alt="Securities Donations"
+                    className="max-w-[200px] h-auto rounded-xl shadow-md shrink-0"
+                    width={640}
+                    height={360}
+                  />
                   <p className="text-gray-600 text-base leading-relaxed">
                     The National Leiomyosarcoma Foundation is equipped to receive donations of securities. Please contact your Financial Advisor for more information. When you are ready to give, you can contact Annie Achee at 303 808-3437 for more information.
                   </p>
@@ -452,7 +477,13 @@ export default function DonatePage() {
                   <h3 className="text-xl font-bold text-gray-900">Planned Giving</h3>
                 </div>
                 <div className="flex flex-col gap-6 md:flex-row md:items-start">
-                  <img src="https://nlmsf.org/wp-content/uploads/2020/12/planned-giving.jpg" alt="Planned Giving" className="max-w-[200px] h-auto rounded-xl shadow-md shrink-0" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2020/12/planned-giving.jpg"
+                    alt="Planned Giving"
+                    className="max-w-[200px] h-auto rounded-xl shadow-md shrink-0"
+                    width={640}
+                    height={360}
+                  />
                   <div className="flex-1 min-w-0">
                     <p className="text-gray-600 text-base leading-relaxed mb-6">
                       When thinking about planned giving, please consider the impact of giving to the National Leiomyosarcoma Foundation. Please contact your Financial Advisor for more information, and we will be happy to work with you to set up your gift. You can contact Annie Achee at (303)808-3437, for more information.
@@ -499,7 +530,13 @@ export default function DonatePage() {
               <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2">
                 <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-6 md:p-8 shadow-lg shadow-gray-200/50 transition-all duration-300 hover:shadow-xl">
                   <div className="flex items-center gap-4 mb-5">
-                    <img src="https://nlmsf.org/wp-content/uploads/2020/12/ebay.jpg" alt="eBay" className="max-h-14 w-auto object-contain rounded-lg" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2020/12/ebay.jpg"
+                      alt="eBay"
+                      className="max-h-14 w-auto object-contain rounded-lg"
+                      width={240}
+                      height={240}
+                    />
                     <h3 className="text-xl font-bold text-gray-900">eBay Giving Works</h3>
                   </div>
                   <p className="text-gray-600 text-base leading-relaxed mb-6">The National Leiomyosarcoma Foundation is a recognized 501(c)(3) rare cancer nonprofit organization – Tax 141834266</p>
@@ -509,7 +546,13 @@ export default function DonatePage() {
                 </div>
                 <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-6 md:p-8 shadow-lg shadow-gray-200/50 transition-all duration-300 hover:shadow-xl">
                   <div className="flex items-center gap-4 mb-5">
-                    <img src="https://nlmsf.org/wp-content/uploads/2022/08/kroger.jpg" alt="Kroger" className="max-h-14 w-auto object-contain rounded-lg" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2022/08/kroger.jpg"
+                      alt="Kroger"
+                      className="max-h-14 w-auto object-contain rounded-lg"
+                      width={240}
+                      height={240}
+                    />
                     <h3 className="text-xl font-bold text-gray-900">Support Through Kroger</h3>
                   </div>
                   <p className="text-gray-600 text-base leading-relaxed mb-3">

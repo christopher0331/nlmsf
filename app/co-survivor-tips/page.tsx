@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Co-Survivor Tips | NLMSF",
@@ -131,8 +132,13 @@ export default function CoSurvivorTipsPage() {
             >
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="shrink-0 w-full md:w-[200px]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-58.jpg" alt="Co-Survivors Supporting Cancer Patients" className="w-full rounded-lg" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
+                    alt="Co-Survivors Supporting Cancer Patients"
+                    className="w-full rounded-lg"
+                    width={640}
+                    height={360}
+                  />
                 </div>
                 <div className="min-w-0 flex-1">
                   <h3 className="text-lg font-bold text-gray-800 mb-3">What Makes a Co-Survivor?</h3>
@@ -223,8 +229,13 @@ export default function CoSurvivorTipsPage() {
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200 mb-6">
               <div className="flex flex-col md:flex-row gap-6 items-start pt-4 border-t border-gray-200">
                 <div className="shrink-0 w-full md:w-[200px]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://www.cancer.net/sites/cancer.net/files/styles/blog_image/public/2020-06/Caregiver-Self-Doubt-Blog-June-2020-750x375.jpg" alt="Caregiver Self-Doubt" className="w-full rounded-lg" />
+                  <Image
+                    src="https://www.cancer.net/sites/cancer.net/files/styles/blog_image/public/2020-06/Caregiver-Self-Doubt-Blog-June-2020-750x375.jpg"
+                    alt="Caregiver Self-Doubt"
+                    className="w-full rounded-lg"
+                    width={640}
+                    height={360}
+                  />
                 </div>
                 <div className="min-w-0 flex-1">
                   <h3 className="text-lg font-bold text-gray-800 mb-2">ASCO – Cancer.Net Article to Support Caregivers</h3>

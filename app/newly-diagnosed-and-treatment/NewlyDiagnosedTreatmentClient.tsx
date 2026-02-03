@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState, type MouseEvent } from "react";
 
 const SECTION_IDS = [
@@ -524,7 +525,12 @@ export default function NewlyDiagnosedTreatmentClient() {
           {/* Featured Image Section with Denver-specific CTA */}
           <div id="community" className="featured-image-section">
             <div className="featured-image">
-              <img src="https://example.com/path/to/support-image.jpg" alt="LMS Support Community" />
+              <Image
+                src="https://example.com/path/to/support-image.jpg"
+                alt="LMS Support Community"
+                width={1200}
+                height={800}
+              />
             </div>
             <div className="image-overlay">
               <h3>You Are Not Alone</h3>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./peri-gilpin.css";
 
@@ -14,7 +15,7 @@ export default function PeriGilpinPage() {
       <section className="peri-hero">
         <div className="peri-hero-inner">
           <div className="peri-image-wrap">
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2020/03/peri-197x300-1.jpg"
               alt="Peri Gilpin"
               width={197}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Financial Assistance (Resources) | NLMSF",
@@ -51,7 +52,7 @@ export default function FinancialAssistance2StagedPage() {
 
         {/* Free Grants */}
         <section className="mb-10 flex flex-col md:flex-row md:items-start gap-6 rounded-xl border border-gray-200 bg-gray-50/60 p-6">
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/2021/02/DollarsignGuy.jpg"
             alt=""
             width={79}

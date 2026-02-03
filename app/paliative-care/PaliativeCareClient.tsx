@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useMemo, useState } from "react";
 
 type DropdownSection = {
@@ -139,9 +140,11 @@ export default function PaliativeCareClient() {
       <section className="paliative-header">
         <div className="paliative-header-grid">
           <a href="https://nlmsf.org" className="paliative-logo" onClick={(event) => event.stopPropagation()}>
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2023/02/NLMSF-New-Round-Ribbon-Logo.jpg"
               alt="NLMSF logo"
+              width={240}
+              height={240}
             />
           </a>
           <div className="paliative-header-links">
@@ -250,10 +253,12 @@ export default function PaliativeCareClient() {
           <li>Are there compelling research findings demonstrating the positive impact of palliative care?</li>
           <li>Does NCI support palliative care research?</li>
         </ul>
-        <img
+        <Image
           src="https://nlmsf.org/wp-content/uploads/2021/10/NLMSF_Logo_800x800-equal.png"
           alt="NLMSF logo"
           className="paliative-logo-inline"
+          width={240}
+          height={240}
         />
       </section>
 
@@ -318,10 +323,12 @@ export default function PaliativeCareClient() {
             https://www.cancer.org.au/cancer-information/treatment/palliative-care
           </a>
         </p>
-        <img
+        <Image
           src="https://nlmsf.org/wp-content/uploads/2021/10/NLMSF_Logo_800x800-equal.png"
           alt="NLMSF logo"
           className="paliative-logo-inline"
+          width={240}
+          height={240}
         />
       </section>
 

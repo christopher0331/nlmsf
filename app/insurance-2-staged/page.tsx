@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./insurance-2-staged.css";
 
 export const metadata: Metadata = {
@@ -149,7 +150,7 @@ export default function Insurance2StagedPage() {
             It is not unusual for claims to be denied or for insurers to say they will not cover a test, procedure or service that your doctor ordered. However, you can appeal your health insurance company&apos;s decision and you may be able to get the decision overturned. Check with your health care team to see if there is someone on staff who can help you. If the appeal is for coverage of a specific medication, some manufacturers may be able to help you with your appeal. If you choose to file the appeal yourself, remember that courtesy and a cool head will increase your chances of success. It is normal to be frustrated, irritated, or angry that a claim was denied. However, how you share that frustration and anger may affect the success of your appeal. If your appeal is denied, you still have options. You can ask for a final decision in writing and then file an external appeal. However, if your issue is urgent, you don&apos;t have to wait to get a final decision from your insurance company before filing an external appeal. An external appeal involves a review of your claim by an independent organization outside of your insurance company. All private health insurance plans are now required to have external appeals processes. You can also request help from your state&apos;s Consumer Assistance Program, your state&apos;s insurance agency or the Department of Labor if you are insured under a federal policy. For more information, click here. <a href="https://www.cancersupportcommunity.org/sites/default/files/uploads/living-with-cancer/topics/resource/tips_for_appealing_a_denial_of_coverage.pdf" {...ext}>Download Tips for Appealing a Denial of Coverage</a>
           </p>
           <p className="ins2-para">
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
               alt="Triage Cancer"
               className="ins2-img-inline"

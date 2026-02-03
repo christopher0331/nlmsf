@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -171,10 +172,12 @@ export default function TributesDirectoryClient() {
               >
                 <div className="relative h-[200px] overflow-hidden bg-[#f8fafc] sm:h-[250px]">
                   {t.image_url ? (
-                    <img
+                    <Image
                       src={t.image_url}
                       alt={t.name}
                       className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      width={640}
+                      height={360}
                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#7e22ce] to-[#4338ca] text-white">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./new-diagnosis.css";
 
 export const metadata: Metadata = {
@@ -109,10 +110,12 @@ export default function NewDiagnosisPage() {
           <div className="sidebar-section">
             <h3 className="sidebar-subtitle">Featured Resource</h3>
             <div className="featured-resource">
-              <img
+              <Image
                 src="https://nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.jpg"
                 alt="NLMSF Brochure"
                 className="featured-image"
+                width={240}
+                height={240}
               />
               <h4>NLMSF Patient &amp; Family Brochure</h4>
               <p>Access our comprehensive guide for patients and families newly diagnosed with LMS.</p>
@@ -197,10 +200,12 @@ export default function NewDiagnosisPage() {
             <h3 className="sidebar-subtitle">Support Our Mission</h3>
             <div className="donate-cta">
               <a href="https://nlmsf.org/donate/" className="donate-link">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
                   alt="Donate to NLMSF"
                   className="donate-image"
+                  width={240}
+                  height={240}
                 />
                 <span className="donate-text">Donate Today</span>
               </a>
@@ -233,7 +238,12 @@ export default function NewDiagnosisPage() {
 
           <div className="sidebar-section">
             <div className="nlmsf-logo">
-              <img src="https://nlmsf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg" alt="NLMSF Logo" />
+              <Image
+                src="https://nlmsf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg"
+                alt="NLMSF Logo"
+                width={240}
+                height={240}
+              />
             </div>
             <div className="nlmsf-info">
               <p className="nlmsf-message">
@@ -256,7 +266,12 @@ export default function NewDiagnosisPage() {
           <div className="sidebar-section">
             <div className="peri-section">
               <div className="peri-image">
-                <img src="https://nlmsf.org/wp-content/uploads/2021/02/PeriGilpin.jpg" alt="Peri Gilpin" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/02/PeriGilpin.jpg"
+                  alt="Peri Gilpin"
+                  width={240}
+                  height={240}
+                />
               </div>
               <p className="peri-quote">
                 My family has been touched by Leiomyosarcoma, not once, but twice. I know the heartbreak of this rare disease, and I
@@ -272,24 +287,36 @@ export default function NewDiagnosisPage() {
             <div className="certification-section">
               <div className="certification-logos">
                 <a href="https://sarcomacoalition.us/" target="_blank" rel="noopener noreferrer">
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-15.42.31.png"
                     alt="Sarcoma Coalition"
                     className="certification-logo"
+                    width={240}
+                    height={240}
                   />
                 </a>
 
                 <div className="certification-seals">
-                  <img src="https://nlmsf.org/wp-content/uploads/2021/03/Seals.jpg" alt="Certification Seal" className="certification-seal" />
-                  <img
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2021/03/Seals.jpg"
+                    alt="Certification Seal"
+                    className="certification-seal"
+                    width={240}
+                    height={240}
+                  />
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
                     alt="GuideStar Seal"
                     className="certification-seal"
+                    width={240}
+                    height={240}
                   />
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
                     alt="Top Rated Seal"
                     className="certification-seal"
+                    width={240}
+                    height={240}
                   />
                 </div>
               </div>
@@ -311,7 +338,12 @@ export default function NewDiagnosisPage() {
               <div className="resource-card">
                 <div className="card-image">
                   <a href="https://nlmsf.org/what-is-lms/">
-                    <img src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-44.jpg" alt="What is LMS?" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-44.jpg"
+                      alt="What is LMS?"
+                      width={640}
+                      height={360}
+                    />
                   </a>
                 </div>
                 <div className="card-content">
@@ -327,7 +359,12 @@ export default function NewDiagnosisPage() {
               <div className="resource-card">
                 <div className="card-image">
                   <a href="https://nlmsf.org/navigating-leiomyosarcoma-treatment-after-treatment/">
-                    <img src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-41.jpg" alt="New Diagnosis/Treatment" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-41.jpg"
+                      alt="New Diagnosis/Treatment"
+                      width={640}
+                      height={360}
+                    />
                   </a>
                 </div>
                 <div className="card-content">
@@ -343,7 +380,12 @@ export default function NewDiagnosisPage() {
               <div className="resource-card">
                 <div className="card-image">
                   <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7924026/">
-                    <img src="https://nlmsf.org/wp-content/uploads/2021/03/Cancers.png" alt="NLMSF-SPAEN Publication" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2021/03/Cancers.png"
+                      alt="NLMSF-SPAEN Publication"
+                      width={640}
+                      height={360}
+                    />
                   </a>
                 </div>
                 <div className="card-content">
@@ -366,9 +408,11 @@ export default function NewDiagnosisPage() {
               <div className="resource-card">
                 <div className="card-image">
                   <a href="https://nlmsf.org/find-a-sarcoma-specialist/">
-                    <img
+                    <Image
                       src="https://nlmsf.org/wp-content/uploads/2020/06/cancer-cells-541954__480-1.jpg"
                       alt="Finding a Sarcoma Center of Excellence"
+                      width={640}
+                      height={360}
                     />
                   </a>
                 </div>
@@ -385,7 +429,12 @@ export default function NewDiagnosisPage() {
               <div className="resource-card">
                 <div className="card-image">
                   <a href="https://nlmsf.org/staging-lms-tumors/">
-                    <img src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-32.jpg" alt="LMS Tumor Assessment" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-32.jpg"
+                      alt="LMS Tumor Assessment"
+                      width={640}
+                      height={360}
+                    />
                   </a>
                 </div>
                 <div className="card-content">
@@ -403,7 +452,12 @@ export default function NewDiagnosisPage() {
               <div className="resource-card">
                 <div className="card-image">
                   <a href="https://nlmsf.org/molecular-tumor-testing/">
-                    <img src="https://nlmsf.org/wp-content/uploads/2020/11/blue-box.jpg" alt="Molecular Tumor Testing" />
+                    <Image
+                      src="https://nlmsf.org/wp-content/uploads/2020/11/blue-box.jpg"
+                      alt="Molecular Tumor Testing"
+                      width={640}
+                      height={360}
+                    />
                   </a>
                 </div>
                 <div className="card-content">

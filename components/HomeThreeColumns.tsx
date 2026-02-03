@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import HomeEventsColumn from "@/components/HomeEventsColumn";
@@ -240,10 +241,13 @@ export default function HomeThreeColumns() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src={ONCLIVE_IMG}
                   alt="OncLive Sarcoma"
+                  width={640}
+                  height={360}
                   className="w-full max-w-[320px] h-auto rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.1)] object-cover"
+                  sizes="(min-width: 1024px) 320px, 70vw"
                 />
               </a>
             </div>
@@ -387,10 +391,13 @@ export default function HomeThreeColumns() {
                   <div className="text-center">
                     <div className="flex flex-col items-center mb-4">
                       <div className="w-[60px] h-[60px] rounded-full overflow-hidden mb-2 border-[3px] border-[#6a3ea1] shadow-[0_4px_8px_rgba(106,62,161,0.2)] sm:w-[50px] sm:h-[50px]">
-                        <img
+                        <Image
                           src={t.image}
                           alt={t.alt}
+                          width={120}
+                          height={120}
                           className="w-full h-full object-cover"
+                          sizes="60px"
                         />
                       </div>
                       <div className="text-center">

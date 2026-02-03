@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./lms-count-me-in-project.css";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function LmsCountMeInProjectPage() {
       <section className="count-me-in-hero">
         <h2 className="count-me-in-section-title">Patients Take Action</h2>
         <div className="count-me-in-logo">
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/2023/02/Coun-Me-In-Logo-1.png"
             alt="Count Me In logo"
             width={300}

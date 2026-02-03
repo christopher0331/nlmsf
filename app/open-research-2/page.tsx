@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./open-research-2.css";
 
@@ -185,10 +186,12 @@ export default function OpenResearchPage() {
 
                 <div className="investment-image-section">
                   <div className="investment-image-wrapper">
-                    <img
+                    <Image
                       src="https://nlmsf.org/wp-content/uploads/2022/03/image1.jpg"
                       alt="Research Investment Impact"
                       className="investment-feature-image"
+                      width={1200}
+                      height={800}
                     />
                     <div className="image-badge">
                       <i className="fas fa-flask" aria-hidden />
@@ -226,10 +229,12 @@ export default function OpenResearchPage() {
                   <div className="research-grid">
                     <div className="research-card">
                       <div className="research-image-container">
-                        <img
+                        <Image
                           src="https://nlmsf.org/wp-content/uploads/2022/03/image3.jpg"
                           alt="Research Laboratory"
                           className="research-image"
+                          width={640}
+                          height={360}
                         />
                         <div className="research-overlay"></div>
                         <div className="research-content">
@@ -245,10 +250,12 @@ export default function OpenResearchPage() {
 
                     <div className="research-card">
                       <div className="research-image-container">
-                        <img
+                        <Image
                           src="https://nlmsf.org/wp-content/uploads/2022/03/image2.jpg"
                           alt="Research Team"
                           className="research-image"
+                          width={640}
+                          height={360}
                         />
                         <div className="research-overlay"></div>
                         <div className="research-content">
@@ -265,10 +272,12 @@ export default function OpenResearchPage() {
 
                     <div className="research-card">
                       <div className="research-image-container">
-                        <img
+                        <Image
                           src="https://nlmsf.org/wp-content/uploads/2022/03/image4-768x544.jpg"
                           alt="Clinical Research"
                           className="research-image"
+                          width={640}
+                          height={360}
                         />
                         <div className="research-overlay"></div>
                         <div className="research-content">

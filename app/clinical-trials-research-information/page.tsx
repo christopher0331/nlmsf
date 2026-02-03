@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Clinical Trials & Research Information | NLMSF",
@@ -494,8 +495,13 @@ export default function ClinicalTrialsResearchInformationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white rounded-xl overflow-hidden shadow border border-gray-200">
                 <div className="relative aspect-video bg-gray-800 overflow-hidden group">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://img.youtube.com/vi/BcDkmVsehBg/maxresdefault.jpg" alt="Dr. George Demetri on Sarcoma Clinical Trials" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                  <Image
+                    src="https://img.youtube.com/vi/BcDkmVsehBg/maxresdefault.jpg"
+                    alt="Dr. George Demetri on Sarcoma Clinical Trials"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    width={640}
+                    height={360}
+                  />
                   <div className="absolute inset-0 flex items-center justify-center bg-violet-900/30 group-hover:bg-violet-900/50 transition-colors">
                     <div className="w-14 h-14 rounded-full bg-violet-600 flex items-center justify-center text-white">
                       <i className="fas fa-play ml-1" aria-hidden />

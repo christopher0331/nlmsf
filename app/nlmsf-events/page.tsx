@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./nlmsf-events.css";
 
 export const metadata: Metadata = {
@@ -191,9 +192,11 @@ export default function NlmsfEventsPage() {
               <h3 className="gallery-title">Annual Meeting Gallery</h3>
               <div className="roundtable-grid">
                 <div className="roundtable-item" data-year="2024" data-city="Toronto">
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2025/08/2024-int-research-roundtable-toronto-scaled.jpg"
                     alt="International LMS Research Roundtable 2024 - Toronto"
+                    width={640}
+                    height={360}
                   />
                   <div className="roundtable-info">
                     <span className="year-badge">2024</span>
@@ -202,9 +205,11 @@ export default function NlmsfEventsPage() {
                 </div>
 
                 <div className="roundtable-item" data-year="2023" data-city="Houston">
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2025/08/int-research-roundtable-2023-houston.jpg"
                     alt="International LMS Research Roundtable 2023 - Houston"
+                    width={640}
+                    height={360}
                   />
                   <div className="roundtable-info">
                     <span className="year-badge">2023</span>
@@ -213,9 +218,11 @@ export default function NlmsfEventsPage() {
                 </div>
 
                 <div className="roundtable-item" data-year="2022" data-city="Chicago">
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2025/08/int-research-roundtable-2022-chicago-scaled.jpeg"
                     alt="International LMS Research Roundtable 2022 - Chicago"
+                    width={640}
+                    height={360}
                   />
                   <div className="roundtable-info">
                     <span className="year-badge">2022</span>
@@ -224,9 +231,11 @@ export default function NlmsfEventsPage() {
                 </div>
 
                 <div className="roundtable-item" data-year="2020-2021" data-city="Virtual">
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2025/08/int-research-roundtable-virtual-2020-2021.jpg"
                     alt="International LMS Research Roundtable 2020-2021 - Virtual"
+                    width={640}
+                    height={360}
                   />
                   <div className="roundtable-info">
                     <span className="year-badge">2020-2021</span>
@@ -235,9 +244,11 @@ export default function NlmsfEventsPage() {
                 </div>
 
                 <div className="roundtable-item" data-year="2019" data-city="Miami">
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2025/08/int-research-roundtable-2019-miami-innagural.png"
                     alt="International LMS Research Roundtable 2019 - Miami Inaugural"
+                    width={640}
+                    height={360}
                   />
                   <div className="roundtable-info">
                     <span className="year-badge">2019</span>
@@ -312,9 +323,11 @@ export default function NlmsfEventsPage() {
 
             <div className="recognition-section">
               <div className="recognition-image">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2025/08/events-page-image-2.png"
                   alt="Raton, New Mexico Leiomyosarcoma Awareness Day Recognition"
+                  width={1200}
+                  height={800}
                 />
               </div>
               <div className="recognition-content">
@@ -346,22 +359,52 @@ export default function NlmsfEventsPage() {
 
             <div className="image-gallery">
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2023/03/Beau-Arts-Ball-Flyer.png" alt="Beaux Arts Ball Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2023/03/Beau-Arts-Ball-Flyer.png"
+                  alt="Beaux Arts Ball Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-64.jpg" alt="Community Fundraiser Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-64.jpg"
+                  alt="Community Fundraiser Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-65.jpg" alt="Golf Tournament Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-65.jpg"
+                  alt="Golf Tournament Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-62.jpg" alt="Golf Fundraiser Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-62.jpg"
+                  alt="Golf Fundraiser Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-63.jpg" alt="Memorial Hike Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-63.jpg"
+                  alt="Memorial Hike Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2021/03/Support-group.jpeg" alt="Support Group Meeting" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/03/Support-group.jpeg"
+                  alt="Support Group Meeting"
+                  width={640}
+                  height={360}
+                />
               </div>
             </div>
           </div>
@@ -506,9 +549,11 @@ export default function NlmsfEventsPage() {
 
                 <div className="membership-image">
                   <div className="roundtable-image">
-                    <img
+                    <Image
                       src="https://nlmsf.org/wp-content/uploads/2023/02/Roundtable-2022-Group-Photo-resized-jpeg-2-300x200.jpeg"
                       alt="International LMS Research Roundtable 2022"
+                      width={640}
+                      height={360}
                     />
                     <div className="image-caption">International LMS Research Roundtable 2022</div>
                   </div>

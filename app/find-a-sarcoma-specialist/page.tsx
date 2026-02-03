@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./find-a-sarcoma-specialist.css";
 
@@ -206,7 +207,13 @@ export default function FindASarcomaSpecialistPage() {
                 <div className="centers-grid">
                   <div className="center-card">
                     <div className="center-card-inner">
-                      <img src="https://nlmsf.org/wp-content/uploads/2021/02/SARC.jpg" alt="SARC Logo" className="center-card-img" />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2021/02/SARC.jpg"
+                        alt="SARC Logo"
+                        className="center-card-img"
+                        width={240}
+                        height={240}
+                      />
                       <div className="center-content">
                         <h4>SARC Sarcoma Centers Directory</h4>
                         <p>The Sarcoma Alliance for Research through Collaboration (SARC) enhanced Sarcoma Centers Directory (SCD) helps patients, families, and medical communities find specialized sarcoma expertise across the US and globally.</p>
@@ -442,7 +449,12 @@ export default function FindASarcomaSpecialistPage() {
           {/* Featured Image CTA */}
           <section className="featured-image-section">
             <div className="featured-image">
-              <img src="/images/doctor-patient-consultation.jpg" alt="Doctor consulting with patient" />
+              <Image
+                src="/images/doctor-patient-consultation.jpg"
+                alt="Doctor consulting with patient"
+                width={1200}
+                height={800}
+              />
             </div>
             <div className="image-overlay">
               <h3>Need Help Finding a Specialist?</h3>

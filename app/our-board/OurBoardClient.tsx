@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
@@ -320,10 +321,12 @@ export default function OurBoardClient() {
                   id={member.id}
                   className="nlmsf-member-grid-card nlmsf-member-medical"
                 >
-                  <img
+                  <Image
                     src={member.imageUrl}
                     alt={member.name}
                     className="nlmsf-member-image"
+                    width={240}
+                    height={240}
                   />
                   <h3 className="nlmsf-member-name">{member.name}</h3>
                   <p className="nlmsf-member-role">

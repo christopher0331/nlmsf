@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./caregivers-corner.css";
 
@@ -162,8 +163,13 @@ export default function CaregiversCornerPage() {
             <h3 className="sidebar-subtitle">Support Our Mission</h3>
             <div className="donate-cta">
               <a href="https://nlmsf.org/donate/" className="donate-link" {...externalLinkProps}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg" alt="Donate to NLMSF" className="donate-image" width={120} height={120} />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  alt="Donate to NLMSF"
+                  className="donate-image"
+                  width={120}
+                  height={120}
+                />
                 <span className="donate-text">Donate Today</span>
               </a>
               <p>Help Shape the Future of Survival</p>
@@ -182,8 +188,12 @@ export default function CaregiversCornerPage() {
                 <div className="resource-card">
                   <figure className="resource-image">
                     <Link href="/caregiver-traits">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-55.jpg" alt="Special Traits of Caregivers" />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-55.jpg"
+                        alt="Special Traits of Caregivers"
+                        width={640}
+                        height={360}
+                      />
                     </Link>
                   </figure>
                   <h3>Special Traits of Caregivers</h3>
@@ -197,8 +207,12 @@ export default function CaregiversCornerPage() {
                 <div className="resource-card">
                   <figure className="resource-image">
                     <a href="https://nlmsf.org/resource-support/" {...externalLinkProps}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-56.jpg" alt="Resource Support" />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-56.jpg"
+                        alt="Resource Support"
+                        width={640}
+                        height={360}
+                      />
                     </a>
                   </figure>
                   <h3>Resource Support</h3>
@@ -212,8 +226,12 @@ export default function CaregiversCornerPage() {
                 <div className="resource-card">
                   <figure className="resource-image">
                     <a href="https://nlmsf.org/co-survivors-tips/" {...externalLinkProps}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-58.jpg" alt="Co-Survivor Tips" />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
+                        alt="Co-Survivor Tips"
+                        width={640}
+                        height={360}
+                      />
                     </a>
                   </figure>
                   <h3>Co-Survivor Tips</h3>
@@ -235,8 +253,12 @@ export default function CaregiversCornerPage() {
             <div className="content-panel blue">
               <div className="universal-caregiving">
                 <div className="image-container">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://nlmsf.org/wp-content/uploads/2021/01/CargivingisUniversal.jpg" alt="Caregiving is Universal" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2021/01/CargivingisUniversal.jpg"
+                    alt="Caregiving is Universal"
+                    width={640}
+                    height={360}
+                  />
                 </div>
                 <div className="content-text">
                   <p>The Foundation salutes all Cancer Caregivers for their encouragement, steadfast support for their loved ones, and all the special qualities demonstrated by their commitment and dedication to do, and be, their best every day.</p>
@@ -386,8 +408,12 @@ export default function CaregiversCornerPage() {
 
               <div className="resource-highlight">
                 <div className="highlight-image">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://nlmsf.org/wp-content/uploads/2020/10/books-300x200.png" alt="Caregiver Books" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2020/10/books-300x200.png"
+                    alt="Caregiver Books"
+                    width={640}
+                    height={360}
+                  />
                 </div>
                 <div className="highlight-content">
                   <h3>The Fearless Caregiver Guides</h3>
@@ -409,8 +435,12 @@ export default function CaregiversCornerPage() {
             <div className="content-panel">
               <div className="caregiver-care">
                 <div className="image-container">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://nlmsf.org/wp-content/uploads/2021/01/carinfgFortheCaregiver.jpg" alt="Caring For The Caregiver" />
+                  <Image
+                    src="https://nlmsf.org/wp-content/uploads/2021/01/carinfgFortheCaregiver.jpg"
+                    alt="Caring For The Caregiver"
+                    width={640}
+                    height={360}
+                  />
                 </div>
                 <div className="content-text">
                   <p>Remember that taking care of yourself is just as important as caring for your loved one. Find resources and support to help you maintain your own physical and mental well-being.</p>

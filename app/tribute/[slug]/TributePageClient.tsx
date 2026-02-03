@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import DonateCTA from "@/components/DonateCTA";
@@ -163,10 +164,12 @@ export default function TributePageClient({ slugPromise }: Props) {
             </h2>
             {data.image_url && (
               <div className="mx-auto mb-8 h-[250px] w-[250px] overflow-hidden rounded-full border-6 border-white bg-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.15)] md:h-[300px] md:w-[300px]">
-                <img
+                <Image
                   src={data.image_url}
                   alt={data.name}
                   className="h-full w-full object-cover object-center"
+                  width={300}
+                  height={300}
                 />
               </div>
             )}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./nlmsf-count-me-in-project-2023.css";
 
 export const metadata: Metadata = {
@@ -11,10 +12,12 @@ export default function NlmsfCountMeInProject2023Page() {
   return (
     <div className="count-me-in-page">
       <div className="count-me-in-container">
-        <img
+        <Image
           src="https://nlmsf.org/wp-content/uploads/2021/11/CountmeIn.jpg"
           alt="Count Me In Project"
           className="count-me-in-hero-image"
+          width={1200}
+          height={800}
         />
 
         <p>

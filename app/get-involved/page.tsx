@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./get-involved.css";
 
 export const metadata: Metadata = {
@@ -49,7 +50,13 @@ export default function GetInvolvedPage() {
             <h3 className="sidebar-widget-title">Donate to NLMSF Today!</h3>
             <div className="sidebar-widget-content">
               <a href="https://nlmsf.org/donate/" {...ext}>
-                <img className="sidebar-widget-image" src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg" alt="Donate" />
+                <Image
+                  className="sidebar-widget-image"
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  alt="Donate"
+                  width={240}
+                  height={240}
+                />
               </a>
               <p>Help Shape the Future of Survival:</p>
               <p>
@@ -106,7 +113,13 @@ export default function GetInvolvedPage() {
 
           <div className="sidebar-widget">
             <div className="sidebar-widget-content">
-              <img className="sidebar-widget-image" src="https://nlmsf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg" alt="NLMSF Logo" />
+              <Image
+                className="sidebar-widget-image"
+                src="https://nlmsf.org/wp-content/uploads/2021/03/Small-Nlmsf.jpg"
+                alt="NLMSF Logo"
+                width={240}
+                height={240}
+              />
               <p><strong>&quot;The information in two more NLMSF websites created for you, help shape the journey, and build hope.&quot;</strong></p>
               <p>
                 <a href="https://leiomyosarcoma.info/" {...ext}>leiomyosarcoma.info</a> &amp;{" "}
@@ -117,7 +130,13 @@ export default function GetInvolvedPage() {
 
           <div className="sidebar-widget">
             <div className="sidebar-widget-content">
-              <img className="sidebar-widget-image" src="https://nlmsf.org/wp-content/uploads/2021/02/PeriGilpin.jpg" alt="Peri Gilpin" />
+              <Image
+                className="sidebar-widget-image"
+                src="https://nlmsf.org/wp-content/uploads/2021/02/PeriGilpin.jpg"
+                alt="Peri Gilpin"
+                width={240}
+                height={240}
+              />
               <p>
                 My family has been touched by Leiomyosarcoma, not once, but twice. I know the heartbreak of this rare disease, and I believe that being aware of what to look for and asking the right questions is so important on this journey.
               </p>
@@ -130,12 +149,18 @@ export default function GetInvolvedPage() {
           <div className="sidebar-widget">
             <div className="sidebar-widget-content">
               <a href="https://sarcomacoalition.us/" {...ext}>
-                <img className="sidebar-widget-image" src="https://nlmsf.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-15.42.31.png" alt="Sarcoma Coalition" />
+                <Image
+                  className="sidebar-widget-image"
+                  src="https://nlmsf.org/wp-content/uploads/2021/02/Screen-Shot-2021-02-18-at-15.42.31.png"
+                  alt="Sarcoma Coalition"
+                  width={240}
+                  height={240}
+                />
               </a>
               <div className="seals-row">
-                <img src="https://nlmsf.org/wp-content/uploads/2021/03/Seals.jpg" alt="Seal" />
-                <img src="https://nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg" alt="GuideStar Seal" />
-                <img src="https://nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg" alt="Top Rated Seal" />
+                <Image src="https://nlmsf.org/wp-content/uploads/2021/03/Seals.jpg" alt="Seal" width={240} height={240} />
+                <Image src="https://nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg" alt="GuideStar Seal" width={240} height={240} />
+                <Image src="https://nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg" alt="Top Rated Seal" width={240} height={240} />
               </div>
               <p>
                 Bridging collaborations through advocacy, with organizations to amplify resources and support for patients and families.
@@ -189,10 +214,12 @@ export default function GetInvolvedPage() {
               <li>Continuing to build bridges of collaborative programs for the LMS Community</li>
             </ul>
             <div className="roundtable-wrap" style={{ textAlign: "center", marginTop: "30px" }}>
-              <img
+              <Image
                 src="https://nlmsf.org/wp-content/uploads/2023/02/Roundtable-2022-Group-Photo-resized-jpeg-2-300x200.jpeg"
                 alt="Roundtable 2022 Group Photo"
                 style={{ borderRadius: "8px" }}
+                width={1200}
+                height={800}
               />
             </div>
             <h3 style={{ marginTop: "30px" }}>OPENING EVERY DOOR – TOGETHER</h3>
@@ -208,7 +235,12 @@ export default function GetInvolvedPage() {
           <div className="action-cards">
             <div className="action-card purple">
               <div className="action-card-image">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-8.png" alt="Donate" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-8.png"
+                  alt="Donate"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="action-card-content">
                 <h3 className="action-card-title">Donate</h3>
@@ -223,7 +255,12 @@ export default function GetInvolvedPage() {
             </div>
             <div className="action-card blue">
               <div className="action-card-image">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/06/austin-kehmeier-lyiKExA4zQA-unsplash-scaled.jpg" alt="Learn How you can help" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/06/austin-kehmeier-lyiKExA4zQA-unsplash-scaled.jpg"
+                  alt="Learn How you can help"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="action-card-content">
                 <h3 className="action-card-title">Learn How You Can Help</h3>
@@ -241,7 +278,12 @@ export default function GetInvolvedPage() {
           <div className="action-cards" style={{ marginTop: "20px" }}>
             <div className="action-card teal">
               <div className="action-card-image">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg" alt="Gift Shop" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg"
+                  alt="Gift Shop"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="action-card-content">
                 <h3 className="action-card-title">Gift Shop</h3>
@@ -256,7 +298,12 @@ export default function GetInvolvedPage() {
             </div>
             <div className="action-card amber">
               <div className="action-card-image">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/08/unnamed-71.jpg" alt="Your Voice Matters" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/08/unnamed-71.jpg"
+                  alt="Your Voice Matters"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="action-card-content">
                 <h3 className="action-card-title">Your Voice, Your Advocacy Counts!</h3>
@@ -274,19 +321,44 @@ export default function GetInvolvedPage() {
             <h2>Get Involved with the NLMSF</h2>
             <div className="gallery-grid">
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-64.jpg" alt="NLMSF Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-64.jpg"
+                  alt="NLMSF Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-65.jpg" alt="NLMSF Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-65.jpg"
+                  alt="NLMSF Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-62.jpg" alt="NLMSF Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-62.jpg"
+                  alt="NLMSF Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-63.jpg" alt="NLMSF Event" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-63.jpg"
+                  alt="NLMSF Event"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="gallery-item">
-                <img src="https://nlmsf.org/wp-content/uploads/2021/03/Support-group.jpeg" alt="Support group" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/03/Support-group.jpeg"
+                  alt="Support group"
+                  width={640}
+                  height={360}
+                />
               </div>
             </div>
           </div>

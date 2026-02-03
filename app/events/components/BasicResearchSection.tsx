@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function BasicResearchSection() {
   return (
     <section
@@ -32,10 +34,13 @@ export default function BasicResearchSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/W32m1xq3B98/mqdefault.jpg"
                   alt="Video Thumbnail"
+                  width={640}
+                  height={360}
                   className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <i
                   className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
@@ -85,10 +90,13 @@ export default function BasicResearchSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/IuSRMS3lGw8/mqdefault.jpg"
                   alt="LMS Project Updates – Dr. Suzanne George"
+                  width={640}
+                  height={360}
                   className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <i
                   className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
@@ -141,10 +149,13 @@ export default function BasicResearchSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/s5xJqpD0oMA/mqdefault.jpg"
                   alt="Video Thumbnail"
+                  width={640}
+                  height={360}
                   className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <i
                   className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
@@ -193,10 +204,13 @@ export default function BasicResearchSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/lgXPwxdB8pM/mqdefault.jpg"
                   alt="Video Thumbnail"
+                  width={640}
+                  height={360}
                   className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <i
                   className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"

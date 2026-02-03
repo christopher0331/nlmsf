@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -427,7 +428,13 @@ export default function AdminTributesClient() {
                 <div className="flex min-w-0 flex-1 gap-4">
                   {t.image_url ? (
                     <div className="h-[100px] w-[100px] shrink-0 overflow-hidden rounded-lg">
-                      <img src={t.image_url} alt={t.name} className="h-full w-full object-cover" />
+                      <Image
+                        src={t.image_url}
+                        alt={t.name}
+                        className="h-full w-full object-cover"
+                        width={100}
+                        height={100}
+                      />
                     </div>
                   ) : null}
                   <div className="min-w-0">

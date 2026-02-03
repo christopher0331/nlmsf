@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./open-research.css";
 
 export const metadata: Metadata = {
@@ -12,10 +13,12 @@ export default function OpenResearchPage() {
     <div className="open-research-page">
       <section className="open-research-hero">
         <div className="open-research-container">
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/2022/03/image1.jpg"
             alt="Open research hero"
             className="open-research-hero-image"
+            width={1200}
+            height={800}
           />
         </div>
       </section>
@@ -24,17 +27,21 @@ export default function OpenResearchPage() {
         <div className="open-research-container">
           <div className="open-research-grid">
             <div className="open-research-card">
-              <img
+              <Image
                 src="https://nlmsf.org/wp-content/uploads/2022/03/image3.jpg"
                 alt="Research laboratory"
                 className="open-research-image"
+                width={640}
+                height={360}
               />
             </div>
             <div className="open-research-card">
-              <img
+              <Image
                 src="https://nlmsf.org/wp-content/uploads/2022/03/image2.jpg"
                 alt="Research team"
                 className="open-research-image"
+                width={640}
+                height={360}
               />
             </div>
           </div>
@@ -73,10 +80,12 @@ export default function OpenResearchPage() {
 
       <section className="open-research-section">
         <div className="open-research-container">
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/2022/03/image4-768x544.jpg"
             alt="Clinical research"
             className="open-research-hero-image"
+            width={1200}
+            height={800}
           />
         </div>
       </section>

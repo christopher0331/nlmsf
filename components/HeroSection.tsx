@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const HERO_IMG =
@@ -28,10 +29,13 @@ export default function HeroSection() {
     <>
       <section className="relative py-20 text-white overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src={HERO_IMG}
             alt="NLMSF Hero Image"
-            className="w-full h-full object-cover object-[center_0%]"
+            fill
+            priority
+            className="object-cover object-[center_0%]"
+            sizes="100vw"
           />
         </div>
         <div

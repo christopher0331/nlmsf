@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ENDORSEMENTS = [
   {
     image: "https://nlmsf.org/wp-content/uploads/2021/02/Dr-pollack.jpg",
@@ -34,10 +36,13 @@ export default function ExpertEndorsementSection() {
             }`}
           >
             <div className="shrink-0 w-40 h-40 rounded-full overflow-hidden border-4 border-[#f0f0f0] max-md:w-[140px] max-md:h-[140px]">
-              <img
+              <Image
                 src={expert.image}
                 alt={expert.alt}
+                width={160}
+                height={160}
                 className="w-full h-full object-cover block"
+                sizes="(min-width: 768px) 160px, 140px"
               />
             </div>
             <div className="flex-1 min-w-0">

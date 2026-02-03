@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -152,10 +153,12 @@ export default function AdvanceCarePlanningPage() {
               </div>
               <div className="flex shrink-0 justify-center py-4 md:py-0">
                 {/* Add image to public/assets/survivor-heart.png */}
-                <img
+                <Image
                   src="/assets/survivor-heart.png"
                   alt="Survivor Ribbon Heart"
                   className="max-h-[150px] w-auto max-w-[180px] rounded-2xl object-cover shadow-[0_2px_12px_rgba(126,34,206,0.14)] md:max-h-[180px]"
+                  width={640}
+                  height={360}
                 />
               </div>
             </div>
@@ -207,10 +210,12 @@ export default function AdvanceCarePlanningPage() {
           {/* Banner */}
           <div className="banner my-10 py-4 text-center">
             {/* Add image to public/assets/supporting-fighters.png */}
-            <img
+            <Image
               src="/assets/supporting-fighters.png"
               alt="Supporting Fighters Quote"
               className="mx-auto max-w-full w-full max-w-[400px] rounded-2xl shadow-[0_4px_16px_rgba(245,158,66,0.14)]"
+              width={640}
+              height={360}
             />
             <p className="mt-3 text-[1.1rem] italic text-[#7e22ce]">
               &quot;Supporting the Fighters, Admiring the Survivors, Honoring the Taken, And NEVER, ever

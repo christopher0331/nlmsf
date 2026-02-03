@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./insurance-2.css";
 
@@ -81,7 +82,13 @@ export default function Insurance2Page() {
           <div className="sidebar-section">
             <h3 className="sidebar-subtitle">Featured Resource</h3>
             <div className="featured-resource">
-              <img src="https://nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg" alt="Triage Cancer" className="featured-image" />
+              <Image
+                src="https://nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
+                alt="Triage Cancer"
+                className="featured-image"
+                width={240}
+                height={240}
+              />
               <h4>Triage Cancer</h4>
               <p>Offers free education on the practical and legal issues that may impact individuals diagnosed with cancer and their caregivers.</p>
               <a href="https://triagecancer.org/" className="resource-button" {...ext}>Visit Website</a>
@@ -120,7 +127,13 @@ export default function Insurance2Page() {
             <h3 className="sidebar-subtitle">Support Our Mission</h3>
             <div className="donate-cta">
               <a href="https://nlmsf.org/donate/" className="donate-link" {...ext}>
-                <img src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg" alt="Donate to NLMSF" className="donate-image" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  alt="Donate to NLMSF"
+                  className="donate-image"
+                  width={240}
+                  height={240}
+                />
                 <span className="donate-text">Donate Today</span>
               </a>
               <p>Help Shape the Future of Survival</p>
@@ -331,7 +344,13 @@ export default function Insurance2Page() {
                 </div>
               </div>
               <div className="resource-highlight">
-                <img src="https://nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg" alt="Triage Cancer Logo" className="resource-icon" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
+                  alt="Triage Cancer Logo"
+                  className="resource-icon"
+                  width={240}
+                  height={240}
+                />
                 <div className="resource-content">
                   <h4>From TRIAGE CANCER – When an Insurance Co. Denies a Claim</h4>
                   <p>Helpful guidance for patients/caregivers: <a href="https://vimeo.com/499714526" {...ext}>Watch Video</a></p>

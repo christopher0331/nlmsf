@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -147,7 +148,13 @@ export default function FinancialAssistance2Page() {
                 The <strong>Cancer Financial Assistance Coalition</strong> (CFAC) is a consortium of organizations that help patients manage financial challenges that can emerge as a result of a cancer diagnosis.
               </p>
               <div className="flex flex-col gap-4 rounded-lg bg-gray-50 p-5 my-5 md:flex-row md:items-center">
-                <img src="https://nlmsf.org/wp-content/uploads/2021/02/DollarsignGuy.jpg" alt="Financial Assistance" className="h-14 w-14 shrink-0 rounded-full object-cover" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/02/DollarsignGuy.jpg"
+                  alt="Financial Assistance"
+                  className="h-14 w-14 shrink-0 rounded-full object-cover"
+                  width={240}
+                  height={240}
+                />
                 <div className="min-w-0">
                   <h4 className="text-base font-semibold text-gray-800 mb-1">Free Grants to help Patients</h4>
                   <p className="text-gray-600 text-sm leading-relaxed">

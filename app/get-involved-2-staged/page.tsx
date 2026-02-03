@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./get-involved-2-staged.css";
 
 export const metadata: Metadata = {
@@ -31,10 +32,12 @@ export default function GetInvolved2StagedPage() {
             <div className="g2-section g2-future-events">
               <h2 className="g2-section-title">Future Fundraising Events</h2>
               <div className="g2-flyer-wrap">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2023/03/Beau-Arts-Ball-Flyer.png"
                   alt="Beau Arts Ball flyer"
                   className="g2-flyer-image"
+                  width={1200}
+                  height={800}
                 />
               </div>
             </div>
@@ -92,10 +95,12 @@ export default function GetInvolved2StagedPage() {
             <div className="g2-section g2-opening-door">
               <h2 className="g2-section-title">OPENING EVERY DOOR – TOGETHER</h2>
               <div className="g2-roundtable-wrap">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2023/02/Roundtable-2022-Group-Photo-resized-jpeg-2-300x200.jpeg"
                   alt="Roundtable 2022 Group Photo"
                   className="g2-roundtable-image"
+                  width={1200}
+                  height={800}
                 />
               </div>
               <p className="g2-body-text">

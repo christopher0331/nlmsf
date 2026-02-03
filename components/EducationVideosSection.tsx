@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 type Video = {
@@ -206,7 +207,7 @@ export default function EducationVideosSection() {
             ) : (
               sortedVideos.map((video) => {
                 const videoId = extractVideoId(video.youtube_url);
-                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
                 const categoryName = getCategoryName(video.category);
                 return (
                   <div
@@ -225,13 +226,12 @@ export default function EducationVideosSection() {
                     }}
                   >
                     <div className="relative w-full h-[200px] overflow-hidden group">
-                      <img
+                      <Image
                         src={thumbnailUrl}
                         alt=""
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
-                        }}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="(min-width: 1280px) 320px, (min-width: 640px) 50vw, 100vw"
                       />
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-black/80 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[rgba(99,102,241,0.9)] group-hover:scale-110">
                         <i

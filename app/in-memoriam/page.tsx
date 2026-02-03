@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./in-memoriam.css";
 import { ARCHIVED_TRIBUTES } from "./archived-tributes";
@@ -93,7 +94,7 @@ export default function InMemoriamPage() {
         </section>
 
         <section className="im-candle-section">
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/2023/03/websiste-tribute-candle.gif"
             alt=""
             className="im-candle-img"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./health-insurance-deep-dive.css";
 
 export const metadata: Metadata = {
@@ -245,7 +246,13 @@ export default function HealthInsuranceDeepDivePage() {
                 </div>
               </div>
               <div className="resource-highlight">
-                <img src="https://nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg" alt="Triage Cancer Logo" className="resource-icon" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
+                  alt="Triage Cancer Logo"
+                  className="resource-icon"
+                  width={240}
+                  height={240}
+                />
                 <div className="resource-content">
                   <h4>From TRIAGE CANCER – When an Insurance Co. Denies a Claim</h4>
                   <p>Helpful guidance for patients/caregivers: <a href="https://vimeo.com/499714526" {...ext}>Watch Video</a></p>

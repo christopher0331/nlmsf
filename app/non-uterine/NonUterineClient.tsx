@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 export default function NonUterineClient() {
@@ -66,10 +67,12 @@ export default function NonUterineClient() {
             </ul>
           </nav>
 
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/2025/11/research-non-uterine.png"
             className="sidebar-image"
             alt="Research non-uterine"
+            width={640}
+            height={360}
           />
 
           <div className="sidebar-cta">
@@ -398,10 +401,12 @@ export default function NonUterineClient() {
             <p className="section-intro">High-level visual summary accompanying the ScienceDirect article.</p>
             <figure className="image-figure">
               <a href="https://ars.els-cdn.com/content/image/1-s2.0-S1040842825003476-ga1_lrg.jpg" target="_blank" rel="noopener noreferrer">
-                <img
+                <Image
                   className="image-responsive"
                   src="https://ars.els-cdn.com/content/image/1-s2.0-S1040842825003476-ga1_lrg.jpg"
                   alt="Featured sarcoma drug therapy chart from ScienceDirect article"
+                  width={1200}
+                  height={800}
                 />
               </a>
               <figcaption className="image-caption">

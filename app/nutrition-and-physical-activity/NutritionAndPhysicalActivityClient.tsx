@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useMemo } from "react";
 
 const NAV_OFFSET = 80;
@@ -203,9 +204,11 @@ export default function NutritionAndPhysicalActivityClient() {
                 </div>
               </div>
               <div className="savor-infographic">
-                <img
+                <Image
                   src="https://nlmsf.org/wp-content/uploads/2025/12/1765933344411blob.png"
                   alt="SAVOR Health nutrition program infographic"
+                  width={1200}
+                  height={800}
                 />
               </div>
 
@@ -301,10 +304,12 @@ export default function NutritionAndPhysicalActivityClient() {
             <div className="resources-grid">
               <div className="resource-card">
                 <div className="resource-logo">
-                  <img
+                  <Image
                     src="https://via.placeholder.com/100x50.png?text=ACS+Logo"
                     alt="American Cancer Society"
                     className="resource-image"
+                    width={240}
+                    height={240}
                   />
                 </div>
                 <div className="resource-content">
@@ -324,10 +329,12 @@ export default function NutritionAndPhysicalActivityClient() {
 
               <div className="resource-card">
                 <div className="resource-logo">
-                  <img
+                  <Image
                     src="https://via.placeholder.com/100x50.png?text=AICR+Logo"
                     alt="American Institute for Cancer Research"
                     className="resource-image"
+                    width={240}
+                    height={240}
                   />
                 </div>
                 <div className="resource-content">
@@ -347,10 +354,12 @@ export default function NutritionAndPhysicalActivityClient() {
 
               <div className="resource-card">
                 <div className="resource-logo">
-                  <img
+                  <Image
                     src="https://via.placeholder.com/100x50.png?text=MD+Anderson"
                     alt="MD Anderson Cancer Center"
                     className="resource-image"
+                    width={240}
+                    height={240}
                   />
                 </div>
                 <div className="resource-content">
@@ -370,10 +379,12 @@ export default function NutritionAndPhysicalActivityClient() {
 
               <div className="resource-card">
                 <div className="resource-logo">
-                  <img
+                  <Image
                     src="https://via.placeholder.com/100x50.png?text=MD+Anderson"
                     alt="MD Anderson Cancer Center"
                     className="resource-image"
+                    width={240}
+                    height={240}
                   />
                 </div>
                 <div className="resource-content">
@@ -489,9 +500,11 @@ export default function NutritionAndPhysicalActivityClient() {
                   <div className="play-button">
                     <i className="fas fa-play" aria-hidden />
                   </div>
-                  <img
+                  <Image
                     src="https://via.placeholder.com/640x360.png?text=Alison+Tierney+Video"
                     alt="Alison Tierney Nutrition Video"
+                    width={640}
+                    height={360}
                   />
                 </div>
                 <div className="video-details">
@@ -512,9 +525,11 @@ export default function NutritionAndPhysicalActivityClient() {
                   <div className="play-button">
                     <i className="fas fa-play" aria-hidden />
                   </div>
-                  <img
+                  <Image
                     src="https://via.placeholder.com/640x360.png?text=Mayo+Clinic+Video"
                     alt="Mayo Clinic Living with Cancer Guide"
+                    width={640}
+                    height={360}
                   />
                 </div>
                 <div className="video-details">

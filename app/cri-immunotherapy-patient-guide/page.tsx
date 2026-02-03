@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ImmunotherapyFaq from "./ImmunotherapyFaq";
 
@@ -80,11 +81,12 @@ export default function CriImmunotherapyPatientGuidePage() {
           Immunotherapy
         </h1>
         <div className="hero-image-container relative z-10 my-6">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/2025/08/immunotherapy.png"
             alt="Immunotherapy"
             className="hero-immunotherapy-image mx-auto max-h-[250px] w-auto max-w-full rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+            width={1200}
+            height={800}
           />
         </div>
         <div

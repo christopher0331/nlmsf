@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AbcNewDiagnosisSection() {
   return (
     <section
@@ -34,10 +36,13 @@ export default function AbcNewDiagnosisSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/9pnKTkzqOw0/mqdefault.jpg"
                   alt="Video Thumbnail"
+                  width={640}
+                  height={360}
                   className="h-auto w-full object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
                 <i
                   className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
@@ -84,10 +89,13 @@ export default function AbcNewDiagnosisSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/BJBK8bJOOaw/mqdefault.jpg"
                   alt="Video Thumbnail"
+                  width={640}
+                  height={360}
                   className="h-auto w-full object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
                 <i
                   className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
@@ -134,10 +142,13 @@ export default function AbcNewDiagnosisSection() {
               className="group block"
             >
               <div className="relative overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/nv2HP9TbaYA/mqdefault.jpg"
                   alt="Video Thumbnail"
+                  width={640}
+                  height={360}
                   className="h-auto w-full object-cover"
+                  sizes="100vw"
                 />
                 <i
                   className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"

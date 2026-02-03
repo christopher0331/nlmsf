@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
@@ -112,11 +113,14 @@ export default function Header() {
     <div className={FONT_HEADER}>
       <div className={LOGO_SPANNING}>
         <Link href="/">
-          <img
+          <Image
             src={LOGO_SRC}
             alt="NLMSF Logo"
+            width={200}
+            height={140}
             className={LOGO_IMG}
             style={{ height: 140, width: "auto" }}
+            priority
           />
         </Link>
       </div>
@@ -822,11 +826,14 @@ export default function Header() {
       >
         <div className={MOBILE_HEADER}>
           <Link href="/">
-            <img
+            <Image
               src={LOGO_SRC}
               alt="NLMSF Logo"
+              width={160}
+              height={112}
               className={MOBILE_LOGO_IMG}
               style={{ width: 160, height: "auto" }}
+              priority
             />
           </Link>
           <button

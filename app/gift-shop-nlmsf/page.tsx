@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./gift-shop-nlmsf.css";
 
@@ -102,10 +103,12 @@ export default function GiftShopNlmsfPage() {
                   </div>
                 </div>
                 <div className="featured-book-image">
-                  <img
+                  <Image
                     src="https://nlmsf.org/wp-content/uploads/2026/01/Goodnight-Mama-FRONT.jpg"
                     alt="Goodnight Mama - A book supporting the National Leiomyosarcoma Foundation"
                     loading="lazy"
+                    width={640}
+                    height={360}
                   />
                 </div>
               </div>
@@ -192,7 +195,13 @@ export default function GiftShopNlmsfPage() {
                   <div className="product-card">
                     <h3 className="product-card-heading">Champion of Hope for Leiomyosarcoma Research</h3>
                     <div className="product-image">
-                      <img src={BONFIRE_IMG} alt="Champion of Hope Baseball Cap" srcSet={`${BONFIRE_IMG.replace("/450/", "/900/")} 2x`} />
+                      <Image
+                        src={BONFIRE_IMG}
+                        alt="Champion of Hope Baseball Cap"
+                        srcSet={`${BONFIRE_IMG.replace("/450/", "/900/")} 2x`}
+                        width={640}
+                        height={360}
+                      />
                     </div>
                     <div className="product-details">
                       <p className="product-title">Printed Classic Baseball Cap</p>
@@ -205,7 +214,13 @@ export default function GiftShopNlmsfPage() {
                   </div>
                   <div className="product-card">
                     <div className="product-image">
-                      <img src={BONFIRE_IMG} alt="Champion of Hope Baseball Cap" srcSet={`${BONFIRE_IMG.replace("/450/", "/900/")} 2x`} />
+                      <Image
+                        src={BONFIRE_IMG}
+                        alt="Champion of Hope Baseball Cap"
+                        srcSet={`${BONFIRE_IMG.replace("/450/", "/900/")} 2x`}
+                        width={640}
+                        height={360}
+                      />
                     </div>
                     <div className="product-details">
                       <p className="product-title">Printed Classic Baseball Cap</p>
@@ -226,7 +241,12 @@ export default function GiftShopNlmsfPage() {
                   {[["Large Organic Cotton Tote Bag", "$40.98", "beige"], ["Recycled Cotton Tote Bag", "$34.98", "lightgrey"], ["Organic Cotton Tote Bag", "$36.98", "beige"]].map(([title, price, color]) => (
                     <div key={title} className="product-card">
                       <div className="product-image">
-                        <img src={BONFIRE_IMG} alt={`NLMSF Tote - ${title}`} />
+                        <Image
+                          src={BONFIRE_IMG}
+                          alt={`NLMSF Tote - ${title}`}
+                          width={640}
+                          height={360}
+                        />
                       </div>
                       <div className="product-details">
                         <p className="product-title">{title}</p>
@@ -251,7 +271,12 @@ export default function GiftShopNlmsfPage() {
                   ].map(([title, price, color]) => (
                     <div key={title} className="product-card">
                       <div className="product-image">
-                        <img src={BONFIRE_IMG} alt={`NLMSF - ${title}`} />
+                        <Image
+                          src={BONFIRE_IMG}
+                          alt={`NLMSF - ${title}`}
+                          width={640}
+                          height={360}
+                        />
                       </div>
                       <div className="product-details">
                         <p className="product-title">{title}</p>
@@ -275,7 +300,12 @@ export default function GiftShopNlmsfPage() {
                   ].map(([title, price, color]) => (
                     <div key={title} className="product-card">
                       <div className="product-image">
-                        <img src={BONFIRE_IMG} alt={`NLMSF Eagle - ${title}`} />
+                        <Image
+                          src={BONFIRE_IMG}
+                          alt={`NLMSF Eagle - ${title}`}
+                          width={640}
+                          height={360}
+                        />
                       </div>
                       <div className="product-details">
                         <p className="product-title">{title}</p>
@@ -298,7 +328,12 @@ export default function GiftShopNlmsfPage() {
                   ].map(([title, price]) => (
                     <div key={title} className="product-card">
                       <div className="product-image">
-                        <img src={BONFIRE_IMG} alt={title} />
+                        <Image
+                          src={BONFIRE_IMG}
+                          alt={title}
+                          width={640}
+                          height={360}
+                        />
                       </div>
                       <div className="product-details">
                         <p className="product-title">{title}</p>
@@ -316,7 +351,12 @@ export default function GiftShopNlmsfPage() {
                 <div className="product-row">
                   <div className="product-card">
                     <div className="product-image">
-                      <img src="https://nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg" alt="NLMSF Purple Support Bands" />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg"
+                        alt="NLMSF Purple Support Bands"
+                        width={640}
+                        height={360}
+                      />
                     </div>
                     <div className="product-details">
                       <p className="product-title">LMS Wrist Bands or Ribbons</p>
@@ -332,7 +372,12 @@ export default function GiftShopNlmsfPage() {
                 <div className="product-row">
                   <div className="product-card">
                     <div className="product-image">
-                      <img src="https://nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png" alt="NLMSF Ball Cap" />
+                      <Image
+                        src="https://nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png"
+                        alt="NLMSF Ball Cap"
+                        width={640}
+                        height={360}
+                      />
                     </div>
                     <div className="product-details">
                       <p className="product-title">High-quality Ball Cap</p>

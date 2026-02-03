@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./our-testimonials.css";
 
 type Testimonial = {
@@ -279,10 +280,12 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       <p className="testimonial-quote">{testimonial.quote}</p>
       <div className="testimonial-meta">
         {testimonial.imageUrl ? (
-          <img
+          <Image
             src={testimonial.imageUrl}
             alt={testimonial.imageAlt || testimonial.name}
             className="testimonial-image"
+            width={240}
+            height={240}
           />
         ) : null}
         <div>
@@ -301,10 +304,12 @@ export default function OurTestimonialsPage() {
     <div className="our-testimonials-page">
       <section className="testimonials-hero">
         <div className="testimonials-hero-content">
-          <img
+          <Image
             src="https://nlmsf.org/wp-content/uploads/elementor/thumbs/Screenshot-2024-01-10-6.58.23-PM-1-qi4u77wu3fofs05fwqd3f5ydh0vp5qdj60ryo9w9z8.png"
             alt="Testimonials banner"
             className="testimonials-hero-image"
+            width={1200}
+            height={800}
           />
           <h1 className="testimonials-hero-title">
             Testimonials from the Research and Patient Communities in Support of
@@ -337,10 +342,12 @@ export default function OurTestimonialsPage() {
             />
           ))}
           <div className="testimonial-card testimonial-card--image">
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2021/03/MorePatientTest.jpg"
               alt="More patient testimonials"
               className="testimonial-image-full"
+              width={1200}
+              height={800}
             />
           </div>
         </div>

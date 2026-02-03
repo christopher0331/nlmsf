@@ -8,6 +8,30 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "nlmsf.org",
       },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
+      {
+        protocol: "https",
+        hostname: "via.placeholder.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ars.els-cdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "leiomyosarcoma.info",
+      },
+      {
+        protocol: "https",
+        hostname: "example.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.cancer.net",
+      },
     ],
   },
 };

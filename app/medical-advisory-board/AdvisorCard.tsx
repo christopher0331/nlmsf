@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 function getInitials(name: string): string {
@@ -28,7 +29,7 @@ export function AdvisorCard({ name, position, institution, img }: AdvisorCardPro
       <div className="nlmsf-advisor-image-container">
         <div className="nlmsf-advisor-image-placeholder">
           {!imgError ? (
-            <img
+            <Image
               src={img}
               alt=""
               decoding="async"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Our Board | NLMSF",
@@ -100,16 +101,26 @@ export default function OurBoardPage() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-center">
             <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-100 mb-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://nlmsf.org/wp-content/uploads/2021/02/Dr-Singh.jpg" alt="Arun Singh, M.D." className="object-cover w-full h-full" />
+              <Image
+                src="https://nlmsf.org/wp-content/uploads/2021/02/Dr-Singh.jpg"
+                alt="Arun Singh, M.D."
+                className="object-cover w-full h-full"
+                width={240}
+                height={240}
+              />
             </div>
             <p className="text-blue-600 font-semibold">Arun Singh, M.D.</p>
             <p className="text-blue-600 font-semibold text-sm">Associate Professor · Sarcoma Service · Division of Hematology</p>
             <p className="text-gray-600 mt-4 text-sm leading-relaxed">&ldquo;The National Leiomyosarcoma Foundation is an important organization that strives to gather a critical mass of patients, scientists, patient advocates and physicians to learn more about this rare disease. Within the NLMSF, the LMS Research Roundtable organizes cutting edge research in this area and strives to innovate the ways that this disease is treated.&rdquo;</p>
           </div>
           <div className="flex justify-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://nlmsf.org/wp-content/uploads/elementor/thumbs/Pinwheel-Alex-quts6lih1f9cc5wdbrnqdcio2upb0bjpnisx11mrjw.jpg" alt="Pinwheel" className="rounded-xl max-w-full h-auto" />
+            <Image
+              src="https://nlmsf.org/wp-content/uploads/elementor/thumbs/Pinwheel-Alex-quts6lih1f9cc5wdbrnqdcio2upb0bjpnisx11mrjw.jpg"
+              alt="Pinwheel"
+              className="rounded-xl max-w-full h-auto"
+              width={640}
+              height={360}
+            />
           </div>
         </section>
 
@@ -119,8 +130,13 @@ export default function OurBoardPage() {
             {MEDICAL_PANEL.map((doc) => (
               <div key={doc.name} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                 <div className="aspect-[3/4] relative bg-gray-100">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={doc.img} alt={doc.name} className="object-cover w-full h-full" />
+                  <Image
+                    src={doc.img}
+                    alt={doc.name}
+                    className="object-cover w-full h-full"
+                    width={240}
+                    height={240}
+                  />
                 </div>
                 <div className="p-4 text-center">
                   <p className="font-semibold text-gray-900 text-sm">{doc.name}</p>
@@ -138,8 +154,13 @@ export default function OurBoardPage() {
             {/* Annie Achee */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/01/AnnieAchee-300x300.jpg" alt="Annie Achee" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/AnnieAchee-300x300.jpg"
+                  alt="Annie Achee"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Annie Achee</h3>
@@ -161,8 +182,13 @@ export default function OurBoardPage() {
             {/* Mitch Achee */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/elementor/thumbs/Mitch-Achees-Photo--qttze8kz7mjntnjfbabbojjlhjkskzt81shw2khqh0.jpg" alt="Mitch Achee" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/elementor/thumbs/Mitch-Achees-Photo--qttze8kz7mjntnjfbabbojjlhjkskzt81shw2khqh0.jpg"
+                  alt="Mitch Achee"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Mitch Achee, M.D.</h3>
@@ -178,8 +204,13 @@ export default function OurBoardPage() {
             {/* Dale Ayscue */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2022/07/asy-284x300.jpg" alt="Dale Ayscue" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2022/07/asy-284x300.jpg"
+                  alt="Dale Ayscue"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Dale Ayscue</h3>
@@ -197,8 +228,13 @@ export default function OurBoardPage() {
             {/* David Boles */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2022/02/Selfie-300x233.jpg" alt="David Boles" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2022/02/Selfie-300x233.jpg"
+                  alt="David Boles"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">David Boles</h3>
@@ -214,8 +250,13 @@ export default function OurBoardPage() {
             {/* Lynne Greco Forges */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/01/LynneGreco-300x300.jpg" alt="Lynne Greco Forges" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/LynneGreco-300x300.jpg"
+                  alt="Lynne Greco Forges"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Lynne Greco Forges, M.B.A., C.P.M.</h3>
@@ -231,8 +272,13 @@ export default function OurBoardPage() {
             {/* Jim Matthews */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/01/JimMatthews-300x300.jpg" alt="Jim Matthews" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/JimMatthews-300x300.jpg"
+                  alt="Jim Matthews"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Jim Matthews</h3>
@@ -247,8 +293,13 @@ export default function OurBoardPage() {
             {/* Christopher Hancock */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/01/chrisHeadshot-300x300.png" alt="Christopher Hancock" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/chrisHeadshot-300x300.png"
+                  alt="Christopher Hancock"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Christopher Hancock</h3>
@@ -265,8 +316,13 @@ export default function OurBoardPage() {
             {/* Greg Lee */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/08/image-219x300.png" alt="Greg Lee" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/08/image-219x300.png"
+                  alt="Greg Lee"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Greg Lee</h3>
@@ -283,8 +339,13 @@ export default function OurBoardPage() {
             {/* Alex Aguilera */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2023/06/Alexs-Photo-200x300.jpg" alt="Alex Aguilera" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2023/06/Alexs-Photo-200x300.jpg"
+                  alt="Alex Aguilera"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Alex Aguilera</h3>
@@ -299,8 +360,13 @@ export default function OurBoardPage() {
             {/* Chandalyn Williams */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/02/BM-300x300.jpg" alt="Chandalyn Williams" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/02/BM-300x300.jpg"
+                  alt="Chandalyn Williams"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Chandalyn Williams</h3>
@@ -315,8 +381,13 @@ export default function OurBoardPage() {
             {/* Jacqueline (Jacque) Sebany */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2022/01/Jacque-Sebany.png" alt="Jacqueline Sebany" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2022/01/Jacque-Sebany.png"
+                  alt="Jacqueline Sebany"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Jacqueline (Jacque) Sebany</h3>
@@ -334,8 +405,13 @@ export default function OurBoardPage() {
             {/* Marlana Stoddard */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://nlmsf.org/wp-content/uploads/2021/01/Untitled-design-2-300x300.png" alt="Marlana Stoddard" className="object-cover w-full h-full" />
+                <Image
+                  src="https://nlmsf.org/wp-content/uploads/2021/01/Untitled-design-2-300x300.png"
+                  alt="Marlana Stoddard"
+                  className="object-cover w-full h-full"
+                  width={240}
+                  height={240}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">Marlana Stoddard</h3>

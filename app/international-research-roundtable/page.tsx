@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./international-research-roundtable.css";
 
 export const metadata: Metadata = {
@@ -47,7 +48,7 @@ export default function InternationalResearchRoundtablePage() {
             <div className="content-panel indigo">
               <div className="logos-row">
                 <div className="logo-item">
-                  <img
+                  <Image
                     src="https://leiomyosarcoma.info/wp-content/uploads/2024/08/NLMSF-Logo-Updated-30-Apr-2023-300x297.png"
                     alt="NLMSF Logo"
                     className="logo-img"
@@ -56,7 +57,7 @@ export default function InternationalResearchRoundtablePage() {
                   />
                 </div>
                 <div className="logo-item">
-                  <img
+                  <Image
                     src="https://leiomyosarcoma.info/wp-content/uploads/2023/03/Globe-blue.jpg"
                     alt="Globe Blue"
                     className="logo-img"
@@ -65,7 +66,7 @@ export default function InternationalResearchRoundtablePage() {
                   />
                 </div>
                 <div className="logo-item">
-                  <img
+                  <Image
                     src="https://leiomyosarcoma.info/wp-content/uploads/2023/03/SPAGN-Logo.png"
                     alt="SPAGN Logo"
                     className="logo-img"
@@ -147,7 +148,7 @@ export default function InternationalResearchRoundtablePage() {
 
               <h2>Congratulations to the NLMSF Research Grantees</h2>
               <div className="grantee">
-                <img
+                <Image
                   src="https://leiomyosarcoma.info/wp-content/uploads/2024/03/Nucci-Photo.jpg"
                   alt="Maria Nucci, M.D."
                   width={96}
@@ -165,7 +166,7 @@ export default function InternationalResearchRoundtablePage() {
                 </div>
               </div>
               <div className="grantee">
-                <img
+                <Image
                   src="https://leiomyosarcoma.info/wp-content/uploads/2024/03/Amant-Photo.jpg"
                   alt="Frederic Amant, M.D., Ph.D."
                   width={96}
@@ -181,7 +182,7 @@ export default function InternationalResearchRoundtablePage() {
               </div>
               <div className="grantees">
                 <div className="grantee">
-                  <img
+                  <Image
                     src="https://leiomyosarcoma.info/wp-content/uploads/2023/03/Joanna-Przybyl-Photo-300x300.jpg"
                     alt="Joanna Przybyl, PhD."
                     width={96}
@@ -196,7 +197,7 @@ export default function InternationalResearchRoundtablePage() {
                   </div>
                 </div>
                 <div className="grantee">
-                  <img
+                  <Image
                     src="https://leiomyosarcoma.info/wp-content/uploads/2023/03/Chudasama-Photo-300x300.jpg"
                     alt="Priya Chudasama, Ph.D."
                     width={96}
