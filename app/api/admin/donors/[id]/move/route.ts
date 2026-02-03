@@ -53,10 +53,11 @@ export async function PATCH(
   if (!donor) return NextResponse.json({ error: "Donor not found" }, { status: 404 });
 
   const tributeId = body.tribute_id ?? donor.tributeId;
-  const all = await prisma.tributeDonor.findMany({
+  type TributeDonorRecord = { id: string };
+  const all = (await prisma.tributeDonor.findMany({
     where: { tributeId },
     orderBy: [{ displayOrder: "asc" }, { id: "asc" }],
-  });
+  })) as TributeDonorRecord[];
   const idx = all.findIndex((d) => d.id === id);
   if (idx < 0) return NextResponse.json({ error: "Donor not in list" }, { status: 400 });
 
