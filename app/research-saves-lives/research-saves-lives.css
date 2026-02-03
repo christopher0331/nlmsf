@@ -1,0 +1,157 @@
+ .research-saves-lives-page {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 2.5rem 1.5rem 4rem;
+   color: #111827;
+ }
+ 
+ .research-saves-lives-page a {
+   color: #4338ca;
+   text-decoration: none;
+ }
+ 
+ .research-saves-lives-page a:hover {
+   text-decoration: underline;
+ }
+ 
+ .rsl-hero {
+   background: linear-gradient(135deg, #7e22ce 0%, #4338ca 45%, #0ea5e9 100%);
+   color: #ffffff;
+   border-radius: 16px;
+   padding: 3rem 2rem;
+   text-align: center;
+   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+ }
+ 
+ .rsl-hero-inner {
+   max-width: 760px;
+   margin: 0 auto;
+ }
+ 
+ .rsl-hero-badge {
+   display: inline-block;
+   background: rgba(255, 255, 255, 0.2);
+   border: 1px solid rgba(255, 255, 255, 0.35);
+   padding: 0.4rem 0.9rem;
+   border-radius: 999px;
+   font-weight: 600;
+   margin-bottom: 1rem;
+ }
+ 
+ .rsl-hero h1 {
+   margin: 0 0 0.75rem;
+   font-size: 2.5rem;
+ }
+ 
+ .rsl-hero p {
+   margin: 0;
+   font-size: 1.1rem;
+   line-height: 1.6;
+   opacity: 0.95;
+ }
+ 
+ .rsl-section {
+   margin-top: 2.5rem;
+ }
+ 
+ .rsl-section h2 {
+   font-size: 1.6rem;
+   margin-bottom: 1.25rem;
+   color: #1f2937;
+ }
+ 
+ .rsl-card {
+   background: #ffffff;
+   border: 1px solid #e5e7eb;
+   border-radius: 12px;
+   padding: 1.5rem;
+   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+ }
+ 
+ .rsl-card p {
+   margin: 0 0 1rem;
+   line-height: 1.7;
+ }
+ 
+ .rsl-video-grid {
+   display: grid;
+   gap: 1.5rem;
+ }
+ 
+ .rsl-video-card {
+   background: #ffffff;
+   border-radius: 12px;
+   border: 1px solid #e5e7eb;
+   overflow: hidden;
+   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+ }
+ 
+ .rsl-video-thumb {
+   position: relative;
+   display: block;
+ }
+ 
+ .rsl-video-thumb img {
+   width: 100%;
+   height: auto;
+   display: block;
+ }
+ 
+ .rsl-video-play {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 2.5rem;
+   color: #ffffff;
+   text-shadow: 0 4px 12px rgba(15, 23, 42, 0.45);
+ }
+ 
+ .rsl-video-body {
+   padding: 1.25rem;
+ }
+ 
+ .rsl-video-body h3 {
+   margin: 0 0 0.5rem;
+   font-size: 1.15rem;
+ }
+ 
+ .rsl-video-body p {
+   margin: 0 0 0.75rem;
+   color: #374151;
+ }
+ 
+ .rsl-video-link {
+   font-weight: 600;
+ }
+ 
+ .rsl-contact-card {
+   background: #eef2ff;
+   border: 1px solid #e0e7ff;
+   border-radius: 12px;
+   padding: 1.5rem;
+ }
+ 
+ .rsl-contact-details {
+   display: flex;
+   flex-direction: column;
+   gap: 0.25rem;
+   font-weight: 600;
+   margin-top: 0.75rem;
+ }
+ 
+ @media (min-width: 900px) {
+   .rsl-video-grid {
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+ }
+ 
+ @media (max-width: 640px) {
+   .rsl-hero {
+     padding: 2.5rem 1.5rem;
+   }
+ 
+   .rsl-hero h1 {
+     font-size: 2rem;
+   }
+ }

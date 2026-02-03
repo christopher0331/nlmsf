@@ -11,6 +11,69 @@ import {
   toCommentJson,
 } from "@/lib/wordpress-db";
 
+const SHAWN_BORINI_SLUGS = new Set(["shawn-borini", "shawn-borini-tribute-page"]);
+const SHAWN_BORINI_DONORS = [
+  "Cara Borini",
+  "Chris Borini",
+  "Mary Criswell",
+  "Terri and Jerry Mills",
+  "Carly Esquivel",
+  "Sandy Witter",
+  "Conners Family",
+  "James Knowlton",
+  "Dani Larsen",
+  "Danielle Garlin",
+  "Pinnacle Real Estate Advisors, LLC",
+  "Paul LeNeveu",
+  "Collin Fitzgerald",
+  "Roberta Bolton",
+  "Wes Jordan",
+  "Chase Grimes",
+  "Zack Panariso",
+  "Andrea Gladstone Radis",
+  "Scott Garlin",
+  "Seth Fritz",
+  "Paul Nora",
+  "John LeNeveu",
+  "Jason McNett",
+  "Connor Knutson",
+  "Stephanie Connell",
+  "Catherine Winkelmann",
+  "Peter Sengelmann",
+  "Cindy Petitjean",
+  "Dana Mena",
+  "Greg Titus",
+  "Nancy Grimes",
+  "Rachel and Anna Edson",
+  "The Knowlton's",
+  "Georgia Newman",
+  "Jaimy Criswell",
+  "Grant Kraus",
+  "The Team Newell",
+  "Richard Witter",
+  "Annie and Mitch Achee",
+  "Chris Knowlton",
+];
+
+function getShawnBoriniDonorJson() {
+  const now = new Date().toISOString();
+  return SHAWN_BORINI_DONORS.map((name, index) => ({
+    id: `shawn-borini-${index + 1}`,
+    donor_name: name,
+    donation_amount: null,
+    donation_date: null,
+    is_anonymous: false,
+    message: null,
+    display_order: index + 1,
+    created_at: now,
+  }));
+}
+
+function shouldUseShawnDonors(slug: string, tributeSlug?: string, donorsCount?: number) {
+  if (donorsCount && donorsCount > 0) return false;
+  return SHAWN_BORINI_SLUGS.has(slug) || (tributeSlug ? SHAWN_BORINI_SLUGS.has(tributeSlug) : false);
+}
+
 /** Resolve slug: try exact match, then slug + '-tribute-page' so both /barbara-esther-olson and /barbara-esther-olson-tribute-page work. */
 async function resolveTributeBySlug(slug: string) {
   let tribute = await getTributeBySlug(slug);
@@ -37,9 +100,12 @@ export async function GET(
         getDonors(tribute.id),
         getComments(tribute.id),
       ]);
+      const donorsJson = shouldUseShawnDonors(slug, tribute.slug, donors.length)
+        ? getShawnBoriniDonorJson()
+        : donors.map(toDonorJson);
       return NextResponse.json({
         ...toTributeJson(tribute),
-        donors: donors.map(toDonorJson),
+        donors: donorsJson,
         comments: comments.map(toCommentJson),
       });
     } catch (err) {
@@ -75,6 +141,19 @@ export async function GET(
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
+  const donorsJson = shouldUseShawnDonors(slug, tribute.slug, tribute.donors.length)
+    ? getShawnBoriniDonorJson()
+    : tribute.donors.map((d) => ({
+        id: d.id,
+        donor_name: d.donorName,
+        donation_amount: d.donationAmount,
+        donation_date: d.donationDate,
+        is_anonymous: d.isAnonymous,
+        message: d.message,
+        display_order: d.displayOrder,
+        created_at: d.createdAt.toISOString(),
+      }));
+
   return NextResponse.json({
     id: tribute.id,
     name: tribute.name,
@@ -82,16 +161,7 @@ export async function GET(
     biography: tribute.biography,
     image_url: tribute.imageUrl,
     created_at: tribute.createdAt.toISOString(),
-    donors: tribute.donors.map((d) => ({
-      id: d.id,
-      donor_name: d.donorName,
-      donation_amount: d.donationAmount,
-      donation_date: d.donationDate,
-      is_anonymous: d.isAnonymous,
-      message: d.message,
-      display_order: d.displayOrder,
-      created_at: d.createdAt.toISOString(),
-    })),
+    donors: donorsJson,
     comments: tribute.comments.map((c) => ({
       id: c.id,
       commenter_name: c.commenterName,

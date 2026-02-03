@@ -1,0 +1,124 @@
+.survivorship-info-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  color: #1f2937;
+}
+
+.sip-hero {
+  background: linear-gradient(135deg, #eef2ff 0%, #ede9fe 55%, #f5d0fe 100%);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.sip-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sip-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6d28d9;
+  margin-bottom: 0.75rem;
+}
+
+.sip-hero h1 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  color: #312e81;
+}
+
+.sip-hero p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.sip-hero a {
+  color: #6d28d9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sip-hero a:hover {
+  text-decoration: underline;
+}
+
+.sip-section {
+  margin-top: 2.5rem;
+}
+
+.sip-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.sip-card h2 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.sip-card p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.sip-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.sip-link-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sip-link-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.sip-link-card span {
+  font-size: 0.9rem;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.sip-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.12);
+}
+
+@media (min-width: 900px) {
+  .sip-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .sip-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .sip-hero h1 {
+    font-size: 1.9rem;
+  }
+}

@@ -2,6 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: "/:slug-tribute-fund",
+        destination: "/:slug-tribute-page",
+        permanent: true,
+      },
+    ];
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -12,6 +21,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "nlmsf.org",
+      },
+      {
+        protocol: "http",
         hostname: "nlmsf.org",
       },
       {
@@ -37,6 +50,18 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "www.cancer.net",
+      },
+      {
+        protocol: "https",
+        hostname: "tse3.mm.bing.net",
+      },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
       },
     ],
   },

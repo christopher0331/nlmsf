@@ -1,0 +1,146 @@
+.after-treatment-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  color: #1f2937;
+}
+
+.at-hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #ecfdf3 100%);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.at-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.at-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0f766e;
+  margin-bottom: 0.75rem;
+}
+
+.at-hero h1 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  color: #0f172a;
+}
+
+.at-hero p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.at-section {
+  margin-top: 2.5rem;
+}
+
+.at-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.at-card h2 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.at-card p {
+  color: #374151;
+  line-height: 1.7;
+}
+
+.at-list {
+  padding-left: 1.2rem;
+  color: #374151;
+}
+
+.at-list li {
+  margin-bottom: 0.75rem;
+}
+
+.at-link-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.at-link-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.at-link-card h3 {
+  margin: 0 0 0.4rem;
+  color: #1d4ed8;
+  font-size: 1rem;
+}
+
+.at-link-card span {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.at-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.12);
+}
+
+.at-note {
+  margin-top: 1.5rem;
+  background: #0f766e;
+  color: #f8fafc;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+}
+
+.at-resource-list {
+  padding-left: 1.2rem;
+  margin: 1rem 0 0;
+}
+
+.at-resource-list li {
+  margin-bottom: 0.75rem;
+}
+
+.at-resource-list a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.at-resource-list a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .at-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .at-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .at-hero h1 {
+    font-size: 1.9rem;
+  }
+}

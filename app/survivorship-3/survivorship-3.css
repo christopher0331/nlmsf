@@ -1,0 +1,163 @@
+ .survivorship-three-page {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 2.5rem 1.5rem 4rem;
+   color: #1f2937;
+ }
+ 
+ .s3-hero {
+   background: linear-gradient(135deg, #f0f9ff 0%, #ede9fe 100%);
+   border-radius: 18px;
+   padding: 3rem 2rem;
+   text-align: center;
+   box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+ }
+ 
+ .s3-hero-inner {
+   max-width: 820px;
+   margin: 0 auto;
+ }
+ 
+ .s3-eyebrow {
+   text-transform: uppercase;
+   letter-spacing: 0.2rem;
+   font-size: 0.75rem;
+   font-weight: 600;
+   color: #6d28d9;
+   margin-bottom: 0.75rem;
+ }
+ 
+ .s3-hero h1 {
+   margin: 0 0 1rem;
+   font-size: 2.2rem;
+   color: #312e81;
+ }
+ 
+ .s3-hero p {
+   margin: 0;
+   color: #4b5563;
+   line-height: 1.7;
+ }
+ 
+ .s3-section {
+   margin-top: 2.5rem;
+ }
+ 
+ .s3-card {
+   background: #ffffff;
+   border-radius: 16px;
+   padding: 1.75rem;
+   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+   border: 1px solid #e5e7eb;
+ }
+ 
+ .s3-card h2 {
+   margin-top: 0;
+   color: #111827;
+ }
+ 
+ .s3-list {
+   padding-left: 1.2rem;
+   color: #374151;
+ }
+ 
+ .s3-list li {
+   margin-bottom: 0.75rem;
+ }
+ 
+ .s3-quote {
+   background: #111827;
+   color: #f9fafb;
+   padding: 1.75rem;
+   border-radius: 16px;
+   font-style: italic;
+   box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
+ }
+ 
+ .s3-resource-grid {
+   display: grid;
+   gap: 1rem;
+ }
+ 
+ .s3-resource-card {
+   background: #f8fafc;
+   border-radius: 12px;
+   padding: 1rem;
+   border: 1px solid #e5e7eb;
+ }
+ 
+ .s3-resource-card h3 {
+   margin-top: 0;
+   color: #1f2937;
+ }
+ 
+ .s3-resource-card ul {
+   padding-left: 1.2rem;
+   margin: 0;
+ }
+ 
+ .s3-resource-card a {
+   color: #4338ca;
+   text-decoration: none;
+ }
+ 
+ .s3-resource-card a:hover {
+   text-decoration: underline;
+ }
+ 
+ .s3-clinic-grid {
+   display: grid;
+   gap: 1rem;
+   margin-top: 1.5rem;
+ }
+ 
+ .s3-clinic-card {
+   background: #ffffff;
+   border-radius: 12px;
+   padding: 1rem;
+   border: 1px solid #e5e7eb;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+ }
+ 
+ .s3-clinic-card h3 {
+   margin: 0;
+   font-size: 1rem;
+   color: #111827;
+ }
+ 
+ .s3-clinic-card a {
+   color: #2563eb;
+   font-weight: 600;
+   text-decoration: none;
+ }
+ 
+ .s3-clinic-card a:hover {
+   text-decoration: underline;
+ }
+ 
+ .s3-muted {
+   color: #6b7280;
+   font-size: 0.9rem;
+ }
+ 
+ @media (min-width: 900px) {
+   .s3-resource-grid {
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+ 
+   .s3-clinic-grid {
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+   }
+ }
+ 
+ @media (max-width: 640px) {
+   .s3-hero {
+     padding: 2.5rem 1.5rem;
+   }
+ 
+   .s3-hero h1 {
+     font-size: 1.9rem;
+   }
+ }

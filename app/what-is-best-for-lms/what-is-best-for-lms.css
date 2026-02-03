@@ -1,0 +1,125 @@
+.best-lms-page {
+  font-family: "Roboto", Arial, sans-serif;
+  color: #1f2937;
+  line-height: 1.7;
+}
+
+.best-lms-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 2rem auto 3rem;
+  max-width: 1200px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  color: #ffffff;
+}
+
+.best-lms-hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.best-lms-hero-media img {
+  object-fit: cover;
+}
+
+.best-lms-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 20%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.best-lms-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.best-lms-hero-content h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+}
+
+.best-lms-hero-content p {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #f8fafc;
+}
+
+.best-lms-section {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.best-lms-section h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.best-lms-section p,
+.best-lms-section li {
+  color: #374151;
+}
+
+.best-lms-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.best-lms-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #4c1d95;
+}
+
+.best-lms-card a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.best-lms-card a:hover {
+  text-decoration: underline;
+}
+
+.best-lms-card ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0 0;
+}
+
+@media (max-width: 900px) {
+  .best-lms-hero {
+    padding: 2.5rem;
+    margin: 1.5rem 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .best-lms-hero {
+    padding: 2rem 1.5rem;
+    min-height: 280px;
+  }
+
+  .best-lms-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .best-lms-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .best-lms-card {
+    padding: 1.25rem 1.5rem;
+  }
+}

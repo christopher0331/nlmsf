@@ -123,7 +123,7 @@
 
 /* Medical Board Header */
 .our-board-page .medical-board-header {
-  margin: 80px 0 40px;
+  margin: 40px 0 32px;
   text-align: center;
 }
 
@@ -141,6 +141,28 @@
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+.our-board-page .board-section-header {
+  margin: 64px 0 24px;
+  text-align: center;
+}
+
+.our-board-page .board-section-header h2 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.our-board-page .nlmsf-section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  text-align: left;
 }
 
 /* Board Members Grid */
@@ -167,6 +189,24 @@
 .our-board-page .nlmsf-member-medical {
   background-color: #faf5ff;
   border-color: #e9d5ff;
+}
+
+/* Leadership - Blue */
+.our-board-page .nlmsf-member-leadership {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* Outreach - Teal */
+.our-board-page .nlmsf-member-outreach {
+  background-color: #f0fdfa;
+  border-color: #99f6e4;
+}
+
+/* Support - Pink */
+.our-board-page .nlmsf-member-support {
+  background-color: #fdf2f8;
+  border-color: #fbcfe8;
 }
 
 .our-board-page .nlmsf-member-medical .nlmsf-member-title {
@@ -244,6 +284,54 @@
 
 .our-board-page .nlmsf-read-more-medical:hover {
   background-color: #7c3aed;
+}
+
+.our-board-page .nlmsf-read-more-leadership {
+  background-color: #2563eb;
+}
+
+.our-board-page .nlmsf-read-more-leadership:hover {
+  background-color: #1d4ed8;
+}
+
+.our-board-page .nlmsf-read-more-outreach {
+  background-color: #0d9488;
+}
+
+.our-board-page .nlmsf-read-more-outreach:hover {
+  background-color: #0f766e;
+}
+
+.our-board-page .nlmsf-read-more-support {
+  background-color: #be185d;
+}
+
+.our-board-page .nlmsf-read-more-support:hover {
+  background-color: #9d174d;
+}
+
+.our-board-page .nlmsf-section-leadership .nlmsf-section-title {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid #bfdbfe;
+}
+
+.our-board-page .nlmsf-section-outreach .nlmsf-section-title {
+  background: linear-gradient(to right, #0d9488, #0f766e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid #99f6e4;
+}
+
+.our-board-page .nlmsf-section-support .nlmsf-section-title {
+  background: linear-gradient(to right, #be185d, #9d174d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid #fbcfe8;
 }
 
 .our-board-page .nlmsf-member-bio {
@@ -525,6 +613,11 @@
 
 @media (max-width: 480px) {
   .our-board-page .nlmsf-hero-title {
+    font-size: 2rem;
+  }
+
+  .our-board-page .medical-board-header h2,
+  .our-board-page .board-section-header h2 {
     font-size: 2rem;
   }
 }

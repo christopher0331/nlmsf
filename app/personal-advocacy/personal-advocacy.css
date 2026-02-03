@@ -1,0 +1,629 @@
+/* NLMSF Personal Advocacy Page Styles */
+
+.personal-advocacy-page {
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.personal-advocacy-page a {
+  color: #6a3ea1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.personal-advocacy-page a:hover {
+  color: #4338ca;
+}
+
+.personal-advocacy-page .gradient-text {
+  background: linear-gradient(to right, #7e22ce, #4338ca);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* ===== HERO SECTION ===== */
+.personal-advocacy-page .hero-section {
+  background: linear-gradient(
+    135deg,
+    rgba(126, 34, 206, 0.05) 0%,
+    rgba(67, 56, 202, 0.07) 100%
+  );
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.personal-advocacy-page .hero-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.personal-advocacy-page .floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: personal-advocacy-float 8s infinite ease-in-out;
+}
+
+.personal-advocacy-page .shape-purple {
+  background: radial-gradient(
+    circle,
+    rgba(126, 34, 206, 0.3) 0%,
+    rgba(126, 34, 206, 0.1) 70%
+  );
+}
+
+.personal-advocacy-page .shape-blue {
+  background: radial-gradient(
+    circle,
+    rgba(67, 56, 202, 0.3) 0%,
+    rgba(67, 56, 202, 0.1) 70%
+  );
+}
+
+.personal-advocacy-page .shape-teal {
+  background: radial-gradient(
+    circle,
+    rgba(4, 120, 87, 0.3) 0%,
+    rgba(4, 120, 87, 0.1) 70%
+  );
+}
+
+@keyframes personal-advocacy-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.personal-advocacy-page .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.personal-advocacy-page .hero-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6a3ea1;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  margin: 0 auto 2rem auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: relative;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(106, 62, 161, 0.2);
+}
+
+.personal-advocacy-page .hero-badge i {
+  margin-right: 0.5rem;
+}
+
+.personal-advocacy-page .hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.personal-advocacy-page .hero-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #6a3ea1, #4338ca);
+  margin: 0 auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+.personal-advocacy-page .hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+.personal-advocacy-page .hero-description {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: #6b7280;
+}
+
+.personal-advocacy-page .hero-logo {
+  width: 220px;
+  height: auto;
+  margin: 0 auto 2rem auto;
+  display: block;
+}
+
+.personal-advocacy-page .hero-tags {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.personal-advocacy-page .hero-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.personal-advocacy-page .tag-support {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+.personal-advocacy-page .tag-resources {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.personal-advocacy-page .tag-education {
+  background-color: #ccfbf1;
+  color: #0f766e;
+}
+
+/* ===== LAYOUT ===== */
+.personal-advocacy-page .content-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.personal-advocacy-page .main-content {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .personal-advocacy-page .content-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+
+  .personal-advocacy-page .sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+  }
+}
+
+/* ===== CONTENT SECTION ===== */
+.personal-advocacy-page .content-section {
+  margin-bottom: 4rem;
+}
+
+.personal-advocacy-page .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.personal-advocacy-page .section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.personal-advocacy-page .content-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #6a3ea1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-advocacy-page .content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.personal-advocacy-page .content-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.personal-advocacy-page .content-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.personal-advocacy-page .content-card-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.personal-advocacy-page .content-card-blue {
+  border-top-color: #4338ca;
+}
+
+.personal-advocacy-page .content-card-teal {
+  border-top-color: #047857;
+}
+
+.personal-advocacy-page .content-card-amber {
+  border-top-color: #b45309;
+}
+
+.personal-advocacy-page .content-card-pink {
+  border-top-color: #be185d;
+}
+
+.personal-advocacy-page .content-link {
+  color: #6a3ea1;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.personal-advocacy-page .content-link:hover {
+  color: #4338ca;
+}
+
+.personal-advocacy-page .note-box {
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #6a3ea1;
+}
+
+.personal-advocacy-page .note-box.blue {
+  border-color: #4338ca;
+}
+
+.personal-advocacy-page .note-box.teal {
+  border-color: #047857;
+}
+
+.personal-advocacy-page .note-box.amber {
+  border-color: #b45309;
+}
+
+.personal-advocacy-page .cta-box {
+  background: linear-gradient(135deg, #6a3ea1, #4338ca);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+
+.personal-advocacy-page .cta-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.personal-advocacy-page .cta-box p {
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.personal-advocacy-page .cta-button {
+  display: inline-block;
+  background-color: white;
+  color: #6a3ea1;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-advocacy-page .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.personal-advocacy-page .section-gradient-bg {
+  background: linear-gradient(135deg, rgba(126, 34, 206, 0.9) 0%, rgba(67, 56, 202, 0.9) 100%);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.personal-advocacy-page .section-gradient-bg h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.personal-advocacy-page .section-gradient-bg p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.personal-advocacy-page .quote-box {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  font-style: italic;
+}
+
+.personal-advocacy-page .quote-box::before {
+  content: "\"";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 4rem;
+  font-family: Georgia, serif;
+  color: rgba(106, 62, 161, 0.2);
+  line-height: 1;
+}
+
+.personal-advocacy-page .quote-content {
+  padding-left: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.personal-advocacy-page .quote-source {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  text-align: right;
+  color: #4b5563;
+}
+
+.personal-advocacy-page .resources-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .personal-advocacy-page .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== SIDEBAR ===== */
+.personal-advocacy-page .sidebar {
+  margin-bottom: 2rem;
+}
+
+.personal-advocacy-page .sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.personal-advocacy-page .sidebar-nav {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.personal-advocacy-page .sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.personal-advocacy-page .sidebar-item {
+  margin-bottom: 0.75rem;
+}
+
+.personal-advocacy-page .sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: #4b5563;
+  transition: all 0.2s ease;
+}
+
+.personal-advocacy-page .sidebar-link:hover {
+  background-color: #f3f4f6;
+  color: #6a3ea1;
+}
+
+.personal-advocacy-page .sidebar-link i {
+  margin-right: 0.75rem;
+  color: #6a3ea1;
+}
+
+.personal-advocacy-page .sidebar-quick-access {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.personal-advocacy-page .sidebar-quick-access h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.personal-advocacy-page .quick-access-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.personal-advocacy-page .quick-link {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.personal-advocacy-page .quick-link:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+.personal-advocacy-page .quick-link-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9999px;
+  background-color: #ede9fe;
+  color: #6a3ea1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.personal-advocacy-page .quick-link-content strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #1f2937;
+}
+
+.personal-advocacy-page .quick-link-content span {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.personal-advocacy-page .sidebar-cta {
+  background: linear-gradient(135deg, #6a3ea1, #4338ca);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.personal-advocacy-page .sidebar-cta h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.personal-advocacy-page .sidebar-cta p {
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.personal-advocacy-page .sidebar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  color: #6a3ea1;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-advocacy-page .sidebar-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.personal-advocacy-page .sidebar-support {
+  background-color: #fff8e1;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  border-left: 5px solid #ffc107;
+}
+
+.personal-advocacy-page .support-box h4 {
+  color: #ff9800;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.personal-advocacy-page .support-box p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.personal-advocacy-page .support-contact,
+.personal-advocacy-page .support-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #333333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .personal-advocacy-page .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .personal-advocacy-page .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .personal-advocacy-page .section-title {
+    font-size: 1.75rem;
+  }
+
+  .personal-advocacy-page .section-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .personal-advocacy-page .section-gradient-bg {
+    padding: 1.5rem;
+  }
+
+  .personal-advocacy-page .section-gradient-bg h2 {
+    font-size: 1.5rem;
+  }
+
+  .personal-advocacy-page .content-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-advocacy-page .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .personal-advocacy-page .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .personal-advocacy-page .hero-logo {
+    width: 180px;
+  }
+
+  .personal-advocacy-page .cta-box {
+    padding: 1.5rem;
+  }
+}

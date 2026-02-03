@@ -1,6 +1,24 @@
 import type { Metadata } from "next";
 import AbcNewDiagnosisSection from "./components/AbcNewDiagnosisSection";
 import BasicResearchSection from "./components/BasicResearchSection";
+import CaregivingSection from "./components/CaregivingSection";
+import ChemotherapySection from "./components/ChemotherapySection";
+import CirculatingTumorDnaSection from "./components/CirculatingTumorDnaSection";
+import ClinicalTrialsSection from "./components/ClinicalTrialsSection";
+import CutaneousLmsSection from "./components/CutaneousLmsSection";
+import GeneralInfoSarcomaCareSection from "./components/GeneralInfoSarcomaCareSection";
+import ImagingSection from "./components/ImagingSection";
+import ImmunotherapySection from "./components/ImmunotherapySection";
+import MicrobiomeSection from "./components/MicrobiomeSection";
+import NutritionSection from "./components/NutritionSection";
+import PathologySection from "./components/PathologySection";
+import PatientResearchSection from "./components/PatientResearchSection";
+import PecomaSection from "./components/PecomaSection";
+import RadiationSection from "./components/RadiationSection";
+import SarculatorSection from "./components/SarculatorSection";
+import SurgicalSection from "./components/SurgicalSection";
+import SurvivorshipSection from "./components/SurvivorshipSection";
+import UterineFibroidsSection from "./components/UterineFibroidsSection";
 import "./events.css";
 
 export const metadata: Metadata = {
@@ -357,6 +375,24 @@ export default function EventsPage() {
             </div>
             <AbcNewDiagnosisSection />
             <BasicResearchSection />
+            <CaregivingSection />
+            <ChemotherapySection />
+            <CirculatingTumorDnaSection />
+            <ClinicalTrialsSection />
+            <CutaneousLmsSection />
+            <GeneralInfoSarcomaCareSection />
+            <ImagingSection />
+            <ImmunotherapySection />
+            <MicrobiomeSection />
+            <NutritionSection />
+            <PathologySection />
+            <PecomaSection />
+            <PatientResearchSection />
+            <RadiationSection />
+            <SarculatorSection />
+            <SurgicalSection />
+            <SurvivorshipSection />
+            <UterineFibroidsSection />
           </div>
         </div>
       </div>

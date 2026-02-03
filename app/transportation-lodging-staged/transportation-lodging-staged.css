@@ -1,0 +1,140 @@
+.transportation-lodging-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  color: #1f2937;
+}
+
+.tls-hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #ecfeff 55%, #f5f3ff 100%);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.tls-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.tls-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0f766e;
+  margin-bottom: 0.75rem;
+}
+
+.tls-hero h1 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  color: #0f172a;
+}
+
+.tls-hero p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.tls-section {
+  margin-top: 2.5rem;
+}
+
+.tls-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.tls-card h2 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.tls-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.tls-list li {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.tls-list a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tls-list a:hover {
+  text-decoration: underline;
+}
+
+.tls-list p {
+  margin: 0.5rem 0 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.tls-link-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tls-link-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tls-link-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.tls-link-card span {
+  font-size: 0.9rem;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.tls-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.12);
+}
+
+@media (min-width: 900px) {
+  .tls-link-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .tls-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .tls-hero h1 {
+    font-size: 1.9rem;
+  }
+}

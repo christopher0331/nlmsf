@@ -1,0 +1,120 @@
+ .questions-page {
+   max-width: 920px;
+   margin: 0 auto;
+   padding: 2.5rem 1.5rem 4rem;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+   color: #1f2937;
+   line-height: 1.7;
+ }
+ 
+ .questions-hero {
+   background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+   border-radius: 1rem;
+   padding: 2.5rem 2rem;
+   text-align: center;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+   margin-bottom: 2.5rem;
+ }
+ 
+ .questions-hero h1 {
+   font-size: 2.4rem;
+   font-weight: 800;
+   margin-bottom: 0.75rem;
+   color: #1e3a8a;
+ }
+ 
+ .questions-hero p {
+   max-width: 640px;
+   margin: 0 auto;
+   color: #4b5563;
+ }
+ 
+ .questions-section {
+   margin-bottom: 2.5rem;
+ }
+ 
+ .questions-section h2 {
+   font-size: 1.6rem;
+   font-weight: 700;
+   margin-bottom: 1rem;
+   color: #111827;
+ }
+ 
+ .questions-section h3 {
+   font-size: 1.25rem;
+   font-weight: 700;
+   margin: 1.5rem 0 0.75rem;
+   color: #1f2937;
+ }
+ 
+ .questions-list {
+   padding-left: 1.25rem;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 0.75rem;
+ }
+ 
+ .questions-list li {
+   color: #374151;
+ }
+ 
+ .questions-list a {
+   color: #1d4ed8;
+   text-decoration: underline;
+ }
+ 
+ .questions-image {
+   margin: 1.5rem 0;
+ }
+ 
+ .questions-image img {
+   width: 100%;
+   height: auto;
+   border-radius: 0.75rem;
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+ }
+ 
+ .video-embed {
+   position: relative;
+   width: 100%;
+   padding-bottom: 56.25%;
+   height: 0;
+   border-radius: 0.75rem;
+   overflow: hidden;
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+   margin-top: 1rem;
+ }
+ 
+ .video-embed iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border: 0;
+ }
+ 
+ .questions-note-title {
+   margin-top: 1.25rem;
+   color: #1e3a8a;
+ }
+ 
+ .questions-note {
+   background-color: #f9fafb;
+   border-radius: 0.75rem;
+   padding: 1.25rem;
+   border-left: 4px solid #60a5fa;
+   color: #4b5563;
+ }
+ 
+ @media (max-width: 640px) {
+   .questions-hero {
+     padding: 2rem 1.5rem;
+   }
+ 
+   .questions-hero h1 {
+     font-size: 2rem;
+   }
+ }

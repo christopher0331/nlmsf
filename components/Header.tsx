@@ -109,6 +109,15 @@ export default function Header() {
     return () => document.removeEventListener("click", handleClick);
   }, [closeDesktop, desktopDropdown]);
 
+  useEffect(() => {
+    if (desktopDropdown == null) return;
+    const handleScroll = () => {
+      closeDesktop();
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [closeDesktop, desktopDropdown]);
+
   return (
     <div className={FONT_HEADER}>
       <div className={LOGO_SPANNING}>

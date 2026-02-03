@@ -1,0 +1,164 @@
+.distant-transport-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  color: #1f2937;
+}
+
+.dt-hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 55%, #e0f2fe 100%);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.dt-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.dt-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+.dt-hero h1 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  color: #0f172a;
+}
+
+.dt-hero p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.dt-section {
+  margin-top: 2.5rem;
+}
+
+.dt-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.dt-card h2 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.dt-intro {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.dt-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.dt-resource {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.dt-resource h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #1f2937;
+}
+
+.dt-resource p {
+  margin: 0 0 0.75rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.dt-resource a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dt-resource a:hover {
+  text-decoration: underline;
+}
+
+.dt-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dt-list-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.dt-list-item h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.dt-list-item p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.dt-list-item a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dt-list-item a:hover {
+  text-decoration: underline;
+}
+
+.dt-muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .dt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dt-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .dt-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .dt-hero h1 {
+    font-size: 1.9rem;
+  }
+}
