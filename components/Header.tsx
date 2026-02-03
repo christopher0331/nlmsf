@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const LOGO_SRC =
   "https://nlmsf.org/wp-content/uploads/2023/10/NLMSF-Logo-Updated-30-Apr-2023.png";
@@ -87,12 +88,26 @@ export default function Header() {
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   const closeDesktop = useCallback(() => setDesktopDropdown(null), []);
+  const closeDropdowns = useCallback(() => {
+    setDesktopDropdown(null);
+    setMobileDropdown(null);
+  }, []);
   const toggleDesktop = (key: string) =>
     setDesktopDropdown((prev) => (prev === key ? null : key));
   const toggleMobile = (key: string) =>
     setMobileDropdown((prev) => (prev === key ? null : key));
+  const handleDropdownLinkClick = useCallback(
+    (event: React.MouseEvent<HTMLDivElement>) => {
+      const target = event.target as HTMLElement;
+      if (target.closest("a")) {
+        closeDesktop();
+      }
+    },
+    [closeDesktop],
+  );
 
   useEffect(() => {
     document.body.style.overflow = mobileNavOpen ? "hidden" : "";
@@ -117,6 +132,10 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [closeDesktop, desktopDropdown]);
+
+  useEffect(() => {
+    closeDropdowns();
+  }, [closeDropdowns, pathname]);
 
   return (
     <div className={FONT_HEADER}>
@@ -178,7 +197,7 @@ export default function Header() {
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "patients" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
-                  <div className={DROPDOWN_PANEL}>
+                  <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>PATIENTS</h3>
                       <div className={DROPDOWN_CATEGORIES}>
@@ -465,7 +484,7 @@ export default function Header() {
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "survivorship" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
-                  <div className={DROPDOWN_PANEL}>
+                  <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>SURVIVORSHIP</h3>
                       <div className={DROPDOWN_SECTION}>
@@ -510,7 +529,7 @@ export default function Header() {
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "caregiving" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
-                  <div className={DROPDOWN_PANEL}>
+                  <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>
                         CAREGIVING COUNTS
@@ -573,7 +592,7 @@ export default function Header() {
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "involved" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
-                  <div className={DROPDOWN_PANEL}>
+                  <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>GET INVOLVED</h3>
                       <div className={DROPDOWN_SECTION}>
@@ -626,7 +645,7 @@ export default function Header() {
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "about" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
-                  <div className={DROPDOWN_PANEL}>
+                  <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>ABOUT US</h3>
                       <div className={DROPDOWN_SECTION}>
@@ -687,7 +706,7 @@ export default function Header() {
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "research" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
-                  <div className={DROPDOWN_PANEL}>
+                  <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>RESEARCH</h3>
                       <div className={DROPDOWN_CATEGORIES}>
