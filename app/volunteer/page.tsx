@@ -9,19 +9,19 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  "https://nlmsf.org/wp-content/uploads/2020/07/unnamed-64.jpg",
-  "https://nlmsf.org/wp-content/uploads/2020/07/unnamed-65.jpg",
-  "https://nlmsf.org/wp-content/uploads/2020/07/unnamed-62.jpg",
-  "https://nlmsf.org/wp-content/uploads/2020/07/unnamed-63.jpg",
-  "https://nlmsf.org/wp-content/uploads/2021/03/Support-group.jpeg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_1809.jpg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_2716.jpg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_2988.jpg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_3116.jpg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_3118.jpg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_3128.jpg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_3146.jpg",
-  "https://nlmsf.org/wp-content/uploads/2025/11/IMG_3189.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-64.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-65.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-62.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-63.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2021/03/Support-group.jpeg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_1809.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_2716.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_2988.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_3116.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_3118.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_3128.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_3146.jpg",
+  "https://media.nlmsf.org/wp-content/uploads/2025/11/IMG_3189.jpg",
 ];
 
 export default function VolunteerPage() {
@@ -131,7 +131,7 @@ export default function VolunteerPage() {
                 <div className="vol-spotlight">
                   <div className="vol-spotlight-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2025/11/bonnie-shaw-fundraising.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2025/11/bonnie-shaw-fundraising.jpg"
                       alt="Community Ambassador fundraiser Bonnie Shaw"
                       width={320}
                       height={220}
@@ -304,7 +304,7 @@ export default function VolunteerPage() {
             <div className="vol-section-body">
               <div className="vol-image">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2025/08/1754263335367blob.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2025/08/1754263335367blob.png"
                   alt="Spreading the Word Initiative"
                   width={360}
                   height={260}
@@ -322,7 +322,7 @@ export default function VolunteerPage() {
                   <div className="vol-toolkit">
                     <div className="vol-toolkit-image">
                       <Image
-                        src="https://nlmsf.org/wp-content/uploads/2025/08/IMG_6693-preview-scaled.jpeg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2025/08/IMG_6693-preview-scaled.jpeg"
                         alt="Small Tool Kit Instructions"
                         width={240}
                         height={160}
@@ -353,7 +353,7 @@ export default function VolunteerPage() {
 
                 <div className="vol-golf-card">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2025/08/1754263381045blob.png"
+                    src="https://media.nlmsf.org/wp-content/uploads/2025/08/1754263381045blob.png"
                     alt="Sarcoma Awareness Card"
                     width={260}
                     height={180}

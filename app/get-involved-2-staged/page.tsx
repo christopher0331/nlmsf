@@ -33,7 +33,7 @@ export default function GetInvolved2StagedPage() {
               <h2 className="g2-section-title">Future Fundraising Events</h2>
               <div className="g2-flyer-wrap">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2023/03/Beau-Arts-Ball-Flyer.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2023/03/Beau-Arts-Ball-Flyer.png"
                   alt="Beau Arts Ball flyer"
                   className="g2-flyer-image"
                   width={1200}
@@ -48,7 +48,7 @@ export default function GetInvolved2StagedPage() {
               <ul className="g2-past-events-list">
                 <li>
                   <a
-                    href="https://nlmsf.org/wp-content/uploads/2021/07/NLMSF-Jim-Grim-and-Tom-Minnock-Tribute-Fundraiser-2.docx.pdf"
+                    href="https://media.nlmsf.org/wp-content/uploads/2021/07/NLMSF-Jim-Grim-and-Tom-Minnock-Tribute-Fundraiser-2.docx.pdf"
                     className="g2-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function GetInvolved2StagedPage() {
                 </li>
                 <li>
                   <a
-                    href="https://nlmsf.org/wp-content/uploads/2021/07/NLMSF-Rodney-Williams-Golf-Outing-for-Tom.docx.pdf"
+                    href="https://media.nlmsf.org/wp-content/uploads/2021/07/NLMSF-Rodney-Williams-Golf-Outing-for-Tom.docx.pdf"
                     className="g2-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -68,7 +68,7 @@ export default function GetInvolved2StagedPage() {
                 </li>
                 <li>
                   <a
-                    href="https://nlmsf.org/wp-content/uploads/2021/08/Neal-Jacobs-Golf-Tournament-2021.docx.pdf"
+                    href="https://media.nlmsf.org/wp-content/uploads/2021/08/Neal-Jacobs-Golf-Tournament-2021.docx.pdf"
                     className="g2-link g2-link-highlight"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -96,7 +96,7 @@ export default function GetInvolved2StagedPage() {
               <h2 className="g2-section-title">OPENING EVERY DOOR – TOGETHER</h2>
               <div className="g2-roundtable-wrap">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2023/02/Roundtable-2022-Group-Photo-resized-jpeg-2-300x200.jpeg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2023/02/Roundtable-2022-Group-Photo-resized-jpeg-2-300x200.jpeg"
                   alt="Roundtable 2022 Group Photo"
                   className="g2-roundtable-image"
                   width={1200}

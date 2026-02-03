@@ -27,7 +27,7 @@ export default function HomeOrphanPage() {
       <section className="home-hotline">
         <div className="home-hotline-inner">
           <Image
-            src="https://nlmsf.org/wp-content/uploads/2022/03/hotline-removebg-preview-150x150.png"
+            src="https://media.nlmsf.org/wp-content/uploads/2022/03/hotline-removebg-preview-150x150.png"
             alt=""
             className="home-hotline-img"
             width={150}
@@ -62,7 +62,7 @@ export default function HomeOrphanPage() {
               />
             </div>
             <Image
-              src="https://nlmsf.org/wp-content/uploads/2020/05/Heros-Among-Us-Photo-1024x683.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2020/05/Heros-Among-Us-Photo-1024x683.jpg"
               alt="Heroes Among Us"
               width={1024}
               height={683}
@@ -85,7 +85,7 @@ export default function HomeOrphanPage() {
 
         <div className="home-col home-col-center">
           <Image
-            src="https://nlmsf.org/wp-content/uploads/2020/05/cropped-Untitled-design-87.png"
+            src="https://media.nlmsf.org/wp-content/uploads/2020/05/cropped-Untitled-design-87.png"
             alt=""
             width={399}
             height={303}
@@ -107,19 +107,19 @@ export default function HomeOrphanPage() {
           </form>
           <div className="home-seals">
             <Image
-              src="https://nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
               alt="Top rated"
               width={253}
               height={119}
             />
             <Image
-              src="https://nlmsf.org/wp-content/uploads/2021/03/Seals.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2021/03/Seals.jpg"
               alt="Seals"
               width={111}
               height={111}
             />
             <Image
-              src="https://nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
               alt="GuideStar"
               width={167}
               height={122}
@@ -163,7 +163,7 @@ export default function HomeOrphanPage() {
         <div className="home-windows-inner">
           <Link href="/patient-perspectives">
             <Image
-              src="https://nlmsf.org/wp-content/uploads/2022/01/Windows-of-Hope.png"
+              src="https://media.nlmsf.org/wp-content/uploads/2022/01/Windows-of-Hope.png"
               alt=""
               className="home-windows-img"
               width={553}
@@ -185,32 +185,32 @@ export default function HomeOrphanPage() {
       <section className="home-partners">
         <h1>Our Partners In Patient Advocacy and Support</h1>
         <div className="home-partners-track">
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/unnamed-32-300x38.jpg" alt="" width={300} height={38} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/7-asco.jpg" alt="" width={300} height={80} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/unnamed-36.jpg" alt="" width={200} height={60} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/download-3.png" alt="" width={200} height={80} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/unnamed-34.jpg" alt="" width={200} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/unnamed-37.jpg" alt="" width={200} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/unnamed-35.jpg" alt="" width={200} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2021/02/ECOG-300x81.jpg" alt="ECOG" width={300} height={81} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/download-5-300x136.png" alt="" width={300} height={136} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/unnamed-33.jpg" alt="" width={200} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2021/03/Pcori-300x68.jpg" alt="PCORI" width={300} height={68} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/cb0a477898aea87bc1af0e7ddeaea647-1.png" alt="" width={150} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/download-2-300x133.png" alt="" width={300} height={133} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/download-7.png" alt="" width={150} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/download-4.png" alt="" width={150} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/Sarcoma-Oncology-Center.jpg" alt="" width={200} height={60} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/12/lazarex.jpg" alt="Lazarex" width={200} height={60} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/download-6-300x71.png" alt="" width={300} height={71} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/05/unnamed-38.jpg" alt="" width={200} height={50} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/06/unnamed-63-300x44.jpg" alt="" width={300} height={44} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2020/11/unnamed-74-1-300x167.jpg" alt="" width={300} height={167} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2021/11/CountmeIn.jpg" alt="Count Me In" width={200} height={60} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2022/03/University-of-Mannheim.jpg" alt="University of Mannheim" width={200} height={60} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2022/03/USC.jpg" alt="USC" width={200} height={60} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2022/03/royal-marsden.jpg" alt="Royal Marsden" width={200} height={60} />
-          <Image src="https://nlmsf.org/wp-content/uploads/2022/03/McGill.jpg" alt="McGill" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-32-300x38.jpg" alt="" width={300} height={38} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/7-asco.jpg" alt="" width={300} height={80} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-36.jpg" alt="" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/download-3.png" alt="" width={200} height={80} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-34.jpg" alt="" width={200} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-37.jpg" alt="" width={200} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-35.jpg" alt="" width={200} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2021/02/ECOG-300x81.jpg" alt="ECOG" width={300} height={81} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/download-5-300x136.png" alt="" width={300} height={136} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-33.jpg" alt="" width={200} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2021/03/Pcori-300x68.jpg" alt="PCORI" width={300} height={68} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/cb0a477898aea87bc1af0e7ddeaea647-1.png" alt="" width={150} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/download-2-300x133.png" alt="" width={300} height={133} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/download-7.png" alt="" width={150} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/download-4.png" alt="" width={150} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/Sarcoma-Oncology-Center.jpg" alt="" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/12/lazarex.jpg" alt="Lazarex" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/download-6-300x71.png" alt="" width={300} height={71} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-38.jpg" alt="" width={200} height={50} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-63-300x44.jpg" alt="" width={300} height={44} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2020/11/unnamed-74-1-300x167.jpg" alt="" width={300} height={167} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2021/11/CountmeIn.jpg" alt="Count Me In" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2022/03/University-of-Mannheim.jpg" alt="University of Mannheim" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2022/03/USC.jpg" alt="USC" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2022/03/royal-marsden.jpg" alt="Royal Marsden" width={200} height={60} />
+          <Image src="https://media.nlmsf.org/wp-content/uploads/2022/03/McGill.jpg" alt="McGill" width={200} height={60} />
         </div>
       </section>
 

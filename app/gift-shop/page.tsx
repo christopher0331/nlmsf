@@ -39,7 +39,7 @@ export default function GiftShopPage() {
         </div>
         <div className="hero-image">
           <Image
-            src="https://nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg"
+            src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg"
             alt="NLMSF Gift Shop"
             width={1200}
             height={800}
@@ -105,7 +105,7 @@ export default function GiftShopPage() {
               </div>
               <div className="featured-book-image">
                 <Image
-                  src="https://nlmsf.org/wp-content/uploads/2026/01/Goodnight-Mama-FRONT.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2026/01/Goodnight-Mama-FRONT.jpg"
                   alt="Goodnight Mama - A book supporting the National Leiomyosarcoma Foundation"
                   width={640}
                   height={360}
@@ -124,7 +124,7 @@ export default function GiftShopPage() {
               <div className="intro-content">
                 <div className="intro-logo">
                   <Image
-                    src="https://nlmsf.org/wp-content/uploads/2021/02/Gift-shop-box.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/02/Gift-shop-box.jpg"
                     alt="Gift Shop Box"
                     width={640}
                     height={360}
@@ -159,7 +159,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6015.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/06/IMG_6015.jpg"
                       alt="NLMSF Support T-shirts"
                       width={640}
                       height={360}
@@ -179,7 +179,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_5487.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/06/IMG_5487.jpg"
                       alt="Handmade Jewelry Clips"
                       width={640}
                       height={360}
@@ -197,7 +197,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6650.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/06/IMG_6650.jpg"
                       alt="Fall Tree Notecard"
                       width={640}
                       height={360}
@@ -216,7 +216,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6210.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/06/IMG_6210.jpg"
                       alt="Purple Flower Notecard"
                       width={640}
                       height={360}
@@ -237,7 +237,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_6338-scaled.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/06/IMG_6338-scaled.jpg"
                       alt="Sunset Notecard"
                       width={640}
                       height={360}
@@ -256,7 +256,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/06/IMG_8096.jpeg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/06/IMG_8096.jpeg"
                       alt="Hand Painted Throw Pillow"
                       width={640}
                       height={360}
@@ -276,7 +276,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/06/Ceramic-Mugs.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/06/Ceramic-Mugs.jpg"
                       alt="Ceramic Cup"
                       width={640}
                       height={360}
@@ -294,7 +294,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/07/NLMSF-Sign.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/07/NLMSF-Sign.jpg"
                       alt="NLMSF Support Yard Sign"
                       width={640}
                       height={360}
@@ -314,7 +314,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2022/04/Keyring.png"
+                      src="https://media.nlmsf.org/wp-content/uploads/2022/04/Keyring.png"
                       alt="LMS Wrist Bands or KeyChain"
                       width={640}
                       height={360}
@@ -330,7 +330,7 @@ export default function GiftShopPage() {
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2022/04/IMG-9029-scaled.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2022/04/IMG-9029-scaled.jpg"
                       alt="NLMSF Nite Oils"
                       width={640}
                       height={360}
@@ -358,7 +358,7 @@ export default function GiftShopPage() {
                 <div className="special-product">
                   <div className="special-product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg"
+                      src="https://media.nlmsf.org/wp-content/uploads/2021/07/purplebands.jpg"
                       alt="NLMSF Purple Support Bands"
                       width={640}
                       height={360}
@@ -374,7 +374,7 @@ export default function GiftShopPage() {
                 <div className="special-product">
                   <div className="special-product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png"
+                      src="https://media.nlmsf.org/wp-content/uploads/2022/07/NLMSF-hat.png"
                       alt="NLMSF Ball Cap"
                       width={640}
                       height={360}
@@ -390,7 +390,7 @@ export default function GiftShopPage() {
                 <div className="special-product">
                   <div className="special-product-image">
                     <Image
-                      src="https://nlmsf.org/wp-content/uploads/2022/08/Soap-For-The-Cure.png"
+                      src="https://media.nlmsf.org/wp-content/uploads/2022/08/Soap-For-The-Cure.png"
                       alt="Soap For The Cure"
                       width={640}
                       height={360}
@@ -406,13 +406,13 @@ export default function GiftShopPage() {
                   <div className="special-product-image">
                     <div className="multi-image">
                       <Image
-                        src="https://nlmsf.org/wp-content/uploads/2022/02/Nlmsf-T-Shirt.jpg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2022/02/Nlmsf-T-Shirt.jpg"
                         alt="NLMSF T-Shirt"
                         width={640}
                         height={360}
                       />
                       <Image
-                        src="https://nlmsf.org/wp-content/uploads/2022/02/NLMSF-hoodie.jpg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2022/02/NLMSF-hoodie.jpg"
                         alt="NLMSF Hoodie"
                         width={640}
                         height={360}

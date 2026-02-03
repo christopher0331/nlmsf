@@ -14,7 +14,7 @@ export default function OpenResearchPage() {
       <section className="open-research-hero">
         <div className="open-research-container">
           <Image
-            src="https://nlmsf.org/wp-content/uploads/2022/03/image1.jpg"
+            src="https://media.nlmsf.org/wp-content/uploads/2022/03/image1.jpg"
             alt="Open research hero"
             className="open-research-hero-image"
             width={1200}
@@ -28,7 +28,7 @@ export default function OpenResearchPage() {
           <div className="open-research-grid">
             <div className="open-research-card">
               <Image
-                src="https://nlmsf.org/wp-content/uploads/2022/03/image3.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/03/image3.jpg"
                 alt="Research laboratory"
                 className="open-research-image"
                 width={640}
@@ -37,7 +37,7 @@ export default function OpenResearchPage() {
             </div>
             <div className="open-research-card">
               <Image
-                src="https://nlmsf.org/wp-content/uploads/2022/03/image2.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/03/image2.jpg"
                 alt="Research team"
                 className="open-research-image"
                 width={640}
@@ -81,7 +81,7 @@ export default function OpenResearchPage() {
       <section className="open-research-section">
         <div className="open-research-container">
           <Image
-            src="https://nlmsf.org/wp-content/uploads/2022/03/image4-768x544.jpg"
+            src="https://media.nlmsf.org/wp-content/uploads/2022/03/image4-768x544.jpg"
             alt="Clinical research"
             className="open-research-hero-image"
             width={1200}
