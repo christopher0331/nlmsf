@@ -38,7 +38,7 @@ export default function PersonalAdvocacyPage() {
           <div className="hero-divider" />
 
           <Image
-            src="https://media.nlmsf.org/wp-content/uploads/2025/07/CircleOfHopeLogo.png"
+            src="https://nlsmf.org/wp-content/uploads/2025/07/CircleOfHopeLogo.png"
             alt="Circle of Hope Logo"
             width={440}
             height={440}

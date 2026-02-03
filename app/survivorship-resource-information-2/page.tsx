@@ -209,7 +209,7 @@ export default function SurvivorshipResourceInformationTwoPage() {
         <div className="sri-hero-inner">
           <div className="sri-logo">
             <Image
-              src="https://media.nlmsf.org/wp-content/uploads/2021/03/Cancer-Survivorship.jpg"
+              src="https://nlsmf.org/wp-content/uploads/2021/03/Cancer-Survivorship.jpg"
               alt="Cancer survivorship"
               width={200}
               height={200}

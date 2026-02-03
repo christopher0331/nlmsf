@@ -138,7 +138,7 @@ export default function UterineLmsPage() {
             </a>
           </nav>
           <Image
-            src="https://media.nlmsf.org/wp-content/uploads/2025/11/research-uterine.png"
+            src="https://nlsmf.org/wp-content/uploads/2025/11/research-uterine.png"
             alt="Research uterine"
             className="wp-sidebar-image"
             width={320}

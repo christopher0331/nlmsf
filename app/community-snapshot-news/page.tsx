@@ -188,7 +188,7 @@ export default async function CommunitySnapshotNewsPage() {
         <div className="min-w-0 order-1 lg:order-2">
           <div className="hero-badge flex justify-center mb-8">
             <Image
-              src="https://media.nlmsf.org/wp-content/uploads/2025/08/snapshotlogo.png"
+              src="https://nlsmf.org/wp-content/uploads/2025/08/snapshotlogo.png"
               alt="Community Snapshot Logo"
               className="snapshot-logo-badge max-w-[35%] h-auto drop-shadow-md transition-transform duration-300 hover:scale-105"
               width={240}

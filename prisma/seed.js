@@ -19,7 +19,7 @@ const tributes = [
 Andria was a gifted pediatrician who devoted her career to bettering the lives of children. She formed deep and lasting relationships with her patients, remembering small details about their lives and interests.
 
 Andria and her husband Rob raised their three children with love and cultivated in them a desire for learning and individual growth. She joined her children in every one of their passions and cherished their accomplishments. As she faced growing health challenges, Andria's tenacious spirit was unwavering and she maintained her commitment to her work and her family. Her faith in the Lord Jesus Christ strengthened her and she faced every trial with optimism.`,
-    imageUrl: "https://media.nlmsf.org/wp-content/uploads/2023/08/Andria-Barnes-Ruth-Photo-scaled.jpg",
+    imageUrl: "https://nlsmf.org/wp-content/uploads/2023/08/Andria-Barnes-Ruth-Photo-scaled.jpg",
   },
   {
     slug: "anna-marmo-tribute-page",

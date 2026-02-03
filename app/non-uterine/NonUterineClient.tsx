@@ -68,7 +68,7 @@ export default function NonUterineClient() {
           </nav>
 
           <Image
-            src="https://media.nlmsf.org/wp-content/uploads/2025/11/research-non-uterine.png"
+            src="https://nlsmf.org/wp-content/uploads/2025/11/research-non-uterine.png"
             className="sidebar-image"
             alt="Research non-uterine"
             width={640}

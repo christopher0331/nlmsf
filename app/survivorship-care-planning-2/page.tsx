@@ -81,7 +81,7 @@ export default function SurvivorshipCarePlanningTwoPage() {
 
           <h3 className="sidebar-callout">Live Your Best Life!</h3>
           <Image
-            src="https://media.nlmsf.org/wp-content/uploads/2020/03/sunset.jpg"
+            src="https://nlsmf.org/wp-content/uploads/2020/03/sunset.jpg"
             alt="Sunset"
             className="sidebar-image"
             width={756}
@@ -92,7 +92,7 @@ export default function SurvivorshipCarePlanningTwoPage() {
         <div className="survivorship-content">
           <Image
             className="survivorship-logo"
-            src="https://media.nlmsf.org/wp-content/uploads/2025/05/ChatGPT-Image-May-6-2025-03_16_15-PM.png"
+            src="https://nlsmf.org/wp-content/uploads/2025/05/ChatGPT-Image-May-6-2025-03_16_15-PM.png"
             alt="NLMSF survivorship logo"
             width={500}
             height={260}

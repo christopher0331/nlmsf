@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const HERO_IMG =
-  "https://media.nlmsf.org/wp-content/uploads/2025/06/hero-section-1.png";
+  "https://nlsmf.org/wp-content/uploads/2025/06/hero-section-1.png";
 const DONATE_URL = "https://nlmsf.org/?form=DONATE";
 const MAILCHIMP_ACTION =
   "https://nlmsf.us13.list-manage.com/subscribe/post?u=7882c1010a69171493a3bed4b&id=7958b212a8&f_id=00a19fedf0";

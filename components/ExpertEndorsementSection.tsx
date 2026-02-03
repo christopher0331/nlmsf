@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ENDORSEMENTS = [
   {
-    image: "https://media.nlmsf.org/wp-content/uploads/2021/02/Dr-pollack.jpg",
+    image: "https://nlsmf.org/wp-content/uploads/2021/02/Dr-pollack.jpg",
     alt: "Dr. Raphael Pollock",
     name: "Dr. Raphael Pollock, M.D., Ph.D",
     title: "James Cancer Center, Ohio State Univ",
@@ -11,7 +11,7 @@ const ENDORSEMENTS = [
     flip: false,
   },
   {
-    image: "https://media.nlmsf.org/wp-content/uploads/2021/02/Dr-Singh.jpg",
+    image: "https://nlsmf.org/wp-content/uploads/2021/02/Dr-Singh.jpg",
     alt: "Dr. Arun Singh",
     name: "Arun Singh, M.D.",
     title: "Associate Professor, Sarcoma Service",

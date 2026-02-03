@@ -107,7 +107,7 @@ export default function PatientDrivenResearchClient() {
 
       <div className="hero-partner-logo">
         <Image
-          src="https://media.nlmsf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.14.18-PM.png"
+          src="https://nlsmf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.14.18-PM.png"
           alt="Partnering with Patients"
           width={240}
           height={240}
@@ -257,7 +257,7 @@ export default function PatientDrivenResearchClient() {
                     </h2>
                     <Image
                       className="section-title-logo"
-                      src="https://media.nlmsf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.13.59-PM.png"
+                      src="https://nlsmf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.13.59-PM.png"
                       alt="Pattern.org"
                       width={240}
                       height={240}
@@ -321,7 +321,7 @@ export default function PatientDrivenResearchClient() {
 
                   <div className="quote-illustration">
                     <Image
-                      src="https://media.nlmsf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.09.38-PM.png"
+                      src="https://nlsmf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.09.38-PM.png"
                       alt="Pattern.org patient contribution illustration"
                       width={640}
                       height={360}
@@ -329,19 +329,19 @@ export default function PatientDrivenResearchClient() {
                   </div>
                   <div className="quote-gallery">
                     <Image
-                      src="https://media.nlmsf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.13.59-PM.png"
+                      src="https://nlsmf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.13.59-PM.png"
                       alt="Pattern.org process screenshot 1"
                       width={640}
                       height={360}
                     />
                     <Image
-                      src="https://media.nlmsf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.14.18-PM.png"
+                      src="https://nlsmf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.14.18-PM.png"
                       alt="Pattern.org process screenshot 2"
                       width={640}
                       height={360}
                     />
                     <Image
-                      src="https://media.nlmsf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.14.30-PM.png"
+                      src="https://nlsmf.org/wp-content/uploads/2025/10/Screenshot-2025-10-02-at-3.14.30-PM.png"
                       alt="Pattern.org process screenshot 3"
                       width={640}
                       height={360}
@@ -422,7 +422,7 @@ export default function PatientDrivenResearchClient() {
                 <div className="research-content">
                   <div className="cure-id-image">
                     <Image
-                      src="https://media.nlmsf.org/wp-content/uploads/2025/10/cure-id.png"
+                      src="https://nlsmf.org/wp-content/uploads/2025/10/cure-id.png"
                       alt="CURE ID"
                       width={240}
                       height={240}

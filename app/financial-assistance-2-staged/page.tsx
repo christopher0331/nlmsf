@@ -53,7 +53,7 @@ export default function FinancialAssistance2StagedPage() {
         {/* Free Grants */}
         <section className="mb-10 flex flex-col md:flex-row md:items-start gap-6 rounded-xl border border-gray-200 bg-gray-50/60 p-6">
           <Image
-            src="https://media.nlmsf.org/wp-content/uploads/2021/02/DollarsignGuy.jpg"
+            src="https://nlsmf.org/wp-content/uploads/2021/02/DollarsignGuy.jpg"
             alt=""
             width={79}
             height={79}

@@ -187,7 +187,7 @@ export default function OpenResearchPage() {
                 <div className="investment-image-section">
                   <div className="investment-image-wrapper">
                     <Image
-                      src="https://media.nlmsf.org/wp-content/uploads/2022/03/image1.jpg"
+                      src="https://nlsmf.org/wp-content/uploads/2022/03/image1.jpg"
                       alt="Research Investment Impact"
                       className="investment-feature-image"
                       width={1200}
@@ -230,7 +230,7 @@ export default function OpenResearchPage() {
                     <div className="research-card">
                       <div className="research-image-container">
                         <Image
-                          src="https://media.nlmsf.org/wp-content/uploads/2022/03/image3.jpg"
+                          src="https://nlsmf.org/wp-content/uploads/2022/03/image3.jpg"
                           alt="Research Laboratory"
                           className="research-image"
                           width={640}
@@ -251,7 +251,7 @@ export default function OpenResearchPage() {
                     <div className="research-card">
                       <div className="research-image-container">
                         <Image
-                          src="https://media.nlmsf.org/wp-content/uploads/2022/03/image2.jpg"
+                          src="https://nlsmf.org/wp-content/uploads/2022/03/image2.jpg"
                           alt="Research Team"
                           className="research-image"
                           width={640}
@@ -273,7 +273,7 @@ export default function OpenResearchPage() {
                     <div className="research-card">
                       <div className="research-image-container">
                         <Image
-                          src="https://media.nlmsf.org/wp-content/uploads/2022/03/image4-768x544.jpg"
+                          src="https://nlsmf.org/wp-content/uploads/2022/03/image4-768x544.jpg"
                           alt="Clinical Research"
                           className="research-image"
                           width={640}
