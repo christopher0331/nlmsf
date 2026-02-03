@@ -32,10 +32,20 @@ export async function GET(
     }
   }
 
-  const donors = await prisma.tributeDonor.findMany({
+  type TributeDonorRecord = {
+    id: string;
+    donorName: string;
+    donationAmount: number | null;
+    donationDate: string | null;
+    isAnonymous: boolean;
+    message: string | null;
+    displayOrder: number;
+    createdAt: Date;
+  };
+  const donors = (await prisma.tributeDonor.findMany({
     where: { tributeId: id },
     orderBy: [{ displayOrder: "asc" }, { id: "asc" }],
-  });
+  })) as TributeDonorRecord[];
   return NextResponse.json(
     donors.map((d) => ({
       id: d.id,
