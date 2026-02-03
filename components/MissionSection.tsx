@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function MissionSection() {
@@ -40,10 +41,13 @@ export default function MissionSection() {
             </Link>
           </div>
           <div className="relative order-1 md:order-2">
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2025/04/Untitled-design-2.png"
               alt="NLMSF Team and Volunteers"
-              className="w-full h-auto rounded-lg block"
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-lg block object-contain"
+              sizes="(min-width: 768px) 50vw, 100vw"
             />
           </div>
         </div>
@@ -56,10 +60,13 @@ export default function MissionSection() {
             className="block text-center w-[12em] max-w-full md:w-[10em]"
             aria-label="GuideStar"
           >
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
               alt="GuideStar Seal"
-              className="w-full h-auto block"
+              width={240}
+              height={240}
+              className="w-full h-auto block object-contain"
+              sizes="(min-width: 768px) 10rem, 12rem"
             />
           </a>
           <a
@@ -69,10 +76,13 @@ export default function MissionSection() {
             className="block text-center w-[25em] max-w-full md:w-[20em]"
             aria-label="Charity Navigator"
           >
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2025/07/charity-nav-scaled.png"
               alt="Charity Navigator"
-              className="w-full h-auto block"
+              width={800}
+              height={400}
+              className="w-full h-auto block object-contain"
+              sizes="(min-width: 768px) 20rem, 25rem"
             />
           </a>
           <a
@@ -82,10 +92,13 @@ export default function MissionSection() {
             className="block text-center w-[12em] max-w-full md:w-[10em]"
             aria-label="Top Rated"
           >
-            <img
+            <Image
               src="https://nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
               alt="Top Rated Seal"
-              className="w-full h-auto block"
+              width={240}
+              height={240}
+              className="w-full h-auto block object-contain"
+              sizes="(min-width: 768px) 10rem, 12rem"
             />
           </a>
         </div>

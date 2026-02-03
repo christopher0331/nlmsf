@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 const SLIDES: { src: string; alt: string }[][] = [
@@ -151,10 +152,13 @@ export default function PartnersSection() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center p-2 no-underline transition-opacity duration-200 hover:opacity-85"
                   >
-                    <img
+                    <Image
                       src={logo.src}
                       alt={logo.alt}
+                      width={140}
+                      height={80}
                       className="max-w-[140px] max-h-[80px] w-auto h-auto object-contain md:max-w-[120px] md:max-h-[60px]"
+                      sizes="(min-width: 768px) 120px, 140px"
                     />
                   </a>
                 ))}
@@ -224,10 +228,13 @@ export default function PartnersSection() {
                   className="flex flex-col items-center gap-2 no-underline text-inherit transition-opacity duration-200 hover:opacity-85"
                 >
                   <div className="w-full flex items-center justify-center min-h-[70px] p-2">
-                    <img
+                    <Image
                       src={partner.src}
                       alt={partner.alt}
+                      width={120}
+                      height={60}
                       className="max-w-[120px] max-h-[60px] w-auto h-auto object-contain"
+                      sizes="120px"
                     />
                   </div>
                   <span className="text-[0.85rem] text-gray-700 text-center leading-snug">
