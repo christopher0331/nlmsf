@@ -46,18 +46,29 @@ export async function getFullFeed(): Promise<{
   snapshots: FeedEntry[];
   newsTracker: FeedEntry[];
 }> {
-  const [snapshots, newsTracker] = await Promise.all([
-    prisma.communityEntry.findMany({
-      where: { type: "snapshot" },
-      orderBy: { manualDate: "desc" },
-    }),
-    prisma.communityEntry.findMany({
-      where: { type: "news_tracker" },
-      orderBy: { manualDate: "desc" },
-    }),
-  ]);
-  return {
-    snapshots: snapshots.map(toFeedEntry),
-    newsTracker: newsTracker.map(toFeedEntry),
-  };
+  try {
+    const [snapshots, newsTracker] = await Promise.all([
+      prisma.communityEntry.findMany({
+        where: { type: "snapshot" },
+        orderBy: { manualDate: "desc" },
+      }),
+      prisma.communityEntry.findMany({
+        where: { type: "news_tracker" },
+        orderBy: { manualDate: "desc" },
+      }),
+    ]);
+    return {
+      snapshots: snapshots.map(toFeedEntry),
+      newsTracker: newsTracker.map(toFeedEntry),
+    };
+  } catch (error) {
+    const prismaError =
+      error && typeof error === "object" && "code" in error
+        ? (error as { code?: string }).code
+        : undefined;
+    if (prismaError === "P2021") {
+      return { snapshots: [], newsTracker: [] };
+    }
+    throw error;
+  }
 }
