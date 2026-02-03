@@ -1,0 +1,28 @@
+{
+  "tributes": [
+    {
+      "id": 1,
+      "name": "Andria Barnes Ruth",
+      "slug": "andria-barnes-ruth-tribute-page",
+      "biography": "Paste biography from WordPress here...",
+      "image_url": "https://nlmsf.org/wp-content/uploads/2023/08/Andria-Barnes-Ruth-Photo-scaled.jpg",
+      "display_order": 0,
+      "is_published": 1,
+      "created_at": "2023-08-01 12:00:00",
+      "updated_at": "2023-08-01 12:00:00"
+    },
+    {
+      "id": 2,
+      "name": "Anna Marmo",
+      "slug": "anna-marmo-tribute-page",
+      "biography": "Paste biography from WordPress here...",
+      "image_url": null,
+      "display_order": 1,
+      "is_published": 1,
+      "created_at": "2024-01-01 12:00:00",
+      "updated_at": "2024-01-01 12:00:00"
+    }
+  ],
+  "donors": [],
+  "comments": []
+}

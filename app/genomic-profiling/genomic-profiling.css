@@ -1,0 +1,160 @@
+/* Genomic Profiling Page - NLMSF design protocol
+   Scoped under .genomic-profiling-page */
+
+.genomic-profiling-page .nlmsf-hero-section {
+  background: #f0f7ff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.genomic-profiling-page .nlmsf-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.genomic-profiling-page .nlmsf-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+}
+
+.genomic-profiling-page .nlmsf-resource-tag {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #2b82ea;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.genomic-profiling-page .nlmsf-resource-tag:hover {
+  background-color: #bae6fd;
+}
+
+.genomic-profiling-page .nlmsf-hero-title {
+  background: linear-gradient(to right, #2b82ea, #6a3ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+}
+
+.genomic-profiling-page .nlmsf-hero-subtitle {
+  color: #4b5563;
+  font-size: 1.125rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+  width: 100%;
+}
+
+/* Page layout */
+.genomic-profiling-page .nlmsf-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.genomic-profiling-page .nlmsf-content-section {
+  padding: 2rem 1.5rem;
+}
+
+.genomic-profiling-page .nlmsf-content-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.genomic-profiling-page .genomic-section {
+  margin-bottom: 2.5rem;
+}
+
+.genomic-profiling-page .genomic-section:last-child {
+  margin-bottom: 0;
+}
+
+.genomic-profiling-page .nlmsf-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #bae6fd;
+  background: linear-gradient(to right, #2b82ea, #6a3ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.genomic-profiling-page .genomic-lead {
+  color: #4b5563;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+
+.genomic-profiling-page .genomic-lead:last-child {
+  margin-bottom: 0;
+}
+
+.genomic-profiling-page .genomic-muted {
+  color: #6b7280;
+  font-size: 0.9375rem;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.genomic-profiling-page .nlmsf-link {
+  color: #2b82ea;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.genomic-profiling-page .nlmsf-link:hover {
+  color: #6a3ea1;
+}
+
+/* Numbered list */
+.genomic-profiling-page .genomic-list {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+  color: #4b5563;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.genomic-profiling-page .genomic-list li {
+  margin-bottom: 0.75rem;
+}
+
+.genomic-profiling-page .genomic-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .genomic-profiling-page .nlmsf-hero-section {
+    padding: 4rem 2rem;
+  }
+
+  .genomic-profiling-page .nlmsf-hero-title {
+    font-size: 3rem;
+  }
+
+  .genomic-profiling-page .nlmsf-content-section {
+    padding: 3rem 2rem;
+  }
+}

@@ -1,0 +1,91 @@
+// Prisma schema – SQLite (super cheap, file-based).
+// For production on Vercel, switch to Turso or Neon and change provider + url.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Event {
+  id              String   @id @default(cuid())
+  title           String
+  eventDate       String   // YYYY-MM-DD (for display)
+  eventTime       String   // HH:mm 24h (for display)
+  baseTimezone    String   // e.g. "Eastern (ET)"
+  eventAt         DateTime // UTC moment for upcoming/past comparison
+  zoomLink        String?
+  description     String
+  showOnHomepage  Boolean  @default(true)
+  showTimezones   String   // JSON array: ["ET","CT","MT","PT"]
+  recordingUrl    String?  // filled after event; null = "Video coming soon"
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+// Community Snapshots and News Tracker entries (from NLMSF Community News)
+model CommunityEntry {
+  id          String   @id @default(cuid())
+  type        String   // "snapshot" | "news_tracker"
+  title       String
+  summary     String
+  url         String
+  manualDate  String   // YYYY-MM-DD for display and sort
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Education Videos (patient-education, medical-research, caregiver-support, webinars)
+model EducationVideo {
+  id           String   @id @default(cuid())
+  title        String
+  category     String   // patient-education | medical-research | caregiver-support | webinars
+  youtubeUrl   String
+  duration     String   // e.g. "19:32"
+  description  String
+  featured     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// Tribute pages (honor / memorial)
+model Tribute {
+  id            String   @id @default(cuid())
+  name          String
+  slug          String   @unique
+  biography     String
+  imageUrl      String?
+  displayOrder  Int      @default(0)
+  isPublished   Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  donors        TributeDonor[]
+  comments      TributeComment[]
+}
+
+model TributeDonor {
+  id              String   @id @default(cuid())
+  tributeId       String
+  donorName       String
+  donationAmount  Float?
+  donationDate    String?  // YYYY-MM-DD
+  isAnonymous     Boolean  @default(false)
+  message         String?
+  displayOrder    Int      @default(0)
+  createdAt       DateTime @default(now())
+  tribute         Tribute  @relation(fields: [tributeId], references: [id], onDelete: Cascade)
+}
+
+model TributeComment {
+  id            String   @id @default(cuid())
+  tributeId     String
+  commenterName String
+  commenterEmail String?
+  commentText   String
+  isApproved    Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  tribute       Tribute  @relation(fields: [tributeId], references: [id], onDelete: Cascade)
+}

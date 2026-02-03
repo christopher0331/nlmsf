@@ -1,0 +1,161 @@
+/* House Cleaning and Meal Prep page - scoped under .house-cleaning-meal-prep-page */
+
+.house-cleaning-meal-prep-page {
+  --hc-max: 900px;
+}
+
+.house-cleaning-meal-prep-page .hc-hero {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #bbf7d0;
+}
+
+.house-cleaning-meal-prep-page .hc-hero-inner {
+  max-width: var(--hc-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.house-cleaning-meal-prep-page .hc-badge {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #166534;
+  background: rgba(22, 101, 52, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+.house-cleaning-meal-prep-page .hc-hero-title {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  color: #14532d;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.house-cleaning-meal-prep-page .hc-hero-desc {
+  font-size: 1.05rem;
+  color: #166534;
+  margin: 0;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.house-cleaning-meal-prep-page .hc-content {
+  max-width: var(--hc-max);
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.house-cleaning-meal-prep-page .hc-section {
+  margin-bottom: 2.5rem;
+}
+
+.house-cleaning-meal-prep-page .hc-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #22c55e;
+}
+
+.house-cleaning-meal-prep-page .hc-text {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.house-cleaning-meal-prep-page .hc-text a {
+  color: #15803d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.house-cleaning-meal-prep-page .hc-text a:hover {
+  text-decoration: underline;
+}
+
+.house-cleaning-meal-prep-page .hc-phone {
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #111;
+}
+
+.house-cleaning-meal-prep-page .hc-resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.house-cleaning-meal-prep-page .hc-resource-list li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8faf8;
+  border-radius: 0.5rem;
+  border-left: 4px solid #22c55e;
+}
+
+.house-cleaning-meal-prep-page .hc-resource-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.house-cleaning-meal-prep-page .hc-resource-title a {
+  color: #15803d;
+  text-decoration: none;
+}
+
+.house-cleaning-meal-prep-page .hc-resource-title a:hover {
+  text-decoration: underline;
+}
+
+.house-cleaning-meal-prep-page .hc-resource-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.house-cleaning-meal-prep-page .hc-numbered-list {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.house-cleaning-meal-prep-page .hc-numbered-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.house-cleaning-meal-prep-page .hc-numbered-list a {
+  color: #15803d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.house-cleaning-meal-prep-page .hc-numbered-list a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .house-cleaning-meal-prep-page .hc-hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .house-cleaning-meal-prep-page .hc-content {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .house-cleaning-meal-prep-page .hc-section-title {
+    font-size: 1.2rem;
+  }
+}

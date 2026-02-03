@@ -1,0 +1,133 @@
+/* Patient-Caregiver Advocacy Page - scoped styles */
+
+.patient-caregiver-advocacy-page {
+  color: #1f2937;
+  line-height: 1.6;
+  background: #ffffff;
+}
+
+.pca-hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pca-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pca-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.pca-title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 1rem;
+  background: linear-gradient(90deg, #1d4ed8, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pca-subtitle {
+  font-size: 1.15rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.pca-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.pca-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.pca-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: #111827;
+}
+
+.pca-highlight {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.pca-highlight h2 {
+  margin: 0 0 1rem;
+  color: #1f2937;
+}
+
+.pca-highlight p {
+  margin: 0 0 1.5rem;
+  color: #475569;
+}
+
+.pca-list {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.pca-list-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.pca-cta {
+  background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 100%);
+  border: 1px solid #c7d2fe;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.pca-cta-text {
+  margin: 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.pca-cta a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.pca-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .pca-card,
+  .pca-highlight {
+    padding: 1.5rem;
+  }
+}

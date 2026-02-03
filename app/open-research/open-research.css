@@ -1,0 +1,118 @@
+/* Open Research Page Styles - scoped */
+
+.open-research-page {
+  color: #1f2937;
+  line-height: 1.6;
+  background: #ffffff;
+  padding-bottom: 3rem;
+}
+
+.open-research-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.open-research-section {
+  padding: 2rem 0;
+}
+
+.open-research-hero {
+  padding: 3rem 0 2rem;
+  background: #f8fafc;
+}
+
+.open-research-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  display: block;
+}
+
+.open-research-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.open-research-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.open-research-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.open-research-copy {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.open-research-copy p {
+  margin: 0 0 1rem;
+  color: #334155;
+  font-size: 1.05rem;
+}
+
+.open-research-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.open-research-highlight {
+  color: #339966;
+}
+
+.open-research-cta {
+  text-align: center;
+  background: #f5f3ff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.open-research-cta-title {
+  margin: 0 0 1rem;
+  text-decoration: underline;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.open-research-cta-body {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.open-research-cta-highlight {
+  color: #800080;
+}
+
+.open-research-cta a {
+  color: #0ea5e9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.open-research-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .open-research-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}

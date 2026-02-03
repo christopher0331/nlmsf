@@ -1,0 +1,590 @@
+/* Get Involved Page - scoped under .get-involved-page */
+
+.get-involved-page .hero {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.get-involved-page .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-image: url("https://nlmsf.org/wp-content/uploads/2021/01/hero-pattern.png");
+  background-size: cover;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.get-involved-page .badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6c63ff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.get-involved-page .badge i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.get-involved-page .hero-title {
+  font-size: 2.5rem;
+  background-image: linear-gradient(135deg, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.get-involved-page .hero-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.get-involved-page .feature-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.get-involved-page .feature-tag {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.get-involved-page .feature-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.get-involved-page .feature-tag i {
+  color: #3b82f6;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.get-involved-page .feature-tag span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #455a64;
+}
+
+/* Content layout */
+.get-involved-page .content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.get-involved-page .main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.get-involved-page .sidebar {
+  width: 300px;
+}
+
+/* Past Events */
+.get-involved-page .past-events {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.get-involved-page .past-events h3 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.get-involved-page .past-events-list {
+  list-style: none;
+  padding: 0;
+}
+
+.get-involved-page .past-events-list li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.get-involved-page .past-events-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.get-involved-page .past-events-list a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.get-involved-page .past-events-list a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.get-involved-page .past-events-list .highlight {
+  color: #a855f7;
+  font-weight: 600;
+}
+
+/* Get Involved Section */
+.get-involved-page .get-involved-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f0fdfa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.get-involved-page .get-involved-section h3 {
+  font-size: 1.6rem;
+  color: #0f766e;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.get-involved-page .get-involved-list {
+  list-style: none;
+  padding: 0;
+}
+
+.get-involved-page .get-involved-list li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  color: #0f766e;
+}
+
+.get-involved-page .get-involved-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #14b8a6;
+  font-size: 1.2rem;
+}
+
+.get-involved-page .get-involved-section p {
+  color: #0f766e;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Image Gallery */
+.get-involved-page .image-gallery {
+  margin-top: 40px;
+}
+
+.get-involved-page .image-gallery h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+  background-image: linear-gradient(135deg, #3b82f6, #14b8a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.get-involved-page .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.get-involved-page .gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.get-involved-page .gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.get-involved-page .gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Action Cards */
+.get-involved-page .action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.get-involved-page .action-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.get-involved-page .action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.get-involved-page .action-card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.get-involved-page .action-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.get-involved-page .action-card:hover .action-card-image img {
+  transform: scale(1.05);
+}
+
+.get-involved-page .action-card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.get-involved-page .action-card-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.get-involved-page .action-card-description {
+  color: #5a6a7e;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.get-involved-page .action-card-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.get-involved-page .action-card-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.get-involved-page .action-card-button i {
+  font-size: 0.9rem;
+}
+
+.get-involved-page .action-card.purple .action-card-button {
+  background-color: #a855f7;
+}
+
+.get-involved-page .action-card.purple .action-card-button:hover {
+  background-color: #7e22ce;
+}
+
+.get-involved-page .action-card.teal .action-card-button {
+  background-color: #14b8a6;
+}
+
+.get-involved-page .action-card.teal .action-card-button:hover {
+  background-color: #0f766e;
+}
+
+.get-involved-page .action-card.amber .action-card-button {
+  background-color: #f59e0b;
+}
+
+.get-involved-page .action-card.amber .action-card-button:hover {
+  background-color: #b45309;
+}
+
+/* Sidebar */
+.get-involved-page .sidebar-widget {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.get-involved-page .sidebar-widget-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.get-involved-page .sidebar-widget-content {
+  color: #5a6a7e;
+}
+
+.get-involved-page .sidebar-widget-content p {
+  margin-bottom: 0.75rem;
+}
+
+.get-involved-page .sidebar-widget-image {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.get-involved-page .sidebar-widget-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #a855f7;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.get-involved-page .sidebar-widget-button:hover {
+  background-color: #7e22ce;
+  transform: translateY(-2px);
+}
+
+.get-involved-page .sidebar-widget-content a:not(.sidebar-widget-button) {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.get-involved-page .sidebar-widget-content a:not(.sidebar-widget-button):hover {
+  text-decoration: underline;
+}
+
+.get-involved-page .seals-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.get-involved-page .seals-row img {
+  height: 80px;
+  width: auto;
+}
+
+/* Social icons */
+.get-involved-page .social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.get-involved-page .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.get-involved-page .social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.get-involved-page .social-icon.facebook {
+  background-color: #1877f2;
+}
+
+.get-involved-page .social-icon.twitter {
+  background-color: #1da1f2;
+}
+
+.get-involved-page .social-icon.youtube {
+  background-color: #ff0000;
+}
+
+/* Denver Support */
+.get-involved-page .denver-support {
+  background-color: #faf5ff;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-left: 4px solid #a855f7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.get-involved-page .denver-support h3 {
+  color: #7e22ce;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.get-involved-page .denver-support p {
+  margin-bottom: 1rem;
+  color: #5a6a7e;
+}
+
+/* Denver CTA */
+.get-involved-page .denver-cta {
+  margin-top: 40px;
+}
+
+.get-involved-page .denver-cta .content-panel {
+  text-align: center;
+  padding: 2.5rem;
+  background-image: linear-gradient(135deg, #a855f7, #4f46e5);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.get-involved-page .denver-cta .content-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url("https://nlmsf.org/wp-content/uploads/2021/01/denver-skyline.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.get-involved-page .denver-cta h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.get-involved-page .denver-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.get-involved-page .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: white;
+  color: #7e22ce;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.get-involved-page .cta-button:hover {
+  background-color: #faf5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .get-involved-page .content-container {
+    flex-direction: column;
+  }
+
+  .get-involved-page .sidebar {
+    width: 100%;
+  }
+
+  .get-involved-page .action-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .get-involved-page .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .get-involved-page .hero-title {
+    font-size: 2rem;
+  }
+
+  .get-involved-page .denver-cta h3 {
+    font-size: 1.5rem;
+  }
+}

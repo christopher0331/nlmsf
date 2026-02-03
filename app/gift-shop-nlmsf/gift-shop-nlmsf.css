@@ -1,0 +1,767 @@
+/* NLMSF Gift Shop (gift-shop-nlmsf) – scoped, polished UI */
+
+.gift-shop-nlmsf-page {
+  scroll-behavior: smooth;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.gift-shop-nlmsf-page a {
+  color: #6a3ea1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.gift-shop-nlmsf-page a:hover {
+  color: #5b21b6;
+}
+
+.gift-shop-nlmsf-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* —— Hero —— */
+.gift-shop-nlmsf-page .hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 0 1.5rem 2rem;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+}
+
+.gift-shop-nlmsf-page .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.gift-shop-nlmsf-page .badge i {
+  color: #6a3ea1;
+  font-size: 1rem;
+}
+
+.gift-shop-nlmsf-page .hero-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.gift-shop-nlmsf-page .divider {
+  width: 56px;
+  height: 4px;
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #6a3ea1, #4338ca);
+}
+
+.gift-shop-nlmsf-page .hero-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.gift-shop-nlmsf-page .feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.gift-shop-nlmsf-page .feature-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.gift-shop-nlmsf-page .feature-tag.blue {
+  background: #eff6ff;
+  color: #4338ca;
+  border: 1px solid #bfdbfe;
+}
+
+.gift-shop-nlmsf-page .feature-tag.indigo {
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.gift-shop-nlmsf-page .feature-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+}
+
+/* —— Layout —— */
+.gift-shop-nlmsf-page .page-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.gift-shop-nlmsf-page .sidebar {
+  flex: 0 0 260px;
+  align-self: flex-start;
+  position: sticky;
+  top: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.gift-shop-nlmsf-page .sidebar-section {
+  margin-bottom: 1.5rem;
+}
+
+.gift-shop-nlmsf-page .sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.gift-shop-nlmsf-page .sidebar-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #6a3ea1;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.gift-shop-nlmsf-page .sidebar-icon.shop {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-nlmsf-page .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gift-shop-nlmsf-page .nav-links li {
+  margin-bottom: 0.25rem;
+}
+
+.gift-shop-nlmsf-page .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  color: #475569;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.gift-shop-nlmsf-page .nav-link:hover {
+  background: #eef2ff;
+  color: #6a3ea1;
+}
+
+.gift-shop-nlmsf-page .nav-icon {
+  width: 1rem;
+  height: 1rem;
+  background: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.gift-shop-nlmsf-page .nav-icon.intro {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-nlmsf-page .nav-icon.products {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-nlmsf-page .nav-icon.featured {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-nlmsf-page .sidebar-cta {
+  background: linear-gradient(135deg, rgba(106, 62, 161, 0.08), rgba(67, 56, 202, 0.06));
+  border-radius: 10px;
+  padding: 1.25rem;
+  border-left: 4px solid #6a3ea1;
+}
+
+.gift-shop-nlmsf-page .sidebar-cta h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.gift-shop-nlmsf-page .sidebar-cta p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.gift-shop-nlmsf-page .cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(135deg, #6a3ea1, #5b21b6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(106, 62, 161, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gift-shop-nlmsf-page .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 62, 161, 0.35);
+  color: #fff;
+}
+
+/* —— Content —— */
+.gift-shop-nlmsf-page .content-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.gift-shop-nlmsf-page .content-section {
+  margin-bottom: 2.5rem;
+}
+
+.gift-shop-nlmsf-page .section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.gift-shop-nlmsf-page .section-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6a3ea1, #4338ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.35rem;
+}
+
+.gift-shop-nlmsf-page .section-header p {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.gift-shop-nlmsf-page .content-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.gift-shop-nlmsf-page .content-panel.special {
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  border-color: #fde047;
+}
+
+/* —— Featured book —— */
+.gift-shop-nlmsf-page .featured-book-section {
+  margin-bottom: 2rem;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, #faf5ff 0%, #f5f3ff 100%);
+  border-radius: 12px;
+  border: 1px solid #e9d5ff;
+}
+
+.gift-shop-nlmsf-page .featured-book-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.gift-shop-nlmsf-page .featured-book-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #6a3ea1;
+  margin: 0 0 0.75rem;
+}
+
+.gift-shop-nlmsf-page .featured-book-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 1.25rem;
+}
+
+.gift-shop-nlmsf-page .featured-book-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.gift-shop-nlmsf-page .book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gift-shop-nlmsf-page .book-btn-hardcover {
+  background: #6a3ea1;
+  color: #fff;
+  border: 2px solid #6a3ea1;
+}
+
+.gift-shop-nlmsf-page .book-btn-hardcover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 62, 161, 0.35);
+  color: #fff;
+}
+
+.gift-shop-nlmsf-page .book-btn-paperback {
+  background: #fff;
+  color: #6a3ea1;
+  border: 2px solid #6a3ea1;
+}
+
+.gift-shop-nlmsf-page .book-btn-paperback:hover {
+  background: #f5f3ff;
+  transform: translateY(-2px);
+  color: #6a3ea1;
+}
+
+.gift-shop-nlmsf-page .featured-book-image img {
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  max-height: 420px;
+  object-fit: contain;
+}
+
+/* —— Resource list (About, Free Gift, Champions) —— */
+.gift-shop-nlmsf-page .resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gift-shop-nlmsf-page .resource-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.2s;
+}
+
+.gift-shop-nlmsf-page .resource-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.gift-shop-nlmsf-page .resource-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e9d5ff, #ddd6fe);
+  color: #6a3ea1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.gift-shop-nlmsf-page .resource-icon.heart {
+  color: #7c3aed;
+}
+
+.gift-shop-nlmsf-page .resource-icon.denver {
+  background: linear-gradient(135deg, #fed7aa, #fdba74);
+  color: #c2410c;
+}
+
+.gift-shop-nlmsf-page .resource-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.gift-shop-nlmsf-page .resource-content p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 0.5rem;
+}
+
+.gift-shop-nlmsf-page .resource-content em {
+  color: #6a3ea1;
+  font-style: italic;
+}
+
+.gift-shop-nlmsf-page .resource-link-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.gift-shop-nlmsf-page .resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: #6a3ea1;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.gift-shop-nlmsf-page .resource-link:hover {
+  background: #5b21b6;
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.gift-shop-nlmsf-page .resource-link.phone {
+  background: #e9d5ff;
+  color: #6a3ea1;
+}
+
+.gift-shop-nlmsf-page .resource-link.phone:hover {
+  background: #ddd6fe;
+  color: #5b21b6;
+}
+
+.gift-shop-nlmsf-page .resource-link.denver-link {
+  background: #ea580c;
+  color: #fff;
+}
+
+.gift-shop-nlmsf-page .resource-link.denver-link:hover {
+  background: #c2410c;
+  color: #fff;
+}
+
+.gift-shop-nlmsf-page .resource-note {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* —— Product grid —— */
+.gift-shop-nlmsf-page .product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gift-shop-nlmsf-page .row-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #334155;
+  margin: 0.5rem 0 0;
+  padding-bottom: 0.5rem;
+}
+
+.gift-shop-nlmsf-page .product-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.gift-shop-nlmsf-page .product-row.four-items {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gift-shop-nlmsf-page .product-row.five-items {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gift-shop-nlmsf-page .product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.gift-shop-nlmsf-page .product-card:hover:not(.empty) {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.gift-shop-nlmsf-page .product-card-heading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0.75rem 1rem 0;
+}
+
+.gift-shop-nlmsf-page .product-card.empty {
+  background: transparent;
+  border: 1px dashed #cbd5e1;
+  min-height: 200px;
+  visibility: visible;
+}
+
+.gift-shop-nlmsf-page .product-image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.gift-shop-nlmsf-page .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gift-shop-nlmsf-page .product-card:hover .product-image img {
+  transform: scale(1.04);
+}
+
+.gift-shop-nlmsf-page .product-details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.gift-shop-nlmsf-page .product-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.gift-shop-nlmsf-page .product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6a3ea1;
+  margin: 0;
+}
+
+.gift-shop-nlmsf-page .product-colors {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.gift-shop-nlmsf-page .color-option {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0;
+  transition: border-color 0.2s;
+}
+
+.gift-shop-nlmsf-page .color-option.active {
+  border-color: #6a3ea1;
+  box-shadow: 0 0 0 1px #6a3ea1;
+}
+
+.gift-shop-nlmsf-page .color-option.white { background: #fff; }
+.gift-shop-nlmsf-page .color-option.black { background: #1e293b; }
+.gift-shop-nlmsf-page .color-option.pink { background: #fbcfe8; }
+.gift-shop-nlmsf-page .color-option.beige { background: #fef3c7; }
+.gift-shop-nlmsf-page .color-option.lightgrey { background: #e2e8f0; }
+.gift-shop-nlmsf-page .color-option.gold { background: #fcd34d; }
+
+.gift-shop-nlmsf-page .btn-add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding: 0.6rem 1rem;
+  background: #6a3ea1;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.gift-shop-nlmsf-page .btn-add-to-cart:hover {
+  background: #5b21b6;
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+/* —— Resource grid (quick links) —— */
+.gift-shop-nlmsf-page .resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.gift-shop-nlmsf-page .resource-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.gift-shop-nlmsf-page .resource-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.gift-shop-nlmsf-page .resource-card > i {
+  font-size: 2rem;
+  color: #6a3ea1;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.gift-shop-nlmsf-page .resource-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.35rem;
+}
+
+.gift-shop-nlmsf-page .resource-card p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 0.5rem;
+  line-height: 1.45;
+}
+
+.gift-shop-nlmsf-page .resource-card-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #6a3ea1;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.gift-shop-nlmsf-page .resource-card-link:hover {
+  background: #5b21b6;
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.gift-shop-nlmsf-page .resource-card-link.disabled {
+  background: #94a3b8;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* —— Responsive —— */
+@media (max-width: 1024px) {
+  .gift-shop-nlmsf-page .page-layout {
+    flex-direction: column;
+  }
+
+  .gift-shop-nlmsf-page .sidebar {
+    position: static;
+    flex: 0 0 auto;
+  }
+
+  .gift-shop-nlmsf-page .featured-book-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-shop-nlmsf-page .featured-book-image {
+    order: -1;
+  }
+
+  .gift-shop-nlmsf-page .product-row.four-items,
+  .gift-shop-nlmsf-page .product-row.five-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gift-shop-nlmsf-page .hero {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .gift-shop-nlmsf-page .product-row,
+  .gift-shop-nlmsf-page .product-row.four-items,
+  .gift-shop-nlmsf-page .product-row.five-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gift-shop-nlmsf-page .resource-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gift-shop-nlmsf-page .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .gift-shop-nlmsf-page .product-row,
+  .gift-shop-nlmsf-page .product-row.four-items,
+  .gift-shop-nlmsf-page .product-row.five-items {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-shop-nlmsf-page .featured-book-buttons {
+    flex-direction: column;
+  }
+
+  .gift-shop-nlmsf-page .book-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

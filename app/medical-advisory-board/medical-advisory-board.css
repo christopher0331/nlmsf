@@ -1,0 +1,259 @@
+/*
+ * Medical Advisory Board page - scoped under .mab-page
+ */
+
+.mab-page {
+  font-family: "Inter", -apple-system, BlinkSystemFont, "Segoe UI", sans-serif;
+  color: #2d3748;
+  line-height: 1.6;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+/* ===== HERO ===== */
+.mab-page .nlmsf-hero-section {
+  padding: 2rem 0 3rem;
+}
+
+.mab-page .nlmsf-hero-container {
+  max-width: 85%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  color: #2d3748;
+  text-align: center;
+}
+
+.mab-page .nlmsf-hero-content {
+  width: 100%;
+}
+
+.mab-page .nlmsf-resource-tag {
+  display: inline-block;
+  background-color: #8361dd;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mab-page .nlmsf-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #8361dd;
+  margin-top: 1rem;
+}
+
+.mab-page .nlmsf-hero-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #8361dd;
+  margin: 1.5rem auto 1.75rem;
+  border-radius: 2px;
+}
+
+.mab-page .nlmsf-hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.mab-page .nlmsf-hero-description p {
+  margin-bottom: 1rem;
+}
+
+.mab-page .nlmsf-hero-description p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .mab-page .nlmsf-hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .mab-page .nlmsf-hero-container {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .mab-page .nlmsf-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .mab-page .nlmsf-hero-description {
+    font-size: 1rem;
+  }
+}
+
+/* ===== ADVISORS GRID ===== */
+.mab-page .nlmsf-medical-advisors {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+}
+
+.mab-page .nlmsf-advisors-container {
+  width: 100%;
+}
+
+.mab-page .nlmsf-advisors-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.mab-page .nlmsf-advisor-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.mab-page .nlmsf-advisor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.mab-page .nlmsf-advisor-image-container {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: #e5e7eb;
+  flex-shrink: 0;
+}
+
+.mab-page .nlmsf-advisor-image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%);
+}
+
+.mab-page .nlmsf-advisor-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.mab-page .nlmsf-advisor-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4b5563;
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+}
+
+.mab-page .nlmsf-advisor-card:hover .nlmsf-advisor-image-placeholder img {
+  transform: scale(1.05);
+}
+
+.mab-page .nlmsf-advisor-content {
+  text-align: center;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.mab-page .nlmsf-advisor-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: #1f2937;
+}
+
+.mab-page .nlmsf-advisor-position {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+  color: #3b82f6;
+}
+
+.mab-page .nlmsf-advisor-institution {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0;
+}
+
+.mab-page .nlmsf-advisor-card:hover .nlmsf-advisor-name {
+  color: #4f46e5;
+}
+
+.mab-page .nlmsf-advisor-card:nth-child(3n + 1) .nlmsf-advisor-position {
+  color: #7c3aed;
+}
+
+.mab-page .nlmsf-advisor-card:nth-child(3n + 2) .nlmsf-advisor-position {
+  color: #3b82f6;
+}
+
+.mab-page .nlmsf-advisor-card:nth-child(3n + 3) .nlmsf-advisor-position {
+  color: #14b8a6;
+}
+
+@media (min-width: 640px) {
+  .mab-page .nlmsf-advisors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .mab-page .nlmsf-medical-advisors {
+    padding: 4rem 2rem;
+  }
+
+  .mab-page .nlmsf-advisors-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mab-page .nlmsf-advisors-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .mab-page .nlmsf-advisor-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mab-page .nlmsf-advisors-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

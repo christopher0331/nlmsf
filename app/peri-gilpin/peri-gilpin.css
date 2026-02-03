@@ -1,0 +1,94 @@
+/* Peri Gilpin page - scoped under .peri-gilpin-page */
+
+.peri-gilpin-page {
+  font-family: -apple-system, BlinkSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1f2937;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.peri-gilpin-page .peri-hero {
+  margin-bottom: 2.5rem;
+}
+
+.peri-gilpin-page .peri-hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.peri-gilpin-page .peri-image-wrap {
+  flex-shrink: 0;
+}
+
+.peri-gilpin-page .peri-image-wrap img {
+  display: block;
+  width: 197px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.peri-gilpin-page .peri-hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.peri-gilpin-page .peri-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.peri-gilpin-page .peri-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin: 0;
+  font-style: italic;
+}
+
+.peri-gilpin-page .peri-content {
+  font-size: 1.0625rem;
+  color: #374151;
+}
+
+.peri-gilpin-page .peri-content p {
+  margin: 0 0 1.25rem 0;
+}
+
+.peri-gilpin-page .peri-content p:last-child {
+  margin-bottom: 0;
+}
+
+.peri-gilpin-page .peri-cta {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.peri-gilpin-page .peri-cta a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.peri-gilpin-page .peri-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .peri-gilpin-page .peri-hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .peri-gilpin-page .peri-title {
+    font-size: 1.75rem;
+  }
+}

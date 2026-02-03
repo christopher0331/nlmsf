@@ -1,0 +1,1174 @@
+/* Find a Sarcoma Specialist Page - scoped under .find-sarcoma-specialist-page */
+
+.find-sarcoma-specialist-page {
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --rose-50: #fff1f2;
+  --rose-100: #ffe4e6;
+  --rose-200: #fecdd3;
+  --rose-500: #f43f5e;
+  --rose-600: #e11d48;
+  --purple-50: #faf5ff;
+  --purple-100: #f3e8ff;
+  --purple-200: #e9d5ff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+.find-sarcoma-specialist-page a {
+  color: var(--indigo-600);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.find-sarcoma-specialist-page a:hover {
+  color: var(--indigo-700);
+}
+
+/* Page layout: sidebar + content */
+.find-sarcoma-specialist-page .page-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Hero */
+.find-sarcoma-specialist-page .hero {
+  background: linear-gradient(135deg, var(--blue-50), var(--indigo-50));
+  padding: 3rem 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--blue-200);
+  margin: 0 1.5rem 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.find-sarcoma-specialist-page .badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  color: var(--indigo-600);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.find-sarcoma-specialist-page .badge i {
+  margin-right: 0.5rem;
+}
+
+.find-sarcoma-specialist-page .hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+
+.find-sarcoma-specialist-page .divider {
+  height: 4px;
+  width: 4rem;
+  background: linear-gradient(to right, var(--indigo-500), var(--blue-500));
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+
+.find-sarcoma-specialist-page .hero-description {
+  font-size: 1.25rem;
+  color: var(--gray-600);
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+}
+
+.find-sarcoma-specialist-page .feature-tags {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.find-sarcoma-specialist-page .feature-tag {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.find-sarcoma-specialist-page .feature-tag i {
+  margin-right: 0.5rem;
+}
+
+.find-sarcoma-specialist-page .feature-tag.indigo {
+  color: var(--indigo-600);
+  border-left: 3px solid var(--indigo-500);
+}
+
+.find-sarcoma-specialist-page .feature-tag.amber {
+  color: var(--amber-600);
+  border-left: 3px solid var(--amber-500);
+}
+
+.find-sarcoma-specialist-page .feature-tag.rose {
+  color: var(--rose-600);
+  border-left: 3px solid var(--rose-500);
+}
+
+/* Intro panel */
+.find-sarcoma-specialist-page .intro-panel {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 0 1.5rem 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--indigo-500);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.find-sarcoma-specialist-page .intro-panel p {
+  font-size: 1.125rem;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+/* Sidebar */
+.find-sarcoma-specialist-page .sidebar {
+  position: sticky;
+  top: 2rem;
+  flex: 1;
+  height: fit-content;
+}
+
+.find-sarcoma-specialist-page .sidebar-container {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.find-sarcoma-specialist-page .sidebar-title {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .sidebar-nav {
+  margin-bottom: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .nav-item {
+  margin-bottom: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #4b5563;
+  transition: all 0.2s ease;
+  background-color: #f9fafb;
+}
+
+.find-sarcoma-specialist-page .nav-link:hover {
+  background-color: #f3f4f6;
+  color: #6a3ea1;
+  transform: translateX(5px);
+}
+
+.find-sarcoma-specialist-page .nav-link.sub-link {
+  padding-left: 2rem;
+  margin-top: 0.125rem;
+  background-color: #f3f4f6;
+  border-left: 3px solid #06b6d4;
+  font-size: 0.9rem;
+}
+
+.find-sarcoma-specialist-page .nav-link.sub-link:hover {
+  background-color: #e5e7eb;
+}
+
+.find-sarcoma-specialist-page .nav-icon {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .nav-icon.small {
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.find-sarcoma-specialist-page .nav-icon.purple { background-color: #6a3ea1; }
+.find-sarcoma-specialist-page .nav-icon.blue { background-color: #4a90e2; }
+.find-sarcoma-specialist-page .nav-icon.teal { background-color: #06b6d4; }
+.find-sarcoma-specialist-page .nav-icon.orange { background-color: #f59e0b; }
+.find-sarcoma-specialist-page .nav-icon.red { background-color: #ef4444; }
+.find-sarcoma-specialist-page .nav-icon.indigo { background-color: #4f46e5; }
+
+.find-sarcoma-specialist-page .sidebar-action {
+  margin-top: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .back-button {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.find-sarcoma-specialist-page .back-button:hover {
+  background-color: #e5e7eb;
+  transform: translateX(-5px);
+}
+
+.find-sarcoma-specialist-page .back-button i {
+  margin-right: 0.75rem;
+  color: #6a3ea1;
+}
+
+/* Content */
+.find-sarcoma-specialist-page .content {
+  flex: 2;
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.find-sarcoma-specialist-page .content-section {
+  margin-bottom: 3rem;
+}
+
+.find-sarcoma-specialist-page .content-section:last-child {
+  margin-bottom: 0;
+}
+
+.find-sarcoma-specialist-page .section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--gray-800);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 3rem;
+  background: linear-gradient(to right, var(--indigo-500), var(--blue-500));
+  border-radius: 1.5px;
+}
+
+.find-sarcoma-specialist-page .section-content {
+  color: var(--gray-700);
+}
+
+.find-sarcoma-specialist-page .section-intro {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .subsection {
+  margin-bottom: 2.5rem;
+}
+
+.find-sarcoma-specialist-page .subsection:last-child {
+  margin-bottom: 0;
+}
+
+.find-sarcoma-specialist-page .subsection-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--gray-800);
+}
+
+/* Info card */
+.find-sarcoma-specialist-page .info-card {
+  background-color: var(--indigo-50);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .info-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.find-sarcoma-specialist-page .info-card-header i {
+  font-size: 1.25rem;
+  color: var(--indigo-600);
+  margin-right: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .info-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .info-card p {
+  margin-bottom: 1rem;
+}
+
+.find-sarcoma-specialist-page .benefit-list {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.find-sarcoma-specialist-page .benefit-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonial */
+.find-sarcoma-specialist-page .testimonial {
+  background-color: white;
+  border-left: 4px solid var(--indigo-500);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.find-sarcoma-specialist-page .testimonial p {
+  margin: 0 0 0.75rem 0;
+  color: var(--gray-700);
+}
+
+.find-sarcoma-specialist-page .testimonial cite {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+/* Centers grid */
+.find-sarcoma-specialist-page .centers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .center-card {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border: 1px solid var(--gray-200);
+}
+
+.find-sarcoma-specialist-page .center-card:hover {
+  transform: translateY(-2px);
+}
+
+.find-sarcoma-specialist-page .center-card-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+
+.find-sarcoma-specialist-page .center-card-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.find-sarcoma-specialist-page .center-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: var(--indigo-100);
+  color: var(--indigo-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.find-sarcoma-specialist-page .center-content {
+  flex: 1;
+}
+
+.find-sarcoma-specialist-page .center-content h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0 0 0.375rem 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .center-content p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0 0 0.75rem 0;
+}
+
+.find-sarcoma-specialist-page .resource-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--indigo-600);
+}
+
+.find-sarcoma-specialist-page .resource-link i {
+  font-size: 0.75rem;
+  margin-left: 0.375rem;
+}
+
+/* Specialist finder / resource list */
+.find-sarcoma-specialist-page .specialist-finder {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+  border: 1px solid var(--gray-200);
+}
+
+.find-sarcoma-specialist-page .specialist-finder h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.find-sarcoma-specialist-page .resource-list li {
+  margin-bottom: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .resource-list li a {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem;
+  background-color: var(--gray-50);
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  color: var(--gray-700);
+  transition: all 0.3s;
+}
+
+.find-sarcoma-specialist-page .resource-list li a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: var(--indigo-600);
+}
+
+.find-sarcoma-specialist-page .resource-list li a i:first-of-type {
+  color: var(--indigo-500);
+  margin-right: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.find-sarcoma-specialist-page .resource-list li a span {
+  flex: 1;
+}
+
+.find-sarcoma-specialist-page .resource-list li a i:last-of-type {
+  color: var(--gray-400);
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Check list */
+.find-sarcoma-specialist-page .check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+}
+
+.find-sarcoma-specialist-page .check-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.625rem;
+}
+
+.find-sarcoma-specialist-page .check-list li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  color: var(--indigo-500);
+}
+
+/* Tip box */
+.find-sarcoma-specialist-page .tip-box {
+  background-color: var(--amber-50);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .tip-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .tip-header i {
+  color: var(--amber-500);
+  font-size: 1.125rem;
+  margin-right: 0.625rem;
+}
+
+.find-sarcoma-specialist-page .tip-header h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .tip-box p {
+  margin: 0 0 0.75rem 0;
+}
+
+.find-sarcoma-specialist-page .tip-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.find-sarcoma-specialist-page .tip-box ul li {
+  margin-bottom: 0.375rem;
+}
+
+/* Questions grid */
+.find-sarcoma-specialist-page .questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.find-sarcoma-specialist-page .question-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border: 1px solid var(--gray-200);
+}
+
+.find-sarcoma-specialist-page .question-card:hover {
+  transform: translateY(-2px);
+}
+
+.find-sarcoma-specialist-page .question-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.find-sarcoma-specialist-page .question-header i {
+  color: var(--indigo-500);
+  font-size: 1.125rem;
+  margin-right: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .question-header h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .question-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.find-sarcoma-specialist-page .question-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+.find-sarcoma-specialist-page .question-list li::before {
+  content: '\f105';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  color: var(--indigo-500);
+}
+
+/* Download box */
+.find-sarcoma-specialist-page .download-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-50);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.find-sarcoma-specialist-page .download-box i {
+  font-size: 1.5rem;
+  color: var(--indigo-500);
+}
+
+.find-sarcoma-specialist-page .download-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.find-sarcoma-specialist-page .download-content h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .download-content p {
+  font-size: 0.875rem;
+  margin: 0;
+  color: var(--gray-600);
+}
+
+.find-sarcoma-specialist-page .download-button {
+  display: inline-block;
+  background-color: var(--indigo-600);
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.3s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.find-sarcoma-specialist-page .download-button:hover {
+  background-color: var(--indigo-700);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Insurance grid */
+.find-sarcoma-specialist-page .insurance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .insurance-card {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border: 1px solid var(--gray-200);
+}
+
+.find-sarcoma-specialist-page .insurance-card:hover {
+  transform: translateY(-2px);
+}
+
+.find-sarcoma-specialist-page .insurance-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: var(--blue-100);
+  color: var(--blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.find-sarcoma-specialist-page .insurance-content {
+  flex: 1;
+}
+
+.find-sarcoma-specialist-page .insurance-content h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .insurance-content p {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  margin: 0 0 0.75rem 0;
+}
+
+.find-sarcoma-specialist-page .insurance-content .tip {
+  background-color: var(--gray-50);
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Resources grid */
+.find-sarcoma-specialist-page .resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.find-sarcoma-specialist-page .resource-card {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  align-items: center;
+  border: 1px solid var(--gray-200);
+}
+
+.find-sarcoma-specialist-page .resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.find-sarcoma-specialist-page .resource-card.indigo { border-left: 3px solid var(--indigo-500); }
+.find-sarcoma-specialist-page .resource-card.blue { border-left: 3px solid var(--blue-500); }
+.find-sarcoma-specialist-page .resource-card.teal { border-left: 3px solid var(--teal-500); }
+.find-sarcoma-specialist-page .resource-card.rose { border-left: 3px solid var(--rose-500); }
+
+.find-sarcoma-specialist-page .resource-card .resource-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.find-sarcoma-specialist-page .resource-card.indigo .resource-icon {
+  background-color: var(--indigo-100);
+  color: var(--indigo-600);
+}
+
+.find-sarcoma-specialist-page .resource-card.blue .resource-icon {
+  background-color: var(--blue-100);
+  color: var(--blue-600);
+}
+
+.find-sarcoma-specialist-page .resource-card.teal .resource-icon {
+  background-color: var(--teal-100);
+  color: var(--teal-600);
+}
+
+.find-sarcoma-specialist-page .resource-card.rose .resource-icon {
+  background-color: var(--rose-100);
+  color: var(--rose-600);
+}
+
+.find-sarcoma-specialist-page .resource-card .resource-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.find-sarcoma-specialist-page .resource-card .resource-content h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0 0 0.375rem 0;
+  color: var(--gray-800);
+}
+
+.find-sarcoma-specialist-page .resource-card .resource-content p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.find-sarcoma-specialist-page .resource-card .fa-external-link-alt {
+  color: var(--gray-400);
+  margin-left: 0.75rem;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.find-sarcoma-specialist-page .resource-card:hover .fa-external-link-alt {
+  color: var(--indigo-600);
+}
+
+/* Community resources section */
+.find-sarcoma-specialist-page .community-resources-section {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #e91e63;
+}
+
+.find-sarcoma-specialist-page .community-description {
+  margin-bottom: 1rem;
+}
+
+.find-sarcoma-specialist-page .community-description p {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.find-sarcoma-specialist-page .community-resources-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.find-sarcoma-specialist-page .community-resource-card {
+  background: white;
+  border-radius: 6px;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+}
+
+.find-sarcoma-specialist-page .community-resource-card .resource-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.find-sarcoma-specialist-page .community-resource-card .resource-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #e91e63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.find-sarcoma-specialist-page .community-resource-card .resource-icon i {
+  font-size: 0.8rem;
+  color: white;
+}
+
+.find-sarcoma-specialist-page .community-resource-card .resource-header h3 {
+  color: #2c3e50;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.find-sarcoma-specialist-page .facebook-groups-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.find-sarcoma-specialist-page .facebook-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 2px solid #3b5998;
+}
+
+.find-sarcoma-specialist-page .group-info h4 {
+  color: #2c3e50;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.find-sarcoma-specialist-page .group-link {
+  background: #3b5998;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.find-sarcoma-specialist-page .group-link:hover {
+  background: #2d4373;
+  color: white;
+}
+
+.find-sarcoma-specialist-page .newsletter-form .form-group {
+  margin-bottom: 0.5rem;
+}
+
+.find-sarcoma-specialist-page .newsletter-form input[type="text"],
+.find-sarcoma-specialist-page .newsletter-form input[type="email"] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  background: white;
+  width: 100%;
+}
+
+.find-sarcoma-specialist-page .newsletter-form input:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+.find-sarcoma-specialist-page .newsletter-submit-btn {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+.find-sarcoma-specialist-page .newsletter-submit-btn:hover {
+  background: #c2185b;
+}
+
+/* Featured image section */
+.find-sarcoma-specialist-page .featured-image-section {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-top: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.find-sarcoma-specialist-page .featured-image {
+  height: 320px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--blue-100), var(--indigo-100));
+}
+
+.find-sarcoma-specialist-page .featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.find-sarcoma-specialist-page .image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.find-sarcoma-specialist-page .image-overlay h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.find-sarcoma-specialist-page .image-overlay p {
+  font-size: 1.0625rem;
+  margin-bottom: 1.5rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.find-sarcoma-specialist-page .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.find-sarcoma-specialist-page .primary-cta {
+  background-color: var(--indigo-600);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.find-sarcoma-specialist-page .primary-cta:hover {
+  background-color: var(--indigo-700);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.find-sarcoma-specialist-page .secondary-cta {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+}
+
+.find-sarcoma-specialist-page .secondary-cta:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .find-sarcoma-specialist-page .page-layout {
+    flex-direction: column;
+  }
+
+  .find-sarcoma-specialist-page .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .find-sarcoma-specialist-page .hero {
+    padding: 2rem 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .find-sarcoma-specialist-page .hero-title {
+    font-size: 2rem;
+  }
+
+  .find-sarcoma-specialist-page .hero-description {
+    font-size: 1.125rem;
+  }
+
+  .find-sarcoma-specialist-page .section-title {
+    font-size: 1.5rem;
+  }
+
+  .find-sarcoma-specialist-page .subsection-title {
+    font-size: 1.25rem;
+  }
+
+  .find-sarcoma-specialist-page .content {
+    padding: 1.5rem;
+  }
+
+  .find-sarcoma-specialist-page .download-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .find-sarcoma-specialist-page .download-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .find-sarcoma-specialist-page .insurance-card {
+    flex-direction: column;
+  }
+
+  .find-sarcoma-specialist-page .insurance-icon {
+    margin-bottom: 1rem;
+  }
+
+  .find-sarcoma-specialist-page .image-overlay {
+    padding: 1.5rem;
+  }
+
+  .find-sarcoma-specialist-page .image-overlay h3 {
+    font-size: 1.5rem;
+  }
+
+  .find-sarcoma-specialist-page .image-overlay p {
+    font-size: 1rem;
+  }
+
+  .find-sarcoma-specialist-page .community-resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .find-sarcoma-specialist-page .sidebar-container,
+  .find-sarcoma-specialist-page .nav-link,
+  .find-sarcoma-specialist-page .back-button {
+    padding: 0.5rem 0.75rem;
+  }
+}

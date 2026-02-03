@@ -1,0 +1,1003 @@
+/* Nutrition & Physical Activity - scoped styles */
+
+.nutrition-activity-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 2rem 1rem 3rem;
+  background: #ffffff;
+}
+
+.nutrition-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Component Styles */
+.nutrition-activity-page .hero {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  padding: 3rem 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a7f3d0;
+  margin: 0 auto 2rem;
+  max-width: 1200px;
+}
+
+.nutrition-activity-page .badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.nutrition-activity-page .badge i {
+  color: #059669;
+}
+
+.nutrition-activity-page .badge span {
+  color: #374151;
+  font-weight: 500;
+}
+
+.nutrition-activity-page .hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #059669, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 1rem 0;
+}
+
+.nutrition-activity-page .divider {
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(to right, #059669, #10b981);
+  margin: 0 auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+.nutrition-activity-page .hero-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nutrition-activity-page .feature-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nutrition-activity-page .feature-tag {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.nutrition-activity-page .feature-tag.emerald {
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.nutrition-activity-page .feature-tag.amber {
+  background-color: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.nutrition-activity-page .feature-tag.blue {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.nutrition-activity-page .feature-tag i {
+  font-size: 0.875rem;
+}
+
+/* Motto Banner Styles */
+.nutrition-activity-page .motto-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  background: linear-gradient(to right, #0f766e, #059669);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nutrition-activity-page .motto-item {
+  display: flex;
+  align-items: center;
+}
+
+.nutrition-activity-page .motto-text {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nutrition-activity-page .intro-panel {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+}
+
+.nutrition-activity-page .intro-panel p {
+  margin: 0 0 1rem 0;
+  color: #374151;
+}
+
+.nutrition-activity-page .intro-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar Component Styles */
+.nutrition-activity-page .page-nav {
+  position: sticky;
+  top: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem 1rem;
+  max-width: 240px;
+  width: 100%;
+}
+
+.nutrition-activity-page .sidebar-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+/* Nav Section and Link Styles */
+.nutrition-activity-page .nav-section {
+  margin-bottom: 1rem;
+}
+
+.nutrition-activity-page .nav-link {
+  display: block;
+  text-decoration: none;
+  color: #4b5563;
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 3px solid transparent;
+}
+
+.nutrition-activity-page .nav-link:hover {
+  color: #059669;
+  border-left-color: #059669;
+}
+
+/* Section color indicators */
+.nutrition-activity-page .section-overview .nav-link {
+  border-left-color: #10b981;
+}
+
+.nutrition-activity-page .section-acs .nav-link {
+  border-left-color: #3b82f6;
+}
+
+.nutrition-activity-page .section-resources .nav-link {
+  border-left-color: #f59e0b;
+}
+
+.nutrition-activity-page .section-activity .nav-link {
+  border-left-color: #d97706;
+}
+
+.nutrition-activity-page .section-videos .nav-link {
+  border-left-color: #ec4899;
+}
+
+/* Active state for links */
+.nutrition-activity-page .nav-link.active {
+  font-weight: 600;
+}
+
+.nutrition-activity-page .section-overview .nav-link.active {
+  color: #059669;
+}
+
+.nutrition-activity-page .section-acs .nav-link.active {
+  color: #2563eb;
+}
+
+.nutrition-activity-page .section-resources .nav-link.active {
+  color: #d97706;
+}
+
+.nutrition-activity-page .section-activity .nav-link.active {
+  color: #b45309;
+}
+
+.nutrition-activity-page .section-videos .nav-link.active {
+  color: #be185d;
+}
+
+/* Main Content Component Styles */
+.nutrition-activity-page .main-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nutrition-activity-page .content-section {
+  margin-bottom: 3rem;
+}
+
+.nutrition-activity-page .section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+.nutrition-activity-page .section-title.emerald {
+  color: #059669;
+  border-color: #a7f3d0;
+}
+
+.nutrition-activity-page .section-title.blue {
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.nutrition-activity-page .section-title.amber {
+  color: #d97706;
+  border-color: #fde68a;
+}
+
+.nutrition-activity-page .section-title.rose {
+  color: #be185d;
+  border-color: #fecdd3;
+}
+
+.nutrition-activity-page .section-title.teal {
+  color: #0f766e;
+  border-color: #99f6e4;
+}
+
+.nutrition-activity-page .content-panel {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+  margin-bottom: 2rem;
+}
+
+.nutrition-activity-page .content-panel.emerald {
+  background: linear-gradient(to right, #ecfdf5, #d1fae5);
+  border-color: #a7f3d0;
+}
+
+.nutrition-activity-page .content-panel.amber {
+  background: linear-gradient(to right, #fffbeb, #fef3c7);
+  border-color: #fde68a;
+}
+
+.nutrition-activity-page .panel-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.nutrition-activity-page .icon-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.nutrition-activity-page .icon-circle i {
+  color: white;
+}
+
+.nutrition-activity-page .icon-circle.emerald {
+  background-color: #10b981;
+}
+
+.nutrition-activity-page .icon-circle.amber {
+  background-color: #f59e0b;
+}
+
+.nutrition-activity-page .panel-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nutrition-activity-page .panel-header p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.nutrition-activity-page .panel-header h3 + p {
+  margin-top: 0.25rem;
+}
+
+.nutrition-activity-page .panel-text {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.nutrition-activity-page .bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nutrition-activity-page .bullet-list li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.nutrition-activity-page .bullet-list li::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  margin-right: 0.75rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.nutrition-activity-page .bullet-list.emerald li::before {
+  background-color: #10b981;
+}
+
+.nutrition-activity-page .bullet-list.indigo li::before {
+  background-color: #6366f1;
+}
+
+/* Note Box Styles */
+.nutrition-activity-page .note-box {
+  display: flex;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.nutrition-activity-page .note-icon {
+  color: #3b82f6;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.nutrition-activity-page .note-content h4 {
+  color: #2563eb;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.nutrition-activity-page .note-content p {
+  color: #4b5563;
+  margin: 0;
+  font-size: 0.925rem;
+}
+
+/* Benefits Grid Styles */
+.nutrition-activity-page .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.nutrition-activity-page .benefit-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nutrition-activity-page .benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #bfdbfe;
+}
+
+.nutrition-activity-page .benefit-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+  font-size: 1.25rem;
+}
+
+.nutrition-activity-page .benefit-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  color: #1f2937;
+}
+
+.nutrition-activity-page .benefit-card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Resources Grid Styles */
+.nutrition-activity-page .resources-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.nutrition-activity-page .resource-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.nutrition-activity-page .resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #fde68a;
+}
+
+.nutrition-activity-page .resource-logo {
+  width: 100px;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nutrition-activity-page .resource-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.nutrition-activity-page .resource-content {
+  flex-grow: 1;
+}
+
+.nutrition-activity-page .resource-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.nutrition-activity-page .resource-content p {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.nutrition-activity-page .resource-link {
+  display: inline-flex;
+  align-items: center;
+  color: #d97706;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.nutrition-activity-page .resource-link:hover {
+  text-decoration: underline;
+}
+
+/* Resource Highlight Styles */
+.nutrition-activity-page .resource-highlight {
+  background-color: #fffbeb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #fde68a;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.nutrition-activity-page .resource-icon {
+  color: #d97706;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.nutrition-activity-page .resource-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #92400e;
+  font-size: 1rem;
+}
+
+.nutrition-activity-page .resource-info p {
+  margin: 0 0 0.75rem 0;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.nutrition-activity-page .highlight-link {
+  display: inline-flex;
+  align-items: center;
+  color: #d97706;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.nutrition-activity-page .highlight-link:hover {
+  text-decoration: underline;
+}
+
+/* Activity Benefits Styles */
+.nutrition-activity-page .activity-benefits {
+  margin-top: 2rem;
+}
+
+.nutrition-activity-page .activity-benefits h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.nutrition-activity-page .activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.nutrition-activity-page .activity-item {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.nutrition-activity-page .activity-item:hover {
+  border-color: #fde68a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-activity-page .activity-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #fffbeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+.nutrition-activity-page .activity-text h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.nutrition-activity-page .activity-text p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Videos & Resources Section */
+.nutrition-activity-page .video-resources {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nutrition-activity-page .video-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.nutrition-activity-page .video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-activity-page .video-thumbnail {
+  position: relative;
+  padding-top: 56.25%;
+  background-color: #1f2937;
+  overflow: hidden;
+}
+
+.nutrition-activity-page .video-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.nutrition-activity-page .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(190, 24, 93, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.nutrition-activity-page .play-button i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nutrition-activity-page .video-card:hover .play-button {
+  background-color: #be185d;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.nutrition-activity-page .video-card:hover .video-thumbnail img {
+  transform: scale(1.05);
+}
+
+.nutrition-activity-page .video-details {
+  padding: 1.5rem;
+}
+
+.nutrition-activity-page .video-details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.nutrition-activity-page .video-presenter {
+  color: #be185d;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.nutrition-activity-page .video-description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+}
+
+.nutrition-activity-page .video-link {
+  display: inline-flex;
+  align-items: center;
+  color: #be185d;
+  font-weight: 500;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.nutrition-activity-page .video-link:hover {
+  text-decoration: underline;
+}
+
+/* Additional Resources */
+.nutrition-activity-page .additional-resources {
+  margin-top: 2rem;
+}
+
+.nutrition-activity-page .subsection-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.nutrition-activity-page .resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nutrition-activity-page .resource-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  gap: 0.75rem;
+}
+
+.nutrition-activity-page .resource-item:hover {
+  border-color: #be185d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nutrition-activity-page .resource-item i {
+  color: #be185d;
+}
+
+/* SAVOR Program Section Styling */
+.nutrition-activity-page .savor-program-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.nutrition-activity-page .savor-program-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0ea5e9, #06b6d4, #10b981);
+}
+
+.nutrition-activity-page .savor-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(14, 165, 233, 0.1);
+}
+
+.nutrition-activity-page .savor-infographic {
+  margin: 1.5rem 0 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.nutrition-activity-page .savor-infographic img {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.nutrition-activity-page .savor-content h3 {
+  color: #0f172a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.nutrition-activity-page .savor-description {
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.nutrition-activity-page .savor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nutrition-activity-page .savor-highlight,
+.nutrition-activity-page .savor-partnership {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #0ea5e9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nutrition-activity-page .savor-highlight h4,
+.nutrition-activity-page .savor-partnership h4 {
+  color: #0ea5e9;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.nutrition-activity-page .savor-highlight p,
+.nutrition-activity-page .savor-partnership p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.nutrition-activity-page .savor-portal {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.nutrition-activity-page .savor-portal-link {
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.nutrition-activity-page .savor-portal-link:hover {
+  background: linear-gradient(135deg, #0284c7, #0891b2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(14, 165, 233, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.nutrition-activity-page .savor-portal-link i {
+  font-size: 1rem;
+}
+
+.nutrition-activity-page .savor-video {
+  margin-bottom: 1.75rem;
+}
+
+.nutrition-activity-page .savor-video-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+}
+
+.nutrition-activity-page .savor-video-inner iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .nutrition-activity-page .video-resources {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  .nutrition-activity-page .resources-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  .nutrition-activity-page .hero-title {
+    font-size: 3rem;
+  }
+
+  .nutrition-activity-page .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nutrition-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-activity-page .page-nav {
+    position: static;
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nutrition-activity-page .resource-card {
+    flex-direction: column;
+  }
+
+  .nutrition-activity-page .resource-logo {
+    margin: 0 0 1rem 0;
+  }
+
+  .nutrition-activity-page .motto-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .nutrition-activity-page .motto-text {
+    font-size: 1rem;
+  }
+}

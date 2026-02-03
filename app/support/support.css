@@ -1,0 +1,147 @@
+/* Support page - scoped under .support-page */
+
+.support-page {
+  --support-max: 900px;
+}
+
+.support-page .support-hero {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd6fe;
+}
+
+.support-page .support-hero-inner {
+  max-width: var(--support-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.support-page .support-hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+.support-page .support-hero-title a {
+  color: #5b21b6;
+  text-decoration: none;
+}
+
+.support-page .support-hero-title a:hover {
+  text-decoration: underline;
+}
+
+.support-page .support-hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #6d28d9;
+  margin: 0 0 1rem;
+}
+
+.support-page .support-hero-text {
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.support-page .support-hero-text a {
+  color: #6d28d9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.support-page .support-hero-text a:hover {
+  text-decoration: underline;
+}
+
+.support-page .support-content {
+  max-width: var(--support-max);
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.support-page .support-section {
+  margin-bottom: 2.5rem;
+}
+
+.support-page .support-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #7c3aed;
+}
+
+.support-page .support-list {
+  padding-left: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.support-page .support-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.support-page .support-list a {
+  color: #6d28d9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.support-page .support-list a:hover {
+  text-decoration: underline;
+}
+
+.support-page .support-text {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.support-page .support-report-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.support-page .support-report-links li {
+  margin-bottom: 0.5rem;
+}
+
+.support-page .support-report-links a {
+  color: #6d28d9;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.support-page .support-report-links a:hover {
+  text-decoration: underline;
+}
+
+.support-page .support-report-links a strong {
+  color: #7c51a0;
+}
+
+@media (max-width: 640px) {
+  .support-page .support-hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .support-page .support-content {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .support-page .support-section-title {
+    font-size: 1.2rem;
+  }
+}

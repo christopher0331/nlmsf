@@ -1,0 +1,233 @@
+/* Find a Sarcoma Specialist Page - NLMSF design protocol
+   Scoped under .find-sarcoma-specialist-page */
+
+.find-sarcoma-specialist-page .nlmsf-hero-section {
+  background: #f0f7ff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.find-sarcoma-specialist-page .nlmsf-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.find-sarcoma-specialist-page .nlmsf-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+}
+
+.find-sarcoma-specialist-page .nlmsf-resource-tag {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #2b82ea;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.find-sarcoma-specialist-page .nlmsf-resource-tag:hover {
+  background-color: #bae6fd;
+}
+
+.find-sarcoma-specialist-page .nlmsf-hero-title {
+  background: linear-gradient(to right, #2b82ea, #6a3ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+}
+
+.find-sarcoma-specialist-page .nlmsf-hero-subtitle {
+  color: #4b5563;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+}
+
+/* Page layout */
+.find-sarcoma-specialist-page .nlmsf-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.find-sarcoma-specialist-page .nlmsf-content-section {
+  padding: 2rem 1.5rem;
+}
+
+.find-sarcoma-specialist-page .nlmsf-content-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content blocks */
+.find-sarcoma-specialist-page .nlmsf-specialist-block {
+  margin-bottom: 2.5rem;
+}
+
+.find-sarcoma-specialist-page .nlmsf-specialist-block:last-child {
+  margin-bottom: 0;
+}
+
+.find-sarcoma-specialist-page .nlmsf-block-figure {
+  margin: 0 0 1rem 0;
+}
+
+.find-sarcoma-specialist-page .nlmsf-figure-center {
+  text-align: center;
+}
+
+.find-sarcoma-specialist-page .nlmsf-block-img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.find-sarcoma-specialist-page .nlmsf-img-left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.find-sarcoma-specialist-page .nlmsf-img-inline {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.find-sarcoma-specialist-page .nlmsf-block-text {
+  color: #4b5563;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.find-sarcoma-specialist-page .nlmsf-block-text:last-child {
+  margin-bottom: 0;
+}
+
+.find-sarcoma-specialist-page .nlmsf-text-strong {
+  font-weight: 700;
+}
+
+.find-sarcoma-specialist-page .nlmsf-text-center {
+  text-align: center;
+}
+
+/* Purple section headings (from WordPress #800080) */
+.find-sarcoma-specialist-page .nlmsf-section-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.find-sarcoma-specialist-page .nlmsf-heading-purple {
+  color: #800080;
+}
+
+/* Block with floated image - clearfix */
+.find-sarcoma-specialist-page .nlmsf-block-with-image {
+  overflow: auto;
+}
+
+.find-sarcoma-specialist-page .nlmsf-block-with-image .nlmsf-block-text {
+  margin-top: 0;
+}
+
+/* Specialist list (telemedicine clinics) */
+.find-sarcoma-specialist-page .nlmsf-specialist-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.find-sarcoma-specialist-page .nlmsf-specialist-list li {
+  margin-bottom: 0.35rem;
+}
+
+/* Resource cards (Partners, Grand Rounds) */
+.find-sarcoma-specialist-page .nlmsf-resource-card {
+  background-color: #faf5ff;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e9d5ff;
+}
+
+.find-sarcoma-specialist-page .nlmsf-resource-card .nlmsf-block-text {
+  margin-bottom: 0.75rem;
+}
+
+/* Link list (second opinion resources) */
+.find-sarcoma-specialist-page .nlmsf-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.find-sarcoma-specialist-page .nlmsf-link-list li {
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.find-sarcoma-specialist-page .nlmsf-link {
+  color: #2b82ea;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.find-sarcoma-specialist-page .nlmsf-link:hover {
+  color: #6a3ea1;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .find-sarcoma-specialist-page .nlmsf-hero-section {
+    padding: 4rem 2rem;
+  }
+
+  .find-sarcoma-specialist-page .nlmsf-hero-title {
+    font-size: 3rem;
+  }
+
+  .find-sarcoma-specialist-page .nlmsf-content-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .find-sarcoma-specialist-page .nlmsf-img-left {
+    float: none;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+
+  .find-sarcoma-specialist-page .nlmsf-img-inline {
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+}

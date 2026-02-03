@@ -1,0 +1,434 @@
+/* NLMSF Caregiver Traits Page - WordPress Styles
+   Following NLMSF design protocol with direct color values
+   Scoped under .caregiver-traits-2-page */
+
+.caregiver-traits-2-page .nlmsf-hero-section {
+  background: #f0f7ff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.caregiver-traits-2-page .nlmsf-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.caregiver-traits-2-page .nlmsf-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+}
+
+.caregiver-traits-2-page .nlmsf-resource-tag {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #2b82ea;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.caregiver-traits-2-page .nlmsf-resource-tag:hover {
+  background-color: #bae6fd;
+}
+
+.caregiver-traits-2-page .nlmsf-hero-title {
+  background: linear-gradient(to right, #2b82ea, #6a3ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+}
+
+.caregiver-traits-2-page .nlmsf-hero-subtitle {
+  color: #4b5563;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+}
+
+/* Content Section Styles */
+.caregiver-traits-2-page .nlmsf-content-section {
+  padding: 2rem 1.5rem;
+}
+
+.caregiver-traits-2-page .nlmsf-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.caregiver-traits-2-page .nlmsf-introduction {
+  margin-bottom: 2.5rem;
+}
+
+.caregiver-traits-2-page .nlmsf-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #bae6fd;
+  background: linear-gradient(to right, #2b82ea, #6a3ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.caregiver-traits-2-page .nlmsf-intro-text {
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Traits Cards */
+.caregiver-traits-2-page .nlmsf-traits-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-card {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  scroll-margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.caregiver-traits-2-page .nlmsf-trait-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Compassion - Blue */
+.caregiver-traits-2-page .nlmsf-trait-compassion {
+  background-color: #eff6ff;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-compassion .nlmsf-trait-title {
+  color: #1d4ed8;
+  border-bottom: 1px solid #bfdbfe;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-compassion .nlmsf-link {
+  color: #2563eb;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-compassion .nlmsf-link:hover {
+  color: #1e40af;
+}
+
+/* Patience - Teal */
+.caregiver-traits-2-page .nlmsf-trait-patience {
+  background-color: #f0fdfa;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-patience .nlmsf-trait-title {
+  color: #0d9488;
+  border-bottom: 1px solid #99f6e4;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-patience .nlmsf-link {
+  color: #14b8a6;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-patience .nlmsf-link:hover {
+  color: #0f766e;
+}
+
+/* Dependability - Purple */
+.caregiver-traits-2-page .nlmsf-trait-dependability {
+  background-color: #faf5ff;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-dependability .nlmsf-trait-title {
+  color: #7e22ce;
+  border-bottom: 1px solid #e9d5ff;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-dependability .nlmsf-link {
+  color: #9333ea;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-dependability .nlmsf-link:hover {
+  color: #6b21a8;
+}
+
+/* Flexibility - Pink */
+.caregiver-traits-2-page .nlmsf-trait-flexibility {
+  background-color: #fdf2f8;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-flexibility .nlmsf-trait-title {
+  color: #be185d;
+  border-bottom: 1px solid #fbcfe8;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-flexibility .nlmsf-link {
+  color: #db2777;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-flexibility .nlmsf-link:hover {
+  color: #9d174d;
+}
+
+.caregiver-traits-2-page .nlmsf-trait-description {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.caregiver-traits-2-page .nlmsf-link {
+  color: #2b82ea;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.caregiver-traits-2-page .nlmsf-link:hover {
+  color: #6a3ea1;
+}
+
+/* Sidebar Styles */
+.caregiver-traits-2-page .nlmsf-sidebar {
+  padding: 1.5rem;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-container {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(to right, #2b82ea, #6a3ea1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #2b82ea, #6a3ea1);
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link {
+  display: block;
+  color: #4b5563;
+  padding: 0.75rem 0.5rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link:hover {
+  background-color: #e0f2fe;
+  color: #2b82ea;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-compassion {
+  color: #1d4ed8;
+  border-left-color: #bfdbfe;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-compassion:hover {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border-left-color: #1d4ed8;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-patience {
+  color: #0d9488;
+  border-left-color: #99f6e4;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-patience:hover {
+  background-color: #f0fdfa;
+  color: #0f766e;
+  border-left-color: #0d9488;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-dependability {
+  color: #7e22ce;
+  border-left-color: #e9d5ff;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-dependability:hover {
+  background-color: #faf5ff;
+  color: #6b21a8;
+  border-left-color: #7e22ce;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-flexibility {
+  color: #be185d;
+  border-left-color: #fbcfe8;
+}
+
+.caregiver-traits-2-page .nlmsf-sidebar-link-flexibility:hover {
+  background-color: #fdf2f8;
+  color: #9d174d;
+  border-left-color: #be185d;
+}
+
+/* Denver Support Section */
+.caregiver-traits-2-page .nlmsf-denver-support {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #fef3c7;
+}
+
+.caregiver-traits-2-page .nlmsf-support-title {
+  color: #d97706;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.caregiver-traits-2-page .nlmsf-support-text {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.caregiver-traits-2-page .nlmsf-support-button {
+  display: inline-block;
+  background-color: #f59e0b;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.caregiver-traits-2-page .nlmsf-support-button:hover {
+  background-color: #d97706;
+}
+
+/* Resources Section */
+.caregiver-traits-2-page .nlmsf-resources {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #bfdbfe;
+}
+
+.caregiver-traits-2-page .nlmsf-resources-title {
+  color: #3b82f6;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.caregiver-traits-2-page .nlmsf-resources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.caregiver-traits-2-page .nlmsf-resources-link {
+  display: block;
+  color: #4b5563;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.caregiver-traits-2-page .nlmsf-resources-link:hover {
+  color: #3b82f6;
+}
+
+/* Page layout: sidebar + content */
+.caregiver-traits-2-page .nlmsf-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.caregiver-traits-2-page .nlmsf-with-sidebar {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+}
+
+.caregiver-traits-2-page .nlmsf-with-sidebar .nlmsf-content-container {
+  flex: 2;
+}
+
+.caregiver-traits-2-page .nlmsf-with-sidebar .nlmsf-sidebar {
+  flex: 1;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+  height: fit-content;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .caregiver-traits-2-page .nlmsf-hero-section {
+    padding: 4rem 2rem;
+  }
+
+  .caregiver-traits-2-page .nlmsf-hero-title {
+    font-size: 3rem;
+  }
+
+  .caregiver-traits-2-page .nlmsf-content-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .caregiver-traits-2-page .nlmsf-with-sidebar {
+    flex-direction: column;
+  }
+
+  .caregiver-traits-2-page .nlmsf-with-sidebar .nlmsf-sidebar {
+    position: static;
+  }
+}
+
+@media (min-width: 1024px) {
+  .caregiver-traits-2-page .nlmsf-traits-section {
+    grid-template-columns: 1fr;
+  }
+}

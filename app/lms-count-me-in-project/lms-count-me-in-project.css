@@ -1,0 +1,85 @@
+/* LMS Count Me In Project page - scoped under .lms-count-me-in-page */
+
+.lms-count-me-in-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.lms-count-me-in-page .count-me-in-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lms-count-me-in-page .count-me-in-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.lms-count-me-in-page .count-me-in-logo {
+  margin-bottom: 1.5rem;
+}
+
+.lms-count-me-in-page .count-me-in-logo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.lms-count-me-in-page .count-me-in-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.lms-count-me-in-page .count-me-in-content p {
+  margin: 0 0 1.25rem 0;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.lms-count-me-in-page .count-me-in-content a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.lms-count-me-in-page .count-me-in-content a:hover {
+  text-decoration: underline;
+}
+
+.lms-count-me-in-page .count-me-in-h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 2rem 0 1rem 0;
+}
+
+.lms-count-me-in-page .count-me-in-quote {
+  margin: 2.5rem 0 0;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  border-left: 4px solid #3b82f6;
+  background: #f8fafc;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.lms-count-me-in-page .count-me-in-quote p {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+  font-style: italic;
+  color: #4b5563;
+}
+
+.lms-count-me-in-page .count-me-in-quote cite {
+  font-size: 0.9375rem;
+  color: #6b7280;
+  font-style: italic;
+}

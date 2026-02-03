@@ -1,0 +1,764 @@
+/* NLMSF Events Page - scoped under .nlmsf-events-page */
+
+.nlmsf-events-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  background-color: #ffffff;
+  padding: 2rem 1rem 3rem;
+}
+
+.nlmsf-events-page .events-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.nlmsf-events-page .events-content {
+  min-width: 0;
+}
+
+/* Hero Component Styles */
+.nlmsf-events-page .hero {
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+  padding: 3rem 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd6fe;
+  margin-bottom: 2rem;
+}
+
+.nlmsf-events-page .badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.nlmsf-events-page .badge i {
+  color: #7e22ce;
+  margin-right: 0.5rem;
+}
+
+.nlmsf-events-page .badge span {
+  color: #374151;
+  font-weight: 500;
+}
+
+.nlmsf-events-page .hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #7e22ce, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 1rem 0;
+}
+
+.nlmsf-events-page .divider {
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(to right, #7e22ce, #a855f7);
+  margin: 0 auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+.nlmsf-events-page .hero-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nlmsf-events-page .feature-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nlmsf-events-page .feature-tag {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.nlmsf-events-page .feature-tag.purple {
+  background-color: #f5f3ff;
+  color: #7e22ce;
+  border: 1px solid #ddd6fe;
+}
+
+.nlmsf-events-page .feature-tag.rose {
+  background-color: #fff1f2;
+  color: #be185d;
+  border: 1px solid #fecdd3;
+}
+
+.nlmsf-events-page .feature-tag.indigo {
+  background-color: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.nlmsf-events-page .feature-tag i {
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Main Content Component Styles */
+.nlmsf-events-page .main-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nlmsf-events-page .content-section {
+  margin-bottom: 3rem;
+}
+
+.nlmsf-events-page .section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+.nlmsf-events-page .section-title.purple {
+  color: #7e22ce;
+  border-color: #e9d5ff;
+}
+
+.nlmsf-events-page .section-title.indigo {
+  color: #4338ca;
+  border-color: #c7d2fe;
+}
+
+.nlmsf-events-page .section-title.rose {
+  color: #be185d;
+  border-color: #fecdd3;
+}
+
+.nlmsf-events-page .section-title.teal {
+  color: #0f766e;
+  border-color: #99f6e4;
+}
+
+.nlmsf-events-page .section-title.amber {
+  color: #d97706;
+  border-color: #fde68a;
+}
+
+.nlmsf-events-page .content-panel {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+  margin-bottom: 2rem;
+}
+
+.nlmsf-events-page .content-panel.purple {
+  background: linear-gradient(to right, #f5f3ff, #ede9fe);
+  border-color: #ddd6fe;
+}
+
+.nlmsf-events-page .content-panel.indigo {
+  background: linear-gradient(to right, #eef2ff, #e0e7ff);
+  border-color: #c7d2fe;
+}
+
+.nlmsf-events-page .content-panel.rose {
+  background: linear-gradient(to right, #fff1f2, #fce7f3);
+  border-color: #fecdd3;
+}
+
+.nlmsf-events-page .content-panel.teal {
+  background: linear-gradient(to right, #f0fdfa, #ccfbf1);
+  border-color: #99f6e4;
+}
+
+.nlmsf-events-page .content-panel.amber {
+  background: linear-gradient(to right, #fffbeb, #fef3c7);
+  border-color: #fde68a;
+}
+
+.nlmsf-events-page .panel-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.nlmsf-events-page .icon-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nlmsf-events-page .icon-circle i {
+  color: white;
+}
+
+.nlmsf-events-page .icon-circle.purple {
+  background-color: #8b5cf6;
+}
+
+.nlmsf-events-page .icon-circle.indigo {
+  background-color: #6366f1;
+}
+
+.nlmsf-events-page .icon-circle.rose {
+  background-color: #ec4899;
+}
+
+.nlmsf-events-page .icon-circle.teal {
+  background-color: #14b8a6;
+}
+
+.nlmsf-events-page .icon-circle.amber {
+  background-color: #f59e0b;
+}
+
+.nlmsf-events-page .icon-circle.green {
+  background-color: #10b981;
+}
+
+.nlmsf-events-page .panel-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nlmsf-events-page .panel-header p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.nlmsf-events-page .panel-header h3 + p {
+  margin-top: 0.25rem;
+}
+
+.nlmsf-events-page .panel-text {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+/* Image Gallery */
+.nlmsf-events-page .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.nlmsf-events-page .gallery-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.nlmsf-events-page .gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nlmsf-events-page .gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.nlmsf-events-page .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Research Roundtable Styles */
+.nlmsf-events-page .roundtable-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.nlmsf-events-page .roundtable-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #ddd6fe;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nlmsf-events-page .roundtable-badge i {
+  color: #6366f1;
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.nlmsf-events-page .roundtable-badge span {
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nlmsf-events-page .roundtable-description {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.nlmsf-events-page .roundtable-gallery {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.nlmsf-events-page .gallery-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nlmsf-events-page .roundtable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.nlmsf-events-page .roundtable-item {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nlmsf-events-page .roundtable-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nlmsf-events-page .roundtable-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  background: #f8fafc;
+  transition: transform 0.3s ease;
+}
+
+.nlmsf-events-page .roundtable-item:hover img {
+  transform: scale(1.02);
+}
+
+.nlmsf-events-page .roundtable-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+}
+
+.nlmsf-events-page .year-badge {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.nlmsf-events-page .city-badge {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.nlmsf-events-page .inaugural-badge {
+  background: linear-gradient(135deg, #ec4899, #be185d);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-self: flex-end;
+}
+
+.nlmsf-events-page .event-link:hover {
+  color: #9333ea;
+}
+
+.nlmsf-events-page .event-link i {
+  margin-right: 0.5rem;
+}
+
+/* Recognition Section with Image */
+.nlmsf-events-page .recognition-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fde68a;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nlmsf-events-page .recognition-image {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.nlmsf-events-page .recognition-image img {
+  width: 100%;
+  height: auto;
+}
+
+.nlmsf-events-page .recognition-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d97706;
+  margin-bottom: 1rem;
+}
+
+.nlmsf-events-page .recognition-content p {
+  color: #374151;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.nlmsf-events-page .recognition-content a {
+  color: #d97706;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nlmsf-events-page .recognition-content a:hover {
+  text-decoration: underline;
+}
+
+/* Monthly Membership CTA */
+.nlmsf-events-page .membership-cta {
+  background: linear-gradient(to right, #f5f3ff, #ede9fe);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd6fe;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nlmsf-events-page .membership-cta h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #7e22ce;
+  margin-bottom: 1rem;
+}
+
+.nlmsf-events-page .membership-cta p {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.nlmsf-events-page .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nlmsf-events-page .btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #7e22ce;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nlmsf-events-page .btn-primary:hover {
+  background-color: #9333ea;
+  transform: translateY(-2px);
+}
+
+.nlmsf-events-page .btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: #7e22ce;
+  text-decoration: none;
+  border: 2px solid #7e22ce;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nlmsf-events-page .btn-secondary:hover {
+  background-color: #7e22ce;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nlmsf-events-page .membership-image {
+  position: relative;
+}
+
+.nlmsf-events-page .roundtable-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.nlmsf-events-page .roundtable-image img {
+  width: 100%;
+  height: auto;
+}
+
+.nlmsf-events-page .roundtable-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(124, 58, 237, 0.5) 0%, transparent 100%);
+}
+
+.nlmsf-events-page .image-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.nlmsf-events-page .floating-element {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.nlmsf-events-page .floating-element.top-right {
+  top: -16px;
+  right: -16px;
+  width: 96px;
+  height: 96px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nlmsf-events-page .floating-element.bottom-left {
+  bottom: -16px;
+  left: -16px;
+  width: 128px;
+  height: 128px;
+  background: rgba(196, 181, 253, 0.2);
+}
+
+/* Sidebar Component Styles */
+.nlmsf-events-page .sidebar-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: sticky;
+  top: 20px;
+}
+
+.nlmsf-events-page .sidebar-nav {
+  padding: 24px;
+}
+
+.nlmsf-events-page .sidebar-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #7c3aed 0%, #4338ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nlmsf-events-page .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nlmsf-events-page .nav-links li {
+  margin-bottom: 8px;
+}
+
+.nlmsf-events-page .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #6b7280;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nlmsf-events-page .nav-link i {
+  margin-right: 12px;
+  width: 16px;
+  text-align: center;
+}
+
+.nlmsf-events-page .nav-link:hover {
+  transform: translateX(4px);
+  background-color: #f3e8ff;
+  color: #7c3aed;
+}
+
+.nlmsf-events-page .sidebar-cta {
+  background: linear-gradient(135deg, #7c3aed 0%, #4338ca 100%);
+  padding: 24px;
+  text-align: center;
+  color: white;
+}
+
+.nlmsf-events-page .cta-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 20px;
+}
+
+.nlmsf-events-page .cta-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.nlmsf-events-page .cta-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #e0e7ff;
+}
+
+.nlmsf-events-page .cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: #7c3aed;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nlmsf-events-page .cta-button:hover {
+  background: #f3e8ff;
+  transform: translateY(-2px);
+}
+
+.nlmsf-events-page .action-button.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #4338ca;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nlmsf-events-page .action-button.secondary:hover {
+  border-color: #c7d2fe;
+  color: #312e81;
+  transform: translateY(-1px);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .nlmsf-events-page .hero-title {
+    font-size: 3rem;
+  }
+
+  .nlmsf-events-page .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nlmsf-events-page .events-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nlmsf-events-page .sidebar-container {
+    position: static;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nlmsf-events-page {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .nlmsf-events-page .recognition-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .nlmsf-events-page .cta-buttons {
+    flex-direction: column;
+  }
+}

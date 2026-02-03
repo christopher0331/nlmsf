@@ -1,0 +1,487 @@
+/* General Sarcoma / LMS Research Highlights — scoped under .general-sarcoma-page */
+
+.general-sarcoma-page {
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --purple-500: #a855f7;
+  --purple-600: #9333ea;
+  --purple-700: #7e22ce;
+  --pink-500: #ec4899;
+  --blue-50: #eff6ff;
+  --blue-200: #bfdbfe;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+/* Page layout: sidebar + content */
+.general-sarcoma-page .page-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.5rem;
+}
+
+.general-sarcoma-page .content-container {
+  flex: 2;
+  min-width: 0;
+}
+
+/* Hero */
+.general-sarcoma-page .wp-hero {
+  background: linear-gradient(90deg, var(--indigo-500) 0%, var(--purple-500) 50%, var(--pink-500) 100%);
+  color: #fff;
+  padding: 2.5rem 1rem;
+  border-radius: 14px;
+  margin: 0 auto 1.5rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
+}
+
+.general-sarcoma-page .wp-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.general-sarcoma-page .wp-hero-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 0.75rem;
+}
+
+.general-sarcoma-page .wp-hero-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.general-sarcoma-page .wp-hero-sub {
+  opacity: 0.95;
+  max-width: 760px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Sidebar */
+.general-sarcoma-page .wp-sidebar {
+  position: sticky;
+  top: 1.5rem;
+  flex: 1;
+  max-width: 280px;
+  height: fit-content;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.general-sarcoma-page .wp-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.general-sarcoma-page .wp-nav-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  color: var(--gray-700);
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: #fff;
+  font-size: 0.9375rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.general-sarcoma-page .wp-nav-link:hover,
+.general-sarcoma-page .wp-nav-link:focus {
+  background: #eef2ff;
+  color: var(--indigo-700);
+  border-color: #c7d2fe;
+}
+
+.general-sarcoma-page .wp-sidebar-cta {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--gray-200);
+}
+
+.general-sarcoma-page .wp-sidebar-cta h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--gray-800);
+}
+
+.general-sarcoma-page .wp-sidebar-cta p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.general-sarcoma-page .wp-cta-btn {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #c7d2fe;
+  color: var(--indigo-700);
+  background: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.general-sarcoma-page .wp-cta-btn:hover {
+  background: #eef2ff;
+  color: var(--indigo-700);
+  border-color: #a5b4fc;
+}
+
+/* Sections */
+.general-sarcoma-page .section {
+  margin: 1.5rem 0;
+}
+
+.general-sarcoma-page .section-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  position: relative;
+  display: inline-block;
+}
+
+.general-sarcoma-page .section-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 48px;
+  background: linear-gradient(90deg, var(--purple-700) 0%, var(--indigo-700) 100%);
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+.general-sarcoma-page .gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--indigo-500) 0%, var(--purple-500) 50%, var(--pink-500) 100%);
+}
+
+.general-sarcoma-page .lead {
+  color: var(--gray-700);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.general-sarcoma-page .muted {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Cards */
+.general-sarcoma-page .card {
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.25rem;
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.02);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.general-sarcoma-page .card:hover {
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+}
+
+.general-sarcoma-page .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--gray-900);
+}
+
+.general-sarcoma-page .card p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--gray-700);
+}
+
+/* Checklist */
+.general-sarcoma-page .checklist {
+  padding-left: 1.25rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.general-sarcoma-page .checklist li {
+  margin: 0.35rem 0;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+/* Update actions & pill links */
+.general-sarcoma-page .update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.general-sarcoma-page .pill-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background: #7a3db8;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, filter 0.2s ease;
+}
+
+.general-sarcoma-page .pill-link:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+  color: #fff;
+}
+
+.general-sarcoma-page .pill-link.secondary {
+  background: #efe7fb;
+  color: #5f2f94;
+}
+
+.general-sarcoma-page .pill-link.secondary:hover {
+  color: #5f2f94;
+}
+
+/* Updates list */
+.general-sarcoma-page .updates-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.general-sarcoma-page .update-item {
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  background: #fff;
+  padding: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.general-sarcoma-page .update-item:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.general-sarcoma-page .update-title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.general-sarcoma-page .update-title a {
+  color: var(--gray-900);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.general-sarcoma-page .update-title a:hover {
+  color: var(--indigo-600);
+}
+
+.general-sarcoma-page .more-link {
+  margin-top: 0.5rem;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+/* Resource list */
+.general-sarcoma-page .resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.general-sarcoma-page .resource-list > li {
+  margin: 0;
+}
+
+.general-sarcoma-page .resource-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #1d4ed8;
+  border: 1px solid var(--blue-200);
+  background: var(--blue-50);
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  line-height: 1.4;
+  font-size: 0.9375rem;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.general-sarcoma-page .resource-link:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1e40af;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.08);
+}
+
+.general-sarcoma-page .resource-list .muted {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.general-sarcoma-page .resource-link.featured {
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+  border-color: #a5b4fc;
+  color: var(--indigo-700);
+  font-weight: 600;
+}
+
+.general-sarcoma-page .featured-resource .muted {
+  margin-top: 0.35rem;
+}
+
+.general-sarcoma-page .resource-nested {
+  margin-top: 0.5rem;
+}
+
+.general-sarcoma-page .resource-sublist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.25rem 0 0;
+}
+
+.general-sarcoma-page .resource-sublist li {
+  margin: 0.25rem 0;
+}
+
+/* Year sections */
+.general-sarcoma-page .year-section {
+  margin: 1rem 0 0.75rem;
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  border-left: 4px solid var(--purple-700);
+  background: #fafafc;
+  border-radius: 10px;
+}
+
+.general-sarcoma-page .year-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--gray-900);
+}
+
+/* Raw archive (collapsible) */
+.general-sarcoma-page .raw-archive {
+  margin-top: 0.5rem;
+}
+
+.general-sarcoma-page .raw-archive > summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--indigo-700);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  background: #f8fafc;
+  list-style: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.general-sarcoma-page .raw-archive > summary::-webkit-details-marker {
+  display: none;
+}
+
+.general-sarcoma-page .raw-archive > summary::before {
+  content: "▶ ";
+  font-size: 0.75rem;
+  margin-right: 0.35rem;
+}
+
+.general-sarcoma-page .raw-archive[open] > summary::before {
+  content: "▼ ";
+}
+
+.general-sarcoma-page .raw-archive[open] > summary {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+.general-sarcoma-page .raw-archive-inner {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  background: #fff;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.general-sarcoma-page .raw-archive-inner .lead {
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .general-sarcoma-page .page-layout {
+    flex-direction: column;
+  }
+
+  .general-sarcoma-page .wp-sidebar {
+    position: static;
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .general-sarcoma-page .wp-hero {
+    padding: 1.75rem 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .general-sarcoma-page .content-container {
+    padding: 0 0.5rem;
+  }
+
+  .general-sarcoma-page .section-title {
+    font-size: 1.25rem;
+  }
+
+  .general-sarcoma-page .card {
+    padding: 1rem;
+  }
+}

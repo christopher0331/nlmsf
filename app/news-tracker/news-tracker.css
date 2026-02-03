@@ -1,0 +1,322 @@
+/* News Tracker Page - scoped under .news-tracker-page */
+
+.news-tracker-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+.news-tracker-page .elementor-section {
+  padding: 2rem 1rem 0;
+}
+
+.news-tracker-page .elementor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NLMSF News Tracker - Hero Section Styles */
+.news-tracker-page .news-hero {
+  width: 100%;
+  padding: 60px 20px 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.news-tracker-page .news-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(135deg, #7e22ce, #4338ca);
+}
+
+/* Badge styles */
+.news-tracker-page .badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f3e8ff;
+  color: #7e22ce;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.news-tracker-page .badge i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Hero title with gradient */
+.news-tracker-page .hero-title {
+  background: linear-gradient(135deg, #7e22ce, #4338ca);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.news-tracker-page .hero-description {
+  color: #4b5563;
+  font-size: 18px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Feature tags */
+.news-tracker-page .feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.news-tracker-page .feature-tag {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.news-tracker-page .feature-tag:hover {
+  background-color: #7e22ce;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.news-tracker-page .news-tracker-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.news-tracker-page .news-tracker-content {
+  min-width: 0;
+}
+
+.news-tracker-page .news-tracker-anchor {
+  scroll-margin-top: 120px;
+  height: 1px;
+}
+
+/* Sidebar for News Tracker Page */
+.news-tracker-page .sidebar {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.news-tracker-page .sidebar-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.news-tracker-page .sidebar-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem;
+}
+
+.news-tracker-page .sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.news-tracker-page .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.news-tracker-page .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.news-tracker-page .nav-link:hover {
+  background-color: #f3f4f6;
+  color: #7e22ce;
+}
+
+.news-tracker-page .nav-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.news-tracker-page .nav-icon.purple {
+  background-color: #7e22ce;
+}
+
+.news-tracker-page .nav-icon.blue {
+  background-color: #2563eb;
+}
+
+.news-tracker-page .nav-icon.teal {
+  background-color: #0d9488;
+}
+
+.news-tracker-page .nav-icon.green {
+  background-color: #10b981;
+}
+
+.news-tracker-page .nav-icon.orange {
+  background-color: #f59e0b;
+}
+
+.news-tracker-page .nav-icon.red {
+  background-color: #ef4444;
+}
+
+.news-tracker-page .year-nav {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.news-tracker-page .sidebar-subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.news-tracker-page .year-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.news-tracker-page .year-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  color: #4b5563;
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.news-tracker-page .year-link:hover,
+.news-tracker-page .year-link.active {
+  background-color: #ede9fe;
+  color: #6d28d9;
+  font-weight: 600;
+}
+
+.news-tracker-page .sidebar-action {
+  margin-top: 1.25rem;
+}
+
+.news-tracker-page .back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4338ca;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.news-tracker-page .back-button:hover {
+  color: #7e22ce;
+}
+
+.news-tracker-page .cta-section {
+  background-color: #f5f3ff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #ede9fe;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.news-tracker-page .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #7e22ce;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.news-tracker-page .cta-button:hover {
+  background-color: #6d28d9;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .news-tracker-page .news-tracker-layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .news-tracker-page .news-tracker-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .news-tracker-page .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-tracker-page .news-hero {
+    padding: 30px 15px;
+  }
+
+  .news-tracker-page .hero-title {
+    font-size: 32px;
+  }
+
+  .news-tracker-page .hero-description {
+    font-size: 16px;
+  }
+}

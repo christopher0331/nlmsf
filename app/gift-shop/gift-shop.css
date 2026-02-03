@@ -1,0 +1,779 @@
+/* NLMSF Gift Shop - scoped under .gift-shop-page */
+
+.gift-shop-page {
+  scroll-behavior: smooth;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.gift-shop-page h1,
+.gift-shop-page h2,
+.gift-shop-page h3,
+.gift-shop-page h4 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.gift-shop-page a {
+  text-decoration: none;
+  color: #7e22ce;
+  transition: color 0.3s ease;
+}
+
+.gift-shop-page a:hover {
+  color: #6b21a8;
+}
+
+.gift-shop-page img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Hero */
+.gift-shop-page .hero-section {
+  background: linear-gradient(to right, #f9fafb, #f3f4f6);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.gift-shop-page .hero-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.gift-shop-page .hero-image {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 220px;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-shop-page .hero-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 25px rgba(126, 34, 206, 0.15);
+}
+
+.gift-shop-page .hero-section h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #7e22ce, #4338ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gift-shop-page .hero-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.gift-shop-page .hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gift-shop-page .badge {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gift-shop-page .badge-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.gift-shop-page .badge-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.gift-shop-page .badge-icon.shop::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'/%3E%3C/svg%3E");
+  color: #7e22ce;
+}
+
+.gift-shop-page .badge-icon.research::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'/%3E%3C/svg%3E");
+  color: #0284c7;
+}
+
+.gift-shop-page .badge-icon.community::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z'/%3E%3C/svg%3E");
+  color: #0891b2;
+}
+
+.gift-shop-page .badge-text {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.gift-shop-page .hero-cta {
+  margin-top: 2rem;
+}
+
+.gift-shop-page .hero-cta p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.gift-shop-page .cta-button {
+  display: inline-block;
+  background: linear-gradient(to right, #7e22ce, #6b21a8);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(126, 34, 206, 0.25);
+}
+
+.gift-shop-page .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(126, 34, 206, 0.3);
+  color: white;
+}
+
+/* Layout: sidebar + content */
+.gift-shop-page .gift-shop-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.gift-shop-page .sidebar {
+  flex: 0 0 280px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  align-self: flex-start;
+  position: sticky;
+  top: 2rem;
+}
+
+.gift-shop-page .content-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.gift-shop-page .content-section {
+  margin-bottom: 4rem;
+}
+
+.gift-shop-page .section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gift-shop-page .section-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #7e22ce, #4338ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.gift-shop-page .section-header p {
+  color: #6b7280;
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gift-shop-page .content-panel {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+/* Intro */
+.gift-shop-page .intro-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.gift-shop-page .intro-logo {
+  flex: 0 0 300px;
+}
+
+.gift-shop-page .intro-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.gift-shop-page .highlight {
+  color: #15803d;
+  font-weight: 500;
+}
+
+.gift-shop-page .shop-info {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.gift-shop-page .shop-info p {
+  margin: 0.5rem 0;
+}
+
+/* Products */
+.gift-shop-page .product-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gift-shop-page .product-item {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-shop-page .product-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gift-shop-page .product-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.gift-shop-page .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gift-shop-page .product-item:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.gift-shop-page .product-info {
+  padding: 1.5rem;
+  background-color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gift-shop-page .product-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.gift-shop-page .product-description {
+  flex: 1;
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.gift-shop-page .product-description p {
+  margin: 0.25rem 0;
+}
+
+.gift-shop-page .product-price {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #7e22ce;
+}
+
+.gift-shop-page .shop-button {
+  display: inline-block;
+  background-color: #7e22ce;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.gift-shop-page .shop-button:hover {
+  background-color: #6b21a8;
+  color: white;
+}
+
+.gift-shop-page .shop-button.external-link {
+  background-color: #0891b2;
+}
+
+.gift-shop-page .shop-button.external-link:hover {
+  background-color: #0e7490;
+}
+
+.gift-shop-page .shop-button.coming-soon {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Special products */
+.gift-shop-page .special-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.gift-shop-page .special-product {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-shop-page .special-product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gift-shop-page .special-product-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.gift-shop-page .special-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gift-shop-page .special-product:hover .special-product-image img {
+  transform: scale(1.05);
+}
+
+.gift-shop-page .multi-image {
+  display: flex;
+  height: 100%;
+}
+
+.gift-shop-page .multi-image img {
+  flex: 1;
+  object-fit: cover;
+}
+
+.gift-shop-page .special-product-info {
+  padding: 1.5rem;
+  background-color: white;
+}
+
+.gift-shop-page .special-product-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.gift-shop-page .special-price {
+  font-weight: 700;
+  color: #7e22ce;
+  margin: 1rem 0;
+}
+
+/* Sidebar */
+.gift-shop-page .sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.gift-shop-page .sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1f2937;
+}
+
+.gift-shop-page .sidebar-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+}
+
+.gift-shop-page .sidebar-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7e22ce;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.gift-shop-page .sidebar-icon.shop::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-page .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gift-shop-page .nav-links li {
+  margin-bottom: 0.5rem;
+}
+
+.gift-shop-page .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: #4b5563;
+}
+
+.gift-shop-page .nav-link:hover {
+  background-color: #f3f4f6;
+  color: #7e22ce;
+}
+
+.gift-shop-page .nav-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: relative;
+}
+
+.gift-shop-page .nav-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.gift-shop-page .nav-icon.intro::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-page .nav-icon.products::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-page .nav-icon.featured::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'/%3E%3C/svg%3E");
+}
+
+.gift-shop-page .sidebar-cta {
+  background: linear-gradient(135deg, #7e22ce10, #4338ca10);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #7e22ce;
+}
+
+.gift-shop-page .sidebar-cta h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.gift-shop-page .sidebar-cta p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.gift-shop-page .sidebar-cta .cta-button {
+  display: inline-block;
+  background: linear-gradient(to right, #7e22ce, #6b21a8);
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.gift-shop-page .sidebar-cta .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(126, 34, 206, 0.2);
+  color: white;
+}
+
+/* Featured Book */
+.gift-shop-page .featured-book-section {
+  margin-bottom: 4rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gift-shop-page .featured-book-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 100%;
+}
+
+.gift-shop-page .featured-book-image {
+  text-align: center;
+}
+
+.gift-shop-page .featured-book-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.gift-shop-page .featured-book-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gift-shop-page .featured-book-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #6a3ea1;
+  line-height: 1.2;
+}
+
+.gift-shop-page .featured-book-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.gift-shop-page .featured-book-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gift-shop-page .book-btn {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.gift-shop-page .book-btn-hardcover {
+  background-color: #6a3ea1;
+  color: #ffffff;
+  border: 2px solid #6a3ea1;
+}
+
+.gift-shop-page .book-btn-hardcover:hover {
+  background-color: #5a2e91;
+  border-color: #5a2e91;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 62, 161, 0.3);
+  color: #ffffff;
+}
+
+.gift-shop-page .book-btn-paperback {
+  background-color: #ffffff;
+  color: #6a3ea1;
+  border: 2px solid #6a3ea1;
+}
+
+.gift-shop-page .book-btn-paperback:hover {
+  background-color: #f9fafb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 62, 161, 0.2);
+  color: #6a3ea1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gift-shop-page .featured-book-section {
+    padding: 2rem;
+  }
+
+  .gift-shop-page .featured-book-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gift-shop-page .featured-book-image {
+    order: -1;
+  }
+
+  .gift-shop-page .featured-book-title {
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .gift-shop-page .featured-book-description {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .gift-shop-page .featured-book-image img {
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gift-shop-page .hero-section {
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gift-shop-page .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .gift-shop-page .hero-image {
+    margin-left: 0;
+  }
+
+  .gift-shop-page .hero-badges {
+    justify-content: center;
+  }
+
+  .gift-shop-page .gift-shop-layout {
+    flex-direction: column;
+  }
+
+  .gift-shop-page .sidebar {
+    position: static;
+    flex: 0 0 auto;
+  }
+
+  .gift-shop-page .intro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gift-shop-page .intro-logo {
+    margin: 0 auto;
+  }
+
+  .gift-shop-page .product-row {
+    flex-direction: column;
+  }
+
+  .gift-shop-page .special-products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .gift-shop-page .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .gift-shop-page .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .gift-shop-page .content-panel {
+    padding: 1.5rem;
+  }
+
+  .gift-shop-page .product-item {
+    min-width: 100%;
+  }
+
+  .gift-shop-page .featured-book-section {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .gift-shop-page .featured-book-title {
+    font-size: 1.8rem;
+  }
+
+  .gift-shop-page .featured-book-description {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .gift-shop-page .featured-book-buttons {
+    gap: 0.75rem;
+  }
+
+  .gift-shop-page .book-btn {
+    width: 100%;
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  .gift-shop-page .featured-book-image img {
+    max-height: 360px;
+  }
+}

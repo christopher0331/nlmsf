@@ -1,0 +1,197 @@
+/* In Memoriam page - scoped under .in-memoriam-page */
+
+.in-memoriam-page {
+  --im-max: 900px;
+}
+
+.in-memoriam-page .im-hero {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  color: #fff;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.in-memoriam-page .im-hero-inner {
+  max-width: var(--im-max);
+  margin: 0 auto;
+}
+
+.in-memoriam-page .im-hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.in-memoriam-page .im-intro {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  margin: 0;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.in-memoriam-page .im-content {
+  max-width: var(--im-max);
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.in-memoriam-page .im-section {
+  margin-bottom: 2rem;
+}
+
+.in-memoriam-page .im-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2c5282;
+}
+
+.in-memoriam-page .im-bullet-list {
+  padding-left: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.in-memoriam-page .im-bullet-list li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.in-memoriam-page .im-text {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.in-memoriam-page .im-address {
+  font-style: normal;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.in-memoriam-page .im-ongoing-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.02em;
+  margin: 1.5rem 0 1rem;
+}
+
+.in-memoriam-page .im-tribute-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.in-memoriam-page .im-tribute-links li {
+  margin-bottom: 0.35rem;
+}
+
+.in-memoriam-page .im-tribute-links a {
+  color: #2c5282;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.in-memoriam-page .im-tribute-links a:hover {
+  text-decoration: underline;
+}
+
+.in-memoriam-page .im-archived-link {
+  color: #2c5282;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.in-memoriam-page .im-archived-link:hover {
+  text-decoration: underline;
+}
+
+.in-memoriam-page .im-candle-section {
+  text-align: center;
+  margin: 2.5rem 0;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.in-memoriam-page .im-candle-img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.in-memoriam-page .im-candle-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.in-memoriam-page .im-candle-text {
+  color: #475569;
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+
+.in-memoriam-page .im-candle-name {
+  margin: 1rem 0 0;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.in-memoriam-page .im-archived-list {
+  padding-left: 1.5rem;
+  margin: 1rem 0 0;
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+@media (max-width: 640px) {
+  .in-memoriam-page .im-archived-list {
+    column-count: 1;
+  }
+}
+
+.in-memoriam-page .im-archived-list li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+  break-inside: avoid;
+  color: #374151;
+}
+
+.in-memoriam-page .im-archived-list li strong {
+  color: #1e293b;
+}
+
+.in-memoriam-page .im-archived-list li em {
+  color: #4b5563;
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .in-memoriam-page .im-hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .in-memoriam-page .im-content {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .in-memoriam-page .im-ongoing-title {
+    font-size: 1.75rem;
+  }
+}

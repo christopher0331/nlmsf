@@ -1,0 +1,30 @@
+---
+description: HTML/CSS/JS → React/Next.js/Tailwind conversion process and constraints
+alwaysApply: true
+---
+
+# HTML → React/Next.js Conversion
+
+## What We're Doing
+
+- **Input**: Pasted HTML, CSS, and some JS from an existing site.
+- **Output**: Same site in React/Next.js with Tailwind CSS.
+- **Constraints**: Perfect **URL parity** and **content parity** — same URLs, same visible content and behavior, no feature creep.
+
+## Rules
+
+1. **URL parity**: Preserve exact URL structure. Use Next.js App Router file-based routing so paths match (e.g. `/about` → `app/about/page.tsx`, `/blog/post-1` → `app/blog/post-1/page.tsx`).
+2. **Content parity**: Keep all copy, headings, links, images, and structure. Don’t add or remove content unless fixing obvious typos or broken markup.
+3. **No scope creep**: Don’t add new features, redesign, or “improve” beyond the conversion. Convert only.
+4. **Tailwind over custom CSS**: Translate styles to Tailwind. Use `className` and Tailwind utilities; add a small amount of custom CSS only when Tailwind can’t do it (e.g. complex animations, third-party overrides).
+5. **JS behavior**: Reimplement inline/script behavior with React (state, effects, event handlers). Prefer client components only where interactivity is needed; keep the rest server components.
+6. **Semantic HTML**: Preserve semantics (headings, nav, main, footer, lists, etc.) and accessibility (labels, alt text, focus) from the original.
+
+## Conversion Checklist (when pasting new HTML)
+
+- [ ] Map each URL to an App Router route (`app/.../page.tsx`).
+- [ ] Extract shared layout (header, footer, nav) into `app/layout.tsx` or nested layouts.
+- [ ] Convert HTML to JSX (fix `class`→`className`, `for`→`htmlFor`, self-closing tags).
+- [ ] Replace CSS with Tailwind classes (or minimal global/component CSS).
+- [ ] Port any JS to React (useState, useEffect, handlers).
+- [ ] Verify URLs and visible content match the original.
