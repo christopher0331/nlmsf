@@ -22,7 +22,7 @@ export default function QuestionsToAskPage() {
       <section className="questions-section">
         <figure className="questions-image">
           <Image
-            src="https://nlsmf.org/wp-content/uploads/2019/06/6b9eb851064817fc6670dbb6b548dc77-2.jpg"
+            src="https://media.nlmsf.org/wp-content/uploads/2019/06/6b9eb851064817fc6670dbb6b548dc77-2.jpg"
             alt=""
             width={1200}
             height={800}
@@ -35,7 +35,7 @@ export default function QuestionsToAskPage() {
         <h2>Questions To Ask During Appointments</h2>
         <figure className="questions-image">
           <Image
-            src="https://nlsmf.org/wp-content/uploads/2016/05/medical-1006787_960_720-300x200.jpg"
+            src="https://media.nlmsf.org/wp-content/uploads/2016/05/medical-1006787_960_720-300x200.jpg"
             alt="medical-1006787_960_720"
             width={960}
             height={720}
@@ -207,7 +207,7 @@ export default function QuestionsToAskPage() {
       <section className="questions-section">
         <figure className="questions-image">
           <Image
-            src="https://nlsmf.org/wp-content/uploads/2016/05/Genome-en.svg_-300x129.png"
+            src="https://media.nlmsf.org/wp-content/uploads/2016/05/Genome-en.svg_-300x129.png"
             alt="genome-en-svg"
             width={600}
             height={258}

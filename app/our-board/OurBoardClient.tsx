@@ -20,7 +20,7 @@ export default function OurBoardClient() {
         name: "Winan van Houdt, M.D.",
         role:
           "Surgical Oncologist\nNetherlands Cancer Institute / Antoni van Leeuwenhoek Hospital\nAmsterdam, Netherlands",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2025/12/Winan-van-Houdt.png",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/12/Winan-van-Houdt.png",
         bio: [
           "Dr. van Houdt specializes in surgery for limb, trunk, retroperitoneal, and intra-abdominal sarcomas. He leads multiple international research projects dedicated to advancing sarcoma care and improving patient outcomes worldwide.",
         ],
@@ -30,7 +30,7 @@ export default function OurBoardClient() {
         name: "Arun Singh, M.D.",
         role:
           "Sarcoma Medical Oncologist\nUCLA Jonsson Comprehensive Cancer Center\nLos Angeles, CA",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2025/12/Arun-Singh.png",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/12/Arun-Singh.png",
         bio: [
           "Dr. Singh treats patients with bone and soft tissue sarcomas and conducts clinical trials on novel therapies and mechanisms of disease at one of the leading sarcoma programs in the United States.",
         ],
@@ -40,7 +40,7 @@ export default function OurBoardClient() {
         name: "Matthew Ingham, M.D.",
         role:
           "Sarcoma Medical Oncologist\nNYU Perlmutter Cancer Center\nNew York, NY",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2025/12/Matt-Ingham.png",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/12/Matt-Ingham.png",
         bio: [
           "Dr. Ingham specializes in the clinical care and translational research of sarcomas and connective tissue malignancies, bridging cutting-edge science with direct patient care.",
         ],
@@ -55,7 +55,7 @@ export default function OurBoardClient() {
         id: "annie-achee",
         name: "Annie Achee",
         role: "President and Research Liaison",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2021/01/AnnieAchee.jpg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/01/AnnieAchee.jpg",
         bio: [
           "I am devoted to the mission and goals of the Foundation, since its inception in 1999 through the vision of Mr. Edmund Hoag.",
           "My aim is to preserve his legacy by continuing the focus he had from the beginning: patient-centric programs and initiatives to promote support and advocacy within the LMS Community.",
@@ -67,7 +67,7 @@ export default function OurBoardClient() {
         id: "lynne-greco-forges",
         name: "Lynne Greco Forges",
         role: "NLMSF Treasurer",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2021/01/LynneGreco.jpg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/01/LynneGreco.jpg",
         bio: [
           "I was diagnosed with uterine leiomyosarcoma in 2015. I have undergone numerous surgeries and chemotherapies. Throughout this time, I have done all I can to maintain a positive attitude. This, along with my strong faith and an excellent team of doctors, has carried me through.",
           "I enjoyed a 32-year career in Purchasing for various steel companies in Pittsburgh, PA. I love spending time with family and friends, cooking, reading, working on my house, spending time outdoors, yoga, walking and biking. I do a lot of volunteer work and do as much as possible to help others.",
@@ -84,7 +84,7 @@ export default function OurBoardClient() {
         id: "mitchell-achee",
         name: "Mitchell D. Achee, M.D.",
         role: "Medical Director",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2024/09/Mitch-Achees-Photo-.jpg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2024/09/Mitch-Achees-Photo-.jpg",
         bio: [
           "An LMS survivor, diagnosed in 2011. A retired Board Certified Diagnostic Radiologist in practice for 40 years.",
           'I wish to "pay it forward" to the LMS Community through assisting in answering general questions about the disease and explaining the results of a patient\'s imaging studies to help the patient and their family have a better understanding of their disease, and thereby be able to ask the right questions of their sarcoma care team.',
@@ -101,7 +101,7 @@ export default function OurBoardClient() {
         id: "alex-aguilera",
         name: "Alex Aguilera",
         role: "Community Outreach",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2025/06/Alex-Aguilera.jpeg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/06/Alex-Aguilera.jpeg",
         bio: [
           "I am a dedicated professional with a diverse background in technology and community engagement, currently contributing to innovative projects at Deloitte. With a passion for leveraging technology for positive impact, I am honored to serve as a Board Member of the NLMSF, where I support the sarcoma community through advocacy, education, and research initiatives.",
           "I am actively engaged in thought leadership, having discussed advancements in agriculture autonomy on The Road to Autonomy® podcast and contributed to impactful initiatives like Yes San Francisco in collaboration with the World Economic Forum, Deloitte, Salesforce, and The San Francisco Chamber of Commerce.",
@@ -112,7 +112,7 @@ export default function OurBoardClient() {
         id: "dale-ayscue",
         name: "Dale Ayscue",
         role: "Community Outreach",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2022/07/asy-284x300.jpg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2022/07/asy-284x300.jpg",
         bio: [
           "I am a survivor of sarcoma for the past 13 years. I also have a FB group - Sarcoma (Cancer) Awareness to help others and pay it forward, and now as a Board Member of the NLMSF, I feel even more empowered to support patients and their families.",
           "I have appreciated the NLMSF's approach and professional integrity in the work being done for support, education, and research on behalf of the sarcoma community and I am happy to be a part.",
@@ -124,7 +124,7 @@ export default function OurBoardClient() {
         id: "david-boles",
         name: "David Boles",
         role: "Community Outreach",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2022/02/Selfie-300x233.jpg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2022/02/Selfie-300x233.jpg",
         bio: [
           "As the husband of a recently deceased ULMS patient, I can think of no better way to honor my wife than to support the work of NLMSF. After receiving a diagnosis with LMS, you are literally in for the fight of your life.",
           "Most of us do not have a medical background, but need to get up-to-speed quickly to make good choices for treatments that will increase chances for survival. That is where this group can help.",
@@ -136,7 +136,7 @@ export default function OurBoardClient() {
         id: "greg-lee",
         name: "Greg Lee",
         role: "Community Outreach",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2021/08/image-219x300.png",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/08/image-219x300.png",
         bio: [
           "I was diagnosed with LMS in 2020 and with metastatic LMS in 2021. I have an assistant professor of Computer Science in the Jodrey School of Computer Science at Acadia University in Nova Scotia, Canada.",
           "I am now applying machine learning techniques to search for patient features (e.g., biomarkers) that help predict which treatments are best, to be applied on an individual level. My past research involved predicting who was most likely to give a charitable gift to a given organization. I worked with smaller data sets (which we often run into with LMS) but still produced accurate models. I'm hoping to produce similar LMS prediction models.",
@@ -149,7 +149,7 @@ export default function OurBoardClient() {
         id: "jim-matthews",
         name: "Jim Matthews",
         role: "Community Awareness Coordinator",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2021/01/JimMatthews-300x300.jpg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/01/JimMatthews-300x300.jpg",
         bio: [
           "I hail from New Jersey, and am a graduate in Economics from Seton Hall University. I am long time survivor, having been diagnosed in 1996 and treated at Memorial Sloan Kettering in NY. I was one of the original members of the National Leiomyosarcoma Foundation, having attend their first HugFest in Lancaster, PA.",
           "I am blessed with a loving family and blessed to be affiliated with the NLMSF.",
@@ -160,7 +160,7 @@ export default function OurBoardClient() {
         id: "chandalyn-williams",
         name: "Chandalyn Williams",
         role: "Community Outreach",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2021/02/BM-300x300.jpg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/02/BM-300x300.jpg",
         bio: [
           "Chandalyn Williams is a highly motivated and experienced executive professional, regarded for her ability to deliver outstanding results with the highest degree of expertise and professionalism.",
           "She holds a Bachelor of Arts degree in Business Administration and Communication Management from Jones International University, graduating Cum Laude; a Master of Business Administration from Texas Woman's University and; is currently within one year of completing her Doctorate of Business Administration at Trident International University.",
@@ -178,7 +178,7 @@ export default function OurBoardClient() {
         id: "christopher-hancock",
         name: "Christopher Hancock",
         role: "Technology Coordinator",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2021/01/chrisHeadshot-300x300.png",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/01/chrisHeadshot-300x300.png",
         bio: [
           "Owner of Reactiv Labs.",
           "My early days as a Marine Corps machine gunner instilled resilience, precision, and a collaborative mindset that inform my work today.",
@@ -190,7 +190,7 @@ export default function OurBoardClient() {
         id: "kelly-murphy",
         name: "Kelly Murphy",
         role: "Technical Advisor",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2025/08/kelly_murphy-1-scaled.jpeg",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/08/kelly_murphy-1-scaled.jpeg",
         bio: [
           "At 34, while building a career as a data scientist with a passion for discovery, I was diagnosed with retroperitoneal leiomyosarcoma. Since then, I have endured surgery, radiation, chemotherapy, and the loss of my ability to have children, but I refuse to let this disease take my purpose.",
           "Together with my partner, I founded Light in the Dark, an AI-driven effort to uncover new treatments and bring hope to others facing LMS. Partnering with NLMSF is the first step in turning this vision into reality.",
@@ -201,7 +201,7 @@ export default function OurBoardClient() {
         id: "jacqueline-sebany",
         name: "Jacqueline (Jacque) Sebany",
         role: "Brand Strategy Coordinator",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2022/01/Jacque-Sebany.png",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2022/01/Jacque-Sebany.png",
         bio: [
           "Jacqueline (Jacque) Sebany is the Chief Experience Officer for Shift'd - a marketing and payments consulting brand.",
           "Prior to becoming a marketing consultant, she was the Chief Marketing & Digital Officer at the American Diabetes Association (ADA). She was responsible for optimizing the marketing infrastructure to create efficient and effective campaigns, elevate the brand presence and bring fresh innovative ways to grow revenue and emotional connections between the ADA brand and the diabetes community.",
@@ -215,7 +215,7 @@ export default function OurBoardClient() {
         id: "taylor-tomlinson",
         name: "Taylor Tomlinson",
         role: "Technical Advisor",
-        imageUrl: "https://nlsmf.org/wp-content/uploads/2025/09/taylor-tomlinson.webp",
+        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/09/taylor-tomlinson.webp",
         bio: [
           "Taylor brings more than a decade of digital marketing leadership at top global commercial real estate and investment management firms, where she has shaped strategic, data-driven campaigns from concept through execution.",
           "As a digital marketing operations leader, she blends advanced analytics, agile methodologies, and seamless technology integration to drive measurable gains in lead generation, asset visibility, and investor engagement.",

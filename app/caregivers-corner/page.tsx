@@ -164,7 +164,7 @@ export default function CaregiversCornerPage() {
             <div className="donate-cta">
               <a href="https://nlmsf.org/donate/" className="donate-link" {...externalLinkProps}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
                   alt="Donate to NLMSF"
                   className="donate-image"
                   width={120}
@@ -189,7 +189,7 @@ export default function CaregiversCornerPage() {
                   <figure className="resource-image">
                     <Link href="/caregiver-traits">
                       <Image
-                        src="https://nlsmf.org/wp-content/uploads/2020/06/unnamed-55.jpg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-55.jpg"
                         alt="Special Traits of Caregivers"
                         width={640}
                         height={360}
@@ -208,7 +208,7 @@ export default function CaregiversCornerPage() {
                   <figure className="resource-image">
                     <a href="https://nlmsf.org/resource-support/" {...externalLinkProps}>
                       <Image
-                        src="https://nlsmf.org/wp-content/uploads/2020/06/unnamed-56.jpg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-56.jpg"
                         alt="Resource Support"
                         width={640}
                         height={360}
@@ -227,7 +227,7 @@ export default function CaregiversCornerPage() {
                   <figure className="resource-image">
                     <a href="https://nlmsf.org/co-survivors-tips/" {...externalLinkProps}>
                       <Image
-                        src="https://nlsmf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
+                        src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-58.jpg"
                         alt="Co-Survivor Tips"
                         width={640}
                         height={360}
@@ -254,7 +254,7 @@ export default function CaregiversCornerPage() {
               <div className="universal-caregiving">
                 <div className="image-container">
                   <Image
-                    src="https://nlsmf.org/wp-content/uploads/2021/01/CargivingisUniversal.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/01/CargivingisUniversal.jpg"
                     alt="Caregiving is Universal"
                     width={640}
                     height={360}
@@ -409,7 +409,7 @@ export default function CaregiversCornerPage() {
               <div className="resource-highlight">
                 <div className="highlight-image">
                   <Image
-                    src="https://nlsmf.org/wp-content/uploads/2020/10/books-300x200.png"
+                    src="https://media.nlmsf.org/wp-content/uploads/2020/10/books-300x200.png"
                     alt="Caregiver Books"
                     width={640}
                     height={360}
@@ -436,7 +436,7 @@ export default function CaregiversCornerPage() {
               <div className="caregiver-care">
                 <div className="image-container">
                   <Image
-                    src="https://nlsmf.org/wp-content/uploads/2021/01/carinfgFortheCaregiver.jpg"
+                    src="https://media.nlmsf.org/wp-content/uploads/2021/01/carinfgFortheCaregiver.jpg"
                     alt="Caring For The Caregiver"
                     width={640}
                     height={360}

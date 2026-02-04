@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Providing education, advocacy, support, and research funding for the global LMS community.",
     images: [
       {
-        url: "https://nlsmf.org/wp-content/uploads/2025/06/hero-section-1.png",
+        url: "https://media.nlmsf.org/wp-content/uploads/2025/06/hero-section-1.png",
       },
     ],
     url: "https://nlmsf.org",

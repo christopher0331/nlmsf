@@ -14,7 +14,7 @@ export default function WhatIsBestForLmsPage() {
       <section className="best-lms-hero">
         <div className="best-lms-hero-media" aria-hidden="true">
           <Image
-            src="https://nlsmf.org/wp-content/uploads/2020/06/cropped-unnamed-52.jpg"
+            src="https://media.nlmsf.org/wp-content/uploads/2020/06/cropped-unnamed-52.jpg"
             alt=""
             fill
             sizes="100vw"

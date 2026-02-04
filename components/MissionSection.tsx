@@ -42,7 +42,7 @@ export default function MissionSection() {
           </div>
           <div className="relative order-1 md:order-2">
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2025/04/Untitled-design-2.png"
+              src="https://media.nlmsf.org/wp-content/uploads/2025/04/Untitled-design-2.png"
               alt="NLMSF Team and Volunteers"
               width={1200}
               height={800}
@@ -61,7 +61,7 @@ export default function MissionSection() {
             aria-label="GuideStar"
           >
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
               alt="GuideStar Seal"
               width={240}
               height={240}
@@ -77,7 +77,7 @@ export default function MissionSection() {
             aria-label="Charity Navigator"
           >
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2025/07/charity-nav-scaled.png"
+              src="https://media.nlmsf.org/wp-content/uploads/2025/07/charity-nav-scaled.png"
               alt="Charity Navigator"
               width={800}
               height={400}
@@ -93,7 +93,7 @@ export default function MissionSection() {
             aria-label="Top Rated"
           >
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2021/03/Top-rated-Seal.jpg"
               alt="Top Rated Seal"
               width={240}
               height={240}

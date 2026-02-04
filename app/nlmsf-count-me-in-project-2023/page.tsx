@@ -13,7 +13,7 @@ export default function NlmsfCountMeInProject2023Page() {
     <div className="count-me-in-page">
       <div className="count-me-in-container">
         <Image
-          src="https://nlsmf.org/wp-content/uploads/2021/11/CountmeIn.jpg"
+          src="https://media.nlmsf.org/wp-content/uploads/2021/11/CountmeIn.jpg"
           alt="Count Me In Project"
           className="count-me-in-hero-image"
           width={1200}
@@ -90,7 +90,7 @@ export default function NlmsfCountMeInProject2023Page() {
         <ul>
           <li>
             <a
-              href="https://nlsmf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf"
+              href="https://media.nlmsf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,7 +99,7 @@ export default function NlmsfCountMeInProject2023Page() {
           </li>
           <li>
             <a
-              href="https://nlsmf.org/wp-content/uploads/2023/01/48.-ForYourPhysician_LMS_PE-CGS-updated-June-22.pdf"
+              href="https://media.nlmsf.org/wp-content/uploads/2023/01/48.-ForYourPhysician_LMS_PE-CGS-updated-June-22.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -119,7 +119,7 @@ export default function NlmsfCountMeInProject2023Page() {
         <ul>
           <li>
             <a
-              href="https://nlsmf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf"
+              href="https://media.nlmsf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -128,7 +128,7 @@ export default function NlmsfCountMeInProject2023Page() {
           </li>
           <li>
             <a
-              href="https://nlsmf.org/wp-content/uploads/2023/01/48.-ForYourPhysician_LMS_PE-CGS-updated-June-22.pdf"
+              href="https://media.nlmsf.org/wp-content/uploads/2023/01/48.-ForYourPhysician_LMS_PE-CGS-updated-June-22.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

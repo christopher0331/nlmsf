@@ -53,7 +53,7 @@ export default function UterineLmsInformationPage() {
           </p>
           <div className="uli-cover">
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2023/09/1-s2.0-S2211568419X00091-cov200h.gif"
+              src="https://media.nlmsf.org/wp-content/uploads/2023/09/1-s2.0-S2211568419X00091-cov200h.gif"
               alt="Diagnostic and Interventional Imaging cover"
               width={151}
               height={200}
