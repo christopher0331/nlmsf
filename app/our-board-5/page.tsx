@@ -8,34 +8,34 @@ export const metadata: Metadata = {
 };
 
 const MEDICAL_PANEL = [
-  { name: "Janai Carr-Ascher, MD", title: "Pathologist", sub: "Molecular Biology Medicine · UC Davis · Sacramento, CA", img: "https://nlsmf.org/wp-content/uploads/2021/05/Janai-Carr-Ascher-MD.jpg" },
-  { name: "Nam Quoc Bui, MD", title: "Sarcoma Medical Oncologist", sub: "Stanford Cancer Institute · Stanford University · Stanford, CA", img: "https://nlsmf.org/wp-content/uploads/2022/05/Bigger-Dr-Bui.jpg" },
-  { name: "Elizabeth Davis, MD", title: "Sarcoma Medical Oncologist", sub: "Vanderbilt-Ingram Cancer Center, Nashville, TN", img: "https://nlsmf.org/wp-content/uploads/2021/05/Elizabeth-Davis.jpg" },
-  { name: "Mihaela Druta, MD", title: "Sarcoma Medical Oncologist", sub: "Moffitt Cancer Center and Research Institute · Tampa, FL", img: "https://nlsmf.org/wp-content/uploads/2021/02/DR-Durta.jpg" },
-  { name: "Kenneth Cardona, MD FACS", title: "Sarcoma Surgical Oncologist", sub: "Emory Winship Cancer Institute · Atlanta, GA", img: "https://nlsmf.org/wp-content/uploads/2022/01/Kenneth-Cardova.jpg" },
-  { name: "Kristen N. Ganjoo, MD", title: "Sarcoma Medical Oncologist", sub: "Stanford Cancer Institute · Stanford University · Stanford, CA", img: "https://nlsmf.org/wp-content/uploads/2022/01/ganjoo-kristen.jpg" },
-  { name: "Suzanne George, MD", title: "Sarcoma Medical Oncologist", sub: "Dana-Farber Cancer Institute · Boston, MA", img: "https://nlsmf.org/wp-content/uploads/2021/10/Susan-George-MD.jpg" },
-  { name: "Rebecca Gladdy, MD, PhD", title: "Sarcoma Surgical Oncologist", sub: "Princess Margaret Cancer Center · Toronto, Canada", img: "https://nlsmf.org/wp-content/uploads/2022/06/Dr.-Rebecca-Gladdy-280x300.jpg" },
-  { name: "Matthew Hemming, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "UMass Memorial Health · Worcester, MA", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-Matthew-Hemming.jpg" },
-  { name: "Evita Henderson-Jackson, MD", title: "Pathologist", sub: "Moffitt Cancer Center and Research Institute · Tampa, FL", img: "https://nlsmf.org/wp-content/uploads/2021/05/Evita-Henderson-Jackson-MD.jpg" },
-  { name: "Matthew Ingham, MD, PhD", title: "Sarcoma Medical Oncologist", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-Matthew-Ingham-300x245.jpg" },
-  { name: "Brian Kadera, MD", title: "Surgical Oncologist", sub: "Ronald Reagan Med. Center · UCLA · Los Angeles, CA", img: "https://nlsmf.org/wp-content/uploads/2022/03/Brian-Kadrea.jpg" },
-  { name: "Anush Kalbasi, MD", title: "Radiation Oncologist", sub: "Stanford Cancer Institute · Stanford University · Stanford, CA", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-Anusha-Kalbasi-300x300.jpg" },
-  { name: "Aparna Kamat, MD", title: "Gynecologic Surgical Oncologist", sub: "Houston Methodist Hospital · Houston, TX", img: "https://nlsmf.org/wp-content/uploads/2021/10/Aparna-Kamat-MD.jpg" },
-  { name: "Alexander J. Lazar, MD, PhD", title: "Sarcoma Pathologist", sub: "The University of Texas MD Anderson Cancer Center · Houston, TX", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-Alexander-Lazar.jpeg" },
-  { name: "Sujana Movva, MD", title: "Sarcoma Medical Oncologist", sub: "Memorial Sloan Kettering Cancer Center · New York, NY", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-Sujana-Mowa.jpg" },
-  { name: "Arash Naghavi, MD", title: "Radiation Oncologist", sub: "Moffitt Cancer Center · Tampa, FL", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-Arash-Naghavi.jpg" },
-  { name: "Corrie Painter, PhD", title: "Associate Director of Operations and Scientific Outreach", sub: "Broad Institute. COUNT ME IN PROJECT – Leiomyosarcoma Project.", img: "https://nlsmf.org/wp-content/uploads/2021/11/CorriePainter-300x229.png" },
-  { name: "Seth Pollack, MD", title: "Sarcoma Medical Oncologist", sub: "Lurie Cancer Center · Northwestern University · Chicago, IL", img: "https://nlsmf.org/wp-content/uploads/2020/06/seth-pollack-199x300.jpg" },
-  { name: "Dale Shepard, MD", title: "Sarcoma Medical Oncologist", sub: "Taussig Oncology · Cleveland Clinic · Cleveland, OH", img: "https://nlsmf.org/wp-content/uploads/2022/02/Dr-dale-shepard.jpg" },
-  { name: "Neeta Somaiah, MD", title: "Sarcoma Medical Oncologist", sub: "MD Anderson Cancer Center · Houston, TX", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-Neeta-Somaiah.jpg" },
-  { name: "Jonathan Trent, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "Sylvester Cancer Center · Miami, FL", img: "https://nlsmf.org/wp-content/uploads/2021/10/Dr-trent-jonathan.jpg" },
-  { name: "Brian A. Van Tine, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "Siteman Cancer Center · Washington University · St. Louis, MO", img: "https://nlsmf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg" },
-  { name: "William Tseng, MD", title: "Sarcoma Surgical Oncologist", sub: "Keck Medicine of USC · Los Angeles, CA", img: "https://nlsmf.org/wp-content/uploads/2022/01/Dr.-William-Tseng-240x300.jpg" },
-  { name: "Scott Okuno, MD", title: "Sarcoma Medical Oncologist", sub: "Mayo Clinic · Rochester, MN", img: "https://nlsmf.org/wp-content/uploads/2024/09/Okuno-Photo-4.jpg" },
-  { name: "Brittany Sciontis, MD", title: "Sarcoma Medical Oncologist", sub: "Mayo Clinic · Rochester, MN", img: "https://nlsmf.org/wp-content/uploads/elementor/thumbs/Sciontis-qutwgtv202sno67ik1a68nvqldn0f0fjhtpwirgthg.webp" },
-  { name: "Elise Nassif-Haddad, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "MD Anderson Cancer Center · Houston, TX", img: "https://nlsmf.org/wp-content/uploads/2024/09/Dr.-Nassifs-Photo.jpg" },
-  { name: "Alessandra Maleddu, MD", title: "Sarcoma Medical Oncologist", sub: "University of Colorado Cancer Center · Aurora, CO", img: "https://nlsmf.org/wp-content/uploads/elementor/thumbs/Maleddu-Photo-qutxnjn0a2kndq4dirs10v496f1ljw7h8auz43ifpm.jpg" },
+  { name: "Janai Carr-Ascher, MD", title: "Pathologist", sub: "Molecular Biology Medicine · UC Davis · Sacramento, CA", img: "https://media.nlmsf.org/wp-content/uploads/2021/05/Janai-Carr-Ascher-MD.jpg" },
+  { name: "Nam Quoc Bui, MD", title: "Sarcoma Medical Oncologist", sub: "Stanford Cancer Institute · Stanford University · Stanford, CA", img: "https://media.nlmsf.org/wp-content/uploads/2022/05/Bigger-Dr-Bui.jpg" },
+  { name: "Elizabeth Davis, MD", title: "Sarcoma Medical Oncologist", sub: "Vanderbilt-Ingram Cancer Center, Nashville, TN", img: "https://media.nlmsf.org/wp-content/uploads/2021/05/Elizabeth-Davis.jpg" },
+  { name: "Mihaela Druta, MD", title: "Sarcoma Medical Oncologist", sub: "Moffitt Cancer Center and Research Institute · Tampa, FL", img: "https://media.nlmsf.org/wp-content/uploads/2021/02/DR-Durta.jpg" },
+  { name: "Kenneth Cardona, MD FACS", title: "Sarcoma Surgical Oncologist", sub: "Emory Winship Cancer Institute · Atlanta, GA", img: "https://media.nlmsf.org/wp-content/uploads/2022/01/Kenneth-Cardova.jpg" },
+  { name: "Kristen N. Ganjoo, MD", title: "Sarcoma Medical Oncologist", sub: "Stanford Cancer Institute · Stanford University · Stanford, CA", img: "https://media.nlmsf.org/wp-content/uploads/2022/01/ganjoo-kristen.jpg" },
+  { name: "Suzanne George, MD", title: "Sarcoma Medical Oncologist", sub: "Dana-Farber Cancer Institute · Boston, MA", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Susan-George-MD.jpg" },
+  { name: "Rebecca Gladdy, MD, PhD", title: "Sarcoma Surgical Oncologist", sub: "Princess Margaret Cancer Center · Toronto, Canada", img: "https://media.nlmsf.org/wp-content/uploads/2022/06/Dr.-Rebecca-Gladdy-280x300.jpg" },
+  { name: "Matthew Hemming, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "UMass Memorial Health · Worcester, MA", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-Matthew-Hemming.jpg" },
+  { name: "Evita Henderson-Jackson, MD", title: "Pathologist", sub: "Moffitt Cancer Center and Research Institute · Tampa, FL", img: "https://media.nlmsf.org/wp-content/uploads/2021/05/Evita-Henderson-Jackson-MD.jpg" },
+  { name: "Matthew Ingham, MD, PhD", title: "Sarcoma Medical Oncologist", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-Matthew-Ingham-300x245.jpg" },
+  { name: "Brian Kadera, MD", title: "Surgical Oncologist", sub: "Ronald Reagan Med. Center · UCLA · Los Angeles, CA", img: "https://media.nlmsf.org/wp-content/uploads/2022/03/Brian-Kadrea.jpg" },
+  { name: "Anush Kalbasi, MD", title: "Radiation Oncologist", sub: "Stanford Cancer Institute · Stanford University · Stanford, CA", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-Anusha-Kalbasi-300x300.jpg" },
+  { name: "Aparna Kamat, MD", title: "Gynecologic Surgical Oncologist", sub: "Houston Methodist Hospital · Houston, TX", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Aparna-Kamat-MD.jpg" },
+  { name: "Alexander J. Lazar, MD, PhD", title: "Sarcoma Pathologist", sub: "The University of Texas MD Anderson Cancer Center · Houston, TX", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-Alexander-Lazar.jpeg" },
+  { name: "Sujana Movva, MD", title: "Sarcoma Medical Oncologist", sub: "Memorial Sloan Kettering Cancer Center · New York, NY", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-Sujana-Mowa.jpg" },
+  { name: "Arash Naghavi, MD", title: "Radiation Oncologist", sub: "Moffitt Cancer Center · Tampa, FL", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-Arash-Naghavi.jpg" },
+  { name: "Corrie Painter, PhD", title: "Associate Director of Operations and Scientific Outreach", sub: "Broad Institute. COUNT ME IN PROJECT – Leiomyosarcoma Project.", img: "https://media.nlmsf.org/wp-content/uploads/2021/11/CorriePainter-300x229.png" },
+  { name: "Seth Pollack, MD", title: "Sarcoma Medical Oncologist", sub: "Lurie Cancer Center · Northwestern University · Chicago, IL", img: "https://media.nlmsf.org/wp-content/uploads/2020/06/seth-pollack-199x300.jpg" },
+  { name: "Dale Shepard, MD", title: "Sarcoma Medical Oncologist", sub: "Taussig Oncology · Cleveland Clinic · Cleveland, OH", img: "https://media.nlmsf.org/wp-content/uploads/2022/02/Dr-dale-shepard.jpg" },
+  { name: "Neeta Somaiah, MD", title: "Sarcoma Medical Oncologist", sub: "MD Anderson Cancer Center · Houston, TX", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-Neeta-Somaiah.jpg" },
+  { name: "Jonathan Trent, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "Sylvester Cancer Center · Miami, FL", img: "https://media.nlmsf.org/wp-content/uploads/2021/10/Dr-trent-jonathan.jpg" },
+  { name: "Brian A. Van Tine, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "Siteman Cancer Center · Washington University · St. Louis, MO", img: "https://media.nlmsf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg" },
+  { name: "William Tseng, MD", title: "Sarcoma Surgical Oncologist", sub: "Keck Medicine of USC · Los Angeles, CA", img: "https://media.nlmsf.org/wp-content/uploads/2022/01/Dr.-William-Tseng-240x300.jpg" },
+  { name: "Scott Okuno, MD", title: "Sarcoma Medical Oncologist", sub: "Mayo Clinic · Rochester, MN", img: "https://media.nlmsf.org/wp-content/uploads/2024/09/Okuno-Photo-4.jpg" },
+  { name: "Brittany Sciontis, MD", title: "Sarcoma Medical Oncologist", sub: "Mayo Clinic · Rochester, MN", img: "https://media.nlmsf.org/wp-content/uploads/elementor/thumbs/Sciontis-qutwgtv202sno67ik1a68nvqldn0f0fjhtpwirgthg.webp" },
+  { name: "Elise Nassif-Haddad, MD, PhD", title: "Sarcoma Medical Oncologist", sub: "MD Anderson Cancer Center · Houston, TX", img: "https://media.nlmsf.org/wp-content/uploads/2024/09/Dr.-Nassifs-Photo.jpg" },
+  { name: "Alessandra Maleddu, MD", title: "Sarcoma Medical Oncologist", sub: "University of Colorado Cancer Center · Aurora, CO", img: "https://media.nlmsf.org/wp-content/uploads/elementor/thumbs/Maleddu-Photo-qutxnjn0a2kndq4dirs10v496f1ljw7h8auz43ifpm.jpg" },
 ];
 
 export default function OurBoardPage() {
@@ -79,17 +79,17 @@ export default function OurBoardPage() {
             <span className="text-gray-400">·</span>
             <a href="https://docs.google.com/document/d/1HIsfKkEpiohnmkVZMkPalgBEl_HnUo5F/edit?usp=sharing&ouid=108192603532095592800&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2021</a>
             <span className="text-gray-400">·</span>
-            <a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2020-Final.docx" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2020</a>
+            <a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2020-Final.docx" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2020</a>
             <span className="text-gray-400">·</span>
-            <a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2019-2020-1-2-1.docx" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2019</a>
+            <a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2019-2020-1-2-1.docx" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2019</a>
             <span className="text-gray-400">·</span>
-            <a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2018-1.docx" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2018</a>
+            <a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2018-1.docx" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2018</a>
             <span className="text-gray-400">·</span>
-            <a href="https://nlsmf.org/wp-content/uploads/2021/02/NLMSF-Annual-Report-2017-.docx.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2017</a>
+            <a href="https://media.nlmsf.org/wp-content/uploads/2021/02/NLMSF-Annual-Report-2017-.docx.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2017</a>
             <span className="text-gray-400">·</span>
-            <a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2016.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2016</a>
+            <a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2016.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2016</a>
             <span className="text-gray-400">·</span>
-            <a href="https://nlsmf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2015.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2015</a>
+            <a href="https://media.nlmsf.org/wp-content/uploads/2021/01/NLMSF-Annual-Report-2015.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-indigo-600 hover:underline">NLMSF Annual Report 2015</a>
           </div>
         </section>
 
@@ -102,7 +102,7 @@ export default function OurBoardPage() {
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-center">
             <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-100 mb-4">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/02/Dr-Singh.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/02/Dr-Singh.jpg"
                 alt="Arun Singh, M.D."
                 className="object-cover w-full h-full"
                 width={240}
@@ -115,7 +115,7 @@ export default function OurBoardPage() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="https://nlsmf.org/wp-content/uploads/elementor/thumbs/Pinwheel-Alex-quts6lih1f9cc5wdbrnqdcio2upb0bjpnisx11mrjw.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/elementor/thumbs/Pinwheel-Alex-quts6lih1f9cc5wdbrnqdcio2upb0bjpnisx11mrjw.jpg"
               alt="Pinwheel"
               className="rounded-xl max-w-full h-auto"
               width={640}
@@ -155,7 +155,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/01/AnnieAchee-300x300.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/AnnieAchee-300x300.jpg"
                   alt="Annie Achee"
                   className="object-cover w-full h-full"
                   width={240}
@@ -183,7 +183,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/elementor/thumbs/Mitch-Achees-Photo--qttze8kz7mjntnjfbabbojjlhjkskzt81shw2khqh0.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/elementor/thumbs/Mitch-Achees-Photo--qttze8kz7mjntnjfbabbojjlhjkskzt81shw2khqh0.jpg"
                   alt="Mitch Achee"
                   className="object-cover w-full h-full"
                   width={240}
@@ -205,7 +205,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2022/07/asy-284x300.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2022/07/asy-284x300.jpg"
                   alt="Dale Ayscue"
                   className="object-cover w-full h-full"
                   width={240}
@@ -229,7 +229,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2022/02/Selfie-300x233.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2022/02/Selfie-300x233.jpg"
                   alt="David Boles"
                   className="object-cover w-full h-full"
                   width={240}
@@ -251,7 +251,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/01/LynneGreco-300x300.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/LynneGreco-300x300.jpg"
                   alt="Lynne Greco Forges"
                   className="object-cover w-full h-full"
                   width={240}
@@ -273,7 +273,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/01/JimMatthews-300x300.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/JimMatthews-300x300.jpg"
                   alt="Jim Matthews"
                   className="object-cover w-full h-full"
                   width={240}
@@ -294,7 +294,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/01/chrisHeadshot-300x300.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/chrisHeadshot-300x300.png"
                   alt="Christopher Hancock"
                   className="object-cover w-full h-full"
                   width={240}
@@ -317,7 +317,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/08/image-219x300.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/08/image-219x300.png"
                   alt="Greg Lee"
                   className="object-cover w-full h-full"
                   width={240}
@@ -340,7 +340,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2023/06/Alexs-Photo-200x300.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2023/06/Alexs-Photo-200x300.jpg"
                   alt="Alex Aguilera"
                   className="object-cover w-full h-full"
                   width={240}
@@ -361,7 +361,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/02/BM-300x300.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/BM-300x300.jpg"
                   alt="Chandalyn Williams"
                   className="object-cover w-full h-full"
                   width={240}
@@ -382,7 +382,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2022/01/Jacque-Sebany.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2022/01/Jacque-Sebany.png"
                   alt="Jacqueline Sebany"
                   className="object-cover w-full h-full"
                   width={240}
@@ -406,7 +406,7 @@ export default function OurBoardPage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="aspect-square relative bg-gray-100">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/01/Untitled-design-2-300x300.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/Untitled-design-2-300x300.png"
                   alt="Marlana Stoddard"
                   className="object-cover w-full h-full"
                   width={240}

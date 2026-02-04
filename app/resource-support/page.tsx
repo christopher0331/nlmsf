@@ -89,7 +89,7 @@ export default function ResourceSupportPage() {
 
           <div className="sidebar-image-card">
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2025/09/caregiver-image.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2025/09/caregiver-image.jpg"
               alt="Caregiver support"
               className="sidebar-image"
               width={600}

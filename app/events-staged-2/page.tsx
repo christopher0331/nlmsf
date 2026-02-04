@@ -41,7 +41,7 @@ export default function EventsStaged2Page() {
             National Leiomyosarcoma Foundation
           </h2>
           <Image
-            src="https://nlsmf.org/wp-content/uploads/2020/07/image.png"
+            src="https://media.nlmsf.org/wp-content/uploads/2020/07/image.png"
             alt="National Leiomyosarcoma Foundation workshops logo"
             width={474}
             height={123}
@@ -52,7 +52,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-grid">
             <div className="events-staged-2-card">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/02/PatientCareAdvocacy.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/02/PatientCareAdvocacy.jpg"
                 alt="Patient Care Advocacy"
                 width={112}
                 height={115}
@@ -76,7 +76,7 @@ export default function EventsStaged2Page() {
             </div>
             <div className="events-staged-2-card">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/02/SurvivorInspire.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/02/SurvivorInspire.png"
                 alt="Survivors Inspire Peer Network"
                 width={211}
                 height={191}
@@ -170,12 +170,12 @@ export default function EventsStaged2Page() {
           <h2>Basic Research</h2>
           <p>
             <a
-              href="https://nlsmf.org/wp-content/uploads/2023/01/Dr.-Chudasamas-Presentation.svg"
+              href="https://media.nlmsf.org/wp-content/uploads/2023/01/Dr.-Chudasamas-Presentation.svg"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/Dr.-Chudasamas-Presentation.svg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/Dr.-Chudasamas-Presentation.svg"
                 alt="Dr. Chudasama presentation"
                 width={624}
                 height={351}
@@ -202,7 +202,7 @@ export default function EventsStaged2Page() {
             <p>
               Program Moderator{" "}
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/02/Dr.-Jonathan-Trent.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Dr.-Jonathan-Trent.jpg"
                 alt="Dr. Jonathan Trent"
                 width={175}
                 height={219}
@@ -214,7 +214,7 @@ export default function EventsStaged2Page() {
             <p>Speakers:</p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/02/Dr.-Hemming-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Dr.-Hemming-Photo.jpg"
                 alt="Dr. Hemming"
                 width={200}
                 height={172}
@@ -230,7 +230,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/04/Nicholas-Llosa-pic.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/04/Nicholas-Llosa-pic.jpg"
                 alt="Dr. Nicholas Llosa"
                 width={200}
                 height={200}
@@ -274,7 +274,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/neeta_somaiah-photo.jpg.resize-200x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/neeta_somaiah-photo.jpg.resize-200x300.jpg"
                 alt="Neeta Somaiah"
                 width={200}
                 height={300}
@@ -292,7 +292,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/09/download-300x300.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/09/download-300x300.png"
                 alt="Elise Nassif"
                 width={250}
                 height={250}
@@ -316,7 +316,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/02/Dr.-Jonathan-Trent.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Dr.-Jonathan-Trent.jpg"
                 alt="Dr. Jonathan Trent"
                 width={200}
                 height={250}
@@ -338,7 +338,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/neeta_somaiah-photo.jpg.resize-200x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/neeta_somaiah-photo.jpg.resize-200x300.jpg"
                 alt="Neeta Somaiah"
                 width={200}
                 height={300}
@@ -380,7 +380,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2025/02/Circulating-Tumor-DNA-ct-DNA-Panel-300x188.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2025/02/Circulating-Tumor-DNA-ct-DNA-Panel-300x188.png"
                 alt="ctDNA panel"
                 width={300}
                 height={188}
@@ -396,7 +396,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2025/02/Ganjoo-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2025/02/Ganjoo-Photo.jpg"
                 alt="Kristin Ganjoo"
                 width={200}
                 height={200}
@@ -422,7 +422,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/Joanna-Przybyl-Photo-300x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/Joanna-Przybyl-Photo-300x300.jpg"
                 alt="Joanna Przybyl"
                 width={225}
                 height={225}
@@ -444,7 +444,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/Dr.-Cardonna-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/Dr.-Cardonna-Photo.jpg"
                 alt="Kenneth Cardona"
                 width={200}
                 height={252}
@@ -467,7 +467,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/02/Dr-dale-shepard.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/02/Dr-dale-shepard.jpg"
                 alt="Dale Shepherd"
                 width={215}
                 height={268}
@@ -492,7 +492,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/03/Photo-of-Brian-Crompton-300x258.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/03/Photo-of-Brian-Crompton-300x258.jpg"
                 alt="Brian Crompton"
                 width={245}
                 height={211}
@@ -520,7 +520,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2025/03/Haddox-Photo.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2025/03/Haddox-Photo.png"
                 alt="Candace Haddox"
                 width={215}
                 height={184}
@@ -547,7 +547,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2025/02/pollack-photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2025/02/pollack-photo.jpg"
                 alt="Seth Pollack"
                 width={175}
                 height={245}
@@ -578,7 +578,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/01/Mullinax-photo-2-300x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/01/Mullinax-photo-2-300x300.jpg"
                 alt="John Mullinax"
                 width={200}
                 height={200}
@@ -605,7 +605,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/08/Avutu-Photo-300x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/08/Avutu-Photo-300x300.jpg"
                 alt="Vishu Avutu"
                 width={200}
                 height={200}
@@ -645,7 +645,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/05/Clinical-Trials-Panel-Photo-300x169.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/05/Clinical-Trials-Panel-Photo-300x169.png"
                 alt="Clinical trials panel"
                 width={600}
                 height={338}
@@ -661,7 +661,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/08/Cote-Photo-2.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/08/Cote-Photo-2.png"
                 alt="Gregory Cote"
                 width={253}
                 height={253}
@@ -684,7 +684,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg"
                 alt="Brian Van Tine"
                 width={230}
                 height={249}
@@ -732,7 +732,7 @@ export default function EventsStaged2Page() {
             </ol>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg"
                 alt="Brian Van Tine"
                 width={230}
                 height={249}
@@ -758,7 +758,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/09/download-300x300.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/09/download-300x300.png"
                 alt="Elise Nassif"
                 width={240}
                 height={240}
@@ -781,7 +781,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/11/Brian-Van-Tine-MD-PhD.jpg"
                 alt="Brian Van Tine"
                 width={230}
                 height={249}
@@ -805,7 +805,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/02/Ingham-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Ingham-Photo.jpg"
                 alt="Matthew Ingham"
                 width={280}
                 height={229}
@@ -858,7 +858,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/06/image14.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/06/image14.jpg"
                 alt="Gary Schwartz"
                 width={230}
                 height={173}
@@ -904,7 +904,7 @@ export default function EventsStaged2Page() {
           </p>
           <p>
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2023/02/Dr.-Elizabeth-Davis-1-e1675618311784-150x150.webp"
+              src="https://media.nlmsf.org/wp-content/uploads/2023/02/Dr.-Elizabeth-Davis-1-e1675618311784-150x150.webp"
               alt="Elizabeth Davis"
               width={250}
               height={250}
@@ -972,7 +972,7 @@ export default function EventsStaged2Page() {
           <h2>How to Participate in Patient Centered Research - Count-Me-In / Pattern.org</h2>
           <p>
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2023/02/Ben-Zhola-Photo-300x169.png"
+              src="https://media.nlmsf.org/wp-content/uploads/2023/02/Ben-Zhola-Photo-300x169.png"
               alt="Ben Zola"
               width={550}
               height={309}
@@ -999,7 +999,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/Dr.-Meyers-Photo-240x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/Dr.-Meyers-Photo-240x300.jpg"
                 alt="Christian Meyer"
                 width={200}
                 height={250}
@@ -1026,7 +1026,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/09/download-300x300.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/09/download-300x300.png"
                 alt="Elise Nassif"
                 width={225}
                 height={225}
@@ -1063,7 +1063,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/02/Dr.-Jonathan-Trent.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Dr.-Jonathan-Trent.jpg"
                 alt="Jonathan Trent"
                 width={225}
                 height={281}
@@ -1094,7 +1094,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/Dr.-Meyers-Photo-240x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/Dr.-Meyers-Photo-240x300.jpg"
                 alt="Christian Meyer"
                 width={200}
                 height={250}
@@ -1135,7 +1135,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/09/download-300x300.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/09/download-300x300.png"
                 alt="Elise Nassif"
                 width={240}
                 height={240}
@@ -1167,7 +1167,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/06/Alison-Tierney-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/06/Alison-Tierney-Photo.jpg"
                 alt="Alison Tierney"
                 width={205}
                 height={205}
@@ -1202,7 +1202,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/06/Dermawan-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/06/Dermawan-Photo.jpg"
                 alt="Josephine Dermawan"
                 width={200}
                 height={250}
@@ -1228,7 +1228,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/02/Dr.-Alexander-Lazar-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Dr.-Alexander-Lazar-Photo.jpg"
                 alt="Alexander Lazar"
                 width={175}
                 height={265}
@@ -1257,7 +1257,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/08/Wagner-Andrew-300x258.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/08/Wagner-Andrew-300x258.jpg"
                 alt="Andrew Wagner"
                 width={200}
                 height={172}
@@ -1269,7 +1269,7 @@ export default function EventsStaged2Page() {
             <p>PEComa Research Updates and Q &amp; A</p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/08/Marco-Schito-_CGM5045-300x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/08/Marco-Schito-_CGM5045-300x300.jpg"
                 alt="Marco Schito"
                 width={200}
                 height={200}
@@ -1304,7 +1304,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2025/03/Guadagnolo-photo-2-200x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2025/03/Guadagnolo-photo-2-200x300.jpg"
                 alt="B. Ashleigh Guadagnolo"
                 width={200}
                 height={300}
@@ -1330,7 +1330,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/04/Anush-Kalbasi-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/04/Anush-Kalbasi-Photo.jpg"
                 alt="Anush Kalbasi"
                 width={200}
                 height={267}
@@ -1361,7 +1361,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/05/Bigger-Dr-Bui-300x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/05/Bigger-Dr-Bui-300x300.jpg"
                 alt="Nam Bui"
                 width={250}
                 height={250}
@@ -1392,7 +1392,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/04/Toloza-Photo-255x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/04/Toloza-Photo-255x300.jpg"
                 alt="Eric Toloza"
                 width={220}
                 height={259}
@@ -1420,7 +1420,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2024/04/Tseng-Photo.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2024/04/Tseng-Photo.jpg"
                 alt="William Tseng"
                 width={200}
                 height={263}
@@ -1445,7 +1445,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2022/03/Brian-Kadrea.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2022/03/Brian-Kadrea.jpg"
                 alt="Brian Kadera"
                 width={250}
                 height={250}
@@ -1475,7 +1475,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/02/Dr.-Aime-Crago-Photo-300x300.webp"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/02/Dr.-Aime-Crago-Photo-300x300.webp"
                 alt="Aime Crago"
                 width={250}
                 height={250}
@@ -1494,7 +1494,7 @@ export default function EventsStaged2Page() {
             </p>
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/04/Farma-Photo-224x300.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/04/Farma-Photo-224x300.jpg"
                 alt="Jeffery Farma"
                 width={224}
                 height={300}
@@ -1525,7 +1525,7 @@ export default function EventsStaged2Page() {
           <div className="events-staged-2-speaker-list">
             <p>
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2023/01/Dr.-Nassos-Presentation-2.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2023/01/Dr.-Nassos-Presentation-2.png"
                 alt="Shelley Fuld Nasso presentation"
                 width={800}
                 height={450}
@@ -1566,7 +1566,7 @@ export default function EventsStaged2Page() {
           </p>
           <p>
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2023/12/Dr.-Laveaux-Photo-226x300.jpeg"
+              src="https://media.nlmsf.org/wp-content/uploads/2023/12/Dr.-Laveaux-Photo-226x300.jpeg"
               alt="O. Sandra Madueke-Laveaux"
               width={226}
               height={300}

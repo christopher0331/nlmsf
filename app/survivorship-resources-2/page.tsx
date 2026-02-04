@@ -332,14 +332,14 @@ export default function SurvivorshipResourcesTwoPage() {
         <div className="sr2-content-container">
           <div className="sr2-survivors-banner">
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2025/08/EmpoweringSurvivors.png"
+              src="https://media.nlmsf.org/wp-content/uploads/2025/08/EmpoweringSurvivors.png"
               alt="Empowering Survivors"
               className="sr2-banner-image"
               width={300}
               height={150}
             />
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2025/08/empoweringSurvivorsButterfly.png"
+              src="https://media.nlmsf.org/wp-content/uploads/2025/08/empoweringSurvivorsButterfly.png"
               alt="Empowering Survivors Butterfly"
               className="sr2-banner-image"
               width={300}
@@ -405,7 +405,7 @@ export default function SurvivorshipResourcesTwoPage() {
                 </h3>
                 <div className="sr2-resource-logo">
                   <Image
-                    src="https://nlsmf.org/wp-content/uploads/2025/06/1749690111357blob.png"
+                    src="https://media.nlmsf.org/wp-content/uploads/2025/06/1749690111357blob.png"
                     alt="NCCS logo"
                     width={220}
                     height={120}

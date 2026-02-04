@@ -141,7 +141,7 @@ export default function PaliativeCareClient() {
         <div className="paliative-header-grid">
           <a href="https://nlmsf.org" className="paliative-logo" onClick={(event) => event.stopPropagation()}>
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2023/02/NLMSF-New-Round-Ribbon-Logo.jpg"
+              src="https://media.nlmsf.org/wp-content/uploads/2023/02/NLMSF-New-Round-Ribbon-Logo.jpg"
               alt="NLMSF logo"
               width={240}
               height={240}
@@ -254,7 +254,7 @@ export default function PaliativeCareClient() {
           <li>Does NCI support palliative care research?</li>
         </ul>
         <Image
-          src="https://nlsmf.org/wp-content/uploads/2021/10/NLMSF_Logo_800x800-equal.png"
+          src="https://media.nlmsf.org/wp-content/uploads/2021/10/NLMSF_Logo_800x800-equal.png"
           alt="NLMSF logo"
           className="paliative-logo-inline"
           width={240}
@@ -324,7 +324,7 @@ export default function PaliativeCareClient() {
           </a>
         </p>
         <Image
-          src="https://nlsmf.org/wp-content/uploads/2021/10/NLMSF_Logo_800x800-equal.png"
+          src="https://media.nlmsf.org/wp-content/uploads/2021/10/NLMSF_Logo_800x800-equal.png"
           alt="NLMSF logo"
           className="paliative-logo-inline"
           width={240}

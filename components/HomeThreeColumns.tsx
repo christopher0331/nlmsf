@@ -9,7 +9,7 @@ const CLINICAL_TRIALS_URL =
   "https://clinicaltrials.gov/search?term=leiomyosarcoma";
 const ONCLIVE_SARCOMA_URL = "https://www.onclive.com/clinical/sarcoma";
 const ONCLIVE_IMG =
-  "https://nlsmf.org/wp-content/uploads/2025/09/1757876547796blob_sharpened.jpg";
+  "https://media.nlmsf.org/wp-content/uploads/2025/09/1757876547796blob_sharpened.jpg";
 
 const ONCLIVE_UPDATES = [
   {
@@ -54,7 +54,7 @@ const TESTIMONIALS = [
     name: "Brian Van Tine, MD",
     title: "Sarcoma Program Director, Alvin J. Siteman Cancer Center",
     quote: '"I love this group, it makes a difference."',
-    image: "https://nlsmf.org/wp-content/uploads/2025/10/Brian-Van-Tine-MD.png",
+    image: "https://media.nlmsf.org/wp-content/uploads/2025/10/Brian-Van-Tine-MD.png",
     alt: "Brian Van Tine, MD",
   },
   {
@@ -62,7 +62,7 @@ const TESTIMONIALS = [
     title: "Professor, Northwestern University Feinberg School of Medicine",
     quote:
       '"I love the NLMSF – I love the patient programs held – your signature support advocacy to collaborate with sarcoma centers..."',
-    image: "https://nlsmf.org/wp-content/uploads/2025/10/Seth-Pollack-MD.png",
+    image: "https://media.nlmsf.org/wp-content/uploads/2025/10/Seth-Pollack-MD.png",
     alt: "Seth Pollack, MD",
   },
   {
@@ -70,7 +70,7 @@ const TESTIMONIALS = [
     title: "Director of UCLA Sarcoma Medical Oncology",
     quote:
       '"The National Leiomyosarcoma Foundation is an important organization that strives to gather a critical mass of patients, scientists, patient advocates and physicians..."',
-    image: "https://nlsmf.org/wp-content/uploads/2025/10/Arun-Singh-MD.png",
+    image: "https://media.nlmsf.org/wp-content/uploads/2025/10/Arun-Singh-MD.png",
     alt: "Arun Singh, MD",
   },
 ];

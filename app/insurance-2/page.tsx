@@ -83,7 +83,7 @@ export default function Insurance2Page() {
             <h3 className="sidebar-subtitle">Featured Resource</h3>
             <div className="featured-resource">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
                 alt="Triage Cancer"
                 className="featured-image"
                 width={240}
@@ -128,7 +128,7 @@ export default function Insurance2Page() {
             <div className="donate-cta">
               <a href="https://nlmsf.org/donate/" className="donate-link" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/01/donate-circle.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/01/donate-circle.jpg"
                   alt="Donate to NLMSF"
                   className="donate-image"
                   width={240}
@@ -345,7 +345,7 @@ export default function Insurance2Page() {
               </div>
               <div className="resource-highlight">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/05/Triage-Cancer.jpg"
                   alt="Triage Cancer Logo"
                   className="resource-icon"
                   width={240}

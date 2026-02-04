@@ -149,7 +149,7 @@ export default function FinancialAssistance2Page() {
               </p>
               <div className="flex flex-col gap-4 rounded-lg bg-gray-50 p-5 my-5 md:flex-row md:items-center">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2021/02/DollarsignGuy.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2021/02/DollarsignGuy.jpg"
                   alt="Financial Assistance"
                   className="h-14 w-14 shrink-0 rounded-full object-cover"
                   width={240}

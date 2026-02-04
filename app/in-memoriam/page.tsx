@@ -95,7 +95,7 @@ export default function InMemoriamPage() {
 
         <section className="im-candle-section">
           <Image
-            src="https://nlsmf.org/wp-content/uploads/2023/03/websiste-tribute-candle.gif"
+            src="https://media.nlmsf.org/wp-content/uploads/2023/03/websiste-tribute-candle.gif"
             alt=""
             className="im-candle-img"
             width={200}

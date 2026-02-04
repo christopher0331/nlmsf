@@ -20,7 +20,7 @@ export default function NlmsfProgramsPage() {
           <h4 className="programs-hero-tagline">&quot;We have what it takes to help each other!&quot;</h4>
           <div className="programs-hero-image">
             <Image
-              src="https://nlsmf.org/wp-content/uploads/2020/05/Heart-for-Home-Page.png"
+              src="https://media.nlmsf.org/wp-content/uploads/2020/05/Heart-for-Home-Page.png"
               alt=""
               width={252}
               height={242}
@@ -43,7 +43,7 @@ export default function NlmsfProgramsPage() {
           <div className="quote-card">
             <div className="quote-card-image">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/02/Dr-pollack.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/02/Dr-pollack.jpg"
                 alt="Dr. Raphael E Pollock"
                 width={138}
                 height={103}
@@ -63,7 +63,7 @@ export default function NlmsfProgramsPage() {
           <div className="quote-card">
             <div className="quote-card-image">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/elementor/thumbs/seth-pollack-oqlhk3iw8u04lvf23i0958v5joarkcur9y5bt2yjoi.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/elementor/thumbs/seth-pollack-oqlhk3iw8u04lvf23i0958v5joarkcur9y5bt2yjoi.jpg"
                 alt="Seth Pollack"
                 loading="lazy"
                 width={240}
@@ -85,7 +85,7 @@ export default function NlmsfProgramsPage() {
           <div className="program-card">
             <div className="program-card-image">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2020/05/3910322081536909718-128.png"
+                src="https://media.nlmsf.org/wp-content/uploads/2020/05/3910322081536909718-128.png"
                 alt=""
                 width={128}
                 height={128}
@@ -101,7 +101,7 @@ export default function NlmsfProgramsPage() {
             <div className="program-card-image">
               <a href="https://nlmsf.org/lms-lifeline-buddy-program/" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/07/3-buddy.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/3-buddy.jpg"
                   alt=""
                   width={564}
                   height={564}
@@ -124,7 +124,7 @@ export default function NlmsfProgramsPage() {
             <div className="program-card-image">
               <a href="https://nlmsf.org/resources/" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/05/15016772371537355596-128.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/05/15016772371537355596-128.png"
                   alt=""
                   width={128}
                   height={128}
@@ -145,7 +145,7 @@ export default function NlmsfProgramsPage() {
             <div className="program-card-image">
               <a href="https://nlmsf.org/events/" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/05/mentor-icon-2895941_1280.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/05/mentor-icon-2895941_1280.png"
                   alt=""
                   width={300}
                   height={300}
@@ -166,7 +166,7 @@ export default function NlmsfProgramsPage() {
             <div className="program-card-image">
               <a href="https://mailchi.mp/4f2119f43f8b/nlmsf-news-tracker" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/05/unnamed-30.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-30.jpg"
                   alt=""
                   width={300}
                   height={300}
@@ -224,7 +224,7 @@ export default function NlmsfProgramsPage() {
             <div className="action-card-image">
               <a href="https://leiomyosarcoma.info/cancer-cell-line-project/" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/05/Broad-Institute-.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/05/Broad-Institute-.jpg"
                   alt=""
                   width={205}
                   height={52}
@@ -247,7 +247,7 @@ export default function NlmsfProgramsPage() {
             <div className="action-card-image">
               <Link href="/be-a-successful-caregiver-advocate" className="action-card-img-link">
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/07/unnamed-66.jpg"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-66.jpg"
                   alt=""
                   width={112}
                   height={115}
@@ -270,7 +270,7 @@ export default function NlmsfProgramsPage() {
             <div className="action-card-image">
               <a href="https://nlmsf.org/survivors-inspire/" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/05/Add-a-little-bit-of-body-text-e1590858618737.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/05/Add-a-little-bit-of-body-text-e1590858618737.png"
                   alt=""
                   width={211}
                   height={191}
@@ -292,7 +292,7 @@ export default function NlmsfProgramsPage() {
           <div className="action-card">
             <div className="action-card-image">
               <Image
-                src="https://nlsmf.org/wp-content/uploads/2021/03/CountmeIn.jpg"
+                src="https://media.nlmsf.org/wp-content/uploads/2021/03/CountmeIn.jpg"
                 alt=""
                 width={220}
                 height={97}
@@ -302,7 +302,7 @@ export default function NlmsfProgramsPage() {
             <div className="action-card-image">
               <a href="https://leiomyosarcoma.info/mypart-network/" {...ext}>
                 <Image
-                  src="https://nlsmf.org/wp-content/uploads/2020/05/unnamed-4.png"
+                  src="https://media.nlmsf.org/wp-content/uploads/2020/05/unnamed-4.png"
                   alt=""
                   width={974}
                   height={322}
