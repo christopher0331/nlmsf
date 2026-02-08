@@ -19,13 +19,13 @@ export default function CTASection() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/get-involved/donate"
+              href="/donate"
               className="inline-block py-3.5 px-7 text-base font-semibold no-underline rounded-[10px] bg-white text-[#6d28d9] border-0 transition-all duration-200 hover:bg-[#faf5ff] hover:-translate-y-0.5"
             >
               Donate Now
             </Link>
             <Link
-              href="/get-involved/volunteer"
+              href="/volunteer"
               className="inline-block py-3.5 px-7 text-base font-semibold no-underline rounded-[10px] bg-transparent text-white border-2 border-white/60 transition-all duration-200 hover:border-white hover:bg-white/15 hover:-translate-y-0.5"
             >
               Volunteer
