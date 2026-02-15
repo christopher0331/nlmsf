@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 import { isWordPressDbConfigured, isWordPressConnectionError, deleteDonor as deleteWordPressDonor } from "@/lib/wordpress-db";
 
@@ -22,6 +22,7 @@ export async function DELETE(
     }
   }
 
+  const prisma = await getPrisma();
   await prisma.tributeDonor.delete({ where: { id } }).catch(() => null);
   return NextResponse.json({ ok: true });
 }

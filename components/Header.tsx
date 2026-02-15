@@ -15,7 +15,7 @@ const TOP_BAR = "w-full bg-white border-b border-gray-200 h-[50px] relative z-[5
 const CONTAINER_HEADER = "max-w-full w-full mx-auto pl-4 pr-10 flex items-center justify-between box-border relative lg:px-8 min-h-full";
 const LOGO_SPACE = "flex-[0_0_25%] max-w-[200px]";
 const NAVBAR = "w-full bg-white z-[200] relative border-b border-gray-200 shadow-sm py-3 min-h-[80px] box-border overflow-visible lg:py-4 lg:min-h-[96px] flex items-center";
-const LOGO_SPANNING = "absolute top-0 left-4 z-[202] bg-transparent flex items-center w-[clamp(120px,20vw,200px)] h-[clamp(100px,40vw,140px)]";
+const LOGO_SPANNING = "absolute top-0 left-4 z-[202] bg-transparent flex items-center w-[clamp(120px,20vw,200px)] h-[clamp(100px,40vw,140px)] pointer-events-none [&>a]:pointer-events-auto";
 const LOGO_IMG = "w-full h-auto max-h-[clamp(180px,12vw,120px)] object-contain lg:max-h-[clamp(100px,15vw,140px)]";
 const DESKTOP_NAV = "hidden lg:flex lg:items-center lg:flex-grow lg:justify-center lg:w-full lg:ml-[clamp(150px,15vw,180px)]";
 const MENU = "flex list-none m-0 p-0 gap-2 flex-wrap justify-center w-full";
@@ -115,13 +115,21 @@ export default function Header() {
   }, [mobileNavOpen]);
 
   useEffect(() => {
+    if (desktopDropdown == null) return;
     const handleClick = (e: MouseEvent) => {
-      if (desktopDropdown == null) return;
       const target = e.target as HTMLElement;
-      if (!target.closest("[data-has-dropdown]") && !target.closest("[data-dropdown-panel]")) closeDesktop();
+      // Don't close if clicking on dropdown button or panel
+      if (target.closest("[data-has-dropdown]") || target.closest("[data-dropdown-panel]")) return;
+      closeDesktop();
     };
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
+    // Add listener after current event loop to allow button handlers to run first
+    const timeoutId = setTimeout(() => {
+      document.addEventListener("click", handleClick);
+    }, 0);
+    return () => {
+      clearTimeout(timeoutId);
+      document.removeEventListener("click", handleClick);
+    };
   }, [closeDesktop, desktopDropdown]);
 
   useEffect(() => {
@@ -187,8 +195,7 @@ export default function Header() {
                 <button
                   type="button"
                   className={MENU_LINK_DROPDOWN}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
+                  onClick={(e) => {
                     e.stopPropagation();
                     toggleDesktop("patients");
                   }}
@@ -428,6 +435,14 @@ export default function Header() {
                                 Transportation and Lodging
                               </Link>
                             </li>
+                            <li>
+                              <Link
+                                href="/quick-tips"
+                                className={DROPDOWN_LINK}
+                              >
+                                Quick Tips for Newly Diagnosed
+                              </Link>
+                            </li>
                           </ul>
                         </div>
                         <div className={CATEGORY_COLUMN}>
@@ -474,8 +489,7 @@ export default function Header() {
                 <button
                   type="button"
                   className={MENU_LINK_DROPDOWN}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
+                  onClick={(e) => {
                     e.stopPropagation();
                     toggleDesktop("survivorship");
                   }}
@@ -519,8 +533,7 @@ export default function Header() {
                 <button
                   type="button"
                   className={MENU_LINK_DROPDOWN}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
+                  onClick={(e) => {
                     e.stopPropagation();
                     toggleDesktop("caregiving");
                   }}
@@ -582,8 +595,7 @@ export default function Header() {
                 <button
                   type="button"
                   className={MENU_LINK_DROPDOWN}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
+                  onClick={(e) => {
                     e.stopPropagation();
                     toggleDesktop("involved");
                   }}
@@ -635,8 +647,7 @@ export default function Header() {
                 <button
                   type="button"
                   className={MENU_LINK_DROPDOWN}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
+                  onClick={(e) => {
                     e.stopPropagation();
                     toggleDesktop("about");
                   }}
@@ -696,8 +707,7 @@ export default function Header() {
                 <button
                   type="button"
                   className={MENU_LINK_DROPDOWN}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
+                  onClick={(e) => {
                     e.stopPropagation();
                     toggleDesktop("research");
                   }}
@@ -1153,6 +1163,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Transportation and Lodging
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/quick-tips"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Quick Tips for Newly Diagnosed
                     </Link>
                   </li>
                 </ul>

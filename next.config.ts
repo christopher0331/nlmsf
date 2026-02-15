@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
+import webpack from "webpack";
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["@prisma/adapter-libsql", "@prisma/adapter-better-sqlite3"],
   trailingSlash: true,
   async redirects() {
     return [
@@ -73,6 +75,18 @@ const nextConfig: NextConfig = {
         hostname: "i.ytimg.com",
       },
     ],
+  },
+  webpack: (config) => {
+    // Ignore markdown and LICENSE files to prevent webpack from trying to parse them
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /\.md$/,
+      }),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /LICENSE$/,
+      })
+    );
+    return config;
   },
 };
 

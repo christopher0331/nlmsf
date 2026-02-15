@@ -4,6 +4,8 @@ import Link from "next/link";
 import { getFullFeed } from "@/lib/community-news";
 import CommunityNewsFeed from "./CommunityNewsFeed";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "NLMSF Community Snapshot News | NLMSF",
   description:

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 
 // ET offset: UTC = ET + 5 (no DST for simplicity)
@@ -10,6 +10,7 @@ function etToUtc(dateStr: string, timeStr: string): Date {
 }
 
 export async function GET() {
+  const prisma = await getPrisma();
   const now = new Date();
   type EventRecord = { eventAt: Date };
   const all = (await prisma.event.findMany({
@@ -42,6 +43,7 @@ export async function POST(request: NextRequest) {
 
   const eventAt = etToUtc(eventDate, eventTime);
 
+  const prisma = await getPrisma();
   const event = await prisma.event.create({
     data: {
       title,

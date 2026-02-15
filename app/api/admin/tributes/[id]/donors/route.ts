@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 import {
   isWordPressDbConfigured,
@@ -110,6 +110,7 @@ export async function POST(
     }
   }
 
+  const prisma = await getPrisma();
   const tribute = await prisma.tribute.findUnique({ where: { id: tributeIdParam } });
   if (!tribute) return NextResponse.json({ error: "Tribute not found" }, { status: 404 });
 

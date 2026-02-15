@@ -3,6 +3,8 @@ import { permanentRedirect, notFound } from "next/navigation";
 import TributePageClient from "@/app/tribute/[slug]/TributePageClient";
 import { getResolvedTributeSlug } from "@/lib/tribute-resolve";
 
+export const dynamic = "force-dynamic";
+
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

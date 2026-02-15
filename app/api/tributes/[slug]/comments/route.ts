@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import {
   isWordPressDbConfigured,
   isWordPressConnectionError,
@@ -69,6 +69,7 @@ export async function POST(
     }
   }
 
+  const prisma = await getPrisma();
   let tribute = await prisma.tribute.findFirst({
     where: { slug, isPublished: true },
   });

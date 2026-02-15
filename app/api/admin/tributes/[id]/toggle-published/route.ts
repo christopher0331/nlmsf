@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 import {
   isWordPressDbConfigured,
@@ -36,6 +36,7 @@ export async function PATCH(
     }
   }
 
+  const prisma = await getPrisma();
   const tribute = await prisma.tribute.update({
     where: { id },
     data: { isPublished },

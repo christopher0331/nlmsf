@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 import {
   isWordPressDbConfigured,
@@ -49,6 +49,7 @@ export async function PATCH(
     }
   }
 
+  const prisma = await getPrisma();
   const donor = await prisma.tributeDonor.findUnique({ where: { id } });
   if (!donor) return NextResponse.json({ error: "Donor not found" }, { status: 404 });
 

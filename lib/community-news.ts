@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 
 function formatDisplayDate(manualDate: string): string {
   const [y, m, d] = manualDate.split("-").map(Number);
@@ -47,6 +47,7 @@ export async function getFullFeed(): Promise<{
   newsTracker: FeedEntry[];
 }> {
   try {
+    const prisma = await getPrisma();
     const [snapshots, newsTracker] = await Promise.all([
       prisma.communityEntry.findMany({
         where: { type: "snapshot" },

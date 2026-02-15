@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 import {
   isWordPressDbConfigured,
@@ -58,6 +58,7 @@ export async function PATCH(
     }
   }
 
+  const prisma = await getPrisma();
   const existing = await prisma.tribute.findUnique({ where: { id } });
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
@@ -112,6 +113,7 @@ export async function DELETE(
     }
   }
 
+  const prisma = await getPrisma();
   await prisma.tribute.delete({ where: { id } }).catch(() => null);
   return NextResponse.json({ ok: true });
 }

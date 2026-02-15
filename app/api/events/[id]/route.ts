@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 
 function etToUtc(dateStr: string, timeStr: string): Date {
@@ -42,6 +42,7 @@ export async function PATCH(
   if (recordingUrl !== undefined) update.recordingUrl = recordingUrl;
   if (eventDate && eventTime) update.eventAt = etToUtc(eventDate, eventTime);
 
+  const prisma = await getPrisma();
   const event = await prisma.event.update({ where: { id }, data: update });
   return NextResponse.json(event);
 }
@@ -54,6 +55,7 @@ export async function DELETE(
   if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const id = (await params).id;
+  const prisma = await getPrisma();
   await prisma.event.delete({ where: { id } });
   return NextResponse.json({ ok: true });
 }

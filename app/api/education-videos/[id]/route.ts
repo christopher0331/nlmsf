@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 
 const CATEGORIES = ["patient-education", "medical-research", "caregiver-support", "webinars"];
@@ -26,7 +26,8 @@ export async function PATCH(
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const update: Parameters<typeof prisma.educationVideo.update>[0]["data"] = {};
+  const prisma = await getPrisma();
+  const update: Record<string, unknown> = {};
   if (body.title !== undefined) update.title = body.title;
   if (body.category !== undefined) {
     if (!CATEGORIES.includes(body.category)) {
@@ -55,6 +56,7 @@ export async function DELETE(
   if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const id = (await params).id;
+  const prisma = await getPrisma();
   await prisma.educationVideo.delete({ where: { id } });
   return NextResponse.json({ ok: true });
 }

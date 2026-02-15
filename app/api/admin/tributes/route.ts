@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 import {
   isWordPressDbConfigured,
@@ -26,6 +26,7 @@ export async function GET() {
     }
   }
 
+  const prisma = await getPrisma();
   type TributeRecord = {
     id: string;
     name: string;
@@ -108,6 +109,7 @@ export async function POST(request: Request) {
     }
   }
 
+  const prisma = await getPrisma();
   const existing = await prisma.tribute.findUnique({ where: { slug } });
   if (existing) {
     let suffix = 1;

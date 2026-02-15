@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 
 const CATEGORIES = ["patient-education", "medical-research", "caregiver-support", "webinars"];
@@ -8,6 +8,7 @@ export async function GET() {
   const ok = await isAuthenticated();
   if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
+  const prisma = await getPrisma();
   const videos = await prisma.educationVideo.findMany({
     orderBy: { createdAt: "desc" },
   });
@@ -40,6 +41,7 @@ export async function POST(request: Request) {
     );
   }
 
+  const prisma = await getPrisma();
   const video = await prisma.educationVideo.create({
     data: {
       title: title.trim(),

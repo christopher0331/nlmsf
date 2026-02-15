@@ -4,6 +4,8 @@ import { getFullFeed } from "@/lib/community-news";
 import NewsTrackerFeed from "./NewsTrackerFeed";
 import "./news-tracker.css";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "NLMSF News Tracker | NLMSF",
   description:

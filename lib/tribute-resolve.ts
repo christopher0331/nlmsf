@@ -2,7 +2,7 @@
  * Resolve a tribute slug (short or long) to the actual slug stored in the DB.
  * Used for redirects: non-tribute-page slugs → -tribute-page slugs.
  */
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import {
   isWordPressDbConfigured,
   isWordPressConnectionError,
@@ -22,6 +22,7 @@ export async function getResolvedTributeSlug(slug: string): Promise<string | nul
     }
   }
 
+  const prisma = await getPrisma();
   let tribute = await prisma.tribute.findFirst({
     where: { slug, isPublished: true },
     select: { slug: true },

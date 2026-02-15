@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 
 export async function PATCH(
@@ -17,7 +17,8 @@ export async function PATCH(
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const update: Parameters<typeof prisma.communityEntry.update>[0]["data"] = {};
+  const prisma = await getPrisma();
+  const update: Record<string, unknown> = {};
   if (body.type !== undefined) update.type = body.type;
   if (body.title !== undefined) update.title = body.title;
   if (body.summary !== undefined) update.summary = body.summary;
@@ -41,6 +42,7 @@ export async function DELETE(
   if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const id = (await params).id;
+  const prisma = await getPrisma();
   await prisma.communityEntry.delete({ where: { id } });
   return NextResponse.json({ ok: true });
 }

@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
 
 export async function GET() {
   const ok = await isAuthenticated();
   if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
+  const prisma = await getPrisma();
   const entries = await prisma.communityEntry.findMany({
     orderBy: { manualDate: "desc" },
   });
@@ -38,6 +39,7 @@ export async function POST(request: Request) {
     );
   }
 
+  const prisma = await getPrisma();
   const entry = await prisma.communityEntry.create({
     data: {
       type,

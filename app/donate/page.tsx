@@ -63,7 +63,7 @@ export default function DonatePage() {
 
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-2 grid grid-cols-1 gap-8 items-start lg:grid-cols-[280px_1fr]">
         {/* Sidebar */}
-        <aside className="sticky top-20 lg:mb-6">
+        <aside className="lg:sticky lg:top-20 lg:mb-6">
           <div className="bg-white rounded-xl shadow-md p-6 mb-6 border border-gray-100">
             <h3 className="text-xl font-bold flex items-center gap-3 pb-3 mb-5 border-b-2 border-gray-100">
               <i className="fas fa-donate text-[#7e22ce]" aria-hidden />

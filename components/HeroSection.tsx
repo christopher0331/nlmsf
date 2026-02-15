@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const HERO_IMG =
@@ -63,7 +64,7 @@ export default function HeroSection() {
             <div className="flex flex-col gap-4 max-w-[1000px] mx-auto my-8 md:flex-row md:items-stretch">
               <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:text-center md:py-6">
                 <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12 md:mx-auto">
-                  <i className="fas fa-heart text-white text-base md:text-xl" aria-hidden />
+                  <i className="fas fa-heart text-white text-base md:text-xl" style={{ margin: 0 }} aria-hidden />
                 </div>
                 <div className="flex-grow mr-6 text-left md:mr-0 md:mb-5 md:text-center">
                   <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2 ">
@@ -73,18 +74,16 @@ export default function HeroSection() {
                     Help push research forward for Leiomyosarcoma treatments
                   </p>
                 </div>
-                <a
-                  href={DONATE_URL}
+                <Link
+                  href="/donate"
                   className={btnOutline}
-                  data-fundraiseup-trigger
-                  data-form-id="DONATE"
                 >
                   Donate Now
-                </a>
+                </Link>
               </div>
               <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:text-center md:py-6">
                 <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12 md:mx-auto">
-                  <i className="fas fa-envelope text-white text-base md:text-xl" aria-hidden />
+                  <i className="fas fa-envelope text-white text-base md:text-xl" style={{ margin: 0 }} aria-hidden />
                 </div>
                 <div className="flex-grow mr-6 text-left md:mr-0 md:mb-5 md:text-center">
                   <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2 ">
@@ -104,7 +103,7 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:text-center md:py-6">
                 <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12 md:mx-auto">
-                  <i className="fab fa-facebook text-white text-base md:text-xl" aria-hidden />
+                  <i className="fab fa-facebook text-white text-base md:text-xl" style={{ margin: 0 }} aria-hidden />
                 </div>
                 <div className="flex-grow mr-6 text-left md:mr-0 md:mb-5 md:text-center">
                   <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2 ">

@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 
 /** Public: list all education videos for the Education Videos page */
 export async function GET() {
+  const prisma = await getPrisma();
   type EducationVideoRecord = {
     id: string;
     title: string;

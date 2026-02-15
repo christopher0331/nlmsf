@@ -12,12 +12,15 @@
     "seed:community-news": "node scripts/seed-community-news-from-wp-csv.js"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.0",
+    "@libsql/win32-x64-msvc": "^0.5.22",
     "@prisma/adapter-better-sqlite3": "^7.3.0",
     "@prisma/adapter-libsql": "^7.3.0",
     "@prisma/client": "^7.3.0",
     "better-sqlite3": "^12.6.2",
     "mysql2": "^3.16.2",
     "next": "^15.1.0",
+    "node-loader": "^2.1.0",
     "prisma": "^7.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

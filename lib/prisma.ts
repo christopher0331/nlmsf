@@ -1,21 +1,22 @@
+import path from "path";
 import { PrismaClient } from "@prisma/client";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
 
-const globalForPrisma = globalThis as unknown as { prisma: PrismaClient };
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | null; prismaPromise: Promise<PrismaClient> | null };
 
 function normalizeUrl(rawUrl: string) {
   return rawUrl.trim().replace(/^['"]+|['"]+$/g, "");
 }
 
-function createPrisma() {
-  const rawUrl =
-    process.env.DATABASE_URL ??
-    process.env.TURSO_DATABASE_URL ??
-    "file:./prisma/dev.db";
+async function createPrismaAsync(): Promise<PrismaClient> {
+  let rawUrl = process.env.DATABASE_URL ?? process.env.TURSO_DATABASE_URL;
+  if (!rawUrl) {
+    const absPath = path.join(process.cwd(), "prisma", "dev.db");
+    rawUrl = "file:" + absPath.replace(/\\/g, "/");
+  }
   const url = normalizeUrl(rawUrl);
   const adapter = url.startsWith("libsql://")
-    ? new PrismaLibSql({
+    ? new (await import("@prisma/adapter-libsql")).PrismaLibSql({
         url,
         authToken: process.env.TURSO_AUTH_TOKEN,
       })
@@ -26,6 +27,9 @@ function createPrisma() {
   });
 }
 
-export const prisma = globalForPrisma.prisma ?? createPrisma();
-
-if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+export async function getPrisma(): Promise<PrismaClient> {
+  if (globalForPrisma.prisma) return globalForPrisma.prisma;
+  if (!globalForPrisma.prismaPromise) globalForPrisma.prismaPromise = createPrismaAsync();
+  globalForPrisma.prisma = await globalForPrisma.prismaPromise;
+  return globalForPrisma.prisma;
+}

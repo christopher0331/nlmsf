@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { getFullFeed } from "@/lib/community-news";
 
 function formatDisplayDate(manualDate: string): string {
@@ -40,6 +40,7 @@ export async function GET(request: Request) {
     return NextResponse.json(data);
   }
 
+  const prisma = await getPrisma();
   const [latestSnapshot, latestNewsletter] = await Promise.all([
     prisma.communityEntry.findFirst({
       where: { type: "snapshot" },

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import {
   isWordPressDbConfigured,
   isWordPressConnectionError,
@@ -25,6 +25,7 @@ export async function GET(request: NextRequest) {
     }
   }
 
+  const prisma = await getPrisma();
   const tributes = await prisma.tribute.findMany({
     where: publishedOnly ? { isPublished: true } : undefined,
     orderBy: [{ displayOrder: "asc" }, { name: "asc" }],
