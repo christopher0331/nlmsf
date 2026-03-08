@@ -4,7 +4,7 @@ import Link from "next/link";
 import "./related-educational-videos.css";
 
 export const metadata: Metadata = {
-  title: "Related Educational Videos | NLMSF",
+  title: "ctDNA Recordings | NLMSF",
   description:
     "Educational recordings about circulating tumor DNA (ctDNA) testing and liquid biopsies for Leiomyosarcoma patients and healthcare providers.",
 };
@@ -21,6 +21,19 @@ type VideoItem = {
 };
 
 const ctDnaVideos: VideoItem[] = [
+  {
+    id: "1GWZejubPNo",
+    title:
+      "Current Status of Circulating Tumor DNA for Sarcomas — Discussion by a Panel of Experts",
+    presenter: "Expert Panel — Five Institutions",
+    presenterTitle:
+      "Dana-Farber, Stanford, Princess Margaret, James Cancer Center & McGill University",
+    date: "November 2025",
+    description:
+      "Five leading physician-scientists discuss the current landscape of ctDNA and liquid biopsy research in sarcoma and leiomyosarcoma. The panel covers the unique challenges of detecting ctDNA in soft tissue sarcomas, emerging evidence that ctDNA levels can predict recurrence before imaging, and novel assay approaches — including tracking structural variants — that may enable earlier intervention for high-risk patients.",
+    url: "https://www.youtube.com/watch?v=1GWZejubPNo",
+    initials: "P",
+  },
   {
     id: "fhsyH8bJn-l",
     title: "Circulating Tumor DNA Status and Future Directions for Sarcoma",
@@ -91,194 +104,142 @@ const ctDnaVideos: VideoItem[] = [
   },
 ];
 
+const featured = ctDnaVideos[0];
+const rest = ctDnaVideos.slice(1);
+
 function VideoCard({ video }: { video: VideoItem }) {
   return (
-    <article className="video-card emerald">
-      <div className="youtube-badge">YouTube Podcast</div>
-      <a
-        href={video.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="video-link emerald"
-      >
-        <div className="video-thumbnail">
-          <Image
-            src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
-            alt={`${video.title} - Video Thumbnail`}
-            width={640}
-            height={360}
-            sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 100vw"
-          />
-          <i className="fas fa-play-circle video-play-icon" aria-hidden />
-        </div>
-      </a>
-      <div className="presenter-info">
-        <div className="presenter-avatar emerald">
-          <span className="presenter-initial emerald">{video.initials}</span>
-        </div>
-        <div>
-          <h5 className="presenter-name emerald">{video.presenter}</h5>
-          <p className="presenter-title">{video.presenterTitle}</p>
+    <a
+      href={video.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rev-card group"
+    >
+      <div className="rev-thumb">
+        <Image
+          src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
+          alt={video.title}
+          width={640}
+          height={360}
+          sizes="(min-width: 768px) 50vw, 100vw"
+        />
+        <div className="rev-play">
+          <i className="fas fa-play" aria-hidden />
         </div>
       </div>
-      <h4 className="video-topic">{video.title}</h4>
-      <p className="video-date">
-        <i className="far fa-calendar" aria-hidden /> {video.date}
-      </p>
-      <p className="video-description">{video.description}</p>
-      <a href={video.url} target="_blank" rel="noopener noreferrer" className="video-link emerald">
-        <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
-      </a>
-    </article>
+      <div className="rev-body">
+        <h3 className="rev-title">{video.title}</h3>
+        <p className="rev-presenter">{video.presenter}</p>
+        <p className="rev-inst">{video.presenterTitle}</p>
+        <p className="rev-date">
+          <i className="far fa-calendar-alt" aria-hidden /> {video.date}
+        </p>
+        <p className="rev-desc">{video.description}</p>
+      </div>
+    </a>
   );
 }
 
 export default function RelatedEducationalVideosPage() {
   return (
-    <main className="related-videos-page">
-      <section className="hero-container">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <div className="badge-icon">
-              <i className="fas fa-dna" aria-hidden />
-            </div>
-            <span>Patient Resources</span>
-          </div>
-          <h1 className="hero-title">
-            <span className="gradient-text">ctDNA Recordings</span>
-          </h1>
-          <div className="hero-divider" />
-          <div className="hero-features">
-            <span className="feature-tag">
-              <i className="fas fa-flask" aria-hidden /> Research
-            </span>
-            <span className="feature-tag">
-              <i className="fas fa-vial" aria-hidden /> Testing
-            </span>
-            <span className="feature-tag">
-              <i className="fas fa-heartbeat" aria-hidden /> Monitoring
-            </span>
-          </div>
-          <p className="hero-description">
-            Educational recordings about circulating tumor DNA (ctDNA) testing and liquid biopsies
-            for Leiomyosarcoma patients and healthcare providers.
+    <main className="rev-page">
+      <section className="rev-hero">
+        <div className="rev-hero-inner">
+          <span className="rev-badge">
+            <i className="fas fa-dna" aria-hidden /> Patient Resources
+          </span>
+          <h1>ctDNA Recordings</h1>
+          <p>
+            Educational recordings about circulating tumor DNA (ctDNA) testing and
+            liquid biopsies for Leiomyosarcoma patients and healthcare providers.
           </p>
+          <div className="rev-tags">
+            <span><i className="fas fa-flask" aria-hidden /> Research</span>
+            <span><i className="fas fa-vial" aria-hidden /> Testing</span>
+            <span><i className="fas fa-heartbeat" aria-hidden /> Monitoring</span>
+          </div>
         </div>
       </section>
 
-      <div className="main-content-wrapper">
-        <aside className="sidebar">
-          <div className="sidebar-navigation">
-            <h3 className="sidebar-title">ctDNA Resources</h3>
-            <ul className="sidebar-links">
-              <li className="sidebar-link-item active">
-                <a href="#circulating-tumor-dna" className="sidebar-link">
-                  <i className="fas fa-angle-right" aria-hidden /> Liquid Biopsy Research
-                </a>
-              </li>
-              <li className="sidebar-link-item">
-                <a href="#understanding-ctdna" className="sidebar-link">
-                  <i className="fas fa-angle-right" aria-hidden /> Understanding ctDNA
-                </a>
-              </li>
-              <li className="sidebar-link-item">
-                <a href="#patient-resources" className="sidebar-link">
-                  <i className="fas fa-angle-right" aria-hidden /> Patient Resources
-                </a>
-              </li>
-              <li className="sidebar-link-item">
-                <a href="#clinical-trials" className="sidebar-link">
-                  <i className="fas fa-angle-right" aria-hidden /> Related Clinical Trials
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="sidebar-cta">
-            <div className="cta-gradient">
-              <h4>Join Our Research Community</h4>
-              <p>Help advance LMS research by joining our community or making a donation.</p>
-              <a
-                href="https://nlmsf.org/donate/"
-                className="cta-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Support Research
-              </a>
+      {/* Featured / latest video */}
+      <section className="rev-featured">
+        <a
+          href={featured.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rev-featured-link group"
+        >
+          <div className="rev-featured-thumb">
+            <Image
+              src={`https://img.youtube.com/vi/${featured.id}/maxresdefault.jpg`}
+              alt={featured.title}
+              width={1280}
+              height={720}
+              sizes="(min-width: 768px) 60vw, 100vw"
+              priority
+            />
+            <div className="rev-play rev-play-lg">
+              <i className="fas fa-play" aria-hidden />
             </div>
           </div>
-        </aside>
+          <div className="rev-featured-body">
+            <span className="rev-latest-tag">Latest</span>
+            <h2>{featured.title}</h2>
+            <p className="rev-featured-presenter">{featured.presenter}</p>
+            <p className="rev-featured-inst">{featured.presenterTitle}</p>
+            <p className="rev-featured-date">
+              <i className="far fa-calendar-alt" aria-hidden /> {featured.date}
+            </p>
+            <p className="rev-featured-desc">{featured.description}</p>
+          </div>
+        </a>
+      </section>
 
-        <div className="main-content">
-          <section id="circulating-tumor-dna" className="content-section">
-            <h2 className="section-title emerald">Circulating Tumor DNA and Liquid Biopsies</h2>
-            <div className="content-panel emerald">
-              <div className="panel-header">
-                <div className="icon-circle emerald">
-                  <i className="fas fa-vial" aria-hidden />
-                </div>
-                <div>
-                  <h3>Liquid Biopsy Research</h3>
-                  <p>Advancements in ctDNA testing for LMS</p>
-                </div>
-              </div>
-              <p className="panel-text">
-                These videos discuss the emerging field of circulating tumor DNA (ctDNA) testing
-                and liquid biopsies, which offer potential for less invasive monitoring of
-                Leiomyosarcoma.
-              </p>
-              <div className="videos-grid">
-                {ctDnaVideos.map((video) => (
-                  <VideoCard key={video.id} video={video} />
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section id="understanding-ctdna" className="content-section">
-            <h2 className="section-title emerald">Understanding ctDNA</h2>
-            <div className="content-panel emerald">
-              <p className="panel-text">
-                Learn how ctDNA testing works, why it matters, and how it may impact monitoring
-                and treatment planning for sarcoma patients.
-              </p>
-            </div>
-          </section>
-
-          <section id="patient-resources" className="content-section">
-            <h2 className="section-title emerald">Patient Resources</h2>
-            <div className="content-panel emerald">
-              <p className="panel-text">
-                Explore NLMSF resources that can help you navigate testing, treatment decisions,
-                and clinical trial options.
-              </p>
-              <div className="resources-links">
-                <Link href="/personal-advocacy">Personal Advocacy</Link>
-                <Link href="/psychosocial-guidance">Psychosocial Guidance</Link>
-                <Link href="/questions-to-ask-your-sarcoma-surgical-or-radiation-specialists">
-                  Questions to Ask Your Specialists
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          <section id="clinical-trials" className="content-section">
-            <h2 className="section-title emerald">Related Clinical Trials</h2>
-            <div className="content-panel emerald">
-              <p className="panel-text">
-                Looking for active or upcoming trials? Start with our education videos and then
-                visit the clinical trials resources to learn more about eligibility and next
-                steps.
-              </p>
-              <div className="resources-links">
-                <Link href="/recorded-presentations">Recorded Presentations</Link>
-                <Link href="/events">Education Videos Library</Link>
-              </div>
-            </div>
-          </section>
+      {/* Video grid */}
+      <section className="rev-grid-section">
+        <h2 className="rev-section-heading">More ctDNA &amp; Liquid Biopsy Recordings</h2>
+        <div className="rev-grid">
+          {rest.map((v) => (
+            <VideoCard key={v.id} video={v} />
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* Resources */}
+      <section className="rev-resources">
+        <div className="rev-res-card">
+          <h3>Understanding ctDNA</h3>
+          <p>
+            Learn how ctDNA testing works, why it matters, and how it may impact
+            monitoring and treatment planning for sarcoma patients.
+          </p>
+        </div>
+        <div className="rev-res-card">
+          <h3>Patient Resources</h3>
+          <p>
+            Explore NLMSF resources to navigate testing, treatment decisions, and
+            clinical trial options.
+          </p>
+          <div className="rev-res-links">
+            <Link href="/personal-advocacy">Personal Advocacy</Link>
+            <Link href="/psychosocial-guidance">Psychosocial Guidance</Link>
+            <Link href="/questions-to-ask-your-sarcoma-surgical-or-radiation-specialists">
+              Questions to Ask Your Specialists
+            </Link>
+          </div>
+        </div>
+        <div className="rev-res-card">
+          <h3>Related Clinical Trials</h3>
+          <p>
+            Looking for active or upcoming trials? Visit our clinical trials
+            resources to learn about eligibility and next steps.
+          </p>
+          <div className="rev-res-links">
+            <Link href="/recorded-presentations">Recorded Presentations</Link>
+            <Link href="/events">Education Videos Library</Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

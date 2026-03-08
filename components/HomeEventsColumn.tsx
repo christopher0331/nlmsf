@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 type EventItem = {
   id: string;
@@ -63,7 +64,7 @@ export default function HomeEventsColumn() {
   if (loading) {
     return (
       <div className="flex flex-col gap-6">
-        <div className="p-4 text-center text-gray-500 text-sm">Loading events…</div>
+        <div className="p-4 text-center text-gray-500 text-sm">Loading patient programs…</div>
       </div>
     );
   }
@@ -80,16 +81,24 @@ export default function HomeEventsColumn() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h2 className={sectionTitle}>
-          <span className="text-lg" aria-hidden>📅</span>
-          Upcoming Events
-        </h2>
+        <div className="flex items-center justify-between mb-3 pb-2 border-b-2 border-violet-700">
+          <h2 className="text-xl font-bold text-violet-700 m-0 flex items-center gap-2">
+            <span className="text-lg" aria-hidden>📅</span>
+            Upcoming Patient Programs
+          </h2>
+          <Link
+            href="/events"
+            className="text-[0.8rem] font-semibold text-violet-700 no-underline hover:text-violet-900 transition-colors flex items-center gap-1"
+          >
+            Archived Programs <span aria-hidden>&rarr;</span>
+          </Link>
+        </div>
         <div className="bg-[#f8f5fb] rounded-xl border border-gray-200 p-4 shadow-[0_4px_12px_rgba(15,23,42,0.06)]">
           {upcoming.length === 0 ? (
             <div className="text-center py-8 px-4 text-gray-500 text-[0.95rem]">
               <div className="text-4xl mb-3 opacity-60" aria-hidden>📅</div>
-              <p className="my-1">No upcoming events at this time.</p>
-              <p className="my-1">Check back soon for new events and opportunities!</p>
+              <p className="my-1">No upcoming patient programs at this time.</p>
+              <p className="my-1">Check back soon for new programs and opportunities!</p>
             </div>
           ) : (
             <ul className="list-none m-0 p-0 flex flex-col gap-4">
