@@ -110,6 +110,9 @@ export default function IronmanFundraiser() {
         <button type="button" className="imf-donate-btn" onClick={handleDonate}>
           <i className="fas fa-heart" aria-hidden /> Donate to This Campaign
         </button>
+        <a href="/ironman-fundraiser" className="imf-learn-more">
+          Read Joseph&apos;s Story &rarr;
+        </a>
       </div>
     </div>
   );

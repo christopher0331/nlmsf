@@ -4,11 +4,18 @@ const CAMPAIGN_ID = "FUNRBJGPJSK";
 const API_BASE = "https://api.fundraiseup.com/v1";
 const CAMPAIGN_START = "2026-03-08T00:00:00Z";
 
+type Supporter = {
+  first_name: string;
+  last_name: string;
+};
+
 type Donation = {
   id: string;
   status: string;
   amount: string;
+  anonymous: boolean;
   campaign: { id: string } | null;
+  supporter: Supporter | null;
 };
 
 type ListResponse = {
@@ -16,12 +23,19 @@ type ListResponse = {
   has_more: boolean;
 };
 
-async function fetchCampaignTotal(): Promise<{ raised: number; donors: number }> {
+type DonorEntry = { name: string; amount: number };
+
+async function fetchCampaignData(): Promise<{
+  raised: number;
+  donors: number;
+  topDonors: DonorEntry[];
+}> {
   const apiKey = process.env.DONATION_API_KEY;
-  if (!apiKey) return { raised: 0, donors: 0 };
+  if (!apiKey) return { raised: 0, donors: 0, topDonors: [] };
 
   let raised = 0;
   let donors = 0;
+  const donorMap = new Map<string, number>();
   let lastId: string | undefined;
 
   try {
@@ -50,8 +64,17 @@ async function fetchCampaignTotal(): Promise<{ raised: number; donors: number }>
 
       for (const d of json.data) {
         if (d.campaign?.id === CAMPAIGN_ID && d.status === "succeeded") {
-          raised += parseFloat(d.amount) || 0;
+          const amt = parseFloat(d.amount) || 0;
+          raised += amt;
           donors += 1;
+
+          const name = d.anonymous
+            ? "Anonymous"
+            : [d.supporter?.first_name, d.supporter?.last_name]
+                .filter(Boolean)
+                .join(" ") || "Supporter";
+
+          donorMap.set(name, (donorMap.get(name) ?? 0) + amt);
         }
         lastId = d.id;
       }
@@ -63,17 +86,23 @@ async function fetchCampaignTotal(): Promise<{ raised: number; donors: number }>
     console.error("Fundraise Up fetch error:", err);
   }
 
+  const topDonors = [...donorMap.entries()]
+    .map(([name, amount]) => ({ name, amount: Math.round(amount * 100) / 100 }))
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, 10);
+
   return {
     raised: Math.round(raised * 100) / 100,
     donors,
+    topDonors,
   };
 }
 
 export async function GET() {
-  const { raised, donors } = await fetchCampaignTotal();
+  const { raised, donors, topDonors } = await fetchCampaignData();
 
   return NextResponse.json(
-    { raised, goal: 5000, donors },
+    { raised, goal: 5000, donors, topDonors },
     {
       headers: {
         "Cache-Control": "public, s-maxage=300, stale-while-revalidate=60",

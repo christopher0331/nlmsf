@@ -178,6 +178,22 @@
   transform: translateY(0);
 }
 
+/* Learn more link */
+.imf-learn-more {
+  display: block;
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.imf-learn-more:hover {
+  color: #0f172a;
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .imf-header {

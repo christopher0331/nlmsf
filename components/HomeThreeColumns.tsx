@@ -248,8 +248,12 @@ export default function HomeThreeColumns() {
           </div>
         </div>
 
-        {/* Center column: Support Hotline + Testimonials */}
+        {/* Center column: Ironman Fundraiser + Support Hotline + Testimonials */}
         <div>
+          <div className="mb-6">
+            <IronmanFundraiser />
+          </div>
+
           <div className="rounded-xl bg-gradient-to-br from-[#6b46c1] to-[#4c1d95] p-6 text-center text-white shadow-[0_4px_20px_rgba(107,70,193,0.25)] relative overflow-hidden">
             <div
               className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/[0.06] translate-x-1/3 -translate-y-1/3"
@@ -296,10 +300,6 @@ export default function HomeThreeColumns() {
                 </Link>
               </div>
             </div>
-          </div>
-
-          <div className="mt-6">
-            <IronmanFundraiser />
           </div>
 
           <div className="mt-6 p-4 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-xl border border-slate-200 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] sm:p-3">
