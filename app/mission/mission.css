@@ -430,68 +430,77 @@
 .mission-page .timeline {
   position: relative;
   padding: 1rem 0;
+  margin-left: 14px;
 }
 
 .mission-page .timeline::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 16px;
+  left: 0;
   height: 100%;
   width: 3px;
-  background-color: #e5e7eb;
+  background: linear-gradient(to bottom, #e5e7eb, #d1d5db);
+  border-radius: 3px;
 }
 
 .mission-page .timeline-item {
   position: relative;
-  padding-left: 40px;
+  padding-left: 2.5rem;
   margin-bottom: 2rem;
 }
 
 .mission-page .timeline-dot {
   position: absolute;
-  left: 0;
-  top: 4px;
-  width: 32px;
-  height: 32px;
+  left: -6px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 3px solid white;
-  box-shadow: 0 0 0 3px #e5e7eb;
+  box-shadow: 0 0 0 2px #e5e7eb;
   background-color: white;
   z-index: 1;
 }
 
 .mission-page .timeline-item-blue .timeline-dot {
-  box-shadow: 0 0 0 3px #3b82f6;
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #bfdbfe;
 }
 
 .mission-page .timeline-item-purple .timeline-dot {
-  box-shadow: 0 0 0 3px #8b5cf6;
+  background-color: #8b5cf6;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #ddd6fe;
 }
 
 .mission-page .timeline-item-teal .timeline-dot {
-  box-shadow: 0 0 0 3px #14b8a6;
+  background-color: #14b8a6;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #99f6e4;
 }
 
 .mission-page .timeline-item-orange .timeline-dot {
-  box-shadow: 0 0 0 3px #f59e0b;
+  background-color: #f59e0b;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #fde68a;
 }
 
 .mission-page .timeline-item-red .timeline-dot {
-  box-shadow: 0 0 0 3px #ef4444;
+  background-color: #ef4444;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #fecaca;
 }
 
 .mission-page .timeline-item-green .timeline-dot {
-  box-shadow: 0 0 0 3px #22c55e;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #bbf7d0;
 }
 
 .mission-page .timeline-item-amber .timeline-dot {
-  box-shadow: 0 0 0 3px #f59e0b;
-  background-color: #fffbeb;
+  background-color: #f59e0b;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #fde68a;
 }
 
 .mission-page .timeline-item-pink .timeline-dot {
-  box-shadow: 0 0 0 3px #ec4899;
+  background-color: #ec4899;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #fbcfe8;
 }
 
 .mission-page .timeline-content {

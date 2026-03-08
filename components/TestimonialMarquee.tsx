@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const TESTIMONIALS = [
   {
     name: "Dr. M. Druta",
@@ -203,7 +205,7 @@ function Card({ name, type, text, image }: (typeof TESTIMONIALS)[number]) {
   return (
     <div className="tm-card">
       <div className="tm-card-header">
-        <img src={image} alt="" className="tm-avatar" />
+        <Image src={image} alt="" className="tm-avatar" width={80} height={80} sizes="80px" />
         <div>
           <div className="tm-name">{name}</div>
           <div className={`tm-type ${type === "Patient" ? "tm-type-patient" : "tm-type-clinician"}`}>

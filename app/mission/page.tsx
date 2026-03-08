@@ -69,10 +69,10 @@ export default function MissionPage() {
             </nav>
             <h3 className="sidebar-title additional-resources">Related Resources</h3>
             <div className="sidebar-resources">
-              <Link href="/research-projects/" className="resource-link">
+              <a href="https://nlmsf.org/research-funding-2/" className="resource-link" target="_blank" rel="noopener noreferrer">
                 <span className="resource-icon" aria-hidden />
                 <span>LMS Research Projects</span>
-              </Link>
+              </a>
               <Link href="/about-us/" className="resource-link">
                 <span className="resource-icon" aria-hidden />
                 <span>About NLMSF</span>
@@ -157,47 +157,11 @@ export default function MissionPage() {
               <div id="milestones" className="timeline-container">
                 <h4 className="section-subtitle">Key Milestones</h4>
                 <div className="timeline">
-                  <div className="timeline-item timeline-item-amber">
+                  <div className="timeline-item timeline-item-green">
                     <div className="timeline-dot" aria-hidden />
                     <div className="timeline-content">
-                      <h5>1997 - 2001</h5>
-                      <p>Patients and family came together for the first time, called annual Hugfest, from 1997 to 2001, which later became the NLMSF.</p>
-                    </div>
-                  </div>
-                  <div className="timeline-item timeline-item-purple">
-                    <div className="timeline-dot" aria-hidden />
-                    <div className="timeline-content">
-                      <h5>2001</h5>
-                      <p>Foundation founded by a Caregiver in honor of his wife to support and advocate for patients and fund research. Originally, a gathering place for peer-to-peer support.</p>
-                    </div>
-                  </div>
-                  <div className="timeline-item timeline-item-blue">
-                    <div className="timeline-dot" aria-hidden />
-                    <div className="timeline-content">
-                      <h5>2002 – present</h5>
-                      <p>The NLMSF Research Project Support Funding history: <a href="https://leiomyosarcoma.info/research-projects/" target="_blank" rel="noopener noreferrer">View Research Projects</a></p>
-                    </div>
-                  </div>
-                  <div className="timeline-item timeline-item-teal">
-                    <div className="timeline-dot" aria-hidden />
-                    <div className="timeline-content">
-                      <h5>2012</h5>
-                      <p>Patient education programs began at sarcoma centers of excellence and the evolution of the Foundation has been remarkable.</p>
-                    </div>
-                  </div>
-                  <div className="timeline-item timeline-item-pink">
-                    <div className="timeline-dot" aria-hidden />
-                    <div className="timeline-content">
-                      <h5>2015</h5>
-                      <p>The NLMSF collaborate with several cancer/sarcoma working groups throughout the US and Canada to strengthen and amplify patient – family/caregiver resource support.</p>
-                    </div>
-                  </div>
-                  <div className="timeline-item timeline-item-orange">
-                    <div className="timeline-dot" aria-hidden />
-                    <div className="timeline-content">
-                      <h5>2016</h5>
-                      <p>The NLMSF reached out for support from Congress for National Leiomyosarcoma Awareness Day – July 15.</p>
-                      <p>Congress passed the Resolution: <a href="https://www.govtrack.us/congress/bills/114/sres545/text/ats" target="_blank" rel="noopener noreferrer">View Resolution</a></p>
+                      <h5>2020</h5>
+                      <p>Sarcoma PatientsEuro.Net partner with the NLMSF in support of the International LMS Research Roundtable.</p>
                     </div>
                   </div>
                   <div className="timeline-item timeline-item-red">
@@ -207,11 +171,47 @@ export default function MissionPage() {
                       <p>The NLMSF launched the International Leiomyosarcoma Roundtable, now with 120 research members in global support. <a href="https://leiomyosarcoma.info/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
                     </div>
                   </div>
-                  <div className="timeline-item timeline-item-green">
+                  <div className="timeline-item timeline-item-orange">
                     <div className="timeline-dot" aria-hidden />
                     <div className="timeline-content">
-                      <h5>2020</h5>
-                      <p>Sarcoma PatientsEuro.Net partner with the NLMS in support of the International LMS Research Roundtable.</p>
+                      <h5>2016</h5>
+                      <p>National Leiomyosarcoma Awareness Day – July 15 approved by Congress.</p>
+                      <p><a href="https://www.govtrack.us/congress/bills/114/sres545/text/ats" target="_blank" rel="noopener noreferrer">View Resolution</a></p>
+                    </div>
+                  </div>
+                  <div className="timeline-item timeline-item-pink">
+                    <div className="timeline-dot" aria-hidden />
+                    <div className="timeline-content">
+                      <h5>2015</h5>
+                      <p>The NLMSF began collaborating with cancer/sarcoma working groups across the US and Canada to strengthen patient–family/caregiver resource support.</p>
+                    </div>
+                  </div>
+                  <div className="timeline-item timeline-item-teal">
+                    <div className="timeline-dot" aria-hidden />
+                    <div className="timeline-content">
+                      <h5>2012</h5>
+                      <p>Patient education programs launched at sarcoma centers of excellence.</p>
+                    </div>
+                  </div>
+                  <div className="timeline-item timeline-item-blue">
+                    <div className="timeline-dot" aria-hidden />
+                    <div className="timeline-content">
+                      <h5>2002</h5>
+                      <p>Foundation incorporated and began funding LMS-specific research. <a href="https://nlmsf.org/research-funding-2/" target="_blank" rel="noopener noreferrer">View Research Projects</a></p>
+                    </div>
+                  </div>
+                  <div className="timeline-item timeline-item-purple">
+                    <div className="timeline-dot" aria-hidden />
+                    <div className="timeline-content">
+                      <h5>2001</h5>
+                      <p>Foundation founded by a Caregiver in honor of his wife to support and advocate for patients and fund research.</p>
+                    </div>
+                  </div>
+                  <div className="timeline-item timeline-item-amber">
+                    <div className="timeline-dot" aria-hidden />
+                    <div className="timeline-content">
+                      <h5>1997</h5>
+                      <p>Patients and families came together for the first annual Hugfest — the gathering that would become the NLMSF.</p>
                     </div>
                   </div>
                 </div>

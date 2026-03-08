@@ -155,6 +155,8 @@ export default function Header() {
             width={200}
             height={140}
             className={LOGO_IMG}
+            sizes="(max-width: 768px) 120px, 200px"
+            priority
             style={{ height: 140, width: "auto" }}
             priority
           />
@@ -870,6 +872,7 @@ export default function Header() {
               width={160}
               height={112}
               className={MOBILE_LOGO_IMG}
+              sizes="160px"
               style={{ width: 160, height: "auto" }}
               priority
             />

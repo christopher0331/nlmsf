@@ -5,7 +5,7 @@ import "./research-funding-2.css";
 export const metadata: Metadata = {
   title: "Research Funding Summary | NLMSF",
   description:
-    "Summary of National Leiomyosarcoma Foundation research funding over the years.",
+    "Summary of National Leiomyosarcoma Foundation research funding since 2002.",
 };
 
 export default function ResearchFundingPage() {
@@ -16,13 +16,13 @@ export default function ResearchFundingPage() {
           <div className="nlmsf-hero-content">
             <div className="nlmsf-resource-tag">Research Resources</div>
             <h1 className="nlmsf-hero-title">
-              NLMSF Research Funding: Summary of Support Over the Years
+              NLMSF Research Funding: Summary of Support Since 2002
             </h1>
             <p className="nlmsf-hero-subtitle">
               Since our inception in 2002, the National Leiomyosarcoma Foundation has been dedicated
               to supporting groundbreaking research to advance our understanding and treatment of
               Leiomyosarcoma. This page highlights the projects and researchers we&apos;ve funded
-              over the years.
+              since 2002.
             </p>
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function ResearchFundingPage() {
             </p>
             <p>
               Through the generous support of our donors and community, we have been able to fund
-              numerous research projects over the years. Below is a comprehensive list of the
+              numerous research projects since 2002. Below is a comprehensive list of the
               projects we&apos;ve supported, organized by year.
             </p>
           </section>
