@@ -1,193 +1,465 @@
-/* Immunotherapy-2 page - scoped under .immunotherapy-2-page */
-
-.immunotherapy-2-page {
-  --imm2-max: 1100px;
+/* ── Page ── */
+.imm-page {
+  color: #1e293b;
+  line-height: 1.6;
 }
 
-/* Hero */
-.immunotherapy-2-page .wp-hero {
-  background: linear-gradient(90deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-  color: #fff;
-  padding: 40px 16px;
-  border-radius: 14px;
-  margin: 12px 0 20px;
-}
-
-.immunotherapy-2-page .wp-hero-inner {
-  max-width: var(--imm2-max);
+.imm-container {
+  max-width: 1060px;
   margin: 0 auto;
+  padding: 0 1.25rem 4rem;
 }
 
-.immunotherapy-2-page .wp-hero-badge {
-  display: inline-block;
-  font-size: 12px;
-  padding: 6px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.immunotherapy-2-page .wp-hero-title {
-  margin: 10px 0 6px;
-  font-size: 32px;
-  font-weight: 800;
-}
-
-.immunotherapy-2-page .wp-hero-sub {
-  opacity: 0.95;
-  max-width: 760px;
-  margin: 0;
-}
-
-/* Layout: sidebar + content */
-.immunotherapy-2-page .immunotherapy-2-layout {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 24px;
-  align-items: start;
-  max-width: var(--imm2-max);
-  margin: 0 auto;
-  padding: 0 16px 24px;
-}
-
-@media (max-width: 768px) {
-  .immunotherapy-2-page .immunotherapy-2-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .immunotherapy-2-page .wp-sidebar {
-    position: static;
-  }
-}
-
-/* Content container */
-.immunotherapy-2-page .content-container {
-  max-width: 1100px;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
-}
-
-/* Sections */
-.immunotherapy-2-page .section {
-  margin: 18px 0;
-}
-
-.immunotherapy-2-page .section-title {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 8px;
+/* ── Hero ── */
+.imm-hero {
+  background: linear-gradient(to bottom, #ffffff, #eef2ff);
+  padding: 4rem 2rem;
   position: relative;
-  display: inline-block;
-}
-
-.immunotherapy-2-page .section-title::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 68px;
-  background: linear-gradient(90deg, #7e22ce 0%, #4338ca 100%);
-  border-radius: 2px;
-  margin-top: 6px;
-}
-
-.immunotherapy-2-page .gradient-text {
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(90deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-}
-
-.immunotherapy-2-page .lead {
-  color: #374151;
-  font-size: 16px;
-  margin: 0 0 8px;
-}
-
-.immunotherapy-2-page .muted {
-  color: #6b7280;
-  font-size: 14px;
-  margin: 0;
-}
-
-/* Card */
-.immunotherapy-2-page .card {
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  background: #fff;
-  padding: 16px;
-  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.02);
-  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-}
-
-.immunotherapy-2-page .card:hover {
-  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
-  transform: translateY(-2px);
-  border-color: #d1d5db;
-}
-
-/* LMS updates inner */
-.immunotherapy-2-page .lms-updates-inner {
-  color: #111827;
-}
-
-.immunotherapy-2-page .lms-updates-inner h2,
-.immunotherapy-2-page .lms-updates-inner h3,
-.immunotherapy-2-page .lms-updates-inner h4 {
-  color: #111827;
-  font-weight: 700;
-  margin: 1rem 0 0.5rem;
-}
-
-.immunotherapy-2-page .lms-updates-inner h2:first-of-type,
-.immunotherapy-2-page .lms-updates-inner h3:first-of-type,
-.immunotherapy-2-page .lms-updates-inner h4:first-of-type {
-  margin-top: 0;
-}
-
-.immunotherapy-2-page .lms-updates-inner p {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-}
-
-.immunotherapy-2-page .lms-updates-inner a {
-  color: #1d4ed8;
-  text-decoration: none;
-  border-bottom: 1px solid #bfdbfe;
-}
-
-.immunotherapy-2-page .lms-updates-inner a:hover {
-  color: #1e40af;
-  border-bottom-color: #93c5fd;
-}
-
-.immunotherapy-2-page .lms-updates-heading {
-  color: #339966;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
-}
-
-.immunotherapy-2-page .lms-subheading {
-  color: #99cc00;
-  margin: 1.25rem 0 0.5rem;
-}
-
-.immunotherapy-2-page .lms-h2 {
-  font-size: 1.25rem;
-  margin: 1.25rem 0 0.5rem;
-}
-
-/* Video wrap */
-.immunotherapy-2-page .video-wrap {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
   overflow: hidden;
-  margin: 1rem 0;
-  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-.immunotherapy-2-page .video-wrap iframe {
+.imm-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.imm-badge-dot {
+  width: 10px;
+  height: 10px;
+  background: #6a3ea1;
+  border-radius: 50%;
+}
+
+.imm-hero h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  background: linear-gradient(to right, #6a3ea1, #4a90e2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.15;
+}
+
+.imm-divider {
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(to right, #6a3ea1, #4a90e2);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+.imm-hero p {
+  font-size: 1.15rem;
+  color: #6b7280;
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+
+.imm-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.imm-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.imm-tag.indigo {
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.imm-tag.purple {
+  background: #faf5ff;
+  color: #7e22ce;
+  border: 1px solid #e9d5ff;
+}
+
+.imm-tag.blue {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.imm-tag.teal {
+  background: #f0fdfa;
+  color: #0f766e;
+  border: 1px solid #99f6e4;
+}
+
+.imm-hero-decor {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+.imm-hero-decor.decor-one {
+  width: 28rem;
+  height: 28rem;
+  background: linear-gradient(to bottom right, #a78bfa, #818cf8);
+  top: -14rem;
+  right: -8rem;
+}
+
+.imm-hero-decor.decor-two {
+  width: 18rem;
+  height: 18rem;
+  background: linear-gradient(to top right, #c084fc, #60a5fa);
+  bottom: -9rem;
+  left: -4rem;
+}
+
+/* ── Nav ── */
+.imm-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+}
+
+.imm-nav h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0.5rem 0 0;
+  white-space: nowrap;
+}
+
+.imm-nav a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #6a3ea1;
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: #f3e8ff;
+  transition: background 0.15s, color 0.15s;
+}
+
+.imm-nav a:hover {
+  background: #6a3ea1;
+  color: white;
+}
+
+/* ── Section ── */
+.imm-section {
+  margin-bottom: 2.5rem;
+}
+
+.imm-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+.imm-section-title.purple {
+  color: #7e22ce;
+  border-color: #e9d5ff;
+}
+
+.imm-section-title.indigo {
+  color: #4338ca;
+  border-color: #c7d2fe;
+}
+
+.imm-section-title.blue {
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.imm-section-title.teal {
+  color: #0f766e;
+  border-color: #99f6e4;
+}
+
+/* ── Panels ── */
+.imm-panel {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.imm-panel.purple {
+  background: linear-gradient(to right, #faf5ff, #f3e8ff);
+  border-color: #e9d5ff;
+}
+
+.imm-panel.indigo {
+  background: linear-gradient(to right, #eef2ff, #e0e7ff);
+  border-color: #c7d2fe;
+}
+
+.imm-panel.blue {
+  background: linear-gradient(to right, #eff6ff, #dbeafe);
+  border-color: #bfdbfe;
+}
+
+.imm-panel.teal {
+  background: linear-gradient(to right, #f0fdfa, #ccfbf1);
+  border-color: #99f6e4;
+}
+
+.imm-panel-sub {
+  margin-top: 1rem;
+}
+
+.imm-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.imm-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.imm-icon.purple {
+  background: linear-gradient(135deg, #a855f7, #c084fc);
+}
+
+.imm-icon.indigo {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+.imm-icon.blue {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.imm-icon.teal {
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+}
+
+.imm-panel-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.imm-panel-header p {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.imm-panel-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #374151;
+  margin: 0 0 1rem;
+}
+
+/* ── Card grid ── */
+.imm-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.imm-card-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.imm-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #c7d2fe;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.imm-card:hover {
+  box-shadow: 0 8px 24px rgba(67, 56, 202, 0.1);
+  transform: translateY(-2px);
+}
+
+.imm-card-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.imm-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.imm-card p {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.imm-card-source {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Video grid (expert videos) ── */
+.imm-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.imm-video-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #99f6e4;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.imm-video-card:hover {
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.12);
+  transform: translateY(-2px);
+}
+
+.imm-video-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.imm-video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.imm-video-card:hover .imm-video-thumb img {
+  opacity: 1;
+}
+
+.imm-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f766e;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.imm-video-card:hover .imm-play-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.imm-video-body {
+  padding: 1rem 1.25rem;
+}
+
+.imm-video-body h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.imm-video-body p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+/* ── Embedded video (checkpoint section) ── */
+.imm-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.imm-video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -196,121 +468,67 @@
   border: 0;
 }
 
-/* Resource list */
-.immunotherapy-2-page .resource-list {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0;
-  display: grid;
-  gap: 8px;
-}
-
-.immunotherapy-2-page .resource-link {
-  display: inline-block;
-  text-decoration: none;
-  color: #1d4ed8;
-  border: 1px solid #bfdbfe;
-  background: #eff6ff;
-  padding: 8px 12px;
-  border-radius: 10px;
-  line-height: 1.4;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.immunotherapy-2-page .resource-link:hover {
-  background: #dbeafe;
-  border-color: #93c5fd;
-  color: #1e40af;
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.08);
-}
-
-/* Sidebar */
-.immunotherapy-2-page .wp-sidebar {
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 14px;
-  background: #fff;
-  position: sticky;
-  top: 16px;
-}
-
-.immunotherapy-2-page .wp-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.immunotherapy-2-page .wp-nav-link {
-  display: block;
-  padding: 8px 10px;
+/* ── CTA button ── */
+.imm-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 8px;
-  color: #374151;
-  text-decoration: none;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.immunotherapy-2-page .wp-nav-link:hover,
-.immunotherapy-2-page .wp-nav-link:focus {
-  background: #eef2ff;
-  color: #4338ca;
-  border-color: #c7d2fe;
-}
-
-.immunotherapy-2-page .wp-sidebar-cta {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px dashed #e5e7eb;
-}
-
-.immunotherapy-2-page .wp-sidebar-cta h4 {
-  margin: 0 0 4px;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #111827;
-}
-
-.immunotherapy-2-page .wp-sidebar-cta p {
-  margin: 0;
   font-size: 0.9rem;
-  color: #6b7280;
-}
-
-.immunotherapy-2-page .wp-cta-btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 1px solid #c7d2fe;
-  color: #4338ca;
-  background: #fff;
-  text-decoration: none;
   font-weight: 600;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #7e22ce, #4338ca);
+  transition: opacity 0.15s, transform 0.15s;
+  box-shadow: 0 4px 12px rgba(126, 34, 206, 0.25);
 }
 
-.immunotherapy-2-page .wp-cta-btn:hover {
-  background: #eef2ff;
-  border-color: #a5b4fc;
-  color: #3730a3;
+.imm-cta-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
-/* Responsive */
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .imm-card-grid.cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imm-video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .imm-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imm-card-grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .imm-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
-  .immunotherapy-2-page .wp-hero {
-    padding: 24px 16px;
+  .imm-hero {
+    padding: 2.5rem 1.25rem;
   }
 
-  .immunotherapy-2-page .wp-hero-title {
-    font-size: 1.5rem;
+  .imm-hero h1 {
+    font-size: 2rem;
   }
 
-  .immunotherapy-2-page .immunotherapy-2-layout {
-    padding: 0 12px 20px;
+  .imm-nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .immunotherapy-2-page .section-title {
-    font-size: 1.2rem;
+  .imm-nav h3 {
+    margin-bottom: 0.25rem;
   }
 }

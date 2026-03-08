@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import HomeEventsColumn from "@/components/HomeEventsColumn";
+import IronmanFundraiser from "@/components/IronmanFundraiser";
 
 const CLINICAL_TRIALS_URL =
   "https://clinicaltrials.gov/search?term=leiomyosarcoma";
@@ -295,6 +296,10 @@ export default function HomeThreeColumns() {
                 </Link>
               </div>
             </div>
+          </div>
+
+          <div className="mt-6">
+            <IronmanFundraiser />
           </div>
 
           <div className="mt-6 p-4 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-xl border border-slate-200 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] sm:p-3">

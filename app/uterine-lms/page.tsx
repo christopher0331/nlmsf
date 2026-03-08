@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Suspense } from "react";
+import LiveTrials from "./LiveTrials";
 import "./uterine-lms.css";
 
 export const metadata: Metadata = {
@@ -350,10 +352,37 @@ export default function UterineLmsPage() {
           </div>
         </section>
 
-        {/* Clinical Trials */}
+        {/* Live Clinical Trials from ClinicalTrials.gov */}
         <section id="trials" className="ulms-section">
           <h2 className="ulms-section-title indigo">
-            Clinical Trials &amp; Treatment Research
+            Recruiting Clinical Trials
+          </h2>
+          <div className="ulms-panel indigo">
+            <div className="ulms-panel-header">
+              <div className="ulms-icon indigo">
+                <i className="fas fa-flask" aria-hidden />
+              </div>
+              <div>
+                <h3>Live from ClinicalTrials.gov</h3>
+                <p>Currently recruiting trials for uterine leiomyosarcoma</p>
+              </div>
+            </div>
+            <Suspense
+              fallback={
+                <p className="ulms-live-loading">
+                  Loading active trials from ClinicalTrials.gov…
+                </p>
+              }
+            >
+              <LiveTrials />
+            </Suspense>
+          </div>
+        </section>
+
+        {/* Treatment Research (static curated links) */}
+        <section className="ulms-section">
+          <h2 className="ulms-section-title indigo">
+            Treatment Research
           </h2>
           <div className="ulms-trials-grid">
             <a
@@ -367,20 +396,6 @@ export default function UterineLmsPage() {
               <h4>Temozolomide + Olaparib</h4>
               <p>Encouraging efficacy and manageable safety in uLMS</p>
               <span className="ulms-trial-source">OncLive</span>
-            </a>
-            <a
-              href="https://clinicaltrials.gov/ct2/show/NCT03880019"
-              className="ulms-trial-card"
-              {...ext}
-            >
-              <div className="ulms-trial-icon">
-                <i className="fas fa-clipboard-list" aria-hidden />
-              </div>
-              <h4>Phase II: Olaparib + Temozolomide</h4>
-              <p>
-                Advanced uLMS trial — PI: Matthew Ingham, MD
-              </p>
-              <span className="ulms-trial-source">ClinicalTrials.gov · NCT03880019</span>
             </a>
             <a
               href="https://pubmed.ncbi.nlm.nih.gov/35660331/"

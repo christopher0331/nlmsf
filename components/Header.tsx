@@ -762,8 +762,6 @@ export default function Header() {
                             <li>
                               <Link
                                 href="/immunotherapy-2"
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 className={DROPDOWN_LINK}
                               >
                                 Immunotherapy
@@ -772,8 +770,6 @@ export default function Header() {
                             <li>
                               <Link
                                 href="/research-initiaves"
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 className={DROPDOWN_LINK}
                               >
                                 Research Initiatives
