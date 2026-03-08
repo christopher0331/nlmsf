@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-08T03:14:12.482Z",
+  "generatedAt": "2026-03-08T03:23:51.245Z",
   "wpBaseUrl": "https://nlmsf.org",
   "cloneBaseUrl": "https://nlmsf-clone.netlify.app",
   "pathsFile": "/Users/christopherhancock/Desktop/dev/tools/crawler/output/wp-paths.txt",
   "totalPaths": 788,
-  "elapsedMs": 100067,
+  "elapsedMs": 97719,
   "classificationCounts": {
     "ok": 176,
-    "missing_on_clone": 362,
-    "redirected_path_change": 248,
+    "missing_on_clone": 356,
+    "redirected_path_change": 254,
     "clone_noindex": 2
   },
   "rows": [
@@ -742,16 +742,16 @@
     },
     {
       "path": "/accountability-reports/2023/summary.pdf",
-      "classification": "missing_on_clone",
+      "classification": "redirected_path_change",
       "wpStatus": 404,
       "wpFinalUrl": "https://nlmsf.org/accountability-reports/2023/summary.pdf",
       "wpCanonicalPath": "",
-      "cloneStatus": 404,
-      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/accountability-reports/2023/summary.pdf",
+      "cloneStatus": 200,
+      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/accountability-reports/",
       "cloneCanonicalPath": "",
-      "cloneNoindex": "yes",
-      "cloneRedirectChainLength": 1,
-      "suggestedRedirectTarget": ""
+      "cloneNoindex": "no",
+      "cloneRedirectChainLength": 2,
+      "suggestedRedirectTarget": "/accountability-reports"
     },
     {
       "path": "/accountability-reports/2024",
@@ -768,16 +768,16 @@
     },
     {
       "path": "/accountability-reports/2024/summary.pdf",
-      "classification": "missing_on_clone",
+      "classification": "redirected_path_change",
       "wpStatus": 404,
       "wpFinalUrl": "https://nlmsf.org/accountability-reports/2024/summary.pdf",
       "wpCanonicalPath": "",
-      "cloneStatus": 404,
-      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/accountability-reports/2024/summary.pdf",
+      "cloneStatus": 200,
+      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/accountability-reports/",
       "cloneCanonicalPath": "",
-      "cloneNoindex": "yes",
-      "cloneRedirectChainLength": 1,
-      "suggestedRedirectTarget": ""
+      "cloneNoindex": "no",
+      "cloneRedirectChainLength": 2,
+      "suggestedRedirectTarget": "/accountability-reports"
     },
     {
       "path": "/advance-care-planning",
@@ -1496,16 +1496,16 @@
     },
     {
       "path": "/CRI_Patients-Guide-25.pdf",
-      "classification": "missing_on_clone",
+      "classification": "redirected_path_change",
       "wpStatus": 404,
       "wpFinalUrl": "https://nlmsf.org/CRI_Patients-Guide-25.pdf",
       "wpCanonicalPath": "",
-      "cloneStatus": 404,
-      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/CRI_Patients-Guide-25.pdf",
+      "cloneStatus": 200,
+      "cloneFinalUrl": "https://media.nlmsf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf",
       "cloneCanonicalPath": "",
-      "cloneNoindex": "yes",
-      "cloneRedirectChainLength": 1,
-      "suggestedRedirectTarget": ""
+      "cloneNoindex": "no",
+      "cloneRedirectChainLength": 2,
+      "suggestedRedirectTarget": "/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf"
     },
     {
       "path": "/cri-immunotherapy-patient-guide",
@@ -1535,16 +1535,16 @@
     },
     {
       "path": "/cynthia-diane-katafiasz-2",
-      "classification": "missing_on_clone",
+      "classification": "redirected_path_change",
       "wpStatus": 200,
       "wpFinalUrl": "https://nlmsf.org/cynthia-diane-katafiasz-2/",
       "wpCanonicalPath": "/cynthia-diane-katafiasz-2",
-      "cloneStatus": 404,
-      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/cynthia-diane-katafiasz-2/",
+      "cloneStatus": 200,
+      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/tributes-directory/",
       "cloneCanonicalPath": "",
-      "cloneNoindex": "yes",
-      "cloneRedirectChainLength": 2,
-      "suggestedRedirectTarget": ""
+      "cloneNoindex": "no",
+      "cloneRedirectChainLength": 4,
+      "suggestedRedirectTarget": "/tributes-directory"
     },
     {
       "path": "/denise-f-montano-tribute-fund",
@@ -3745,16 +3745,16 @@
     },
     {
       "path": "/pennee-morris-tribute-fund",
-      "classification": "missing_on_clone",
+      "classification": "redirected_path_change",
       "wpStatus": 200,
       "wpFinalUrl": "https://nlmsf.org/pennee-morris-tribute-fund/",
       "wpCanonicalPath": "/pennee-morris-tribute-fund",
-      "cloneStatus": 404,
-      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/pennee-morris-tribute-page/",
+      "cloneStatus": 200,
+      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/tributes-directory/",
       "cloneCanonicalPath": "",
-      "cloneNoindex": "yes",
+      "cloneNoindex": "no",
       "cloneRedirectChainLength": 4,
-      "suggestedRedirectTarget": ""
+      "suggestedRedirectTarget": "/tributes-directory"
     },
     {
       "path": "/peri-gilpin",
@@ -4330,16 +4330,16 @@
     },
     {
       "path": "/snyderstrong-tribute-fund",
-      "classification": "missing_on_clone",
+      "classification": "redirected_path_change",
       "wpStatus": 200,
       "wpFinalUrl": "https://nlmsf.org/snyderstrong-tribute-fund/",
       "wpCanonicalPath": "/snyderstrong-tribute-fund",
-      "cloneStatus": 404,
-      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/snyderstrong-tribute-page/",
+      "cloneStatus": 200,
+      "cloneFinalUrl": "https://nlmsf-clone.netlify.app/tributes-directory/",
       "cloneCanonicalPath": "",
-      "cloneNoindex": "yes",
+      "cloneNoindex": "no",
       "cloneRedirectChainLength": 4,
-      "suggestedRedirectTarget": ""
+      "suggestedRedirectTarget": "/tributes-directory"
     },
     {
       "path": "/social-security-coverage-guidance",

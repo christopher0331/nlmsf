@@ -1,11 +1,26 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+const WP_SITEMAP_PATHS = new Set([
+  "/sitemap_index.xml",
+  "/post-sitemap.xml",
+  "/page-sitemap.xml",
+  "/give_forms-sitemap.xml",
+  "/nlmsf_snapshot-sitemap.xml",
+  "/nlmsf_news_tracker-sitemap.xml",
+  "/category-sitemap.xml",
+  "/author-sitemap.xml",
+]);
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (pathname === "/wp-login.php" || pathname.startsWith("/wp-login.php")) {
     return new NextResponse(null, { status: 410 });
+  }
+
+  if (WP_SITEMAP_PATHS.has(pathname)) {
+    return NextResponse.redirect(new URL("/sitemap.xml", request.url), 301);
   }
 
   if (pathname === "/CRI_Patients-Guide-25.pdf") {
@@ -31,5 +46,13 @@ export const config = {
     "/wp-login.php:path*",
     "/CRI_Patients-Guide-25.pdf",
     "/accountability-reports/:path*",
+    "/sitemap_index.xml",
+    "/post-sitemap.xml",
+    "/page-sitemap.xml",
+    "/give_forms-sitemap.xml",
+    "/nlmsf_snapshot-sitemap.xml",
+    "/nlmsf_news_tracker-sitemap.xml",
+    "/category-sitemap.xml",
+    "/author-sitemap.xml",
   ],
 };

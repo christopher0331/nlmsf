@@ -55,9 +55,9 @@ path,classification,wp_status,wp_final_url,wp_canonical_path,clone_status,clone_
 /accountability-reports,ok,200,https://nlmsf.org/accountability-reports/,/accountability-reports,200,https://nlmsf-clone.netlify.app/accountability-reports/,,no,2,
 /accountability-reports-hub,ok,200,https://nlmsf.org/accountability-reports-hub/,/accountability-reports-hub,200,https://nlmsf-clone.netlify.app/accountability-reports-hub/,,no,2,
 /accountability-reports/2023,redirected_path_change,200,https://nlmsf.org/accountability-reports/,/accountability-reports,200,https://nlmsf-clone.netlify.app/2023-accountability-report/,,no,4,/2023-accountability-report
-/accountability-reports/2023/summary.pdf,missing_on_clone,404,https://nlmsf.org/accountability-reports/2023/summary.pdf,,404,https://nlmsf-clone.netlify.app/accountability-reports/2023/summary.pdf,,yes,1,
+/accountability-reports/2023/summary.pdf,redirected_path_change,404,https://nlmsf.org/accountability-reports/2023/summary.pdf,,200,https://nlmsf-clone.netlify.app/accountability-reports/,,no,2,/accountability-reports
 /accountability-reports/2024,redirected_path_change,200,https://nlmsf.org/accountability-reports/,/accountability-reports,200,https://nlmsf-clone.netlify.app/accountability-reports/,,no,4,/accountability-reports
-/accountability-reports/2024/summary.pdf,missing_on_clone,404,https://nlmsf.org/accountability-reports/2024/summary.pdf,,404,https://nlmsf-clone.netlify.app/accountability-reports/2024/summary.pdf,,yes,1,
+/accountability-reports/2024/summary.pdf,redirected_path_change,404,https://nlmsf.org/accountability-reports/2024/summary.pdf,,200,https://nlmsf-clone.netlify.app/accountability-reports/,,no,2,/accountability-reports
 /advance-care-planning,ok,200,https://nlmsf.org/advance-care-planning/,/advance-care-planning,200,https://nlmsf-clone.netlify.app/advance-care-planning/,,no,2,
 /advocacy,redirected_path_change,404,https://nlmsf.org/advocacy,,200,https://nlmsf-clone.netlify.app/patient-caregiver-advocacy/,,no,4,/patient-caregiver-advocacy
 /after-treatment,ok,200,https://nlmsf.org/after-treatment/,/after-treatment,200,https://nlmsf-clone.netlify.app/after-treatment/,,no,2,
@@ -113,10 +113,10 @@ path,classification,wp_status,wp_final_url,wp_canonical_path,clone_status,clone_
 /contact,ok,200,https://nlmsf.org/contact/,/contact,200,https://nlmsf-clone.netlify.app/contact/,,no,2,
 /contact-us,redirected_path_change,404,https://nlmsf.org/contact-us,,200,https://nlmsf-clone.netlify.app/contact/,,no,4,/contact
 /contact/newsletter,redirected_path_change,200,https://nlmsf.org/newsletter-archives/,/newsletter-archives,200,https://nlmsf-clone.netlify.app/contact/,,no,4,/contact
-/CRI_Patients-Guide-25.pdf,missing_on_clone,404,https://nlmsf.org/CRI_Patients-Guide-25.pdf,,404,https://nlmsf-clone.netlify.app/CRI_Patients-Guide-25.pdf,,yes,1,
+/CRI_Patients-Guide-25.pdf,redirected_path_change,404,https://nlmsf.org/CRI_Patients-Guide-25.pdf,,200,https://media.nlmsf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf,,no,2,/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf
 /cri-immunotherapy-patient-guide,ok,200,https://nlmsf.org/cri-immunotherapy-patient-guide/,/cri-immunotherapy-patient-guide,200,https://nlmsf-clone.netlify.app/cri-immunotherapy-patient-guide/,,no,2,
 /cynthia-diane-katafiasz,redirected_path_change,404,https://nlmsf.org/cynthia-diane-katafiasz,,200,https://nlmsf-clone.netlify.app/tributes-directory/,,no,4,/tributes-directory
-/cynthia-diane-katafiasz-2,missing_on_clone,200,https://nlmsf.org/cynthia-diane-katafiasz-2/,/cynthia-diane-katafiasz-2,404,https://nlmsf-clone.netlify.app/cynthia-diane-katafiasz-2/,,yes,2,
+/cynthia-diane-katafiasz-2,redirected_path_change,200,https://nlmsf.org/cynthia-diane-katafiasz-2/,/cynthia-diane-katafiasz-2,200,https://nlmsf-clone.netlify.app/tributes-directory/,,no,4,/tributes-directory
 /denise-f-montano-tribute-fund,redirected_path_change,200,https://nlmsf.org/denise-f-montano-tribute-fund/,/denise-f-montano-tribute-fund,200,https://nlmsf-clone.netlify.app/denise-f-montano-tribute-page/,,no,4,/denise-f-montano-tribute-page
 /denise-f-montano-tribute-page,ok,200,https://nlmsf.org/denise-f-montano-tribute-page/,/denise-f-montano-tribute-page,200,https://nlmsf-clone.netlify.app/denise-f-montano-tribute-page/,,no,2,
 /denise-janowiak,redirected_path_change,200,https://nlmsf.org/denise-janowiak/,/denise-janowiak,200,https://nlmsf-clone.netlify.app/denise-janowiak-tribute-page/,,no,4,/denise-janowiak-tribute-page
@@ -286,7 +286,7 @@ path,classification,wp_status,wp_final_url,wp_canonical_path,clone_status,clone_
 /penne-m-morris,redirected_path_change,404,https://nlmsf.org/penne-m-morris,,200,https://nlmsf-clone.netlify.app/pennee-m-morris-tribute-page/,,no,4,/pennee-m-morris-tribute-page
 /pennee-m-morris,redirected_path_change,200,https://nlmsf.org/pennee-m-morris/,/pennee-m-morris,200,https://nlmsf-clone.netlify.app/pennee-m-morris-tribute-page/,,no,4,/pennee-m-morris-tribute-page
 /pennee-m-morris-tribute-page,ok,200,https://nlmsf.org/pennee-m-morris-tribute-page/,/pennee-m-morris-tribute-page,200,https://nlmsf-clone.netlify.app/pennee-m-morris-tribute-page/,,no,2,
-/pennee-morris-tribute-fund,missing_on_clone,200,https://nlmsf.org/pennee-morris-tribute-fund/,/pennee-morris-tribute-fund,404,https://nlmsf-clone.netlify.app/pennee-morris-tribute-page/,,yes,4,
+/pennee-morris-tribute-fund,redirected_path_change,200,https://nlmsf.org/pennee-morris-tribute-fund/,/pennee-morris-tribute-fund,200,https://nlmsf-clone.netlify.app/tributes-directory/,,no,4,/tributes-directory
 /peri-gilpin,ok,200,https://nlmsf.org/peri-gilpin/,/peri-gilpin,200,https://nlmsf-clone.netlify.app/peri-gilpin/,,no,2,
 /personal-advocacy,ok,200,https://nlmsf.org/personal-advocacy/,/personal-advocacy,200,https://nlmsf-clone.netlify.app/personal-advocacy/,,no,2,
 /podcast,redirected_path_change,200,https://nlmsf.org/podcast/,/podcast,200,https://nlmsf-clone.netlify.app/sarcoma-sound-bytes/,,no,4,/sarcoma-sound-bytes
@@ -331,7 +331,7 @@ path,classification,wp_status,wp_final_url,wp_canonical_path,clone_status,clone_
 /second-opinions-2,ok,200,https://nlmsf.org/second-opinions-2/,/second-opinions-2,200,https://nlmsf-clone.netlify.app/second-opinions-2/,,no,2,
 /shawn-borini,redirected_path_change,200,https://nlmsf.org/shawn-borini/,/shawn-borini,200,https://nlmsf-clone.netlify.app/shawn-borini-tribute-page/,,no,4,/shawn-borini-tribute-page
 /shawn-borini-tribute-page,ok,200,https://nlmsf.org/shawn-borini-tribute-page/,/shawn-borini-tribute-page,200,https://nlmsf-clone.netlify.app/shawn-borini-tribute-page/,,no,2,
-/snyderstrong-tribute-fund,missing_on_clone,200,https://nlmsf.org/snyderstrong-tribute-fund/,/snyderstrong-tribute-fund,404,https://nlmsf-clone.netlify.app/snyderstrong-tribute-page/,,yes,4,
+/snyderstrong-tribute-fund,redirected_path_change,200,https://nlmsf.org/snyderstrong-tribute-fund/,/snyderstrong-tribute-fund,200,https://nlmsf-clone.netlify.app/tributes-directory/,,no,4,/tributes-directory
 /social-security-coverage-guidance,ok,200,https://nlmsf.org/social-security-coverage-guidance/,/social-security-coverage-guidance,200,https://nlmsf-clone.netlify.app/social-security-coverage-guidance/,,no,2,
 /sound-bytes-hub,redirected_path_change,404,https://nlmsf.org/sound-bytes-hub,,200,https://nlmsf-clone.netlify.app/sarcoma-sound-bytes/,,no,4,/sarcoma-sound-bytes
 /sound-bytes/2024-10-05,redirected_path_change,404,https://nlmsf.org/sound-bytes/2024-10-05,,200,https://nlmsf-clone.netlify.app/sarcoma-sound-bytes/,,no,4,/sarcoma-sound-bytes
