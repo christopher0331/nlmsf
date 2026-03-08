@@ -130,7 +130,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div
-          className={`absolute bottom-48 left-1/2 -translate-x-1/2 z-20 text-white text-3xl opacity-90 transition-opacity duration-300 ${
+          className={`absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-white text-3xl opacity-90 transition-opacity duration-300 ${
             scrollArrowHidden ? "opacity-0 pointer-events-none" : ""
           }`}
           aria-hidden
