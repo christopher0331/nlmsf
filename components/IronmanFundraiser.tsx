@@ -23,7 +23,7 @@ export default function IronmanFundraiser() {
 
   const fetchData = useCallback(async () => {
     try {
-      const res = await fetch("/api/fundraiser", { cache: "no-store" });
+      const res = await fetch("/api/fundraiser/", { cache: "no-store" });
       if (!res.ok) return;
       const data = await res.json();
       setRaised(data.raised);
@@ -81,7 +81,7 @@ export default function IronmanFundraiser() {
         <div className="imf-progress-section">
           <div className="imf-progress-labels">
             <span className="imf-raised">
-              ${loaded ? raised.toLocaleString() : "—"}
+              ${loaded ? raised.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "—"}
             </span>
             <span className="imf-goal">
               Goal: ${goal.toLocaleString()}

@@ -16,7 +16,7 @@ export default function FundraiserPageClient() {
 
   const fetchData = useCallback(async () => {
     try {
-      const res = await fetch("/api/fundraiser", { cache: "no-store" });
+      const res = await fetch("/api/fundraiser/", { cache: "no-store" });
       if (!res.ok) return;
       const data = await res.json();
       setRaised(data.raised);
