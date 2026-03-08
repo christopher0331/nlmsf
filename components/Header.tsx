@@ -695,6 +695,14 @@ export default function Header() {
                               Testimonials
                             </Link>
                           </div>
+                          <div className={DROPDOWN_COLUMN}>
+                            <Link
+                              href="/accountability-reports"
+                              className={DROPDOWN_LINK}
+                            >
+                              Accountability Reports
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1374,6 +1382,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Testimonials
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/accountability-reports"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Accountability Reports
                     </Link>
                   </li>
                 </ul>
