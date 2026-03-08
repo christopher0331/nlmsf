@@ -52,7 +52,7 @@ export default function MissionSection() {
           </div>
         </div>
 
-        <div className="flex flex-row flex-wrap justify-around items-center pt-8 gap-6 md:flex-col md:pt-8">
+        <div className="flex flex-row flex-wrap justify-center items-center pt-8 gap-10">
           <a
             href="#"
             target="_blank"

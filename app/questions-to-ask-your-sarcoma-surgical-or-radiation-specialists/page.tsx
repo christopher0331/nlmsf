@@ -8,9 +8,35 @@ export const metadata: Metadata = {
     "Questions to ask your sarcoma specialist, surgeon, and radiation oncologist to support informed care decisions.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: "Questions to Ask Your Sarcoma Surgical or Radiation Specialists",
+  description:
+    "Questions to ask your sarcoma specialist, surgeon, and radiation oncologist to support informed care decisions.",
+  url: "https://nlmsf.org/questions-to-ask-your-sarcoma-surgical-or-radiation-specialists/",
+  publisher: {
+    "@type": "Organization",
+    name: "National Leiomyosarcoma Foundation",
+    url: "https://nlmsf.org",
+  },
+  about: {
+    "@type": "MedicalCondition",
+    name: "Leiomyosarcoma",
+  },
+  audience: {
+    "@type": "PeopleAudience",
+    audienceType: "Patients and Caregivers",
+  },
+};
+
 export default function QuestionsToAskPage() {
   return (
     <main className="questions-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="questions-hero">
         <h1>Questions to Ask Your Sarcoma Surgical or Radiation Specialists</h1>
         <p>

@@ -61,6 +61,45 @@ export default function DonatePage() {
         </div>
       </section>
 
+      {/* Elev8 Round-Up Donations */}
+      <section className="max-w-[1400px] mx-auto mb-8 px-4 md:px-6">
+        <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-lg shadow-gray-200/50">
+          <div className="flex flex-col items-center gap-6 p-6 md:flex-row md:items-center md:gap-10 md:p-8">
+            <div className="shrink-0 w-[220px] md:w-[260px]">
+              <Image
+                src="/images/elev8-roundup.png"
+                alt="Elev8 — Empowering Hope for Leiomyosarcoma Patients Worldwide. Scan the QR code to link your card and fund vital research via round-up donations."
+                width={688}
+                height={1050}
+                className="w-full h-auto rounded-xl shadow-md"
+                sizes="(min-width: 768px) 260px, 220px"
+              />
+            </div>
+            <div className="flex-1 min-w-0 text-center md:text-left">
+              <h2
+                className="text-2xl font-bold mb-3 md:text-[1.75rem]"
+                style={{
+                  background: "linear-gradient(90deg, #7e22ce, #4338ca)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                Round Up Your Purchases to Fund LMS Research
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed mb-4 max-w-xl">
+                Powered by <strong>Elev8</strong> — link your card and automatically round up everyday purchases to support vital leiomyosarcoma research and patient programs. It takes under a minute to set up.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-gray-500">
+                <span className="inline-flex items-center gap-1.5"><i className="fas fa-check-circle text-green-500" aria-hidden /> Scan the QR code to get started</span>
+                <span className="inline-flex items-center gap-1.5"><i className="fas fa-check-circle text-green-500" aria-hidden /> Create your account in under a minute</span>
+                <span className="inline-flex items-center gap-1.5"><i className="fas fa-check-circle text-green-500" aria-hidden /> Every round-up funds research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-2 grid grid-cols-1 gap-8 items-start lg:grid-cols-[280px_1fr]">
         {/* Sidebar */}
         <aside className="lg:sticky lg:top-20 lg:mb-6">

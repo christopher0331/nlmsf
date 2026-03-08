@@ -29,6 +29,9 @@
   z-index: 2;
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .molecular-tumor-testing-page .abcs-hero .hero-title {
@@ -218,6 +221,9 @@
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .molecular-tumor-testing-page .badge,
