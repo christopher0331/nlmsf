@@ -374,52 +374,50 @@ export default function HomeThreeColumns() {
               What Our Experts Say
             </h3>
             <div
-              className="relative overflow-hidden min-h-[200px]"
+              className="relative overflow-hidden"
               id="testimonialCarousel"
               onMouseEnter={() => setTestimonialPaused(true)}
               onMouseLeave={() => setTestimonialPaused(false)}
             >
-              {TESTIMONIALS.map((t, index) => (
-                <div
-                  key={t.name}
-                  className={`transition-opacity duration-500 ${
-                    index === testimonialSlide
-                      ? "block opacity-100"
-                      : "hidden opacity-0"
-                  }`}
-                >
-                  <div className="text-center">
-                    <div className="flex flex-col items-center mb-4">
-                      <div className="w-[60px] h-[60px] rounded-full overflow-hidden mb-2 border-[3px] border-[#6a3ea1] shadow-[0_4px_8px_rgba(106,62,161,0.2)] sm:w-[50px] sm:h-[50px]">
-                        <Image
-                          src={t.image}
-                          alt={t.alt}
-                          width={120}
-                          height={120}
-                          className="w-full h-full object-cover"
-                          sizes="60px"
-                        />
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${testimonialSlide * 100}%)` }}
+              >
+                {TESTIMONIALS.map((t) => (
+                  <div key={t.name} className="w-full flex-shrink-0 px-1">
+                    <div className="text-center">
+                      <div className="flex flex-col items-center mb-4">
+                        <div className="w-[60px] h-[60px] rounded-full overflow-hidden mb-2 border-[3px] border-[#6a3ea1] shadow-[0_4px_8px_rgba(106,62,161,0.2)] sm:w-[50px] sm:h-[50px]">
+                          <Image
+                            src={t.image}
+                            alt={t.alt}
+                            width={120}
+                            height={120}
+                            className="w-full h-full object-cover"
+                            sizes="60px"
+                          />
+                        </div>
+                        <div className="text-center">
+                          <h4 className="text-[0.9rem] font-bold text-gray-800 m-0 mb-1 leading-tight sm:text-[0.85rem]">
+                            {t.name}
+                          </h4>
+                          <p className="text-[0.75rem] text-gray-500 m-0 leading-snug italic sm:text-[0.7rem]">
+                            {t.title}
+                          </p>
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <h4 className="text-[0.9rem] font-bold text-gray-800 m-0 mb-1 leading-tight sm:text-[0.85rem]">
-                          {t.name}
-                        </h4>
-                        <p className="text-[0.75rem] text-gray-500 m-0 leading-snug italic sm:text-[0.7rem]">
-                          {t.title}
-                        </p>
-                      </div>
+                      <blockquote
+                        className={
+                          "text-[0.85rem] leading-snug text-[#374151] m-0 py-3 px-3 bg-white rounded-lg border-l-4 border-[#6a3ea1] shadow-[0_2px_4px_rgba(0,0,0,0.05)] relative sm:text-[0.8rem] sm:py-2.5 sm:px-2.5 before:content-[attr(data-quote)] before:text-3xl before:text-[#6a3ea1] before:absolute before:top-[-0.5rem] before:left-2 before:opacity-30 before:font-serif"
+                        }
+                        data-quote='"'
+                      >
+                        {t.quote}
+                      </blockquote>
                     </div>
-                    <blockquote
-                      className={
-                        "text-[0.85rem] leading-snug text-[#374151] m-0 py-3 px-3 bg-white rounded-lg border-l-4 border-[#6a3ea1] shadow-[0_2px_4px_rgba(0,0,0,0.05)] relative sm:text-[0.8rem] sm:py-2.5 sm:px-2.5 before:content-[attr(data-quote)] before:text-3xl before:text-[#6a3ea1] before:absolute before:top-[-0.5rem] before:left-2 before:opacity-30 before:font-serif"
-                      }
-                      data-quote='"'
-                    >
-                      {t.quote}
-                    </blockquote>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
             <div className="flex justify-center gap-2 mt-4">
               {TESTIMONIALS.map((_, index) => (
