@@ -182,6 +182,9 @@ export default function TreatmentOptionsPage() {
                 <a href="#treatment-plan">Treatment Planning</a>
               </li>
               <li>
+                <a href="#palliative-care">Palliative Care</a>
+              </li>
+              <li>
                 <a href="#faqs">FAQs</a>
               </li>
             </ul>
@@ -531,6 +534,213 @@ export default function TreatmentOptionsPage() {
                   rel="noopener noreferrer"
                 >
                   Immunotherapy Updates - Leiomyosarcoma.info
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section id="palliative-care" className="to-section">
+            <div className="to-section-header green">
+              <h2>Palliative Care</h2>
+            </div>
+            <div className="to-panel">
+              <p className="to-emphasis">
+                Palliative care is a specialized, team-based approach for those living with a serious
+                illness. It focuses on relieving symptoms, pain, and treatment-related side effects
+                while helping patients and families navigate the emotional and practical challenges
+                that can arise — at any stage of illness.
+              </p>
+
+              <div className="to-type-card">
+                <h4>Palliative Care vs. Hospice Care</h4>
+                <div className="to-type-item">
+                  <h5>Palliative Care</h5>
+                  <p>
+                    The goal is to alleviate suffering and improve quality of life for people with
+                    serious illness. Specialists address pain, symptoms, and stress, working alongside
+                    your existing medical team — in the hospital, clinic, or at home — to help you
+                    live your best life for as long as possible.
+                  </p>
+                </div>
+                <div className="to-type-item">
+                  <h5>Hospice Care</h5>
+                  <p>
+                    Hospice is an insurance benefit for people approaching the end of life (typically
+                    with a prognosis of six months or less). It provides comprehensive support focused
+                    on comfort, goals, and quality of life — often at home — for both patients and
+                    families.
+                  </p>
+                </div>
+              </div>
+
+              <div className="to-info-box">
+                <h4>What Does Palliative Care Address?</h4>
+                <ul>
+                  <li>Physical symptoms (pain, nausea, fatigue)</li>
+                  <li>Emotional and coping support</li>
+                  <li>Spiritual needs</li>
+                  <li>Caregiver needs</li>
+                  <li>Practical and care navigation needs</li>
+                  <li>Financial, legal, and employment concerns</li>
+                  <li>Insurance questions</li>
+                  <li>Family and team communication</li>
+                </ul>
+              </div>
+
+              <div className="to-info-box">
+                <h4>Who Provides Palliative Care?</h4>
+                <p>
+                  Interdisciplinary teams that may include palliative medicine physicians, advanced
+                  practice providers, nurses, social workers, chaplains, psychologists, and other
+                  specialists. They work alongside your oncology and primary teams.
+                </p>
+              </div>
+
+              <div className="to-callout">
+                Palliative care can be integrated at any time during cancer care — from diagnosis
+                through survivorship — whenever symptom management, decision support, or psychosocial
+                care could help. Many sarcoma centers of excellence include palliative care as a
+                standard part of their protocols. Ask your oncology team for a referral.
+              </div>
+
+              <div className="to-info-box">
+                <h4>NCCN Patient Guidelines (Shared by NLMSF)</h4>
+                <ul>
+                  <li>Fatigue and Cancer</li>
+                  <li>Palliative Care</li>
+                  <li>Distress During Cancer Care</li>
+                </ul>
+              </div>
+
+              <h4 style={{ marginTop: "1.5rem", marginBottom: "0.75rem" }}>
+                Research &amp; Evidence
+              </h4>
+              <p>
+                There is growing evidence that palliative care improves symptoms, quality of life, and
+                care satisfaction for patients and families. The National Cancer Institute (NCI)
+                supports palliative care research across many domains.
+              </p>
+
+              <h4 style={{ marginTop: "1.5rem", marginBottom: "0.75rem" }}>
+                Palliative Care FAQ
+              </h4>
+              <div className="to-faqs">
+                <details className="to-faq-item">
+                  <summary>What you need to know about palliative care</summary>
+                  <p>
+                    Palliative care is specialized, team-based support focused on symptom relief,
+                    communication, and quality of life for people living with serious illness. It can
+                    be provided alongside curative or life-prolonging treatments at any stage.
+                  </p>
+                </details>
+                <details className="to-faq-item">
+                  <summary>What is palliative care?</summary>
+                  <p>
+                    An extra layer of support that treats pain, symptoms, and stress, and helps with
+                    decision-making, care coordination, and emotional well-being for patients and
+                    families.
+                  </p>
+                </details>
+                <details className="to-faq-item">
+                  <summary>Who gives palliative care?</summary>
+                  <p>
+                    Interdisciplinary teams that may include palliative medicine physicians, advanced
+                    practice providers, nurses, social workers, chaplains, psychologists, and other
+                    specialists. They work with your oncology and primary teams.
+                  </p>
+                </details>
+                <details className="to-faq-item">
+                  <summary>When is palliative care integrated into cancer care?</summary>
+                  <p>
+                    Anytime it can help — often early in the course of illness, at diagnosis, during
+                    active treatment, and through survivorship or advanced care. Many sarcoma centers
+                    include it as a standard part of care.
+                  </p>
+                </details>
+                <details className="to-faq-item">
+                  <summary>How do I access palliative care services?</summary>
+                  <p>
+                    Ask your oncology team for a referral. Services are available in hospitals,
+                    clinics, and at home. If not discussed, bring it up and request an evaluation.
+                  </p>
+                </details>
+                <details className="to-faq-item">
+                  <summary>How does palliative care differ from hospice care?</summary>
+                  <p>
+                    Palliative care can be provided at any stage alongside active treatment. Hospice
+                    focuses on comfort near the end of life (typically with a prognosis of six months
+                    or less) and prioritizes quality of life and goals of care.
+                  </p>
+                </details>
+                <details className="to-faq-item">
+                  <summary>Who pays for palliative care?</summary>
+                  <p>
+                    Coverage varies by insurance and setting. Many services are covered by Medicare,
+                    Medicaid, and private insurers; check your plan benefits and ask providers about
+                    covered services and any out-of-pocket costs.
+                  </p>
+                </details>
+                <details className="to-faq-item">
+                  <summary>
+                    Is there evidence that palliative care helps? Does NCI support palliative care
+                    research?
+                  </summary>
+                  <p>
+                    Studies show palliative care improves symptom control, patient and caregiver
+                    satisfaction, and can reduce healthcare burden. The National Cancer Institute
+                    supports research in palliative and supportive care across multiple programs.
+                  </p>
+                </details>
+              </div>
+
+              <h4 style={{ marginTop: "1.5rem", marginBottom: "0.75rem" }}>
+                Additional Resources
+              </h4>
+              <div className="to-links">
+                <a
+                  href="https://hogonext.com/how-to-access-palliative-care-for-sarcoma/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  How to Access Palliative Care for Sarcoma — HogoNext
+                </a>
+                <a
+                  href="https://www.cancer.net/coping-with-cancer/physical-emotional-and-social-effects-cancer/what-palliative-care-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Cancer.net: What is Palliative Care
+                </a>
+                <a
+                  href="https://www.cancer.net/coping-with-cancer/physical-emotional-and-social-effects-cancer/types-palliative-care-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Cancer.net: Types of Palliative Care
+                </a>
+                <a
+                  href="https://www.cancer.org/content/dam/CRC/PDF/Public/7958.00.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  American Cancer Society: Understanding Palliative Care (PDF)
+                </a>
+                <a
+                  href="https://www.cancer.org/treatment/treatment-and-side-effects/palliative-care/how-to-find.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  American Cancer Society: Finding a Palliative Care Program
+                </a>
+                <a
+                  href="https://www.cancer.org.au/cancer-information/treatment/palliative-care"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Cancer Council Australia: Palliative Care
+                </a>
+                <a href="/palliative-care">
+                  View full Palliative Care page →
                 </a>
               </div>
             </div>

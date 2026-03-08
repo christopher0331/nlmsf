@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ensure global CSS is applied (fallback if Tailwind base is slow) */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-display: swap;
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-display: swap;
+}
+
 body {
   font-family: system-ui, -apple-system, sans-serif;
   background-color: #fff;

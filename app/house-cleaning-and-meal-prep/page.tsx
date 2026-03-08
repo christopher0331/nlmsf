@@ -11,122 +11,255 @@ const ext = { target: "_blank" as const, rel: "noopener noreferrer" as const };
 
 export default function HouseCleaningAndMealPrepPage() {
   return (
-    <div className="house-cleaning-meal-prep-page">
-      <section className="hc-hero">
-        <div className="hc-hero-inner">
-          <span className="hc-badge">Patient &amp; Caregiver Support</span>
-          <h1 className="hc-hero-title">House Cleaning and Meal Prep</h1>
-          <p className="hc-hero-desc">
-            Free house cleaning resources for cancer patients and meal preparation and nutrition guidance during treatment.
+    <main className="hcmp-page">
+      {/* Hero */}
+      <section className="hcmp-hero">
+        <div className="hcmp-hero-content">
+          <div className="hcmp-badge">
+            <span className="hcmp-badge-dot" aria-hidden="true" />
+            <span>Patient &amp; Caregiver Support</span>
+          </div>
+          <h1>House Cleaning and Meal Prep</h1>
+          <div className="hcmp-divider" />
+          <p>
+            Free house cleaning resources for cancer patients and meal preparation
+            and nutrition guidance during treatment.
           </p>
+          <div className="hcmp-tags">
+            <span className="hcmp-tag teal">
+              <i className="fas fa-broom" aria-hidden /> Cleaning Services
+            </span>
+            <span className="hcmp-tag blue">
+              <i className="fas fa-utensils" aria-hidden /> Meal Prep
+            </span>
+            <span className="hcmp-tag purple">
+              <i className="fas fa-apple-alt" aria-hidden /> Nutrition
+            </span>
+          </div>
         </div>
+        <div className="hcmp-hero-decor decor-one" aria-hidden="true" />
+        <div className="hcmp-hero-decor decor-two" aria-hidden="true" />
       </section>
 
-      <div className="hc-content">
-        <section className="hc-section">
-          <h2 className="hc-section-title">House Cleaning Help For Cancer Patients</h2>
-          <p className="hc-text">
-            <strong>
-              <a href="https://cleaningforareason.org/" {...ext}>Cleaning for a Reason</a>
-            </strong>
-            {" "}- For women cancer patients only. Provides information about qualification criteria, an application form, and a drop-down list locator for cleaning services available in your area.
-            <br />
-            <span className="hc-phone">612-462-8360</span>
-          </p>
-          <ul className="hc-resource-list">
-            <li>
-              <h3 className="hc-resource-title">
-                <a href="https://www.essentialcleaningcompany.com/cleaning-for-a-reason" {...ext}>
-                  Free Cleaning for Cancer Patients — Essential Cleaning Company
-                </a>
-              </h3>
-              <p className="hc-resource-desc">
-                That&apos;s why we are proud to partner with Clean for a Reason, a remarkable organization dedicated to providing free residential cleaning services for cancer patients. Our mission is to ease the burden of household chores for those battling cancer, allowing them to focus on their health and recovery.
+      <div className="hcmp-container">
+        {/* Nav */}
+        <nav className="hcmp-nav">
+          <h3>On This Page</h3>
+          <a href="#house-cleaning">House Cleaning Help</a>
+          <a href="#meal-prep">Meal Prep &amp; Nutrition</a>
+          <a href="#antioxidants">Antioxidant Food Sources</a>
+        </nav>
+
+        {/* House Cleaning */}
+        <section id="house-cleaning" className="hcmp-section">
+          <h2 className="hcmp-section-title teal">
+            House Cleaning Help For Cancer Patients
+          </h2>
+          <div className="hcmp-panel teal">
+            <div className="hcmp-panel-header">
+              <div className="hcmp-icon teal">
+                <i className="fas fa-broom" aria-hidden />
+              </div>
+              <div>
+                <h3>Cleaning for a Reason</h3>
+                <p>Free residential cleaning for women cancer patients</p>
+              </div>
+            </div>
+            <p className="hcmp-panel-text">
+              <a href="https://cleaningforareason.org/" {...ext}>
+                Cleaning for a Reason
+              </a>{" "}
+              provides information about qualification criteria, an application
+              form, and a drop-down list locator for cleaning services available in
+              your area. For women cancer patients only.
+            </p>
+            <p className="hcmp-phone">
+              <i className="fas fa-phone" aria-hidden /> 612-462-8360
+            </p>
+          </div>
+
+          <div className="hcmp-cards">
+            <a
+              href="https://www.essentialcleaningcompany.com/cleaning-for-a-reason"
+              className="hcmp-card"
+              {...ext}
+            >
+              <h4>Free Cleaning for Cancer Patients</h4>
+              <p className="hcmp-card-org">Essential Cleaning Company</p>
+              <p>
+                Proud partner of Clean for a Reason, providing free residential
+                cleaning services for those battling cancer.
               </p>
-            </li>
-            <li>
-              <h3 className="hc-resource-title">
-                <a href="https://cleaningforareason.org/mama-needs-a-maid-and-so-do-cancer-patients/" {...ext}>
-                  Mama Needs A Maid and So Do Cancer Patients
-                </a>
-              </h3>
-              <p className="hc-resource-desc">
-                Feb 3, 2025 · Cleaning for a Reason partners with more than 1,400 residential cleaners throughout the United States and Canada to offer free house cleaning to any household battling cancer. Since 2006, the nonprofit and its partners have donated more than $20 million in services, helping more than 59,000 cancer patients.
+            </a>
+            <a
+              href="https://cleaningforareason.org/mama-needs-a-maid-and-so-do-cancer-patients/"
+              className="hcmp-card"
+              {...ext}
+            >
+              <h4>Mama Needs A Maid and So Do Cancer Patients</h4>
+              <p className="hcmp-card-org">Cleaning for a Reason</p>
+              <p>
+                Partners with 1,400+ residential cleaners in the US &amp; Canada.
+                Over $20M in donated services helping 59,000+ patients since 2006.
               </p>
-            </li>
-            <li>
-              <h3 className="hc-resource-title">
-                <a href="https://www.cancer.org/cancer/latest-news/how-to-keep-your-home-clean-when-living-with-cancer.html" {...ext}>
-                  How to Keep Your Home Clean When Living With Cancer
-                </a>
-              </h3>
-              <p className="hc-resource-desc">
-                Aug 13, 2024 · We connect patients, caregivers, and family members with essential services and resources at every step of their cancer journey. Ask us how you can get involved and support the fight against cancer. Some of the topics we can assist with include: Referrals to patient-related programs or resources; Donations, website, or event-related assistance.
+            </a>
+            <a
+              href="https://www.cancer.org/cancer/latest-news/how-to-keep-your-home-clean-when-living-with-cancer.html"
+              className="hcmp-card"
+              {...ext}
+            >
+              <h4>How to Keep Your Home Clean When Living With Cancer</h4>
+              <p className="hcmp-card-org">American Cancer Society</p>
+              <p>
+                Connects patients, caregivers, and family members with essential
+                services and resources at every step of their cancer journey.
               </p>
-            </li>
-            <li>
-              <h3 className="hc-resource-title">
-                <a href="https://cleaningforareason.org/clean-serene-services-offers-free-house-cleaning-to-cancer-patients/" {...ext}>
-                  Clean &amp; Serene Services Offers Free House Cleaning to Cancer Patients
-                </a>
-              </h3>
-              <p className="hc-resource-desc">
-                Dec 14, 2023 · Cleaning for a Reason partners with more than 1,300 residential cleaners throughout the United States and Canada to offer free house cleaning to any household battling cancer. Since 2006, the nonprofit and its partners have donated more than $18 million in services, helping more than 52,000 cancer patients.
+            </a>
+            <a
+              href="https://cleaningforareason.org/clean-serene-services-offers-free-house-cleaning-to-cancer-patients/"
+              className="hcmp-card"
+              {...ext}
+            >
+              <h4>Clean &amp; Serene Services</h4>
+              <p className="hcmp-card-org">Cleaning for a Reason Partner</p>
+              <p>
+                Free house cleaning for households battling cancer, with 1,300+
+                partnered cleaners across the US and Canada.
               </p>
-            </li>
-          </ul>
+            </a>
+          </div>
         </section>
 
-        <section className="hc-section">
-          <h2 className="hc-section-title">Meal Preparation &amp; Nutrition Information</h2>
-          <p className="hc-text">
-            <strong>Assistance for meal plans to address treatment side effects:</strong> The following resources provide customized assistance for important phases of a cancer journey, from initial diagnosis to after treatment/maintenance. Visit the websites to learn more.
-          </p>
-          <ol className="hc-numbered-list">
-            <li>
-              <strong>
-                <a href="https://www.cookingwithcancer.org/" {...ext}>Cooking with Cancer.org</a>
-                {" "}(<a href="tel:+12059783570">205-978-3570</a>)
-              </strong>
-            </li>
-            <li>
-              <strong>
-                <a href="https://www.amealtoheal.org/" {...ext}>Meals to Heal.org</a>
-                {" "}(<a href="tel:+18887211041">888-721-1041</a>)
-              </strong>
-            </li>
-            <li>
-              <strong>
-                <a href="https://www.momsmeals.com/individuals-caregivers/" {...ext}>Mom&apos;s Meals</a>
-                {" "}- to support Cancer Patients (<a href="tel:+18775086667">877-508-6667</a>)
-              </strong>
-            </li>
-          </ol>
-          <p className="hc-text">
-            These organizations offer meal preparation according to your request to help minimize the side effects of chemotherapy treatment. Certain foods have been found to reduce side effects such as loss of appetite, loss of taste and smell, fatigue, constipation, diarrhea, and more. There is consultation on foods that will boost the immune system and reduce inflammation. Online recipes and recipe videos, plus e-books are available to assist patients and offer customized nutritional counseling and meal planning. This is a support tool to take control of your nutrition to stay strong during and after treatment, and may enhance your body&apos;s response to treatment. Make an appointment with an integrative medicine team to discuss lowering inflammation and boosting immunity.
-          </p>
-          <p className="hc-text">
-            <strong>Videos for How To Eat Healthy During Chemotherapy:</strong>{" "}
-            <a href="https://www.youtube.com/watch?v=NzTYEO6FRRo" {...ext}>Eating well through Chemo and Beyond (Video)</a>
-          </p>
+        {/* Meal Prep */}
+        <section id="meal-prep" className="hcmp-section">
+          <h2 className="hcmp-section-title blue">
+            Meal Preparation &amp; Nutrition Information
+          </h2>
+          <div className="hcmp-panel blue">
+            <div className="hcmp-panel-header">
+              <div className="hcmp-icon blue">
+                <i className="fas fa-utensils" aria-hidden />
+              </div>
+              <div>
+                <h3>Meal Plans for Treatment Side Effects</h3>
+                <p>
+                  Customized assistance from diagnosis through maintenance
+                </p>
+              </div>
+            </div>
+
+            <div className="hcmp-orgs">
+              <div className="hcmp-org-card">
+                <h4>
+                  <a href="https://www.cookingwithcancer.org/" {...ext}>
+                    Cooking with Cancer.org
+                  </a>
+                </h4>
+                <a href="tel:+12059783570" className="hcmp-org-phone">
+                  205-978-3570
+                </a>
+              </div>
+              <div className="hcmp-org-card">
+                <h4>
+                  <a href="https://www.amealtoheal.org/" {...ext}>
+                    Meals to Heal.org
+                  </a>
+                </h4>
+                <a href="tel:+18887211041" className="hcmp-org-phone">
+                  888-721-1041
+                </a>
+              </div>
+              <div className="hcmp-org-card">
+                <h4>
+                  <a
+                    href="https://www.momsmeals.com/individuals-caregivers/"
+                    {...ext}
+                  >
+                    Mom&apos;s Meals
+                  </a>
+                </h4>
+                <a href="tel:+18775086667" className="hcmp-org-phone">
+                  877-508-6667
+                </a>
+              </div>
+            </div>
+
+            <p className="hcmp-panel-text">
+              These organizations offer meal preparation to help minimize
+              chemotherapy side effects such as loss of appetite, fatigue,
+              constipation, and more. They provide consultation on immune-boosting
+              and anti-inflammatory foods, online recipes, recipe videos, e-books,
+              and customized nutritional counseling. This is a support tool to stay
+              strong during and after treatment and may enhance your body&apos;s
+              response to treatment.
+            </p>
+
+            <a
+              href="https://www.youtube.com/watch?v=NzTYEO6FRRo"
+              className="hcmp-video-link"
+              {...ext}
+            >
+              <i className="fas fa-play-circle" aria-hidden />
+              Eating Well Through Chemo and Beyond (Video)
+            </a>
+          </div>
         </section>
 
-        <section className="hc-section">
-          <h2 className="hc-section-title">What Types of Foods Are Good Sources of Antioxidants?</h2>
-          <p className="hc-text">
-            Many vegetables, fruits, and other types of foods are excellent sources of antioxidant compounds, including anthocyanins, carotenoids (such as beta-carotene), lutein, lycopene, resveratrol, selenium, vitamin C, and vitamin E. Furthermore, many whole foods provide a variety of antioxidant compounds, each with its own unique health effects. For example, grapes contain anthocyanins, vitamin C, resveratrol, and selenium, while dark leafy green vegetables like kale, spinach, and collard greens offer vitamins C and E, lutein, and an antioxidant called kaempferol. While vegetables and fruits serve as some of the best food sources of antioxidants, you can also fill up on antioxidant compounds by eating legumes and nuts, drinking tea (such as{" "}
-            <a href="https://www.verywellfit.com/the-benefits-of-black-tea-89547" {...ext}>green tea</a>
-            {" "}and{" "}
-            <a href="https://www.verywellfit.com/the-benefits-of-black-tea-89547" {...ext}>black tea</a>
-            ), and using herbs and spices in your cooking. Snack foods like popcorn and{" "}
-            <a href="https://www.verywellfit.com/the-benefits-of-cocoa-extract-89051" {...ext}>dark chocolate</a>
-            {" "}also deliver a number of antioxidants.
-          </p>
-          <p className="hc-text">
-            LEIOMYOSARCOMA — <a href="https://www.christinamthompson.com/leiomyosarcoma/" {...ext}>Guidance on Food</a> (videos included)
-          </p>
+        {/* Antioxidants */}
+        <section id="antioxidants" className="hcmp-section">
+          <h2 className="hcmp-section-title purple">
+            What Types of Foods Are Good Sources of Antioxidants?
+          </h2>
+          <div className="hcmp-panel purple">
+            <div className="hcmp-panel-header">
+              <div className="hcmp-icon purple">
+                <i className="fas fa-seedling" aria-hidden />
+              </div>
+              <div>
+                <h3>Antioxidant-Rich Foods</h3>
+                <p>Vegetables, fruits, legumes, nuts, teas, and more</p>
+              </div>
+            </div>
+            <p className="hcmp-panel-text">
+              Many vegetables, fruits, and other foods are excellent sources of
+              antioxidant compounds, including anthocyanins, carotenoids (such as
+              beta-carotene), lutein, lycopene, resveratrol, selenium, vitamin C,
+              and vitamin E. Whole foods provide a variety of antioxidant compounds
+              with unique health effects. For example, grapes contain anthocyanins,
+              vitamin C, resveratrol, and selenium, while dark leafy greens like
+              kale, spinach, and collard greens offer vitamins C and E, lutein, and
+              kaempferol.
+            </p>
+            <p className="hcmp-panel-text">
+              You can also fill up on antioxidants by eating legumes and nuts,
+              drinking{" "}
+              <a
+                href="https://www.verywellfit.com/the-benefits-of-black-tea-89547"
+                {...ext}
+              >
+                green and black tea
+              </a>
+              , and using herbs and spices in your cooking. Snack foods like
+              popcorn and{" "}
+              <a
+                href="https://www.verywellfit.com/the-benefits-of-cocoa-extract-89051"
+                {...ext}
+              >
+                dark chocolate
+              </a>{" "}
+              also deliver antioxidants.
+            </p>
+            <a
+              href="https://www.christinamthompson.com/leiomyosarcoma/"
+              className="hcmp-cta-link"
+              {...ext}
+            >
+              <i className="fas fa-external-link-alt" aria-hidden />
+              Leiomyosarcoma — Guidance on Food (videos included)
+            </a>
+          </div>
         </section>
       </div>
-    </div>
+    </main>
   );
 }

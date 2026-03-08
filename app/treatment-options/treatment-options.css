@@ -221,6 +221,10 @@
   background-image: linear-gradient(to right, #ec4899, #db2777);
 }
 
+.to-section-header.green h2 {
+  background-image: linear-gradient(to right, #22c55e, #16a34a);
+}
+
 .to-panel {
   background-color: #ffffff;
   border-radius: 0 0 8px 8px;

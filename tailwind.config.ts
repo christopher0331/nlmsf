@@ -9,6 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        quicksand: ["var(--font-quicksand)", "ui-sans-serif", "system-ui", "sans-serif"],
         "report-display": ["var(--font-report-display)", "Fraunces", "Georgia", "serif"],
       },
       keyframes: {

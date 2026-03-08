@@ -10,7 +10,7 @@ const LOGO_SRC =
 const PHONE = "(303) 808-3437";
 const DONATE_URL = "?form=DONATE";
 
-const FONT_HEADER = "font-['Quicksand',ui-sans-serif,system-ui,sans-serif]";
+const FONT_HEADER = "font-quicksand";
 const TOP_BAR = "w-full bg-white border-b border-gray-200 h-[50px] relative z-[5] box-border";
 const CONTAINER_HEADER = "max-w-full w-full mx-auto pl-4 pr-10 flex items-center justify-between box-border relative lg:px-8 min-h-full";
 const LOGO_SPACE = "flex-[0_0_25%] max-w-[200px]";
