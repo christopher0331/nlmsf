@@ -278,7 +278,7 @@ export default function HomeThreeColumns() {
         </div>
 
         {/* Center column: Support Hotline + Testimonials */}
-        <div className="hidden lg:block">
+        <div>
           <div className="p-0 m-0 text-center">
             <h2
               className={`text-3xl font-bold text-[#6b46c1] m-0 mb-6 ${gradientText} md:text-3xl sm:text-2xl`}
