@@ -1,0 +1,4 @@
+# PDF redirects (Netlify CDN edge — Next.js middleware doesn't match .pdf on Netlify)
+/CRI_Patients-Guide-25.pdf  https://media.nlmsf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf  301!
+/accountability-reports/2023/summary.pdf  /accountability-reports/  301!
+/accountability-reports/2024/summary.pdf  /accountability-reports/  301!

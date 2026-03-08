@@ -6,7 +6,12 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   async redirects() {
     return [
-      // Existing: tribute fund → tribute page
+      // Specific tribute overrides (must be before generic pattern)
+      { source: "/pennee-morris-tribute-fund", destination: "/tributes-directory", permanent: true },
+      { source: "/snyderstrong-tribute-fund", destination: "/tributes-directory", permanent: true },
+      { source: "/cynthia-diane-katafiasz-2", destination: "/tributes-directory", permanent: true },
+
+      // Generic: tribute fund → tribute page
       {
         source: "/:slug-tribute-fund",
         destination: "/:slug-tribute-page",
