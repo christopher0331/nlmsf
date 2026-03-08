@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const LOGO_SRC =
   "https://media.nlmsf.org/wp-content/uploads/2023/10/NLMSF-Logo-Updated-30-Apr-2023.png";
 const PHONE = "(303) 808-3437";
-const DONATE_URL = "https://nlmsf.org/?form=DONATE";
+const DONATE_URL = "?form=DONATE";
 
 const FONT_HEADER = "font-['Quicksand',ui-sans-serif,system-ui,sans-serif]";
 const TOP_BAR = "w-full bg-white border-b border-gray-200 h-[50px] relative z-[5] box-border";

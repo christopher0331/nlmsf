@@ -15,8 +15,8 @@ const { PrismaBetterSqlite3 } = require("@prisma/adapter-better-sqlite3");
 
 const projectRoot = process.cwd();
 const dbPath = process.env.DATABASE_URL || "file:" + path.join(projectRoot, "prisma", "dev.db");
-const defaultTributesCsv = path.join(process.env.HOME || process.env.USERPROFILE || "", "Downloads", "qlr_nlmsf_tributes.csv");
-const defaultDonorsCsv = path.join(process.env.HOME || process.env.USERPROFILE || "", "Downloads", "qlr_nlmsf_tribute_donors.csv");
+const defaultTributesCsv = path.join(process.env.HOME || "", "Downloads", "qlr_nlmsf_tributes.csv");
+const defaultDonorsCsv = path.join(process.env.HOME || "", "Downloads", "qlr_nlmsf_tribute_donors.csv");
 
 const adapter = new PrismaBetterSqlite3({ url: dbPath });
 const prisma = new PrismaClient({ adapter });

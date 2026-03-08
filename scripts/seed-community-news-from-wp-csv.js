@@ -21,12 +21,12 @@ const { PrismaBetterSqlite3 } = require("@prisma/adapter-better-sqlite3");
 const projectRoot = process.cwd();
 const dbPath = process.env.DATABASE_URL || "file:" + path.join(projectRoot, "prisma", "dev.db");
 const defaultCsvPath = path.join(
-  process.env.HOME || process.env.USERPROFILE || "",
+  process.env.HOME || "",
   "Downloads",
   "qlr_posts.csv"
 );
 const defaultPostmetaPath = path.join(
-  process.env.HOME || process.env.USERPROFILE || "",
+  process.env.HOME || "",
   "Downloads",
   "qlr_postmeta.csv"
 );
