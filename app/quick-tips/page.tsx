@@ -16,9 +16,9 @@ interface QuickTipTopic {
 
 const QUICK_TIPS: QuickTipTopic[] = [
   {
-    title: "Survivorship Care Guide",
-    description: "Essential tips for navigating your LMS journey",
-    driveUrl: "https://drive.google.com/file/d/1dgSeDh6-e4U6xfXJxo9YuOYmhDgUVz_g/view",
+    title: "NLMSF Survivorship Caring Guide",
+    description: "A revised guide for survivorship care, including managing emotions, loneliness, and rebuilding strength after treatment",
+    driveUrl: "https://drive.google.com/file/d/1zu9um2QpLXVQZ-C6r5P9ANBgluDwgptT/view?usp=sharing",
     category: "General",
   },
   {
@@ -28,15 +28,33 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "General",
   },
   {
+    title: "Survivorship Care Planning",
+    description: "A roadmap for recovery including treatment summaries, follow-up schedules, and physical and emotional late effects to monitor",
+    driveUrl: "https://drive.google.com/file/d/17o8ByvDy_ANtBBI2xczgYt5BW7R47PlT/view?usp=sharing",
+    category: "General",
+  },
+  {
+    title: "Second Opinions for LMS / Sarcomas",
+    description: "What to consider when seeking a second opinion",
+    driveUrl: "https://drive.google.com/file/d/1P1oWmE-_cCi_OZKVnOUOC0vHI-1mFYVs/view",
+    category: "General",
+  },
+  {
     title: "The Role of a Tumor Board in Patient Care",
-    description: "Understanding how tumor boards can help guide your treatment decisions",
+    description: "How multidisciplinary teams of experts collaborate to determine the best treatment plans for sarcoma patients",
     driveUrl: "https://drive.google.com/file/d/1GYajNDAlQSLGLQ_ERVVkzXGNg9J2TMxq/view?usp=sharing",
     category: "Treatment",
   },
   {
     title: "Sarcoma Imaging",
-    description: "Learn about imaging techniques used in sarcoma diagnosis and monitoring",
+    description: "A guide to the different types of imaging used in sarcoma diagnosis and monitoring",
     driveUrl: "https://drive.google.com/file/d/1bG0tq-MSXUl_wczNr8cARI8L26WehwOF/view?usp=sharing",
+    category: "Treatment",
+  },
+  {
+    title: "Imaging Information for Uterine Leiomyosarcoma",
+    description: "Imaging protocols specifically focused on uterine leiomyosarcoma (uLMS)",
+    driveUrl: "https://drive.google.com/file/d/1bjVV1mP-AZQqVjoEyp73N-vE0NtnlyqV/view?usp=sharing",
     category: "Treatment",
   },
   {
@@ -46,10 +64,40 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "Treatment",
   },
   {
-    title: "Second Opinions for LMS / Sarcomas",
-    description: "What to Consider when seeking a second opinion",
-    driveUrl: "https://drive.google.com/file/d/1P1oWmE-_cCi_OZKVnOUOC0vHI-1mFYVs/view",
-    category: "General",
+    title: "Radiation Therapy for Soft Tissue Sarcoma",
+    description: "How radiation destroys sarcoma cells, covering techniques like IMRT and SBRT and how radiation is used with surgery",
+    driveUrl: "https://drive.google.com/file/d/1v1d3-BDpSK2Vowx2sRByY7Y8WSiew-Wy/view?usp=sharing",
+    category: "Treatment",
+  },
+  {
+    title: "Palliative Care",
+    description: "Patient-centered specialty focused on quality of life, addressing physical, emotional, social, and spiritual needs from diagnosis",
+    driveUrl: "https://drive.google.com/file/d/1f7fmNxS93XQdxJTlgdVL74pWRsQ0khDU/view?usp=sharing",
+    category: "Treatment",
+  },
+  {
+    title: "Cancer Caregiving Guide",
+    description: "A guide focused on supporting those who care for sarcoma patients",
+    driveUrl: "https://drive.google.com/file/d/1N4qhSnK2YfcGSGGCzoDm0JOfiRGw_AGv/view?usp=sharing",
+    category: "Caregiving",
+  },
+  {
+    title: "Psychosocial Support (Psycho-oncology)",
+    description: "The psychological impact of cancer on patients and caregivers, including scan anxiety, fears of recurrence, and benefits of early counseling",
+    driveUrl: "https://docs.google.com/document/d/1qZlFt-Uwf2zY5tcZvmDMh-sR0rC0uxBO/edit",
+    category: "Emotional",
+  },
+  {
+    title: "Revised Health Insurance Quick Tips",
+    description: "Navigating Private, Medicare, and Medicaid insurance to help manage treatment costs, including direct and indirect expenses",
+    driveUrl: "https://drive.google.com/file/d/1i7kj8WCs-twa2HXvAL4qRo4VNbpVg2qp/view?usp=sharing",
+    category: "Financial",
+  },
+  {
+    title: "Social Security Disability for Cancer",
+    description: "A guide regarding disability benefits for sarcoma / LMS patients",
+    driveUrl: "https://drive.google.com/file/d/1kupGhwdoy8K-ltFfMpkMJOD3BOYCdE2o/view?usp=sharing",
+    category: "Financial",
   },
 ];
 

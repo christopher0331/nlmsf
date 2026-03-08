@@ -62,15 +62,15 @@ export default function HeroSection() {
               Global LMS Community as we move forward in the quest for the cure.
             </p>
             <div className="flex flex-col gap-4 max-w-[1000px] mx-auto my-8 md:flex-row md:items-stretch">
-              <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:text-center md:py-6">
-                <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12 md:mx-auto">
+              <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:items-center md:text-center md:py-6">
+                <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12">
                   <i className="fas fa-heart text-white text-base md:text-xl" style={{ margin: 0 }} aria-hidden />
                 </div>
-                <div className="flex-grow mr-6 text-left md:mr-0 md:mb-5 md:text-center">
-                  <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2 ">
+                <div className="flex-grow mr-6 text-left md:flex-grow-0 md:mr-0 md:mb-5 md:text-center md:w-full">
+                  <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2">
                     Support Research
                   </h3>
-                  <p className="text-sm text-white leading-snug m-0 opacity-90  md:mb-0">
+                  <p className="text-sm text-white leading-snug m-0 opacity-90 md:mb-0">
                     Help push research forward for Leiomyosarcoma treatments
                   </p>
                 </div>
@@ -81,15 +81,15 @@ export default function HeroSection() {
                   Donate Now
                 </Link>
               </div>
-              <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:text-center md:py-6">
-                <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12 md:mx-auto">
+              <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:items-center md:text-center md:py-6">
+                <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12">
                   <i className="fas fa-envelope text-white text-base md:text-xl" style={{ margin: 0 }} aria-hidden />
                 </div>
-                <div className="flex-grow mr-6 text-left md:mr-0 md:mb-5 md:text-center">
-                  <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2 ">
+                <div className="flex-grow mr-6 text-left md:flex-grow-0 md:mr-0 md:mb-5 md:text-center md:w-full">
+                  <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2">
                     Stay Informed
                   </h3>
-                  <p className="text-sm text-white leading-snug m-0 opacity-90  md:mb-0">
+                  <p className="text-sm text-white leading-snug m-0 opacity-90 md:mb-0">
                     Receive the latest research news and community updates
                   </p>
                 </div>
@@ -101,15 +101,15 @@ export default function HeroSection() {
                   Subscribe
                 </button>
               </div>
-              <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:text-center md:py-6">
-                <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12 md:mx-auto">
+              <div className="flex items-center rounded-lg py-4 px-6 border border-white/20 backdrop-blur-sm md:flex-1 md:flex-col md:items-center md:text-center md:py-6">
+                <div className="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0 mr-4 md:mr-0 md:mb-4 md:w-12 md:h-12">
                   <i className="fab fa-facebook text-white text-base md:text-xl" style={{ margin: 0 }} aria-hidden />
                 </div>
-                <div className="flex-grow mr-6 text-left md:mr-0 md:mb-5 md:text-center">
-                  <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2 ">
+                <div className="flex-grow mr-6 text-left md:flex-grow-0 md:mr-0 md:mb-5 md:text-center md:w-full">
+                  <h3 className="text-base font-semibold text-white m-0 mb-1 md:text-lg md:mb-2">
                     Join Community
                   </h3>
-                  <p className="text-sm text-white leading-snug m-0 opacity-90  md:mb-0">
+                  <p className="text-sm text-white leading-snug m-0 opacity-90 md:mb-0">
                     Connect with our Facebook support group
                   </p>
                 </div>
