@@ -100,6 +100,57 @@ export default function DonatePage() {
         </div>
       </section>
 
+      {/* Donate Stock */}
+      <section className="max-w-[1400px] mx-auto mb-8 px-4 md:px-6">
+        <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-lg shadow-gray-200/50">
+          <div className="flex flex-col items-center gap-6 p-6 md:flex-row md:items-center md:gap-10 md:p-8">
+            <div className="shrink-0 w-[220px] md:w-[260px]">
+              <Image
+                src="https://media.nlmsf.org/wp-content/uploads/2020/12/stocks.jpg"
+                alt="Donate Stock to the National Leiomyosarcoma Foundation"
+                width={640}
+                height={360}
+                className="w-full h-auto rounded-xl shadow-md"
+                sizes="(min-width: 768px) 260px, 220px"
+              />
+            </div>
+            <div className="flex-1 min-w-0 text-center md:text-left">
+              <h2
+                className="text-2xl font-bold mb-3 md:text-[1.75rem]"
+                style={{
+                  background: "linear-gradient(90deg, #7e22ce, #4338ca)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                Donate Stock to Fund LMS Research
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed mb-4 max-w-xl">
+                Through <strong>DonateStock.com</strong>, you can donate stock directly to the National Leiomyosarcoma Foundation. Your investment in research and rare cancer survivorship accelerates treatment options for all.
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                <a
+                  href="https://donatestock.com/donate?fulltext=National+Leiomyosarcoma+Foundation&hiddenDuid=0803655f-ac91-4aa6-9d4a-75ae2e6d2ae7&hiddenSid=e694eec1-d39e-46c0-aef5-9508f81653a1"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                  style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.35)" }}
+                  {...ext}
+                >
+                  Donate Stock via DonateStock.com <i className="fas fa-external-link-alt text-sm opacity-90" aria-hidden />
+                </a>
+                <a
+                  href="https://nlmsf.org/open-research/"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-[#7e22ce] no-underline border-2 border-[#7e22ce] transition-all duration-300 hover:bg-[#7e22ce] hover:text-white"
+                  {...ext}
+                >
+                  View Accountability Reports
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-2 grid grid-cols-1 gap-8 items-start lg:grid-cols-[280px_1fr]">
         {/* Sidebar */}
         <aside className="lg:sticky lg:top-20 lg:mb-6">
@@ -531,37 +582,6 @@ export default function DonatePage() {
                       Learn About Planned Giving <i className="fas fa-external-link-alt text-sm opacity-90" aria-hidden />
                     </a>
                   </div>
-                </div>
-              </div>
-
-              {/* Donate Stock */}
-              <div className="overflow-hidden rounded-2xl border border-teal-200/70 bg-white p-6 md:p-8 shadow-lg shadow-gray-200/50 transition-all duration-300 hover:shadow-xl" style={{ background: "linear-gradient(135deg, rgba(13, 148, 136, 0.06) 0%, rgba(255,255,255,1) 40%)" }}>
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-100 text-teal-600">
-                    <i className="fas fa-chart-line text-xl" aria-hidden />
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900">Donate Stock</h3>
-                </div>
-                <div className="space-y-5 text-gray-600 text-base leading-relaxed">
-                  <p><strong className="text-gray-800">Ways to Fund Research:</strong> Your gift advances Leiomyosarcoma research and survivorship programs. You can always give directly through our main donation page:</p>
-                  <p>
-                    <a href="https://nlmsf.org/donate/" className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-lg" style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.35)" }} {...ext}>
-                      Give to NLMSF Research &amp; Survivorship <i className="fas fa-external-link-alt text-sm opacity-90" aria-hidden />
-                    </a>
-                  </p>
-                  <p>There is also a new way to give: <strong>Donate Stock</strong> through DonateStock.com, directly to the National Leiomyosarcoma Foundation. It is already set up for you – your donation, your investment in research and rare cancer survivorship – supporting the researchers translates into acceleration of treatment options for all.</p>
-                  <p>
-                    <a href="https://donatestock.com/donate?fulltext=National+Leiomyosarcoma+Foundation&hiddenDuid=0803655f-ac91-4aa6-9d4a-75ae2e6d2ae7&hiddenSid=e694eec1-d39e-46c0-aef5-9508f81653a1" className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-lg" style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.35)" }} {...ext}>
-                      Donate Stock to NLMSF via DonateStock.com <i className="fas fa-external-link-alt text-sm opacity-90" aria-hidden />
-                    </a>
-                  </p>
-                  <p>To see how your support is invested, review our yearly accountability reports to the LMS community:</p>
-                  <p>
-                    <a href="https://nlmsf.org/open-research/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>
-                      View NLMSF Research Accountability &amp; Open Research Reports
-                    </a>
-                  </p>
-                  <p className="italic text-gray-500">Every act of support helps promote longer lives and brighter tomorrows.</p>
                 </div>
               </div>
 
