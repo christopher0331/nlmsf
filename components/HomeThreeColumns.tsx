@@ -141,7 +141,7 @@ export default function HomeThreeColumns() {
         <div className="flex flex-col gap-0">
           <div className="p-0 m-0">
             <div className="bg-white rounded-xl border border-gray-200 py-5 px-[18px] shadow-[0_4px_12px_rgba(15,23,42,0.06)] md:py-5 md:px-[18px] sm:py-4 sm:px-[14px]">
-              <div className="flex items-center justify-between mb-3.5">
+              <div className="flex items-center justify-between mb-3">
                 <div
                   className={`text-lg font-bold ${gradientText} md:text-lg sm:text-base`}
                 >
@@ -153,77 +153,51 @@ export default function HomeThreeColumns() {
                   rel="noopener noreferrer"
                   className="text-xs font-medium text-[#6b46c1] no-underline inline-flex items-center gap-1 hover:text-[#553c9a]"
                 >
-                  View on ClinicalTrials.gov &#8599;
+                  ClinicalTrials.gov &#8599;
                 </a>
               </div>
-              <p className="text-[13px] text-gray-600 m-0 mb-3 leading-normal">
-                Explore current clinical trials that include{" "}
-                <strong>leiomyosarcoma</strong> so you can discuss options with
-                your care team.
-              </p>
               <a
                 href={CLINICAL_TRIALS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block w-full text-center py-2.5 px-3.5 rounded-full bg-gradient-to-br from-[#6b46c1] to-[#9333ea] text-white text-[13px] font-semibold no-underline shadow-[0_8px_16px_rgba(88,28,135,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_12px_20px_rgba(88,28,135,0.3)]"
               >
-                Open Leiomyosarcoma Trials on ClinicalTrials.gov
+                Search Leiomyosarcoma Trials
               </a>
-              <p className="text-[11px] text-gray-500 mt-2.5">
-                This link opens the official <strong>ClinicalTrials.gov</strong>{" "}
-                website with results already filtered for{" "}
-                <strong>leiomyosarcoma</strong>.
-              </p>
             </div>
           </div>
 
           <div className="mt-4">
             <div className="bg-white rounded-xl border border-gray-200 py-5 px-[18px] shadow-[0_4px_12px_rgba(15,23,42,0.06)] sm:py-4 sm:px-[14px]">
               <h3
-                className={`text-lg font-bold m-0 mb-1.5 ${gradientText} sm:text-base`}
+                className={`text-lg font-bold m-0 mb-3 ${gradientText} sm:text-base`}
               >
                 Website Navigator
               </h3>
-              <p className="text-[13px] text-gray-600 m-0 mb-3.5">
-                Start here to find the most helpful information for where you
-                are in your LMS journey.
-              </p>
-              <div className="grid grid-cols-1 gap-3.5 min-[900px]:grid-cols-1">
+              <div className="grid grid-cols-1 gap-2.5">
                 <Link
                   href="/pathology-report-accuracy"
-                  className="block bg-gray-50 rounded-[10px] py-3 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
+                  className="block bg-gray-50 rounded-[10px] py-2.5 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
                 >
-                  <div className="text-[13px] font-semibold text-[#4c1d95] mb-1">
+                  <div className="text-[13px] font-semibold text-[#4c1d95]">
                     Newly Diagnosed Patient
                   </div>
-                  <p className="text-xs text-gray-600 m-0 leading-snug">
-                    Learn the basics, key questions for your care team, and
-                    first steps after diagnosis.
-                  </p>
                 </Link>
                 <Link
                   href="/treatment-options"
-                  className="block bg-gray-50 rounded-[10px] py-3 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
+                  className="block bg-gray-50 rounded-[10px] py-2.5 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
                 >
-                  <div className="text-[13px] font-semibold text-[#4c1d95] mb-1">
+                  <div className="text-[13px] font-semibold text-[#4c1d95]">
                     Entering Treatment / Caregivers
                   </div>
-                  <p className="text-xs text-gray-600 m-0 leading-snug">
-                    Prepare for treatment, understand side effects, and find
-                    caregiver-specific support.
-                  </p>
                 </Link>
                 <Link
                   href="/survivorship-resources-2"
-                  className="block bg-gray-50 rounded-[10px] py-3 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
+                  className="block bg-gray-50 rounded-[10px] py-2.5 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
                 >
-                  <div className="text-[13px] font-semibold text-[#4c1d95] mb-1">
+                  <div className="text-[13px] font-semibold text-[#4c1d95]">
                     End of Treatment / Survivorship
                   </div>
-                  <p className="text-xs text-gray-600 m-0 leading-snug">
-                    Explore quality-of-life resources, follow-up care, and
-                    survivorship support.
-                  </p>
                 </Link>
               </div>
             </div>
@@ -252,7 +226,7 @@ export default function HomeThreeColumns() {
               </a>
             </div>
             <div>
-              <h3 className="text-[1.06rem] mt-2 mb-1 font-extrabold leading-snug">
+              <h3 className="text-[1.06rem] mt-2 mb-2.5 font-extrabold leading-snug">
                 <a
                   className="text-[#6a3ea1] underline underline-offset-2 decoration-2 hover:text-[#4f2f7b]"
                   href={ONCLIVE_SARCOMA_URL}
@@ -262,10 +236,6 @@ export default function HomeThreeColumns() {
                   Sarcomas | Clinical | OncLive
                 </a>
               </h3>
-              <p className="text-[#374151] text-[0.95rem] my-1.5 mb-3">
-                Sarcoma OncLive videos from Sarcoma Specialists throughout the
-                country
-              </p>
               <button
                 type="button"
                 className="inline-block py-2 px-3 rounded-full border-2 border-[#6a3ea1] text-[#6a3ea1] font-bold no-underline transition-all duration-150 cursor-pointer font-[inherit] bg-transparent hover:bg-[#6a3ea1] hover:text-white hover:shadow-[0_4px_10px_rgba(106,62,161,0.25)]"
@@ -279,89 +249,49 @@ export default function HomeThreeColumns() {
 
         {/* Center column: Support Hotline + Testimonials */}
         <div>
-          <div className="p-0 m-0 text-center">
-            <h2
-              className={`text-3xl font-bold text-[#6b46c1] m-0 mb-6 ${gradientText} md:text-3xl sm:text-2xl`}
-            >
-              24/7 Support Hotline
-            </h2>
-            <p
-              className="relative text-center my-3 mx-auto font-bold italic text-base md:text-lg"
-              style={{
-                background: "linear-gradient(90deg, #8b5cf6, #6d28d9, #5b21b6)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              We are here for you
-            </p>
+          <div className="rounded-xl bg-gradient-to-br from-[#6b46c1] to-[#4c1d95] p-6 text-center text-white shadow-[0_4px_20px_rgba(107,70,193,0.25)] relative overflow-hidden">
             <div
-              className="relative left-1/2 -translate-x-1/2 -mb-[18px] w-[60%] min-w-[240px] max-w-[440px] h-[22px]"
-              style={{
-                background: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 60' preserveAspectRatio='none'><defs><linearGradient id='hotline-g' x1='0' y1='0' x2='1' y2='0'><stop stop-color='%238b5cf6'/><stop offset='.6' stop-color='%236d28d9'/><stop offset='1' stop-color='%235b21b6'/></linearGradient></defs><path d='M10 45 C120 8 380 8 490 45' stroke='url(%23hotline-g)' stroke-width='10' fill='none' stroke-linecap='round'/></svg>") center / 100% 100% no-repeat`,
-              }}
+              className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/[0.06] translate-x-1/3 -translate-y-1/3"
               aria-hidden
             />
-            <div className="flex flex-col gap-4">
-              <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-[#6b46c1] to-[#553c9a] py-6 px-6 text-white shadow-[0_4px_12px_rgba(107,70,193,0.3)]">
-                <div className="relative z-10">
-                  <div className="flex items-center justify-center mb-3">
-                    <PhoneIcon className="w-5 h-5 mr-2 text-white" />
-                    <h3 className="font-semibold text-white text-lg m-0 flex items-center">
-                      Primary Contact
-                    </h3>
-                  </div>
-                  <a
-                    href="tel:+13038083437"
-                    className="block text-5xl font-bold text-white no-underline mb-2 transition-opacity hover:opacity-90 leading-none md:text-5xl sm:text-4xl xs:text-3xl"
-                  >
-                    (303) 808-3437
-                  </a>
-                  <p className="text-sm text-white/80 m-0">
-                    Available 24 hours a day, 7 days a week
-                  </p>
-                </div>
-                <div
-                  className="absolute rounded-full bg-white/10 top-0 right-0 w-32 h-32 translate-x-1/2 -translate-y-1/2"
-                  aria-hidden
-                />
-                <div
-                  className="absolute rounded-full bg-white/5 bottom-0 left-0 w-24 h-24 -translate-x-1/2 translate-y-1/2"
-                  aria-hidden
-                />
-              </div>
-
-              <div className="py-4 px-4 bg-gray-100 rounded-lg border border-gray-200">
-                <div className="flex items-center mb-2">
-                  <PhoneIcon className="w-4 h-4 text-[#6b46c1] mr-2" />
-                  <h3 className="font-semibold text-[#6b46c1] text-base m-0">
-                    Alternative Contact
-                  </h3>
-                </div>
-                <a
-                  href="tel:+13037830924"
-                  className="block text-3xl font-bold text-[#6b46c1] no-underline mb-1 transition-colors hover:text-[#553c9a] leading-none md:text-3xl sm:text-2xl xs:text-xl"
-                >
-                  (303) 783-0924
-                </a>
-                <p className="text-sm text-gray-600 m-0">Backup support line</p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-1 sm:gap-2">
+            <div
+              className="absolute bottom-0 left-0 w-28 h-28 rounded-full bg-white/[0.04] -translate-x-1/3 translate-y-1/3"
+              aria-hidden
+            />
+            <div className="relative z-10">
+              <p className="text-white/70 text-xs font-semibold uppercase tracking-widest m-0 mb-2">
+                LMS Support Hotline
+              </p>
+              <h2 className="text-2xl font-bold text-white m-0 mb-1 sm:text-xl">
+                24/7 &mdash; We Are Here for You
+              </h2>
+              <div className="w-10 h-[2px] bg-white/30 mx-auto my-4 rounded-full" />
+              <a
+                href="tel:+13038083437"
+                className="block text-[2.25rem] font-bold text-white no-underline mb-1 transition-opacity hover:opacity-85 leading-tight sm:text-3xl"
+              >
+                (303) 808-3437
+              </a>
+              <a
+                href="tel:+13037830924"
+                className="block text-lg text-white/70 font-medium no-underline mb-5 transition-opacity hover:opacity-85 hover:text-white/90 sm:text-base"
+              >
+                or (303) 783-0924
+              </a>
+              <div className="flex gap-3 justify-center">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center py-3 px-3 bg-white border-2 border-[#6b46c1] text-[#6b46c1] rounded-lg no-underline text-sm font-medium transition-all duration-300 hover:bg-[#6b46c1] hover:text-white"
+                  className="inline-flex items-center py-2 px-4 bg-white/15 backdrop-blur-sm border border-white/25 text-white rounded-full no-underline text-sm font-medium transition-all duration-200 hover:bg-white/25 hover:-translate-y-0.5"
                 >
-                  <MessageIcon className="w-4 h-4 mr-1" />
+                  <MessageIcon className="w-3.5 h-3.5 mr-1.5" />
                   Get Support
                 </Link>
                 <Link
                   href="/find-a-sarcoma-specialist/"
-                  className="flex items-center justify-center py-3 px-3 bg-white border-2 border-[#6b46c1] text-[#6b46c1] rounded-lg no-underline text-sm font-medium transition-all duration-300 hover:bg-[#6b46c1] hover:text-white sm:py-2.5 sm:text-[13px]"
+                  className="inline-flex items-center py-2 px-4 bg-white/15 backdrop-blur-sm border border-white/25 text-white rounded-full no-underline text-sm font-medium transition-all duration-200 hover:bg-white/25 hover:-translate-y-0.5"
                 >
-                  <SearchIcon className="w-4 h-4 mr-1" />
-                  Find a Sarcoma Specialist
+                  <SearchIcon className="w-3.5 h-3.5 mr-1.5" />
+                  Find a Specialist
                 </Link>
               </div>
             </div>
