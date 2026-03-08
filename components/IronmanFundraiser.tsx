@@ -55,11 +55,7 @@ export default function IronmanFundraiser() {
   const pct = goal > 0 ? Math.min((raised / goal) * 100, 100) : 0;
 
   const handleDonate = () => {
-    if (window.FundraiseUp) {
-      window.FundraiseUp.openCheckout({ form: CAMPAIGN_FORM });
-    } else {
-      window.location.href = `?form=${CAMPAIGN_FORM}`;
-    }
+    window.location.href = `?form=${CAMPAIGN_FORM}`;
   };
 
   return (
