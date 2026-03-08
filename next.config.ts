@@ -108,6 +108,22 @@ const nextConfig: NextConfig = {
       { source: "/testing-form", destination: "/", permanent: true },
       { source: "/LINK_PLACEHOLDER", destination: "/", permanent: true },
 
+      // Remaining missing pages from updated audit
+      { source: "/anna-marmo-memorial-fund", destination: "/anna-marmo-tribute-page", permanent: true },
+      { source: "/cynthia-diane-katafiasz", destination: "/tributes-directory", permanent: true },
+      { source: "/herbert-lee-perry-jr", destination: "/herbert-lee-perry-tribute-page", permanent: true },
+      { source: "/irene-abrahamian-2", destination: "/irene-abrahamian-tribute-page", permanent: true },
+      { source: "/julie-neuhaus-tribute-page-3", destination: "/julie-neuhaus-tribute-page", permanent: true },
+      { source: "/june-25th-sound-byte", destination: "/sarcoma-sound-bytes", permanent: true },
+      { source: "/june-9th-sound-byte", destination: "/sarcoma-sound-bytes", permanent: true },
+      { source: "/laura-ann-trimble", destination: "/laura-anne-trimble-tribute-page", permanent: true },
+      { source: "/michele-k-winslow", destination: "/michele-winslow-tribute-page", permanent: true },
+      { source: "/norma-jarrett", destination: "/norma-jarret-tribute-page", permanent: true },
+      { source: "/penne-m-morris", destination: "/pennee-m-morris-tribute-page", permanent: true },
+      { source: "/first-last-tribute-page", destination: "/tributes-directory", permanent: true },
+      { source: "/chris-hancock-tribute-page", destination: "/tributes-directory", permanent: true },
+      { source: "/author/admin/page/2", destination: "/", permanent: true },
+
       // ============================================================
       // Phase 2: Nested path redirects
       // ============================================================
