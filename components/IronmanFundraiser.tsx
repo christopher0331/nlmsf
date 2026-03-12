@@ -15,16 +15,11 @@ declare global {
 
 const CAMPAIGN_FORM = "FUNRBJGPJSK";
 const GOFUNDME_URL = "https://www.gofundme.com/f/support-national-leiomyosarcoma-foundation";
-
-type SourceData = {
-  raised: number;
-  goal: number;
-  donors: number;
-};
+const COMBINED_GOAL = 5000;
 
 export default function IronmanFundraiser() {
-  const [fu, setFu] = useState<SourceData>({ raised: 0, goal: 5000, donors: 0 });
-  const [gfm, setGfm] = useState<SourceData>({ raised: 0, goal: 5000, donors: 0 });
+  const [raised, setRaised] = useState(0);
+  const [donors, setDonors] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
   const fetchData = useCallback(async () => {
@@ -32,8 +27,10 @@ export default function IronmanFundraiser() {
       const res = await fetch("/api/fundraiser/", { cache: "no-store" });
       if (!res.ok) return;
       const data = await res.json();
-      setFu(data.fundraiseUp);
-      setGfm(data.goFundMe);
+      const fu = data.fundraiseUp;
+      const gfm = data.goFundMe;
+      setRaised(fu.raised + gfm.raised);
+      setDonors(fu.donors + gfm.donors);
     } catch {
       /* silent */
     } finally {
@@ -57,8 +54,7 @@ export default function IronmanFundraiser() {
     }
   }, [fetchData]);
 
-  const fuPct = fu.goal > 0 ? Math.min((fu.raised / fu.goal) * 100, 100) : 0;
-  const gfmPct = gfm.goal > 0 ? Math.min((gfm.raised / gfm.goal) * 100, 100) : 0;
+  const pct = COMBINED_GOAL > 0 ? Math.min((raised / COMBINED_GOAL) * 100, 100) : 0;
 
   const fmt = (n: number) =>
     n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -87,69 +83,32 @@ export default function IronmanFundraiser() {
           fight against leiomyosarcoma.
         </p>
 
-        <div className="imf-dual-progress">
-          {/* Fundraise Up */}
-          <div className="imf-progress-section">
-            <div className="imf-progress-labels">
-              <span className="imf-source-tag">Fundraise Up</span>
-              <span className="imf-goal">
-                Goal: ${fu.goal.toLocaleString()}
-              </span>
-            </div>
-            <div className="imf-progress-labels">
-              <span className="imf-raised">${loaded ? fmt(fu.raised) : "—"}</span>
-            </div>
-            <div className="imf-bar-track">
-              <div
-                className="imf-bar-fill"
-                style={{ width: loaded ? `${fuPct}%` : "0%" }}
-                role="progressbar"
-                aria-valuenow={fu.raised}
-                aria-valuemin={0}
-                aria-valuemax={fu.goal}
-                aria-label="Fundraise Up progress"
-              />
-            </div>
-            <div className="imf-progress-meta">
-              <span>{Math.round(fuPct)}% funded</span>
-              {fu.donors > 0 && (
-                <span>
-                  {fu.donors} donor{fu.donors !== 1 ? "s" : ""}
-                </span>
-              )}
-            </div>
+        <div className="imf-progress-section">
+          <div className="imf-progress-labels">
+            <span className="imf-raised">
+              ${loaded ? fmt(raised) : "—"}
+            </span>
+            <span className="imf-goal">
+              Goal: ${COMBINED_GOAL.toLocaleString()}
+            </span>
           </div>
-
-          {/* GoFundMe */}
-          <div className="imf-progress-section">
-            <div className="imf-progress-labels">
-              <span className="imf-source-tag imf-source-tag--gfm">GoFundMe</span>
-              <span className="imf-goal">
-                Goal: ${gfm.goal.toLocaleString()}
+          <div className="imf-bar-track">
+            <div
+              className="imf-bar-fill"
+              style={{ width: loaded ? `${pct}%` : "0%" }}
+              role="progressbar"
+              aria-valuenow={raised}
+              aria-valuemin={0}
+              aria-valuemax={COMBINED_GOAL}
+            />
+          </div>
+          <div className="imf-progress-meta">
+            <span>{Math.round(pct)}% funded</span>
+            {donors > 0 && (
+              <span>
+                {donors} donor{donors !== 1 ? "s" : ""}
               </span>
-            </div>
-            <div className="imf-progress-labels">
-              <span className="imf-raised">${loaded ? fmt(gfm.raised) : "—"}</span>
-            </div>
-            <div className="imf-bar-track">
-              <div
-                className="imf-bar-fill imf-bar-fill--gfm"
-                style={{ width: loaded ? `${gfmPct}%` : "0%" }}
-                role="progressbar"
-                aria-valuenow={gfm.raised}
-                aria-valuemin={0}
-                aria-valuemax={gfm.goal}
-                aria-label="GoFundMe progress"
-              />
-            </div>
-            <div className="imf-progress-meta">
-              <span>{Math.round(gfmPct)}% funded</span>
-              {gfm.donors > 0 && (
-                <span>
-                  {gfm.donors} donor{gfm.donors !== 1 ? "s" : ""}
-                </span>
-              )}
-            </div>
+            )}
           </div>
         </div>
 

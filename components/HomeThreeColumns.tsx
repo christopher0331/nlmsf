@@ -8,47 +8,8 @@ import IronmanFundraiser from "@/components/IronmanFundraiser";
 
 const CLINICAL_TRIALS_URL =
   "https://clinicaltrials.gov/search?term=leiomyosarcoma";
-const ONCLIVE_SARCOMA_URL = "https://www.onclive.com/clinical/sarcoma";
 const ONCLIVE_IMG =
   "https://media.nlmsf.org/wp-content/uploads/2025/09/1757876547796blob_sharpened.jpg";
-
-const ONCLIVE_UPDATES = [
-  {
-    href: "https://www.onclive.com/view/mri-and-ultrasound-may-be-best-used-in-tandem-for-surveillance-imaging-in-soft-tissue-sarcoma",
-    title: "MRI + Ultrasound Best in Tandem for Surveillance",
-    desc: "Combining both imaging modalities improves detection while lowering cost and patient burden.",
-  },
-  {
-    href: "https://www.onclive.com/view/dr-randall-on-the-diagnostic-accuracy-and-cost-effectiveness-of-mri-vs-ultrasound-in-sts",
-    title: "Dr. Randall: MRI vs Ultrasound Accuracy & Cost",
-    desc: "Expert insight on practical surveillance choices.",
-  },
-  {
-    href: "https://www.onclive.com/shorts/benefits-and-limitations-of-mri-in-soft-tissue-sarcoma-surveillance",
-    title: "Benefits & Limitations of MRI in STS Surveillance",
-    desc: "Quick video overview of current imaging guidelines.",
-  },
-  {
-    href: "https://www.onclive.com/view/dr-van-tine-on-olaparib-plus-temozolomide-in-advanced-uterine-leiomyosarcoma",
-    title: "Dr. Van Tine: Olaparib + Temozolomide in Uterine LMS",
-    desc: "Encouraging results from the PARP inhibitor combination.",
-  },
-  {
-    href: "https://www.onclive.com/view/anlotinib-plus-epirubicin-elicits-pfs-benefit-in-advanced-soft-tissue-sarcoma",
-    title: "Anlotinib + Epirubicin PFS Benefit in Advanced STS",
-    desc: "Phase 3 data showing significant progression-free survival gain.",
-  },
-  {
-    href: "https://www.onclive.com/view/mecbotamab-vedotin-shows-potential-to-extend-survival-in-treatment-refractory-soft-tissue-sarcomas",
-    title: "Mecbotamab Vedotin in Refractory STS",
-    desc: "Early signals of survival extension in heavily pre-treated patients.",
-  },
-  {
-    href: "https://www.onclive.com/view/prosthetic-embodiment-research-could-improve-outcomes-after-amputation-in-sarcomas",
-    title: "Prosthetic Embodiment Research Post-Amputation",
-    desc: "New approaches to improve functional outcomes and quality of life.",
-  },
-];
 
 const TESTIMONIALS = [
   {
@@ -112,17 +73,8 @@ const gradientText =
   "bg-gradient-to-br from-[#6b46c1] to-[#9333ea] bg-clip-text text-transparent";
 
 export default function HomeThreeColumns() {
-  const [oncliveModalOpen, setOncliveModalOpen] = useState(false);
   const [testimonialSlide, setTestimonialSlide] = useState(0);
   const [testimonialPaused, setTestimonialPaused] = useState(false);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && oncliveModalOpen) setOncliveModalOpen(false);
-    };
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [oncliveModalOpen]);
 
   useEffect(() => {
     if (testimonialPaused) return;
@@ -138,8 +90,19 @@ export default function HomeThreeColumns() {
       aria-label="Resources and navigation"
     >
       <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-3">
-        {/* Left column: Clinical Trials + Website Navigator */}
+        {/* Left column: OncLive image + Clinical Trials + Website Navigator */}
         <div className="flex flex-col gap-0">
+          <div className="mb-4 flex justify-center">
+            <Image
+              src={ONCLIVE_IMG}
+              alt="OncLive Sarcoma"
+              width={640}
+              height={360}
+              className="w-full h-auto rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] object-cover"
+              sizes="(min-width: 1024px) 420px, 90vw"
+            />
+          </div>
+
           <div className="p-0 m-0">
             <div className="bg-white rounded-xl border border-gray-200 py-5 px-[18px] shadow-[0_4px_12px_rgba(15,23,42,0.06)] md:py-5 md:px-[18px] sm:py-4 sm:px-[14px]">
               <div className="flex items-center justify-between mb-3">
@@ -204,56 +167,10 @@ export default function HomeThreeColumns() {
             </div>
           </div>
 
-          {/* OncLive card */}
-          <div
-            className="mt-4 w-full text-center bg-gradient-to-b from-white to-[#faf5ff] border border-gray-200 rounded-xl p-3.5 shadow-[0_6px_16px_rgba(0,0,0,0.06)]"
-            role="complementary"
-            aria-label="OncLive Sarcoma Updates"
-          >
-            <div className="flex justify-center mb-2.5">
-              <a
-                href={ONCLIVE_SARCOMA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={ONCLIVE_IMG}
-                  alt="OncLive Sarcoma"
-                  width={640}
-                  height={360}
-                  className="w-full max-w-[320px] h-auto rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.1)] object-cover"
-                  sizes="(min-width: 1024px) 320px, 70vw"
-                />
-              </a>
-            </div>
-            <div>
-              <h3 className="text-[1.06rem] mt-2 mb-2.5 font-extrabold leading-snug">
-                <a
-                  className="text-[#6a3ea1] underline underline-offset-2 decoration-2 hover:text-[#4f2f7b]"
-                  href={ONCLIVE_SARCOMA_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Sarcomas | Clinical | OncLive
-                </a>
-              </h3>
-              <button
-                type="button"
-                className="inline-block py-2 px-3 rounded-full border-2 border-[#6a3ea1] text-[#6a3ea1] font-bold no-underline transition-all duration-150 cursor-pointer font-[inherit] bg-transparent hover:bg-[#6a3ea1] hover:text-white hover:shadow-[0_4px_10px_rgba(106,62,161,0.25)]"
-                onClick={() => setOncliveModalOpen(true)}
-              >
-                View Latest Research Updates
-              </button>
-            </div>
-          </div>
         </div>
 
-        {/* Center column: Ironman Fundraiser + Support Hotline + Testimonials */}
+        {/* Center column: Support Hotline + Ironman Fundraiser + Testimonials */}
         <div>
-          <div className="mb-6">
-            <IronmanFundraiser />
-          </div>
-
           <div className="rounded-xl bg-gradient-to-br from-[#6b46c1] to-[#4c1d95] p-6 text-center text-white shadow-[0_4px_20px_rgba(107,70,193,0.25)] relative overflow-hidden">
             <div
               className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/[0.06] translate-x-1/3 -translate-y-1/3"
@@ -265,7 +182,7 @@ export default function HomeThreeColumns() {
             />
             <div className="relative z-10">
               <p className="text-white/70 text-xs font-semibold uppercase tracking-widest m-0 mb-2">
-                LMS Support Hotline
+                LMS Lifeline
               </p>
               <h2 className="text-2xl font-bold text-white m-0 mb-1 sm:text-xl">
                 24/7 &mdash; We Are Here for You
@@ -302,7 +219,11 @@ export default function HomeThreeColumns() {
             </div>
           </div>
 
-          <div className="mt-6 p-4 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-xl border border-slate-200 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] sm:p-3">
+          <div className="mt-6 mb-6">
+            <IronmanFundraiser />
+          </div>
+
+          <div className="p-4 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-xl border border-slate-200 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] sm:p-3">
             <h3
               className={`text-center text-xl font-bold text-[#6a3ea1] m-0 mb-4 ${gradientText} sm:text-lg`}
             >
@@ -378,55 +299,6 @@ export default function HomeThreeColumns() {
         </div>
       </div>
 
-      {/* OncLive modal */}
-      <div
-        className="fixed inset-0 z-[9999] flex items-center justify-center p-5 overflow-y-auto bg-black/50"
-        style={{ display: oncliveModalOpen ? "flex" : "none" }}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="onclive-modal-title"
-        onClick={(e) => {
-          if (e.target === e.currentTarget) setOncliveModalOpen(false);
-        }}
-      >
-        <div className="bg-white max-w-[680px] w-[90%] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] max-h-[90vh] overflow-hidden">
-          <div className="bg-[#6a3ea1] text-white py-4 px-6 relative text-[1.35rem] font-extrabold">
-            <h3 id="onclive-modal-title">
-              Latest Sarcoma Research &amp; Treatment Updates
-            </h3>
-            <button
-              type="button"
-              className="absolute right-5 top-1/2 -translate-y-1/2 text-[2.2rem] cursor-pointer bg-transparent border-0 text-white leading-none p-0 hover:opacity-90"
-              onClick={() => setOncliveModalOpen(false)}
-              aria-label="Close modal"
-            >
-              &times;
-            </button>
-          </div>
-          <div className="p-6 max-h-[calc(90vh-120px)] overflow-y-auto">
-            {ONCLIVE_UPDATES.map((item, i) => (
-              <div
-                key={item.href}
-                className={`pb-4 mb-5 border-b border-gray-200 last:border-0 last:mb-0 last:pb-0`}
-              >
-                <h4 className="m-0 mb-1.5 text-[1.02rem]">
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#6a3ea1] underline hover:text-[#4f2f7b]"
-                  >
-                    {item.title}
-                  </a>
-                </h4>
-                <p className="mt-1.5 m-0 text-[0.94rem] text-gray-600 leading-snug">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

@@ -75,44 +75,25 @@
 }
 
 /* Progress section */
-.imf-dual-progress {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
-}
-
 .imf-progress-section {
-  /* no extra margin when inside dual-progress */
+  margin-bottom: 1rem;
 }
 
 .imf-progress-labels {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 0.25rem;
-}
-
-.imf-source-tag {
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #ef4444;
-}
-
-.imf-source-tag--gfm {
-  color: #10b981;
+  margin-bottom: 0.4rem;
 }
 
 .imf-raised {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0f172a;
 }
 
 .imf-goal {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: #94a3b8;
 }
