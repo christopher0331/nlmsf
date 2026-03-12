@@ -1,6 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+const MAILCHIMP_ACTION =
+  "https://nlmsf.us13.list-manage.com/subscribe/post?u=7882c1010a69171493a3bed4b&id=7958b212a8&f_id=00a19fedf0";
 
 const PATTERN_BG =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='10' cy='10' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='40' cy='40' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='70' cy='70' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='90' cy='20' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='20' cy='80' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3C/svg%3E\") repeat";
@@ -8,10 +11,12 @@ const PATTERN_BG =
 export default function NewsletterCTA() {
   const [email, setEmail] = useState("");
   const [successOpen, setSuccessOpen] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
+    formRef.current?.submit();
     setSuccessOpen(true);
     setEmail("");
   }
@@ -54,7 +59,11 @@ export default function NewsletterCTA() {
           Stay updated with the latest LMS news and support resources.
         </p>
         <form
+          ref={formRef}
           id="newsletter-form"
+          action={MAILCHIMP_ACTION}
+          method="post"
+          target="_blank"
           onSubmit={handleSubmit}
           noValidate
           className="relative z-10 flex justify-center gap-4 flex-wrap md:flex-col md:gap-3 md:w-full md:max-w-[320px] md:mx-auto"
@@ -69,6 +78,14 @@ export default function NewsletterCTA() {
             required
             aria-label="Email address"
           />
+          <div aria-hidden="true" style={{ position: "absolute", left: -5000 }}>
+            <input
+              type="text"
+              name="b_7882c1010a69171493a3bed4b_7958b212a8"
+              tabIndex={-1}
+              defaultValue=""
+            />
+          </div>
           <button
             type="submit"
             className="py-3.5 px-7 text-[1.1rem] font-semibold text-[#2b82ea] bg-white border-0 rounded-md cursor-pointer transition-all duration-200 hover:bg-[#f0f7ff] hover:-translate-y-0.5 hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)] md:w-full md:max-w-[320px] md:box-border"

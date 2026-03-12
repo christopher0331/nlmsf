@@ -131,61 +131,6 @@ export default function AbcNewDiagnosisSection() {
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
           </article>
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm md:col-span-2">
-            <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
-              YouTube Podcast
-            </div>
-            <a
-              href="https://www.youtube.com/watch?v=nv2HP9TbaYA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-            >
-              <div className="relative overflow-hidden rounded-xl">
-                <Image
-                  src="https://img.youtube.com/vi/nv2HP9TbaYA/mqdefault.jpg"
-                  alt="Video Thumbnail"
-                  width={640}
-                  height={360}
-                  className="h-auto w-full object-cover"
-                  sizes="100vw"
-                />
-                <i
-                  className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
-                  aria-hidden
-                />
-              </div>
-            </a>
-            <div className="mt-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700">
-                M
-              </div>
-              <div>
-                <h5 className="text-sm font-semibold text-blue-700">
-                  Mayo Clinic &amp; NLMSF
-                </h5>
-                <p className="text-xs text-slate-500">Collaborative Presentation</p>
-              </div>
-            </div>
-            <h4 className="mt-4 text-lg font-semibold text-slate-900">
-              The ABC&apos;s of a Sarcoma Diagnosis
-            </h4>
-            <p className="mt-2 text-sm text-slate-500">
-              <i className="far fa-calendar mr-2" aria-hidden /> 2020
-            </p>
-            <p className="mt-3 text-sm text-slate-600">
-              A collaborative presentation by the Mayo Clinic and NLMSF covering the
-              fundamentals of a sarcoma diagnosis.
-            </p>
-            <a
-              href="https://www.youtube.com/watch?v=nv2HP9TbaYA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800"
-            >
-              <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
-            </a>
-          </article>
         </div>
       </div>
     </section>

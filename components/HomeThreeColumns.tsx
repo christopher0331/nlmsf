@@ -167,6 +167,45 @@ export default function HomeThreeColumns() {
             </div>
           </div>
 
+          {/* Sharing Voices — Community Platforms */}
+          <div className="mt-4">
+            <div className="bg-white rounded-xl border border-gray-200 shadow-[0_4px_12px_rgba(15,23,42,0.06)] overflow-hidden">
+              <div className="bg-gradient-to-b from-[#f5f0ff] to-white px-4 pt-5 pb-2 flex justify-center">
+                <Image
+                  src="/images/sharing-voices.png"
+                  alt="Sharing Voices"
+                  width={280}
+                  height={200}
+                  className="w-[350px] h-auto object-contain"
+                  sizes="350px"
+                />
+              </div>
+              <div className="px-5 pb-5 text-center">
+                <p className="text-[0.75rem] text-gray-500 mb-4 leading-snug">
+                  A quiet space for words, hope, and connection.
+                </p>
+                <div className="flex flex-col gap-2.5">
+                  <a
+                    href="https://patients.nlmsf.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2.5 px-4 rounded-lg bg-gradient-to-r from-[#6b46c1] to-[#9333ea] text-white text-[0.8rem] font-semibold no-underline text-center shadow-[0_4px_12px_rgba(107,70,193,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_18px_rgba(107,70,193,0.4)]"
+                  >
+                    patients.nlmsf.org
+                  </a>
+                  <a
+                    href="https://caregivers.nlmsf.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2.5 px-4 rounded-lg bg-gradient-to-r from-[#6b46c1] to-[#9333ea] text-white text-[0.8rem] font-semibold no-underline text-center shadow-[0_4px_12px_rgba(107,70,193,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_18px_rgba(107,70,193,0.4)]"
+                  >
+                    caregivers.nlmsf.org
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Center column: Support Hotline + Ironman Fundraiser + Testimonials */}

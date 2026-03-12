@@ -588,3 +588,87 @@ body {
   width: 100%;
 }
 
+/* ========== Mega-menu dropdown animations ========== */
+
+/* 1. Panel: drops from a narrow center column and expands outward */
+@keyframes mega-panel-in {
+  0% {
+    clip-path: inset(0 42% 100% 42%);
+    opacity: 0;
+  }
+  40% {
+    clip-path: inset(0 42% 0% 42%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0% 0% 0%);
+    opacity: 1;
+  }
+}
+
+.mega-open .mega-panel-animated {
+  animation: mega-panel-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* 2. Category columns: fade in + slide down with stagger */
+@keyframes mega-col-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mega-open .mega-col {
+  opacity: 0;
+  animation: mega-col-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.30s both;
+}
+
+/* 3. Links inside columns: subtle slide from top into place */
+@keyframes mega-link-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mega-open .mega-col li {
+  opacity: 0;
+  animation: mega-link-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.mega-open .mega-col li:nth-child(1) { animation-delay: 0.44s; }
+.mega-open .mega-col li:nth-child(2) { animation-delay: 0.52s; }
+.mega-open .mega-col li:nth-child(3) { animation-delay: 0.60s; }
+.mega-open .mega-col li:nth-child(4) { animation-delay: 0.68s; }
+.mega-open .mega-col li:nth-child(5) { animation-delay: 0.76s; }
+.mega-open .mega-col li:nth-child(6) { animation-delay: 0.84s; }
+.mega-open .mega-col li:nth-child(7) { animation-delay: 0.92s; }
+.mega-open .mega-col li:nth-child(8) { animation-delay: 1.00s; }
+.mega-open .mega-col li:nth-child(9) { animation-delay: 1.08s; }
+.mega-open .mega-col li:nth-child(10) { animation-delay: 1.16s; }
+
+/* Dropdown title also animates */
+@keyframes mega-title-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.mega-open .mega-title {
+  opacity: 0;
+  animation: mega-title-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+

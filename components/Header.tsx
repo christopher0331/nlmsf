@@ -5,8 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const LOGO_SRC =
-  "https://media.nlmsf.org/wp-content/uploads/2023/10/NLMSF-Logo-Updated-30-Apr-2023.png";
+const LOGO_SRC = "/images/nlmsf_logo_no_background-removebg-preview.png";
 const PHONE = "(303) 808-3437";
 const DONATE_URL = "?form=DONATE";
 
@@ -14,28 +13,28 @@ const FONT_HEADER = "font-quicksand";
 const TOP_BAR = "w-full bg-white border-b border-gray-200 h-[50px] relative z-[5] box-border";
 const CONTAINER_HEADER = "max-w-full w-full mx-auto pl-4 pr-10 flex items-center justify-between box-border relative lg:px-8 min-h-full";
 const LOGO_SPACE = "flex-[0_0_25%] max-w-[200px]";
-const NAVBAR = "w-full bg-white z-[200] relative border-b border-gray-200 shadow-sm py-3 min-h-[80px] box-border overflow-visible lg:py-4 lg:min-h-[96px] flex items-center";
-const LOGO_SPANNING = "absolute top-0 left-4 z-[202] bg-transparent flex items-center w-[clamp(120px,20vw,200px)] h-[clamp(100px,40vw,140px)] pointer-events-none [&>a]:pointer-events-auto";
-const LOGO_IMG = "w-full h-auto max-h-[clamp(180px,12vw,120px)] object-contain lg:max-h-[clamp(100px,15vw,140px)]";
+const NAVBAR = "w-full bg-white z-[200] relative border-b border-gray-200 shadow-sm py-3 min-h-[90px] box-border overflow-visible lg:py-5 lg:min-h-[110px] flex items-center";
+const LOGO_SPANNING = "absolute top-1 left-4 z-[202] bg-transparent flex items-center w-[clamp(130px,20vw,180px)] h-[140px] lg:h-[155px] pointer-events-none [&>a]:pointer-events-auto";
+const LOGO_IMG = "w-full h-auto max-h-[130px] object-contain lg:max-h-[145px]";
 const DESKTOP_NAV = "hidden lg:flex lg:items-center lg:flex-grow lg:justify-center lg:w-full lg:ml-[clamp(150px,15vw,180px)]";
 const MENU = "flex list-none m-0 p-0 gap-2 flex-wrap justify-center w-full";
 const MENU_ITEM = "relative flex justify-center";
-const MENU_LINK = "py-2 px-2.5 text-[#333] font-medium text-[clamp(0.85rem,2vw,0.95rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white";
-const MENU_LINK_DROPDOWN = "py-2 pl-2.5 pr-[1.1rem] text-[#333] font-medium text-[clamp(0.85rem,2vw,0.95rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white relative inline-flex items-center gap-0.5 hover:[&>svg]:border-white";
+const MENU_LINK = "py-2 px-2.5 text-[#333] font-medium text-[clamp(1.05rem,2.2vw,1.15rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white";
+const MENU_LINK_DROPDOWN = "py-2 pl-2.5 pr-[1.1rem] text-[#333] font-medium text-[clamp(1.05rem,2.2vw,1.15rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white relative inline-flex items-center gap-0.5 hover:[&>svg]:border-white";
 /* Dropdown sits flush under header: top bar 50px + navbar min-height (80px / 96px lg) */
-const DROPDOWN_WRAPPER_BASE = "fixed left-0 right-0 w-full flex justify-center opacity-0 pointer-events-none transition-[opacity] duration-300 delay-100 z-[1000] top-[130px] lg:top-[146px]";
-const DROPDOWN_WRAPPER_OPEN = "!opacity-100 !pointer-events-auto";
-const DROPDOWN_PANEL = "relative w-full max-w-[1280px] bg-white border-t-2 border-[#6a3ea1] border-b border-gray-200 shadow-lg mx-auto max-h-[calc(100vh-146px)] overflow-y-auto py-6 px-4 box-border";
+const DROPDOWN_WRAPPER_BASE = "fixed left-0 right-0 w-full flex justify-center opacity-0 pointer-events-none transition-[opacity] duration-300 delay-100 z-[1000] top-[141px] lg:top-[151px]";
+const DROPDOWN_WRAPPER_OPEN = "!opacity-100 !pointer-events-auto mega-open";
+const DROPDOWN_PANEL = "mega-panel-animated relative w-full max-w-[1280px] bg-white border-t-2 border-[#6a3ea1] border-b border-gray-200 shadow-lg mx-auto max-h-[calc(100vh-151px)] overflow-y-auto py-6 px-4 box-border -mt-px";
 const DROPDOWN_CONTENT = "p-0 flex flex-col items-center max-w-full mx-auto";
 const DROPDOWN_CATEGORIES = "flex flex-wrap gap-6 justify-center py-4 px-2 w-full box-border";
-const CATEGORY_COLUMN = "flex-[1_1_150px] min-w-[120px] max-w-[200px] p-2";
-const CATEGORY_TITLE = "text-[0.95rem] font-semibold text-[#6a3ea1] mb-3 uppercase tracking-wide pb-2 border-b-2 border-[#6a3ea1] text-center";
+const CATEGORY_COLUMN = "mega-col flex-[1_1_150px] min-w-[120px] max-w-[200px] p-2";
+const CATEGORY_TITLE = "text-[1.05rem] font-semibold text-[#6a3ea1] mb-3 uppercase tracking-wide pb-2 border-b-2 border-[#6a3ea1] text-center";
 const CATEGORY_LINKS = "list-none p-0 m-0";
-const DROPDOWN_LINK = "block py-2 px-2 text-[#333] text-[0.95rem] font-medium no-underline transition-all duration-200 leading-snug text-center hover:text-[#6a3ea1] hover:bg-[#6a3ea1]/5 rounded";
-const DROPDOWN_TITLE = "text-[1.3rem] font-bold text-[#6a3ea1] mb-4 pb-2 border-b-2 border-[#6a3ea1]";
+const DROPDOWN_LINK = "block py-2 px-2 text-[#333] text-[1.05rem] font-medium no-underline transition-all duration-200 leading-snug text-center hover:text-[#6a3ea1] hover:bg-[#6a3ea1]/5 rounded";
+const DROPDOWN_TITLE = "mega-title text-[1.45rem] font-bold text-[#6a3ea1] mb-4 pb-2 border-b-2 border-[#6a3ea1]";
 const DROPDOWN_SECTION = "mb-6";
 const DROPDOWN_ROW = "flex flex-wrap gap-4 mb-4";
-const DROPDOWN_COLUMN = "flex-1 min-w-[160px]";
+const DROPDOWN_COLUMN = "mega-col flex-1 min-w-[160px]";
 const DONATE_BTN = "inline-block py-2 px-5 bg-red-600 text-white font-semibold text-sm no-underline rounded-full transition-all duration-200 shadow-sm uppercase tracking-wide leading-normal hover:bg-red-700 hover:shadow-md hover:-translate-y-px max-lg:my-4 max-lg:text-center max-lg:py-3 max-lg:px-4";
 const ACTIONS = "flex items-center gap-2 flex-wrap max-lg:hidden";
 const PHONE_LINK = "flex items-center text-[#6a3ea1] text-sm font-medium no-underline transition-colors duration-200 hover:text-[#7d52b5]";
@@ -186,7 +185,7 @@ export default function Header() {
             <ul className={MENU}>
               <li className={MENU_ITEM}>
                 <Link href="/" className={MENU_LINK}>
-                  HOME
+                  Home
                 </Link>
               </li>
 
@@ -202,13 +201,13 @@ export default function Header() {
                     toggleDesktop("patients");
                   }}
                 >
-                  PATIENTS
+                  Patients
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "patients" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
-                      <h3 className={DROPDOWN_TITLE}>PATIENTS</h3>
+                      <h3 className={DROPDOWN_TITLE}>Patients</h3>
                       <div className={DROPDOWN_CATEGORIES}>
                         <div className={CATEGORY_COLUMN}>
                           <h4 className={CATEGORY_TITLE}>
@@ -496,13 +495,13 @@ export default function Header() {
                     toggleDesktop("survivorship");
                   }}
                 >
-                  SURVIVORSHIP
+                  Survivorship
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "survivorship" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
-                      <h3 className={DROPDOWN_TITLE}>SURVIVORSHIP</h3>
+                      <h3 className={DROPDOWN_TITLE}>Survivorship</h3>
                       <div className={DROPDOWN_SECTION}>
                         <div className={DROPDOWN_ROW}>
                           <div className={DROPDOWN_COLUMN}>
@@ -540,14 +539,14 @@ export default function Header() {
                     toggleDesktop("caregiving");
                   }}
                 >
-                  CAREGIVING COUNTS
+                  Caregiving Counts
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "caregiving" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>
-                        CAREGIVING COUNTS
+                        Caregiving Counts
                       </h3>
                       <div className={DROPDOWN_SECTION}>
                         <div className={DROPDOWN_ROW}>
@@ -602,13 +601,13 @@ export default function Header() {
                     toggleDesktop("involved");
                   }}
                 >
-                  GET INVOLVED
+                  Get Involved
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "involved" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
-                      <h3 className={DROPDOWN_TITLE}>GET INVOLVED</h3>
+                      <h3 className={DROPDOWN_TITLE}>Get Involved</h3>
                       <div className={DROPDOWN_SECTION}>
                         <div className={DROPDOWN_ROW}>
                           <div className={DROPDOWN_COLUMN}>
@@ -654,13 +653,13 @@ export default function Header() {
                     toggleDesktop("about");
                   }}
                 >
-                  ABOUT US
+                  About Us
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "about" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
-                      <h3 className={DROPDOWN_TITLE}>ABOUT US</h3>
+                      <h3 className={DROPDOWN_TITLE}>About Us</h3>
                       <div className={DROPDOWN_SECTION}>
                         <div className={DROPDOWN_ROW}>
                           <div className={DROPDOWN_COLUMN}>
@@ -722,13 +721,13 @@ export default function Header() {
                     toggleDesktop("research");
                   }}
                 >
-                  RESEARCH
+                  Research
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
                 <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "research" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
-                      <h3 className={DROPDOWN_TITLE}>RESEARCH</h3>
+                      <h3 className={DROPDOWN_TITLE}>Research</h3>
                       <div className={DROPDOWN_CATEGORIES}>
                         <div className={CATEGORY_COLUMN}>
                           <h4 className={CATEGORY_TITLE}>
@@ -836,12 +835,12 @@ export default function Header() {
 
               <li className={MENU_ITEM}>
                 <Link href="/tributes-directory" className={MENU_LINK}>
-                  TRIBUTE PAGES
+                  Tribute Pages
                 </Link>
               </li>
               <li className={MENU_ITEM}>
                 <Link href="/contact" className={MENU_LINK}>
-                  CONTACT US
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -913,11 +912,11 @@ export default function Header() {
                 className={MOBILE_LINK}
                 onClick={() => setMobileNavOpen(false)}
               >
-                HOME
+                Home
               </Link>
             </li>
             <MobileDropdown
-              label="PATIENTS"
+              label="Patients"
               open={mobileDropdown === "patients"}
               onToggle={() => toggleMobile("patients")}
               onLinkClick={() => setMobileNavOpen(false)}
@@ -1220,7 +1219,7 @@ export default function Header() {
             </MobileDropdown>
 
             <MobileDropdown
-              label="SURVIVORSHIP"
+              label="Survivorship"
               open={mobileDropdown === "survivorship"}
               onToggle={() => toggleMobile("survivorship")}
               onLinkClick={() => setMobileNavOpen(false)}
@@ -1250,7 +1249,7 @@ export default function Header() {
             </MobileDropdown>
 
             <MobileDropdown
-              label="CAREGIVING COUNTS"
+              label="Caregiving Counts"
               open={mobileDropdown === "caregiving"}
               onToggle={() => toggleMobile("caregiving")}
               onLinkClick={() => setMobileNavOpen(false)}
@@ -1298,7 +1297,7 @@ export default function Header() {
             </MobileDropdown>
 
             <MobileDropdown
-              label="GET INVOLVED"
+              label="Get Involved"
               open={mobileDropdown === "involved"}
               onToggle={() => toggleMobile("involved")}
               onLinkClick={() => setMobileNavOpen(false)}
@@ -1337,7 +1336,7 @@ export default function Header() {
             </MobileDropdown>
 
             <MobileDropdown
-              label="ABOUT US"
+              label="About Us"
               open={mobileDropdown === "about"}
               onToggle={() => toggleMobile("about")}
               onLinkClick={() => setMobileNavOpen(false)}
@@ -1394,7 +1393,7 @@ export default function Header() {
             </MobileDropdown>
 
             <MobileDropdown
-              label="RESEARCH"
+              label="Research"
               open={mobileDropdown === "research"}
               onToggle={() => toggleMobile("research")}
               onLinkClick={() => setMobileNavOpen(false)}
@@ -1496,7 +1495,7 @@ export default function Header() {
                 className={MOBILE_LINK}
                 onClick={() => setMobileNavOpen(false)}
               >
-                TRIBUTE PAGES
+                Tribute Pages
               </Link>
             </li>
             <li>
@@ -1505,7 +1504,7 @@ export default function Header() {
                 className={MOBILE_LINK}
                 onClick={() => setMobileNavOpen(false)}
               >
-                CONTACT US
+                Contact Us
               </Link>
             </li>
           </ul>
