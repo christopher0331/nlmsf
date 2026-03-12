@@ -38,8 +38,10 @@ export default function FundraiserPageClient() {
     fetchData();
   }, [fetchData]);
 
-  const fuPct = fu.goal > 0 ? Math.min((fu.raised / fu.goal) * 100, 100) : 0;
-  const gfmPct = gfm.goal > 0 ? Math.min((gfm.raised / gfm.goal) * 100, 100) : 0;
+  const COMBINED_GOAL = 10000;
+  const totalRaised = fu.raised + gfm.raised;
+  const totalDonors = fu.donors + gfm.donors;
+  const pct = COMBINED_GOAL > 0 ? Math.min((totalRaised / COMBINED_GOAL) * 100, 100) : 0;
 
   const allDonors = [...fu.topDonors, ...gfm.topDonors]
     .reduce<Map<string, number>>((acc, d) => {
@@ -81,70 +83,34 @@ export default function FundraiserPageClient() {
       <div className="imfp-container">
         {/* Progress Card */}
         <section className="imfp-progress-card">
-          <div className="imfp-dual-bars">
-            {/* Fundraise Up bar */}
-            <div className="imfp-source-bar">
-              <div className="imfp-source-header">
-                <span className="imfp-source-label">
-                  <i className="fas fa-hand-holding-heart" aria-hidden /> Fundraise Up
-                </span>
-                <span className="imfp-source-amounts">
-                  <strong>${loaded ? fmt(fu.raised) : "—"}</strong>
-                  <span className="imfp-source-goal"> of ${fu.goal.toLocaleString()}</span>
-                </span>
-              </div>
-              <div className="imfp-bar-track">
-                <div
-                  className="imfp-bar-fill"
-                  style={{ width: loaded ? `${fuPct}%` : "0%" }}
-                  role="progressbar"
-                  aria-valuenow={fu.raised}
-                  aria-valuemin={0}
-                  aria-valuemax={fu.goal}
-                  aria-label="Fundraise Up progress"
-                />
-              </div>
-              <div className="imfp-bar-meta">
-                <span>{Math.round(fuPct)}% of goal</span>
-                {fu.donors > 0 && (
-                  <span>
-                    {fu.donors} donation{fu.donors !== 1 ? "s" : ""}
-                  </span>
-                )}
-              </div>
-            </div>
+          <div className="imfp-amounts">
+            <span className="imfp-raised">
+              ${loaded ? fmt(totalRaised) : "—"}
+            </span>
+            <span className="imfp-goal">
+              raised of ${COMBINED_GOAL.toLocaleString()} goal
+            </span>
+          </div>
 
-            {/* GoFundMe bar */}
-            <div className="imfp-source-bar">
-              <div className="imfp-source-header">
-                <span className="imfp-source-label">
-                  <i className="fas fa-heart" aria-hidden /> GoFundMe
-                </span>
-                <span className="imfp-source-amounts">
-                  <strong>${loaded ? fmt(gfm.raised) : "—"}</strong>
-                  <span className="imfp-source-goal"> of ${gfm.goal.toLocaleString()}</span>
-                </span>
-              </div>
-              <div className="imfp-bar-track">
-                <div
-                  className="imfp-bar-fill imfp-bar-fill--gfm"
-                  style={{ width: loaded ? `${gfmPct}%` : "0%" }}
-                  role="progressbar"
-                  aria-valuenow={gfm.raised}
-                  aria-valuemin={0}
-                  aria-valuemax={gfm.goal}
-                  aria-label="GoFundMe progress"
-                />
-              </div>
-              <div className="imfp-bar-meta">
-                <span>{Math.round(gfmPct)}% of goal</span>
-                {gfm.donors > 0 && (
-                  <span>
-                    {gfm.donors} donation{gfm.donors !== 1 ? "s" : ""}
-                  </span>
-                )}
-              </div>
-            </div>
+          <div className="imfp-bar-track">
+            <div
+              className="imfp-bar-fill"
+              style={{ width: loaded ? `${pct}%` : "0%" }}
+              role="progressbar"
+              aria-valuenow={totalRaised}
+              aria-valuemin={0}
+              aria-valuemax={COMBINED_GOAL}
+              aria-label="Combined fundraiser progress"
+            />
+          </div>
+
+          <div className="imfp-bar-meta">
+            <span>{Math.round(pct)}% of goal</span>
+            {totalDonors > 0 && (
+              <span>
+                {totalDonors} donation{totalDonors !== 1 ? "s" : ""}
+              </span>
+            )}
           </div>
 
           <div className="imfp-donate-actions">
