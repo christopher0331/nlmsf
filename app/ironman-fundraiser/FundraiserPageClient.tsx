@@ -4,14 +4,20 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
 const CAMPAIGN_FORM = "FUNRBJGPJSK";
+const GOFUNDME_URL = "https://www.gofundme.com/f/support-national-leiomyosarcoma-foundation";
 
 type Donor = { name: string; amount: number };
 
+type SourceData = {
+  raised: number;
+  goal: number;
+  donors: number;
+  topDonors: Donor[];
+};
+
 export default function FundraiserPageClient() {
-  const [raised, setRaised] = useState(0);
-  const [goal, setGoal] = useState(5000);
-  const [donors, setDonors] = useState(0);
-  const [topDonors, setTopDonors] = useState<Donor[]>([]);
+  const [fu, setFu] = useState<SourceData>({ raised: 0, goal: 5000, donors: 0, topDonors: [] });
+  const [gfm, setGfm] = useState<SourceData>({ raised: 0, goal: 5000, donors: 0, topDonors: [] });
   const [loaded, setLoaded] = useState(false);
 
   const fetchData = useCallback(async () => {
@@ -19,10 +25,8 @@ export default function FundraiserPageClient() {
       const res = await fetch("/api/fundraiser/", { cache: "no-store" });
       if (!res.ok) return;
       const data = await res.json();
-      setRaised(data.raised);
-      setGoal(data.goal);
-      setDonors(data.donors);
-      setTopDonors(data.topDonors ?? []);
+      setFu(data.fundraiseUp);
+      setGfm(data.goFundMe);
     } catch {
       /* silent */
     } finally {
@@ -34,11 +38,25 @@ export default function FundraiserPageClient() {
     fetchData();
   }, [fetchData]);
 
-  const pct = goal > 0 ? Math.min((raised / goal) * 100, 100) : 0;
+  const fuPct = fu.goal > 0 ? Math.min((fu.raised / fu.goal) * 100, 100) : 0;
+  const gfmPct = gfm.goal > 0 ? Math.min((gfm.raised / gfm.goal) * 100, 100) : 0;
+
+  const allDonors = [...fu.topDonors, ...gfm.topDonors]
+    .reduce<Map<string, number>>((acc, d) => {
+      acc.set(d.name, (acc.get(d.name) ?? 0) + d.amount);
+      return acc;
+    }, new Map());
+  const topDonors = [...allDonors.entries()]
+    .map(([name, amount]) => ({ name, amount }))
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, 10);
 
   const handleDonate = () => {
     window.location.href = `/?form=${CAMPAIGN_FORM}`;
   };
+
+  const fmt = (n: number) =>
+    n.toLocaleString(undefined, { minimumFractionDigits: 2 });
 
   return (
     <main className="imfp-page">
@@ -63,44 +81,85 @@ export default function FundraiserPageClient() {
       <div className="imfp-container">
         {/* Progress Card */}
         <section className="imfp-progress-card">
-          <div className="imfp-progress-header">
-            <div>
-              <span className="imfp-raised-label">Raised</span>
-              <span className="imfp-raised-amount">
-                ${loaded ? raised.toLocaleString(undefined, { minimumFractionDigits: 2 }) : "—"}
-              </span>
+          <div className="imfp-dual-bars">
+            {/* Fundraise Up bar */}
+            <div className="imfp-source-bar">
+              <div className="imfp-source-header">
+                <span className="imfp-source-label">
+                  <i className="fas fa-hand-holding-heart" aria-hidden /> Fundraise Up
+                </span>
+                <span className="imfp-source-amounts">
+                  <strong>${loaded ? fmt(fu.raised) : "—"}</strong>
+                  <span className="imfp-source-goal"> of ${fu.goal.toLocaleString()}</span>
+                </span>
+              </div>
+              <div className="imfp-bar-track">
+                <div
+                  className="imfp-bar-fill"
+                  style={{ width: loaded ? `${fuPct}%` : "0%" }}
+                  role="progressbar"
+                  aria-valuenow={fu.raised}
+                  aria-valuemin={0}
+                  aria-valuemax={fu.goal}
+                  aria-label="Fundraise Up progress"
+                />
+              </div>
+              <div className="imfp-bar-meta">
+                <span>{Math.round(fuPct)}% of goal</span>
+                {fu.donors > 0 && (
+                  <span>
+                    {fu.donors} donation{fu.donors !== 1 ? "s" : ""}
+                  </span>
+                )}
+              </div>
             </div>
-            <div className="imfp-goal-side">
-              <span className="imfp-goal-label">Goal</span>
-              <span className="imfp-goal-amount">
-                ${goal.toLocaleString(undefined, { minimumFractionDigits: 2 })}
-              </span>
+
+            {/* GoFundMe bar */}
+            <div className="imfp-source-bar">
+              <div className="imfp-source-header">
+                <span className="imfp-source-label">
+                  <i className="fas fa-heart" aria-hidden /> GoFundMe
+                </span>
+                <span className="imfp-source-amounts">
+                  <strong>${loaded ? fmt(gfm.raised) : "—"}</strong>
+                  <span className="imfp-source-goal"> of ${gfm.goal.toLocaleString()}</span>
+                </span>
+              </div>
+              <div className="imfp-bar-track">
+                <div
+                  className="imfp-bar-fill imfp-bar-fill--gfm"
+                  style={{ width: loaded ? `${gfmPct}%` : "0%" }}
+                  role="progressbar"
+                  aria-valuenow={gfm.raised}
+                  aria-valuemin={0}
+                  aria-valuemax={gfm.goal}
+                  aria-label="GoFundMe progress"
+                />
+              </div>
+              <div className="imfp-bar-meta">
+                <span>{Math.round(gfmPct)}% of goal</span>
+                {gfm.donors > 0 && (
+                  <span>
+                    {gfm.donors} donation{gfm.donors !== 1 ? "s" : ""}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
 
-          <div className="imfp-bar-track">
-            <div
-              className="imfp-bar-fill"
-              style={{ width: loaded ? `${pct}%` : "0%" }}
-              role="progressbar"
-              aria-valuenow={raised}
-              aria-valuemin={0}
-              aria-valuemax={goal}
-            />
+          <div className="imfp-donate-actions">
+            <button type="button" className="imfp-donate-btn" onClick={handleDonate}>
+              <i className="fas fa-heart" aria-hidden /> Donate via NLMSF
+            </button>
+            <a
+              href={GOFUNDME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="imfp-donate-btn imfp-donate-btn--gfm"
+            >
+              <i className="fas fa-external-link-alt" aria-hidden /> Donate via GoFundMe
+            </a>
           </div>
-
-          <div className="imfp-bar-meta">
-            <span>{Math.round(pct)}% of goal</span>
-            {donors > 0 && (
-              <span>
-                {donors} donation{donors !== 1 ? "s" : ""}
-              </span>
-            )}
-          </div>
-
-          <button type="button" className="imfp-donate-btn" onClick={handleDonate}>
-            <i className="fas fa-heart" aria-hidden /> Support Joseph&apos;s Mission
-          </button>
         </section>
 
         {/* Main Content Grid */}
@@ -214,9 +273,7 @@ export default function FundraiserPageClient() {
                     <li key={i} className="imfp-donor-row">
                       <span className="imfp-donor-rank">{i + 1}</span>
                       <span className="imfp-donor-name">{d.name}</span>
-                      <span className="imfp-donor-amount">
-                        ${d.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
-                      </span>
+                      <span className="imfp-donor-amount">${fmt(d.amount)}</span>
                     </li>
                   ))}
                 </ol>
