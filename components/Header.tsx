@@ -297,6 +297,14 @@ export default function Header() {
                             </li>
                             <li>
                               <Link
+                                href="/sarcoma-centers"
+                                className={DROPDOWN_LINK}
+                              >
+                                Sarcoma Centers Directory
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
                                 href="/related-educational-videos"
                                 className={DROPDOWN_LINK}
                               >
@@ -1013,6 +1021,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Clinical Trials Research Information
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/sarcoma-centers"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Sarcoma Centers Directory
                     </Link>
                   </li>
                   <li>

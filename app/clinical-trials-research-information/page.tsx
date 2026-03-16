@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Clinical Trials & Research Information | NLMSF",
@@ -471,18 +472,20 @@ export default function ClinicalTrialsResearchInformationPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 mb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Sarcoma Centers of Excellence</h3>
-              <p className="text-gray-600 mb-4">
-                The Sarcoma Alliance Through Research Collaboration (SARC) provides listings and maps of sarcoma centers throughout the USA.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a href="#" className="inline-flex items-center gap-2 bg-white border border-gray-200 py-3 px-4 rounded-lg font-medium text-gray-700 no-underline hover:border-violet-500 hover:bg-violet-50 hover:text-violet-700 transition-colors">
-                  <i className="fas fa-map-marked-alt text-violet-600" aria-hidden /> View SARC Centers Map
-                </a>
-                <a href="#" className="inline-flex items-center gap-2 bg-white border border-gray-200 py-3 px-4 rounded-lg font-medium text-gray-700 no-underline hover:border-violet-500 hover:bg-violet-50 hover:text-violet-700 transition-colors">
-                  <i className="fas fa-search-location text-violet-600" aria-hidden /> SARC Center Locator
-                </a>
+            <div className="rounded-xl border border-violet-200 p-6 mb-8" style={{ background: "linear-gradient(135deg, #faf5ff, #eef2ff)" }}>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0" style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)" }}>
+                  <i className="fas fa-hospital-alt text-white" aria-hidden />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">Sarcoma Centers — Clinical Trial Links</h3>
+                  <p className="text-gray-600 mb-4">
+                    Browse direct links to clinical trial search pages at 60+ sarcoma and cancer centers across the United States, with search and state filtering.
+                  </p>
+                  <Link href="/sarcoma-centers" className="inline-flex items-center gap-2 py-3 px-5 rounded-lg font-semibold text-white no-underline shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5" style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)" }}>
+                    <i className="fas fa-th-list" aria-hidden /> Browse Sarcoma Centers Directory
+                  </Link>
+                </div>
               </div>
             </div>
           </section>

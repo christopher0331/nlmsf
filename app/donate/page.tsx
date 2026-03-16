@@ -319,15 +319,25 @@ export default function DonatePage() {
               <p className="text-gray-500 text-base md:text-lg pl-12">All contributions made to the NLMSF, a charitable non-profit 501(c)(3) organization, are tax-deductible.</p>
             </header>
             <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-lg shadow-gray-200/50">
-              <div className="flex flex-col gap-0">
-                <div className="min-h-[700px] w-full bg-gray-50/50">
-                  <iframe
-                    title="Donate to NLMSF"
-                    src="https://nlmsf.org/give/donations-tribute-funds?giveDonationFormInIframe=1"
-                    className="w-full min-h-[700px] border-0"
-                  />
+              <div className="flex flex-col items-center gap-6 p-8 md:p-12 text-center">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)" }}>
+                  <i className="fas fa-hand-holding-heart text-white text-3xl" aria-hidden />
                 </div>
-                <div className="rounded-b-2xl border-t border-gray-100 bg-gradient-to-r from-gray-50 to-slate-50 px-6 py-5 text-center">
+                <h3 className="text-xl font-bold text-gray-900 md:text-2xl">
+                  Make a Donation
+                </h3>
+                <p className="max-w-md text-gray-600 leading-relaxed">
+                  Support vital leiomyosarcoma research and patient programs. One-time and recurring gifts accepted. Tribute and honor donations available.
+                </p>
+                <a
+                  href="/?form=DONATE"
+                  className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                  style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.4)" }}
+                >
+                  <i className="fas fa-donate" aria-hidden />
+                  Donate Now
+                </a>
+                <div className="mt-2 text-center">
                   <p className="text-gray-600 text-sm md:text-base">Questions? Email Annie Achee at <a href="mailto:annieachee@aol.com" className="font-semibold text-[#7e22ce] no-underline hover:underline">annieachee@aol.com</a></p>
                   <p className="mt-1 text-gray-600 text-sm md:text-base">Or call <a href="tel:+13037830924" className="font-semibold text-[#7e22ce] no-underline hover:underline">303-783-0924</a></p>
                 </div>
