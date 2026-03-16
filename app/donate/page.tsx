@@ -330,7 +330,7 @@ export default function DonatePage() {
                   Support vital leiomyosarcoma research and patient programs. One-time and recurring gifts accepted. Tribute and honor donations available.
                 </p>
                 <a
-                  href="/?form=DONATE"
+                  href="/donate?form=DONATE"
                   className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
                   style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.4)" }}
                 >
