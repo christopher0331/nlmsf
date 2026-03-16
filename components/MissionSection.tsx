@@ -42,8 +42,8 @@ export default function MissionSection() {
           </div>
           <div className="relative order-1 md:order-2">
             <Image
-              src="https://media.nlmsf.org/wp-content/uploads/2025/04/Untitled-design-2.png"
-              alt="NLMSF Team and Volunteers"
+              src="/images/our-mission-homepage.png"
+              alt="A Patient-Centered Foundation — NLMSF core values"
               width={1200}
               height={800}
               className="w-full h-auto rounded-lg block object-contain"
