@@ -231,6 +231,14 @@ export default function Header() {
                               </Link>
                             </li>
                             <li>
+                              <Link
+                                href="/uterine-leiomyosarcoma-guide"
+                                className={DROPDOWN_LINK}
+                              >
+                                Uterine Leiomyosarcoma Guide
+                              </Link>
+                            </li>
+                            <li>
                               <a
                                 href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/sarcoma"
                                 target="_blank"
@@ -950,6 +958,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       ABC&apos;s of New Diagnosis
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/uterine-leiomyosarcoma-guide"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Uterine Leiomyosarcoma Guide
                     </Link>
                   </li>
                   <li>

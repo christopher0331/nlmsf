@@ -38,9 +38,6 @@ export default function UterineLmsPage() {
             <span className="ulms-tag blue">
               <i className="fas fa-book-medical" aria-hidden /> Reviews
             </span>
-            <span className="ulms-tag teal">
-              <i className="fas fa-video" aria-hidden /> Expert Video
-            </span>
           </div>
         </div>
         <div className="ulms-hero-decor decor-one" aria-hidden="true" />
@@ -52,7 +49,6 @@ export default function UterineLmsPage() {
         <nav className="ulms-nav">
           <h3>On This Page</h3>
           <a href="#ijgc-review">IJGC 2025 Review</a>
-          <a href="#expert-video">Expert Video</a>
           <a href="#featured">Featured Publication</a>
           <a href="#genomic">Genomic Risk</a>
           <a href="#targeted">Targeted Therapy</a>
@@ -134,43 +130,6 @@ export default function UterineLmsPage() {
               <i className="fas fa-external-link-alt" aria-hidden />
               Read the Full IJGC 2025 Review
             </a>
-          </div>
-        </section>
-
-        {/* Expert Video */}
-        <section id="expert-video" className="ulms-section">
-          <h2 className="ulms-section-title teal">Expert Video</h2>
-          <div className="ulms-panel teal">
-            <div className="ulms-panel-header">
-              <div className="ulms-icon teal">
-                <i className="fas fa-video" aria-hidden />
-              </div>
-              <div>
-                <h3>Uterine Sarcoma Care — Key Considerations</h3>
-                <p>
-                  Multidisciplinary expertise in evaluation, treatment planning,
-                  and second opinions
-                </p>
-              </div>
-            </div>
-            <div className="ulms-video">
-              <iframe
-                src="https://www.youtube.com/embed/KzPj_xrz334"
-                title="Uterine Sarcoma Care"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-            <p className="ulms-video-note">
-              For an overview of comprehensive sarcoma services see the{" "}
-              <a
-                href="https://www.uclahealth.org/cancer/cancer-services/sarcoma"
-                {...ext}
-              >
-                UCLA Health Sarcoma Center
-              </a>
-              .
-            </p>
           </div>
         </section>
 
