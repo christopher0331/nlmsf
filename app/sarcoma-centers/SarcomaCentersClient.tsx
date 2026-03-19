@@ -29,7 +29,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "AZ",
     stateFull: "Arizona",
     links: [
-      { label: "Clinical Trials", url: "https://uacc.arizona.edu/research/clinical-trials" },
+      { label: "Clinical Trials", url: "https://cancercenter.arizona.edu/patients/clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/ycz6q9z8" },
     ],
   },
   {
@@ -39,6 +40,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Pennsylvania",
     links: [
       { label: "Clinical Trials", url: "https://app.emergingmed.com/acc-upenn/trials/" },
+      { label: "Backup Link", url: "https://tinyurl.com/ycezedz8" },
     ],
   },
   {
@@ -47,7 +49,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "WI",
     stateFull: "Wisconsin",
     links: [
-      { label: "Clinical Trials", url: "https://www.aurorahealthcare.org/aurora-research-institute/clinical-trials" },
+      { label: "Cancer Research Studies", url: "https://www.advocatehealth.org/research/advocate-aurora/participate-in-research/cancer" },
+      { label: "Participate in Research", url: "https://www.advocatehealth.org/research/advocate-aurora/participate-in-research" },
     ],
   },
   {
@@ -56,7 +59,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "TX",
     stateFull: "Texas",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/texas/dallas/baylor-university-medical-center/facility-358/" },
+      { label: "Cancer Research", url: "https://www.bswhealth.com/specialties/cancer-care/cancer-research" },
+      { label: "Research Institute", url: "https://www.bswhealth.com/research" },
       { label: "BRI Trials", url: "https://britrials.bswsites.com/#" },
     ],
   },
@@ -66,7 +70,9 @@ const CENTERS: SarcomaCenter[] = [
     state: "OH",
     stateFull: "Ohio",
     links: [
-      { label: "Search Cancer Trials", url: "https://my.clevelandclinic.org/departments/cancer/research-innovations/search-cancer-clinical-trials" },
+      { label: "Search Cancer Clinical Trials", url: "https://my.clevelandclinic.org/departments/cancer/clinical-trials" },
+      { label: "Clinical Trials Search", url: "https://my.clevelandclinic.org/departments/cancer/research-innovations/search-cancer-clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/ybd5vwne" },
     ],
   },
   {
@@ -94,7 +100,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "NC",
     stateFull: "North Carolina",
     links: [
-      { label: "Adult Trials", url: "http://www.dukecancerinstitute.org/clinical-trials/adult/2200" },
+      { label: "Adult Trials", url: "https://www.dukecancerinstitute.org/clinical-trials" },
     ],
   },
   {
@@ -104,6 +110,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Georgia",
     links: [
       { label: "Clinical Trials", url: "https://winshipcancer.emory.edu/patient-care/clinical-trials/index.html" },
+      { label: "Backup Link", url: "https://tinyurl.com/ycr55kza" },
     ],
   },
   {
@@ -113,6 +120,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Pennsylvania",
     links: [
       { label: "Search Trials", url: "https://www.foxchase.org/clinical-care/search-clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/y8bqfk89" },
     ],
   },
   {
@@ -121,7 +129,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "WA",
     stateFull: "Washington",
     links: [
-      { label: "Clinical Trials", url: "https://www.fredhutch.org/en/treatment/clinical-trials.html" },
+      { label: "Clinical Trials", url: "https://www.fredhutch.org/en/research/clinical-trials.html" },
+      { label: "Backup Link", url: "https://tinyurl.com/y8zxclkz" },
     ],
   },
   {
@@ -131,6 +140,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Wisconsin",
     links: [
       { label: "Search Trials", url: "https://www.froedtert.com/research/clinical-trials/search" },
+      { label: "Backup Link", url: "https://tinyurl.com/yadkzsgo" },
     ],
   },
   {
@@ -139,7 +149,9 @@ const CENTERS: SarcomaCenter[] = [
     state: "NJ",
     stateFull: "New Jersey",
     links: [
-      { label: "Clinical Trials", url: "https://www.hackensackumc.org/health-professionals/clinical-trials/" },
+      { label: "Cancer Research", url: "https://www.hackensackmeridianhealth.org/en/services/cancer-care/our-cancer-research" },
+      { label: "Bone Tumor & Sarcoma Care", url: "https://www.hackensackmeridianhealth.org/en/services/cancer-care/bone-tumor-sarcoma" },
+      { label: "Backup Link", url: "https://tinyurl.com/y9lrnypn" },
     ],
   },
   {
@@ -148,7 +160,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "CA",
     stateFull: "California",
     links: [
-      { label: "Sarcoma Trials", url: "https://www.hoag.org/specialties-services/cancer/conditions/bone-soft-tissue-sarcoma/clinical-trials-research/" },
+      { label: "Available Clinical Trials", url: "https://www.hoag.org/specialties-services/other-programs-services/clinical-research/available-clinical-trials/" },
+      { label: "Hoag Cancer Program", url: "https://www.hoag.org/specialties-services/cancer/" },
     ],
   },
   {
@@ -157,8 +170,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "IA",
     stateFull: "Iowa",
     links: [
-      { label: "Trial Search", url: "https://smrs.healthcare.uiowa.edu/sip-mobile/flowchart.html" },
-      { label: "Iowa Trials (GPS)", url: "https://www.clinicaltrialsgps.com/iowa/" },
+      { label: "Holden Clinical Research Services", url: "https://holden.uihealthcare.org/research/clinical-research-services" },
+      { label: "University of Iowa Cancer Center", url: "https://cancer.uiowa.edu/" },
     ],
   },
   {
@@ -168,6 +181,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "South Carolina",
     links: [
       { label: "Clinical Trials", url: "https://www.hollingscancercenter.org/clinical-trials/" },
+      { label: "Backup Link", url: "https://tinyurl.com/ycq9ql5u" },
     ],
   },
   {
@@ -176,7 +190,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "NY",
     stateFull: "New York",
     links: [
-      { label: "Clinical Trials", url: "http://cancer.columbia.edu/clinical-trials/" },
+      { label: "Cancer Clinical Trials", url: "https://www.cancer.columbia.edu/cancer-types-and-care/clinical-trials" },
     ],
   },
   {
@@ -204,6 +218,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Oregon",
     links: [
       { label: "Sarcoma Trials", url: "https://apps.ohsu.edu/research/study-participation-opportunities-system/listing.php?hcat=Adult+Cancers&cat=Sarcoma" },
+      { label: "Backup Link", url: "https://tinyurl.com/y9ybtboc" },
     ],
   },
   {
@@ -212,7 +227,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "NC",
     stateFull: "North Carolina",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/north-carolina/charlotte/levine-cancer-institute/facility-58831/" },
+      { label: "Clinical Trials", url: "https://atriumhealth.org/research-clinical-trials/cancer-clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/y9uk6kln" },
     ],
   },
   {
@@ -221,7 +237,9 @@ const CENTERS: SarcomaCenter[] = [
     state: "MD",
     stateFull: "Maryland",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/maryland/baltimore/alvin-and-lois-lapidus-cancer-institute-sinai-hospital-of-baltimore/fac" },
+      { label: "Oncology Research", url: "https://www.lifebridgehealth.org/research/oncology-research" },
+      { label: "Active Clinical Trials", url: "https://www.lifebridgehealth.org/research/active-clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/y9lrnypn" },
     ],
   },
   {
@@ -231,6 +249,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "California",
     links: [
       { label: "Clinical Trials", url: "https://news.llu.edu/research/clinical-trials-loma-linda-university-cancer-center-seek-new-treatments" },
+      { label: "Backup Link", url: "https://tinyurl.com/ya4rhyrb" },
     ],
   },
   {
@@ -239,7 +258,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "UT",
     stateFull: "Utah",
     links: [
-      { label: "Clinical Trials", url: "https://healthcare.utah.edu/huntsmancancerinstitute/clinical-trials/" },
+      { label: "Clinical Trials", url: "https://healthcare.utah.edu/huntsmancancerinstitute/clinical-trials/search.php" },
+      { label: "Backup Link", url: "https://tinyurl.com/y6uswwyx" },
     ],
   },
   {
@@ -257,7 +277,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "TX",
     stateFull: "Texas",
     links: [
-      { label: "Clinical Trials", url: "https://www.mdanderson.org/patients-family/diagnosis-treatment/clinical-trials.html" },
+      { label: "Clinical Trials", url: "https://www.mdanderson.org/patients-family/search-results.html?q=Sarcoma&searchType=clinical%20trials#filter|enrollment_status:open" },
     ],
   },
   {
@@ -275,7 +295,9 @@ const CENTERS: SarcomaCenter[] = [
     state: "NY",
     stateFull: "New York",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/new-york/new-york/memorial-sloan-kettering-cancer-center/facility-3576/" },
+      { label: "Sarcoma Trials at MSK", url: "https://www.mskcc.org/research-programs/sarcoma-center-msk/sarcoma-trials-msk" },
+      { label: "Soft Tissue Sarcoma Clinical Trials", url: "https://www.mskcc.org/cancer-care/types/soft-tissue-sarcoma/clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/y8e7tf5j" },
     ],
   },
   {
@@ -294,7 +316,9 @@ const CENTERS: SarcomaCenter[] = [
     state: "NY",
     stateFull: "New York",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/new-york/lake-success/monter-cancer-center/facility-33278/" },
+      { label: "Northwell Clinical Trials", url: "https://cancer.northwell.edu/clinical-trials" },
+      { label: "Monter Cancer Center", url: "https://env3.northwell.edu/cancer-institute/cancer-care/locations/center-for-advanced-medicine/monter-cancer-center" },
+      { label: "Backup Link", url: "https://tinyurl.com/y9vpu2o8" },
     ],
   },
   {
@@ -304,6 +328,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "New York",
     links: [
       { label: "Cancer Trials", url: "https://www.montefiore.org/cancer-clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/y8o84god" },
     ],
   },
   {
@@ -312,8 +337,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "NE",
     stateFull: "Nebraska",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/nebraska/omaha/nebraska-methodist-hospital-cancer-center/facility-160988/" },
-      { label: "Sarcoma Trials", url: "http://www.methodistclinicaltrials.com/trial-categories/sarcoma/" },
+      { label: "Methodist Clinical Trials", url: "https://bestcare.org/specialties/clinical-trials" },
+      { label: "Nebraska Medicine Cancer Clinical Trials", url: "https://www.nebraskamed.com/clinical-trials/cancer-clinical-trials" },
     ],
   },
   {
@@ -322,7 +347,10 @@ const CENTERS: SarcomaCenter[] = [
     state: "GA",
     stateFull: "Georgia",
     links: [
+      { label: "Research and Clinical Trials", url: "https://www.northside.com/services/cancer-institute/cancer-treatment-options/research-and-clinical-trials" },
+      { label: "Northside Trial Finder", url: "https://northsidetrials.com/" },
       { label: "Email: clinicaltrials@northside.com", url: "mailto:clinicaltrials@northside.com" },
+      { label: "Backup Link", url: "https://tinyurl.com/yaxx8b4x" },
     ],
   },
   {
@@ -332,6 +360,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Illinois",
     links: [
       { label: "Clinical Trials", url: "https://www.cancer.northwestern.edu/clinical-trials/index.html" },
+      { label: "Backup Link", url: "https://tinyurl.com/ybdazqmt" },
     ],
   },
   {
@@ -341,6 +370,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "New York",
     links: [
       { label: "Clinical Trials", url: "https://forms.roswellpark.org/clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/gt2hmb6" },
     ],
   },
   {
@@ -358,7 +388,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "MO",
     stateFull: "Missouri",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/missouri/st-louis/siteman-cancer-center/facility-14121/" },
+      { label: "Clinical Trials Search", url: "https://siteman.wustl.edu/treatment/clinical-trials/" },
+      { label: "Backup Link", url: "https://tinyurl.com/ycwrqaly" },
     ],
   },
   {
@@ -367,7 +398,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "CA",
     stateFull: "California",
     links: [
-      { label: "Clinical Trials", url: "http://med.stanford.edu/cancer/trials.html" },
+      { label: "Clinical Trials", url: "https://med.stanford.edu/cancer/clinical-trials.html" },
     ],
   },
   {
@@ -377,6 +408,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Florida",
     links: [
       { label: "Clinical Trials", url: "https://clinicaltrials.sylvester.org/index.htm" },
+      { label: "Backup Link", url: "https://tinyurl.com/ycggxyjy" },
     ],
   },
   {
@@ -395,6 +427,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "California",
     links: [
       { label: "Find a Trial", url: "https://cancer.ucla.edu/patient-care/enroll-in-a-clinical-trial/find-a-ucla-clinical-trial" },
+      { label: "Backup Link", url: "https://tinyurl.com/ydc7o7gz" },
     ],
   },
   {
@@ -403,7 +436,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "AL",
     stateFull: "Alabama",
     links: [
-      { label: "Clinical Trials", url: "https://www.mesothelioma.com/treatment/clinical-trials/" },
+      { label: "Clinical Trials", url: "https://www.onealcanceruab.org/patients-caregivers/clinical-trials/" },
     ],
   },
   {
@@ -412,7 +445,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "CO",
     stateFull: "Colorado",
     links: [
-      { label: "Clinical Trials", url: "http://www.ucdenver.edu/academics/colleges/medicalschool/centers/cancercenter/clinicaltrials/Pages/ClinicalTrials.aspx" },
+      { label: "Clinical Trials", url: "https://medschool.cuanschutz.edu/colorado-cancer-center/clinical-trials" },
     ],
   },
   {
@@ -430,7 +463,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "MD",
     stateFull: "Maryland",
     links: [
-      { label: "Clinical Trials", url: "https://www.umms.org/umgccc/cancer-services/cancer-care/research-clinical-trials/clinical-trials" },
+      { label: "Clinical Trials Database", url: "https://www.umms.org/umgccc/cancer-services/cancer-care/clinical-trials/database" },
     ],
   },
   {
@@ -439,7 +472,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "MI",
     stateFull: "Michigan",
     links: [
-      { label: "Clinical Trials", url: "https://www.rogelcancercenter.org/clinical-trials" },
+      { label: "Find Clinical Trials", url: "https://www.rogelcancercenter.org/clinical-trials/find-clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/ybsgr375" },
     ],
   },
   {
@@ -449,6 +483,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Minnesota",
     links: [
       { label: "Clinical Trials", url: "https://omis.cancer.umn.edu/research/clinicaltrials/" },
+      { label: "Backup Link", url: "https://tinyurl.com/ycpwmu8x" },
     ],
   },
   {
@@ -458,6 +493,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "New Mexico",
     links: [
       { label: "Clinical Trials", url: "https://cancer.unm.edu/clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/y8dcoaff" },
     ],
   },
   {
@@ -466,8 +502,9 @@ const CENTERS: SarcomaCenter[] = [
     state: "NC",
     stateFull: "North Carolina",
     links: [
-      { label: "Clinical Trials", url: "https://unclineberger.org/patientcare/clinical-trials" },
-      { label: "UNC Research Trials", url: "https://research.unc.edu/clinical-trials/" },
+      { label: "Clinical Trials", url: "https://unclineberger.org/patientcare/clinical-trials/" },
+      { label: "Find a Clinical Trial", url: "https://unclineberger.org/clinical-trials/find-a-clinical-trial/" },
+      { label: "Backup Link", url: "https://tinyurl.com/y8kukw3g" },
     ],
   },
   {
@@ -476,7 +513,9 @@ const CENTERS: SarcomaCenter[] = [
     state: "PA",
     stateFull: "Pennsylvania",
     links: [
-      { label: "Clinical Trials", url: "http://hillman.upmc.com/research/clinical-trials" },
+      { label: "Clinical Research", url: "https://upci.upmc.edu/research/clinical/" },
+      { label: "Clinical Trials", url: "https://hillman.upmc.com/research/clinical-trials" },
+      { label: "Backup Link", url: "https://tinyurl.com/y9th3q49" },
     ],
   },
   {
@@ -494,6 +533,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "VT",
     stateFull: "Vermont",
     links: [
+      { label: "Clinical Trials (UVM Health)", url: "https://www.uvmhealth.org/medcenter/Pages/Clinical-Trials-and-Research.aspx" },
       { label: "Clinical Trials", url: "http://www.med.uvm.edu/uvmcancercenter/clinicaltrialsgroup/cancer-trials" },
     ],
   },
@@ -504,7 +544,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Tennessee",
     links: [
       { label: "Cancer Center", url: "https://www.vanderbilthealth.com/cancer/51428" },
-      { label: "Sarcoma Trials", url: "https://www.vicc.org/clinical-trials/search?f%5B0%5D=disease_site%3ASarcoma" },
+      { label: "Sarcoma Trials", url: "https://www.vicc.org/clinical-trials/search" },
     ],
   },
   {
@@ -523,7 +563,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "NC",
     stateFull: "North Carolina",
     links: [
-      { label: "Clinical Trials GPS", url: "https://www.clinicaltrialsgps.com/north-carolina/winston-salem/comprehensive-cancer-center-of-wake-forest-university/fac" },
+      { label: "Cancer Research Studies", url: "https://beinvolved.atriumhealth.org/study-areas/cancer-research-studies" },
+      { label: "WakeHealth Clinical Trials", url: "https://www.wakehealth.edu/locations/facilities/comprehensive-cancer-center/clinical-trials-health-minute" },
     ],
   },
   {
@@ -532,7 +573,8 @@ const CENTERS: SarcomaCenter[] = [
     state: "WV",
     stateFull: "West Virginia",
     links: [
-      { label: "Clinical Research", url: "http://wvucancer.org/clinical-research/" },
+      { label: "Clinical Research", url: "https://cancer.wvumedicine.org/about-us/inside-the-institute/clinical-research/" },
+      { label: "WVU Cancer Institute", url: "https://cancer.wvumedicine.org/" },
     ],
   },
   // ---- Resources (not treatment centers) ----
@@ -562,7 +604,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "MI",
     stateFull: "Michigan",
     links: [
-      { label: "SARC Trials", url: "http://www.sarctrials.org" },
+      { label: "SARC Trials", url: "https://sarctrials.org" },
     ],
     isResource: true,
   },
@@ -582,6 +624,8 @@ CENTERS.forEach((c) => {
 });
 
 type SortKey = "name" | "state";
+type KindFilter = "all" | "center" | "resource";
+type ViewMode = "grid" | "list";
 
 /* ------------------------------------------------------------------ */
 /*  Component                                                          */
@@ -591,10 +635,22 @@ export default function SarcomaCentersClient() {
   const [query, setQuery] = useState("");
   const [stateFilter, setStateFilter] = useState("");
   const [sort, setSort] = useState<SortKey>("name");
+  const [kindFilter, setKindFilter] = useState<KindFilter>("all");
+  const [viewMode, setViewMode] = useState<ViewMode>("grid");
+  const [showBackupLinks, setShowBackupLinks] = useState(false);
+
+  const totalResources = useMemo(() => CENTERS.filter((c) => c.isResource).length, []);
+  const totalCenters = CENTERS.length - totalResources;
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
     let list = CENTERS;
+
+    if (kindFilter === "center") {
+      list = list.filter((c) => !c.isResource);
+    } else if (kindFilter === "resource") {
+      list = list.filter((c) => c.isResource);
+    }
 
     if (stateFilter) {
       list = list.filter((c) => c.state === stateFilter);
@@ -619,164 +675,273 @@ export default function SarcomaCentersClient() {
       );
     }
     return sorted;
-  }, [query, stateFilter, sort]);
+  }, [query, stateFilter, sort, kindFilter]);
+
+  const hasActiveFilters = query || stateFilter || kindFilter !== "all" || sort !== "name";
+
+  const displayed = useMemo(
+    () =>
+      filtered.map((center) => ({
+        ...center,
+        links: showBackupLinks
+          ? center.links
+          : center.links.filter((link) => !link.label.toLowerCase().includes("backup")),
+      })),
+    [filtered, showBackupLinks],
+  );
+
+  const resetFilters = () => {
+    setQuery("");
+    setStateFilter("");
+    setSort("name");
+    setKindFilter("all");
+  };
 
   return (
-    <main>
-      {/* Hero */}
-      <section
-        className="mx-auto mb-8 max-w-[1400px] rounded-xl border border-blue-200 px-6 py-12 text-center shadow-md md:px-8"
-        style={{ background: "linear-gradient(135deg, #eff6ff, #eef2ff)" }}
-      >
-        <div className="mb-6 inline-flex items-center rounded-full bg-white px-4 py-2 shadow-sm">
-          <i className="fas fa-hospital-alt mr-2 text-[#7e22ce]" aria-hidden />
-          <span className="font-medium text-gray-700">Sarcoma Centers</span>
+    <main className="pb-16">
+      <section className="mx-auto mb-8 max-w-[1400px] overflow-hidden rounded-2xl border border-violet-200 shadow-xl">
+        <div className="relative bg-[radial-gradient(circle_at_top_right,_rgba(196,181,253,0.45),_transparent_55%),radial-gradient(circle_at_10%_80%,_rgba(147,197,253,0.35),_transparent_55%),linear-gradient(135deg,_#eef2ff_0%,_#f8fafc_45%,_#fdf4ff_100%)] px-6 py-12 md:px-10 md:py-14">
+          <div className="mb-5 inline-flex items-center rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-violet-700 shadow-sm backdrop-blur">
+            <i className="fas fa-hospital-alt mr-2" aria-hidden />
+            Sarcoma Clinical Trial Directory
+          </div>
+          <h1 className="max-w-3xl text-3xl font-black leading-tight text-slate-900 md:text-5xl">
+            Direct Access to Clinical Trial Site Links by Sarcoma Centers
+          </h1>
+          <p className="mt-4 max-w-3xl text-base text-slate-600 md:text-lg">
+            A curated national directory to help patients and families quickly find active clinical
+            trial search pages, backup links, and trusted sarcoma research resources.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <span className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">Searchable</span>
+            <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">Filter by State</span>
+            <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700">Backup Links Included</span>
+          </div>
         </div>
-        <h1
-          className="mb-4 text-2xl font-extrabold md:text-4xl"
-          style={{
-            background: "linear-gradient(to right, #7e22ce, #4338ca)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            color: "transparent",
-          }}
-        >
-          Clinical Trial Links by Sarcoma Center
-        </h1>
-        <div
-          className="mx-auto my-6 h-1 w-16 rounded"
-          style={{ background: "linear-gradient(to right, #7e22ce, #4338ca)" }}
-          aria-hidden
-        />
-        <p className="mx-auto mb-0 max-w-[700px] text-lg text-gray-600">
-          Direct access to clinical trial search pages at major sarcoma and cancer
-          centers across the United States.
-        </p>
       </section>
 
-      <div className="mx-auto max-w-[1400px] px-4 pb-16 md:px-6">
-        {/* Controls */}
-        <div className="mb-8 flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:flex-row sm:items-end sm:gap-5">
-          {/* Search */}
-          <div className="flex-1">
-            <label htmlFor="sc-search" className="mb-1 block text-sm font-semibold text-gray-700">
-              Search
-            </label>
-            <div className="relative">
-              <i className="fas fa-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden />
-              <input
-                id="sc-search"
-                type="text"
-                placeholder="Center name, city, or state…"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                className="w-full rounded-lg border border-gray-300 py-2.5 pl-9 pr-3 text-sm focus:border-[#7e22ce] focus:outline-none focus:ring-2 focus:ring-[#7e22ce]/20"
-              />
+      <div className="mx-auto max-w-[1400px] px-4 md:px-6">
+        <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="rounded-xl border border-violet-200 bg-violet-50 p-4">
+            <p className="m-0 text-xs font-semibold uppercase tracking-wider text-violet-700">Treatment Centers</p>
+            <p className="m-0 mt-1 text-2xl font-extrabold text-violet-900">{totalCenters}</p>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <p className="m-0 text-xs font-semibold uppercase tracking-wider text-amber-700">National Resources</p>
+            <p className="m-0 mt-1 text-2xl font-extrabold text-amber-900">{totalResources}</p>
+          </div>
+          <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+            <p className="m-0 text-xs font-semibold uppercase tracking-wider text-blue-700">Showing</p>
+            <p className="m-0 mt-1 text-2xl font-extrabold text-blue-900">{displayed.length}</p>
+          </div>
+        </div>
+
+        <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="sm:col-span-2">
+              <label htmlFor="sc-search" className="mb-1 block text-sm font-semibold text-slate-700">
+                Search
+              </label>
+              <div className="relative">
+                <i className="fas fa-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm" aria-hidden />
+                <input
+                  id="sc-search"
+                  type="text"
+                  placeholder="Center name, city, or state..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="w-full rounded-lg border border-slate-300 py-2.5 pl-9 pr-3 text-sm focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="sc-state" className="mb-1 block text-sm font-semibold text-slate-700">
+                State
+              </label>
+              <select
+                id="sc-state"
+                value={stateFilter}
+                onChange={(e) => setStateFilter(e.target.value)}
+                className="w-full rounded-lg border border-slate-300 bg-white py-2.5 px-3 text-sm focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+              >
+                <option value="">All States</option>
+                {STATES.map((s) => (
+                  <option key={s} value={s}>
+                    {STATE_LABELS[s]} ({s})
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="sc-kind" className="mb-1 block text-sm font-semibold text-slate-700">
+                Type
+              </label>
+              <select
+                id="sc-kind"
+                value={kindFilter}
+                onChange={(e) => setKindFilter(e.target.value as KindFilter)}
+                className="w-full rounded-lg border border-slate-300 bg-white py-2.5 px-3 text-sm focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+              >
+                <option value="all">All Entries</option>
+                <option value="center">Centers Only</option>
+                <option value="resource">Resources Only</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="sc-sort" className="mb-1 block text-sm font-semibold text-slate-700">
+                Sort by
+              </label>
+              <select
+                id="sc-sort"
+                value={sort}
+                onChange={(e) => setSort(e.target.value as SortKey)}
+                className="w-full rounded-lg border border-slate-300 bg-white py-2.5 px-3 text-sm focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+              >
+                <option value="name">Center Name</option>
+                <option value="state">State</option>
+              </select>
             </div>
           </div>
 
-          {/* State filter */}
-          <div className="w-full sm:w-48">
-            <label htmlFor="sc-state" className="mb-1 block text-sm font-semibold text-gray-700">
-              State
-            </label>
-            <select
-              id="sc-state"
-              value={stateFilter}
-              onChange={(e) => setStateFilter(e.target.value)}
-              className="w-full rounded-lg border border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-[#7e22ce] focus:outline-none focus:ring-2 focus:ring-[#7e22ce]/20"
-            >
-              <option value="">All States</option>
-              {STATES.map((s) => (
-                <option key={s} value={s}>
-                  {STATE_LABELS[s]} ({s})
-                </option>
-              ))}
-            </select>
-          </div>
+          <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-slate-100 pt-4">
+            <div className="inline-flex rounded-lg border border-slate-200 bg-slate-50 p-1">
+              <button
+                type="button"
+                onClick={() => setViewMode("grid")}
+                className={`rounded-md px-3 py-1.5 text-xs font-semibold transition ${
+                  viewMode === "grid"
+                    ? "bg-white text-violet-700 shadow"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                <i className="fas fa-th mr-1" aria-hidden /> Grid
+              </button>
+              <button
+                type="button"
+                onClick={() => setViewMode("list")}
+                className={`rounded-md px-3 py-1.5 text-xs font-semibold transition ${
+                  viewMode === "list"
+                    ? "bg-white text-violet-700 shadow"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                <i className="fas fa-list mr-1" aria-hidden /> List
+              </button>
+            </div>
 
-          {/* Sort */}
-          <div className="w-full sm:w-44">
-            <label htmlFor="sc-sort" className="mb-1 block text-sm font-semibold text-gray-700">
-              Sort by
-            </label>
-            <select
-              id="sc-sort"
-              value={sort}
-              onChange={(e) => setSort(e.target.value as SortKey)}
-              className="w-full rounded-lg border border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-[#7e22ce] focus:outline-none focus:ring-2 focus:ring-[#7e22ce]/20"
+            <button
+              type="button"
+              onClick={() => setShowBackupLinks((prev) => !prev)}
+              className={`rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${
+                showBackupLinks
+                  ? "border-amber-300 bg-amber-50 text-amber-800"
+                  : "border-slate-300 bg-white text-slate-700"
+              }`}
             >
-              <option value="name">Center Name</option>
-              <option value="state">State</option>
-            </select>
+              <i className="fas fa-link mr-1" aria-hidden />
+              {showBackupLinks ? "Backup Links: On" : "Backup Links: Off"}
+            </button>
+
+            <button
+              type="button"
+              onClick={resetFilters}
+              disabled={!hasActiveFilters}
+              className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 transition-colors hover:border-violet-400 hover:text-violet-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Reset Filters
+            </button>
           </div>
         </div>
 
-        {/* Result count */}
-        <p className="mb-4 text-sm text-gray-500">
-          Showing <strong className="text-gray-700">{filtered.length}</strong> of{" "}
-          {CENTERS.length} centers
+        <p className="mb-4 text-sm text-slate-500">
+          Showing <strong className="text-slate-700">{displayed.length}</strong> of {CENTERS.length}
           {stateFilter ? ` in ${STATE_LABELS[stateFilter]}` : ""}
           {query ? ` matching "${query}"` : ""}
         </p>
 
-        {/* Grid */}
-        {filtered.length === 0 ? (
-          <div className="rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 py-16 text-center">
-            <i className="fas fa-search mb-3 text-3xl text-gray-300" aria-hidden />
-            <p className="text-gray-500">No centers found. Try adjusting your search or filter.</p>
+        {displayed.length === 0 ? (
+          <div className="rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 py-16 text-center">
+            <i className="fas fa-search mb-3 text-3xl text-slate-300" aria-hidden />
+            <p className="text-slate-500">No centers found. Try a different search or filter.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((c, i) => (
-              <div
+          <div className={viewMode === "grid" ? "grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3" : "flex flex-col gap-4"}>
+            {displayed.map((c, i) => (
+              <article
                 key={`${c.name}-${i}`}
-                className={`group relative rounded-xl border bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${
-                  c.isResource
-                    ? "border-amber-200 bg-amber-50/30"
-                    : "border-gray-200"
-                }`}
+                className={`group overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${
+                  c.isResource ? "border-amber-200" : "border-slate-200"
+                } ${viewMode === "list" ? "p-5" : "p-5"}`}
               >
-                {c.isResource && (
-                  <span className="absolute right-3 top-3 rounded-full bg-amber-100 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-amber-700">
-                    Resource
-                  </span>
-                )}
-                <h3 className="mb-1 pr-16 text-[0.95rem] font-bold leading-snug text-gray-900">
-                  {c.name}
-                </h3>
-                <p className="mb-3 flex items-center gap-1.5 text-sm text-gray-500">
-                  <i className="fas fa-map-marker-alt text-[#7e22ce] text-xs" aria-hidden />
-                  {c.city}
-                  {c.state ? `, ${c.state}` : ""}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {c.links.map((link, j) => (
-                    <a
-                      key={j}
-                      href={link.url}
-                      target={link.url.startsWith("mailto:") ? undefined : "_blank"}
-                      rel={link.url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                      className="inline-flex items-center gap-1.5 rounded-md border border-violet-200 bg-violet-50 px-3 py-1.5 text-xs font-semibold text-violet-700 no-underline transition-colors hover:border-violet-400 hover:bg-violet-100"
-                    >
-                      <i
-                        className={`fas ${link.url.startsWith("mailto:") ? "fa-envelope" : "fa-external-link-alt"} text-[0.6rem]`}
-                        aria-hidden
-                      />
-                      {link.label}
-                    </a>
-                  ))}
+                <div className="mb-3 flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="m-0 text-base font-bold leading-snug text-slate-900">{c.name}</h3>
+                    <p className="mt-1 flex items-center gap-1.5 text-sm text-slate-500">
+                      <i className="fas fa-map-marker-alt text-violet-600 text-xs" aria-hidden />
+                      {c.city}
+                      {c.state ? `, ${c.state}` : ""}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {c.state && (
+                      <span className="rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 text-[0.65rem] font-bold tracking-wide text-slate-600">
+                        {c.state}
+                      </span>
+                    )}
+                    {c.isResource && (
+                      <span className="rounded-md border border-amber-300 bg-amber-50 px-2 py-0.5 text-[0.65rem] font-bold tracking-wide text-amber-700">
+                        RESOURCE
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
+
+                {c.links.length === 0 ? (
+                  <p className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium text-slate-500">
+                    No primary links visible with current settings.
+                  </p>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {c.links.map((link, j) => {
+                      const isBackup = link.label.toLowerCase().includes("backup");
+                      const isEmail = link.url.startsWith("mailto:");
+
+                      return (
+                        <a
+                          key={j}
+                          href={link.url}
+                          target={isEmail ? undefined : "_blank"}
+                          rel={isEmail ? undefined : "noopener noreferrer"}
+                          className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-semibold no-underline transition ${
+                            isBackup
+                              ? "border-amber-200 bg-amber-50 text-amber-700 hover:border-amber-300"
+                              : "border-violet-200 bg-violet-50 text-violet-700 hover:border-violet-400"
+                          }`}
+                        >
+                          <i
+                            className={`fas ${
+                              isEmail ? "fa-envelope" : isBackup ? "fa-life-ring" : "fa-external-link-alt"
+                            } text-[0.65rem]`}
+                            aria-hidden
+                          />
+                          {link.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                )}
+              </article>
             ))}
           </div>
         )}
 
-        {/* Back link */}
         <div className="mt-12 text-center">
           <Link
             href="/clinical-trials-research-information"
-            className="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-3 font-semibold text-gray-700 no-underline shadow-sm transition-colors hover:border-violet-500 hover:bg-violet-50 hover:text-violet-700"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-3 font-semibold text-slate-700 no-underline shadow-sm transition-colors hover:border-violet-500 hover:bg-violet-50 hover:text-violet-700"
           >
             <i className="fas fa-arrow-left text-sm" aria-hidden />
             Back to Clinical Trials & Research Information

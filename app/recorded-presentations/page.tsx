@@ -181,6 +181,17 @@ export default function RecordedPresentationsPage() {
 
       <div className="page-content">
         <aside className="sidebar-card">
+          <div className="sidebar-section sidebar-hope">
+            <Image
+              src="/images/hope-recorded-programs.png"
+              alt="Hope ribbon"
+              className="sidebar-hope-image"
+              width={1200}
+              height={675}
+              priority
+            />
+          </div>
+
           <div className="sidebar-section">
             <h3 className="sidebar-heading">
               <span className="sidebar-heading-icon">

@@ -302,6 +302,17 @@
   color: #4338ca;
 }
 
+.survivorship-care-planning-page .text-resource-link {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.survivorship-care-planning-page .text-resource-link:hover {
+  color: #1e40af;
+}
+
 .survivorship-care-planning-page .resource-intro {
   margin-bottom: 1rem;
   font-style: italic;

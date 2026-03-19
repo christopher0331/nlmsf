@@ -189,6 +189,18 @@ export default function SurvivorshipCarePlanningTwoPage() {
                   further clarify your risk.
                 </p>
               </div>
+              <p>
+                Additional survivorship resource: {" "}
+                <a
+                  className="text-resource-link"
+                  href="https://www.mdanderson.org/patients-family/diagnosis-treatment/care-centers-clinics/sarcoma-orthopaedic-center/sarcoma-survivorship-clinic.html"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  MD Anderson Sarcoma Survivorship Clinic
+                </a>
+                .
+              </p>
             </div>
           </div>
 
