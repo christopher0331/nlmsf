@@ -341,6 +341,17 @@ export default function WhatIsLmsPage() {
                   <p>Treatment that uses the body&apos;s immune system to help fight cancer.</p>
                 </div>
               </div>
+
+              <p className="panel-text" style={{ marginTop: "1rem" }}>
+                <strong>National Comprehensive Cancer Network (NCCN) Sarcoma Treatment Guidelines - Patient Version:</strong>{" "}
+                <a
+                  href="https://www.nccn.org/patients/guidelines/content/PDF/sarcoma-patient.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  NCCN Sarcoma Patient Guidelines (PDF)
+                </a>
+              </p>
             </div>
 
             <div className="content-panel purple">

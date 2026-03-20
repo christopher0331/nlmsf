@@ -166,6 +166,17 @@ export default function ChemoAndDentalCarePage() {
                 <li>Integration of oral care with oncology care is important, especially when advances in cancer treatment include various radiotherapies, chemotherapies, target treatment agents, immunotherapies, and maintenance therapy.</li>
                 <li>Dental care can represent a clinical challenge, that highlights the need for collaboration and good communication between the treating physician/oncology care team and the dental care team.</li>
                 <li>Dental specialists with sufficient training and experience should be sought out by patients in order to ensure that their care is optimum for appropriate, safe, and effective oral care.</li>
+                <li>
+                  Guidance on chemo mouth sores from WebMD: {" "}
+                  <a
+                    href="https://www.webmd.com/cancer/chemo-mouth-sores"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-violet-700 underline"
+                  >
+                    WebMD Chemo Mouth Sores Guide
+                  </a>
+                </li>
               </ul>
             </div>
           </section>

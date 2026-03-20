@@ -583,6 +583,51 @@ export default function NutritionAndPhysicalActivityClient() {
                   <span>LIVESTRONG: Nutrition After Treatment</span>
                 </a>
                 <a
+                  href="https://drive.google.com/file/d/1bjVV1mP-AZQqVjoEyp73N-vE0NtnlyqV/view?usp=sharing"
+                  className="resource-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-file-medical" aria-hidden />
+                  <span>Imaging Information for Uterine Leiomyosarcoma - Quick Tips - Care Guide (PDF)</span>
+                </a>
+                <a
+                  href="https://www.aad.org/public/diseases/a-z/cancer-treatments-affect-your-skin"
+                  className="resource-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-spa" aria-hidden />
+                  <span>Caring for Yourself During Cancer Treatments: Hair, Skin, Nails, Eyes (AAD)</span>
+                </a>
+                <a
+                  href="https://www.cancer.org/cancer/managing-cancer/side-effects/hair-skin-nails.html"
+                  className="resource-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-hand-sparkles" aria-hidden />
+                  <span>American Cancer Society: Hair, Skin, and Nail Problems</span>
+                </a>
+                <a
+                  href="https://www.mdanderson.org/cancerwise/8-cancer-treatment-related-eye-changes-and-how-to-manage-them.h00-159461634.html"
+                  className="resource-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-eye" aria-hidden />
+                  <span>MD Anderson: Cancer Treatment-Related Eye Changes and How to Manage Them</span>
+                </a>
+                <a
+                  href="https://blog.dana-farber.org/insight/2023/07/vision-loss-and-cancer-care-important-facts-and-resources/"
+                  className="resource-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-glasses" aria-hidden />
+                  <span>Dana-Farber: Vision Loss and Cancer Care – Important Facts and Resources</span>
+                </a>
+                <a
                   href="https://www.acsm.org/blog-detail/acsm-blog/2019/11/25/exercise-guidelines-cancer-survivors-infographic"
                   className="resource-item"
                   target="_blank"

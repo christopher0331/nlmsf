@@ -99,6 +99,22 @@ export default function MissionPage() {
                 <li>To raise global, national, and community awareness of this disease, prioritizing actionable goals and delivering measurable progress.</li>
                 <li>To address unmet needs in treatment, research, clinical trials, and care through the Foundation&apos;s International LMS Research Roundtable—collaborating with researchers, clinicians, partner organizations, and especially the LMS community—to achieve meaningful progress.</li>
               </ul>
+              <p>
+                <strong>JULY 15, 2016 - NATIONAL LEIOMYOSARCOMA AWARENESS DAY</strong>
+              </p>
+              <p>
+                Resolution submitted by the National Leiomyosarcoma Foundation and passed by the
+                Senate.
+              </p>
+              <p>
+                <a
+                  href="https://www.congress.gov/bill/114th-congress/senate-resolution/545"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Senate Resolution 545
+                </a>
+              </p>
             </div>
           </section>
 
