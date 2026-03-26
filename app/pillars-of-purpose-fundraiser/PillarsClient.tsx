@@ -28,8 +28,8 @@ const TIER_STYLE: Record<PackageKey, { badge: string; border: string; bg: string
   silver:       { badge: "bg-gray-500",      border: "border-gray-300",    bg: "bg-gray-50",      btn: "bg-gray-500 hover:bg-gray-600" },
   registration: { badge: "bg-indigo-700",    border: "border-indigo-200",  bg: "bg-indigo-50",    btn: "bg-indigo-700 hover:bg-indigo-800" },
   raffle_1:     { badge: "bg-teal-600",      border: "border-teal-200",    bg: "bg-teal-50",      btn: "bg-teal-600 hover:bg-teal-700" },
-  raffle_10:    { badge: "bg-teal-600",      border: "border-teal-200",    bg: "bg-teal-50",      btn: "bg-teal-600 hover:bg-teal-700" },
-  raffle_25:    { badge: "bg-teal-600",      border: "border-teal-200",    bg: "bg-teal-50",      btn: "bg-teal-600 hover:bg-teal-700" },
+  raffle_10:    { badge: "bg-cyan-600",      border: "border-cyan-200",    bg: "bg-cyan-50",      btn: "bg-cyan-600 hover:bg-cyan-700" },
+  raffle_25:    { badge: "bg-emerald-600",   border: "border-emerald-200", bg: "bg-emerald-50",   btn: "bg-emerald-600 hover:bg-emerald-700" },
 };
 
 export default function PillarsClient() {
