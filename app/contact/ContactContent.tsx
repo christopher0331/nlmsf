@@ -50,15 +50,46 @@ const FAQ_ITEMS: Array<{
 export default function ContactContent() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [formStatus, setFormStatus] = useState<string>("");
+  const [sending, setSending] = useState(false);
 
   const toggleFaq = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormStatus("Thank you. Your message has been received. We will get back to you soon.");
-    (e.target as HTMLFormElement).reset();
+    setSending(true);
+    setFormStatus("");
+
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          subject: data.get("subject"),
+          message: data.get("message"),
+          newsletter: data.get("newsletter") === "on",
+        }),
+      });
+
+      if (res.ok) {
+        setFormStatus("Thank you! Your message has been sent. We will get back to you soon.");
+        form.reset();
+      } else {
+        const json = await res.json().catch(() => null);
+        setFormStatus(json?.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setFormStatus("Network error. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -247,13 +278,14 @@ export default function ContactContent() {
             )}
             <button
               type="submit"
-              className="submit-button col-span-full mt-4 inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold text-white shadow transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow"
+              disabled={sending}
+              className="submit-button col-span-full mt-4 inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold text-white shadow transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow disabled:opacity-50 disabled:cursor-not-allowed"
               style={{
                 background: "linear-gradient(to right, #4338ca, #818cf8)",
               }}
             >
-              <i className="fas fa-paper-plane mr-2" aria-hidden />
-              Send Message
+              <i className={`fas ${sending ? "fa-spinner fa-spin" : "fa-paper-plane"} mr-2`} aria-hidden />
+              {sending ? "Sending…" : "Send Message"}
             </button>
           </form>
         </div>

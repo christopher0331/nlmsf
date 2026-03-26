@@ -89,3 +89,23 @@ model TributeComment {
   createdAt     DateTime @default(now())
   tribute       Tribute  @relation(fields: [tributeId], references: [id], onDelete: Cascade)
 }
+
+model FundraiserOrder {
+  id                    String   @id @default(cuid())
+  name                  String
+  email                 String
+  phone                 String?
+  packageType           String
+  amount                Int      // cents
+  eventTickets          Int      @default(0)
+  raffleTickets         Int      @default(0)
+  sponsorRaffleTickets  Int      @default(0)
+  bestDressedVotes      Int      @default(0)
+  podcast               Boolean  @default(false)
+  logoOnHomepage        Boolean  @default(false)
+  recognition           String?
+  status                String   @default("pending") // pending | confirmed
+  stripeSessionId       String?  @unique
+  stripePaymentIntent   String?
+  createdAt             DateTime @default(now())
+}
