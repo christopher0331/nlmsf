@@ -215,6 +215,9 @@ export default function PillarsClient() {
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-300 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-5xl mx-auto px-6 py-16 md:py-24 text-center">
+          <p className="text-lg md:text-xl font-semibold text-indigo-200 mb-2">
+            National Leiomyosarcoma Foundation
+          </p>
           <p className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase bg-white/15 rounded-full backdrop-blur-sm">
             NLMSF Fundraiser
           </p>
@@ -313,7 +316,7 @@ export default function PillarsClient() {
         <section className="mb-16">
           <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-sm">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              The Pillars of Purpose for the National Leiomyosarcoma Foundation
+              Impact in Action: The Pillars of Purpose for the National Leiomyosarcoma Foundation
             </h2>
             <ul className="space-y-4">
               {[
