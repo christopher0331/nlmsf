@@ -38,7 +38,7 @@ export default function FundraiserPageClient() {
     fetchData();
   }, [fetchData]);
 
-  const COMBINED_GOAL = 10000;
+  const COMBINED_GOAL = 5000;
   const totalRaised = fu.raised + gfm.raised;
   const totalDonors = fu.donors + gfm.donors;
   const pct = COMBINED_GOAL > 0 ? Math.min((totalRaised / COMBINED_GOAL) * 100, 100) : 0;

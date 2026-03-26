@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import {
   PACKAGES,
   formatCents,
@@ -27,9 +28,9 @@ const TIER_STYLE: Record<PackageKey, { badge: string; border: string; bg: string
   gold:         { badge: "bg-yellow-600",    border: "border-yellow-400",  bg: "bg-yellow-50",    btn: "bg-yellow-600 hover:bg-yellow-700" },
   silver:       { badge: "bg-gray-500",      border: "border-gray-300",    bg: "bg-gray-50",      btn: "bg-gray-500 hover:bg-gray-600" },
   registration: { badge: "bg-indigo-700",    border: "border-indigo-200",  bg: "bg-indigo-50",    btn: "bg-indigo-700 hover:bg-indigo-800" },
-  raffle_1:     { badge: "bg-teal-600",      border: "border-teal-200",    bg: "bg-teal-50",      btn: "bg-teal-600 hover:bg-teal-700" },
-  raffle_10:    { badge: "bg-cyan-600",      border: "border-cyan-200",    bg: "bg-cyan-50",      btn: "bg-cyan-600 hover:bg-cyan-700" },
-  raffle_25:    { badge: "bg-emerald-600",   border: "border-emerald-200", bg: "bg-emerald-50",   btn: "bg-emerald-600 hover:bg-emerald-700" },
+  raffle_1:     { badge: "bg-amber-600",     border: "border-amber-200",   bg: "bg-amber-50",     btn: "bg-amber-600 hover:bg-amber-700" },
+  raffle_10:    { badge: "bg-rose-600",      border: "border-rose-200",    bg: "bg-rose-50",      btn: "bg-rose-600 hover:bg-rose-700" },
+  raffle_25:    { badge: "bg-purple-600",    border: "border-purple-200",  bg: "bg-purple-50",    btn: "bg-purple-600 hover:bg-purple-700" },
 };
 
 export default function PillarsClient() {
@@ -315,29 +316,113 @@ export default function PillarsClient() {
         {/* Pillars of Purpose Content */}
         <section className="mb-16">
           <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-sm">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              Impact in Action: The Pillars of Purpose for the National Leiomyosarcoma Foundation
+            {/* Organization Logos */}
+            <div className="flex flex-wrap justify-center items-center gap-8 mb-10">
+              <Image
+                src="/images/nlmsf-logo.png"
+                alt="National Leiomyosarcoma Foundation"
+                width={160}
+                height={160}
+                className="h-28 w-auto object-contain"
+              />
+              <Image
+                src="/images/circle-of-hope.png"
+                alt="LMS/Sarcoma Community Roundtable — The Circle of Hope — Patients and Caregivers"
+                width={160}
+                height={160}
+                className="h-28 w-auto object-contain"
+              />
+              <Image
+                src="/images/nlmsf-spagn.png"
+                alt="NLMSF-SPAGN International Leiomyosarcoma Research Roundtable"
+                width={160}
+                height={160}
+                className="h-28 w-auto object-contain"
+              />
+            </div>
+
+            <h2 className="text-2xl font-bold text-center uppercase tracking-wide text-indigo-900 mb-1">
+              The National Leiomyosarcoma Foundation:
             </h2>
-            <ul className="space-y-4">
+            <h3 className="text-xl font-bold text-center text-indigo-700 mb-8">
+              Impact in Action: The Pillars of Purpose
+            </h3>
+
+            <ul className="space-y-5">
               {[
-                { icon: "fa-book-open", title: "Awareness & Education", text: "Leiomyosarcoma / Sarcoma Awareness monthly Information and Education Forums." },
-                { icon: "fa-hands-helping", title: "Community Empowerment", text: "Resource Support and patient-driven Research involvement. 24/7 LMS LifeLine direct support access to the Foundation." },
-                { icon: "fa-users", title: "Patient-Caregiver Roundtable", text: "Patient-Caregiver/Family Community Roundtable — a Think Tank Network to identify and address the common challenges faced by patients and families." },
-                { icon: "fa-heartbeat", title: "Survivorship Care Planning", text: "For patients and caregivers/families to advance quality of life care and support for strength and resilience in meeting the disease challenges." },
-                { icon: "fa-globe", title: "International Research Roundtable", text: "Annual meetings of global research leaders — physician-scientists addressing unmet needs in research and clinical trial development, including repurposing of drugs for LMS." },
-                { icon: "fa-flask", title: "Annual Research Funding", text: "Support to accelerate and advance research for precision clinical trial development to increase treatment options." },
+                { icon: "fa-book-open", title: "Awareness & Education", text: "Leiomyosarcoma / Sarcoma Awareness monthly Information / Education Forums." },
+                { icon: "fa-hands-helping", title: "Community Empowerment", text: "Community Empowerment through Resource Support Guidance / Patient-driven Research involvement. 24/7 LMS LifeLine direct support access to the Foundation." },
+                { icon: "fa-users", title: "Patient-Caregiver/Family Community Roundtable", text: "Think Tank Network to identify and address the common challenges faced by patients/families." },
+                { icon: "fa-heartbeat", title: "Survivorship Care Planning", text: "Survivorship Care Planning Guidance for patients and caregivers/families to advance quality of life care and support for strength and resilience in meeting the disease challenges." },
+                { icon: "fa-globe", title: "International Leiomyosarcoma Research Roundtable", text: "Annual meetings of global research leaders — physician-scientists addressing the unmet needs in research and clinical trial development, including the testing and repurposing of drugs for LMS." },
+                { icon: "fa-flask", title: "Annual Research Funding Support", text: "Accelerating and advancing research for precision clinical trial development to increase treatment options." },
               ].map((pillar) => (
                 <li key={pillar.title} className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mt-0.5">
                     <i className={`fas ${pillar.icon} text-indigo-700`} aria-hidden />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900">{pillar.title}</h3>
+                    <h4 className="font-semibold text-slate-900">{pillar.title}</h4>
                     <p className="text-sm text-slate-600 leading-relaxed">{pillar.text}</p>
                   </div>
                 </li>
               ))}
             </ul>
+
+            {/* Trust Logos */}
+            <div className="flex flex-wrap justify-center items-center gap-10 mt-10 pt-8 border-t border-slate-200">
+              <Image
+                src="https://media.nlmsf.org/wp-content/uploads/2021/03/GuideStar-Seal.jpg"
+                alt="GuideStar Gold Participant"
+                width={240}
+                height={240}
+                className="h-20 w-auto object-contain"
+              />
+              <Image
+                src="https://media.nlmsf.org/wp-content/uploads/2025/07/charity-nav-scaled.png"
+                alt="Charity Navigator"
+                width={800}
+                height={400}
+                className="h-14 w-auto object-contain"
+              />
+              <Image
+                src="/images/great-non-profits.png"
+                alt="Great Nonprofits — Top-Rated Nonprofit"
+                width={240}
+                height={240}
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Pay by Check */}
+        <section className="mb-16">
+          <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center">
+                <i className="fas fa-envelope-open-text text-indigo-700 text-lg" aria-hidden />
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-2">
+                  Prefer to Pay by Check?
+                </h2>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  If you prefer to donate through your bank, bill pay, or by personal check,
+                  please make the check payable to <strong>NLMSF</strong> and mail it to:
+                </p>
+                <address className="not-italic bg-slate-50 border border-slate-200 rounded-lg px-5 py-4 text-slate-700 leading-relaxed inline-block">
+                  <strong>National LeioMyoSarcoma Foundation</strong><br />
+                  1685 S. Colorado Blvd.<br />
+                  Unit S, Suite 447<br />
+                  Denver, Colorado 80222
+                </address>
+                <p className="text-sm text-slate-500 mt-4">
+                  Please include your name, email, and the package you are purchasing so we can
+                  properly track your tickets and perks.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
