@@ -232,6 +232,76 @@ export default function PillarsClient() {
         </div>
       </section>
 
+      {/* Event Details Banner */}
+      <section className="bg-white border-b border-slate-200 shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-12">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <p className="text-sm font-semibold uppercase tracking-widest text-indigo-500 mb-1">Presented by Truman Charities</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">
+              Annual Derby Party — Honoring Monica Fabi
+            </h2>
+            <p className="text-slate-500 text-base max-w-xl mx-auto">
+              Truman Charities is proud to partner with the National Leiomyosarcoma Foundation for this special charity event.
+            </p>
+          </div>
+
+          {/* Event Details Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div className="flex items-center gap-4 bg-indigo-50 border border-indigo-100 rounded-2xl px-6 py-5">
+              <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-indigo-700 flex items-center justify-center">
+                <i className="fas fa-calendar-alt text-white" aria-hidden />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-0.5">Date</p>
+                <p className="text-base font-bold text-slate-800">May 2, 2026</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 bg-purple-50 border border-purple-100 rounded-2xl px-6 py-5">
+              <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-purple-700 flex items-center justify-center">
+                <i className="fas fa-clock text-white" aria-hidden />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-0.5">Time</p>
+                <p className="text-base font-bold text-slate-800">5:30 PM – 9:30 PM</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 bg-rose-50 border border-rose-100 rounded-2xl px-6 py-5">
+              <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-rose-600 flex items-center justify-center">
+                <i className="fas fa-map-marker-alt text-white" aria-hidden />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-0.5">Location</p>
+                <p className="text-base font-bold text-slate-800">Tommy Joe&apos;s — Bethesda</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contacts */}
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 px-6 py-6">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Truman Charities — Points of Contact</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { role: "Event Contact", name: "Cindy Truman Hall", email: "ctruman3@gmail.com", icon: "fa-calendar-check", color: "text-indigo-600" },
+                { role: "Sponsorship Contact", name: "Jerry Truman", email: "jerry.truman@yahoo.com", icon: "fa-handshake", color: "text-purple-600" },
+                { role: "Social Media & Podcast", name: "Jamie Truman", email: "info@trumancharities.com", icon: "fa-microphone-alt", color: "text-rose-600" },
+              ].map((c) => (
+                <div key={c.role} className="flex items-start gap-3">
+                  <div className={`flex-shrink-0 mt-0.5 ${c.color}`}>
+                    <i className={`fas ${c.icon} text-lg`} aria-hidden />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide">{c.role}</p>
+                    <p className="font-semibold text-slate-800 text-sm">{c.name}</p>
+                    <a href={`mailto:${c.email}`} className="text-sm text-indigo-600 hover:underline no-underline">{c.email}</a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {/* Progress Stats */}
         <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
