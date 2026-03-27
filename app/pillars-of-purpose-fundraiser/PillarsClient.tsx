@@ -369,6 +369,54 @@ export default function PillarsClient() {
           </div>
         </section>
 
+        {/* Pay by Check */}
+        <section className="mb-16">
+          <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center">
+                <i className="fas fa-envelope-open-text text-indigo-700 text-lg" aria-hidden />
+              </div>
+              <div className="w-full">
+                <h2 className="text-xl font-bold text-slate-900 mb-1">
+                  Prefer to Pay by Check?
+                </h2>
+                <p className="text-sm font-semibold text-indigo-700 mb-3">Annual Derby Party</p>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  If you prefer to donate through your bank, bill pay, or by personal check,
+                  please make the check payable to <strong>NLMSF</strong> and mail it to:
+                </p>
+                <address className="not-italic bg-slate-50 border border-slate-200 rounded-lg px-5 py-4 text-slate-700 leading-relaxed inline-block mb-5">
+                  <strong>National LeioMyoSarcoma Foundation</strong><br />
+                  1685 S. Colorado Blvd.<br />
+                  Unit S, Suite 447<br />
+                  Denver, Colorado 80222
+                </address>
+                <p className="text-sm text-slate-600 mb-3">
+                  Please include the following information with your check so we can properly track your tickets and perks:
+                </p>
+                <ul className="text-sm text-slate-700 space-y-1.5 mb-4">
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-calendar-alt text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Event</strong> — Annual Derby Party</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-user text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Name</strong> — your full name</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-envelope text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Email</strong> — your email address</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-ticket-alt text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Package</strong> — the ticket or sponsorship package you are purchasing</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pillars of Purpose Content */}
         <section className="mb-16">
           <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-sm">
@@ -448,54 +496,6 @@ export default function PillarsClient() {
                 height={240}
                 className="h-20 w-auto object-contain"
               />
-            </div>
-          </div>
-        </section>
-
-        {/* Pay by Check */}
-        <section className="mb-16">
-          <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-sm">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center">
-                <i className="fas fa-envelope-open-text text-indigo-700 text-lg" aria-hidden />
-              </div>
-              <div className="w-full">
-                <h2 className="text-xl font-bold text-slate-900 mb-1">
-                  Prefer to Pay by Check?
-                </h2>
-                <p className="text-sm font-semibold text-indigo-700 mb-3">Annual Derby Party</p>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  If you prefer to donate through your bank, bill pay, or by personal check,
-                  please make the check payable to <strong>NLMSF</strong> and mail it to:
-                </p>
-                <address className="not-italic bg-slate-50 border border-slate-200 rounded-lg px-5 py-4 text-slate-700 leading-relaxed inline-block mb-5">
-                  <strong>National LeioMyoSarcoma Foundation</strong><br />
-                  1685 S. Colorado Blvd.<br />
-                  Unit S, Suite 447<br />
-                  Denver, Colorado 80222
-                </address>
-                <p className="text-sm text-slate-600 mb-3">
-                  Please include the following information with your check so we can properly track your tickets and perks:
-                </p>
-                <ul className="text-sm text-slate-700 space-y-1.5 mb-4">
-                  <li className="flex items-center gap-2">
-                    <i className="fas fa-calendar-alt text-indigo-400 w-4" aria-hidden />
-                    <span><strong>Event</strong> — Annual Derby Party</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="fas fa-user text-indigo-400 w-4" aria-hidden />
-                    <span><strong>Name</strong> — your full name</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="fas fa-envelope text-indigo-400 w-4" aria-hidden />
-                    <span><strong>Email</strong> — your email address</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="fas fa-ticket-alt text-indigo-400 w-4" aria-hidden />
-                    <span><strong>Package</strong> — the ticket or sponsorship package you are purchasing</span>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </section>
