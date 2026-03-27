@@ -4,8 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import HomeThreeColumns from "@/components/HomeThreeColumns";
 import RecentUpdates from "@/components/RecentUpdates";
 import EducationVideosSection from "@/components/EducationVideosSection";
-import TestimonialMarquee from "@/components/TestimonialMarquee";
-import "@/components/testimonial-marquee.css";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import MissionSection from "@/components/MissionSection";
 import ReportsSection from "@/components/ReportsSection";
@@ -61,7 +59,6 @@ export default function HomePage() {
       </div>
       <HeroSection />
       <HomeThreeColumns />
-      <TestimonialMarquee />
       <RecentUpdates />
       <EducationVideosSection />
       <NewsletterCTA />

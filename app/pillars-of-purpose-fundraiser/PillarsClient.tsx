@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import {
@@ -8,13 +8,6 @@ import {
   formatCents,
   type PackageKey,
 } from "@/lib/fundraiser-packages";
-
-type Totals = {
-  raised: number;
-  eventTickets: number;
-  raffleTickets: number;
-  orderCount: number;
-};
 
 const TEST_KEYS: PackageKey[] = ["test_1", "test_50c"];
 const SPONSOR_KEYS: PackageKey[] = ["legacy", "title", "gold", "silver"];
@@ -39,10 +32,6 @@ export default function PillarsClient() {
   const isCancelled = searchParams.get("cancelled") === "1";
   const returnedOrderId = searchParams.get("order");
 
-  const [totals, setTotals] = useState<Totals>({
-    raised: 0, eventTickets: 0, raffleTickets: 0, orderCount: 0,
-  });
-  const [loaded, setLoaded] = useState(false);
   const [verified, setVerified] = useState(false);
 
   // Modal state
@@ -53,18 +42,6 @@ export default function PillarsClient() {
   const [submitting, setSubmitting] = useState(false);
   const [formError, setFormError] = useState("");
 
-  const fetchTotals = useCallback(async () => {
-    try {
-      const res = await fetch("/api/pillars-fundraiser/orders", { cache: "no-store" });
-      if (!res.ok) return;
-      const data = await res.json();
-      setTotals(data.totals);
-    } catch { /* silent */ }
-    finally { setLoaded(true); }
-  }, []);
-
-  useEffect(() => { fetchTotals(); }, [fetchTotals]);
-
   useEffect(() => {
     if (!isSuccess || !returnedOrderId || verified) return;
     setVerified(true);
@@ -72,10 +49,8 @@ export default function PillarsClient() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ orderId: returnedOrderId }),
-    })
-      .then(() => fetchTotals())
-      .catch(() => {});
-  }, [isSuccess, returnedOrderId, verified, fetchTotals]);
+    }).catch(() => {});
+  }, [isSuccess, returnedOrderId, verified]);
 
   const openModal = (key: PackageKey) => {
     setModalPkg(key);
@@ -207,6 +182,24 @@ export default function PillarsClient() {
 
   const modalPkgDef = modalPkg ? PACKAGES[modalPkg] : null;
 
+  const derbyIntroCopy = (
+    <>
+      <p>
+        National Leiomyosarcoma Foundation (LMS) is thrilled to be partnering with Truman Charities
+        for their annual Kentucky Derby Party. All the proceeds from ticket sales go to LMS, and
+        community members have donated some fantastic prizes for raffle items to be won by guests in
+        attendance.
+      </p>
+      <p>
+        Let&apos;s have fun giving back to LMS. Contests for the best dressed. Great Music! Dancing!
+        And of course, the bar, to keep the spirits high! A Party that Produces Great Results.
+      </p>
+      <p className="font-semibold">
+        To participate (register, sponsor, donate) for the Kentucky Derby Party use links below…
+      </p>
+    </>
+  );
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero */}
@@ -215,35 +208,22 @@ export default function PillarsClient() {
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-300 rounded-full blur-3xl" />
         </div>
-        <div className="relative max-w-5xl mx-auto px-6 py-16 md:py-24 text-center">
-          <p className="text-lg md:text-xl font-semibold text-indigo-200 mb-2">
-            National Leiomyosarcoma Foundation
-          </p>
-          <p className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase bg-white/15 rounded-full backdrop-blur-sm">
-            NLMSF Fundraiser
-          </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-            Impact in Action: Pillars of Purpose
+        <div className="relative max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-6">
+            Annual Derby Party — Honoring Monica Fabi
           </h1>
-          <p className="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto leading-relaxed">
-            Supporting the National Leiomyosarcoma Foundation through
-            awareness, research, and community empowerment.
-          </p>
+          <div className="space-y-5 text-base md:text-lg text-indigo-100 leading-relaxed text-left sm:text-center">
+            {derbyIntroCopy}
+          </div>
         </div>
       </section>
 
       {/* Event Details Banner */}
       <section className="bg-white border-b border-slate-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-12">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <p className="text-sm font-semibold uppercase tracking-widest text-indigo-500 mb-1">Presented by Truman Charities</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">
-              Annual Derby Party — Honoring Monica Fabi
-            </h2>
-            <p className="text-slate-500 text-base max-w-xl mx-auto">
-              Truman Charities is proud to partner with the National Leiomyosarcoma Foundation for this special charity event.
-            </p>
+          {/* Same narrative as hero — title area */}
+          <div className="max-w-3xl mx-auto text-center mb-8 space-y-4 text-slate-700 text-base md:text-lg leading-relaxed">
+            {derbyIntroCopy}
           </div>
 
           {/* Event Details Grid */}
@@ -276,48 +256,10 @@ export default function PillarsClient() {
               </div>
             </div>
           </div>
-
-          {/* Contacts */}
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 px-6 py-6">
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Truman Charities — Points of Contact</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {[
-                { role: "Event Contact", name: "Cindy Truman Hall", email: "ctruman3@gmail.com", icon: "fa-calendar-check", color: "text-indigo-600" },
-                { role: "Sponsorship Contact", name: "Jerry Truman", email: "jerry.truman@yahoo.com", icon: "fa-handshake", color: "text-purple-600" },
-                { role: "Social Media & Podcast", name: "Jamie Truman", email: "info@trumancharities.com", icon: "fa-microphone-alt", color: "text-rose-600" },
-              ].map((c) => (
-                <div key={c.role} className="flex items-start gap-3">
-                  <div className={`flex-shrink-0 mt-0.5 ${c.color}`}>
-                    <i className={`fas ${c.icon} text-lg`} aria-hidden />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide">{c.role}</p>
-                    <p className="font-semibold text-slate-800 text-sm">{c.name}</p>
-                    <a href={`mailto:${c.email}`} className="text-sm text-indigo-600 hover:underline no-underline">{c.email}</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        {/* Progress Stats */}
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
-          {[
-            { label: "Total Raised", value: loaded ? fmtDollars(totals.raised) : "—" },
-            { label: "Supporters", value: loaded ? totals.orderCount.toString() : "—" },
-            { label: "Event Tickets", value: loaded ? totals.eventTickets.toString() : "—" },
-            { label: "Raffle Tickets", value: loaded ? totals.raffleTickets.toString() : "—" },
-          ].map((stat) => (
-            <div key={stat.label} className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-sm">
-              <p className="text-2xl md:text-3xl font-bold text-indigo-900">{stat.value}</p>
-              <p className="text-sm text-slate-500 mt-1">{stat.label}</p>
-            </div>
-          ))}
-        </section>
-
         {/* Success banner */}
         {isSuccess && (
           <div className="mb-8 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center">
