@@ -66,6 +66,16 @@ export async function sendFundraiserConfirmation(data: {
     ticketLines.push(`${data.sponsorRaffleTickets} special sponsor raffle ticket${data.sponsorRaffleTickets !== 1 ? "s" : ""}`);
   if (data.bestDressedVotes > 0)
     ticketLines.push(`${data.bestDressedVotes} best dressed vote${data.bestDressedVotes !== 1 ? "s" : ""}`);
+  const includesBlock =
+    ticketLines.length > 0
+      ? `<tr>
+          <td style="padding:6px 16px 6px 0;font-weight:bold;">Includes:</td>
+          <td style="padding:6px 0;">${ticketLines.join(", ")}</td>
+        </tr>`
+      : `<tr>
+          <td style="padding:6px 16px 6px 0;font-weight:bold;">Includes:</td>
+          <td style="padding:6px 0;">General donation (no standard ticket bundles matched for this amount).</td>
+        </tr>`;
 
   await r.emails.send({
     from: FROM,
@@ -83,12 +93,7 @@ export async function sendFundraiserConfirmation(data: {
           <td style="padding:6px 16px 6px 0;font-weight:bold;">Amount:</td>
           <td style="padding:6px 0;">$${dollars}</td>
         </tr>
-        ${ticketLines.length > 0 ? `
-        <tr>
-          <td style="padding:6px 16px 6px 0;font-weight:bold;">Includes:</td>
-          <td style="padding:6px 0;">${ticketLines.join(", ")}</td>
-        </tr>
-        ` : ""}
+        ${includesBlock}
       </table>
       <p>If you have any questions, contact us at <a href="mailto:annieachee@aol.com">annieachee@aol.com</a> or call (303) 808-3437.</p>
       <p style="color:#888;font-size:13px;margin-top:24px;">National Leiomyosarcoma Foundation<br/>1685 S. Colorado Blvd., Unit S - Suite 447, Denver, CO 80222</p>
@@ -105,7 +110,7 @@ export async function sendFundraiserConfirmation(data: {
       <p><strong>Email:</strong> ${esc(data.email)}</p>
       <p><strong>Package:</strong> ${esc(data.packageLabel)}</p>
       <p><strong>Amount:</strong> $${dollars}</p>
-      ${ticketLines.length > 0 ? `<p><strong>Includes:</strong> ${ticketLines.join(", ")}</p>` : ""}
+      <p><strong>Includes:</strong> ${ticketLines.length > 0 ? ticketLines.join(", ") : "General donation (no standard ticket bundles matched)"}</p>
     `,
   });
 }

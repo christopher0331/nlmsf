@@ -9,9 +9,11 @@ import {
   type PackageKey,
 } from "@/lib/fundraiser-packages";
 
-const TEST_KEYS: PackageKey[] = ["test_1", "test_50c"];
+// Uncomment with Test Tickets section below
+// const TEST_KEYS: PackageKey[] = ["test_1", "test_50c"];
 const SPONSOR_KEYS: PackageKey[] = ["legacy", "title", "gold", "silver"];
-const TICKET_KEYS: PackageKey[] = ["registration", "raffle_1", "raffle_10", "raffle_25"];
+const REGISTRATION_KEY: PackageKey = "registration";
+const RAFFLE_KEYS: PackageKey[] = ["raffle_1", "raffle_10", "raffle_25"];
 
 const TIER_STYLE: Record<PackageKey, { badge: string; border: string; bg: string; btn: string }> = {
   test_1:       { badge: "bg-red-600",       border: "border-red-200",     bg: "bg-white",        btn: "bg-red-600 hover:bg-red-700" },
@@ -24,6 +26,8 @@ const TIER_STYLE: Record<PackageKey, { badge: string; border: string; bg: string
   raffle_1:     { badge: "bg-amber-600",     border: "border-amber-200",   bg: "bg-amber-50",     btn: "bg-amber-600 hover:bg-amber-700" },
   raffle_10:    { badge: "bg-rose-600",      border: "border-rose-200",    bg: "bg-rose-50",      btn: "bg-rose-600 hover:bg-rose-700" },
   raffle_25:    { badge: "bg-purple-600",    border: "border-purple-200",  bg: "bg-purple-50",    btn: "bg-purple-600 hover:bg-purple-700" },
+  day_of_donation: { badge: "bg-sky-600", border: "border-sky-200", bg: "bg-sky-50", btn: "bg-sky-600 hover:bg-sky-700" },
+  misc:         { badge: "bg-teal-600",     border: "border-teal-200",    bg: "bg-teal-50",       btn: "bg-teal-600 hover:bg-teal-700" },
 };
 
 export default function PillarsClient() {
@@ -38,7 +42,8 @@ export default function PillarsClient() {
   const [modalPkg, setModalPkg] = useState<PackageKey | null>(null);
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
-  const [formPhone, setFormPhone] = useState("");
+  const [formNote, setFormNote] = useState("");
+  const [formAmount, setFormAmount] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [formError, setFormError] = useState("");
 
@@ -56,7 +61,8 @@ export default function PillarsClient() {
     setModalPkg(key);
     setFormName("");
     setFormEmail("");
-    setFormPhone("");
+    setFormNote("");
+    setFormAmount("");
     setFormError("");
     setSubmitting(false);
   };
@@ -76,6 +82,16 @@ export default function PillarsClient() {
       return;
     }
 
+    const isMisc = modalPkg === "misc";
+    let amountCents: number | undefined;
+    if (isMisc) {
+      amountCents = Math.round(Number(formAmount) * 100);
+      if (!Number.isFinite(amountCents) || amountCents < 100) {
+        setFormError("Please enter a valid amount (minimum $1.00).");
+        return;
+      }
+    }
+
     setSubmitting(true);
     setFormError("");
 
@@ -87,7 +103,7 @@ export default function PillarsClient() {
           packageType: modalPkg,
           name: trimmedName,
           email: trimmedEmail,
-          phone: formPhone.trim(),
+          ...(isMisc && { amountCents, miscNote: formNote.trim() || undefined }),
         }),
       });
       const data = await res.json();
@@ -180,22 +196,51 @@ export default function PillarsClient() {
     );
   };
 
+  const renderRegistrationBanner = (key: PackageKey) => {
+    const pkg = PACKAGES[key];
+    const style = TIER_STYLE[key];
+    return (
+      <div
+        className={`w-full rounded-2xl border-2 ${style.border} ${style.bg} p-5 md:p-6 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 transition-shadow hover:shadow-lg`}
+      >
+        <div className="flex flex-wrap items-center gap-3 lg:gap-4 shrink-0">
+          <span className={`inline-block px-3 py-0.5 text-xs font-bold text-white rounded-full ${style.badge}`}>
+            {pkg.label}
+          </span>
+          <span className="text-2xl md:text-3xl font-extrabold text-slate-900 tabular-nums">
+            {fmtDollars(pkg.price)}
+          </span>
+        </div>
+        <p className="text-sm md:text-base text-slate-600 leading-relaxed flex-1 min-w-0">
+          {pkg.description}
+        </p>
+        <button
+          type="button"
+          onClick={() => openModal(key)}
+          className={`shrink-0 w-full lg:w-auto lg:min-w-[220px] py-3 px-6 rounded-xl font-semibold text-white ${style.btn} transition-colors cursor-pointer`}
+        >
+          Purchase — {fmtDollars(pkg.price)}
+        </button>
+      </div>
+    );
+  };
+
   const modalPkgDef = modalPkg ? PACKAGES[modalPkg] : null;
 
   const derbyIntroCopy = (
     <>
       <p>
-        National Leiomyosarcoma Foundation (LMS) is thrilled to be partnering with Truman Charities
-        for their annual Kentucky Derby Party. All the proceeds from ticket sales go to LMS, and
+        <strong className="text-white">National Leiomyosarcoma Foundation (NLMSF)</strong> is thrilled to be partnering with Truman Charities
+        for their annual Derby Party. All the proceeds from ticket sales go to NLMSF, and
         community members have donated some fantastic prizes for raffle items to be won by guests in
         attendance.
       </p>
       <p>
-        Let&apos;s have fun giving back to LMS. Contests for the best dressed. Great Music! Dancing!
+        Let&apos;s have fun giving back to NLMSF. Contests for the best dressed. Great Music! Dancing!
         And of course, the bar, to keep the spirits high! A Party that Produces Great Results.
       </p>
       <p className="font-semibold">
-        To participate (register, sponsor, donate) for the Kentucky Derby Party use links below…
+        To participate (register, sponsor, donate) for the Derby Party use links below…
       </p>
     </>
   );
@@ -208,26 +253,21 @@ export default function PillarsClient() {
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-300 rounded-full blur-3xl" />
         </div>
-        <div className="relative max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-6">
-            Annual Derby Party — Honoring Monica Fabi
+        <div className="relative w-[80%] mx-auto px-6 py-16 md:py-20 text-center">
+          <h1 className="leading-tight text-white mb-6">
+            <span className="block text-4xl md:text-5xl lg:text-6xl font-extrabold">Truman Charities — Annual Derby Party</span>
+            <span className="block text-2xl md:text-3xl font-semibold text-indigo-200 mt-3">Honoring Monica Fabi</span>
           </h1>
-          <div className="space-y-5 text-base md:text-lg text-indigo-100 leading-relaxed text-left sm:text-center">
+          <div className="space-y-5 text-xl md:text-2xl text-indigo-100 leading-relaxed text-left sm:text-center">
             {derbyIntroCopy}
           </div>
         </div>
       </section>
 
-      {/* Event Details Banner */}
+      {/* Date, time & location — directly under hero */}
       <section className="bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-12">
-          {/* Same narrative as hero — title area */}
-          <div className="max-w-3xl mx-auto text-center mb-8 space-y-4 text-slate-700 text-base md:text-lg leading-relaxed">
-            {derbyIntroCopy}
-          </div>
-
-          {/* Event Details Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="flex items-center gap-4 bg-indigo-50 border border-indigo-100 rounded-2xl px-6 py-5">
               <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-indigo-700 flex items-center justify-center">
                 <i className="fas fa-calendar-alt text-white" aria-hidden />
@@ -259,10 +299,9 @@ export default function PillarsClient() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        {/* Success banner */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8">
         {isSuccess && (
-          <div className="mb-8 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center">
+          <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center">
             <p className="text-emerald-800 font-semibold text-lg">
               <i className="fas fa-check-circle mr-2" aria-hidden />
               Thank you for your purchase!
@@ -273,14 +312,27 @@ export default function PillarsClient() {
           </div>
         )}
         {isCancelled && (
-          <div className="mb-8 p-4 bg-amber-50 border border-amber-200 rounded-xl text-center">
+          <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-center">
             <p className="text-amber-800 font-semibold">
               Checkout was cancelled. You can try again anytime.
             </p>
           </div>
         )}
 
-        {/* Test Tickets */}
+        {/* Event Registration & Raffle — registration banner + 3 raffle columns */}
+        <section className="mb-10 md:mb-12">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Event Registration &amp; Raffle Tickets</h2>
+          <p className="text-slate-600 mb-6">Get your entrance and raffle tickets.</p>
+          {renderRegistrationBanner(REGISTRATION_KEY)}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5 md:mt-6">
+            {RAFFLE_KEYS.map((key) => renderPackageCard(key, "small"))}
+          </div>
+        </section>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        {/*
+        Test Tickets — uncomment this block and TEST_KEYS above to restore local Stripe test purchases
         <section className="mb-10 p-4 bg-red-50 border-2 border-dashed border-red-300 rounded-2xl">
           <h2 className="text-lg font-bold text-red-700 mb-1">Test Tickets (remove before launch)</h2>
           <p className="text-red-600 text-sm mb-4">These process real charges on your Stripe account.</p>
@@ -306,6 +358,7 @@ export default function PillarsClient() {
             })}
           </div>
         </section>
+        */}
 
         {/* Sponsorship Packages */}
         <section className="mb-16">
@@ -313,15 +366,6 @@ export default function PillarsClient() {
           <p className="text-slate-600 mb-8">Make a lasting impact with a sponsorship package.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {SPONSOR_KEYS.map((key) => renderPackageCard(key, "large"))}
-          </div>
-        </section>
-
-        {/* Tickets & Raffle */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Event Registration &amp; Raffle Tickets</h2>
-          <p className="text-slate-600 mb-8">Get your entrance and raffle tickets.</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {TICKET_KEYS.map((key) => renderPackageCard(key, "small"))}
           </div>
         </section>
 
@@ -415,27 +459,56 @@ export default function PillarsClient() {
               <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center">
                 <i className="fas fa-envelope-open-text text-indigo-700 text-lg" aria-hidden />
               </div>
-              <div>
-                <h2 className="text-xl font-bold text-slate-900 mb-2">
+              <div className="w-full">
+                <h2 className="text-xl font-bold text-slate-900 mb-1">
                   Prefer to Pay by Check?
                 </h2>
+                <p className="text-sm font-semibold text-indigo-700 mb-3">Annual Derby Party</p>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   If you prefer to donate through your bank, bill pay, or by personal check,
                   please make the check payable to <strong>NLMSF</strong> and mail it to:
                 </p>
-                <address className="not-italic bg-slate-50 border border-slate-200 rounded-lg px-5 py-4 text-slate-700 leading-relaxed inline-block">
+                <address className="not-italic bg-slate-50 border border-slate-200 rounded-lg px-5 py-4 text-slate-700 leading-relaxed inline-block mb-5">
                   <strong>National LeioMyoSarcoma Foundation</strong><br />
                   1685 S. Colorado Blvd.<br />
                   Unit S, Suite 447<br />
                   Denver, Colorado 80222
                 </address>
-                <p className="text-sm text-slate-500 mt-4">
-                  Please include your name, email, and the package you are purchasing so we can
-                  properly track your tickets and perks.
+                <p className="text-sm text-slate-600 mb-3">
+                  Please include the following information with your check so we can properly track your tickets and perks:
                 </p>
+                <ul className="text-sm text-slate-700 space-y-1.5 mb-4">
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-calendar-alt text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Event</strong> — Annual Derby Party</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-user text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Name</strong> — your full name</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-envelope text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Email</strong> — your email address</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <i className="fas fa-ticket-alt text-indigo-400 w-4" aria-hidden />
+                    <span><strong>Package</strong> — the ticket or sponsorship package you are purchasing</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Miscellaneous Donation */}
+        <section className="mb-16 flex justify-start">
+          <button
+            type="button"
+            onClick={() => openModal("misc")}
+            className="py-3 px-8 rounded-xl font-semibold text-white bg-gray-500 hover:bg-gray-600 transition-colors cursor-pointer"
+          >
+            Miscellaneous Donation
+          </button>
         </section>
       </div>
 
@@ -476,6 +549,28 @@ export default function PillarsClient() {
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="px-6 py-5 space-y-4">
+              {modalPkg === "misc" && (
+                <div>
+                  <label htmlFor="pf-amount" className="block text-sm font-medium text-slate-700 mb-1">
+                    Amount (USD) <span className="text-red-500">*</span>
+                  </label>
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">$</span>
+                    <input
+                      id="pf-amount"
+                      type="number"
+                      inputMode="decimal"
+                      min="1"
+                      step="0.01"
+                      required
+                      value={formAmount}
+                      onChange={(e) => setFormAmount(e.target.value)}
+                      className="w-full pl-7 pr-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      placeholder="25.00"
+                    />
+                  </div>
+                </div>
+              )}
               <div>
                 <label htmlFor="pf-name" className="block text-sm font-medium text-slate-700 mb-1">
                   Full Name <span className="text-red-500">*</span>
@@ -504,19 +599,21 @@ export default function PillarsClient() {
                   placeholder="jane@example.com"
                 />
               </div>
-              <div>
-                <label htmlFor="pf-phone" className="block text-sm font-medium text-slate-700 mb-1">
-                  Phone <span className="text-slate-400">(optional)</span>
-                </label>
-                <input
-                  id="pf-phone"
-                  type="tel"
-                  value={formPhone}
-                  onChange={(e) => setFormPhone(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
+              {modalPkg === "misc" && (
+                <div>
+                  <label htmlFor="pf-note" className="block text-sm font-medium text-slate-700 mb-1">
+                    Description / Note <span className="text-slate-400">(optional)</span>
+                  </label>
+                  <textarea
+                    id="pf-note"
+                    rows={3}
+                    value={formNote}
+                    onChange={(e) => setFormNote(e.target.value)}
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 resize-none"
+                    placeholder="e.g. In honor of Jane Doe, general support, etc."
+                  />
+                </div>
+              )}
 
               {formError && (
                 <p className="text-red-600 text-sm">{formError}</p>

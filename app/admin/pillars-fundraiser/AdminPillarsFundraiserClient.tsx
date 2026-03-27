@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import Link from "next/link";
-import { PACKAGES } from "@/lib/fundraiser-packages";
+import { PACKAGES, computeDayOfDonationPerks, formatCents } from "@/lib/fundraiser-packages";
 
 type Order = {
   id: string;
@@ -18,6 +18,7 @@ type Order = {
   podcast: boolean;
   logoOnHomepage: boolean;
   recognition: string | null;
+  miscNote: string | null;
   status: string;
   stripeSessionId: string | null;
   stripePaymentIntent: string | null;
@@ -37,6 +38,62 @@ export default function AdminPillarsFundraiserClient() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [totals, setTotals] = useState<Totals | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const dayOfMin = PACKAGES.day_of_donation.minAmountCents ?? 500;
+  const dayOfMax = PACKAGES.day_of_donation.maxAmountCents ?? 10_000_000;
+  const [dayOfAmount, setDayOfAmount] = useState("");
+  const [dayOfName, setDayOfName] = useState("");
+  const [dayOfEmail, setDayOfEmail] = useState("");
+  const [dayOfBusy, setDayOfBusy] = useState(false);
+  const [dayOfErr, setDayOfErr] = useState("");
+  const dayOfCents =
+    dayOfAmount.trim() === "" || !Number.isFinite(Number(dayOfAmount))
+      ? NaN
+      : Math.round(Number(dayOfAmount) * 100);
+  const dayOfPreview =
+    Number.isInteger(dayOfCents) &&
+    dayOfCents >= dayOfMin &&
+    dayOfCents <= dayOfMax
+      ? computeDayOfDonationPerks(dayOfCents)
+      : null;
+
+  async function submitDayOfCheckout(e: FormEvent) {
+    e.preventDefault();
+    setDayOfErr("");
+    const name = dayOfName.trim();
+    const email = dayOfEmail.trim();
+    if (!name || !email) {
+      setDayOfErr("Name and email required.");
+      return;
+    }
+    if (!Number.isInteger(dayOfCents) || dayOfCents < dayOfMin || dayOfCents > dayOfMax) {
+      setDayOfErr(`Amount must be $${formatCents(dayOfMin)} – $${formatCents(dayOfMax)}.`);
+      return;
+    }
+    setDayOfBusy(true);
+    try {
+      const res = await fetch("/api/pillars-fundraiser/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          packageType: "day_of_donation",
+          amountCents: dayOfCents,
+          name,
+          email,
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.open(data.url, "_blank", "noopener,noreferrer");
+      } else {
+        setDayOfErr(data.error || "Checkout failed.");
+      }
+    } catch {
+      setDayOfErr("Network error.");
+    } finally {
+      setDayOfBusy(false);
+    }
+  }
 
   useEffect(() => {
     async function load() {
@@ -85,6 +142,7 @@ export default function AdminPillarsFundraiserClient() {
       "Podcast",
       "Logo on Homepage",
       "Recognition",
+      "Misc Note",
       "Stripe Session",
       "Date",
     ];
@@ -100,6 +158,7 @@ export default function AdminPillarsFundraiserClient() {
       o.podcast ? "Yes" : "No",
       o.logoOnHomepage ? "Yes" : "No",
       o.recognition ?? "",
+      o.miscNote ?? "",
       o.stripeSessionId,
       o.createdAt,
     ]);
@@ -144,6 +203,70 @@ export default function AdminPillarsFundraiserClient() {
           Export CSV
         </button>
       </div>
+
+      <form
+        onSubmit={submitDayOfCheckout}
+        className="mb-8 rounded-xl border border-slate-200 bg-slate-50 p-4 md:p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end"
+      >
+        <div>
+          <label className="block text-xs font-medium text-slate-600 mb-1" htmlFor="adm-dof-amt">
+            Amount (USD)
+          </label>
+          <input
+            id="adm-dof-amt"
+            type="number"
+            inputMode="decimal"
+            min={dayOfMin / 100}
+            step="0.01"
+            value={dayOfAmount}
+            onChange={(e) => setDayOfAmount(e.target.value)}
+            className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-xs font-medium text-slate-600 mb-1" htmlFor="adm-dof-name">
+            Name
+          </label>
+          <input
+            id="adm-dof-name"
+            type="text"
+            value={dayOfName}
+            onChange={(e) => setDayOfName(e.target.value)}
+            className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-xs font-medium text-slate-600 mb-1" htmlFor="adm-dof-email">
+            Email
+          </label>
+          <input
+            id="adm-dof-email"
+            type="email"
+            value={dayOfEmail}
+            onChange={(e) => setDayOfEmail(e.target.value)}
+            className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm"
+          />
+        </div>
+        <div className="md:col-span-2 lg:col-span-4 flex flex-col sm:flex-row sm:items-center gap-3">
+          {dayOfPreview ? (
+            <p className="text-xs text-slate-600 flex-1">
+              {dayOfPreview.eventTickets} event · {dayOfPreview.raffleTickets} raffle
+            </p>
+          ) : (
+            <span className="flex-1" />
+          )}
+          <button
+            type="submit"
+            disabled={dayOfBusy}
+            className="px-4 py-2 text-sm font-medium bg-sky-700 text-white rounded-lg hover:bg-sky-800 disabled:opacity-50 whitespace-nowrap"
+          >
+            {dayOfBusy ? "…" : "Stripe checkout"}
+          </button>
+        </div>
+        {dayOfErr ? (
+          <p className="md:col-span-2 lg:col-span-4 text-sm text-red-600">{dayOfErr}</p>
+        ) : null}
+      </form>
 
       {/* Summary Cards */}
       {totals && (
@@ -202,6 +325,9 @@ export default function AdminPillarsFundraiserClient() {
                   Best Dressed
                 </th>
                 <th className="text-left px-4 py-3 font-semibold text-slate-700">
+                  Note
+                </th>
+                <th className="text-left px-4 py-3 font-semibold text-slate-700">
                   Date
                 </th>
               </tr>
@@ -232,6 +358,9 @@ export default function AdminPillarsFundraiserClient() {
                   </td>
                   <td className="px-4 py-3 text-center">
                     {o.bestDressedVotes}
+                  </td>
+                  <td className="px-4 py-3 text-slate-500 text-xs max-w-[180px] truncate" title={o.miscNote ?? ""}>
+                    {o.miscNote || <span className="text-slate-300">—</span>}
                   </td>
                   <td className="px-4 py-3 text-slate-500 text-xs">
                     {fmtDate(o.createdAt)}

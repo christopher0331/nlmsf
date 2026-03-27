@@ -5,6 +5,8 @@ export type PackageKey =
   | "raffle_1"
   | "raffle_10"
   | "raffle_25"
+  | "day_of_donation"
+  | "misc"
   | "silver"
   | "gold"
   | "title"
@@ -12,7 +14,7 @@ export type PackageKey =
 
 export type PackageDef = {
   label: string;
-  price: number; // cents
+  price: number; // cents (fixed packages); 0 when variableAmount
   eventTickets: number;
   raffleTickets: number;
   sponsorRaffleTickets: number;
@@ -21,7 +23,74 @@ export type PackageDef = {
   logoOnHomepage: boolean;
   recognition: string | null;
   description: string;
+  /** Checkout expects JSON `amountCents`; perks come from computeDayOfDonationPerks */
+  variableAmount?: boolean;
+  minAmountCents?: number;
+  maxAmountCents?: number;
 };
+
+/** Published bundle prices used to turn a day-of dollar amount into tickets (greedy: best raffle value first). */
+const DAY_OF_BUNDLES = [
+  { price: 50000, eventTickets: 0, raffleTickets: 25 }, // $500 — 25 raffle
+  { price: 30000, eventTickets: 0, raffleTickets: 10 }, // $300 — 10 raffle
+  { price: 5000, eventTickets: 0, raffleTickets: 1 }, // $50 — 1 raffle
+  { price: 10000, eventTickets: 1, raffleTickets: 1 }, // $100 — registration
+] as const;
+
+export type DayOfPerkBreakdown = {
+  eventTickets: number;
+  raffleTickets: number;
+  sponsorRaffleTickets: number;
+  bestDressedVotes: number;
+  podcast: boolean;
+  logoOnHomepage: boolean;
+  recognition: string | null;
+  remainderCents: number;
+  summaryLine: string;
+};
+
+export function computeDayOfDonationPerks(amountCents: number): DayOfPerkBreakdown {
+  let remaining = Math.max(0, Math.floor(amountCents));
+  let eventTickets = 0;
+  let raffleTickets = 0;
+
+  for (const b of DAY_OF_BUNDLES) {
+    while (remaining >= b.price) {
+      remaining -= b.price;
+      eventTickets += b.eventTickets;
+      raffleTickets += b.raffleTickets;
+    }
+  }
+
+  let recognition: string | null = null;
+  if (remaining > 0) {
+    recognition = `Unrestricted donation (no matching ticket bundle): $${(remaining / 100).toFixed(2)}`;
+  }
+
+  const parts: string[] = [];
+  if (eventTickets > 0) {
+    parts.push(`${eventTickets} event ticket${eventTickets !== 1 ? "s" : ""}`);
+  }
+  if (raffleTickets > 0) {
+    parts.push(`${raffleTickets} raffle ticket${raffleTickets !== 1 ? "s" : ""}`);
+  }
+  const summaryLine =
+    parts.length > 0
+      ? `Allocated from published pack prices: ${parts.join(" + ")}.`
+      : "Amount below standard ticket bundle prices — recorded as a general donation.";
+
+  return {
+    eventTickets,
+    raffleTickets,
+    sponsorRaffleTickets: 0,
+    bestDressedVotes: 0,
+    podcast: false,
+    logoOnHomepage: false,
+    recognition,
+    remainderCents: remaining,
+    summaryLine,
+  };
+}
 
 export const PACKAGES: Record<PackageKey, PackageDef> = {
   test_1: {
@@ -96,6 +165,37 @@ export const PACKAGES: Record<PackageKey, PackageDef> = {
     recognition: null,
     description: "25 raffle tickets.",
   },
+  day_of_donation: {
+    label: "Day-of Donation",
+    price: 0,
+    variableAmount: true,
+    minAmountCents: 500,
+    maxAmountCents: 10_000_000,
+    eventTickets: 0,
+    raffleTickets: 0,
+    sponsorRaffleTickets: 0,
+    bestDressedVotes: 0,
+    podcast: false,
+    logoOnHomepage: false,
+    recognition: null,
+    description:
+      "Variable amount. Ticket counts follow standard pack pricing ($500 / $300 / $50 / $100 registration) at checkout.",
+  },
+  misc: {
+    label: "Miscellaneous Donation",
+    price: 0,
+    variableAmount: true,
+    minAmountCents: 100,
+    maxAmountCents: 10_000_000,
+    eventTickets: 0,
+    raffleTickets: 0,
+    sponsorRaffleTickets: 0,
+    bestDressedVotes: 0,
+    podcast: false,
+    logoOnHomepage: false,
+    recognition: null,
+    description: "General miscellaneous donation — no tickets or perks included.",
+  },
   silver: {
     label: "Silver Sponsor",
     price: 50000,
@@ -110,7 +210,7 @@ export const PACKAGES: Record<PackageKey, PackageDef> = {
       "4 event tickets, 10 raffle tickets, and recognition before, during, and after the event.",
   },
   gold: {
-    label: "Gold Sponsor",
+    label: "Annual/Gold Sponsor",
     price: 100000,
     eventTickets: 8,
     raffleTickets: 20,

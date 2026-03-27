@@ -38,15 +38,18 @@ export default function HomePage() {
     <main>
       {/* Pillars of Purpose Fundraiser Banner */}
       <div className="w-full bg-gradient-to-r from-violet-700 via-indigo-700 to-violet-800 text-white">
-        <div className="max-w-[1280px] mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-[1280px] mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-4">
           <div className="flex items-center gap-3 text-center sm:text-left">
             <span className="hidden sm:flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/20">
               <i className="fas fa-star text-yellow-300 text-sm" aria-hidden />
             </span>
-            <p className="text-sm md:text-base font-medium leading-snug">
-              <span className="font-bold">Impact in Action: Pillars of Purpose</span>
-              <span className="mx-2 opacity-60">·</span>
-              Support the National Leiomyosarcoma Foundation — tickets, raffle &amp; sponsorships now available.
+            <p className="text-base md:text-lg font-medium leading-snug">
+              <span className="opacity-95">Support the National Leiomyosarcoma Foundation at the </span>
+              <span className="font-semibold">Truman Charities Annual Derby Party</span>
+              <span className="opacity-75 mx-2" aria-hidden>·</span>
+              <time dateTime="2026-05-02" className="opacity-95 whitespace-nowrap">
+                May 2, 2026
+              </time>
             </p>
           </div>
           <Link

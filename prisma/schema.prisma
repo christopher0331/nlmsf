@@ -105,6 +105,7 @@ model FundraiserOrder {
   logoOnHomepage        Boolean  @default(false)
   recognition           String?
   status                String   @default("pending") // pending | confirmed
+  miscNote              String?
   stripeSessionId       String?  @unique
   stripePaymentIntent   String?
   createdAt             DateTime @default(now())
