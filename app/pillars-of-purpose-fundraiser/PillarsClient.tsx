@@ -232,8 +232,7 @@ export default function PillarsClient() {
       <p>
         <strong className="text-white">National Leiomyosarcoma Foundation (NLMSF)</strong> is thrilled to be partnering with Truman Charities
         for their annual Derby Party. All the proceeds from ticket sales go to NLMSF, and
-        community members have donated some fantastic prizes for raffle items to be won by guests in
-        attendance.
+        community members have donated some fantastic prizes for raffle items.
       </p>
       <p>
         Let&apos;s have fun giving back to NLMSF. Contests for the best dressed. Great Music! Dancing!
@@ -256,7 +255,7 @@ export default function PillarsClient() {
         <div className="relative w-[80%] mx-auto px-6 py-16 md:py-20 text-center">
           <h1 className="leading-tight text-white mb-6">
             <span className="block text-4xl md:text-5xl lg:text-6xl font-extrabold">Truman Charities — Annual Derby Party</span>
-            <span className="block text-2xl md:text-3xl font-semibold text-indigo-200 mt-3">Honoring Monica Fabi</span>
+            <span className="block text-2xl md:text-3xl font-semibold text-indigo-200 mt-3">In Memory of Monica Fabi</span>
           </h1>
           <div className="space-y-5 text-xl md:text-2xl text-indigo-100 leading-relaxed text-left sm:text-center">
             {derbyIntroCopy}
