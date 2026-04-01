@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 const FAQ_ITEMS: Array<{
   q: string;
@@ -51,6 +52,8 @@ export default function ContactContent() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [formStatus, setFormStatus] = useState<string>("");
   const [sending, setSending] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   const toggleFaq = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -64,6 +67,12 @@ export default function ContactContent() {
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
 
+    if (!turnstileToken) {
+      setFormStatus("Please complete the security check.");
+      setSending(false);
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -75,12 +84,15 @@ export default function ContactContent() {
           subject: data.get("subject"),
           message: data.get("message"),
           newsletter: data.get("newsletter") === "on",
+          turnstileToken,
         }),
       });
 
       if (res.ok) {
         setFormStatus("Thank you! Your message has been sent. We will get back to you soon.");
         form.reset();
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
       } else {
         const json = await res.json().catch(() => null);
         setFormStatus(json?.error || "Something went wrong. Please try again.");
@@ -270,6 +282,15 @@ export default function ContactContent() {
                 </Link>{" "}
                 *
               </label>
+            </div>
+            <div className="col-span-full">
+              <Turnstile
+                ref={turnstileRef}
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={(token) => setTurnstileToken(token)}
+                onExpire={() => setTurnstileToken(null)}
+                onError={() => setTurnstileToken(null)}
+              />
             </div>
             {formStatus && (
               <div id="nlmsf-form-status" className="col-span-full rounded border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">
