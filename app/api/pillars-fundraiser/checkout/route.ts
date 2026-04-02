@@ -151,7 +151,7 @@ export async function POST(req: NextRequest) {
     console.error("Stripe checkout error:", err);
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { error: message },
+      { error: process.env.NODE_ENV === "development" ? message : "Failed to create checkout session" },
       { status: 500 }
     );
   }
