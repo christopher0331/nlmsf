@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import DonateCTA from "@/components/DonateCTA";
+import DonateInMemoriam from "@/components/DonateInMemoriam";
 
 type TributeData = {
   id: string;
@@ -55,10 +56,37 @@ export default function TributePageClient({ slugPromise }: Props) {
   const [commentForm, setCommentForm] = useState({ name: "", email: "", text: "" });
   const [commentSubmitting, setCommentSubmitting] = useState(false);
   const [commentSuccess, setCommentSuccess] = useState(false);
+  const [donationConfirmed, setDonationConfirmed] = useState(false);
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     slugPromise.then((p) => setSlug(p.slug));
   }, [slugPromise]);
+
+  // Handle post-payment success redirect
+  useEffect(() => {
+    const donated = searchParams.get("tribute_donated");
+    const sessionId = searchParams.get("session_id");
+    if (donated !== "1" || !sessionId) return;
+    fetch("/api/tributes/donate/confirm", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sessionId }),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setDonationConfirmed(true);
+        // Refetch tribute data to show new donor in sidebar
+        if (slug) {
+          fetch(`/api/tributes/${encodeURIComponent(slug)}`)
+            .then((r) => r.json())
+            .then((d) => setData(d))
+            .catch(() => null);
+        }
+      })
+      .catch(() => null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams, slug]);
 
   useEffect(() => {
     if (!slug) return;
@@ -181,8 +209,22 @@ export default function TributePageClient({ slugPromise }: Props) {
             </div>
           </section>
 
+          {donationConfirmed && (
+            <div className="mb-6 rounded-xl border border-green-200 bg-green-50 px-5 py-4 flex items-start gap-3">
+              <i className="fas fa-check-circle text-green-500 mt-0.5" aria-hidden />
+              <div>
+                <p className="font-semibold text-green-800">Thank you for your donation!</p>
+                <p className="text-sm text-green-700">Your gift in memory of {data.name} has been received. You will get a receipt by email.</p>
+              </div>
+            </div>
+          )}
+
           <section className="mb-10">
-            <DonateCTA tributeName={data.name} />
+            <DonateInMemoriam
+              tributeSlug={slug!}
+              tributeName={data.name}
+              tributeId={data.id}
+            />
           </section>
 
           <section className="rounded-xl border border-gray-200 bg-[#f8fafc] p-6">
