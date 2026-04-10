@@ -527,13 +527,13 @@ export default function ClinicalTrialsResearchInformationPage() {
                   <span className="text-gray-500 text-sm">Informed Consent Video</span>
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-gray-900 m-0 mb-1">Informed Consent to Participate in a Clinical Trial</h3>
-                  <p className="text-violet-600 font-medium text-sm m-0 mb-2">American Cancer Society</p>
+                  <h3 className="font-bold text-gray-900 m-0 mb-1">Informed Consent Form for Clinical Trial Participation — Guide</h3>
+                  <p className="text-violet-600 font-medium text-sm m-0 mb-2">LLRI — Learning Labb Research Institute</p>
                   <p className="text-gray-600 text-sm m-0 mb-3">
                     Learn about the informed consent process for clinical trials and what you need to know before participating.
                   </p>
-                  <a href="https://www.cancer.org/treatment/treatments-and-side-effects/clinical-trials/clinical-trials-videos.html" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
-                    Watch Video <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                  <a href="https://www.linkedin.com/pulse/informed-consent-form-clinical-trials-eub8c/" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
+                    Read Guide <i className="fas fa-external-link-alt text-xs" aria-hidden />
                   </a>
                 </div>
               </div>

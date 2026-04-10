@@ -34,7 +34,7 @@ function getCategoryName(key: string): string {
 
 export default function EducationVideosSection() {
   const [allVideos, setAllVideos] = useState<Video[]>([]);
-  const [currentCategory, setCurrentCategory] = useState<string>("all");
+  const [currentCategory, setCurrentCategory] = useState<string>("patient-education");
   const [loading, setLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalVideo, setModalVideo] = useState<{
@@ -225,7 +225,7 @@ export default function EducationVideosSection() {
                       }
                     }}
                   >
-                    <div className="relative w-full h-[200px] overflow-hidden group">
+                    <div className="relative w-full aspect-video overflow-hidden group">
                       <Image
                         src={thumbnailUrl}
                         alt=""

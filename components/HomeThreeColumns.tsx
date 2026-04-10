@@ -8,8 +8,7 @@ import IronmanFundraiser from "@/components/IronmanFundraiser";
 
 const CLINICAL_TRIALS_URL =
   "https://clinicaltrials.gov/search?term=leiomyosarcoma";
-const ONCLIVE_IMG =
-  "https://media.nlmsf.org/wp-content/uploads/2025/09/1757876547796blob_sharpened.jpg";
+const ONCLIVE_IMG = "/images/nlmsf-science.png";
 
 const TESTIMONIALS = [
   {
