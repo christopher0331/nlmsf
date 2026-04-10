@@ -864,6 +864,14 @@ export default function Header() {
                                 Annual Research Grant Proposal Announcements
                               </Link>
                             </li>
+                            <li>
+                              <Link
+                                href="/research-projects-funded"
+                                className={DROPDOWN_LINK}
+                              >
+                                NLMSF Research Projects Funded
+                              </Link>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -1567,6 +1575,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Annual Research Grant Proposal Announcements
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/research-projects-funded"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      NLMSF Research Projects Funded
                     </Link>
                   </li>
                 </ul>
