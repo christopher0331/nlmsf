@@ -182,11 +182,14 @@ const blogPosts: string[] = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = discoverAppRoutes();
-  const pages: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
-    url: `${BASE_URL}${route}`,
-    changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1.0 : 0.7,
-  }));
+  const pages: MetadataRoute.Sitemap = staticRoutes.map((route) => {
+    const withSlash = route === "/" ? "/" : `${route}/`;
+    return {
+      url: `${BASE_URL}${withSlash}`,
+      changeFrequency: route === "/" ? "weekly" : "monthly",
+      priority: route === "/" ? 1.0 : 0.7,
+    };
+  });
 
   const tributes: MetadataRoute.Sitemap = tributePages.map((route) => ({
     url: `${BASE_URL}${route}`,

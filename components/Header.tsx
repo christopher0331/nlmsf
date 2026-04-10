@@ -759,6 +759,14 @@ export default function Header() {
                             </li>
                             <li>
                               <Link
+                                href="/storm-therapeutics-stc15"
+                                className={DROPDOWN_LINK}
+                              >
+                                Storm Therapeutics Research (Phase 2)
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
                                 href="/uterine-lms"
                                 className={DROPDOWN_LINK}
                               >
@@ -1451,6 +1459,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       General Sarcoma
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/storm-therapeutics-stc15"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Storm Therapeutics Research (Phase 2)
                     </Link>
                   </li>
                   <li>
