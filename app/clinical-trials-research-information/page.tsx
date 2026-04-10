@@ -523,8 +523,14 @@ export default function ClinicalTrialsResearchInformationPage() {
                 </div>
               </div>
               <div className="bg-white rounded-xl overflow-hidden shadow border border-gray-200">
-                <div className="relative aspect-video bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Informed Consent Video</span>
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
+                    src="/images/InformedConsentForm.png"
+                    alt="Informed Consent Form for Clinical Trial Participation"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 400px, 90vw"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-gray-900 m-0 mb-1">Informed Consent Form for Clinical Trial Participation — Guide</h3>
