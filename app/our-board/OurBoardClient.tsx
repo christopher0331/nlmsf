@@ -157,6 +157,17 @@ export default function OurBoardClient() {
         ],
       },
       {
+        id: "michele-przypyszny",
+        name: "Michele Przypyszny",
+        role: "Community Outreach",
+        imageUrl: "/images/michelle_board_photo.png",
+        bio: [
+          "With more than 25 years of experience in nonprofit management and fundraising, Michele is a forward thinking leader who loves to bring people together for a common cause, and has always believed that you can make the impossible possible.",
+          "My mission in life has always been about helping others as well as living life to the fullest, which I learned from my friends and family who have been affected by cancer. Having worked for Young Survival Coalition, Leukemia & Lymphoma Society, Children's Tumor Foundation, and now Pink Aid, my passion, personally and professionally, has been in the life sciences and health care sector, helping to raise money for research and awareness of cancer and rare diseases.",
+          "Having been diagnosed with LMS in November of 2024, and currently on maintenance therapy, I am looking forward to paying it forward to help others diagnosed with this disease.",
+        ],
+      },
+      {
         id: "chandalyn-williams",
         name: "Chandalyn Williams",
         role: "Community Outreach",

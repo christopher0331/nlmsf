@@ -16,6 +16,7 @@ type VideoItem = {
   date: string;
   description?: string;
   url: string;
+  customImage?: string;
 };
 
 const clinicalTrialsVideos: VideoItem[] = [
@@ -93,6 +94,29 @@ const chemoVideos: VideoItem[] = [
   },
 ];
 
+const imagingVideos: VideoItem[] = [
+  {
+    id: "3aTt058S070",
+    title: "What Patients Should Know About Imaging Studies and Their Utility in Treatment of Sarcoma / Leiomyosarcoma",
+    presenter: "Dr. Ty Subhawong, Radiology Oncology, Miller School of Medicine",
+    date: "",
+    description:
+      "Discussion: What patients should know about the various imaging studies and their utility in treatment of Sarcoma / Leiomyosarcoma.",
+    url: "https://youtu.be/3aTt058S070",
+    customImage: "/images/Subhawong_imaging_Video.png",
+  },
+  {
+    id: "lHi_teFOoyk",
+    title: "Preparing for an Imaging Study – What a Patient/Caregiver Should Know",
+    presenter: "Christopher V. Bui, Physician Assistant, Diagnostic Imaging, MD Anderson Cancer Center",
+    date: "",
+    description:
+      "Preparing for an imaging study – what a patient/caregiver should know.",
+    url: "https://youtu.be/lHi_teFOoyk",
+    customImage: "/images/Bui_imaging_video.png",
+  },
+];
+
 const sarculatorVideos: VideoItem[] = [
   {
     id: "V7Rn7ZBCTw8",
@@ -115,7 +139,7 @@ function VideoCard({ video }: { video: VideoItem }) {
         className="video-thumb"
       >
         <Image
-          src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
+          src={video.customImage ?? `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
           alt={`${video.title} - Video Thumbnail`}
           width={640}
           height={360}
@@ -175,6 +199,9 @@ export default function RecordedPresentationsPage() {
             <a href="#caregiving" className="hero-tag tag-amber">
               Caregiving
             </a>
+            <a href="#imaging" className="hero-tag tag-sky">
+              Imaging
+            </a>
           </div>
         </div>
       </section>
@@ -208,6 +235,9 @@ export default function RecordedPresentationsPage() {
               </a>
               <a href="#sarculator" className="sidebar-link tag-indigo">
                 Sarculator
+              </a>
+              <a href="#imaging" className="sidebar-link tag-sky">
+                Imaging Studies
               </a>
             </div>
           </div>
@@ -273,6 +303,15 @@ export default function RecordedPresentationsPage() {
             <h2 className="video-section-title">Chemotherapy and Targeted Agents</h2>
             <div className="video-grid">
               {chemoVideos.map((video) => (
+                <VideoCard key={video.id} video={video} />
+              ))}
+            </div>
+          </section>
+
+          <section id="imaging" className="video-section teal-section">
+            <h2 className="video-section-title">Imaging Studies</h2>
+            <div className="video-grid">
+              {imagingVideos.map((video) => (
                 <VideoCard key={video.id} video={video} />
               ))}
             </div>

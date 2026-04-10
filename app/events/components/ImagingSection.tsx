@@ -153,6 +153,114 @@ export default function ImagingSection() {
               YouTube Recording
             </div>
             <a
+              href="https://youtu.be/3aTt058S070"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative overflow-hidden rounded-xl">
+                <Image
+                  src="/images/Subhawong_imaging_Video.png"
+                  alt="What Patients Should Know About Imaging Studies - Video Thumbnail"
+                  width={640}
+                  height={360}
+                  className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+                <i
+                  className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
+                  aria-hidden
+                />
+              </div>
+            </a>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700">
+                TS
+              </div>
+              <div>
+                <h5 className="text-sm font-semibold text-blue-700">
+                  Dr. Ty Subhawong
+                </h5>
+                <p className="text-xs text-slate-500">
+                  Radiology Oncology, Miller School of Medicine
+                </p>
+              </div>
+            </div>
+            <h4 className="mt-4 text-lg font-semibold text-slate-900">
+              What Patients Should Know About Imaging Studies and Their Utility in Treatment of Sarcoma / Leiomyosarcoma
+            </h4>
+            <p className="mt-3 text-sm text-slate-600">
+              Discussion: What patients should know about the various imaging studies and their utility in treatment of Sarcoma / Leiomyosarcoma.
+            </p>
+            <a
+              href="https://youtu.be/3aTt058S070"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800"
+            >
+              <i className="fas fa-play-circle" aria-hidden /> Watch Video
+            </a>
+          </article>
+
+          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+            <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
+              YouTube Recording
+            </div>
+            <a
+              href="https://youtu.be/lHi_teFOoyk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative overflow-hidden rounded-xl">
+                <Image
+                  src="/images/Bui_imaging_video.png"
+                  alt="Preparing for an Imaging Study - Video Thumbnail"
+                  width={640}
+                  height={360}
+                  className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+                <i
+                  className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
+                  aria-hidden
+                />
+              </div>
+            </a>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700">
+                CB
+              </div>
+              <div>
+                <h5 className="text-sm font-semibold text-blue-700">
+                  Christopher V. Bui, Physician Assistant
+                </h5>
+                <p className="text-xs text-slate-500">
+                  Diagnostic Imaging, MD Anderson Cancer Center
+                </p>
+              </div>
+            </div>
+            <h4 className="mt-4 text-lg font-semibold text-slate-900">
+              Preparing for an Imaging Study – What a Patient/Caregiver Should Know
+            </h4>
+            <p className="mt-3 text-sm text-slate-600">
+              Preparing for an imaging study – what a patient/caregiver should know.
+            </p>
+            <a
+              href="https://youtu.be/lHi_teFOoyk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800"
+            >
+              <i className="fas fa-play-circle" aria-hidden /> Watch Video
+            </a>
+          </article>
+
+          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+            <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
+              YouTube Recording
+            </div>
+            <a
               href="https://youtu.be/w9o46xJ0cvA"
               target="_blank"
               rel="noopener noreferrer"

@@ -232,6 +232,27 @@ export default function ResearchFundingPage() {
                 <p className="grant-note">2nd year of a 2-year Grant</p>
               </div>
             </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Leiomyosarcoma SPORE</h4>
+                <p className="institution">
+                  University of Michigan — Specialized Program of Research Excellence
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>Leiomyosarcoma SPORE Project</h5>
+                <p className="grant-note">5-Year Funding Commitment by the National LMS Foundation since 2020</p>
+                <a
+                  href="https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline mt-2"
+                >
+                  Learn more about the LMS SPORE <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                </a>
+              </div>
+            </div>
           </section>
 
           <section className="year-section" id="year-2025">
@@ -423,6 +444,27 @@ export default function ResearchFundingPage() {
                 <p className="grant-note">Grant: $100,000</p>
               </div>
             </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Leiomyosarcoma SPORE</h4>
+                <p className="institution">
+                  University of Michigan — Specialized Program of Research Excellence
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>Leiomyosarcoma SPORE Project</h5>
+                <p className="grant-note">5-Year Funding Commitment by the National LMS Foundation since 2020</p>
+                <a
+                  href="https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline mt-2"
+                >
+                  Learn more about the LMS SPORE <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                </a>
+              </div>
+            </div>
           </section>
 
           <section className="year-section" id="year-2022">
@@ -460,6 +502,27 @@ export default function ResearchFundingPage() {
                 <p className="grant-note">Grant: $95,000</p>
               </div>
             </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Leiomyosarcoma SPORE</h4>
+                <p className="institution">
+                  University of Michigan — Specialized Program of Research Excellence
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>Leiomyosarcoma SPORE Project</h5>
+                <p className="grant-note">5-Year Funding Commitment by the National LMS Foundation since 2020</p>
+                <a
+                  href="https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline mt-2"
+                >
+                  Learn more about the LMS SPORE <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                </a>
+              </div>
+            </div>
           </section>
 
           <section className="year-section" id="year-2021">
@@ -479,6 +542,27 @@ export default function ResearchFundingPage() {
                   test for clinical use.
                 </p>
                 <p className="grant-note">Grant: $110,000</p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Leiomyosarcoma SPORE</h4>
+                <p className="institution">
+                  University of Michigan — Specialized Program of Research Excellence
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>Leiomyosarcoma SPORE Project</h5>
+                <p className="grant-note">5-Year Funding Commitment by the National LMS Foundation since 2020</p>
+                <a
+                  href="https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline mt-2"
+                >
+                  Learn more about the LMS SPORE <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                </a>
               </div>
             </div>
           </section>
@@ -515,6 +599,27 @@ export default function ResearchFundingPage() {
                   significant benefit in a subset of patients with these molecular features.
                 </p>
                 <p className="grant-note">Grant: $130,000</p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Leiomyosarcoma SPORE</h4>
+                <p className="institution">
+                  University of Michigan — Specialized Program of Research Excellence
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>Leiomyosarcoma SPORE Project</h5>
+                <p className="grant-note">5-Year Funding Commitment by the National LMS Foundation since 2020</p>
+                <a
+                  href="https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline mt-2"
+                >
+                  Learn more about the LMS SPORE <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                </a>
               </div>
             </div>
           </section>

@@ -157,7 +157,6 @@ export default function Header() {
             sizes="(max-width: 768px) 120px, 200px"
             priority
             style={{ height: 140, width: "auto" }}
-            priority
           />
         </Link>
       </div>
@@ -841,6 +840,14 @@ export default function Header() {
                                 International LMS Research Roundtable
                               </Link>
                             </li>
+                            <li>
+                              <Link
+                                href="/research-grant-announcement"
+                                className={DROPDOWN_LINK}
+                              >
+                                Annual Research Grant Proposal Announcements
+                              </Link>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -1517,6 +1524,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       International LMS Research Roundtable
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/research-grant-announcement"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Annual Research Grant Proposal Announcements
                     </Link>
                   </li>
                 </ul>

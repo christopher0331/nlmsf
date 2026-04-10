@@ -24,6 +24,58 @@ export default function ClinicalTrialsSection() {
         <div className="grid gap-6 lg:grid-cols-2">
           <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
+              YouTube Recording
+            </div>
+            <a
+              href="https://www.youtube.com/watch?v=ndRGkJb8vWM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative overflow-hidden rounded-xl">
+                <Image
+                  src="https://img.youtube.com/vi/ndRGkJb8vWM/mqdefault.jpg"
+                  alt="Maggie Zhou MD - LMS Research and ctDNA Project Video Thumbnail"
+                  width={640}
+                  height={360}
+                  className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+                <i
+                  className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
+                  aria-hidden
+                />
+              </div>
+            </a>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 text-xs font-bold text-orange-700">
+                MZ
+              </div>
+              <div>
+                <h5 className="text-sm font-semibold text-orange-700">Maggie Zhou, MD</h5>
+                <p className="text-xs text-slate-500">
+                  Medical Oncologist, Stanford University, Stanford, CA
+                </p>
+              </div>
+            </div>
+            <h4 className="mt-4 text-lg font-semibold text-slate-900">
+              Leiomyosarcoma Specific Research, Clinical Trials &amp; Forthcoming ctDNA Research Project
+            </h4>
+            <p className="mt-3 text-sm text-slate-600">
+              Dr. Zhou presents on Leiomyosarcoma-specific research and clinical trials, including a forthcoming ctDNA research project aimed at advancing detection and treatment monitoring for LMS patients.
+            </p>
+            <a
+              href="https://www.youtube.com/watch?v=ndRGkJb8vWM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-orange-700 hover:text-orange-800"
+            >
+              <i className="fas fa-play-circle" aria-hidden /> Watch Recording
+            </a>
+          </article>
+
+          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+            <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
             <a
