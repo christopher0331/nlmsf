@@ -241,16 +241,48 @@ export default function ResearchFundingPage() {
                 </p>
               </div>
               <div className="project-details">
-                <h5>Leiomyosarcoma SPORE Project</h5>
+                <h5>
+                  The University of Michigan to Lead Multi-Site $12M Grant to Study Rare Type of Sarcoma
+                </h5>
                 <p className="grant-note">5-Year Funding Commitment by the National LMS Foundation since 2020</p>
-                <a
-                  href="https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline mt-2"
-                >
-                  Learn more about the LMS SPORE <i className="fas fa-external-link-alt text-xs" aria-hidden />
-                </a>
+                <blockquote className="mt-3 border-l-4 border-violet-300 pl-4 italic text-slate-600 text-sm">
+                  &ldquo;We recognized that to effectively study a rare cancer we had to assemble an outstanding
+                  international team from premier sarcoma centers.&rdquo;
+                  <footer className="mt-1 not-italic text-xs font-semibold text-slate-500">
+                    — Scott Schuetze, M.D., Ph.D., Principal Investigator
+                  </footer>
+                </blockquote>
+                <p className="mt-4 text-sm text-slate-700">
+                  The NLMSF is proud to have committed to a five-year funding pledge of support for this
+                  LMS-specific research, and very pleased that <strong>Dr. Mitch Achee</strong> (LMS survivor
+                  and physician) was selected to be a member of the External Advisory Board for the SPORE.
+                  He will lead the engagement of LMS patient advocate groups for this initiative.
+                </p>
+                <blockquote className="mt-3 border-l-4 border-indigo-300 pl-4 italic text-slate-600 text-sm">
+                  &ldquo;Paying it Forward to the LMS Community in partnership with the Research Community.&rdquo;
+                  <footer className="mt-1 not-italic text-xs font-semibold text-slate-500">
+                    — Annie Achee, NLMSF
+                  </footer>
+                </blockquote>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a
+                    href="https://www.newswise.com/articles/u-m-to-lead-multi-site-12m-grant-to-study-rare-type-of-sarcoma"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline"
+                  >
+                    Read the Announcement <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                  </a>
+                  <span className="text-slate-300 select-none">|</span>
+                  <a
+                    href="https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-violet-700 hover:underline"
+                  >
+                    Learn More About the LMS SPORE <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                  </a>
+                </div>
               </div>
             </div>
           </section>
