@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AbcNewDiagnosisSection from "./components/AbcNewDiagnosisSection";
+import ResearchReviewSeriesSection from "./components/ResearchReviewSeriesSection";
 import BasicResearchSection from "./components/BasicResearchSection";
 import CaregivingSection from "./components/CaregivingSection";
 import ChemotherapySection from "./components/ChemotherapySection";
@@ -125,6 +126,12 @@ export default function EventsPage() {
                   >
                     <span className="icon">📘</span>
                     <span>ABC&apos;s of a New Diagnosis</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#research-review-series" className="sidebar-link" data-section="research-review-series">
+                    <span className="icon">🧬</span>
+                    <span>LMS Research in Review Series</span>
                   </a>
                 </li>
                 <li>
@@ -293,6 +300,10 @@ export default function EventsPage() {
                       <i className="fas fa-book-medical" aria-hidden />
                       <span>ABC&apos;s of a New Diagnosis</span>
                     </a>
+                    <a href="#research-review-series" className="topic-button purple">
+                      <i className="fas fa-flask" aria-hidden />
+                      <span>Research in Review Series</span>
+                    </a>
                     <a href="#basic-research" className="topic-button indigo">
                       <i className="fas fa-microscope" aria-hidden />
                       <span>Basic Research</span>
@@ -373,6 +384,7 @@ export default function EventsPage() {
                 </div>
               </div>
             </div>
+            <ResearchReviewSeriesSection />
             <AbcNewDiagnosisSection />
             <BasicResearchSection />
             <CaregivingSection />
