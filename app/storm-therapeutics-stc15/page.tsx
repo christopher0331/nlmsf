@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AISummaryButton from "@/components/AISummaryButton";
 
 export const metadata: Metadata = {
   title: "Storm Therapeutics STC-15 — Phase 2 Clinical Trial | NLMSF",
@@ -37,6 +38,50 @@ export default function StormTherapeuticsPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
+
+        {/* Recruiting Alert */}
+        <div className="relative overflow-hidden rounded-2xl border-2 border-green-400 bg-gradient-to-r from-green-50 to-emerald-50 shadow-lg">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-green-400 to-emerald-500" />
+          <div className="pl-6 pr-6 py-6">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 mt-0.5">
+                  <span className="inline-flex items-center gap-1.5 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    Now Recruiting
+                  </span>
+                </div>
+                <div>
+                  <h2 className="text-base font-extrabold text-slate-900 leading-snug">
+                    STC-15 Phase 2 Clinical Trial — NCT06975293
+                  </h2>
+                  <p className="text-sm text-slate-600 mt-1 leading-relaxed">
+                    Storm Therapeutics is <strong>actively enrolling patients</strong> with leiomyosarcoma
+                    (uterine &amp; non-uterine) and liposarcoma into this Phase 2 study of STC-15,
+                    an oral METTL3 inhibitor. Sites are open now across the US — talk to your oncologist
+                    about eligibility.
+                  </p>
+                  <div className="mt-3 flex flex-wrap items-center gap-2">
+                    <a
+                      href="https://clinicaltrials.gov/study/NCT06975293"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-green-600 text-white hover:bg-green-700 transition shadow-sm"
+                    >
+                      <i className="fas fa-external-link-alt text-[10px]" aria-hidden />
+                      View on ClinicalTrials.gov
+                    </a>
+                    <AISummaryButton
+                      url="https://clinicaltrials.gov/study/NCT06975293"
+                      title="STC-15 Phase 2 Study in Leiomyosarcoma and Liposarcoma (NCT06975293) — Storm Therapeutics METTL3 Inhibitor"
+                      variant="large"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Trial Overview */}
         <div className="bg-white rounded-2xl shadow-lg border border-indigo-100 p-8">

@@ -767,6 +767,14 @@ export default function Header() {
                             </li>
                             <li>
                               <Link
+                                href="/research-publication-highlights"
+                                className={DROPDOWN_LINK}
+                              >
+                                Research Publication Highlights
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
                                 href="/uterine-lms"
                                 className={DROPDOWN_LINK}
                               >
@@ -1468,6 +1476,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Storm Therapeutics Research (Phase 2)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/research-publication-highlights"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Research Publication Highlights
                     </Link>
                   </li>
                   <li>

@@ -12,6 +12,7 @@
     "seed:community-news": "node scripts/seed-community-news-from-wp-csv.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@libsql/client": "^0.17.0",
     "@marsidev/react-turnstile": "^1.5.0",
     "@prisma/adapter-better-sqlite3": "^7.3.0",
