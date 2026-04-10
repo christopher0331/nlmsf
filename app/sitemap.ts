@@ -1,119 +1,45 @@
 import type { MetadataRoute } from "next";
+import fs from "fs";
+import path from "path";
 
 const BASE_URL = "https://nlmsf.org";
 
-const staticRoutes: string[] = [
-  "/",
-  "/2023-accountability-report",
-  "/abcs-of-new-diagnosis",
-  "/accountability-reports",
-  "/accountability-reports-hub",
-  "/advance-care-planning",
-  "/after-treatment",
-  "/be-a-successful-caregiver-advocate",
-  "/care-team-questions",
-  "/caregiver-traits-2",
-  "/caregivers-corner",
-  "/chemo-and-dental-care",
-  "/chemo-corner",
-  "/clinical-trials-research-information",
-  "/closer-look-at-leiomyosarcoma",
-  "/co-survivor-tips",
-  "/community-snapshot-news",
-  "/contact",
-  "/cri-immunotherapy-patient-guide",
-  "/donate",
-  "/donation-history",
-  "/education-videos",
-  "/events",
-  "/financial-assistance",
-  "/financial-assistance-2",
-  "/find-a-sarcoma-specialist",
-  "/general-sarcoma",
-  "/genomic-profiling",
-  "/get-involved",
-  "/gift-shop",
-  "/gift-shop-nlmsf",
-  "/health-insurance-deep-dive",
-  "/health-insurance-guidance",
-  "/home",
-  "/house-cleaning-and-meal-prep",
-  "/immunotherapy-2",
-  "/in-memoriam",
-  "/insurance-2",
-  "/international-research-roundtable",
-  "/leiomyosarcoma-support-group",
-  "/lms-count-me-in-project",
-  "/may-22-sound-byte",
-  "/may-28-sound-byte",
-  "/medical-advisory-board",
-  "/metastatic-treatment-options",
-  "/mission",
-  "/molecular-tumor-testing",
-  "/navigating-support",
-  "/new-diagnosis",
-  "/newly-diagnosed-and-treatment",
-  "/news-tracker",
-  "/news-tracker-archives-2",
-  "/nlmsf-count-me-in-project-2023",
-  "/nlmsf-events",
-  "/nlmsf-programs",
-  "/non-uterine",
-  "/nutrition-and-physical-activity",
-  "/oncology-care-team",
-  "/open-research",
-  "/open-research-2",
-  "/our-board",
-  "/our-board-2",
-  "/our-board-5",
-  "/our-programs",
-  "/our-testimonials",
-  "/paliative-care",
-  "/palliative-care",
-  "/pathology-report-accuracy",
-  "/patient-caregiver-advocacy",
-  "/patient-driven-research",
-  "/patient-perspectives",
-  "/peri-gilpin",
-  "/personal-advocacy",
-  "/privacy-policy",
-  "/psychosocial-guidance",
-  "/questions-to-ask-your-sarcoma-surgical-or-radiation-specialists",
-  "/quick-tips",
-  "/recorded-presentations",
-  "/related-educational-videos",
-  "/research-funding-2",
-  "/research-initiatives",
-  "/research-saves-lives",
-  "/resource-support",
-  "/resources",
-  "/resources-2",
-  "/sarcoma-sound-bytes",
-  "/scattered-light-spring-songfest",
-  "/second-opinions",
-  "/second-opinions-2",
-  "/social-security-coverage-guidance",
-  "/staging-lms-tumors",
-  "/support",
-  "/survivors-inspire",
-  "/survivorship-3",
-  "/survivorship-care-planning-2",
-  "/survivorship-care-planning-information",
-  "/survivorship-resource-information",
-  "/survivorship-resource-information-2",
-  "/survivorship-resources-2",
-  "/testimonials",
-  "/transportation-lodging",
-  "/transportation-to-distantappointments",
-  "/treating-soft-tissue-sarcomas",
-  "/treatment-options",
-  "/tributes-directory",
-  "/uterine-lms",
-  "/uterine-lms-information",
-  "/volunteer",
-  "/what-is-best-for-lms",
-  "/what-is-lms",
-];
+function discoverAppRoutes(): string[] {
+  const appDir = path.join(process.cwd(), "app");
+  const routes: string[] = [];
+
+  function walk(dir: string, urlPath: string) {
+    let entries: fs.Dirent[];
+    try {
+      entries = fs.readdirSync(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+
+    const hasPage = entries.some(
+      (e) => e.isFile() && /^page\.(tsx?|jsx?)$/.test(e.name),
+    );
+    if (hasPage) {
+      routes.push(urlPath === "" ? "/" : urlPath);
+    }
+
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const name = entry.name;
+      // Skip API routes, private folders, and dynamic segments
+      if (name === "api" || name.startsWith("_") || name.startsWith("[")) continue;
+      // Route groups like (marketing) — transparent in URL, recurse without adding to path
+      if (name.startsWith("(")) {
+        walk(path.join(dir, name), urlPath);
+      } else {
+        walk(path.join(dir, name), `${urlPath}/${name}`);
+      }
+    }
+  }
+
+  walk(appDir, "");
+  return [...new Set(routes)].sort();
+}
 
 const tributePages: string[] = [
   "/andria-barnes-ruth-tribute-page",
@@ -255,6 +181,7 @@ const blogPosts: string[] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes = discoverAppRoutes();
   const pages: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
     changeFrequency: route === "/" ? "weekly" : "monthly",
