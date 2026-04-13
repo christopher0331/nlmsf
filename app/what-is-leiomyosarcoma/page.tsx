@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "What Is Leiomyosarcoma? | NLMSF",
   description:
     "Understand leiomyosarcoma (LMS), including diagnosis, treatment options, and resources.",
+  alternates: {
+    canonical: "https://nlmsf.org/what-is-leiomyosarcoma/",
+  },
+  openGraph: {
+    title: "What Is Leiomyosarcoma? | NLMSF",
+    description:
+      "Understand leiomyosarcoma (LMS), including diagnosis, treatment options, and resources.",
+    url: "https://nlmsf.org/what-is-leiomyosarcoma/",
+  },
 };
 
 export default function WhatIsLmsPage() {
