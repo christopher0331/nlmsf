@@ -12,6 +12,14 @@ const ONCLIVE_IMG = "/images/nlmsf-science.png";
 
 const TESTIMONIALS = [
   {
+    name: "Neeta Somaiah, MD",
+    title: "Sarcoma Medical Oncologist, MD Anderson Cancer Center",
+    quote:
+      '"You are the sweetest. I can see how your compassion and affection positively impact everyone around — across all generations, family, and beyond."',
+    image: "/images/neeta.jpg",
+    alt: "Neeta Somaiah, MD",
+  },
+  {
     name: "Brian Van Tine, MD",
     title: "Sarcoma Program Director, Alvin J. Siteman Cancer Center",
     quote: '"I love this group, it makes a difference."',
@@ -23,7 +31,7 @@ const TESTIMONIALS = [
     title: "Professor, Northwestern University Feinberg School of Medicine",
     quote:
       '"I love the NLMSF – I love the patient programs held – your signature support advocacy to collaborate with sarcoma centers..."',
-    image: "https://media.nlmsf.org/wp-content/uploads/2025/10/Seth-Pollack-MD.png",
+    image: "https://old.nlmsf.org/wp-content/uploads/2025/10/Seth-Pollack-MD.png",
     alt: "Seth Pollack, MD",
   },
   {
@@ -127,6 +135,31 @@ export default function HomeThreeColumns() {
               >
                 Search Leiomyosarcoma Trials
               </a>
+              <div className="mt-3 rounded-lg bg-[#f3e8ff] border border-[#d8b4fe] px-3 py-2.5">
+                <p className="text-[11px] font-bold text-[#6b46c1] uppercase tracking-wider mb-2">
+                  Uterine Sarcoma Trial Listings
+                </p>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="https://ichgcp.net/clinical-trials-registry/research/list?cond=Uterus%2BLeiomyosarcoma"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-between gap-2 text-[12px] text-white no-underline font-semibold bg-[#7c3aed] hover:bg-[#6d28d9] rounded-md px-3 py-1.5 transition-colors"
+                  >
+                    <span>ICHGCP Registry (Recruiting &amp; Completed)</span>
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" className="shrink-0"><path d="M3.5 3a.5.5 0 0 0 0 1H7.29L2.15 9.15a.5.5 0 1 0 .71.7L8 4.71V8.5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5h-5z"/></svg>
+                  </a>
+                  <a
+                    href="https://www.cancer.gov/research/participate/clinical-trials/disease/uterine-sarcoma?pn=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-between gap-2 text-[12px] text-white no-underline font-semibold bg-[#7c3aed] hover:bg-[#6d28d9] rounded-md px-3 py-1.5 transition-colors"
+                  >
+                    <span>NCI Uterine Sarcoma Trials</span>
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" className="shrink-0"><path d="M3.5 3a.5.5 0 0 0 0 1H7.29L2.15 9.15a.5.5 0 1 0 .71.7L8 4.71V8.5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5h-5z"/></svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -281,12 +314,12 @@ export default function HomeThreeColumns() {
                   <div key={t.name} className="w-full flex-shrink-0 px-1">
                     <div className="text-center">
                       <div className="flex flex-col items-center mb-4">
-                        <div className="w-[60px] h-[60px] rounded-full overflow-hidden mb-2 border-[3px] border-[#6a3ea1] shadow-[0_4px_8px_rgba(106,62,161,0.2)] sm:w-[50px] sm:h-[50px]">
+                        <div className="w-[90px] h-[90px] rounded-full overflow-hidden mb-2 border-[3px] border-[#6a3ea1] shadow-[0_4px_8px_rgba(106,62,161,0.2)] sm:w-[75px] sm:h-[75px]">
                           <Image
                             src={t.image}
                             alt={t.alt}
-                            width={120}
-                            height={120}
+                            width={180}
+                            height={180}
                             className="w-full h-full object-cover"
                             sizes="60px"
                           />

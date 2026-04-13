@@ -48,7 +48,7 @@ export default function NewDiagnosisPage() {
           <h3 className="sidebar-title">Newly Diagnosed Resources</h3>
           <ul className="sidebar-links">
             <li>
-              <a href="#what-is-lms" className="sidebar-link">
+              <a href="#what-is-leiomyosarcoma" className="sidebar-link">
                 <i className="fas fa-info-circle"></i>
                 <span>Understanding LMS</span>
               </a>
@@ -79,7 +79,7 @@ export default function NewDiagnosisPage() {
               <div className="help-item">
                 <i className="fas fa-question-circle"></i>
                 <div className="help-details">
-                  <a href="https://nlmsf.org/what-is-lms/" target="_blank" rel="noopener noreferrer">
+                  <a href="/what-is-leiomyosarcoma" target="_blank" rel="noopener noreferrer">
                     What is LMS?
                   </a>
                 </div>
@@ -331,13 +331,13 @@ export default function NewDiagnosisPage() {
         {/* Main Content for Newly Diagnosed Page */}
         <div className="main-content">
           {/* What is LMS Section */}
-          <div id="what-is-lms" className="content-section">
+          <div id="what-is-leiomyosarcoma" className="content-section">
             <h2 className="section-title purple">Understanding LMS</h2>
 
             <div className="resource-grid">
               <div className="resource-card">
                 <div className="card-image">
-                  <a href="https://nlmsf.org/what-is-lms/">
+                  <a href="/what-is-leiomyosarcoma">
                     <Image
                       src="https://media.nlmsf.org/wp-content/uploads/2020/06/unnamed-44.jpg"
                       alt="What is LMS?"
@@ -349,7 +349,7 @@ export default function NewDiagnosisPage() {
                 <div className="card-content">
                   <h3 className="card-title">What is LMS?</h3>
                   <p className="card-description">Definition/Diagnosis</p>
-                  <a href="https://nlmsf.org/what-is-lms/" className="card-button">
+                  <a href="/what-is-leiomyosarcoma" className="card-button">
                     <span>Learn More</span>
                     <i className="fas fa-arrow-right"></i>
                   </a>

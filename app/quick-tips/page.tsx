@@ -34,6 +34,12 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "General",
   },
   {
+    title: "Reintegrating Your Non-Oncology Care Team After Treatment",
+    description: "After cancer treatment, your primary care doctor and other specialists (cardiology, gynecology, etc.) play a key role in your long-term health. You are the bridge connecting your oncology team with the rest of your care team.",
+    driveUrl: "https://drive.google.com/file/d/1ydS8gOR2_J1JJaYJ-NeaM21lS2YpAoJv/view",
+    category: "General",
+  },
+  {
     title: "Second Opinions for LMS / Sarcomas",
     description: "What to consider when seeking a second opinion",
     driveUrl: "https://drive.google.com/file/d/1P1oWmE-_cCi_OZKVnOUOC0vHI-1mFYVs/view",

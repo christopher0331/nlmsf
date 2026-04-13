@@ -13,6 +13,7 @@ import ExpertEndorsementSection from "@/components/ExpertEndorsementSection";
 import PatientVideoTestimonialsSection from "@/components/PatientVideoTestimonialsSection";
 import CTASection from "@/components/CTASection";
 import StormTrialAlert from "@/components/StormTrialAlert";
+import TestimonialsScrollSection from "@/components/TestimonialsScrollSection";
 
 export const metadata: Metadata = {
   title: "National Leiomyosarcoma Foundation",
@@ -63,6 +64,7 @@ export default function HomePage() {
       </div>
       <HeroSection />
       <HomeThreeColumns />
+      <TestimonialsScrollSection />
       <StormTrialAlert />
       <RecentUpdates />
       <EducationVideosSection />

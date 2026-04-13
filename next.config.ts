@@ -100,8 +100,8 @@ const nextConfig: NextConfig = {
       { source: "/terms", destination: "/privacy-policy", permanent: true },
       { source: "/transparency", destination: "/accountability-reports", permanent: true },
       { source: "/tribute-admin", destination: "/admin/tributes", permanent: true },
-      { source: "/what-is-leiomyosarcoma", destination: "/what-is-lms", permanent: true },
-      { source: "/what-is-lms-staged", destination: "/what-is-lms", permanent: true },
+      { source: "/what-is-lms", destination: "/what-is-leiomyosarcoma", permanent: true },
+      { source: "/what-is-lms-staged", destination: "/what-is-leiomyosarcoma", permanent: true },
       { source: "/who-we-are", destination: "/mission", permanent: true },
       { source: "/workshops", destination: "/events", permanent: true },
       { source: "/your-voice-matters", destination: "/patient-perspectives", permanent: true },
@@ -136,7 +136,7 @@ const nextConfig: NextConfig = {
       { source: "/newly-diagnosed/care-team", destination: "/oncology-care-team", permanent: true },
       { source: "/newly-diagnosed/find-a-specialist", destination: "/find-a-sarcoma-specialist", permanent: true },
       { source: "/newly-diagnosed/find-specialist", destination: "/find-a-sarcoma-specialist", permanent: true },
-      { source: "/newly-diagnosed/managing-lms", destination: "/what-is-lms", permanent: true },
+      { source: "/newly-diagnosed/managing-lms", destination: "/what-is-leiomyosarcoma", permanent: true },
       { source: "/newly-diagnosed/patient-perspectives", destination: "/patient-perspectives", permanent: true },
       { source: "/newly-diagnosed/treatment-options", destination: "/treatment-options", permanent: true },
       { source: "/patient/patient-perspectives", destination: "/patient-perspectives", permanent: true },
@@ -153,7 +153,7 @@ const nextConfig: NextConfig = {
       { source: "/get-involved/donate", destination: "/donate", permanent: true },
       { source: "/get-involved/fundraise", destination: "/donate", permanent: true },
       { source: "/get-involved/volunteer", destination: "/volunteer", permanent: true },
-      { source: "/what-is-lms/faq", destination: "/what-is-lms", permanent: true },
+      { source: "/what-is-lms/faq", destination: "/what-is-leiomyosarcoma", permanent: true },
       { source: "/accountability-reports/2023", destination: "/2023-accountability-report", permanent: true },
       { source: "/accountability-reports/2024", destination: "/accountability-reports", permanent: true },
 
@@ -247,6 +247,14 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "i.ytimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ui-avatars.com",
+      },
+      {
+        protocol: "https",
+        hostname: "old.nlmsf.org",
       },
     ],
   },

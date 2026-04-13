@@ -2,13 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import type { Testimonial } from "./data";
 
-export type Testimonial = {
-  name: string;
-  text: string;
-  type: "Research Clinician" | "Patient";
-  imageUrl?: string;
-};
+export type { Testimonial };
 
 type TestimonialsClientProps = {
   clinicianTestimonials: Testimonial[];
@@ -96,6 +92,9 @@ export default function TestimonialsClient({
                 </div>
                 <div className="nlmsf-testimonial-info">
                   <h3 className="nlmsf-testimonial-name">{testimonial.name}</h3>
+                  {testimonial.institution && (
+                    <p className="text-xs text-slate-500 italic">{testimonial.institution}</p>
+                  )}
                   <p className="nlmsf-testimonial-type">{testimonial.type}</p>
                 </div>
               </div>

@@ -215,7 +215,7 @@ export default function Header() {
                           <ul className={CATEGORY_LINKS}>
                             <li>
                               <Link
-                                href="/what-is-lms"
+                                href="/what-is-leiomyosarcoma"
                                 className={DROPDOWN_LINK}
                               >
                                 What is LMS
@@ -975,7 +975,7 @@ export default function Header() {
                 <ul className={MOBILE_SUBMENU}>
                   <li>
                     <Link
-                      href="/what-is-lms"
+                      href="/what-is-leiomyosarcoma"
                       className={MOBILE_SUBMENU_LINK}
                       onClick={() => setMobileNavOpen(false)}
                     >

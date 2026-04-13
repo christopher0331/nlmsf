@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./what-is-lms.css";
+import "./what-is-leiomyosarcoma.css";
 import SidebarNav from "./SidebarNav";
 
 export const metadata: Metadata = {

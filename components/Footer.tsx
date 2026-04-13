@@ -33,7 +33,7 @@ export default function Footer() {
               </li>
               <li className="mb-4">
                 <Link
-                  href="/what-is-lms"
+                  href="/what-is-leiomyosarcoma"
                   className="text-[#4b5563] no-underline text-base leading-normal transition-colors duration-200 hover:text-violet-500"
                 >
                   What is LMS?
@@ -81,7 +81,7 @@ export default function Footer() {
               </li>
               <li className="mb-4">
                 <Link
-                  href="/what-is-lms"
+                  href="/what-is-leiomyosarcoma"
                   className="text-[#4b5563] no-underline text-base leading-normal transition-colors duration-200 hover:text-violet-500"
                 >
                   FAQ
