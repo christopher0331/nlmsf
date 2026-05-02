@@ -170,14 +170,6 @@ export default function GetInvolvedPage() {
             </div>
           </div>
 
-          <div className="denver-support">
-            <h3>Denver Area Support</h3>
-            <p>If you&apos;re in the Denver area, join our local support group and access Denver-specific resources to help you on your journey.</p>
-            <a href="#" className="sidebar-widget-button">
-              <i className="fas fa-map-marker-alt" aria-hidden />
-              <span>Denver Support</span>
-            </a>
-          </div>
         </aside>
 
         <div className="main-content">
@@ -363,19 +355,6 @@ export default function GetInvolvedPage() {
             </div>
           </div>
 
-          {/* Denver CTA */}
-          <div className="denver-cta">
-            <div className="content-panel">
-              <h3>Denver Area Support &amp; Resources</h3>
-              <p>
-                If you&apos;re in the Denver area, we offer additional local support groups, events, and resources specifically for our Denver community members.
-              </p>
-              <a href="#" className="cta-button">
-                <i className="fas fa-map-marker-alt" aria-hidden />
-                <span>Denver Resources</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -272,18 +272,6 @@ export default function NewlyDiagnosedTreatmentClient() {
             </ul>
           </div>
 
-          {/* Denver-specific CTA in sidebar */}
-          <div className="sidebar-cta">
-            <div className="cta-icon">
-              <i className="fas fa-mountain"></i>
-            </div>
-            <h4>Denver Support</h4>
-            <p>Connect with local LMS resources and support groups in the Denver area</p>
-            <a href="#" className="sidebar-cta-button">
-              Find Local Support
-              <i className="fas fa-arrow-right"></i>
-            </a>
-          </div>
         </div>
 
         {/* Main Content Component for Next Steps Page */}
@@ -514,15 +502,11 @@ export default function NewlyDiagnosedTreatmentClient() {
                   <p>Prepare for your first oncology appointment</p>
                 </a>
 
-                <a href="#" className="resource-card pink" target="_blank" rel="noopener noreferrer">
-                  <h4>Denver Support Group</h4>
-                  <p>Connect with other LMS patients in the Denver metro area</p>
-                </a>
               </div>
             </div>
           </div>
 
-          {/* Featured Image Section with Denver-specific CTA */}
+          {/* Featured Image Section */}
           <div id="community" className="featured-image-section">
             <div className="featured-image">
               <Image
@@ -538,9 +522,6 @@ export default function NewlyDiagnosedTreatmentClient() {
               <div className="cta-buttons">
                 <a href="#" className="primary-cta">
                   Join Our Community
-                </a>
-                <a href="#" className="secondary-cta">
-                  Denver Local Events
                 </a>
               </div>
             </div>

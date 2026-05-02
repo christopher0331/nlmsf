@@ -423,33 +423,6 @@ export default function GiftShopNlmsfPage() {
             </div>
           </div>
 
-          {/* Denver */}
-          <div id="denver-resources" className="content-section">
-            <div className="section-header">
-              <h2>Denver Community Support</h2>
-              <p>Local resources and ways to get involved</p>
-            </div>
-            <div className="content-panel special">
-              <div className="resource-list">
-                <div className="resource-item">
-                  <div className="resource-icon denver">
-                    <i className="fas fa-map-marked-alt" aria-hidden />
-                  </div>
-                  <div className="resource-content">
-                    <h3>Denver Area Support</h3>
-                    <p>If you&apos;re in the Denver area, we can connect you with local resources and support groups.</p>
-                    <p>Your participation in our Denver-based fundraising activities directly impacts the research we fund nationwide.</p>
-                    <div className="resource-link-wrapper">
-                      <Link href="/denver-support" className="resource-link denver-link">
-                        <i className="fas fa-external-link-alt" aria-hidden />
-                        <span>Connect With Denver Resources</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

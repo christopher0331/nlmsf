@@ -13,7 +13,7 @@ const WP_SITEMAP_PATHS = new Set([
 ]);
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, searchParams } = request.nextUrl;
 
   if (pathname === "/wp-login.php" || pathname.startsWith("/wp-login.php")) {
     return new NextResponse(null, { status: 410 });
@@ -37,22 +37,20 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+
+  if (searchParams.has("form")) {
+    // Keep FundraiseUp modal behavior, but prevent indexation of query-param variants.
+    response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    const canonicalUrl = `${request.nextUrl.origin}${pathname || "/"}`;
+    response.headers.set("Link", `<${canonicalUrl}>; rel="canonical"`);
+  }
+
+  return response;
 }
 
 export const config = {
   matcher: [
-    "/wp-login.php",
-    "/wp-login.php:path*",
-    "/CRI_Patients-Guide-25.pdf",
-    "/accountability-reports/:path*",
-    "/sitemap_index.xml",
-    "/post-sitemap.xml",
-    "/page-sitemap.xml",
-    "/give_forms-sitemap.xml",
-    "/nlmsf_snapshot-sitemap.xml",
-    "/nlmsf_news_tracker-sitemap.xml",
-    "/category-sitemap.xml",
-    "/author-sitemap.xml",
+    "/:path*",
   ],
 };

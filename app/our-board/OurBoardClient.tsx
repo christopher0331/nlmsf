@@ -45,6 +45,26 @@ export default function OurBoardClient() {
           "Dr. Ingham specializes in the clinical care and translational research of sarcomas and connective tissue malignancies, bridging cutting-edge science with direct patient care.",
         ],
       },
+      {
+        id: "suzanne-george",
+        name: "Suzanne George, M.D.",
+        role:
+          "Chief, Division of Sarcoma\nSenior Physician\nAssociate Professor of Medicine, Harvard Medical School\nDana-Farber Cancer Institute\nNLMSF - SPAGN International LMS Research Roundtable",
+        imageUrl: "/images/susan_george.png",
+        bio: [
+          "Dr. George is a leading sarcoma medical oncologist and Chief of the Division of Sarcoma at Dana-Farber Cancer Institute. She is an Associate Professor of Medicine at Harvard Medical School and a Senior Physician dedicated to advancing sarcoma research and patient care.",
+        ],
+      },
+      {
+        id: "alessandra-maleddu",
+        name: "Alessandra Maleddu, M.D.",
+        role:
+          "Sarcoma Medical Oncologist\nAnschutz Medical Center\nUniversity of Colorado Health Sciences\nAurora, CO",
+        imageUrl: "https://staging5.nlmsf.org/wp-content/uploads/2024/03/Maleddu-Photo.jpg",
+        bio: [
+          "Dr. Maleddu is a sarcoma medical oncologist at the Anschutz Medical Center, University of Colorado Health Sciences, specializing in the treatment and research of soft tissue sarcomas including leiomyosarcoma.",
+        ],
+      },
     ],
     [],
   );
@@ -72,6 +92,15 @@ export default function OurBoardClient() {
           "I was diagnosed with uterine leiomyosarcoma in 2015. I have undergone numerous surgeries and chemotherapies. Throughout this time, I have done all I can to maintain a positive attitude. This, along with my strong faith and an excellent team of doctors, has carried me through.",
           "I enjoyed a 32-year career in Purchasing for various steel companies in Pittsburgh, PA. I love spending time with family and friends, cooking, reading, working on my house, spending time outdoors, yoga, walking and biking. I do a lot of volunteer work and do as much as possible to help others.",
           "The NLMSF has been such a great resource for me, being Treasurer is the least I can do to show my appreciation.",
+        ],
+      },
+      {
+        id: "rita-pecuch",
+        name: "Rita Pecuch",
+        role: "NLMSF Treasurer",
+        imageUrl: "/images/Rita_Pecuch.png",
+        bio: [
+          "Rita Pecuch is a Senior Data Configuration Engineer in Data Configuration Engineering within Testing, Innovation & Data Enablement (TIDE) at Takeda Pharmaceuticals Company Limited.",
         ],
       },
     ],
@@ -133,19 +162,6 @@ export default function OurBoardClient() {
         ],
       },
       {
-        id: "greg-lee",
-        name: "Greg Lee",
-        role: "Community Outreach",
-        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/08/image-219x300.png",
-        bio: [
-          "I was diagnosed with LMS in 2020 and with metastatic LMS in 2021. I have an assistant professor of Computer Science in the Jodrey School of Computer Science at Acadia University in Nova Scotia, Canada.",
-          "I am now applying machine learning techniques to search for patient features (e.g., biomarkers) that help predict which treatments are best, to be applied on an individual level. My past research involved predicting who was most likely to give a charitable gift to a given organization. I worked with smaller data sets (which we often run into with LMS) but still produced accurate models. I'm hoping to produce similar LMS prediction models.",
-          "I am a Cancer Immunotherapy Coordinator for patients interested in going to Germany for Dendritic Cell Therapy treatment.",
-          "I am happy to be a part of the NLMSF Foundation, as I feel they are a special group to advocate for the LMS Community.",
-          "I am married to my wonderful wife Melissa and we have 3 children and it's for them that I'm doing this research.",
-        ],
-      },
-      {
         id: "jim-matthews",
         name: "Jim Matthews",
         role: "Community Awareness Coordinator",
@@ -165,6 +181,16 @@ export default function OurBoardClient() {
           "With more than 25 years of experience in nonprofit management and fundraising, Michele is a forward thinking leader who loves to bring people together for a common cause, and has always believed that you can make the impossible possible.",
           "My mission in life has always been about helping others as well as living life to the fullest, which I learned from my friends and family who have been affected by cancer. Having worked for Young Survival Coalition, Leukemia & Lymphoma Society, Children's Tumor Foundation, and now Pink Aid, my passion, personally and professionally, has been in the life sciences and health care sector, helping to raise money for research and awareness of cancer and rare diseases.",
           "Having been diagnosed with LMS in November of 2024, and currently on maintenance therapy, I am looking forward to paying it forward to help others diagnosed with this disease.",
+        ],
+      },
+      {
+        id: "christina-raicevich",
+        name: "Christina Raicevich",
+        role: "Community Outreach",
+        imageUrl: "/images/christina_profile_pic.jpeg",
+        bio: [
+          "Born and raised in Michigan, where I spend half the year, and a Florida snowbird in the winter months. I'm a 20-year survivor of thyroid cancer and an 18-year survivor of uterine LMS. The University of Michigan has played a vital role in my journey and survival.",
+          "I believe strongly in the power of second opinions and staying informed with the latest research, especially when it comes to uterine LMS. Every new day is a blessing—one I cherish with my family and use to support and uplift others navigating their own cancer journeys.",
         ],
       },
       {
@@ -373,6 +399,14 @@ export default function OurBoardClient() {
                       Lynne Greco Forges
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="#rita-pecuch"
+                      className="nlmsf-sidebar-link nlmsf-sidebar-link-leadership"
+                    >
+                      Rita Pecuch
+                    </a>
+                  </li>
                 </ul>
 
                 <h4 className="nlmsf-category-title nlmsf-category-title-medical">
@@ -419,18 +453,18 @@ export default function OurBoardClient() {
                   </li>
                   <li>
                     <a
-                      href="#greg-lee"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      Greg Lee
-                    </a>
-                  </li>
-                  <li>
-                    <a
                       href="#jim-matthews"
                       className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
                     >
                       Jim Matthews
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#christina-raicevich"
+                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
+                    >
+                      Christina Raicevich
                     </a>
                   </li>
                   <li>

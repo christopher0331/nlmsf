@@ -395,15 +395,6 @@ export default function Insurance2Page() {
             </div>
           </div>
 
-          <div id="denver-cta" className="content-section denver-cta">
-            <div className="content-panel special">
-              <h3>Denver Community Support</h3>
-              <p>If you&apos;re in the Denver area, we can connect you with local resources and support groups.</p>
-              <Link href="/denver-support" className="cta-button">
-                <i className="fas fa-map-marker-alt" aria-hidden /> Denver Resources
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </div>

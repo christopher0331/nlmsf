@@ -159,16 +159,6 @@ export default function NewDiagnosisPage() {
           </div>
 
           <div className="sidebar-section">
-            <h3 className="sidebar-subtitle">Denver Area Support</h3>
-            <div className="denver-support">
-              <p>If you&apos;re in the Denver area, we can help connect you with local specialists and support resources.</p>
-              <a href="https://nlmsf.org/contact/" className="cta-button">
-                Request Denver Support
-              </a>
-            </div>
-          </div>
-
-          <div className="sidebar-section">
             <h3 className="sidebar-subtitle">Contact Us</h3>
             <div className="contact-info">
               <div className="contact-item">
@@ -495,25 +485,6 @@ export default function NewDiagnosisPage() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-            </div>
-          </div>
-
-          {/* Denver Support Section */}
-          <div className="denver-cta" id="denver-cta">
-            <div className="cta-icon">
-              <i className="fas fa-map-marker-alt"></i>
-            </div>
-            <div className="cta-content">
-              <h3>Denver Area Support</h3>
-              <p>
-                Looking for local support in Denver? Connect with our Denver-based patient advocates who can help guide you through
-                local resources and treatment options.
-              </p>
-            </div>
-            <div className="cta-button-container">
-              <a href="https://nlmsf.org/contact/" className="denver-cta-button">
-                <i className="fas fa-users"></i> Connect in Denver
-              </a>
             </div>
           </div>
 

@@ -432,16 +432,6 @@ export default function FindASarcomaSpecialistPage() {
                   </div>
                   <i className="fas fa-external-link-alt" aria-hidden />
                 </a>
-                <Link href="/contact/" className="resource-card rose">
-                  <div className="resource-icon">
-                    <i className="fas fa-users" aria-hidden />
-                  </div>
-                  <div className="resource-content">
-                    <h4>Denver Sarcoma Support Group</h4>
-                    <p>Connect with other sarcoma patients in the Denver area</p>
-                  </div>
-                  <i className="fas fa-external-link-alt" aria-hidden />
-                </Link>
               </div>
             </div>
           </section>

@@ -442,6 +442,13 @@ export default function PillarsClient() {
                 height={160}
                 className="h-28 w-auto object-contain"
               />
+              <Image
+                src="/images/clincal-trials-logo.png"
+                alt="Clinical Trials"
+                width={160}
+                height={160}
+                className="h-28 w-auto object-contain"
+              />
             </div>
 
             <h2 className="text-2xl font-bold text-center uppercase tracking-wide text-indigo-900 mb-1">
@@ -456,6 +463,7 @@ export default function PillarsClient() {
                 { icon: "fa-book-open", title: "Awareness & Education", text: "Leiomyosarcoma / Sarcoma Awareness monthly Information / Education Forums." },
                 { icon: "fa-hands-helping", title: "Community Empowerment", text: "Community Empowerment through Resource Support Guidance / Patient-driven Research involvement. 24/7 LMS LifeLine direct support access to the Foundation." },
                 { icon: "fa-users", title: "Patient-Caregiver/Family Community Roundtable", text: "Think Tank Network to identify and address the common challenges faced by patients/families." },
+                { icon: "fa-comments-alt", title: "Clinical Trials Patient Perspectives", text: "Addressing common challenges / tips, and positive experiences — a discussion forum." },
                 { icon: "fa-heartbeat", title: "Survivorship Care Planning", text: "Survivorship Care Planning Guidance for patients and caregivers/families to advance quality of life care and support for strength and resilience in meeting the disease challenges." },
                 { icon: "fa-globe", title: "International Leiomyosarcoma Research Roundtable", text: "Annual meetings of global research leaders — physician-scientists addressing the unmet needs in research and clinical trial development, including the testing and repurposing of drugs for LMS." },
                 { icon: "fa-flask", title: "Annual Research Funding Support", text: "Accelerating and advancing research for precision clinical trial development to increase treatment options." },

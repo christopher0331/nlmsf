@@ -22,6 +22,12 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "General",
   },
   {
+    title: "NLMSF New Diagnosis Toolkit",
+    description: "A comprehensive toolkit for newly diagnosed LMS patients covering key first steps, essential questions for your care team, understanding your pathology report, and building your support network",
+    driveUrl: "https://drive.google.com/file/d/1FEN4x-fGR1JBr43VD9RjB4mGKRnsf4oH/view?usp=sharing",
+    category: "General",
+  },
+  {
     title: "NLMSF Diagnostic Quick Tips & Care Guide",
     description: "What to Do After a New Diagnosis",
     driveUrl: "https://drive.google.com/file/d/1kvq_OiK2cOTVg1MDh_jb8US4mouBOptj/view",

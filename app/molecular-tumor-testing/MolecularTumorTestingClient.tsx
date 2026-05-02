@@ -230,7 +230,7 @@ export default function MolecularTumorTestingClient() {
                         &quot;Molecular testing revealed a specific mutation in my tumor that made me eligible for a targeted therapy
                         clinical trial. This personalized approach has given me hope and more treatment options.&quot;
                       </p>
-                      <div className="testimonial-author">- LMS Patient, Denver Support Group</div>
+                      <div className="testimonial-author">- LMS Patient</div>
                     </div>
                   </div>
                 </div>

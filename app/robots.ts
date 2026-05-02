@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin/", "/wp-login.php"],
+      disallow: ["/admin/", "/wp-login.php", "/*?form=*"],
     },
     sitemap: "https://nlmsf.org/sitemap.xml",
   };

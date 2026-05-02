@@ -41,7 +41,7 @@ const nextConfig: NextConfig = {
       { source: "/connect-with-clinician", destination: "/find-a-sarcoma-specialist", permanent: true },
       { source: "/contact-us", destination: "/contact", permanent: true },
       { source: "/denver-resources", destination: "/resources", permanent: true },
-      { source: "/denver-support", destination: "/support", permanent: true },
+      { source: "/denver-support", destination: "/leiomyosarcoma-support-group", permanent: true },
       { source: "/donate-leiomyosarcoma-research", destination: "/donate", permanent: true },
       { source: "/donate-online", destination: "/donate", permanent: true },
       { source: "/donate-staged", destination: "/donate", permanent: true },
@@ -255,6 +255,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "old.nlmsf.org",
+      },
+      {
+        protocol: "https",
+        hostname: "staging5.nlmsf.org",
       },
     ],
   },
