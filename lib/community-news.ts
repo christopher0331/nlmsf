@@ -1,4 +1,5 @@
 import { getPrisma } from "@/lib/prisma";
+import { unstable_cache } from "next/cache";
 
 function formatDisplayDate(manualDate: string): string {
   const [y, m, d] = manualDate.split("-").map(Number);
@@ -42,10 +43,10 @@ function toFeedEntry(entry: {
 }
 
 /** All snapshots and news_tracker entries for the community news page. */
-export async function getFullFeed(): Promise<{
+const getFullFeedCached = unstable_cache(async (): Promise<{
   snapshots: FeedEntry[];
   newsTracker: FeedEntry[];
-}> {
+}> => {
   try {
     const prisma = await getPrisma();
     const [snapshots, newsTracker] = await Promise.all([
@@ -72,4 +73,11 @@ export async function getFullFeed(): Promise<{
     }
     throw error;
   }
+}, ["community-news-full-feed"], { revalidate: 900 });
+
+export async function getFullFeed(): Promise<{
+  snapshots: FeedEntry[];
+  newsTracker: FeedEntry[];
+}> {
+  return getFullFeedCached();
 }
