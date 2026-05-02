@@ -305,7 +305,7 @@ export default function SurvivorshipCarePlanningTwoPage() {
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    https://www.cancer.net/survivorship/what-survivorship
+                    Cancer.Net Survivorship Guidance
                   </a>
                 </p>
               </div>
@@ -425,7 +425,7 @@ export default function SurvivorshipCarePlanningTwoPage() {
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      https://www.canceradvocacy.org/news/an-updated-survivorship-care
+                      Updated Survivorship Care Planning Template
                     </a>
                   </p>
                 </div>

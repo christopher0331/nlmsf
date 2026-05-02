@@ -61,10 +61,10 @@ export default function OurBoardPage() {
 
         <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
           <div className="prose prose-gray max-w-none space-y-4 text-gray-700">
-            <p><strong>2002 – present</strong>: The NLMSF Research Project Support Funding history: <a href="https://leiomyosarcoma.info/research-projects/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://leiomyosarcoma.info/research-projects/</a></p>
+            <p><strong>2002 – present</strong>: The NLMSF Research Project Support Funding history: <a href="https://leiomyosarcoma.info/research-projects/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Leiomyosarcoma.info Research Projects</a></p>
             <p><strong>2020</strong> Sarcoma Patients Euro.Net partner with the NLMSF in support of the International LMS Research Roundtable.</p>
-            <p><strong>2019</strong> The NLMSF launched the International Leiomyosarcoma Roundtable, now with 120 research members in global support. <a href="https://leiomyosarcoma.info/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://leiomyosarcoma.info/</a></p>
-            <p><strong>July 2016</strong>: Congress passed the Resolution: <a href="https://www.govtrack.us/congress/bills/114/sres545/text/ats" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://www.govtrack.us/congress/bills/114/sres545/text/ats</a></p>
+            <p><strong>2019</strong> The NLMSF launched the International Leiomyosarcoma Roundtable, now with 120 research members in global support. <a href="https://leiomyosarcoma.info/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Leiomyosarcoma.info</a></p>
+            <p><strong>July 2016</strong>: Congress passed the Resolution: <a href="https://www.govtrack.us/congress/bills/114/sres545/text/ats" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">National Leiomyosarcoma Awareness Day Resolution</a></p>
             <p><strong>2016</strong> – The NLMSF reached out for support from Congress for National Leiomyosarcoma Awareness Day – July 15.</p>
             <p><strong>2015</strong> – The NLMSF collaborated with several cancer / sarcoma working groups throughout the US and Canada to strengthen and amplify patient – family/caregiver resource support.</p>
             <p><strong>2012</strong> – Patient education programs began at sarcoma centers of excellence and the evolution of the Foundation has been remarkable.</p>
@@ -172,7 +172,7 @@ export default function OurBoardPage() {
                   <p>An interview from Global Genes with the President of the National LMS Foundation:</p>
                   <p>
                     <a href="https://globalgenes.org/raredaily/rare-leader-annie-achee-president-of-the-national-leiomyosarcoma-foundation/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">
-                      https://globalgenes.org/raredaily/rare-leader-annie-achee-president-of-the-national-leiomyosarcoma-foundation/
+                      Global Genes Interview with Annie Achee
                     </a>
                   </p>
                 </div>

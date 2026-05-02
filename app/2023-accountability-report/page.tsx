@@ -248,7 +248,7 @@ export default function Report2023Page() {
                   <p>
                     To learn more about the NCI (National Cancer Institute) Translational Research Program (SPORE), see{" "}
                     <a href="https://trp.cancer.gov/" target="_blank" rel="noopener noreferrer" className={contentLink}>
-                      https://trp.cancer.gov/
+                      NCI Translational Research Program (SPORE)
                     </a>
                   </p>
                 </div>
@@ -275,7 +275,7 @@ export default function Report2023Page() {
                 <p>
                   Learn more about the Research Roundtable at{" "}
                   <a href="https://leiomyosarcoma.info/irr-forum/" target="_blank" rel="noopener noreferrer" className={contentLink}>
-                    https://leiomyosarcoma.info/irr-forum/
+                    International LMS Research Roundtable Forum
                   </a>
                 </p>
               </div>
@@ -464,13 +464,13 @@ export default function Report2023Page() {
                 </p>
                 <ul className={`${contentList} list-disc`}>
                   <li>
-                    <a href="https://nlmsf.org/" target="_blank" rel="noopener noreferrer" className={contentLink}>https://nlmsf.org/</a>
+                    <a href="https://nlmsf.org/" target="_blank" rel="noopener noreferrer" className={contentLink}>National Leiomyosarcoma Foundation (NLMSF)</a>
                   </li>
                   <li>
-                    <a href="https://leiomyosarcoma.info" target="_blank" rel="noopener noreferrer" className={contentLink}>https://leiomyosarcoma.info</a>
+                    <a href="https://leiomyosarcoma.info" target="_blank" rel="noopener noreferrer" className={contentLink}>Leiomyosarcoma.info Research and Resource Hub</a>
                   </li>
                   <li>
-                    <a href="https://nlmsflifechange.com/" target="_blank" rel="noopener noreferrer" className={contentLink}>https://nlmsflifechange.com/</a>
+                    <a href="https://nlmsflifechange.com/" target="_blank" rel="noopener noreferrer" className={contentLink}>NLMSF Life Change</a>
                   </li>
                 </ul>
               </div>

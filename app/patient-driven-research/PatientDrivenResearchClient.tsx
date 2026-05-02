@@ -270,7 +270,7 @@ export default function PatientDrivenResearchClient() {
                       rel="noopener noreferrer"
                       className="section-link"
                     >
-                      https://rarecancer.org/
+                      Rare Cancer Research Foundation
                     </a>
                     <span className="link-separator">and</span>
                     <a
@@ -279,7 +279,7 @@ export default function PatientDrivenResearchClient() {
                       rel="noopener noreferrer"
                       className="section-link"
                     >
-                      https://pattern.org/
+                      Pattern.org
                     </a>
                   </div>
                   <div className="subtitle-wrapper">
@@ -490,7 +490,7 @@ export default function PatientDrivenResearchClient() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          https://cure.ncats.io/resources/guides
+                          CURE ID Guides
                         </a>
                       </li>
                       <li>
@@ -502,7 +502,7 @@ export default function PatientDrivenResearchClient() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          https://cure.ncats.io/resources/faqs
+                          CURE ID FAQs and Videos
                         </a>
                       </li>
                     </ul>
@@ -860,7 +860,7 @@ export default function PatientDrivenResearchClient() {
                       rel="noopener noreferrer"
                       className="section-link"
                     >
-                      https://joincountmein.org/lms
+                      Count Me In LMS Project
                     </a>{" "}
                     with more details about the project which is going to start
                     enrolling patients in early 2022. There is a button on the
@@ -948,7 +948,7 @@ export default function PatientDrivenResearchClient() {
                         rel="noopener noreferrer"
                         className="section-link"
                       >
-                        https://rarecancer.org/
+                        RareCancer.org
                       </a>
                     </p>
                   </div>

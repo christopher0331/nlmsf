@@ -514,8 +514,8 @@ export default function DonatePage() {
                     height={240}
                   />
                   <div className="flex flex-col gap-2">
-                    <a href="https://careasy.org/home" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>https://careasy.org/home</a>
-                    <a href="https://careasy.org/choose-a-nonprofit" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>https://careasy.org/choose-a-nonprofit</a>
+                    <a href="https://careasy.org/home" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>CARS Home</a>
+                    <a href="https://careasy.org/choose-a-nonprofit" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>Choose a Nonprofit via CARS</a>
                     <a href="https://careasy.org/home#NP-donation-form" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>Donate A Car To Support A Nonprofit or Charity</a>
                     <a href="https://careasy.org/choose-a-nonprofit" className="text-[#7e22ce] text-sm font-medium no-underline hover:underline" {...ext}>Donate Your Car to Your Favorite Nonprofit or Charity</a>
                   </div>
@@ -628,7 +628,7 @@ export default function DonatePage() {
                     <span className="font-semibold text-[#7e22ce]">SO EASY TO CONTRIBUTE TOWARD LMS RESEARCH THROUGH THE NATIONAL LEIOMYOSARCOMA FOUNDATION (NLMSF)</span> – 5% of your grocery bill will go to LMS Research IF the Foundation can receive at least $25 in quarterly grocery contributions – Kroger will send a payout to the NLMSF.
                   </p>
                   <p className="text-gray-600 text-base leading-relaxed mb-3">
-                    <strong>REGISTER YOUR CARD WITH KROGER HERE</strong>: <a href="https://www.kroger.com/i/community/community-rewards" className="text-[#7e22ce] font-medium no-underline hover:underline" {...ext}>https://www.kroger.com/i/community/community-rewards</a> <strong>ON BEHALF OF THE NLMSF RESEARCH SUPPORT</strong>
+                    <strong>REGISTER YOUR CARD WITH KROGER HERE</strong>: <a href="https://www.kroger.com/i/community/community-rewards" className="text-[#7e22ce] font-medium no-underline hover:underline" {...ext}>Kroger Community Rewards</a> <strong>ON BEHALF OF THE NLMSF RESEARCH SUPPORT</strong>
                   </p>
                   <p className="text-gray-600 text-base leading-relaxed mb-6"><span className="font-semibold text-[#7e22ce]">KROGER Community Rewards Program: ORG No. KV246</span></p>
                   <a href="https://www.kroger.com/i/kroger-family-of-companies" className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-lg" style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.35)" }} {...ext}>

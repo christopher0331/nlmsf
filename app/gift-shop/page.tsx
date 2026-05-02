@@ -138,7 +138,7 @@ export default function GiftShopPage() {
                     <p>All orders are filled by volunteers. For all purchases, please email <a href="mailto:annieachee@aol.com">annieachee@aol.com</a>.</p>
                     <p>The proceeds from all purchases are directed to LMS Research.</p>
                     <p>
-                      Purchasing items from the Gift Shop may be done online: <a href="https://nlmsf.org/donate/" {...ext}>https://nlmsf.org/donate/</a>
+                      Purchasing items from the Gift Shop may be done online: <a href="https://nlmsf.org/donate/" {...ext}>Donate online via NLMSF</a>
                       <br />
                       or by check to the NLMSF – 1685 So, Colorado Blvd, Unit S, Suite 447 Denver, CO 80222
                     </p>

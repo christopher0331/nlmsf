@@ -202,7 +202,7 @@ export default function AccountabilityReportsPage() {
                           <li key={item} className="rounded-md border-l-2 border-l-cyan-500 bg-white py-2 pl-4 pr-2">{item}</li>
                         ))}
                       </ul>
-                      <p className="mt-4 mb-0">Learn more about the Research Roundtable at <a href="https://leiomyosarcoma.info/irr-forum/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://leiomyosarcoma.info/irr-forum/</a></p>
+                      <p className="mt-4 mb-0">Learn more about the Research Roundtable at <a href="https://leiomyosarcoma.info/irr-forum/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">International LMS Research Roundtable Forum</a></p>
                     </div>
                   </div>
                 </div>
@@ -299,7 +299,7 @@ export default function AccountabilityReportsPage() {
                   <p className="mb-4 text-sm text-gray-700">Patient and caregiver resources; research updates, clinical trials; and well-being resources</p>
                   <ul className="list-none space-y-1 p-0">
                     {["https://nlmsf.org/", "https://leiomyosarcoma.info", "https://nlmsflifechange.com/"].map((url) => (
-                      <li key={url} className="before:mr-2 before:content-['→'] before:font-bold before:text-cyan-600"><a href={url} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">{url}</a></li>
+                      <li key={url} className="before:mr-2 before:content-['→'] before:font-bold before:text-cyan-600"><a href={url} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">{url === "https://nlmsf.org/" ? "National Leiomyosarcoma Foundation (NLMSF)" : url === "https://leiomyosarcoma.info" ? "Leiomyosarcoma.info Research and Resource Hub" : "NLMSF Life Change"}</a></li>
                     ))}
                   </ul>
                 </div>
@@ -400,9 +400,9 @@ export default function AccountabilityReportsPage() {
                   <div className="rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 to-yellow-100 p-6 text-center">
                     <h4 className="mb-4 font-semibold text-amber-900">Three websites providing comprehensive information</h4>
                     <ul className="list-none space-y-2 p-0 text-sm">
-                      <li><a href="https://nlmsf.org/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://nlmsf.org/</a></li>
-                      <li><a href="https://leiomyosarcoma.info" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://leiomyosarcoma.info</a></li>
-                      <li><a href="https://nlmsflifechange.com/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://nlmsflifechange.com/</a></li>
+                      <li><a href="https://nlmsf.org/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">National Leiomyosarcoma Foundation (NLMSF)</a></li>
+                      <li><a href="https://leiomyosarcoma.info" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Leiomyosarcoma.info Research and Resource Hub</a></li>
+                      <li><a href="https://nlmsflifechange.com/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">NLMSF Life Change</a></li>
                     </ul>
                   </div>
                   <div className="rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 to-yellow-100 p-6 text-center">

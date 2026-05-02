@@ -102,11 +102,11 @@ export default function OpenResearchPage() {
                 need to lead the charge together! And &quot;Together We Can!&quot;
               </span>{" "}
               <a href="https://nlmsf.org/support/" target="_blank" rel="noopener noreferrer">
-                https://nlmsf.org/support/
+                Support the NLMSF Mission
               </a>{" "}
               <span className="open-research-cta-highlight">and</span>{" "}
               <a href="https://nlmsf.org/donate/" target="_blank" rel="noopener noreferrer">
-                https://nlmsf.org/donate/
+                Donate to NLMSF Research
               </a>
             </p>
           </div>

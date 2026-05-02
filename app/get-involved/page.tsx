@@ -60,7 +60,7 @@ export default function GetInvolvedPage() {
               </a>
               <p>Help Shape the Future of Survival:</p>
               <p>
-                <a href="https://nlmsf.org/donate-leiomyosarcoma-research/" {...ext}>https://nlmsf.org/donate-leiomyosarcoma-research/</a>
+                <a href="https://nlmsf.org/donate-leiomyosarcoma-research/" {...ext}>Donate to Leiomyosarcoma Research</a>
               </p>
               <p>Please enter your loved one&apos;s name in the memo if you would like to donate in his/her name.</p>
               <a href="https://nlmsf.org/donate-leiomyosarcoma-research/" className="sidebar-widget-button" {...ext}>
@@ -98,13 +98,13 @@ export default function GetInvolvedPage() {
             <h3 className="sidebar-widget-title">Follow Us!</h3>
             <div className="sidebar-widget-content">
               <div className="social-icons">
-                <a href="https://www.facebook.com/groups/1329603747125818/" className="social-icon facebook" {...ext}>
+                <a href="https://www.facebook.com/groups/1329603747125818/" className="social-icon facebook" aria-label="Join our Facebook group" {...ext}>
                   <i className="fab fa-facebook-f" aria-hidden />
                 </a>
-                <a href="https://twitter.com/nationallmsf" className="social-icon twitter" {...ext}>
+                <a href="https://twitter.com/nationallmsf" className="social-icon twitter" aria-label="Follow NLMSF on X" {...ext}>
                   <i className="fab fa-twitter" aria-hidden />
                 </a>
-                <a href="https://www.youtube.com/channel/UCeDSK4og69Q78GP-SsKpIQg" className="social-icon youtube" {...ext}>
+                <a href="https://www.youtube.com/channel/UCeDSK4og69Q78GP-SsKpIQg" className="social-icon youtube" aria-label="Visit NLMSF YouTube channel" {...ext}>
                   <i className="fab fa-youtube" aria-hidden />
                 </a>
               </div>
