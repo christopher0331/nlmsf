@@ -45,7 +45,7 @@ const nccsResources = [
     description:
       "NCCS resource on survivorship care planning templates and implementation strategies.",
     url: "https://canceradvocacy.org/an-updated-survivorship-care-planning-template-and-identifying-barriers-to-implementation/",
-    cta: "Read More",
+    cta: "Read NCCS survivorship care planning update",
   },
   {
     title: "Cancer Survivorship Checklist",

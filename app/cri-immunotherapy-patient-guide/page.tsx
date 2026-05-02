@@ -392,7 +392,7 @@ export default function CriImmunotherapyPatientGuidePage() {
                   style={{ background: "linear-gradient(135deg, #059669, #10b981)" }}
                   {...ext}
                 >
-                  Learn More
+                  Read ACS soft tissue sarcoma immunotherapy guide
                 </a>
               </div>
             </div>

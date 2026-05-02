@@ -13,6 +13,7 @@ export default function OpenResearchPage() {
     <div className="open-research-page">
       <section className="open-research-hero">
         <div className="open-research-container">
+          <h1 className="sr-only">Opening Every Door Together for LMS Research</h1>
           <Image
             src="https://media.nlmsf.org/wp-content/uploads/2022/03/image1.jpg"
             alt="Open research hero"

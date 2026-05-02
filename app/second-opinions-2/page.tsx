@@ -541,7 +541,7 @@ export default function SecondOpinionsTwoPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Click here
+                      Browse the SARC Sarcoma Centers directory
                     </a>
                     .
                   </p>
@@ -718,7 +718,7 @@ export default function SecondOpinionsTwoPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Learn more
+                        Review MD Anderson second-opinion pathology details
                       </a>
                     </li>
                   </ul>

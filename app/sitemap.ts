@@ -3,6 +3,11 @@ import fs from "fs";
 import path from "path";
 
 const BASE_URL = "https://nlmsf.org";
+const EXCLUDED_STATIC_ROUTES = new Set([
+  // These routes intentionally redirect and should not be in sitemap.xml
+  "/caregiver-traits",
+  "/health-insurance-guidance",
+]);
 
 function discoverAppRoutes(): string[] {
   const appDir = path.join(process.cwd(), "app");
@@ -42,26 +47,17 @@ function discoverAppRoutes(): string[] {
 }
 
 const tributePages: string[] = [
-  "/andria-barnes-ruth-tribute-page",
   "/andria-barnes-ruth",
-  "/anna-marmo-tribute-page",
   "/anna-marmo",
-  "/barbara-esther-olson-tribute-page",
   "/barbara-esther-olson",
-  "/barbara-lynn-davis-tribute-page",
   "/barbara-lynn-davis",
-  "/caitlin-anne-kuhlman-tribute-page",
   "/caitlin-anne-kuhlman",
-  "/cheryl-phyllis-scharp-tribute-page",
   "/cheryl-phyllis-scharp",
-  "/christian-snyder-tribute-page",
+  "/christian-snyder",
   "/denise-f-montano-tribute-fund",
-  "/denise-f-montano-tribute-page",
-  "/denise-janowiak-tribute-page",
   "/denise-janowiak",
   "/donald-robert-anderson-tribute-page",
   "/donald-robert-anderson",
-  "/donna-stieger-tribute-page",
   "/donna-stieger",
   "/florence-benoit-tribute-page",
   "/florence-benoit",
@@ -181,7 +177,9 @@ const blogPosts: string[] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = discoverAppRoutes();
+  const staticRoutes = discoverAppRoutes().filter(
+    (route) => !EXCLUDED_STATIC_ROUTES.has(route),
+  );
   const pages: MetadataRoute.Sitemap = staticRoutes.map((route) => {
     const withSlash = route === "/" ? "/" : `${route}/`;
     return {

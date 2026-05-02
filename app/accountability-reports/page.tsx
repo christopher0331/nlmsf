@@ -279,7 +279,14 @@ export default function AccountabilityReportsPage() {
                 ].map((item) => (
                   <div key={item.title} className="rounded-lg border border-emerald-200 border-l-4 border-l-emerald-500 bg-white p-6">
                     <h4 className="mb-3 font-semibold text-emerald-900">{item.title}</h4>
-                    <p className="m-0 text-gray-700">{item.p} {item.link && <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Learn more</a>}</p>
+                    <p className="m-0 text-gray-700">
+                      {item.p}{" "}
+                      {item.link && (
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">
+                          Visit {item.title}
+                        </a>
+                      )}
+                    </p>
                   </div>
                 ))}
               </div>

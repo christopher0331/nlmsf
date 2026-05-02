@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function EducationVideosPage() {
   return (
     <main>
+      <h1 className="sr-only">Education Videos and Resources</h1>
       <EducationVideosSection />
     </main>
   );

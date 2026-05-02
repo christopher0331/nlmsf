@@ -241,7 +241,7 @@ export default function FinancialAssistance2Page() {
               <li><strong className="text-gray-800">Personal Financial Planning</strong> – Getting advice from a financial planner may be a valuable appointment. An accountant can help guide you on income taxes.</li>
               <li><strong className="text-gray-800">Health Insurance</strong> – Your own health insurance benefit entitlements need to be carefully reviewed to best understand your policy&apos;s coverage.</li>
               <li><strong className="text-gray-800">Your Community</strong> – Local organizations or advocacy organizations can provide assistance.</li>
-              <li><strong className="text-gray-800">TRIAGE CANCER</strong> – helpful information: Quick Guide to Getting &amp; Paying for Prescription Drugs (<a href="https://triagecancer.org/QuickGuide-RxAssistance" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Link</a>)</li>
+              <li><strong className="text-gray-800">TRIAGE CANCER</strong> – helpful information: Quick Guide to Getting &amp; Paying for Prescription Drugs (<a href="https://triagecancer.org/QuickGuide-RxAssistance" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Triage Cancer Prescription Drug Assistance Quick Guide</a>)</li>
             </ul>
           </section>
 

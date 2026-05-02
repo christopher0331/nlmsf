@@ -142,7 +142,7 @@ export default function NewDiagnosisPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Learn More
+                    View treatment after diagnosis guidance
                   </a>
                 </div>
               </div>
@@ -361,7 +361,7 @@ export default function NewDiagnosisPage() {
                   <h3 className="card-title">New Diagnosis/Treatment</h3>
                   <p className="card-description">Next Steps</p>
                   <a href="https://nlmsf.org/navigating-leiomyosarcoma-treatment-after-treatment/" className="card-button">
-                    <span>Learn More</span>
+                    <span>Explore post-diagnosis treatment guidance</span>
                     <i className="fas fa-arrow-right"></i>
                   </a>
                 </div>

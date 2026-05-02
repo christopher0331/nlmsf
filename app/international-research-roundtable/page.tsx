@@ -143,7 +143,7 @@ export default function InternationalResearchRoundtablePage() {
               </p>
               <p>
                 Find all the 2024 RFP details here:{" "}
-                <a href="https://docs.google.com/document/d/1X1Q0ifAnUnSWfTFMlkyDF95ypJyy3f2o/edit?usp=drive_link" {...ext}>Click Here</a>
+                <a href="https://docs.google.com/document/d/1X1Q0ifAnUnSWfTFMlkyDF95ypJyy3f2o/edit?usp=drive_link" {...ext}>View the 2024 LMS research grant RFP details</a>
               </p>
 
               <h2>Congratulations to the NLMSF Research Grantees</h2>

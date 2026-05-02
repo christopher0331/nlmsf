@@ -334,7 +334,7 @@ export default function PersonalAdvocacyPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Learn More
+                Explore the Circle of Hope community
               </a>
             </div>
           </section>

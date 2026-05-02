@@ -184,7 +184,7 @@ export default function MissionPage() {
                     <div className="timeline-dot" aria-hidden />
                     <div className="timeline-content">
                       <h5>2019</h5>
-                      <p>The NLMSF launched the International Leiomyosarcoma Roundtable, now with 120 research members in global support. <a href="https://leiomyosarcoma.info/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+                      <p>The NLMSF launched the International Leiomyosarcoma Roundtable, now with 120 research members in global support. <a href="https://leiomyosarcoma.info/" target="_blank" rel="noopener noreferrer">Visit Leiomyosarcoma.info research hub</a></p>
                     </div>
                   </div>
                   <div className="timeline-item timeline-item-orange">

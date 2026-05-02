@@ -64,22 +64,22 @@ export default function HealthInsuranceDeepDivePage() {
                 <div className="resource-card">
                   <i className="fas fa-file-alt" aria-hidden />
                   <h4>Leiomyosarcoma and Social Security Disability Benefits</h4>
-                  <a href="https://www.disability-benefits-help.org/compassionate-allowances/leiomyosarcoma" className="resource-link" {...ext}>Learn More</a>
+                  <a href="https://www.disability-benefits-help.org/compassionate-allowances/leiomyosarcoma" className="resource-link" {...ext}>Leiomyosarcoma SSDI benefits overview</a>
                 </div>
                 <div className="resource-card">
                   <i className="fas fa-clipboard-check" aria-hidden />
                   <h4>Compassionate Allowance for Leiomyosarcoma</h4>
-                  <a href="https://secure.ssa.gov/apps10/poms.nsf/lnx/0423022961" className="resource-link" {...ext}>Learn More</a>
+                  <a href="https://secure.ssa.gov/apps10/poms.nsf/lnx/0423022961" className="resource-link" {...ext}>SSA POMS compassionate allowance criteria</a>
                 </div>
                 <div className="resource-card">
                   <i className="fas fa-balance-scale" aria-hidden />
                   <h4>Medical-Vocational Allowance Approval</h4>
-                  <a href="https://www.ssdrc.com/prem8.html" className="resource-link" {...ext}>Learn More</a>
+                  <a href="https://www.ssdrc.com/prem8.html" className="resource-link" {...ext}>Medical-vocational allowance approval guide</a>
                 </div>
                 <div className="resource-card">
                   <i className="fas fa-question-circle" aria-hidden />
                   <h4>What is Social Security&apos;s Medical Vocational Allowance?</h4>
-                  <a href="https://www.disability-benefits-help.org/glossary/medical-vocational-allowance" className="resource-link" {...ext}>Learn More</a>
+                  <a href="https://www.disability-benefits-help.org/glossary/medical-vocational-allowance" className="resource-link" {...ext}>Medical-vocational allowance glossary</a>
                 </div>
               </div>
             </div>

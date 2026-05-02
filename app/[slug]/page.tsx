@@ -26,6 +26,7 @@ export default async function TributeSlugPage({ params }: Props) {
   }
   return (
     <main className="min-h-screen bg-[#f8fafc]">
+      <h1 className="sr-only">{actualSlug.replace(/-/g, " ")} tribute page</h1>
       <TributePageClient slugPromise={Promise.resolve({ slug: actualSlug })} />
     </main>
   );

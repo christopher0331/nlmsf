@@ -111,7 +111,7 @@ export default function ResearchInitiativesPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  here
+                  on the Leiomyosarcoma.info contributors page
                 </a>
                 ) who provided a valuable compass to guide LMS patients, caregivers, and families.
               </p>

@@ -250,7 +250,7 @@ export default function LeiomyosarcomaSupportGroupPage() {
                     <td className="group-name"><i className="fas fa-book-medical" aria-hidden /><span>LMS ABC&apos;s Support Group</span></td>
                     <td>Educational</td>
                     <td>For new and recurring diagnoses: managing, asking questions, and coping</td>
-                    <td><Link href="/abcs-of-new-diagnosis" className="table-link">Learn More</Link></td>
+                    <td><Link href="/abcs-of-new-diagnosis" className="table-link">LMS ABCs diagnosis and treatment program details</Link></td>
                   </tr>
                   <tr>
                     <td className="group-name"><i className="fas fa-hands-helping" aria-hidden /><span>Caregiving Counts</span></td>

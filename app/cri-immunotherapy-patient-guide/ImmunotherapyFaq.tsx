@@ -12,7 +12,7 @@ const FAQ_ITEMS = [
   {
     q: "Can you combine targeted therapy with immunotherapy?",
     a: "Yes, immunotherapy might consolidate dramatic tumor responses into durable remissions, reducing the risk of drug-resistant clones. ",
-    links: [{ href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3967236/", text: "Learn more" }],
+    links: [{ href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3967236/", text: "Read immunotherapy combination research (PMC)" }],
   },
   {
     q: "What is combination immunotherapy?",
