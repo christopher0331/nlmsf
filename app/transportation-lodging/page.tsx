@@ -192,7 +192,7 @@ export default function TransportationLodgingPage() {
             <h4>Featured Resource</h4>
             <div className="tl-featured-resource">
               <Image
-                src="https://media.nlmsf.org/wp-content/uploads/2021/05/hope-lodge.jpg"
+                src="/images/nlmsf_logo_no_background-removebg-preview.png"
                 alt="Hope Lodge"
                 className="tl-featured-image"
                 width={320}

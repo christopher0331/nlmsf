@@ -681,7 +681,7 @@ export default function ResourceSupportPage() {
               <div className="resource-highlight mt-5">
                 <div className="highlight-image">
                   <Image
-                    src="https://m.media-amazon.com/images/I/51ZQ7tHfFNL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="The American Cancer Society Complete Guide to Family Caregiving"
                     className="img-fluid"
                     width={291}

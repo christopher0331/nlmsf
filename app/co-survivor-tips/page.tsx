@@ -230,7 +230,7 @@ export default function CoSurvivorTipsPage() {
               <div className="flex flex-col md:flex-row gap-6 items-start pt-4 border-t border-gray-200">
                 <div className="shrink-0 w-full md:w-[200px]">
                   <Image
-                    src="https://www.cancer.net/sites/cancer.net/files/styles/blog_image/public/2020-06/Caregiver-Self-Doubt-Blog-June-2020-750x375.jpg"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="Caregiver Self-Doubt"
                     className="w-full rounded-lg"
                     width={640}

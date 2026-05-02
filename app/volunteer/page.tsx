@@ -102,7 +102,7 @@ export default function VolunteerPage() {
             </div>
             <div className="vol-section-body">
               <div className="vol-image">
-                <Image src="/images/ambassador.jpg" alt="NLMSF Community Ambassador" width={400} height={300} />
+                <Image src="/images/nlmsf_logo_no_background-removebg-preview.png" alt="NLMSF Community Ambassador" width={400} height={300} />
               </div>
               <div className="vol-text">
                 <h3>Be a Volunteer Foundation Community Ambassador</h3>
@@ -194,7 +194,7 @@ export default function VolunteerPage() {
                     Check our Patient Education page for calendar updates on upcoming programs and
                     events that you can attend or help organize.
                   </p>
-                  <a href="/patient-education" className="vol-action-button">
+                  <a href="/events/" className="vol-action-button">
                     View Education Calendar
                   </a>
                 </div>

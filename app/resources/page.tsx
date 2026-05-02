@@ -223,7 +223,7 @@ export default function ResourcesPage() {
                   patient or caregiver who has experienced similar challenges.
                 </p>
                 <div className="text-center">
-                  <a href="http://randal.sg-host.com/uncategorized/lms-lifeline-buddy-program/" className="resource-link">
+                  <a href="https://nlmsf.org/navigating-support/#buddy-program" className="resource-link">
                     <i className="fas fa-heart"></i> Learn About the Buddy Program
                   </a>
                 </div>

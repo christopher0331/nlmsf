@@ -18,6 +18,7 @@ type VideoItem = {
   description: string;
   url: string;
   initials: string;
+  customImage?: string;
 };
 
 const ctDnaVideos: VideoItem[] = [
@@ -44,6 +45,7 @@ const ctDnaVideos: VideoItem[] = [
       "Panel discussion with experts including Dr. Nam Quoc Bui, Dr. Brian Compton, Dr. Elizabeth Davis, Dr. Erlinda Maria Gordon, Dr. Matthew Hemming, Dr. Elise Nasif, Dr. Joanna Pryzbyl, Dr. David Schulman and Dr. Jonathan Trent.",
     url: "https://www.youtube.com/watch?v=fhsyH8bJn-l",
     initials: "P",
+    customImage: "/images/nlmsf_logo_no_background-removebg-preview.png",
   },
   {
     id: "4DdhdoP8BOQ",
@@ -117,7 +119,7 @@ function VideoCard({ video }: { video: VideoItem }) {
     >
       <div className="rev-thumb">
         <Image
-          src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
+          src={video.customImage ?? `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
           alt={video.title}
           width={640}
           height={360}
@@ -171,7 +173,7 @@ export default function RelatedEducationalVideosPage() {
         >
           <div className="rev-featured-thumb">
             <Image
-              src={`https://img.youtube.com/vi/${featured.id}/maxresdefault.jpg`}
+              src={featured.customImage ?? `https://img.youtube.com/vi/${featured.id}/maxresdefault.jpg`}
               alt={featured.title}
               width={1280}
               height={720}

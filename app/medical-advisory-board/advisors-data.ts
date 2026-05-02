@@ -6,7 +6,7 @@ export const advisors = [
   { name: "Nam Quoc Bui, MD", position: "Sarcoma Medical Oncologist", institution: "Stanford Cancer Institute\nStanford University\nStanford, CA", img: `${S5}/2022/05/Bigger-Dr-Bui.jpg` },
   { name: "Kenneth Cardona, M.D., FACS", position: "Sarcoma Surgical Oncologist", institution: "Emory Winship Cancer Institute\nAtlanta, GA", img: `${S5}/2024/03/admin-ajax-2-1.jpeg` },
   { name: "Joseph Carlson, M.D., PhD.", position: "Pathologist", institution: "Keck School of Medicine\nUniversity of Southern California\nLos Angeles, CA", img: `${S5}/2024/03/Carlson-Photo.jpg` },
-  { name: "Priya Chudasama, Ph.D.", position: "Sarcoma Researcher", institution: "German Cancer Research Center", img: `${PROD}/2025/04/Screenshot-2025-04-20-at-12.33.08 PM.png` },
+  { name: "Priya Chudasama, Ph.D.", position: "Sarcoma Researcher", institution: "German Cancer Research Center", img: "/images/nlmsf_logo_no_background-removebg-preview.png" },
   { name: "Elizabeth Davis, M.D.", position: "Sarcoma Medical Oncologist", institution: "Vanderbilt-Ingram Cancer Center\nNashville, TN", img: `${S5}/2024/03/Dr.-Elizabeth-Davis-1-300x300-1.webp` },
   { name: "Ryan Denu, M.D., Ph.D.", position: "Sarcoma Medical Oncologist", institution: "University of Texas\nMD Anderson Cancer Center\nHouston, TX", img: `${PROD}/2025/08/Ryan-Denu.jpg` },
   { name: "Mihaela Druta, M.D.", position: "Sarcoma Medical Oncologist", institution: "Moffitt Cancer Center and Research Institute\nTampa, FL", img: `${S5}/2024/03/admin-ajax-1.jpeg` },

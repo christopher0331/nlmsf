@@ -333,7 +333,7 @@ export default function Immunotherapy2Page() {
               >
                 <div className="imm-video-thumb">
                   <Image
-                    src="https://img.youtube.com/vi/yyZffpH0SQE/maxresdefault.jpg"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="Dr. Arun Singh — Early-Stage Trial of Immunotherapy"
                     width={480}
                     height={270}

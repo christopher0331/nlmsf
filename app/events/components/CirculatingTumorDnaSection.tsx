@@ -34,7 +34,7 @@ export default function CirculatingTumorDnaSection() {
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-4.43.49 PM.png"
+                  src="/images/nlmsf_logo_no_background-removebg-preview.png"
                   alt="Video Thumbnail"
                   width={640}
                   height={360}
@@ -68,7 +68,7 @@ export default function CirculatingTumorDnaSection() {
               Nasif, Dr. Joanna Pryzbyl, Dr. David Schulman and Dr. Jonathan Trent.
             </p>
             <a
-              href="https://www.youtube.com/watch?v=fhsyH8bJn_I"
+              href="https://www.youtube.com/watch?v=fhsyH8bJn-l"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800"

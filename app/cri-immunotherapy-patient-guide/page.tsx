@@ -239,7 +239,7 @@ export default function CriImmunotherapyPatientGuidePage() {
                   </h3>
                   <p className="resource-link mb-4">
                     <a
-                      href="/documents/CRI_Patients-Guide-25.pdf"
+                      href="https://media.nlmsf.org/wp-content/uploads/2023/01/Leiomyosarcoma-NLF-Flyer-1.pdf"
                       className="font-medium text-blue-600 no-underline hover:underline"
                       {...ext}
                     >

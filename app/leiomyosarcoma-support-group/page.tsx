@@ -208,13 +208,13 @@ export default function LeiomyosarcomaSupportGroupPage() {
                     <td className="group-name"><i className="fas fa-user-friends" aria-hidden /><span>LMS LIFELINE Buddy Program</span></td>
                     <td>One-on-One</td>
                     <td>Peer-to-peer patient match program for personalized support</td>
-                    <td><a href="https://nlmsf.org/lms-lifeline-buddy-program/" className="table-link" {...ext}>Request Match</a></td>
+                    <td><a href="https://nlmsf.org/navigating-support/#buddy-program" className="table-link" {...ext}>Request Match</a></td>
                   </tr>
                   <tr>
                     <td className="group-name"><i className="fas fa-user-md" aria-hidden /><span>Connect With a Clinician</span></td>
                     <td>Professional</td>
                     <td>Access volunteer sarcoma specialists who answer questions about treatment options</td>
-                    <td><a href="https://nlmsf.org/connect-with-clinician" className="table-link" {...ext}>Ask Question</a></td>
+                    <td><a href="https://nlmsf.org/find-a-sarcoma-specialist/" className="table-link" {...ext}>Ask Question</a></td>
                   </tr>
                   <tr>
                     <td className="group-name"><i className="fab fa-facebook" aria-hidden /><span>NLMSF Facebook Group</span></td>
@@ -244,7 +244,7 @@ export default function LeiomyosarcomaSupportGroupPage() {
                     <td className="group-name"><i className="fas fa-flask" aria-hidden /><span>LMS Clinical Trials Perspectives</span></td>
                     <td>Discussion</td>
                     <td>Bi-monthly peer-to-peer discussion about clinical trials experiences</td>
-                    <td><a href="https://nlmsf.org/clinical-trials-perspective" className="table-link" {...ext}>Join Discussion</a></td>
+                    <td><a href="https://nlmsf.org/clinical-trials-research-information/" className="table-link" {...ext}>Join Discussion</a></td>
                   </tr>
                   <tr>
                     <td className="group-name"><i className="fas fa-book-medical" aria-hidden /><span>LMS ABC&apos;s Support Group</span></td>
@@ -262,7 +262,7 @@ export default function LeiomyosarcomaSupportGroupPage() {
                     <td className="group-name"><i className="fas fa-tasks" aria-hidden /><span>Survivorship &amp; Coping Workshops</span></td>
                     <td>Collaborative</td>
                     <td>Patient-caregiver team discussions for sharing experiences</td>
-                    <td><a href="https://nlmsf.org/caregiver-workshops" className="table-link" {...ext}>Find Workshop</a></td>
+                    <td><a href="https://nlmsf.org/caregivers-corner/" className="table-link" {...ext}>Find Workshop</a></td>
                   </tr>
                   <tr>
                     <td className="group-name"><i className="fas fa-dove" aria-hidden /><span>Open to Hope</span></td>
@@ -286,9 +286,9 @@ export default function LeiomyosarcomaSupportGroupPage() {
                 <h3>Recorded Programs &amp; Podcasts</h3>
                 <p>Access our library of educational content at your convenience:</p>
                 <ul className="resource-list">
-                  <li><a href="https://nlmsf.org/podcasts-wellbeing" className="resource-link" {...ext}>Podcasts for Wellbeing</a> - Addressing anxiety, caregiving support, and more</li>
-                  <li><a href="https://nlmsf.org/research-recordings" className="resource-link" {...ext}>Research Community Recordings</a> - Insights on clinical trials, research updates, and treatment advances</li>
-                  <li><a href="https://nlmsf.org/lms-live" className="resource-link" {...ext}>LMS LIVE - Research in Review</a> - Latest research with opportunities to ask questions</li>
+                  <li><a href="https://nlmsf.org/sarcoma-sound-bytes/" className="resource-link" {...ext}>Podcasts for Wellbeing</a> - Addressing anxiety, caregiving support, and more</li>
+                  <li><a href="https://nlmsf.org/events/" className="resource-link" {...ext}>Research Community Recordings</a> - Insights on clinical trials, research updates, and treatment advances</li>
+                  <li><a href="https://nlmsf.org/events/" className="resource-link" {...ext}>LMS LIVE - Research in Review</a> - Latest research with opportunities to ask questions</li>
                 </ul>
               </div>
             </div>
@@ -299,8 +299,8 @@ export default function LeiomyosarcomaSupportGroupPage() {
                 <p>Join our interactive learning opportunities:</p>
                 <ul className="resource-list">
                   <li><Link href="/abcs-of-new-diagnosis" className="resource-link">LMS ABC&apos;s of the Challenging Diagnosis</Link> - For new and recurring diagnoses: managing, coping, and asking the right questions</li>
-                  <li><a href="https://nlmsf.org/clinical-trials-perspective" className="resource-link" {...ext}>LMS Clinical Trials Patient/Caregiver Perspectives</a> - Bi-monthly peer discussion group</li>
-                  <li><a href="https://nlmsf.org/symposia" className="resource-link" {...ext}>Virtual &amp; In-Person Education Symposia</a> - Updates on treatments, trials, research, and integrative medicine</li>
+                  <li><a href="https://nlmsf.org/clinical-trials-research-information/" className="resource-link" {...ext}>LMS Clinical Trials Patient/Caregiver Perspectives</a> - Bi-monthly peer discussion group</li>
+                  <li><a href="https://nlmsf.org/events/" className="resource-link" {...ext}>Virtual &amp; In-Person Education Symposia</a> - Updates on treatments, trials, research, and integrative medicine</li>
                 </ul>
               </div>
             </div>
@@ -318,7 +318,7 @@ export default function LeiomyosarcomaSupportGroupPage() {
                 <p>Resources specifically for those supporting loved ones with LMS:</p>
                 <ul className="resource-list">
                   <li><Link href="/caregivers-corner" className="resource-link">Caregiving Counts</Link> - Guidance and support from experienced caregivers</li>
-                  <li><a href="https://nlmsf.org/caregiver-workshops" className="resource-link" {...ext}>Survivorship and Coping Workshops</a> - Patient-caregiver team discussions for sharing experiences and coping strategies</li>
+                  <li><a href="https://nlmsf.org/caregivers-corner/" className="resource-link" {...ext}>Survivorship and Coping Workshops</a> - Patient-caregiver team discussions for sharing experiences and coping strategies</li>
                 </ul>
               </div>
             </div>
@@ -338,7 +338,7 @@ export default function LeiomyosarcomaSupportGroupPage() {
                 <h3>Survivorship Care Planning</h3>
                 <p>Guidance for life after treatment:</p>
                 <ul className="resource-list">
-                  <li><a href="https://nlmsf.org/survivorship-care" className="resource-link" {...ext}>Personalized Care Planning</a> - One-on-one planning that begins with you and continues with your oncology care team</li>
+                  <li><a href="https://nlmsf.org/survivorship-care-planning-2/" className="resource-link" {...ext}>Personalized Care Planning</a> - One-on-one planning that begins with you and continues with your oncology care team</li>
                 </ul>
               </div>
             </div>

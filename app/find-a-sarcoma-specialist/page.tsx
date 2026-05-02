@@ -440,7 +440,7 @@ export default function FindASarcomaSpecialistPage() {
           <section className="featured-image-section">
             <div className="featured-image">
               <Image
-                src="/images/doctor-patient-consultation.jpg"
+                src="/images/nlmsf_logo_no_background-removebg-preview.png"
                 alt="Doctor consulting with patient"
                 width={1200}
                 height={800}

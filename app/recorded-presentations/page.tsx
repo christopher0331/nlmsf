@@ -83,6 +83,7 @@ const chemoVideos: VideoItem[] = [
     description:
       "An overview of the new City of Hope program to help sarcoma patients make the best treatment decisions, especially when considering clinical trials.",
     url: "https://youtu.be/h6Ks9U7F5ek",
+    customImage: "/images/nlmsf_logo_no_background-removebg-preview.png",
   },
   {
     id: "zk6CNU11VE0",

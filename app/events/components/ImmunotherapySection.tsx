@@ -261,7 +261,7 @@ export default function ImmunotherapySection() {
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
-                  src="https://img.youtube.com/vi/qHzMxBKDSRM/mqdefault.jpg"
+                  src="/images/nlmsf_logo_no_background-removebg-preview.png"
                   alt="Video Thumbnail"
                   width={640}
                   height={360}

@@ -65,7 +65,7 @@ export default function QuestionsToAskPage() {
       <div className="qta-container">
         <div className="qta-hero-img">
           <Image
-            src="https://media.nlmsf.org/wp-content/uploads/2019/06/6b9eb851064817fc6670dbb6b548dc77-2.jpg"
+            src="/images/nlmsf_logo_no_background-removebg-preview.png"
             alt="Doctor consulting with patient about sarcoma treatment"
             width={1200}
             height={800}

@@ -111,7 +111,7 @@ export default function NewDiagnosisPage() {
             <h3 className="sidebar-subtitle">Featured Resource</h3>
             <div className="featured-resource">
               <Image
-                src="https://media.nlmsf.org/wp-content/uploads/2021/10/NLMSF-2021-Brochure-March-2021.jpg"
+                src="/images/nlmsf_logo_no_background-removebg-preview.png"
                 alt="NLMSF Brochure"
                 className="featured-image"
                 width={240}

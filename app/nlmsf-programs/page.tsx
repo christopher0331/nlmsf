@@ -99,7 +99,7 @@ export default function NlmsfProgramsPage() {
 
           <div className="program-card">
             <div className="program-card-image">
-              <a href="https://nlmsf.org/lms-lifeline-buddy-program/" {...ext}>
+              <a href="https://nlmsf.org/navigating-support/#buddy-program" {...ext}>
                 <Image
                   src="https://media.nlmsf.org/wp-content/uploads/2020/07/3-buddy.jpg"
                   alt=""
@@ -110,11 +110,11 @@ export default function NlmsfProgramsPage() {
               </a>
             </div>
             <h3 className="program-card-title">
-              <a href="https://nlmsf.org/lms-lifeline-buddy-program/" {...ext}>The Buddy Program</a>
+              <a href="https://nlmsf.org/navigating-support/#buddy-program" {...ext}>The Buddy Program</a>
             </h3>
             <p className="program-card-desc">Learn how other patients are living through LMS.</p>
             <div className="program-card-cta">
-              <a href="https://nlmsf.org/lms-lifeline-buddy-program/" className="program-btn" {...ext}>
+              <a href="https://nlmsf.org/navigating-support/#buddy-program" className="program-btn" {...ext}>
                 <i className="fab fa-readme" aria-hidden /> Read More
               </a>
             </div>

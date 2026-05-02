@@ -31,7 +31,7 @@ export default function SurgicalSection() {
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
-                  src="https://img.youtube.com/vi/UYp4Wui3Bs/mqdefault.jpg"
+                  src="/images/nlmsf_logo_no_background-removebg-preview.png"
                   alt="Video Thumbnail"
                   width={640}
                   height={360}
@@ -142,7 +142,7 @@ export default function SurgicalSection() {
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
-                  src="https://img.youtube.com/vi/2FuOuLewaJI/mqdefault.jpg"
+                  src="/images/nlmsf_logo_no_background-removebg-preview.png"
                   alt="Retroperitoneal Leiomyosarcoma — Consensus Guidelines and Daily Practice - Dr. William Tseng"
                   width={640}
                   height={360}

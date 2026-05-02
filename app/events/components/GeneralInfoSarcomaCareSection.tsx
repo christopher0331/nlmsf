@@ -36,7 +36,7 @@ export default function GeneralInfoSarcomaCareSection() {
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
-                  src="https://img.youtube.com/vi/2FuOuLewaJl/mqdefault.jpg"
+                  src="/images/nlmsf_logo_no_background-removebg-preview.png"
                   alt="Video Thumbnail"
                   width={640}
                   height={360}
@@ -152,7 +152,7 @@ export default function GeneralInfoSarcomaCareSection() {
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
-                  src="https://via.placeholder.com/320x180"
+                  src="/images/nlmsf_logo_no_background-removebg-preview.png"
                   alt="Video Thumbnail"
                   width={640}
                   height={360}

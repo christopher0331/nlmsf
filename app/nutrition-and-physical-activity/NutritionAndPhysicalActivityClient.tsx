@@ -305,7 +305,7 @@ export default function NutritionAndPhysicalActivityClient() {
               <div className="resource-card">
                 <div className="resource-logo">
                   <Image
-                    src="https://via.placeholder.com/100x50.png?text=ACS+Logo"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="American Cancer Society"
                     className="resource-image"
                     width={240}
@@ -330,7 +330,7 @@ export default function NutritionAndPhysicalActivityClient() {
               <div className="resource-card">
                 <div className="resource-logo">
                   <Image
-                    src="https://via.placeholder.com/100x50.png?text=AICR+Logo"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="American Institute for Cancer Research"
                     className="resource-image"
                     width={240}
@@ -355,7 +355,7 @@ export default function NutritionAndPhysicalActivityClient() {
               <div className="resource-card">
                 <div className="resource-logo">
                   <Image
-                    src="https://via.placeholder.com/100x50.png?text=MD+Anderson"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="MD Anderson Cancer Center"
                     className="resource-image"
                     width={240}
@@ -380,7 +380,7 @@ export default function NutritionAndPhysicalActivityClient() {
               <div className="resource-card">
                 <div className="resource-logo">
                   <Image
-                    src="https://via.placeholder.com/100x50.png?text=MD+Anderson"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="MD Anderson Cancer Center"
                     className="resource-image"
                     width={240}
@@ -501,7 +501,7 @@ export default function NutritionAndPhysicalActivityClient() {
                     <i className="fas fa-play" aria-hidden />
                   </div>
                   <Image
-                    src="https://via.placeholder.com/640x360.png?text=Alison+Tierney+Video"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="Alison Tierney Nutrition Video"
                     width={640}
                     height={360}
@@ -526,7 +526,7 @@ export default function NutritionAndPhysicalActivityClient() {
                     <i className="fas fa-play" aria-hidden />
                   </div>
                   <Image
-                    src="https://via.placeholder.com/640x360.png?text=Mayo+Clinic+Video"
+                    src="/images/nlmsf_logo_no_background-removebg-preview.png"
                     alt="Mayo Clinic Living with Cancer Guide"
                     width={640}
                     height={360}
