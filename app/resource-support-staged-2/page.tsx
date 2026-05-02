@@ -83,7 +83,7 @@ const supportOrgs = [
     title: "CDC Caregiver Self-Care Resources",
     description: "Helpful resource information for caregivers to take care of themselves.",
     linkLabel: "CDC caregiver self-care",
-    linkUrl: "https://www.cdc.gov/cancer/survivors/caregivers/caring-for-yourself.htm",
+    linkUrl: "https://www.cdc.gov/cancer-survivors/caregivers/index.html",
   },
   {
     title: "American Cancer Society Video Series",
@@ -96,7 +96,7 @@ const supportOrgs = [
 const bookshelfLinks = [
   {
     label: "Dana Farber suggested reading",
-    url: "https://www.dana-farber.org/for-patients-and-families/caring-for-a-loved-one/suggested-reading/",
+    url: "https://www.dana-farber.org/for-patients-and-families/",
   },
   {
     label: "Caring Bridge: 15 books for caregivers",

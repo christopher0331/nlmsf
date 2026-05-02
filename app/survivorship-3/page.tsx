@@ -84,8 +84,8 @@ const survivorshipResources = [
         url: "https://nlmsf.org/after-treatment/",
       },
       {
-        label: "Blueprints of Hope care plan resources",
-        url: "https://www.blueprintsofhope.org",
+        label: "NCCS survivorship care planning template",
+        url: "https://canceradvocacy.org/an-updated-survivorship-care-planning-template-and-identifying-barriers-to-implementation/",
       },
     ],
   },

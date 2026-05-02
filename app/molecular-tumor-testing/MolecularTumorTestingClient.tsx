@@ -505,7 +505,7 @@ export default function MolecularTumorTestingClient() {
                     </li>
                     <li>
                       <a
-                        href="https://www.natera.com/oncology/signatera-advanced-cancer-detection/billing/"
+                        href="https://www.natera.com/oncology/billing/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="resource-link"
@@ -578,7 +578,7 @@ export default function MolecularTumorTestingClient() {
                   <div className="resource-links">
                     <h4>Resources:</h4>
                     <div className="links-grid">
-                      <a href="https://us02web.zoom.us/…/M23F43Rc0dz5vlKwyx95xxzFbePFi…" target="_blank" rel="noopener noreferrer" className="resource-link">
+                      <a href="https://targetcancer.org/research/track/" target="_blank" rel="noopener noreferrer" className="resource-link">
                         <i className="fas fa-video"></i>
                         <span>TRACK Trial Webinar</span>
                       </a>

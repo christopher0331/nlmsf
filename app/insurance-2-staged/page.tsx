@@ -40,12 +40,6 @@ export default function Insurance2StagedPage() {
               </a>
             </li>
             <li>
-              <a href="https://www.ssdrc.com/prem8.html" {...ext}>
-                Medical-Vocational Allowance Approval for Social Security Disability and SSI Cases
-              </a>
-              .
-            </li>
-            <li>
               <a href="https://www.disability-benefits-help.org/glossary/medical-vocational-allowance" {...ext}>
                 <strong>What is Social Security&apos;s Medical Vocational Allowance?</strong>
               </a>
@@ -87,7 +81,6 @@ export default function Insurance2StagedPage() {
             <li><a href="https://www.ssa.gov/benefits/disability/" {...ext}>https://www.ssa.gov/benefits/disability/</a></li>
             <li><a href="https://www.ssa.gov/disability/professionals/bluebook/" {...ext}>https://www.ssa.gov/disability/professionals/bluebook/</a></li>
             <li><a href="https://secure.ssa.gov/ICON/main.jsp" {...ext}>https://secure.ssa.gov/ICON/main.jsp</a></li>
-            <li><a href="https://secure.ssa.gov/apps10/poms/images/SSA4/G-SSA-4734-U8-1.pdf" {...ext}>https://secure.ssa.gov/apps10/poms/images/SSA4/G-SSA-4734-U8-1.pdf</a></li>
             <li><a href="https://www.ssa.gov/benefits/disability/" {...ext}>https://www.ssa.gov/benefits/disability/</a> <a href="https://www.ssa.gov/redbook/eng/overview-disability.htm" {...ext}>https://www.ssa.gov/redbook/eng/overview-disability.htm</a></li>
             <li>
               <a href="https://www.disabilitysecrets.com/resources/ssdi/an-overview-social-security-disability-insurance-ssdi.htm" {...ext} title="An Overview of Social Security Disability Insurance (SSDI)">

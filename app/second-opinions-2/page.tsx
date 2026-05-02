@@ -214,11 +214,11 @@ export default function SecondOpinionsTwoPage() {
                   <ul className="bullet-list">
                     <li>
                       <a
-                        href="https://www.stanfordchildrens.org/en/landing/second-opinion/faq.html"
+                        href="https://stanfordhealthcare.org/second-opinion/overview.html"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Stanford Health Care: FAQs
+                        Stanford Health Care: Second opinions overview
                       </a>
                     </li>
                     <li>

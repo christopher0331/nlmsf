@@ -230,7 +230,7 @@ export default function FinancialAssistance2Page() {
               <li><strong className="text-gray-800">Guide to Helping you Manage your Medical Bills</strong><br />Triage Cancer and Co-Patient collaborate<br /><a href="https://triagecancer.org/cancer-medical-bills" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Triage Cancer Medical Bills Guide</a></li>
               <li><strong className="text-gray-800">Patient Guide</strong> – Read Cancer.net&apos;s patient guide to financial help: <a href="https://www.cancer.net/navigating-cancer-care/financial-considerations/financial-resources" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Cancer.net Financial Resources Guide</a>.</li>
               <li><strong className="text-gray-800">Paying for Cancer Treatments – Personal Loans, HSAs, and More</strong> – The Simple Dollar&apos;s &quot;<a href="https://www.thesimpledollar.com/financial-wellness/paying-for-cancer-treatments-personal-loans/" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Guide to Paying for Cancer Treatment</a>&quot; is a resource that outlines how to afford some of the most common cancer treatments.</li>
-              <li><strong className="text-gray-800">Paying for Cancer Treatments</strong> – tips for managing costs<br /><a href="https://www.cdc.gov/cancer/survivors/patients/paying-for-cancer-treatment.htm" className="text-[#6c63ff] no-underline hover:underline" {...ext}>CDC Guide to Paying for Cancer Treatment</a></li>
+              <li><strong className="text-gray-800">Paying for Cancer Treatments</strong> – tips for managing costs<br /><a href="https://www.cdc.gov/cancer-survivors/?CDC_AAref_Val=https://www.cdc.gov/cancer/survivors/patients/paying-for-cancer-treatment.html" className="text-[#6c63ff] no-underline hover:underline" {...ext}>CDC Guide to Paying for Cancer Treatment</a></li>
               <li><a href="https://www.everydayhealth.com/cancer/spotlight-on-family-reach/" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Spotlight on Family Reach (Everyday Health)</a></li>
               <li><a href="https://www.nccn.org/business-policy/business/virtual-reimbursement-resource-room-and-app" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Virtual Reimbursement Resource Room and App</a></li>
               <li><strong className="text-gray-800">Co-Pay Relief Program</strong> – Many voluntary organizations offer some financial relief to cancer patients who cannot afford insurance coverage, co-pays, deductibles, and other associated out-of-pocket costs if eligibility requirements are met.</li>
@@ -264,7 +264,7 @@ export default function FinancialAssistance2Page() {
                 <li>Another option to decrease medication prices is manufacturer copay cards, which help with out-of-pocket prices.</li>
                 <li>These cards usually cover the cost of drugs that lack a generic version. There are requirements on who can receive them, and there can also be limits on how much is saved per month or year.</li>
                 <li>Sometimes, Medicare patients max out their yearly coverage of medications and enter the &quot;coverage gap.&quot; By choosing a different plan at a higher premium, this gap can be covered.</li>
-                <li>On a related note, Medicare and Social Security offer a plan called <a href="https://www.medicare.gov/your-medicare-costs/get-help-paying-costs/lower-prescription-costs" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Extra Help</a>, which offers discounted prices on certain generic drugs (e.g. $3.95) and brand-name drugs (e.g. $9.85) for those who qualify.</li>
+                <li>On a related note, Medicare and Social Security offer a plan called <a href="https://www.medicare.gov/basics/costs/help/drug-costs" className="text-[#6c63ff] no-underline hover:underline" {...ext}>Extra Help</a>, which offers discounted prices on certain generic drugs (e.g. $3.95) and brand-name drugs (e.g. $9.85) for those who qualify.</li>
               </ul>
             </div>
           </section>
@@ -280,7 +280,7 @@ export default function FinancialAssistance2Page() {
                 <i className="fas fa-heart text-2xl text-[#6c63ff] mb-3 block" aria-hidden />
                 <h4 className="text-base font-semibold text-gray-800 mb-2">Cynthia Holmes Foundation</h4>
                 <p className="text-gray-600 text-sm mb-3">WECARE Grants for active LMS patients</p>
-                <a href="https://curelms.webs.com/wecare" className="inline-block rounded px-3 py-1.5 text-sm font-semibold text-[#6c63ff] no-underline hover:bg-gray-100" {...ext}>Visit Website</a>
+                <a href="https://curelms.org/programs-and-events" className="inline-block rounded px-3 py-1.5 text-sm font-semibold text-[#6c63ff] no-underline hover:bg-gray-100" {...ext}>Visit Website</a>
               </div>
               <div className="rounded-lg border-t-4 border-[#ff6b6b] bg-white p-5 text-center shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
                 <i className="fas fa-plane text-2xl text-[#6c63ff] mb-3 block" aria-hidden />

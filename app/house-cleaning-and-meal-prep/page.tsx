@@ -242,7 +242,7 @@ export default function HouseCleaningAndMealPrepPage() {
               , and using herbs and spices in your cooking. Snack foods like
               popcorn and{" "}
               <a
-                href="https://www.verywellfit.com/the-benefits-of-cocoa-extract-89051"
+                href="https://www.verywellhealth.com/cocoa-extract-supplements-may-slow-inflammaging-11820476"
                 {...ext}
               >
                 dark chocolate

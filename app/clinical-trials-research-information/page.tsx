@@ -191,21 +191,7 @@ export default function ClinicalTrialsResearchInformationPage() {
               >
                 Why Should I Consider a Clinical Trial?
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white rounded-lg p-4 shadow border border-gray-200 border-t-4 border-t-cyan-500 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0" style={{ background: "linear-gradient(135deg, #0891b2, #06b6d4)" }}>
-                      <i className="fas fa-download text-white" aria-hidden />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 m-0 text-sm">NCCN Clinical Trial Handout</h4>
-                      <p className="text-gray-500 text-xs m-0">Printable guide to understanding clinical trials</p>
-                    </div>
-                  </div>
-                  <a href="https://www.nccn.org/patients/resources/life_with_cancer/pdf/NCCN_Clinical_Trials_Patient_Handout.pdf" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
-                    Download Handout <i className="fas fa-external-link-alt text-xs" aria-hidden />
-                  </a>
-                </div>
+              <div className="max-w-2xl mx-auto">
                 <div className="bg-white rounded-lg p-4 shadow border border-gray-200 border-t-4 border-t-violet-500 hover:shadow-lg hover:-translate-y-0.5 transition-all">
                   <div className="flex items-start gap-3 mb-3">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0" style={{ background: "linear-gradient(135deg, #7e22ce, #a855f7)" }}>
@@ -222,25 +208,6 @@ export default function ClinicalTrialsResearchInformationPage() {
                     </a>
                     <a href="https://www.nccn.org/patients/guidelines/content/PDF/sarcoma-patient.pdf" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
                       Patient Guidelines <i className="fas fa-external-link-alt text-xs" aria-hidden />
-                    </a>
-                  </div>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow border border-gray-200 border-t-4 border-t-orange-500 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0" style={{ background: "linear-gradient(135deg, #ea580c, #f97316)" }}>
-                      <i className="fas fa-bone text-white" aria-hidden />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 m-0 text-sm">Bone Sarcoma Resources</h4>
-                      <p className="text-gray-500 text-xs m-0">Specialized guidelines and information for bone cancers</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <a href="https://www.nccn.org/patients/guidelines/content/PDF/bone-patient.pdf" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
-                      NCCN Bone Cancer Guidelines <i className="fas fa-external-link-alt text-xs" aria-hidden />
-                    </a>
-                    <a href="https://sarctrials.org/patients/what-is-sarcoma/bone-sarcoma/" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
-                      Bone Sarcoma Information <i className="fas fa-external-link-alt text-xs" aria-hidden />
                     </a>
                   </div>
                 </div>
@@ -449,7 +416,6 @@ export default function ClinicalTrialsResearchInformationPage() {
                     { href: "https://www.orpha.net", title: "ORPHANET", sub: "Resource for rare diseases clinical trials" },
                     { href: "https://euracan.eu/", title: "Expert Care for Rare Adult Solid Cancers | EURACAN", sub: "EURACAN Expert Centres | Find Specialised Rare Cancer Care" },
                     { href: "https://euracan.eu/research/", title: "EURACAN Research", sub: "Advancing Rare Cancer Knowledge" },
-                    { href: "https://www.ema.europa.eu/en/medicines/human/clinical-trials/clinical-trials-register", title: "Search for clinical trials - EMA", sub: "European Medicines Agency clinical trials database" },
                   ].map((l) => (
                     <a key={l.href} href={l.href} className="block no-underline group" {...ext}>
                       <span className="block font-medium text-gray-900 group-hover:text-violet-600">{l.title}</span>

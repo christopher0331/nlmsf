@@ -726,7 +726,7 @@ export default function TreatmentOptionsPage() {
                   American Cancer Society: Understanding Palliative Care (PDF)
                 </a>
                 <a
-                  href="https://www.cancer.org/treatment/treatment-and-side-effects/palliative-care/how-to-find.html"
+                  href="https://www.cancer.org/cancer/managing-cancer/palliative-care.html"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

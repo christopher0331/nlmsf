@@ -317,7 +317,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "New York",
     links: [
       { label: "Northwell Clinical Trials", url: "https://cancer.northwell.edu/clinical-trials" },
-      { label: "Monter Cancer Center", url: "https://env3.northwell.edu/cancer-institute/cancer-care/locations/center-for-advanced-medicine/monter-cancer-center" },
+      { label: "Monter Cancer Center", url: "https://www.northwell.edu/cancer-institute" },
       { label: "Backup Link", url: "https://tinyurl.com/y9vpu2o8" },
     ],
   },
@@ -492,7 +492,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "NM",
     stateFull: "New Mexico",
     links: [
-      { label: "Clinical Trials", url: "https://cancer.unm.edu/clinical-trials" },
+      { label: "Clinical Trials", url: "https://cancer.unm.edu" },
       { label: "Backup Link", url: "https://tinyurl.com/y8dcoaff" },
     ],
   },
@@ -554,7 +554,7 @@ const CENTERS: SarcomaCenter[] = [
     stateFull: "Virginia",
     links: [
       { label: "Massey Cancer Center", url: "https://www.massey.vcu.edu" },
-      { label: "Trial Search", url: "https://oncoreapp.mcvh-vcu.edu/SIPMassey.html" },
+      { label: "Trial Search", url: "https://www.massey.vcu.edu/research/clinical-trials/" },
     ],
   },
   {
@@ -573,7 +573,7 @@ const CENTERS: SarcomaCenter[] = [
     state: "WV",
     stateFull: "West Virginia",
     links: [
-      { label: "Clinical Research", url: "https://cancer.wvumedicine.org/about-us/inside-the-institute/clinical-research/" },
+      { label: "Clinical Research", url: "https://wvumedicine.org/our-care/institutes/cancer/" },
       { label: "WVU Cancer Institute", url: "https://cancer.wvumedicine.org/" },
     ],
   },

@@ -72,11 +72,6 @@ export default function HealthInsuranceDeepDivePage() {
                   <a href="https://secure.ssa.gov/apps10/poms.nsf/lnx/0423022961" className="resource-link" {...ext}>SSA POMS compassionate allowance criteria</a>
                 </div>
                 <div className="resource-card">
-                  <i className="fas fa-balance-scale" aria-hidden />
-                  <h4>Medical-Vocational Allowance Approval</h4>
-                  <a href="https://www.ssdrc.com/prem8.html" className="resource-link" {...ext}>Medical-vocational allowance approval guide</a>
-                </div>
-                <div className="resource-card">
                   <i className="fas fa-question-circle" aria-hidden />
                   <h4>What is Social Security&apos;s Medical Vocational Allowance?</h4>
                   <a href="https://www.disability-benefits-help.org/glossary/medical-vocational-allowance" className="resource-link" {...ext}>Medical-vocational allowance glossary</a>
@@ -134,7 +129,6 @@ export default function HealthInsuranceDeepDivePage() {
                 <a href="https://www.ssa.gov/benefits/disability/" className="resource-link-item" {...ext}><i className="fas fa-external-link-alt" aria-hidden /><span>SSA Disability Benefits</span></a>
                 <a href="https://www.ssa.gov/disability/professionals/bluebook/" className="resource-link-item" {...ext}><i className="fas fa-external-link-alt" aria-hidden /><span>Disability Evaluation Under Social Security</span></a>
                 <a href="https://secure.ssa.gov/ICON/main.jsp" className="resource-link-item" {...ext}><i className="fas fa-external-link-alt" aria-hidden /><span>Find a Social Security Office</span></a>
-                <a href="https://secure.ssa.gov/apps10/poms/images/SSA4/G-SSA-4734-U8-1.pdf" className="resource-link-item" {...ext}><i className="fas fa-file-pdf" aria-hidden /><span>SSA Forms</span></a>
                 <a href="https://www.ssa.gov/redbook/eng/overview-disability.htm" className="resource-link-item" {...ext}><i className="fas fa-external-link-alt" aria-hidden /><span>Red Book - Guide to Work Incentives</span></a>
                 <a href="https://www.disabilitysecrets.com/resources/ssdi/an-overview-social-security-disability-insurance-ssdi.htm" className="resource-link-item" {...ext}><i className="fas fa-external-link-alt" aria-hidden /><span>Overview of SSDI</span></a>
               </div>

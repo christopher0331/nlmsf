@@ -448,7 +448,7 @@ export default function ResourceSupportPage() {
                   <h3>NIH - Caregiving Toolkit to Support Caregivers:</h3>
                   <div className="resource-links">
                     <a
-                      href="https://www.nia.nih.gov/toolkits/caregiving"
+                      href="https://www.nia.nih.gov/health/caregiving"
                       className="resource-link"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -587,7 +587,7 @@ export default function ResourceSupportPage() {
                     <p>Helpful resource information from the CDC for Caregivers to take care of themselves.</p>
                     <div className="resource-link-wrapper">
                       <a
-                        href="https://www.cdc.gov/cancer/survivors/caregivers/caring-for-yourself.htm"
+                        href="https://www.cdc.gov/cancer-survivors/caregivers/index.html"
                         className="resource-link"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -620,7 +620,7 @@ export default function ResourceSupportPage() {
                   <h3>Dana Farber Cancer Center Recommendations</h3>
                   <p>Suggested books for caregivers from Dana Farber Cancer Center.</p>
                   <a
-                    href="https://www.dana-farber.org/for-patients-and-families/caring-for-a-loved-one/suggested-reading/"
+                    href="https://www.dana-farber.org/for-patients-and-families/"
                     className="resource-button"
                     target="_blank"
                     rel="noopener noreferrer"

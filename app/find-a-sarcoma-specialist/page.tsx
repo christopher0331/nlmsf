@@ -248,13 +248,6 @@ export default function FindASarcomaSpecialistPage() {
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.lmsdr.org/resources/physicians/" target="_blank" rel="noopener noreferrer">
-                        <i className="fas fa-user-md" aria-hidden />
-                        <span>LMS Direct Research Foundation Physician List</span>
-                        <i className="fas fa-external-link-alt" aria-hidden />
-                      </a>
-                    </li>
-                    <li>
                       <a href="https://www.leiomyosarcoma.info/physicians.html" target="_blank" rel="noopener noreferrer">
                         <i className="fas fa-user-md" aria-hidden />
                         <span>Leiomyosarcoma Support &amp; Direct Research Foundation</span>
@@ -402,7 +395,7 @@ export default function FindASarcomaSpecialistPage() {
             <h2 className="section-title">Additional Resources</h2>
             <div className="section-content">
               <div className="resources-grid">
-                <a href="https://www.cancer.gov/rare-brain-spine-tumor/research/rare-brain-spine-clinic" className="resource-card indigo" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.cancer.gov/rare-brain-spine-tumor/refer-participate/referrals/clinic" className="resource-card indigo" target="_blank" rel="noopener noreferrer">
                   <div className="resource-icon">
                     <i className="fas fa-hospital" aria-hidden />
                   </div>

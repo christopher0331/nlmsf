@@ -244,11 +244,11 @@ export default function PathologyReportAccuracyPage() {
             <div className="resource-link" id="grading-definition">
               <p>
                 <a
-                  href="https://askyourpathologist.com/understanding-your-pathology-report-a-patients-guide/"
+                  href="https://www.cancer.gov/types/diagnosis/pathology-reports"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Read the Complete Guide to Understanding Your Pathology Report
+                  Understanding pathology reports (National Cancer Institute)
                 </a>
               </p>
             </div>

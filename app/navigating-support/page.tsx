@@ -343,7 +343,7 @@ export default function NavigatingSupportPage() {
 
               <div className="organization-item">
                 <h4>
-                  <a href="http://www.acor.org/">Association of Cancer Online Resources</a>
+                  <a href="https://www.acor.com/">Association of Cancer Online Resources</a>
                 </h4>
                 <p>A group of online cancer communities that provides information in a supportive environment.</p>
               </div>

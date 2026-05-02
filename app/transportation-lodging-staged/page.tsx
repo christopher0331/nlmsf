@@ -116,7 +116,7 @@ const temporaryLodging = [
     title: "Abramson Cancer Center",
     url: "https://www.pennmedicine.org/cancer/navigating-cancer-care/support-services",
   },
-  { title: "Brown Cancer Center", url: "https://uoflbrowncancercenter.org/area-lodging" },
+  { title: "Brown Cancer Center", url: "https://uoflhealth.org/locations/brown-cancer-center/patients-survivors-families/" },
   {
     title: "Catholic Medical Center",
     url: "https://www.catholicmedicalcenter.org/patients-visitors/visitor-information/local-amenities-and-lodging/hotels",
@@ -142,7 +142,7 @@ const temporaryLodging = [
   },
   {
     title: "Hillman Cancer Center - UPMC",
-    url: "https://www.shadysideinn.com/hotel-near/upmc-hillman-cancer-center/",
+    url: "https://www.shadysideinn.com/",
   },
   { title: "Cancer Horizons", url: "https://www.cancerhorizons.com/free-stuff/free-lodging/" },
   { title: "Knight Cancer Institute", url: "https://www.ohsu.edu/health/rood-family-pavilion" },

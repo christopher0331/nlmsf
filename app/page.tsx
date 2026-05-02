@@ -16,11 +16,11 @@ import StormTrialAlert from "@/components/StormTrialAlert";
 import TestimonialsScrollSection from "@/components/TestimonialsScrollSection";
 
 export const metadata: Metadata = {
-  title: "National Leiomyosarcoma Foundation",
+  title: "National Leiomyosarcoma Foundation | NLMSF",
   description:
     "National Leiomyosarcoma Foundation: Supporting patients, caregivers, and researchers with education, advocacy, and research funding since 1997.",
   openGraph: {
-    title: "National Leiomyosarcoma Foundation",
+    title: "National Leiomyosarcoma Foundation | NLMSF",
     description:
       "Providing education, advocacy, support, and research funding for the global LMS community.",
     images: [

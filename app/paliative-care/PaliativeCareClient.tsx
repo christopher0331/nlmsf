@@ -303,11 +303,11 @@ export default function PaliativeCareClient() {
         <h2>Finding a Palliative Care program:</h2>
         <p>
           <a
-            href="https://www.cancer.org/treatment/treatment-and-side-effects/palliative-care/how-to-find.html"
+            href="https://www.cancer.org/cancer/managing-cancer/palliative-care.html"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://www.cancer.org/treatment/treatment-and-side-effects/palliative-care/how-to-find.html
+            https://www.cancer.org/cancer/managing-cancer/palliative-care.html
           </a>
         </p>
       </section>

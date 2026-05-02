@@ -194,7 +194,7 @@ export default function ResearchInitiativesPage() {
                 <h3>What is Leiomyosarcoma (LMS)?</h3>
                 <p>
                   <a
-                    href="http://nlmsf.org/what-is-leiomyosarcoma/"
+                    href="https://nlmsf.org/what-is-leiomyosarcoma/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

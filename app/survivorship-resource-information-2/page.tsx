@@ -252,11 +252,11 @@ export default function SurvivorshipResourceInformationTwoPage() {
             deliver treatment summaries and care plans to an increasing percentage of patients. An
             overview of care plans can be found at{" "}
             <a
-              href="https://blueprintsofhope.org/survivorship-care-plan/"
+              href="https://canceradvocacy.org/an-updated-survivorship-care-planning-template-and-identifying-barriers-to-implementation/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Blueprints of Hope
+              National Coalition for Cancer Survivorship — survivorship care planning
             </a>
             .
           </p>

@@ -353,7 +353,7 @@ export default function PalliativeCareClient() {
               </li>
               <li>
                 <a
-                  href="https://www.cancer.org/treatment/treatment-and-side-effects/palliative-care/how-to-find.html"
+                  href="https://www.cancer.org/cancer/managing-cancer/palliative-care.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="resource-link"

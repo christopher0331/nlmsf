@@ -366,7 +366,7 @@ export default function NutritionAndPhysicalActivityClient() {
                   <h3>MD Anderson Cancer Center</h3>
                   <p>Essential nutritional information for patients and caregivers</p>
                   <a
-                    href="https://www.mdanderson.org/treatment-options/nutrition.html"
+                    href="https://www.mdanderson.org/patients-family/diagnosis-treatment/patient-support/clinical-nutrition.html"
                     className="resource-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -391,7 +391,7 @@ export default function NutritionAndPhysicalActivityClient() {
                   <h3>MD Anderson Cancer Center</h3>
                   <p>Guidelines for both nutrition and physical activity for cancer survivors</p>
                   <a
-                    href="https://www.mdanderson.org/content/dam/mdanderson/documents/patients-and-family/diagnosis-and-treatment/cancer-treatment/nutrition-and-physical-activity-guidelines-cancer-survivors.pdf"
+                    href="https://www.mdanderson.org/content/dam/mdanderson/documents/patients-and-family/becoming-our-patient/while-youre-here/pe-booklets/survivorship/Nutrition.pdf"
                     className="resource-link"
                     target="_blank"
                     rel="noopener noreferrer"

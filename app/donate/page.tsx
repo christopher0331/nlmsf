@@ -167,7 +167,7 @@ export default function DonatePage() {
                 </a>
               </li>
               <li>
-                <a href="https://www.charitynavigator.org/about-us/cn-blog/1542-employee-match-programs-what-to-know-before-you-donate" className="flex items-center gap-3 rounded-md px-4 py-3 text-gray-600 no-underline transition-all duration-300 hover:bg-gray-100 hover:text-[#7e22ce]" {...ext}>
+                <a href="https://www.charitynavigator.org/donor-basics/giving-101/employee-match-programs/" className="flex items-center gap-3 rounded-md px-4 py-3 text-gray-600 no-underline transition-all duration-300 hover:bg-gray-100 hover:text-[#7e22ce]" {...ext}>
                   <i className="fas fa-handshake text-[#7e22ce] text-lg" aria-hidden />
                   <span>Employee Match Programs</span>
                 </a>
@@ -265,17 +265,7 @@ export default function DonatePage() {
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-1.5">Employee Match Programs</h4>
                         <p className="text-gray-600 text-sm leading-relaxed mb-2">What to Know Before You Donate - Learn how to maximize your impact through employer matching programs.</p>
-                        <a href="https://www.charitynavigator.org/about-us/cn-blog/1542-employee-match-programs-what-to-know-before-you-donate" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Learn More <i className="fas fa-external-link-alt text-xs" aria-hidden /></a>
-                      </div>
-                    </div>
-                    <div className="flex gap-5 items-start rounded-xl border border-gray-100 bg-gradient-to-r from-violet-50/80 to-white p-5 transition-all duration-300 hover:shadow-md hover:border-violet-100">
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-[#7e22ce]">
-                        <i className="fas fa-graduation-cap text-lg" aria-hidden />
-                      </span>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1.5">Giving 101</h4>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-2">The more you know about donating to the cause of LMS Research advancements to accelerate treatment options.</p>
-                        <a href="https://www.charitynavigator.org/about-us/donor-resources-and-tips" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>View Donor Resources <i className="fas fa-external-link-alt text-xs" aria-hidden /></a>
+                        <a href="https://www.charitynavigator.org/donor-basics/giving-101/employee-match-programs/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Learn More <i className="fas fa-external-link-alt text-xs" aria-hidden /></a>
                       </div>
                     </div>
                   </div>
@@ -284,7 +274,7 @@ export default function DonatePage() {
                       View our complete Charity Navigator profile to see our commitment to transparency and fiscal responsibility.
                     </p>
                     <a
-                      href="https://www.charitynavigator.org/ein/841478257"
+                      href="https://www.charitynavigator.org/ein/141834266"
                       className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
                       style={{ background: "linear-gradient(135deg, #7e22ce, #4c1d95)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.4)" }}
                       {...ext}
@@ -477,9 +467,14 @@ export default function DonatePage() {
                 <p className="text-gray-600 text-base leading-relaxed mb-6">
                   SIGN UP FOR JUST GIVING – and establish your account to fund LMS research through the National Leiomyosarcoma Foundation – founder of the International Research Roundtable for global research
                 </p>
-                <a href="https://www.justgiving.com/onesearch/pagecreation/charity?q=National%20Leiomyosarcoma%20Foundation&i=charities,campaigns&limit=20&pcid=34b06b92-2d25-4a18-b859-b9e" className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-lg" style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.35)" }} {...ext}>
-                  Set Up Just Giving <i className="fas fa-external-link-alt text-sm opacity-90" aria-hidden />
-                </a>
+                {/* JustGiving search URL was returning 404; contact NLMSF for current peer-fundraising setup. */}
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-white no-underline transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+                  style={{ background: "linear-gradient(135deg, #7e22ce, #4338ca)", boxShadow: "0 4px 14px rgba(126, 34, 206, 0.35)" }}
+                >
+                  Contact us about Just Giving / peer fundraising <i className="fas fa-arrow-right text-sm opacity-90" aria-hidden />
+                </Link>
               </div>
 
               {/* Car Donation */}

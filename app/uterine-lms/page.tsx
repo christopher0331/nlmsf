@@ -461,17 +461,17 @@ export default function UterineLmsPage() {
         <section id="more" className="ulms-section">
           <h2 className="ulms-section-title indigo">More Research &amp; Videos</h2>
           <div className="ulms-more-grid">
-            <a
-              href="https://www.vumedi.com/video/asco-2022-novel-therapeutics-in-the-treatment-of-uterine-sarcoma/?token=7f15b18e-df52-41f3-8c3b-e2ef7ff73686"
-              className="ulms-more-card"
-              {...ext}
-            >
+            {/* VuMedi ASCO 2022 recording URL returned 404; NLMSF roundtable YouTube link below covers related content. */}
+            <div className="ulms-more-card opacity-90 cursor-default" role="note">
               <i className="fas fa-play-circle" aria-hidden />
               <div>
                 <h4>ASCO 2022: Novel Therapeutics in Uterine Sarcoma</h4>
-                <p>Dr. Matthew Ingham, Columbia University Medical Center</p>
+                <p>
+                  Dr. Matthew Ingham, Columbia University Medical Center — recording previously linked on VuMedi is unavailable; see the
+                  roundtable video below.
+                </p>
               </div>
-            </a>
+            </div>
             <a
               href="https://youtu.be/mY2q7q5VOlA"
               className="ulms-more-card"

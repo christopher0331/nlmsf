@@ -155,7 +155,7 @@ export default function FinancialAssistance2StagedPage() {
             </li>
             <li>
               <strong>Paying for Cancer Treatments</strong> – tips for managing costs:{" "}
-              <a href="https://www.cdc.gov/cancer/survivors/patients/paying-for-cancer-treatment.htm" className="text-[#7e22ce] no-underline hover:underline" {...ext}>https://www.cdc.gov/cancer/survivors/patients/paying-for-cancer-treatment.htm</a>
+              <a href="https://www.cdc.gov/cancer-survivors/?CDC_AAref_Val=https://www.cdc.gov/cancer/survivors/patients/paying-for-cancer-treatment.html" className="text-[#7e22ce] no-underline hover:underline" {...ext}>https://www.cdc.gov/cancer-survivors/?CDC_AAref_Val=https://www.cdc.gov/cancer/survivors/patients/paying-for-cancer-treatment.html</a>
             </li>
             <li>
               <strong>Cancer Finances</strong> – A Toolkit for Navigating Finances After Cancer:{" "}
@@ -206,7 +206,7 @@ export default function FinancialAssistance2StagedPage() {
                 Sometimes, Medicare patients max out their yearly coverage of medications and enter the &quot;coverage gap.&quot; By choosing a different plan at a higher premium, this gap can be covered.
               </a>
             </li>
-            <li>On a related note, Medicare and Social Security offer a plan called <a href="https://www.medicare.gov/your-medicare-costs/get-help-paying-costs/lower-prescription-costs" className="text-[#7e22ce] no-underline hover:underline" {...ext}>Extra Help</a>, which offers discounted prices on certain generic drugs (e.g. $3.95) and brand-name drugs (e.g. $9.85) for those who qualify.</li>
+            <li>On a related note, Medicare and Social Security offer a plan called <a href="https://www.medicare.gov/basics/costs/help/drug-costs" className="text-[#7e22ce] no-underline hover:underline" {...ext}>Extra Help</a>, which offers discounted prices on certain generic drugs (e.g. $3.95) and brand-name drugs (e.g. $9.85) for those who qualify.</li>
             <li>What this means for you</li>
             <li>Inflation rates are unhinged, and in a post-pandemic financial reality, your patients may be feeling the pinch. Paying for the prohibitive costs of prescription drugs may be a lower priority to them, but they need them. Fortunately, there are various programs that can help. Share information about these with your patients. Be polite, private, and persistent when asking them about their ability to pay for medications.</li>
           </ul>
@@ -220,7 +220,7 @@ export default function FinancialAssistance2StagedPage() {
           <ul className="space-y-5 list-none pl-0 text-gray-700 leading-relaxed">
             <li>
               <strong className="text-gray-900">Cynthia Holmes Foundation</strong> –{" "}
-              <a href="https://curelms.webs.com/wecare" className="text-[#7e22ce] no-underline hover:underline" {...ext}>https://curelms.webs.com/wecare</a>
+              <a href="https://curelms.org/programs-and-events" className="text-[#7e22ce] no-underline hover:underline" {...ext}>https://curelms.org/programs-and-events</a>
               {" "}– WECARE Grants for active LMS patients.
             </li>
             <li>
