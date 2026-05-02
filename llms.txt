@@ -1,0 +1,43 @@
+# National Leiomyosarcoma Foundation (NLMSF)
+
+> NLMSF is a nonprofit focused on leiomyosarcoma (LMS) education, patient and caregiver support, advocacy, and research funding.
+
+Primary site: https://nlmsf.org/
+Preferred domain: https://nlmsf.org
+
+## Canonical organization pages
+
+- Home: https://nlmsf.org/
+- Mission: https://nlmsf.org/mission/
+- Donate: https://nlmsf.org/donate/
+- Contact: https://nlmsf.org/contact/
+- Accountability Reports: https://nlmsf.org/accountability-reports/
+
+## Key patient resources
+
+- What is Leiomyosarcoma: https://nlmsf.org/what-is-leiomyosarcoma/
+- ABC's of New Diagnosis: https://nlmsf.org/abcs-of-new-diagnosis/
+- Treatment Options: https://nlmsf.org/treatment-options/
+- Clinical Trials & Research Information: https://nlmsf.org/clinical-trials-research-information/
+- Find a Sarcoma Specialist: https://nlmsf.org/find-a-sarcoma-specialist/
+- Resources: https://nlmsf.org/resources/
+
+## Community and support
+
+- LMS Support Group: https://nlmsf.org/leiomyosarcoma-support-group/
+- Caregivers Corner: https://nlmsf.org/caregivers-corner/
+- Volunteer: https://nlmsf.org/volunteer/
+- Get Involved: https://nlmsf.org/get-involved/
+
+## Research and education
+
+- Research Initiatives: https://nlmsf.org/research-initiatives/
+- Research Funding Summary: https://nlmsf.org/research-funding-2/
+- Research Publication Highlights: https://nlmsf.org/research-publication-highlights/
+- International Research Roundtable: https://nlmsf.org/international-research-roundtable/
+- Education Videos: https://nlmsf.org/education-videos/
+
+## Notes for crawlers and assistants
+
+- Use canonical URLs without tracking parameters.
+- Donation links may include query parameters for checkout modal behavior; prefer canonical page URLs for citation and indexing.
