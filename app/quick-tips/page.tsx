@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./quick-tips.css";
+import { PdfPopupLink } from "./PdfPopupLink";
 
 export const metadata: Metadata = {
   title: "Quick Tips for Newly Diagnosed | NLMSF",
@@ -10,11 +11,51 @@ export const metadata: Metadata = {
 interface QuickTipTopic {
   title: string;
   description?: string;
-  driveUrl: string;
   category: string;
+  /** Google Drive or other external document */
+  driveUrl?: string;
+  /** Site-hosted PDF path (opens in on-page viewer) */
+  pdfHref?: string;
 }
 
 const QUICK_TIPS: QuickTipTopic[] = [
+  {
+    title: "First 30 Days Patient Roadmap",
+    description:
+      "A practical roadmap for the first month after diagnosis—priorities, questions for your care team, and ways to build support.",
+    pdfHref: "/documents/quick-tips/first-30-days-patient-roadmap.pdf",
+    category: "General",
+  },
+  {
+    title: "LMS and Uterine LMS",
+    description: "Essentials on leiomyosarcoma (LMS) and uterine LMS for newly diagnosed patients and families.",
+    pdfHref: "/documents/quick-tips/lms-and-uterine-lms.pdf",
+    category: "General",
+  },
+  {
+    title: "1st Chemo Appointment",
+    description: "What to expect and how to prepare for your first chemotherapy visit.",
+    pdfHref: "/documents/quick-tips/first-chemo-appointment.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Cardiotoxicity and Chemo",
+    description: "How some cancer therapies can affect the heart and what to discuss with your care team.",
+    pdfHref: "/documents/quick-tips/cardiotoxicity-and-chemo.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Leiomyosarcoma (LMS) Surgical Guidance",
+    description: "NLMSF guidance on surgical considerations for LMS.",
+    pdfHref: "/documents/quick-tips/leiomyosarcoma-lms-surgical-guidance.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Uterine Imaging",
+    description: "Imaging-focused quick tips for uterine leiomyosarcoma (uLMS).",
+    pdfHref: "/documents/quick-tips/uterine-imaging.pdf",
+    category: "Treatment",
+  },
   {
     title: "NLMSF Survivorship Caring Guide",
     description: "A revised guide for survivorship care, including managing emotions, loneliness, and rebuilding strength after treatment",
@@ -163,12 +204,12 @@ export default function QuickTipsPage() {
           <div className="quick-tips-card-body">
             <p>
               Our Quick Tips collection provides practical, actionable advice organized by topic.
-              Each document contains multiple tips to help you navigate various aspects of your
-              journey with leiomyosarcoma.
+              Each guide contains multiple tips to help you navigate various aspects of your journey
+              with leiomyosarcoma.
             </p>
             <p>
-              Click on any topic below to access a Google Drive document with detailed tips and
-              guidance.
+              Click a topic to open a Google Drive guide or view an NLMSF PDF in a pop-up viewer
+              on this page.
             </p>
           </div>
         </div>
@@ -183,7 +224,7 @@ export default function QuickTipsPage() {
               <div className="quick-tips-grid">
                 {tipsByCategory[category].map((tip, index) => (
                   <div
-                    key={index}
+                    key={`${tip.title}-${index}`}
                     className={`quick-tips-card-link ${getCategoryColor(category)}`}
                   >
                     <div className="quick-tips-card-link-header">
@@ -196,28 +237,38 @@ export default function QuickTipsPage() {
                     {tip.description && (
                       <p className="quick-tips-card-link-description">{tip.description}</p>
                     )}
-                    <a
-                      href={tip.driveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="quick-tips-drive-link"
-                    >
-                      <span>View Tips Document</span>
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                    {tip.pdfHref ? (
+                      <PdfPopupLink
+                        href={tip.pdfHref}
+                        className="quick-tips-drive-link"
+                        label="View PDF"
+                        documentTitle={tip.title}
+                      />
+                    ) : (
+                      <a
+                        href={tip.driveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="quick-tips-drive-link"
                       >
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                      </svg>
-                    </a>
+                        <span>View Tips Document</span>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>
