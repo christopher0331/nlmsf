@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import HomeEventsColumn from "@/components/HomeEventsColumn";
 import IronmanFundraiser from "@/components/IronmanFundraiser";
@@ -9,40 +6,6 @@ import IronmanFundraiser from "@/components/IronmanFundraiser";
 const CLINICAL_TRIALS_URL =
   "https://clinicaltrials.gov/search?term=leiomyosarcoma";
 const ONCLIVE_IMG = "/images/nlmsf-science.png";
-
-const TESTIMONIALS = [
-  {
-    name: "Neeta Somaiah, MD",
-    title: "Sarcoma Medical Oncologist, MD Anderson Cancer Center",
-    quote:
-      '"You are the sweetest. I can see how your compassion and affection positively impact everyone around — across all generations, family, and beyond."',
-    image: "/images/neeta.jpg",
-    alt: "Neeta Somaiah, MD",
-  },
-  {
-    name: "Brian Van Tine, MD",
-    title: "Sarcoma Program Director, Alvin J. Siteman Cancer Center",
-    quote: '"I love this group, it makes a difference."',
-    image: "https://media.nlmsf.org/wp-content/uploads/2025/10/Brian-Van-Tine-MD.png",
-    alt: "Brian Van Tine, MD",
-  },
-  {
-    name: "Seth Pollack, MD",
-    title: "Professor, Northwestern University Feinberg School of Medicine",
-    quote:
-      '"I love the NLMSF – I love the patient programs held – your signature support advocacy to collaborate with sarcoma centers..."',
-    image: "https://old.nlmsf.org/wp-content/uploads/2025/10/Seth-Pollack-MD.png",
-    alt: "Seth Pollack, MD",
-  },
-  {
-    name: "Arun Singh, MD",
-    title: "Director of UCLA Sarcoma Medical Oncology",
-    quote:
-      '"The National Leiomyosarcoma Foundation is an important organization that strives to gather a critical mass of patients, scientists, patient advocates and physicians..."',
-    image: "https://media.nlmsf.org/wp-content/uploads/2025/10/Arun-Singh-MD.png",
-    alt: "Arun Singh, MD",
-  },
-];
 
 function PhoneIcon({ className }: { className?: string }) {
   return (
@@ -80,17 +43,6 @@ const gradientText =
   "bg-gradient-to-br from-[#6b46c1] to-[#9333ea] bg-clip-text text-transparent";
 
 export default function HomeThreeColumns() {
-  const [testimonialSlide, setTestimonialSlide] = useState(0);
-  const [testimonialPaused, setTestimonialPaused] = useState(false);
-
-  useEffect(() => {
-    if (testimonialPaused) return;
-    const interval = setInterval(() => {
-      setTestimonialSlide((prev) => (prev + 1) % TESTIMONIALS.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [testimonialPaused]);
-
   return (
     <section
       className="py-8 px-8 max-w-[1600px] mx-auto w-full"
@@ -240,7 +192,7 @@ export default function HomeThreeColumns() {
 
         </div>
 
-        {/* Center column: Support Hotline + Ironman Fundraiser + Testimonials */}
+        {/* Center column: Support Hotline + Ironman Fundraiser */}
         <div>
           <div className="rounded-xl bg-gradient-to-br from-[#6b46c1] to-[#4c1d95] p-6 text-center text-white shadow-[0_4px_20px_rgba(107,70,193,0.25)] relative overflow-hidden">
             <div
@@ -290,77 +242,8 @@ export default function HomeThreeColumns() {
             </div>
           </div>
 
-          <div className="mt-6 mb-6">
+          <div className="mt-6">
             <IronmanFundraiser />
-          </div>
-
-          <div className="p-4 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-xl border border-slate-200 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] sm:p-3">
-            <h3
-              className={`text-center text-xl font-bold text-[#6a3ea1] m-0 mb-4 ${gradientText} sm:text-lg`}
-            >
-              What Our Experts Say
-            </h3>
-            <div
-              className="relative overflow-hidden"
-              id="testimonialCarousel"
-              onMouseEnter={() => setTestimonialPaused(true)}
-              onMouseLeave={() => setTestimonialPaused(false)}
-            >
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${testimonialSlide * 100}%)` }}
-              >
-                {TESTIMONIALS.map((t) => (
-                  <div key={t.name} className="w-full flex-shrink-0 px-1">
-                    <div className="text-center">
-                      <div className="flex flex-col items-center mb-4">
-                        <div className="w-[90px] h-[90px] rounded-full overflow-hidden mb-2 border-[3px] border-[#6a3ea1] shadow-[0_4px_8px_rgba(106,62,161,0.2)] sm:w-[75px] sm:h-[75px]">
-                          <Image
-                            src={t.image}
-                            alt={t.alt}
-                            width={180}
-                            height={180}
-                            className="w-full h-full object-cover"
-                            sizes="60px"
-                          />
-                        </div>
-                        <div className="text-center">
-                          <h4 className="text-[0.9rem] font-bold text-gray-800 m-0 mb-1 leading-tight sm:text-[0.85rem]">
-                            {t.name}
-                          </h4>
-                          <p className="text-[0.75rem] text-gray-500 m-0 leading-snug italic sm:text-[0.7rem]">
-                            {t.title}
-                          </p>
-                        </div>
-                      </div>
-                      <blockquote
-                        className={
-                          "text-[0.85rem] leading-snug text-[#374151] m-0 py-3 px-3 bg-white rounded-lg border-l-4 border-[#6a3ea1] shadow-[0_2px_4px_rgba(0,0,0,0.05)] relative sm:text-[0.8rem] sm:py-2.5 sm:px-2.5 before:content-[attr(data-quote)] before:text-3xl before:text-[#6a3ea1] before:absolute before:top-[-0.5rem] before:left-2 before:opacity-30 before:font-serif"
-                        }
-                        data-quote='"'
-                      >
-                        {t.quote}
-                      </blockquote>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex justify-center gap-2 mt-4">
-              {TESTIMONIALS.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  className={`w-2 h-2 rounded-full border-0 cursor-pointer transition-all duration-300 hover:bg-[#8b5cf6] ${
-                    index === testimonialSlide
-                      ? "bg-[#6a3ea1] scale-125"
-                      : "bg-gray-300"
-                  }`}
-                  onClick={() => setTestimonialSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
         </div>
 

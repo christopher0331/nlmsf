@@ -8,7 +8,6 @@ import MissionSection from "@/components/MissionSection";
 import ReportsSection from "@/components/ReportsSection";
 import StatsSection from "@/components/StatsSection";
 import PartnersSection from "@/components/PartnersSection";
-import ExpertEndorsementSection from "@/components/ExpertEndorsementSection";
 import PatientVideoTestimonialsSection from "@/components/PatientVideoTestimonialsSection";
 import CTASection from "@/components/CTASection";
 import StormTrialAlert from "@/components/StormTrialAlert";
@@ -48,7 +47,6 @@ export default function HomePage() {
       <ReportsSection />
       <StatsSection />
       <PartnersSection />
-      <ExpertEndorsementSection />
       <PatientVideoTestimonialsSection />
       <CTASection />
     </main>
