@@ -4,14 +4,14 @@ import HomeThreeColumns from "@/components/HomeThreeColumns";
 import RecentUpdates from "@/components/RecentUpdates";
 import EducationVideosSection from "@/components/EducationVideosSection";
 import NewsletterCTA from "@/components/NewsletterCTA";
-import MissionSection from "@/components/MissionSection";
+import ImpactInActionSection from "@/components/ImpactInActionSection";
 import ReportsSection from "@/components/ReportsSection";
 import StatsSection from "@/components/StatsSection";
 import PartnersSection from "@/components/PartnersSection";
 import PatientVideoTestimonialsSection from "@/components/PatientVideoTestimonialsSection";
 import CTASection from "@/components/CTASection";
-import StormTrialAlert from "@/components/StormTrialAlert";
 import TestimonialsScrollSection from "@/components/TestimonialsScrollSection";
+import SharingVoicesSection from "@/components/SharingVoicesSection";
 
 export const metadata: Metadata = {
   title: "National Leiomyosarcoma Foundation | NLMSF",
@@ -39,11 +39,11 @@ export default function HomePage() {
       <HeroSection />
       <HomeThreeColumns />
       <TestimonialsScrollSection />
-      <StormTrialAlert />
+      <SharingVoicesSection />
       <RecentUpdates />
       <EducationVideosSection />
       <NewsletterCTA />
-      <MissionSection />
+      <ImpactInActionSection />
       <ReportsSection />
       <StatsSection />
       <PartnersSection />

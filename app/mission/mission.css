@@ -192,6 +192,61 @@
   z-index: 1;
 }
 
+/* Impact in Action infographic */
+.mission-page .impact-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #6366f1;
+}
+
+.mission-page .impact-heading {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 1rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #111827;
+}
+
+.mission-page .impact-intro {
+  text-align: center;
+  color: #4b5563;
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.mission-page .mission-embedded-card {
+  border-top-color: #8b5cf6;
+}
+
+.mission-page .mission-details-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff !important;
+  background: linear-gradient(135deg, #6b46c1, #4338ca);
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mission-page .mission-details-link:hover {
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(67, 56, 202, 0.35);
+}
+
 .mission-page .mission-goals li {
   font-size: 1.125rem;
   line-height: 1.6;

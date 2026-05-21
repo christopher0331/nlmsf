@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import HomeEventsColumn from "@/components/HomeEventsColumn";
 import IronmanFundraiser from "@/components/IronmanFundraiser";
+import ClinicalTrialsCard from "@/components/ClinicalTrialsCard";
+import StormTrialAlert from "@/components/StormTrialAlert";
+import WebsiteNavigator from "@/components/WebsiteNavigator";
 
-const CLINICAL_TRIALS_URL =
-  "https://clinicaltrials.gov/search?term=leiomyosarcoma";
 const ONCLIVE_IMG = "/images/nlmsf-science.png";
 
 function PhoneIcon({ className }: { className?: string }) {
@@ -39,9 +40,6 @@ function SearchIcon({ className }: { className?: string }) {
   );
 }
 
-const gradientText =
-  "bg-gradient-to-br from-[#6b46c1] to-[#9333ea] bg-clip-text text-transparent";
-
 export default function HomeThreeColumns() {
   return (
     <section
@@ -49,151 +47,18 @@ export default function HomeThreeColumns() {
       aria-label="Resources and navigation"
     >
       <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-3">
-        {/* Left column: OncLive image + Clinical Trials + Website Navigator */}
+        {/* Left column: Journey Navigator + Storm trial alert + Clinical Trials */}
         <div className="flex flex-col gap-0">
-          <div className="mb-4 flex justify-center">
-            <Image
-              src={ONCLIVE_IMG}
-              alt="OncLive Sarcoma"
-              width={640}
-              height={360}
-              className="w-full h-auto rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] object-cover"
-              sizes="(min-width: 1024px) 420px, 90vw"
-            />
-          </div>
+          <WebsiteNavigator />
 
-          <div className="p-0 m-0">
-            <div className="bg-white rounded-xl border border-gray-200 py-5 px-[18px] shadow-[0_4px_12px_rgba(15,23,42,0.06)] md:py-5 md:px-[18px] sm:py-4 sm:px-[14px]">
-              <div className="flex items-center justify-between mb-3">
-                <div
-                  className={`text-lg font-bold ${gradientText} md:text-lg sm:text-base`}
-                >
-                  Clinical Trials
-                </div>
-                <a
-                  href={CLINICAL_TRIALS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-medium text-[#6b46c1] no-underline inline-flex items-center gap-1 hover:text-[#553c9a]"
-                >
-                  ClinicalTrials.gov &#8599;
-                </a>
-              </div>
-              <a
-                href={CLINICAL_TRIALS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full text-center py-2.5 px-3.5 rounded-full bg-gradient-to-br from-[#6b46c1] to-[#9333ea] text-white text-[13px] font-semibold no-underline shadow-[0_8px_16px_rgba(88,28,135,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_12px_20px_rgba(88,28,135,0.3)]"
-              >
-                Search Leiomyosarcoma Trials
-              </a>
-              <div className="mt-3 rounded-lg bg-[#f3e8ff] border border-[#d8b4fe] px-3 py-2.5">
-                <p className="text-[11px] font-bold text-[#6b46c1] uppercase tracking-wider mb-2">
-                  Uterine Sarcoma Trial Listings
-                </p>
-                <div className="flex flex-col gap-2">
-                  <a
-                    href="https://ichgcp.net/clinical-trials-registry/research/list?cond=Uterus%2BLeiomyosarcoma"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-between gap-2 text-[12px] text-white no-underline font-semibold bg-[#7c3aed] hover:bg-[#6d28d9] rounded-md px-3 py-1.5 transition-colors"
-                  >
-                    <span>ICHGCP Registry (Recruiting &amp; Completed)</span>
-                    <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" className="shrink-0"><path d="M3.5 3a.5.5 0 0 0 0 1H7.29L2.15 9.15a.5.5 0 1 0 .71.7L8 4.71V8.5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5h-5z"/></svg>
-                  </a>
-                  <a
-                    href="https://www.cancer.gov/research/participate/clinical-trials/disease/uterine-sarcoma?pn=1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-between gap-2 text-[12px] text-white no-underline font-semibold bg-[#7c3aed] hover:bg-[#6d28d9] rounded-md px-3 py-1.5 transition-colors"
-                  >
-                    <span>NCI Uterine Sarcoma Trials</span>
-                    <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" className="shrink-0"><path d="M3.5 3a.5.5 0 0 0 0 1H7.29L2.15 9.15a.5.5 0 1 0 .71.7L8 4.71V8.5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5h-5z"/></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <StormTrialAlert variant="compact" />
 
-          <div className="mt-4">
-            <div className="bg-white rounded-xl border border-gray-200 py-5 px-[18px] shadow-[0_4px_12px_rgba(15,23,42,0.06)] sm:py-4 sm:px-[14px]">
-              <h3
-                className={`text-lg font-bold m-0 mb-3 ${gradientText} sm:text-base`}
-              >
-                Website Navigator
-              </h3>
-              <div className="grid grid-cols-1 gap-2.5">
-                <Link
-                  href="/pathology-report-accuracy"
-                  className="block bg-gray-50 rounded-[10px] py-2.5 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
-                >
-                  <div className="text-[13px] font-semibold text-[#4c1d95]">
-                    Newly Diagnosed Patient
-                  </div>
-                </Link>
-                <Link
-                  href="/treatment-options"
-                  className="block bg-gray-50 rounded-[10px] py-2.5 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
-                >
-                  <div className="text-[13px] font-semibold text-[#4c1d95]">
-                    Entering Treatment / Caregivers
-                  </div>
-                </Link>
-                <Link
-                  href="/survivorship-resources-2"
-                  className="block bg-gray-50 rounded-[10px] py-2.5 px-3 no-underline border border-gray-200 transition-all duration-150 hover:bg-[#f3e8ff] hover:border-[#c4b5fd] hover:shadow-[0_8px_16px_rgba(88,28,135,0.16)] hover:-translate-y-0.5"
-                >
-                  <div className="text-[13px] font-semibold text-[#4c1d95]">
-                    End of Treatment / Survivorship
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Sharing Voices — Community Platforms */}
-          <div className="mt-4">
-            <div className="bg-white rounded-xl border border-gray-200 shadow-[0_4px_12px_rgba(15,23,42,0.06)] overflow-hidden">
-              <div className="bg-gradient-to-b from-[#f5f0ff] to-white px-4 pt-5 pb-2 flex justify-center">
-                <Image
-                  src="/images/sharing-voices.png"
-                  alt="Sharing Voices"
-                  width={280}
-                  height={200}
-                  className="w-[350px] h-auto object-contain"
-                  sizes="350px"
-                />
-              </div>
-              <div className="px-5 pb-5 text-center">
-                <p className="text-[0.75rem] text-gray-500 mb-4 leading-snug">
-                  A quiet space for words, hope, and connection.
-                </p>
-                <div className="flex flex-col gap-2.5">
-                  <a
-                    href="https://patients.nlmsf.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block py-2.5 px-4 rounded-lg bg-gradient-to-r from-[#6b46c1] to-[#9333ea] text-white text-[0.8rem] font-semibold no-underline text-center shadow-[0_4px_12px_rgba(107,70,193,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_18px_rgba(107,70,193,0.4)]"
-                  >
-                    patients.nlmsf.org
-                  </a>
-                  <a
-                    href="https://caregivers.nlmsf.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block py-2.5 px-4 rounded-lg bg-gradient-to-r from-[#6b46c1] to-[#9333ea] text-white text-[0.8rem] font-semibold no-underline text-center shadow-[0_4px_12px_rgba(107,70,193,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_18px_rgba(107,70,193,0.4)]"
-                  >
-                    caregivers.nlmsf.org
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ClinicalTrialsCard />
 
         </div>
 
-        {/* Center column: Support Hotline + Ironman Fundraiser */}
-        <div>
+        {/* Center column: Support Hotline + Ironman Fundraiser + OncLive image */}
+        <div className="flex flex-col">
           <div className="rounded-xl bg-gradient-to-br from-[#6b46c1] to-[#4c1d95] p-6 text-center text-white shadow-[0_4px_20px_rgba(107,70,193,0.25)] relative overflow-hidden">
             <div
               className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/[0.06] translate-x-1/3 -translate-y-1/3"
@@ -244,6 +109,17 @@ export default function HomeThreeColumns() {
 
           <div className="mt-6">
             <IronmanFundraiser />
+          </div>
+
+          <div className="mt-6 flex justify-center">
+            <Image
+              src={ONCLIVE_IMG}
+              alt="OncLive Sarcoma"
+              width={640}
+              height={360}
+              className="w-full h-auto rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] object-cover"
+              sizes="(min-width: 1024px) 420px, 90vw"
+            />
           </div>
         </div>
 

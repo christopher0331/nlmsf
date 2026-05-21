@@ -42,7 +42,7 @@ function parseMarkdown(text: string): string {
 interface Props {
   url: string;
   title: string;
-  variant?: "default" | "large";
+  variant?: "default" | "large" | "block";
 }
 
 export default function AISummaryButton({ url, title, variant = "default" }: Props) {
@@ -91,9 +91,12 @@ export default function AISummaryButton({ url, title, variant = "default" }: Pro
     };
   }, [open]);
 
-  const buttonClass = variant === "large"
-    ? "inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl border border-violet-300 bg-violet-50 text-violet-700 hover:bg-violet-100 hover:border-violet-400 transition-all shadow-sm"
-    : "mt-2 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100 hover:border-violet-300 transition-all";
+  const buttonClass =
+    variant === "large"
+      ? "inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl border border-violet-300 bg-violet-50 text-violet-700 hover:bg-violet-100 hover:border-violet-400 transition-all shadow-sm"
+      : variant === "block"
+        ? "flex w-full items-center justify-center gap-2 text-xs font-semibold px-3.5 py-2.5 rounded-lg border border-violet-200 bg-gradient-to-r from-violet-50 to-indigo-50 text-violet-700 hover:from-violet-100 hover:to-indigo-100 hover:border-violet-300 transition-all shadow-sm"
+        : "mt-2 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100 hover:border-violet-300 transition-all";
 
   return (
     <>
@@ -102,7 +105,11 @@ export default function AISummaryButton({ url, title, variant = "default" }: Pro
         className={buttonClass}
         title="Get a plain-language AI summary of this publication"
       >
-        <GeminiStar className={variant === "large" ? "w-4 h-4 shrink-0" : "w-3.5 h-3.5 shrink-0"} />
+        <GeminiStar
+          className={
+            variant === "large" ? "w-4 h-4 shrink-0" : variant === "block" ? "w-4 h-4 shrink-0" : "w-3.5 h-3.5 shrink-0"
+          }
+        />
         Get AI Summary
       </button>
 

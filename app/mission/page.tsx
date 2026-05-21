@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MissionSection from "@/components/MissionSection";
 import "./mission.css";
 
 export const metadata: Metadata = {
@@ -27,6 +28,12 @@ export default function MissionPage() {
             <nav className="sidebar-nav">
               <div className="nav-item">
                 <a href="#mission-overview" className="nav-link">
+                  <span className="nav-icon purple" aria-hidden />
+                  <span>Our Mission</span>
+                </a>
+              </div>
+              <div className="nav-item">
+                <a href="#our-mission" className="nav-link">
                   <span className="nav-icon purple" aria-hidden />
                   <span>Our Mission</span>
                 </a>
@@ -73,10 +80,10 @@ export default function MissionPage() {
                 <span className="resource-icon" aria-hidden />
                 <span>LMS Research Projects</span>
               </a>
-              <Link href="/about-us/" className="resource-link">
+              <a href="#our-mission" className="resource-link">
                 <span className="resource-icon" aria-hidden />
-                <span>About NLMSF</span>
-              </Link>
+                <span>Our Mission</span>
+              </a>
               <Link href="/get-involved/" className="resource-link">
                 <span className="resource-icon" aria-hidden />
                 <span>Become an Ambassador</span>
@@ -117,6 +124,8 @@ export default function MissionPage() {
               </p>
             </div>
           </section>
+
+          <MissionSection embedded />
 
           <section id="testimonial" className="content-section">
             <div className="testimonial-card">

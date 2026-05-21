@@ -1,0 +1,136 @@
+.impact-figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.impact-image-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: zoom-in;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.impact-image-trigger:hover,
+.impact-image-trigger:focus-visible {
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.25);
+  transform: translateY(-2px);
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+
+.impact-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.impact-image-hint {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.impact-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 23, 42, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.5rem, 2vw, 1.25rem);
+  animation: impact-lightbox-fade-in 0.2s ease;
+}
+
+@keyframes impact-lightbox-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.impact-lightbox-dialog {
+  width: min(96vw, 1272px);
+  max-height: 96vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+.impact-lightbox-toolbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(to right, #faf5ff, #eff6ff);
+}
+
+.impact-lightbox-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+.impact-lightbox-close {
+  border: 1px solid #ddd6fe;
+  background: #fff;
+  color: #6a3ea1;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.impact-lightbox-close:hover {
+  background: #f5f3ff;
+}
+
+.impact-lightbox-image-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 0.75rem;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.impact-lightbox-image {
+  width: 100%;
+  height: auto;
+  max-height: calc(96vh - 4.5rem);
+  object-fit: contain;
+}
