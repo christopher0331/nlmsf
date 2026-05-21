@@ -57,6 +57,24 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "Treatment",
   },
   {
+    title: "Dental Care",
+    description: "Guidance on dental care considerations for LMS patients before, during, and after treatment.",
+    pdfHref: "/documents/quick-tips/Dental Care.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Oral Care",
+    description: "Tips for maintaining oral health and managing mouth-related side effects during cancer treatment.",
+    pdfHref: "/documents/quick-tips/Oral Care.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Survivorship & Recovery",
+    description: "Guidance on life after treatment, including managing recovery, long-term care considerations, and rebuilding well-being.",
+    pdfHref: "/documents/quick-tips/Survivorship & Recovery.pdf",
+    category: "General",
+  },
+  {
     title: "NLMSF Survivorship Caring Guide",
     description: "A revised guide for survivorship care, including managing emotions, loneliness, and rebuilding strength after treatment",
     driveUrl: "https://drive.google.com/file/d/1zu9um2QpLXVQZ-C6r5P9ANBgluDwgptT/view?usp=sharing",
