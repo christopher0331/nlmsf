@@ -42,7 +42,7 @@ const QUICK_TIPS: QuickTipTopic[] = [
     title: "Cardiotoxicity and Chemo",
     description: "How some cancer therapies can affect the heart and what to discuss with your care team.",
     pdfHref: "/documents/quick-tips/cardiotoxicity-and-chemo.pdf",
-    category: "Treatment",
+    category: "Supportive Care",
   },
   {
     title: "Leiomyosarcoma (LMS) Surgical Guidance",
@@ -60,13 +60,13 @@ const QUICK_TIPS: QuickTipTopic[] = [
     title: "Dental Care",
     description: "Guidance on dental care considerations for LMS patients before, during, and after treatment.",
     pdfHref: "/documents/quick-tips/Dental Care.pdf",
-    category: "Treatment",
+    category: "Supportive Care",
   },
   {
     title: "Oral Care",
     description: "Tips for maintaining oral health and managing mouth-related side effects during cancer treatment.",
     pdfHref: "/documents/quick-tips/Oral Care.pdf",
-    category: "Treatment",
+    category: "Supportive Care",
   },
   {
     title: "Survivorship & Recovery",
@@ -144,7 +144,7 @@ const QUICK_TIPS: QuickTipTopic[] = [
     title: "Palliative Care",
     description: "Patient-centered specialty focused on quality of life, addressing physical, emotional, social, and spiritual needs from diagnosis",
     driveUrl: "https://drive.google.com/file/d/1f7fmNxS93XQdxJTlgdVL74pWRsQ0khDU/view?usp=sharing",
-    category: "Treatment",
+    category: "Supportive Care",
   },
   {
     title: "Cancer Caregiving Guide",
@@ -316,6 +316,7 @@ function getCategoryColor(category: string): string {
   const colorMap: Record<string, string> = {
     General: "blue",
     Treatment: "indigo",
+    "Supportive Care": "emerald",
     Caregiving: "teal",
     Financial: "amber",
     Emotional: "rose",
