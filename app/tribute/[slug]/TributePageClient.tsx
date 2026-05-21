@@ -192,13 +192,24 @@ export default function TributePageClient({ slugPromise }: Props) {
             </h2>
             {data.image_url && (
               <div className="mx-auto mb-8 h-[250px] w-[250px] overflow-hidden rounded-full border-6 border-white bg-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.15)] md:h-[300px] md:w-[300px]">
-                <Image
-                  src={data.image_url}
-                  alt={data.name}
-                  className="h-full w-full object-cover object-center"
-                  width={300}
-                  height={300}
-                />
+                {data.image_url.startsWith("data:") ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={data.image_url}
+                    alt={data.name}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover object-center"
+                  />
+                ) : (
+                  <Image
+                    src={data.image_url}
+                    alt={data.name}
+                    className="h-full w-full object-cover object-center"
+                    width={300}
+                    height={300}
+                  />
+                )}
               </div>
             )}
             <h3 className="mb-3 inline-block border-b-4 border-[#7e22ce] pb-2 text-xl font-bold text-gray-900 md:text-2xl">

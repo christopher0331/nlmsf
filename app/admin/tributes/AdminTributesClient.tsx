@@ -1,8 +1,58 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+
+const ACCEPTED_IMAGE_MIME = "image/jpeg,image/png,image/webp,image/gif";
+
+async function uploadTributeImage(file: File): Promise<string> {
+  const fd = new FormData();
+  fd.append("file", file);
+  const res = await fetch("/api/admin/upload-image", { method: "POST", body: fd });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.error || "Failed to upload image");
+  }
+  const data = (await res.json()) as { url: string };
+  return data.url;
+}
+
+function isDataUrl(value: string | null | undefined): boolean {
+  return !!value && value.startsWith("data:");
+}
+
+function TributeImagePreview({
+  src,
+  alt,
+  size = 96,
+}: {
+  src: string;
+  alt: string;
+  size?: number;
+}) {
+  if (isDataUrl(src)) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return (
+      <img
+        src={src}
+        alt={alt}
+        width={size}
+        height={size}
+        className="h-full w-full object-cover"
+      />
+    );
+  }
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={size}
+      height={size}
+      className="h-full w-full object-cover"
+    />
+  );
+}
 
 type Tribute = {
   id: string;
@@ -60,6 +110,38 @@ export default function AdminTributesClient() {
   });
   const [bulkNames, setBulkNames] = useState("");
   const [bulkSubmitting, setBulkSubmitting] = useState(false);
+  const [addUploading, setAddUploading] = useState(false);
+  const [editUploading, setEditUploading] = useState(false);
+  const addFileRef = useRef<HTMLInputElement | null>(null);
+  const editFileRef = useRef<HTMLInputElement | null>(null);
+
+  async function handleAddImageFile(file: File | null) {
+    if (!file) return;
+    setAddUploading(true);
+    try {
+      const url = await uploadTributeImage(file);
+      setForm((f) => ({ ...f, image_url: url }));
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "Failed to upload image.");
+    } finally {
+      setAddUploading(false);
+      if (addFileRef.current) addFileRef.current.value = "";
+    }
+  }
+
+  async function handleEditImageFile(file: File | null) {
+    if (!file) return;
+    setEditUploading(true);
+    try {
+      const url = await uploadTributeImage(file);
+      setEditForm((f) => (f ? { ...f, image_url: url } : f));
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "Failed to upload image.");
+    } finally {
+      setEditUploading(false);
+      if (editFileRef.current) editFileRef.current.value = "";
+    }
+  }
 
   async function fetchTributes() {
     try {
@@ -373,14 +455,54 @@ export default function AdminTributesClient() {
             />
           </div>
           <div className="sm:col-span-2">
-            <label className={formLabel}>Image URL</label>
-            <input
-              type="url"
-              className={formInput}
-              value={form.image_url}
-              onChange={(e) => setForm((f) => ({ ...f, image_url: e.target.value }))}
-              placeholder="https://..."
-            />
+            <label className={formLabel}>Tribute photo</label>
+            <div className="flex flex-wrap items-start gap-4">
+              <div
+                className={`flex h-[96px] w-[96px] shrink-0 items-center justify-center overflow-hidden rounded-lg border ${
+                  form.image_url ? "border-gray-200" : "border-2 border-dashed border-gray-300 bg-gray-50 text-gray-400"
+                }`}
+              >
+                {form.image_url ? (
+                  <TributeImagePreview src={form.image_url} alt="Tribute preview" />
+                ) : (
+                  <i className="fas fa-image text-2xl" aria-hidden />
+                )}
+              </div>
+              <div className="flex-1 min-w-[220px]">
+                <input
+                  ref={addFileRef}
+                  type="file"
+                  accept={ACCEPTED_IMAGE_MIME}
+                  onChange={(e) => handleAddImageFile(e.target.files?.[0] ?? null)}
+                  className="block w-full cursor-pointer rounded-md border border-gray-200 bg-white text-sm text-gray-700 file:mr-3 file:cursor-pointer file:border-0 file:bg-[#7e22ce] file:py-2 file:px-3 file:text-white file:hover:bg-[#6b21a8]"
+                  disabled={addUploading}
+                />
+                <p className="mt-1.5 text-xs text-gray-500">
+                  JPG, PNG, WebP, or GIF · up to 3 MB. Or paste an existing image URL below.
+                </p>
+                <input
+                  type="url"
+                  className={`${formInput} mt-3`}
+                  value={form.image_url}
+                  onChange={(e) => setForm((f) => ({ ...f, image_url: e.target.value }))}
+                  placeholder="https://... (optional)"
+                />
+                {form.image_url ? (
+                  <button
+                    type="button"
+                    onClick={() => setForm((f) => ({ ...f, image_url: "" }))}
+                    className="mt-1 inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white py-1.5 px-2.5 text-xs font-medium text-gray-600 hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+                  >
+                    <i className="fas fa-times" aria-hidden /> Remove photo
+                  </button>
+                ) : null}
+                {addUploading ? (
+                  <p className="mt-2 text-xs font-medium text-[#7e22ce]">
+                    <i className="fas fa-spinner fa-spin mr-1" aria-hidden /> Uploading…
+                  </p>
+                ) : null}
+              </div>
+            </div>
           </div>
           <div className="flex items-center gap-2 sm:col-span-2">
             <input
@@ -428,13 +550,7 @@ export default function AdminTributesClient() {
                 <div className="flex min-w-0 flex-1 gap-4">
                   {t.image_url ? (
                     <div className="h-[100px] w-[100px] shrink-0 overflow-hidden rounded-lg">
-                      <Image
-                        src={t.image_url}
-                        alt={t.name}
-                        className="h-full w-full object-cover"
-                        width={100}
-                        height={100}
-                      />
+                      <TributeImagePreview src={t.image_url} alt={t.name} size={100} />
                     </div>
                   ) : null}
                   <div className="min-w-0">
@@ -557,13 +673,54 @@ export default function AdminTributesClient() {
                 required
                 rows={5}
               />
-              <label className={formLabel}>Image URL</label>
-              <input
-                type="url"
-                className={formInput}
-                value={editForm.image_url ?? ""}
-                onChange={(e) => setEditForm((f) => ({ ...f, image_url: e.target.value }))}
-              />
+              <label className={formLabel}>Tribute photo</label>
+              <div className="mb-4 flex flex-wrap items-start gap-4">
+                <div
+                  className={`flex h-[96px] w-[96px] shrink-0 items-center justify-center overflow-hidden rounded-lg border ${
+                    editForm.image_url ? "border-gray-200" : "border-2 border-dashed border-gray-300 bg-gray-50 text-gray-400"
+                  }`}
+                >
+                  {editForm.image_url ? (
+                    <TributeImagePreview src={editForm.image_url} alt="Tribute preview" />
+                  ) : (
+                    <i className="fas fa-image text-2xl" aria-hidden />
+                  )}
+                </div>
+                <div className="min-w-[200px] flex-1">
+                  <input
+                    ref={editFileRef}
+                    type="file"
+                    accept={ACCEPTED_IMAGE_MIME}
+                    onChange={(e) => handleEditImageFile(e.target.files?.[0] ?? null)}
+                    className="block w-full cursor-pointer rounded-md border border-gray-200 bg-white text-sm text-gray-700 file:mr-3 file:cursor-pointer file:border-0 file:bg-[#7e22ce] file:py-2 file:px-3 file:text-white file:hover:bg-[#6b21a8]"
+                    disabled={editUploading}
+                  />
+                  <p className="mt-1.5 text-xs text-gray-500">
+                    JPG, PNG, WebP, or GIF · up to 3 MB.
+                  </p>
+                  <input
+                    type="url"
+                    className={`${formInput} mt-3`}
+                    value={editForm.image_url ?? ""}
+                    onChange={(e) => setEditForm((f) => ({ ...f, image_url: e.target.value }))}
+                    placeholder="Or paste an image URL"
+                  />
+                  {editForm.image_url ? (
+                    <button
+                      type="button"
+                      onClick={() => setEditForm((f) => (f ? { ...f, image_url: "" } : f))}
+                      className="mt-1 inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white py-1.5 px-2.5 text-xs font-medium text-gray-600 hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+                    >
+                      <i className="fas fa-times" aria-hidden /> Remove photo
+                    </button>
+                  ) : null}
+                  {editUploading ? (
+                    <p className="mt-2 text-xs font-medium text-[#7e22ce]">
+                      <i className="fas fa-spinner fa-spin mr-1" aria-hidden /> Uploading…
+                    </p>
+                  ) : null}
+                </div>
+              </div>
               <div className="mb-4 flex items-center gap-2">
                 <input
                   type="checkbox"

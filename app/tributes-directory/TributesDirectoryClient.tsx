@@ -172,13 +172,24 @@ export default function TributesDirectoryClient() {
               >
                 <div className="relative h-[200px] overflow-hidden bg-[#f8fafc] sm:h-[250px]">
                   {t.image_url ? (
-                    <Image
-                      src={t.image_url}
-                      alt={t.name}
-                      className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                      width={640}
-                      height={360}
-                    />
+                    t.image_url.startsWith("data:") ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={t.image_url}
+                        alt={t.name}
+                        className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                        width={640}
+                        height={360}
+                      />
+                    ) : (
+                      <Image
+                        src={t.image_url}
+                        alt={t.name}
+                        className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                        width={640}
+                        height={360}
+                      />
+                    )
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#7e22ce] to-[#4338ca] text-white">
                       <i className="fas fa-user-circle text-6xl opacity-80" aria-hidden />
