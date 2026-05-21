@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import EventScheduleDisplay from "@/components/EventScheduleDisplay";
+import { normalizeEventDateString, timeToInputValue } from "@/lib/event-datetime";
+
+const ALL_US_TIMEZONES = JSON.stringify(["ET", "CT", "MT", "PT"]);
 
 type Event = {
   id: string;
@@ -19,34 +23,6 @@ type Event = {
 
 const TIMEZONES = ["Eastern (ET)", "Central (CT)", "Mountain (MT)", "Pacific (PT)"];
 
-function formatDisplayDate(dateStr: string, timeStr: string): string {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  const date = new Date(y, (m ?? 1) - 1, d ?? 1);
-  const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const day = dayNames[date.getDay()];
-  const month = monthNames[date.getMonth()];
-  const dayNum = date.getDate();
-  const year = date.getFullYear();
-  let [h, min] = (timeStr || "17:00").split(":").map(Number);
-  const am = h < 12;
-  if (h === 0) h = 12;
-  else if (h > 12) h -= 12;
-  const time = `${h}:${String(min ?? 0).padStart(2, "0")} ${am ? "AM" : "PM"}`;
-  return `${day}, ${month} ${dayNum}, ${year} at ${time}`;
-}
-
-function timeToInput(timeStr: string): string {
-  if (!timeStr) return "17:00";
-  const [h, min] = timeStr.split(":").map(Number);
-  return `${String(h ?? 17).padStart(2, "0")}:${String(min ?? 0).padStart(2, "0")}`;
-}
-
-function dateToInput(dateStr: string): string {
-  if (!dateStr) return "";
-  return dateStr;
-}
-
 export default function AdminEventsClient() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
@@ -58,10 +34,6 @@ export default function AdminEventsClient() {
     zoomLink: "",
     description: "",
     showOnHomepage: true,
-    showET: true,
-    showCT: false,
-    showMT: false,
-    showPT: false,
   });
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editForm, setEditForm] = useState<Partial<Event> | null>(null);
@@ -102,9 +74,7 @@ export default function AdminEventsClient() {
           zoomLink: form.zoomLink || null,
           description: form.description,
           showOnHomepage: form.showOnHomepage,
-          showTimezones: JSON.stringify(
-            [form.showET && "ET", form.showCT && "CT", form.showMT && "MT", form.showPT && "PT"].filter(Boolean)
-          ),
+          showTimezones: ALL_US_TIMEZONES,
         }),
       });
       if (!res.ok) throw new Error("Failed");
@@ -141,7 +111,7 @@ export default function AdminEventsClient() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...editForm,
-          showTimezones: editForm.showTimezones ?? "[\"ET\"]",
+          showTimezones: ALL_US_TIMEZONES,
         }),
       });
       if (!res.ok) throw new Error("Failed");
@@ -236,7 +206,9 @@ export default function AdminEventsClient() {
             <h2 className="text-[1.1rem] font-bold text-gray-800 m-0 mb-2 uppercase tracking-wide">
               {ev.title}
             </h2>
-            <p className="text-sm text-gray-500 m-0 mb-3">{formatDisplayDate(ev.eventDate, ev.eventTime)}</p>
+            <div className="text-sm text-gray-500 m-0 mb-3 max-w-xl">
+              <EventScheduleDisplay eventDate={ev.eventDate} eventTime={ev.eventTime} />
+            </div>
             <p className="text-sm text-gray-600 m-0 mb-4 leading-snug">{ev.description}</p>
             <div className="flex items-center justify-between flex-wrap gap-3">
               <label className="inline-flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
@@ -334,24 +306,10 @@ export default function AdminEventsClient() {
             />
             Display on Homepage
           </label>
-          <div className="my-4">
-            <span className="block font-semibold text-gray-700 mb-2">Show timezones:</span>
-            {[
-              { key: "showET", label: "ET (Eastern Time)" },
-              { key: "showCT", label: "CT (Central Time)" },
-              { key: "showMT", label: "MT (Mountain Time)" },
-              { key: "showPT", label: "PT (Pacific Time)" },
-            ].map(({ key, label }) => (
-              <label key={key} className="inline-flex items-center gap-2 font-medium text-gray-700 mb-1.5 mr-4 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={form[key as keyof typeof form] as boolean}
-                  onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.checked }))}
-                />
-                {label}
-              </label>
-            ))}
-          </div>
+          <p className="text-sm text-gray-500 m-0 mb-4 leading-relaxed">
+            Enter the event time in <strong>Eastern Time (ET)</strong>. The homepage lists{" "}
+            <strong>ET, CT, MT, and PT</strong> so visitors can match what Zoom shows in their zone.
+          </p>
           <button
             type="submit"
             className="mt-4 py-3 px-6 bg-gradient-to-br from-violet-700 to-violet-600 text-white border-0 rounded-lg font-bold text-base cursor-pointer transition-opacity duration-200 hover:opacity-90 disabled:opacity-70 disabled:cursor-not-allowed"
@@ -384,7 +342,7 @@ export default function AdminEventsClient() {
               <input
                 type="date"
                 className={formInput}
-                value={dateToInput(editForm.eventDate ?? "")}
+                value={normalizeEventDateString(editForm.eventDate ?? "")}
                 onChange={(e) => setEditForm((f) => ({ ...f, eventDate: e.target.value }))}
                 required
               />
@@ -392,7 +350,7 @@ export default function AdminEventsClient() {
               <input
                 type="time"
                 className={formInput}
-                value={timeToInput(editForm.eventTime ?? "")}
+                value={timeToInputValue(editForm.eventTime ?? "")}
                 onChange={(e) => setEditForm((f) => ({ ...f, eventTime: e.target.value }))}
                 required
               />

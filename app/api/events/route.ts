@@ -1,13 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
-
-// ET offset: UTC = ET + 5 (no DST for simplicity)
-function etToUtc(dateStr: string, timeStr: string): Date {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  const [h, min] = timeStr.split(":").map(Number);
-  return new Date(Date.UTC(y, (m ?? 1) - 1, d ?? 1, (h ?? 0) + 5, min ?? 0, 0));
-}
+import { etToUtc, normalizeEventDateString } from "@/lib/event-datetime";
 
 export async function GET() {
   const prisma = await getPrisma();
@@ -17,8 +11,13 @@ export async function GET() {
     where: { showOnHomepage: true },
     orderBy: { eventAt: "desc" },
   })) as EventRecord[];
-  const upcoming = all.filter((e) => e.eventAt >= now).sort((a, b) => a.eventAt.getTime() - b.eventAt.getTime());
-  const past = all.filter((e) => e.eventAt < now);
+  const upcoming = all
+    .filter((e) => e.eventAt >= now)
+    .sort((a, b) => a.eventAt.getTime() - b.eventAt.getTime())
+    .map((e) => ({ ...e, eventDate: normalizeEventDateString(e.eventDate) }));
+  const past = all
+    .filter((e) => e.eventAt < now)
+    .map((e) => ({ ...e, eventDate: normalizeEventDateString(e.eventDate) }));
   return NextResponse.json({ upcoming, past });
 }
 
@@ -41,13 +40,14 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Missing title, eventDate, or eventTime" }, { status: 400 });
   }
 
-  const eventAt = etToUtc(eventDate, eventTime);
+  const normalizedDate = normalizeEventDateString(eventDate);
+  const eventAt = etToUtc(normalizedDate, eventTime);
 
   const prisma = await getPrisma();
   const event = await prisma.event.create({
     data: {
       title,
-      eventDate,
+      eventDate: normalizedDate,
       eventTime,
       baseTimezone: baseTimezone ?? "Eastern (ET)",
       eventAt,

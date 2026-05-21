@@ -1,12 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
-
-function etToUtc(dateStr: string, timeStr: string): Date {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  const [h, min] = timeStr.split(":").map(Number);
-  return new Date(Date.UTC(y, (m ?? 1) - 1, d ?? 1, (h ?? 0) + 5, min ?? 0, 0));
-}
+import { etToUtc, normalizeEventDateString } from "@/lib/event-datetime";
 
 export async function PATCH(
   _request: NextRequest,
@@ -31,8 +26,14 @@ export async function PATCH(
     showTimezones?: string;
     recordingUrl?: string | null;
   } = {};
+  const prisma = await getPrisma();
+  const existing = await prisma.event.findUnique({ where: { id } });
+  if (!existing) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
   if (title !== undefined) update.title = title;
-  if (eventDate !== undefined) update.eventDate = eventDate;
+  if (eventDate !== undefined) update.eventDate = normalizeEventDateString(eventDate);
   if (eventTime !== undefined) update.eventTime = eventTime;
   if (baseTimezone !== undefined) update.baseTimezone = baseTimezone;
   if (zoomLink !== undefined) update.zoomLink = zoomLink;
@@ -40,9 +41,13 @@ export async function PATCH(
   if (showOnHomepage !== undefined) update.showOnHomepage = !!showOnHomepage;
   if (showTimezones !== undefined) update.showTimezones = typeof showTimezones === "string" ? showTimezones : JSON.stringify(showTimezones ?? ["ET"]);
   if (recordingUrl !== undefined) update.recordingUrl = recordingUrl;
-  if (eventDate && eventTime) update.eventAt = etToUtc(eventDate, eventTime);
 
-  const prisma = await getPrisma();
+  if (eventDate !== undefined || eventTime !== undefined) {
+    const finalDate = update.eventDate ?? existing.eventDate;
+    const finalTime = update.eventTime ?? existing.eventTime;
+    update.eventAt = etToUtc(finalDate, finalTime);
+  }
+
   const event = await prisma.event.update({ where: { id }, data: update });
   return NextResponse.json(event);
 }

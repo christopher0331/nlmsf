@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import EventScheduleDisplay from "@/components/EventScheduleDisplay";
+import { formatEventDayBadge } from "@/lib/event-datetime";
 
 type EventItem = {
   id: string;
@@ -14,33 +16,6 @@ type EventItem = {
   recordingUrl: string | null;
   eventAt: string;
 };
-
-const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-
-function formatDay(dateStr: string): { month: string; day: string } {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  return {
-    month: MONTHS[(m ?? 1) - 1] ?? "JAN",
-    day: String(d ?? 1),
-  };
-}
-
-function formatDateTime(dateStr: string, timeStr: string): string {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  const date = new Date(y, (m ?? 1) - 1, d ?? 1);
-  const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const day = dayNames[date.getDay()];
-  const month = monthNames[date.getMonth()];
-  const dayNum = date.getDate();
-  const year = date.getFullYear();
-  let [h, min] = (timeStr || "17:00").split(":").map(Number);
-  const am = h < 12;
-  if (h === 0) h = 12;
-  else if (h > 12) h -= 12;
-  const time = `${h}:${String(min ?? 0).padStart(2, "0")} ${am ? "AM" : "PM"} ET`;
-  return `${day}, ${month} ${dayNum}, ${year} · ${time}`;
-}
 
 export default function HomeEventsColumn() {
   const [upcoming, setUpcoming] = useState<EventItem[]>([]);
@@ -106,18 +81,18 @@ export default function HomeEventsColumn() {
                 <li key={ev.id} className={cardBase}>
                   <div className={dateBlock}>
                     <span className="text-[0.65rem] uppercase tracking-wider leading-tight">
-                      {formatDay(ev.eventDate).month}
+                      {formatEventDayBadge(ev.eventDate).month}
                     </span>
-                    <span className="text-[1.35rem] leading-tight">{formatDay(ev.eventDate).day}</span>
+                    <span className="text-[1.35rem] leading-tight">{formatEventDayBadge(ev.eventDate).day}</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-[0.95rem] font-bold text-gray-800 m-0 mb-1.5 uppercase tracking-wide leading-snug">
                       {ev.title}
                     </h3>
-                    <p className="text-[0.8rem] text-gray-500 m-0 mb-2 flex items-center gap-1.5">
-                      <span className="text-xs" aria-hidden>🕐</span>
-                      {formatDateTime(ev.eventDate, ev.eventTime)}
-                    </p>
+                    <div className="text-[0.8rem] text-gray-500 m-0 mb-2 flex items-start gap-1.5">
+                      <span className="text-xs mt-0.5 shrink-0" aria-hidden>🕐</span>
+                      <EventScheduleDisplay eventDate={ev.eventDate} eventTime={ev.eventTime} />
+                    </div>
                     <p className="text-[0.85rem] text-gray-600 m-0 mb-2 leading-snug">{ev.description}</p>
                     {ev.zoomLink && (
                       <a href={ev.zoomLink} target="_blank" rel="noopener noreferrer" className={btnBase}>
@@ -145,18 +120,18 @@ export default function HomeEventsColumn() {
               <li key={ev.id} className={cardBase}>
                 <div className={dateBlock}>
                   <span className="text-[0.65rem] uppercase tracking-wider leading-tight">
-                    {formatDay(ev.eventDate).month}
+                    {formatEventDayBadge(ev.eventDate).month}
                   </span>
-                  <span className="text-[1.35rem] leading-tight">{formatDay(ev.eventDate).day}</span>
+                  <span className="text-[1.35rem] leading-tight">{formatEventDayBadge(ev.eventDate).day}</span>
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="text-[0.95rem] font-bold text-gray-800 m-0 mb-1.5 uppercase tracking-wide leading-snug">
                     {ev.title}
                   </h4>
-                  <p className="text-[0.8rem] text-gray-500 m-0 mb-2 flex items-center gap-1.5">
-                    <span className="text-xs" aria-hidden>🕐</span>
-                    {formatDateTime(ev.eventDate, ev.eventTime)}
-                  </p>
+                  <div className="text-[0.8rem] text-gray-500 m-0 mb-2 flex items-start gap-1.5">
+                    <span className="text-xs mt-0.5 shrink-0" aria-hidden>🕐</span>
+                    <EventScheduleDisplay eventDate={ev.eventDate} eventTime={ev.eventTime} />
+                  </div>
                   <p className="text-[0.85rem] text-gray-600 m-0 mb-2 leading-snug">{ev.description}</p>
                   {ev.recordingUrl ? (
                     <a href={ev.recordingUrl} target="_blank" rel="noopener noreferrer" className={btnBase}>
