@@ -57,6 +57,13 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "Treatment",
   },
   {
+    title: "NGS",
+    description:
+      "Quick tips on next-generation sequencing (NGS)—what it is, when it may be used, and how results can inform LMS care.",
+    pdfHref: "/documents/quick-tips/NGS.pdf",
+    category: "Treatment",
+  },
+  {
     title: "Dental Care",
     description: "Guidance on dental care considerations for LMS patients before, during, and after treatment.",
     pdfHref: "/documents/quick-tips/Dental Care.pdf",
@@ -72,6 +79,13 @@ const QUICK_TIPS: QuickTipTopic[] = [
     title: "Survivorship & Recovery",
     description: "Guidance on life after treatment, including managing recovery, long-term care considerations, and rebuilding well-being.",
     pdfHref: "/documents/quick-tips/Survivorship & Recovery.pdf",
+    category: "General",
+  },
+  {
+    title: "Survivorship Care Plans",
+    description:
+      "A roadmap for recovery including treatment summaries, follow-up schedules, and physical and emotional late effects to monitor.",
+    pdfHref: "/documents/quick-tips/Survivorship Care Plans.pdf",
     category: "General",
   },
   {
