@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import EventScheduleDisplay from "@/components/EventScheduleDisplay";
 import { formatEventDayBadge } from "@/lib/event-datetime";
@@ -16,6 +16,54 @@ type EventItem = {
   recordingUrl: string | null;
   eventAt: string;
 };
+
+function EventDescription({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const [isTruncatable, setIsTruncatable] = useState(false);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [text]);
+
+  useEffect(() => {
+    if (expanded) return;
+
+    const el = textRef.current;
+    if (!el) return;
+
+    const checkOverflow = () => {
+      setIsTruncatable(el.scrollHeight > el.clientHeight + 1);
+    };
+
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [text, expanded]);
+
+  if (!text.trim()) return null;
+
+  return (
+    <div className="mb-2">
+      <p
+        ref={textRef}
+        className={`text-[0.85rem] text-gray-600 m-0 leading-snug ${expanded ? "" : "line-clamp-3"}`}
+      >
+        {text}
+      </p>
+      {isTruncatable && (
+        <button
+          type="button"
+          onClick={() => setExpanded((value) => !value)}
+          className="text-[0.8rem] font-semibold text-violet-700 mt-1 p-0 bg-transparent border-0 cursor-pointer hover:text-violet-900 transition-colors"
+          aria-expanded={expanded}
+        >
+          {expanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+}
 
 export default function HomeEventsColumn() {
   const [upcoming, setUpcoming] = useState<EventItem[]>([]);
@@ -93,7 +141,7 @@ export default function HomeEventsColumn() {
                       <span className="text-xs mt-0.5 shrink-0" aria-hidden>🕐</span>
                       <EventScheduleDisplay eventDate={ev.eventDate} eventTime={ev.eventTime} />
                     </div>
-                    <p className="text-[0.85rem] text-gray-600 m-0 mb-2 leading-snug">{ev.description}</p>
+                    <EventDescription text={ev.description} />
                     {ev.zoomLink && (
                       <a href={ev.zoomLink} target="_blank" rel="noopener noreferrer" className={btnBase}>
                         Register
@@ -132,7 +180,7 @@ export default function HomeEventsColumn() {
                     <span className="text-xs mt-0.5 shrink-0" aria-hidden>🕐</span>
                     <EventScheduleDisplay eventDate={ev.eventDate} eventTime={ev.eventTime} />
                   </div>
-                  <p className="text-[0.85rem] text-gray-600 m-0 mb-2 leading-snug">{ev.description}</p>
+                  <EventDescription text={ev.description} />
                   {ev.recordingUrl ? (
                     <a href={ev.recordingUrl} target="_blank" rel="noopener noreferrer" className={btnBase}>
                       <span className="text-[0.7rem]" aria-hidden>▶</span>
