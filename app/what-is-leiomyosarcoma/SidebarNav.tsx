@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-const SECTION_IDS = ["diagnosis", "treatment", "resources"];
+const SECTION_IDS = ["newly-diagnosed-video", "diagnosis", "treatment", "resources"];
 
 export default function SidebarNav() {
-  const [activeId, setActiveId] = useState<string>("diagnosis");
+  const [activeId, setActiveId] = useState<string>("newly-diagnosed-video");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +42,15 @@ export default function SidebarNav() {
   return (
     <nav className="what-lms-nav">
       <h3 className="what-lms-nav-title">Page Contents</h3>
+      <div className="what-lms-nav-section newly-diagnosed">
+        <a
+          href="#newly-diagnosed-video"
+          onClick={handleClick("newly-diagnosed-video")}
+          className={activeId === "newly-diagnosed-video" ? "active" : undefined}
+        >
+          Newly Diagnosed
+        </a>
+      </div>
       <div className="what-lms-nav-section diagnosis">
         <a
           href="#diagnosis"

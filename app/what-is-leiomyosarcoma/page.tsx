@@ -17,6 +17,25 @@ export const metadata: Metadata = {
   },
 };
 
+const ONCLIVE_LMS_VIDEO = {
+  youtubeUrl: "https://www.youtube.com/watch?v=_XV5ZyhgbfI",
+  embedUrl: "https://www.youtube.com/embed/_XV5ZyhgbfI?rel=0",
+  title: "Leiomyosarcoma Causes and Treatments: A Complete Guide to Smooth Muscle Cancer",
+  date: "May 27, 2026",
+  chapters: [
+    { time: "0:00", seconds: 0, label: "Introduction to Leiomyosarcoma" },
+    { time: "2:15", seconds: 135, label: "Understanding Smooth Muscle Tissues" },
+    { time: "4:30", seconds: 270, label: "Primary Causes and Risk Factors" },
+    { time: "8:45", seconds: 525, label: "Recognizing Symptoms and Early Detection" },
+    { time: "12:20", seconds: 740, label: "Diagnostic Procedures and Imaging" },
+    { time: "16:00", seconds: 960, label: "Surgical Treatment Options" },
+    { time: "20:10", seconds: 1210, label: "Radiation and Chemotherapy Protocols" },
+    { time: "24:30", seconds: 1470, label: "Emerging Therapies and Clinical Trials" },
+    { time: "28:00", seconds: 1680, label: "Prognosis and Quality of Life" },
+    { time: "31:45", seconds: 1905, label: "Conclusion and Next Steps" },
+  ],
+} as const;
+
 export default function WhatIsLmsPage() {
   return (
     <main className="what-lms-page">
@@ -206,6 +225,91 @@ export default function WhatIsLmsPage() {
                   <button type="submit">Subscribe</button>
                 </form>
               </div>
+            </div>
+          </section>
+
+          <section id="newly-diagnosed-video" className="content-section">
+            <h2 className="section-title violet">For Newly Diagnosed Patients</h2>
+
+            <div className="content-panel violet">
+              <div className="panel-header">
+                <span className="panel-icon violet" aria-hidden="true" />
+                <div>
+                  <h3>OncLive Video Update</h3>
+                  <p>{ONCLIVE_LMS_VIDEO.date}</p>
+                </div>
+              </div>
+
+              <div className="what-lms-video-meta">
+                <span className="what-lms-video-source">OncLive</span>
+                <span className="what-lms-video-duration">~32 min</span>
+              </div>
+
+              <h4 className="what-lms-video-title">
+                <a
+                  href={ONCLIVE_LMS_VIDEO.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {ONCLIVE_LMS_VIDEO.title}
+                </a>
+              </h4>
+
+              <div className="what-lms-video">
+                <iframe
+                  src={ONCLIVE_LMS_VIDEO.embedUrl}
+                  title={ONCLIVE_LMS_VIDEO.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+
+              <p className="panel-text">
+                In this comprehensive educational video, we explore the causes, symptoms, diagnosis,
+                and treatment options for leiomyosarcoma, a rare cancer that develops in smooth muscle
+                tissues. This guide is designed for patients, caregivers, and medical students seeking
+                a deep understanding of this condition without overwhelming jargon.
+              </p>
+              <p className="panel-text">
+                We break down the complex pathology of smooth muscle tumors, discussing risk factors
+                such as genetic mutations and environmental exposures. Furthermore, we review current
+                standard treatments including surgery, radiation therapy, chemotherapy, and emerging
+                targeted therapies to help viewers understand their options fully.
+              </p>
+
+              <div className="what-lms-chapters">
+                <h4>What You Will Learn</h4>
+                <ol className="what-lms-chapter-list">
+                  {ONCLIVE_LMS_VIDEO.chapters.map((chapter) => (
+                    <li key={chapter.seconds}>
+                      <a
+                        href={`${ONCLIVE_LMS_VIDEO.youtubeUrl}&t=${chapter.seconds}s`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="what-lms-chapter-link"
+                      >
+                        <span className="what-lms-chapter-time">{chapter.time}</span>
+                        <span className="what-lms-chapter-label">{chapter.label}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <p className="what-lms-video-disclaimer">
+                This content is intended for educational purposes only and does not constitute medical
+                advice. Always consult with a qualified healthcare professional for diagnosis and
+                treatment plans.
+              </p>
+
+              <a
+                href={ONCLIVE_LMS_VIDEO.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="what-lms-video-cta"
+              >
+                Watch on YouTube
+              </a>
             </div>
           </section>
 
