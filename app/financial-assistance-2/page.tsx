@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CopayAssistancePrograms from "@/components/CopayAssistancePrograms";
 
 export const metadata: Metadata = {
   title: "Financial Assistance | NLMSF",
@@ -16,10 +17,12 @@ const CFAC_ORGS = [
   { name: "CancerCare Co-Payment Assistance Foundation", href: "https://www.cancercare.org/copayfoundation", icon: "fa-file-medical-alt" },
   { name: "Cancer Financial Assistance Coalition", href: "http://www.cancerfac.org/", icon: "fa-hand-holding-usd" },
   { name: "Dream Foundation", href: "https://www.dreamfoundation.org/", icon: "fa-star" },
+  { name: "Good Days", href: "https://mygooddays.org/", icon: "fa-sun" },
   { name: "HealthWell Foundation", href: "https://www.healthwellfoundation.org/", icon: "fa-heartbeat" },
-  { name: "National Organization for Rare Disease", href: "https://rarediseases.org/", icon: "fa-stethoscope" },
+  { name: "National Organization for Rare Disorders (NORD)", href: "https://rarediseases.org/", icon: "fa-stethoscope" },
   { name: "NCCN Virtual Reimbursement Resource Room", href: "https://www.nccn.org/business-policy/business/virtual-reimbursement-resource-room-and-app", icon: "fa-laptop-medical" },
-  { name: "Patient Access Network Foundation", href: "https://panfoundation.org/index.php/en/", icon: "fa-users" },
+  { name: "Patient Access Network Foundation", href: "https://www.panfoundation.org/", icon: "fa-users" },
+  { name: "Patient Advocate Foundation Co-Pay Relief Program", href: "https://copays.org/", icon: "fa-file-invoice-dollar" },
   { name: "Patient Services Incorporated", href: "https://www.patientservicesinc.org/", icon: "fa-user-md" },
   { name: "Triage Cancer", href: "https://triagecancer.org/cancer-finances-financial-assistance", icon: "fa-balance-scale" },
 ];
@@ -67,6 +70,10 @@ export default function FinancialAssistance2Page() {
               <a href="#introduction" className="flex items-center gap-3 rounded-lg px-4 py-3 text-gray-600 no-underline transition-colors hover:bg-gray-100 hover:text-[#6a3ea1]">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#6a3ea1]" aria-hidden />
                 <span>Introduction</span>
+              </a>
+              <a href="#copay-assistance" className="flex items-center gap-3 rounded-lg px-4 py-3 text-gray-600 no-underline transition-colors hover:bg-gray-100 hover:text-[#6a3ea1]">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#ec4899]" aria-hidden />
+                <span>Co-Payment Assistance</span>
               </a>
               <a href="#cfac-organizations" className="flex items-center gap-3 rounded-lg px-4 py-3 text-gray-600 no-underline transition-colors hover:bg-gray-100 hover:text-[#6a3ea1]">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#4a90e2]" aria-hidden />
@@ -168,6 +175,8 @@ export default function FinancialAssistance2Page() {
               </p>
             </div>
           </section>
+
+          <CopayAssistancePrograms />
 
           {/* CFAC Organizations */}
           <section id="cfac-organizations" className="scroll-mt-24">

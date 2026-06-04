@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import CopayAssistancePrograms from "@/components/CopayAssistancePrograms";
 
 export const metadata: Metadata = {
   title: "Financial Assistance (Resources) | NLMSF",
@@ -79,6 +80,8 @@ export default function FinancialAssistance2StagedPage() {
           </div>
         </section>
 
+        <CopayAssistancePrograms variant="staged" className="mb-10" />
+
         {/* CFAC Coalition Organizations */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-[#7e22ce]/30">
@@ -90,9 +93,11 @@ export default function FinancialAssistance2StagedPage() {
             <li><a href="https://www.cancercare.org/copayfoundation" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>CancerCare Co-Payment Assistance Foundation</a></li>
             <li><a href="http://www.cancerfac.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Cancer Financial Assistance Coalition</a></li>
             <li><a href="https://www.dreamfoundation.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Dream Foundation</a></li>
+            <li><a href="https://mygooddays.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Good Days</a></li>
             <li><a href="https://www.healthwellfoundation.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>HealthWell Foundation</a></li>
-            <li><a href="https://rarediseases.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>National Organization for Rare Disease</a></li>
-            <li><a href="https://panfoundation.org/index.php/en/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Patient Access Network Foundation</a></li>
+            <li><a href="https://rarediseases.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>National Organization for Rare Disorders (NORD)</a></li>
+            <li><a href="https://www.panfoundation.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Patient Access Network Foundation</a></li>
+            <li><a href="https://copays.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Patient Advocate Foundation Co-Pay Relief Program</a></li>
             <li><a href="https://www.patientservicesinc.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Patient Services Incorporated</a></li>
             <li><a href="https://sarcomaalliance.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Sarcoma Alliance</a></li>
             <li><a href="https://sarcoma-oma.org/" className="font-semibold text-[#7e22ce] no-underline hover:underline" {...ext}>Sarcoma–Oma</a></li>

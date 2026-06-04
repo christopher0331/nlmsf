@@ -4,10 +4,51 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "NLMSF Research Projects Funded | National Leiomyosarcoma Foundation",
   description:
-    "An overview of the research programs and initiatives funded by the National Leiomyosarcoma Foundation, including the Catalyst Program, SASS, Count Me In, and Early Career Awards.",
+    "An overview of the research programs and initiatives funded by the National Leiomyosarcoma Foundation, including the LMS SPORE, Catalyst Program, SASS, Count Me In, and Early Career Awards.",
 };
 
 const programs = [
+  {
+    id: "lms-spore",
+    icon: "fas fa-dna",
+    color: "rose",
+    label: "Leiomyosarcoma (LMS) SPORE",
+    partners: "University of Michigan Rogel Cancer Center — Drs. Scott Schuetze & Jonathan Fletcher",
+    amounts: [
+      { label: "NIH/NCI collaborative SPORE grant (2022)", amount: "$12.3M" },
+      { label: "NLMSF five-year co-funding commitment", amount: "Since 2022" },
+    ],
+    description: (
+      <>
+        <p>
+          The <strong>Leiomyosarcoma SPORE</strong> (Specialized Programs of Research Excellence) is a
+          multi-institutional, international research program led by the{" "}
+          <strong>University of Michigan Rogel Cancer Center</strong>. Funded by the{" "}
+          <strong>National Cancer Institute (NCI) in 2022</strong>, this landmark grant brings together
+          leading sarcoma centers across the U.S., Canada, and Australia to advance understanding of LMS
+          genetics, biology, and therapeutic approaches.
+        </p>
+        <p className="mt-3">
+          The NLMSF began <strong>co-funding this project in 2022</strong>, alongside partners including
+          Rein in Sarcoma and the Sarcoma Foundation of America. Our five-year commitment supports a
+          program that includes <strong>three research projects</strong>, three cores (biospecimen, data
+          analysis, and administration), and career enhancement and developmental research programs for
+          early-career investigators.
+        </p>
+        <p className="mt-3">
+          Research priorities include identifying genomic vulnerabilities in LMS, studying genetic
+          epidemiology and cancer predisposition syndromes such as Li-Fraumeni Syndrome, and developing
+          biomarkers to assess treatment response. <strong>Dr. Mitch Achee</strong>, LMS survivor and
+          physician, serves on the SPORE External Advisory Board, bringing the patient perspective to
+          this initiative.
+        </p>
+      </>
+    ),
+    link: {
+      href: "https://medschool.umich.edu/labs-departments/centers/cancer-research/specialized-programs-research-excellence-spore/leiomyosarcoma-lms-spore",
+      label: "Learn More About the LMS SPORE at University of Michigan",
+    },
+  },
   {
     id: "catalyst",
     icon: "fas fa-seedling",
@@ -157,6 +198,14 @@ const colorMap: Record<string, { bg: string; border: string; icon: string; badge
     amount: "text-amber-700",
     link: "text-amber-700 hover:text-amber-900",
   },
+  rose: {
+    bg: "bg-rose-50",
+    border: "border-rose-200",
+    icon: "bg-rose-100 text-rose-700",
+    badge: "bg-rose-100 text-rose-700",
+    amount: "text-rose-700",
+    link: "text-rose-700 hover:text-rose-900",
+  },
 };
 
 export default function ResearchProjectsFundedPage() {
@@ -183,9 +232,9 @@ export default function ResearchProjectsFundedPage() {
       <div className="max-w-4xl mx-auto px-6 py-8">
         <div className="bg-white rounded-2xl shadow border border-indigo-100 p-6 text-slate-700 text-base leading-relaxed">
           The NLMSF is committed to funding high-impact research initiatives at every stage — from
-          supporting early-career scientists attending leading sarcoma conferences, to co-funding
-          large-scale data projects that will shape the future of LMS treatment. Below is a summary
-          of the programs the NLMSF actively supports.
+          co-funding the NIH-backed LMS SPORE at the University of Michigan, to supporting early-career
+          scientists at leading sarcoma conferences and large-scale data projects that will shape the
+          future of LMS treatment. Below is a summary of the programs the NLMSF actively supports.
         </div>
       </div>
 
@@ -200,7 +249,7 @@ export default function ResearchProjectsFundedPage() {
               className={`rounded-2xl border-2 ${c.border} ${c.bg} shadow-md overflow-hidden`}
             >
               {/* Top accent */}
-              <div className={`h-1.5 w-full ${program.color === "violet" ? "bg-gradient-to-r from-violet-400 to-purple-500" : program.color === "indigo" ? "bg-gradient-to-r from-indigo-400 to-blue-500" : program.color === "emerald" ? "bg-gradient-to-r from-emerald-400 to-teal-500" : "bg-gradient-to-r from-amber-400 to-orange-400"}`} />
+              <div className={`h-1.5 w-full ${program.color === "violet" ? "bg-gradient-to-r from-violet-400 to-purple-500" : program.color === "indigo" ? "bg-gradient-to-r from-indigo-400 to-blue-500" : program.color === "emerald" ? "bg-gradient-to-r from-emerald-400 to-teal-500" : program.color === "rose" ? "bg-gradient-to-r from-rose-400 to-pink-500" : "bg-gradient-to-r from-amber-400 to-orange-400"}`} />
 
               <div className="p-6 md:p-8">
                 <div className="flex items-start gap-4 mb-5">
