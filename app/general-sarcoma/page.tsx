@@ -9,6 +9,40 @@ export const metadata: Metadata = {
 
 const ext = { target: "_blank" as const, rel: "noopener noreferrer" as const };
 
+const arginineInsights = [
+  "Arginine is an amino acid that may enhance immune function and support cancer treatment.",
+  "Recent studies suggest that arginine can inhibit tumor growth in certain sarcoma types.",
+  "It may improve the efficacy of chemotherapy by enhancing drug delivery to tumors.",
+  "Arginine supplementation has shown promise in reducing treatment-related side effects.",
+  "Ongoing clinical trials are investigating optimal dosing and administration methods.",
+  "Consultation with healthcare providers is essential before starting any new treatment regimen.",
+];
+
+const arginineTopics = [
+  "What is Arginine",
+  "Why does this matter in cancer?",
+  "How do tumors use arginine?",
+  "What are researchers trying to do?",
+  "Why is this relevant for LMS / Sarcoma",
+  "How could this affect immunotherapy?",
+  "Important things patients should understand",
+  "Why research in this area matters",
+  "Arginine and Diet — what patients need to know",
+  "What nutritional focus is important for patients to be mindful of",
+  "Protein sources that are generally considered helpful",
+  "Anti-inflammatory foods, healthy fats, high-fiber foods",
+  "Foods patients often ask about regarding arginine",
+  "What should patients avoid?",
+  "Important considerations, areas of research being studied, and bottom line for patients",
+];
+
+const ARGININE_AI_SUMMARY =
+  "https://drive.google.com/file/d/18ZU8jM6yG9WX6VM9K-NyJH1LzKwfzz7H/view?usp=sharing";
+const ARGININE_FRONTIERS_REVIEW =
+  "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2026.1774392/full";
+const BO112_PATIENT_SUMMARY =
+  "https://docs.google.com/document/d/1I6hX5eaaXgoJ09fcvhEu2jfyVIkYVxTK/edit?usp=sharing&ouid=102077874789527856072&rtpof=true&sd=true";
+
 export default function GeneralSarcomaPage() {
   return (
     <main className="gs-page">
@@ -50,6 +84,7 @@ export default function GeneralSarcomaPage() {
           <h3>On This Page</h3>
           <a href="#research-grants">Research Grants</a>
           <a href="#research-updates">Research Updates</a>
+          <a href="#arginine-research">Arginine &amp; Immunotherapy</a>
           <a href="#trials-education">Clinical Trials &amp; Education</a>
           <a href="#research-library">Research Library</a>
           <a href="#full-research-archive">Full Archive</a>
@@ -179,6 +214,98 @@ export default function GeneralSarcomaPage() {
           </p>
         </section>
 
+        {/* ── Arginine & Immunotherapy Research (teal) ── */}
+        <section id="arginine-research" className="gs-section">
+          <h2 className="gs-section-title teal">Arginine &amp; Immunotherapy Research</h2>
+
+          <div className="gs-panel teal">
+            <div className="gs-panel-header">
+              <div className="gs-icon teal">
+                <i className="fas fa-dna" aria-hidden />
+              </div>
+              <div>
+                <h3>Understanding Arginine Metabolism in Cancer</h3>
+                <p>Exploring the potential of arginine in treating sarcoma</p>
+              </div>
+            </div>
+            <p className="gs-panel-text">
+              To explore the potential of arginine in treating sarcoma, consider the following
+              insights. This is educational information only — always discuss any supplement or
+              dietary change with your oncology care team.
+            </p>
+            <ul className="gs-checklist">
+              {arginineInsights.map((insight) => (
+                <li key={insight}>{insight}</li>
+              ))}
+            </ul>
+
+            <h4 className="gs-subheading">AI explanation summary — topics covered</h4>
+            <p className="gs-muted">
+              Our patient-friendly summary explains arginine metabolism, diet, immunotherapy
+              relevance, and practical questions for your care team.
+            </p>
+            <ul className="gs-topic-grid">
+              {arginineTopics.map((topic) => (
+                <li key={topic}>{topic}</li>
+              ))}
+            </ul>
+            <div className="gs-card-actions">
+              <a className="gs-pill-link" href={ARGININE_AI_SUMMARY} {...ext}>
+                AI patient explanation &amp; summary
+              </a>
+              <a className="gs-pill-link secondary" href={ARGININE_FRONTIERS_REVIEW} {...ext}>
+                Frontiers review (Feb 2026)
+              </a>
+            </div>
+          </div>
+
+          <div className="gs-card-grid" style={{ marginTop: "1.25rem" }}>
+            <div className="gs-card teal">
+              <span className="gs-date-tag">Feb 11, 2026</span>
+              <h4>
+                <a href={ARGININE_FRONTIERS_REVIEW} {...ext}>
+                  Arginine metabolism and cancer therapy strategies
+                </a>
+              </h4>
+              <p className="gs-muted">
+                In this review, researchers integrate and analyze how tumor cells and immune cells
+                such as T cells respond to arginine, and strategies for cancer therapy.{" "}
+                <em>Frontiers in Oncology</em>.
+              </p>
+              <div className="gs-card-actions">
+                <a className="gs-pill-link" href={ARGININE_FRONTIERS_REVIEW} {...ext}>
+                  Read full article
+                </a>
+              </div>
+            </div>
+
+            <div className="gs-card teal">
+              <span className="gs-date-tag">UCLA &amp; Stanford Medicine</span>
+              <h4>Triple pre-surgery therapy may boost immunity against soft tissue sarcoma</h4>
+              <p className="gs-muted">
+                Early results from preclinical studies and a clinical trial led by researchers at
+                the UCLA Health Jonsson Comprehensive Cancer Center and Stanford Medicine suggest
+                that combining targeted radiation therapy with the experimental immune-boosting
+                drug BO-112 and anti-PD-1 therapy before surgery may help the immune system fight
+                aggressive soft tissue sarcomas.
+              </p>
+              <p className="gs-muted">
+                Findings published in <em>Cancer Discovery</em> show that the approach can reshape
+                the tumor microenvironment to activate the body&apos;s immune cells against cancer.
+              </p>
+              <p className="gs-attribution">
+                Denise Heady, University of California, Los Angeles — edited by Sadie Harley,
+                reviewed by Andrew Zinin
+              </p>
+              <div className="gs-card-actions">
+                <a className="gs-pill-link" href={BO112_PATIENT_SUMMARY} {...ext}>
+                  Read patient-friendly summary
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── Clinical Trials & Education (teal) ── */}
         <section id="trials-education" className="gs-section">
           <h2 className="gs-section-title teal">
@@ -242,6 +369,16 @@ export default function GeneralSarcomaPage() {
         {/* ── Research Library by Year (blue) ── */}
         <section id="research-library" className="gs-section">
           <h2 className="gs-section-title blue">Research Library (By Year)</h2>
+
+          {/* 2026 */}
+          <div className="gs-year-group">
+            <h3 className="gs-year-label">2026</h3>
+            <div className="gs-year-cards">
+              <a className="gs-pub-card" href={ARGININE_FRONTIERS_REVIEW} {...ext}>
+                Arginine metabolism and cancer therapy strategies — tumor and immune cell responses (Frontiers in Oncology, Feb 2026)
+              </a>
+            </div>
+          </div>
 
           {/* 2025 */}
           <div className="gs-year-group">

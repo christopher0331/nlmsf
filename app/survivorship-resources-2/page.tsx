@@ -39,6 +39,16 @@ const ascoResources = [
   },
 ];
 
+const nciResources = [
+  {
+    title: "NCI Resource Information on Cancer Survivorship",
+    description:
+      "National Cancer Institute hub for life after treatment—follow-up care, late effects, family issues, coping with recurrence, and questions to ask your doctor when treatment ends.",
+    url: "https://www.cancer.gov/about-cancer/coping/survivorship",
+    cta: "View NCI Survivorship Resources",
+  },
+];
+
 const nccsResources = [
   {
     title: "An Updated Survivorship Care Planning Template",
@@ -278,6 +288,7 @@ export default function SurvivorshipResourcesTwoPage() {
         </p>
         <div className="sr2-feature-tags">
           <span className="sr2-feature-tag">NCCN Guidelines</span>
+          <span className="sr2-feature-tag">NCI Resources</span>
           <span className="sr2-feature-tag">NCCS Guidance</span>
           <span className="sr2-feature-tag">Survivorship Planning</span>
           <span className="sr2-feature-tag">Cancer Center Resources</span>
@@ -308,6 +319,12 @@ export default function SurvivorshipResourcesTwoPage() {
                 <a href="#asco-resources" className="sr2-nav-link">
                   <span className="sr2-nav-icon blue" aria-hidden="true" />
                   ASCO Resources
+                </a>
+              </li>
+              <li>
+                <a href="#nci-resources" className="sr2-nav-link">
+                  <span className="sr2-nav-icon amber" aria-hidden="true" />
+                  NCI Resources
                 </a>
               </li>
               <li>
@@ -386,6 +403,28 @@ export default function SurvivorshipResourcesTwoPage() {
                 <h3 className="sr2-resource-section-title">ASCO Survivorship Resources</h3>
                 <ul className="sr2-resource-list">
                   {ascoResources.map((resource) => (
+                    <li key={resource.title} className="sr2-resource-item">
+                      <div className="sr2-resource-title">{resource.title}</div>
+                      <div className="sr2-resource-description">{resource.description}</div>
+                      <a
+                        href={resource.url}
+                        className="sr2-resource-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {resource.cta}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="sr2-resource-section" id="nci-resources">
+                <h3 className="sr2-resource-section-title">
+                  NCI — National Cancer Institute Survivorship Resources
+                </h3>
+                <ul className="sr2-resource-list">
+                  {nciResources.map((resource) => (
                     <li key={resource.title} className="sr2-resource-item">
                       <div className="sr2-resource-title">{resource.title}</div>
                       <div className="sr2-resource-description">{resource.description}</div>

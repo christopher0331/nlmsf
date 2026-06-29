@@ -102,6 +102,44 @@ export default function StormTherapeuticsPage() {
           </div>
         </div>
 
+        {/* Recorded program */}
+        <div className="bg-white rounded-2xl shadow-lg border border-indigo-100 p-8">
+          <div className="flex items-start gap-3 mb-4">
+            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#4338ca] to-[#7e22ce] text-white">
+              <i className="fas fa-play" aria-hidden />
+            </span>
+            <div>
+              <h2 className="text-lg font-bold text-slate-900 m-0">
+                STORM Therapeutics Recorded Program
+              </h2>
+              <p className="text-sm text-slate-600 mt-1 mb-0 leading-relaxed">
+                Watch Storm Therapeutics&apos; recorded presentation about their novel Phase 2
+                clinical trial of STC-15 for leiomyosarcoma and liposarcoma patients.
+              </p>
+            </div>
+          </div>
+          <div className="relative w-full overflow-hidden rounded-xl border border-indigo-100 shadow-sm" style={{ paddingBottom: "56.25%", height: 0 }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full border-0"
+              src="https://www.youtube.com/embed/2oXsnljX0hU?rel=0"
+              title="STORM Therapeutics STC-15 Clinical Trial — Recorded Program"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <a
+              href="https://youtu.be/2oXsnljX0hU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#4338ca] hover:text-[#7e22ce] transition"
+            >
+              <i className="fab fa-youtube" aria-hidden />
+              Watch on YouTube
+            </a>
+          </div>
+        </div>
+
         {/* Why important */}
         <div className="bg-white rounded-2xl shadow-lg border border-indigo-100 p-8">
           <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">

@@ -104,8 +104,8 @@ const programs = [
       </>
     ),
     link: {
-      href: "/international-research-roundtable",
-      label: "Learn More About the LMS International Research Roundtable",
+      href: "/early-career-award",
+      label: "Learn More About the NLMSF Early Career Award",
       internal: true,
     },
   },

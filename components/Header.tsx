@@ -858,6 +858,14 @@ export default function Header() {
                             </li>
                             <li>
                               <Link
+                                href="/early-career-award"
+                                className={DROPDOWN_LINK}
+                              >
+                                NLMSF Early Career Award
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
                                 href="/research-grant-announcement"
                                 className={DROPDOWN_LINK}
                               >
@@ -1566,6 +1574,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       International LMS Research Roundtable
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/early-career-award"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      NLMSF Early Career Award
                     </Link>
                   </li>
                   <li>

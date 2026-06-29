@@ -58,11 +58,11 @@ export default function InternationalResearchRoundtablePage() {
                 </div>
                 <div className="logo-item">
                   <Image
-                    src="https://leiomyosarcoma.info/wp-content/uploads/2023/03/Globe-blue.jpg"
-                    alt="Globe Blue"
-                    className="logo-img"
-                    width={200}
-                    height={80}
+                    src="/images/researchRoundtableLogo.jpg"
+                    alt="International Leiomyosarcoma Research Roundtable Logo"
+                    className="logo-img logo-img-roundtable"
+                    width={300}
+                    height={120}
                   />
                 </div>
                 <div className="logo-item">
@@ -70,8 +70,8 @@ export default function InternationalResearchRoundtablePage() {
                     src="https://leiomyosarcoma.info/wp-content/uploads/2023/03/SPAGN-Logo.png"
                     alt="SPAGN Logo"
                     className="logo-img"
-                    width={200}
-                    height={80}
+                    width={300}
+                    height={120}
                   />
                 </div>
               </div>

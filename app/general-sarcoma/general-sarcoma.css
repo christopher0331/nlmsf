@@ -313,6 +313,52 @@
   color: #6366f1;
 }
 
+.gs-subheading {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.gs-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.gs-topic-grid li {
+  background: #ffffff;
+  border: 1px solid #99f6e4;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.86rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.gs-date-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.gs-attribution {
+  margin: 0.75rem 0 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #64748b;
+}
+
 /* ── Muted text ── */
 .gs-muted {
   color: #6b7280;
@@ -350,6 +396,11 @@
 .gs-card.teal {
   border-color: #99f6e4;
   border-left: 3px solid #14b8a6;
+  background: linear-gradient(to bottom right, #f0fdfa, #ecfeff);
+}
+
+.gs-card.teal h4 a:hover {
+  color: #0f766e;
 }
 
 .gs-card:hover {

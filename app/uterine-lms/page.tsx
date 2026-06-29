@@ -446,6 +446,38 @@ export default function UterineLmsPage() {
                 </p>
               </div>
             </div>
+            <div className="ulms-article">
+              <span className="ulms-pub-tag">Stage IB uLMS · PubMed</span>
+              <h4>
+                Prognostic factors and optimal management approaches for stage IB uterine
+                leiomyosarcoma: a retrospective analysis
+              </h4>
+              <p>
+                Retrospective analysis of prognostic factors and management for stage IB uterine
+                leiomyosarcoma. Findings suggest age over 48, postmenopausal status, larger tumor
+                size, higher Ki-67, and lymphadenectomy predicted poorer disease-free survival;
+                ovarian preservation appeared safe, and adjuvant chemotherapy regimens showed no
+                significant survival benefit in this cohort.
+              </p>
+              <div className="ulms-link-grid">
+                <a
+                  href="https://pubmed.ncbi.nlm.nih.gov/41413787/"
+                  className="ulms-link-card"
+                  {...ext}
+                >
+                  <span className="ulms-link-label">View on PubMed</span>
+                  <span>Research article</span>
+                </a>
+                <a
+                  href="https://docs.google.com/document/d/1tlktXci1xSGY5DWDFJXlzNtdEhaXL6z6/edit?usp=sharing&ouid=102077874789527856072&rtpof=true&sd=true"
+                  className="ulms-link-card"
+                  {...ext}
+                >
+                  <span className="ulms-link-label">AI Patient Explanation</span>
+                  <span>Clarification &amp; questions for your care team</span>
+                </a>
+              </div>
+            </div>
             <a
               href="https://leiomyosarcoma.info/wp-content/uploads/2022/02/Uterine-LMS-Staging-Chart-and-comprehensive-study.docx.pdf"
               className="ulms-cta-btn"

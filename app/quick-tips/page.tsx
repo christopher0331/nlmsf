@@ -64,6 +64,32 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "Treatment",
   },
   {
+    title: "Biomarker Testing",
+    description:
+      "Quick tips on biomarker and molecular testing—what it can reveal about your tumor and how results may guide treatment decisions with your care team.",
+    pdfHref: "/documents/quick-tips/Biomarker Testing.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Arginine and Ribozymes",
+    description:
+      "Quick tips on arginine metabolism in cancer and ribozyme-based approaches—what patients should know about emerging research and treatment concepts.",
+    pdfHref: "/documents/quick-tips/Arginine and Ribozymes.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Informed Consent",
+    description: "Understanding informed consent—what it means, your rights as a patient, and key questions to ask before agreeing to treatment or clinical trials.",
+    pdfHref: "/documents/quick-tips/Informed Consent.pdf",
+    category: "Treatment",
+  },
+  {
+    title: "Nutrition and Metabolism",
+    description: "Guidance on nutrition and metabolic considerations for cancer patients, including managing dietary needs during and after treatment.",
+    pdfHref: "/documents/quick-tips/Nutrition and Metabolism.pdf",
+    category: "Supportive Care",
+  },
+  {
     title: "Dental Care",
     description: "Guidance on dental care considerations for LMS patients before, during, and after treatment.",
     pdfHref: "/documents/quick-tips/Dental Care.pdf",

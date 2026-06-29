@@ -119,6 +119,20 @@ export default function SurvivorshipCarePlanningTwoPage() {
                 primary care providers, addressing the unique health needs of cancer survivors as
                 they navigate life after treatment.
               </p>
+              <div className="info-box" style={{ marginTop: "1.5rem" }}>
+                <p>
+                  <strong>ONCOLINK — VIDEO:</strong>{" "}
+                  <a
+                    href="https://www.oncolink.org/support/survivorship/stepping-into-cancer-survivorship-video"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-resource-link"
+                    style={{ fontWeight: 600 }}
+                  >
+                    &quot;Stepping Into Cancer Survivorship&quot;
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
 

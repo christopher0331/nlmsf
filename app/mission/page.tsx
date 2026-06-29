@@ -33,12 +33,6 @@ export default function MissionPage() {
                 </a>
               </div>
               <div className="nav-item">
-                <a href="#our-mission" className="nav-link">
-                  <span className="nav-icon purple" aria-hidden />
-                  <span>Our Mission</span>
-                </a>
-              </div>
-              <div className="nav-item">
                 <a href="#testimonial" className="nav-link">
                   <span className="nav-icon blue" aria-hidden />
                   <span>Expert Testimonial</span>
@@ -80,10 +74,6 @@ export default function MissionPage() {
                 <span className="resource-icon" aria-hidden />
                 <span>LMS Research Projects</span>
               </a>
-              <a href="#our-mission" className="resource-link">
-                <span className="resource-icon" aria-hidden />
-                <span>Our Mission</span>
-              </a>
               <Link href="/get-involved/" className="resource-link">
                 <span className="resource-icon" aria-hidden />
                 <span>Become an Ambassador</span>
@@ -101,10 +91,10 @@ export default function MissionPage() {
             <div className="mission-card">
               <h2 className="mission-heading">THE MISSION AND GOALS OF THE NATIONAL LEIOMYOSARCOMA FOUNDATION</h2>
               <ul className="mission-goals">
-                <li>To fund LMS-specific research that advances the field of study and accelerates development of clinical trials and treatments.</li>
                 <li>To support the LMS patient, family, and caregiver community through education, information sharing, resource assistance, and 24/7 direct phone support.</li>
+                <li>To address common challenges (unmet needs) in treatment, survivorship after treatment, as well as research/clinical trials considerations, through the Foundation&apos;s International LMS Research Roundtable—collaborating with researchers, clinicians, partner organizations, and especially the LMS community—to achieve meaningful progress.</li>
+                <li>To fund LMS-specific research that advances the field of study and accelerates research and clinical trial initiatives and treatment options.</li>
                 <li>To raise global, national, and community awareness of this disease, prioritizing actionable goals and delivering measurable progress.</li>
-                <li>To address unmet needs in treatment, research, clinical trials, and care through the Foundation&apos;s International LMS Research Roundtable—collaborating with researchers, clinicians, partner organizations, and especially the LMS community—to achieve meaningful progress.</li>
               </ul>
               <p>
                 <strong>JULY 15, 2016 - NATIONAL LEIOMYOSARCOMA AWARENESS DAY</strong>
