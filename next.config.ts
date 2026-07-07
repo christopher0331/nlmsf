@@ -55,7 +55,11 @@ const nextConfig: NextConfig = {
       { source: "/gift-shop-old", destination: "/gift-shop", permanent: true },
       { source: "/history", destination: "/mission", permanent: true },
       { source: "/insurance-2", destination: "/health-insurance-deep-dive", permanent: true },
-      { source: "/health-insurance-guidance", destination: "/health-insurance-deep-dive", permanent: true },
+      {
+        source: "/social-security-coverage-guidance",
+        destination: "/health-insurance-deep-dive",
+        permanent: true,
+      },
       { source: "/light-a-candle", destination: "/in-memoriam", permanent: true },
       { source: "/lms-abcs", destination: "/abcs-of-new-diagnosis", permanent: true },
       { source: "/lms-interactive-news-tracker", destination: "/news-tracker", permanent: true },

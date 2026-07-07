@@ -3,9 +3,9 @@ import Image from "next/image";
 import "./health-insurance-deep-dive.css";
 
 export const metadata: Metadata = {
-  title: "Health Insurance Guidance | NLMSF",
+  title: "Health Insurance & Social Security Disability | NLMSF",
   description:
-    "Resources for disability benefits, Medicare, Medicaid, COBRA, appealing denials, and managing health insurance during cancer treatment.",
+    "LMS-specific disability benefits, SSDI and Compassionate Allowances guidance, Medicare, Medicaid, COBRA, appealing denials, and managing health insurance during cancer treatment.",
 };
 
 const ext = { target: "_blank" as const, rel: "noopener noreferrer" };
@@ -18,7 +18,7 @@ export default function HealthInsuranceDeepDivePage() {
           <i className="fas fa-heartbeat" aria-hidden />
           <span>Patient &amp; Family Support</span>
         </div>
-        <h1 className="hero-title">Health Insurance Guidance</h1>
+        <h1 className="hero-title">Health Insurance &amp; Social Security Disability</h1>
         <div className="feature-tags">
           <div className="feature-tag">
             <i className="fas fa-file-medical" aria-hidden />

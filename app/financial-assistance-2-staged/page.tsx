@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import CopayAssistancePrograms from "@/components/CopayAssistancePrograms";
 
 export const metadata: Metadata = {
@@ -81,6 +82,22 @@ export default function FinancialAssistance2StagedPage() {
         </section>
 
         <CopayAssistancePrograms variant="staged" className="mb-10" />
+
+        <section className="mb-10 rounded-xl border-l-4 border-[#4338ca] bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            Social Security Disability for LMS Patients
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            SSDI guidance for leiomyosarcoma patients — including Compassionate Allowances,
+            medical-vocational review, and Medicare eligibility after disability approval.
+          </p>
+          <Link
+            href="/health-insurance-deep-dive#disability-benefits"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#4338ca] px-5 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-[#3730a3]"
+          >
+            View Social Security &amp; Disability Guidance
+          </Link>
+        </section>
 
         {/* CFAC Coalition Organizations */}
         <section className="mb-10">

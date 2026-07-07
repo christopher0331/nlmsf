@@ -6,7 +6,7 @@ const BASE_URL = "https://nlmsf.org";
 const EXCLUDED_STATIC_ROUTES = new Set([
   // These routes intentionally redirect and should not be in sitemap.xml
   "/caregiver-traits",
-  "/health-insurance-guidance",
+  "/social-security-coverage-guidance",
 ]);
 
 function discoverAppRoutes(): string[] {

@@ -440,7 +440,7 @@ export default function Header() {
                                 href="/health-insurance-deep-dive"
                                 className={DROPDOWN_LINK}
                               >
-                                Health Insurance Deep Dive
+                                Social Security &amp; Disability Benefits
                               </Link>
                             </li>
                             <li>
@@ -1232,7 +1232,7 @@ export default function Header() {
                       className={MOBILE_SUBMENU_LINK}
                       onClick={() => setMobileNavOpen(false)}
                     >
-                      Health Insurance Deep Dive
+                      Social Security &amp; Disability Benefits
                     </Link>
                   </li>
                   <li>

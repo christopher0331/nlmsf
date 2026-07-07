@@ -75,6 +75,10 @@ export default function FinancialAssistance2Page() {
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#ec4899]" aria-hidden />
                 <span>Co-Payment Assistance</span>
               </a>
+              <a href="#social-security-disability" className="flex items-center gap-3 rounded-lg px-4 py-3 text-gray-600 no-underline transition-colors hover:bg-gray-100 hover:text-[#6a3ea1]">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#4338ca]" aria-hidden />
+                <span>Social Security &amp; Disability</span>
+              </a>
               <a href="#cfac-organizations" className="flex items-center gap-3 rounded-lg px-4 py-3 text-gray-600 no-underline transition-colors hover:bg-gray-100 hover:text-[#6a3ea1]">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#4a90e2]" aria-hidden />
                 <span>CFAC Organizations</span>
@@ -177,6 +181,28 @@ export default function FinancialAssistance2Page() {
           </section>
 
           <CopayAssistancePrograms />
+
+          <section id="social-security-disability" className="scroll-mt-24">
+            <div className="rounded-lg border-l-4 border-[#4338ca] bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">
+                Social Security Disability for LMS Patients
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Social Security Disability Insurance (SSDI) can be especially important for
+                leiomyosarcoma patients and caregivers navigating treatment. Our guidance
+                includes LMS-specific resources on Compassionate Allowances, medical-vocational
+                review, Medicare eligibility after SSDI, and how to work with your care team on
+                documentation.
+              </p>
+              <Link
+                href="/health-insurance-deep-dive#disability-benefits"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#4338ca] px-5 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-[#3730a3]"
+              >
+                <i className="fas fa-shield-alt text-xs" aria-hidden />
+                View Social Security &amp; Disability Guidance
+              </Link>
+            </div>
+          </section>
 
           {/* CFAC Organizations */}
           <section id="cfac-organizations" className="scroll-mt-24">
