@@ -445,6 +445,14 @@ export default function Header() {
                             </li>
                             <li>
                               <Link
+                                href="/workrights"
+                                className={DROPDOWN_LINK}
+                              >
+                                Workplace Rights
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
                                 href="/transportation-lodging"
                                 className={DROPDOWN_LINK}
                               >
@@ -1233,6 +1241,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Social Security &amp; Disability Benefits
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/workrights"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Workplace Rights
                     </Link>
                   </li>
                   <li>
