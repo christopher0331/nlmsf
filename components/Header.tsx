@@ -9,7 +9,7 @@ const LOGO_SRC = "/images/nlmsf_logo_no_background-removebg-preview.png";
 const PHONE = "(303) 808-3437";
 const DONATE_URL = "?form=DONATE";
 
-const FONT_HEADER = "font-quicksand";
+const FONT_HEADER = "font-quicksand relative";
 const TOP_BAR = "w-full bg-white border-b border-gray-200 h-[50px] relative z-[5] box-border";
 const CONTAINER_HEADER = "max-w-full w-full mx-auto pl-4 pr-10 flex items-center justify-between box-border relative lg:px-8 min-h-full";
 const LOGO_SPACE = "flex-[0_0_25%] max-w-[200px]";
@@ -22,9 +22,9 @@ const MENU_ITEM = "relative flex justify-center";
 const MENU_LINK = "py-2 px-2.5 text-[#333] font-medium text-[clamp(1.05rem,2.2vw,1.15rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white";
 const MENU_LINK_DROPDOWN = "py-2 pl-2.5 pr-[1.1rem] text-[#333] font-medium text-[clamp(1.05rem,2.2vw,1.15rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white relative inline-flex items-center gap-0.5 hover:[&>svg]:border-white";
 /* Dropdown sits flush under header: top bar 50px + navbar min-height (80px / 96px lg) */
-const DROPDOWN_WRAPPER_BASE = "fixed left-0 right-0 w-full flex justify-center opacity-0 pointer-events-none transition-[opacity] duration-300 delay-100 z-[1000] top-[141px] lg:top-[151px]";
+const DROPDOWN_WRAPPER_BASE = "fixed left-0 right-0 w-full flex justify-center opacity-0 pointer-events-none transition-[opacity] duration-300 delay-100 z-[1000] top-[198px] lg:top-[208px]";
 const DROPDOWN_WRAPPER_OPEN = "!opacity-100 !pointer-events-auto mega-open";
-const DROPDOWN_PANEL = "mega-panel-animated relative w-full max-w-[1280px] bg-white border-t-2 border-[#6a3ea1] border-b border-gray-200 shadow-lg mx-auto max-h-[calc(100vh-151px)] overflow-y-auto py-6 px-4 box-border -mt-px";
+const DROPDOWN_PANEL = "mega-panel-animated relative w-full max-w-[1280px] bg-white border-t-2 border-[#6a3ea1] border-b border-gray-200 shadow-lg mx-auto max-h-[calc(100vh-208px)] overflow-y-auto py-6 px-4 box-border -mt-px";
 const DROPDOWN_CONTENT = "p-0 flex flex-col items-center max-w-full mx-auto";
 const DROPDOWN_CATEGORIES = "flex flex-wrap gap-6 justify-center py-4 px-2 w-full box-border";
 const CATEGORY_COLUMN = "mega-col flex-[1_1_150px] min-w-[120px] max-w-[200px] p-2";
