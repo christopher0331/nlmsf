@@ -162,6 +162,17 @@ export default function OurBoardClient() {
         ],
       },
       {
+        id: "sharon-gorrell",
+        name: "Sharon Gorrell",
+        role: "Advocacy",
+        imageUrl: "/images/sharon-bio.jpg",
+        bio: [
+          "Sharon began her career in government affairs in 2001 as a state and local government lobbyist in the real estate industry. Throughout her career she grew into working on federal issues in both real estate and finance in the capacities of policy analyst and advisor. Her current focus is industry and government affairs in banking and housing finance.",
+          "In 2024, Sharon discovered she had uterine leiomyosarcoma and like most with that diagnosis, she had no idea what that was. It was then that she took her research, analytic, and advocacy skills to begin working for herself to understand this disease. She discovered that the rarity of the disease requires a person to understand it themselves and build a team that can support you and get you the best care. That includes raising awareness of LMS and making sure decision makers in the public sector understand the need for research and funding to find effective treatment and cures.",
+          "She also is a woman of faith that knows God is in total control and there are no accidents. She hopes she can bring her skills to NLMSF and give voice to those that are suffering with this disease while guiding the organization in creating an effective advocacy strategy that includes leveraging the larger sarcoma community that knows healthcare policy and has strong relationships on Capitol Hill.",
+        ],
+      },
+      {
         id: "jim-matthews",
         name: "Jim Matthews",
         role: "Community Awareness Coordinator",
@@ -449,6 +460,14 @@ export default function OurBoardClient() {
                       className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
                     >
                       David Boles
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#sharon-gorrell"
+                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
+                    >
+                      Sharon Gorrell
                     </a>
                   </li>
                   <li>

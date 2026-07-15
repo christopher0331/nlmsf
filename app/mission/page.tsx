@@ -176,7 +176,7 @@ export default function MissionPage() {
                     <div className="timeline-dot" aria-hidden />
                     <div className="timeline-content">
                       <h5>2020</h5>
-                      <p>Sarcoma PatientsEuro.Net partner with the NLMSF in support of the International LMS Research Roundtable.</p>
+                      <p>SPAGN (formerly SPAEN) partnered with the NLMSF for the International LMS Research Roundtable.</p>
                     </div>
                   </div>
                   <div className="timeline-item timeline-item-red">
