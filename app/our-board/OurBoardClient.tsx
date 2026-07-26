@@ -84,17 +84,6 @@ export default function OurBoardClient() {
         ],
       },
       {
-        id: "lynne-greco-forges",
-        name: "Lynne Greco Forges",
-        role: "NLMSF Treasurer",
-        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/01/LynneGreco.jpg",
-        bio: [
-          "I was diagnosed with uterine leiomyosarcoma in 2015. I have undergone numerous surgeries and chemotherapies. Throughout this time, I have done all I can to maintain a positive attitude. This, along with my strong faith and an excellent team of doctors, has carried me through.",
-          "I enjoyed a 32-year career in Purchasing for various steel companies in Pittsburgh, PA. I love spending time with family and friends, cooking, reading, working on my house, spending time outdoors, yoga, walking and biking. I do a lot of volunteer work and do as much as possible to help others.",
-          "The NLMSF has been such a great resource for me, being Treasurer is the least I can do to show my appreciation.",
-        ],
-      },
-      {
         id: "rita-pecuch",
         name: "Rita Pecuch",
         role: "NLMSF Treasurer",
@@ -400,14 +389,6 @@ export default function OurBoardClient() {
                       className="nlmsf-sidebar-link nlmsf-sidebar-link-leadership"
                     >
                       Annie Achee
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#lynne-greco-forges"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-leadership"
-                    >
-                      Lynne Greco Forges
                     </a>
                   </li>
                   <li>

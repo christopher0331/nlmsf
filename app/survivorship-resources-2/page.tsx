@@ -47,6 +47,13 @@ const nciResources = [
     url: "https://www.cancer.gov/about-cancer/coping/survivorship",
     cta: "View NCI Survivorship Resources",
   },
+  {
+    title: "Springboard Beyond Cancer",
+    description:
+      'Springboard Beyond Cancer is a web tool that makes health information, skills, and support available to those whose lives are affected by cancer. Through different "decks" of information, you can access questions and topics specific to your needs during survivorship. From the NCI Office of Cancer Survivorship.',
+    url: "https://cancercontrol.cancer.gov/ocs",
+    cta: "Visit Springboard Beyond Cancer",
+  },
 ];
 
 const nccsResources = [

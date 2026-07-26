@@ -33,7 +33,7 @@ export default function CharitySeals({ className = "" }: CharitySealsProps) {
         aria-label="Charity Navigator"
       >
         <Image
-          src="https://media.nlmsf.org/wp-content/uploads/2025/07/charity-nav-scaled.png"
+          src="/images/charityNavigator.png"
           alt="Charity Navigator"
           width={800}
           height={400}

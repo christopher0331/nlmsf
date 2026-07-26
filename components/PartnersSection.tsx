@@ -33,6 +33,7 @@ const SLIDES: { src: string; alt: string }[][] = [
     { src: "https://media.nlmsf.org/wp-content/uploads/2022/03/royal-marsden.jpg", alt: "Royal Marsden" },
     { src: "https://media.nlmsf.org/wp-content/uploads/2022/03/McGill.jpg", alt: "McGill University" },
     { src: "https://media.nlmsf.org/wp-content/uploads/2021/02/ECOG.jpg", alt: "ECOG" },
+    { src: "/images/MI-Rare-Coalition.jpg", alt: "MI Rare Coalition" },
   ],
 ];
 
@@ -59,6 +60,7 @@ const ALL_PARTNERS: { src: string; alt: string; name: string }[] = [
   { src: "https://media.nlmsf.org/wp-content/uploads/2022/03/USC.jpg", alt: "USC", name: "USC" },
   { src: "https://media.nlmsf.org/wp-content/uploads/2022/03/royal-marsden.jpg", alt: "Royal Marsden", name: "Royal Marsden" },
   { src: "https://media.nlmsf.org/wp-content/uploads/2022/03/McGill.jpg", alt: "McGill University", name: "McGill University" },
+  { src: "/images/MI-Rare-Coalition.jpg", alt: "MI Rare Coalition", name: "MI Rare Coalition" },
 ];
 
 export default function PartnersSection() {

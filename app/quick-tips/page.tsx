@@ -90,6 +90,13 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "Supportive Care",
   },
   {
+    title: "Eating Well during Treatment",
+    description:
+      "Practical guidance on eating well during cancer treatment—managing appetite, side effects, and nutrition to support strength and recovery.",
+    pdfHref: "/documents/quick-tips/Eating Well during Treatment.pdf",
+    category: "Supportive Care",
+  },
+  {
     title: "Dental Care",
     description: "Guidance on dental care considerations for LMS patients before, during, and after treatment.",
     pdfHref: "/documents/quick-tips/Dental Care.pdf",
