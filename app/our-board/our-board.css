@@ -197,6 +197,12 @@
   border-color: #bfdbfe;
 }
 
+/* Treasury - Amber */
+.our-board-page .nlmsf-member-treasury {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+}
+
 /* Outreach - Teal */
 .our-board-page .nlmsf-member-outreach {
   background-color: #f0fdfa;
@@ -294,6 +300,14 @@
   background-color: #1d4ed8;
 }
 
+.our-board-page .nlmsf-read-more-treasury {
+  background-color: #d97706;
+}
+
+.our-board-page .nlmsf-read-more-treasury:hover {
+  background-color: #b45309;
+}
+
 .our-board-page .nlmsf-read-more-outreach {
   background-color: #0d9488;
 }
@@ -316,6 +330,14 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   border-bottom: 2px solid #bfdbfe;
+}
+
+.our-board-page .nlmsf-section-treasury .nlmsf-section-title {
+  background: linear-gradient(to right, #d97706, #b45309);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid #fde68a;
 }
 
 .our-board-page .nlmsf-section-outreach .nlmsf-section-title {
@@ -403,6 +425,17 @@
   border-left-color: #1d4ed8;
 }
 
+.our-board-page .nlmsf-sidebar-link-treasury {
+  color: #b45309;
+  border-left-color: #fde68a;
+}
+
+.our-board-page .nlmsf-sidebar-link-treasury:hover {
+  background-color: #fffbeb;
+  color: #92400e;
+  border-left-color: #d97706;
+}
+
 .our-board-page .nlmsf-sidebar-link-medical {
   color: #7e22ce;
   border-left-color: #e9d5ff;
@@ -444,6 +477,10 @@
 
 .our-board-page .nlmsf-category-title-leadership {
   color: #1d4ed8;
+}
+
+.our-board-page .nlmsf-category-title-treasury {
+  color: #b45309;
 }
 
 .our-board-page .nlmsf-category-title-medical {

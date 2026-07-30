@@ -471,6 +471,21 @@ export default function Header() {
                         </div>
                         <div className={CATEGORY_COLUMN}>
                           <h4 className={CATEGORY_TITLE}>
+                            Unmet Needs
+                          </h4>
+                          <ul className={CATEGORY_LINKS}>
+                            <li>
+                              <Link
+                                href="/patient-unmet-needs"
+                                className={DROPDOWN_LINK}
+                              >
+                                Patient Unmet Needs
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className={CATEGORY_COLUMN}>
+                          <h4 className={CATEGORY_TITLE}>
                             Education & Updates
                           </h4>
                           <ul className={CATEGORY_LINKS}>
@@ -1268,6 +1283,22 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Quick Tips for Newly Diagnosed
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={MOBILE_CATEGORY}>
+                <h4 className={MOBILE_CATEGORY_TITLE}>
+                  Unmet Needs
+                </h4>
+                <ul className={MOBILE_SUBMENU}>
+                  <li>
+                    <Link
+                      href="/patient-unmet-needs"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      Patient Unmet Needs
                     </Link>
                   </li>
                 </ul>

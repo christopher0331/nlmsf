@@ -83,6 +83,12 @@ export default function OurBoardClient() {
           "Ms. Achee is a member of the following oncology organizations: Connective Tissue Oncology Society (CTOS), American Society of Clinical Oncologists (ASCO), European Society of Medical Oncologists (ESMO), American Association of Cancer Research (AACR), ECOG-ACIN.",
         ],
       },
+    ],
+    [],
+  );
+
+  const treasuryMembers = useMemo<Member[]>(
+    () => [
       {
         id: "rita-pecuch",
         name: "Rita Pecuch",
@@ -391,10 +397,16 @@ export default function OurBoardClient() {
                       Annie Achee
                     </a>
                   </li>
+                </ul>
+
+                <h4 className="nlmsf-category-title nlmsf-category-title-treasury">
+                  Treasury
+                </h4>
+                <ul className="nlmsf-sidebar-nav-list">
                   <li>
                     <a
                       href="#rita-pecuch"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-leadership"
+                      className="nlmsf-sidebar-link nlmsf-sidebar-link-treasury"
                     >
                       Rita Pecuch
                     </a>
@@ -615,6 +627,36 @@ export default function OurBoardClient() {
                     <p className="nlmsf-member-role">{member.role}</p>
                     <button
                       className="nlmsf-read-more nlmsf-read-more-leadership"
+                      onClick={() => openModal(member)}
+                      type="button"
+                    >
+                      Read Full Bio
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="nlmsf-testimonial-section nlmsf-section-treasury">
+              <h3 className="nlmsf-section-title">Treasury</h3>
+              <div className="nlmsf-members-grid">
+                {treasuryMembers.map((member) => (
+                  <div
+                    key={member.id}
+                    id={member.id}
+                    className="nlmsf-member-grid-card nlmsf-member-treasury"
+                  >
+                    <Image
+                      src={member.imageUrl}
+                      alt={member.name}
+                      className="nlmsf-member-image"
+                      width={240}
+                      height={240}
+                    />
+                    <h3 className="nlmsf-member-name">{member.name}</h3>
+                    <p className="nlmsf-member-role">{member.role}</p>
+                    <button
+                      className="nlmsf-read-more nlmsf-read-more-treasury"
                       onClick={() => openModal(member)}
                       type="button"
                     >
