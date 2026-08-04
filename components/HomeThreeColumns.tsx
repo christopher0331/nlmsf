@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import HomeEventsColumn from "@/components/HomeEventsColumn";
+import HomeNewsTracker from "@/components/HomeNewsTracker";
 import IronmanFundraiser from "@/components/IronmanFundraiser";
 import ClinicalTrialsCard from "@/components/ClinicalTrialsCard";
 import StormTrialAlert from "@/components/StormTrialAlert";
@@ -106,6 +107,8 @@ export default function HomeThreeColumns() {
               </div>
             </div>
           </div>
+
+          <HomeNewsTracker />
 
           <div className="mt-6">
             <IronmanFundraiser />

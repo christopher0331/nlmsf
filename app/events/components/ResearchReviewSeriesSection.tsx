@@ -29,7 +29,7 @@ export default function ResearchReviewSeriesSection() {
           discussions for the LMS community.
         </p>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
 
           {/* Maki */}
           <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
@@ -134,6 +134,60 @@ export default function ResearchReviewSeriesSection() {
             </p>
             <a
               href="https://www.youtube.com/watch?v=ndRGkJb8vWM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-700 hover:text-purple-800"
+            >
+              <i className="fas fa-play-circle" aria-hidden /> Watch Presentation
+            </a>
+          </article>
+
+          {/* Monga */}
+          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+            <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700">
+              Research in Review
+            </div>
+            <a
+              href="https://www.youtube.com/watch?v=n7l3zXIA2QY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative overflow-hidden rounded-xl">
+                <Image
+                  src="https://img.youtube.com/vi/n7l3zXIA2QY/hqdefault.jpg"
+                  alt="Dr. Varun Monga — LMS Research in Review: ARGSARC, XL092, and STORM Therapeutics"
+                  width={640}
+                  height={360}
+                  className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(min-width: 1280px) 33vw, (min-width: 1024px) 50vw, 100vw"
+                />
+                <div className="absolute inset-0 flex items-center justify-center rounded-xl bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <i className="fas fa-play-circle text-5xl text-white/90 drop-shadow" aria-hidden />
+                </div>
+              </div>
+            </a>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 text-xs font-bold text-purple-700">
+                VM
+              </div>
+              <div>
+                <h5 className="text-sm font-semibold text-purple-700">Varun Monga, MD</h5>
+                <p className="text-xs text-slate-500">
+                  UCSF Sarcoma Specialist · International LMS Research Roundtable
+                </p>
+              </div>
+            </div>
+            <h4 className="mt-4 text-lg font-semibold text-slate-900">
+              LMS Research in Review: ARGSARC, XL092, and STORM Therapeutics
+            </h4>
+            <p className="mt-3 flex-1 text-sm text-slate-600">
+              Dr. Monga reviews the ARGSARC study (ADI-PEG 20 or placebo plus gemcitabine and
+              docetaxel), XL092 (zanzalintinib) for metastatic or unresectable LMS and related
+              sarcomas, and his perspectives on a novel clinical trial from STORM Therapeutics.
+            </p>
+            <a
+              href="https://www.youtube.com/watch?v=n7l3zXIA2QY"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-700 hover:text-purple-800"

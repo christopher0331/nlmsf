@@ -11,6 +11,44 @@ export default function NewsTrackerArchives2Page() {
     <div className="news-tracker-archives-2-page">
       <div className="archives-container">
         <h4>
+          <a href="https://mailchi.mp/nlmsf.org/nlmsf-news-tracker-8z011ysyoc-6766394">
+            7/25/26 NLMSF/Sarcoma Community Connection
+          </a>
+        </h4>
+        <h5 className="null">In This Issue:</h5>
+        <ul>
+          <li>
+            <strong>NLMSF Insights and Initiatives</strong>
+            <ul>
+              <li>How to Navigate the NLMSF Website</li>
+              <li>Your Voice Matters: Representing the Sarcoma Community</li>
+              <li>Circle of Hope Community Roundtable: A Collective Purpose</li>
+              <li>Patient &amp; Caregiver Clinical Trial Perspectives</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Online Patient Information Session</strong>
+            <ul>
+              <li>7/30 - Webinar: Overcoming Insurance Barriers</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Research In Review</strong>
+          </li>
+          <li>
+            <strong>Research Highlight</strong>
+          </li>
+          <li>
+            <strong>Tips for Living with LMS</strong>
+            <ul>
+              <li>Sarcoma &amp; LMS Support Tips</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Support Research</strong>
+          </li>
+        </ul>
+        <h4>
           <a href="https://mailchi.mp/nlmsf.org/nlmsf-news-tracker-8z011ysyoc-6748546">
             3/17/25 NLMSF/Sarcoma Community Connection
           </a>
