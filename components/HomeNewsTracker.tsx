@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { FeedEntry } from "@/lib/community-news";
 
-const PREVIEW_LIMIT = 3;
+/** Homepage shows only the latest issue; older newsletters stay on /news-tracker. */
+const PREVIEW_LIMIT = 1;
 
 export default function HomeNewsTracker() {
   const [items, setItems] = useState<FeedEntry[]>([]);

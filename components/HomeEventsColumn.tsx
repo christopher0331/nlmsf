@@ -17,6 +17,26 @@ type EventItem = {
   eventAt: string;
 };
 
+/** Known homepage recordings shipped in code when admin `recordingUrl` is still empty. */
+const RECORDING_URL_BY_TITLE_MATCH: Array<{ match: RegExp; url: string }> = [
+  {
+    match: /monga/i,
+    url: "https://www.youtube.com/watch?v=n7l3zXIA2QY",
+  },
+];
+
+const YOUTUBE_URL_RE =
+  /https?:\/\/(?:www\.)?(?:youtu\.be\/[\w-]+|youtube\.com\/watch\?v=[\w-]+)/i;
+
+function resolveRecordingUrl(ev: EventItem): string | null {
+  if (ev.recordingUrl) return ev.recordingUrl;
+  for (const entry of RECORDING_URL_BY_TITLE_MATCH) {
+    if (entry.match.test(ev.title)) return entry.url;
+  }
+  const fromDescription = ev.description.match(YOUTUBE_URL_RE);
+  return fromDescription?.[0] ?? null;
+}
+
 function EventDescription({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false);
   const [isTruncatable, setIsTruncatable] = useState(false);
@@ -164,7 +184,9 @@ export default function HomeEventsColumn() {
           <p className="p-4 text-gray-500 text-sm m-0">No recordings yet.</p>
         ) : (
           <ul className="list-none m-0 p-0 flex flex-col gap-4 bg-[#f8f5fb] rounded-xl border border-gray-200 p-4 shadow-[0_4px_12px_rgba(15,23,42,0.06)]">
-            {past.slice(0, 5).map((ev) => (
+            {past.slice(0, 5).map((ev) => {
+              const recordingUrl = resolveRecordingUrl(ev);
+              return (
               <li key={ev.id} className={cardBase}>
                 <div className={dateBlock}>
                   <span className="text-[0.65rem] uppercase tracking-wider leading-tight">
@@ -181,8 +203,13 @@ export default function HomeEventsColumn() {
                     <EventScheduleDisplay eventDate={ev.eventDate} eventTime={ev.eventTime} />
                   </div>
                   <EventDescription text={ev.description} />
-                  {ev.recordingUrl ? (
-                    <a href={ev.recordingUrl} target="_blank" rel="noopener noreferrer" className={btnBase}>
+                  {recordingUrl ? (
+                    <a
+                      href={recordingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={btnBase}
+                    >
                       <span className="text-[0.7rem]" aria-hidden>▶</span>
                       Watch recording
                     </a>
@@ -193,7 +220,8 @@ export default function HomeEventsColumn() {
                   )}
                 </div>
               </li>
-            ))}
+              );
+            })}
           </ul>
         )}
       </div>
