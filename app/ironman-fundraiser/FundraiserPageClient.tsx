@@ -115,7 +115,7 @@ export default function FundraiserPageClient() {
 
           <div className="imfp-match-banner" role="status">
             <strong>Thank you, Achieve Retirement!</strong> A generous{" "}
-            <strong>$1,000</strong> company donation match supporting LMS research
+            <strong>$1,076</strong> company donation match supporting LMS research
             through Joseph&apos;s IRONMAN fundraiser.
           </div>
 

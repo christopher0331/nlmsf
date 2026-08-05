@@ -30,10 +30,10 @@ type DonorEntry = { name: string; amount: number };
 /**
  * Offline / unmatched gifts that do not appear in Fundraise Up campaign
  * FUNRBJGPJSK or GoFundMe (e.g. employer match processed outside those feeds).
- * Confirmed by Joseph Jang (Achieve Retirement company match screenshots, Jul 28 2026).
+ * Confirmed by Joseph Jang (Achieve Retirement company match screenshots, Jul 28 2026 — $1,076).
  */
 const MANUAL_FUNDRAISE_UP_DONATIONS: DonorEntry[] = [
-  { name: "Achieve Retirement", amount: 1000 },
+  { name: "Achieve Retirement", amount: 1076 },
 ];
 
 type SourceResult = {

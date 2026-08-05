@@ -86,7 +86,7 @@ export default function IronmanFundraiser() {
         <div className="imf-match-callout" role="status">
           <strong>Thank you, Achieve Retirement!</strong>
           <span>
-            A generous <strong>$1,000</strong> company donation match for LMS
+            A generous <strong>$1,076</strong> company donation match for LMS
             research.
           </span>
         </div>
