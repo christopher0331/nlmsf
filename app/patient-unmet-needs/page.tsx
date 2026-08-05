@@ -8,6 +8,41 @@ export const metadata: Metadata = {
     "Join the NLMSF Circle of Hope—the LMS/All Sarcoma Patient-Family and Patient Advocacy Foundations Community Roundtable—a Think Tank Network identifying common challenges and unmet needs in care and treatment.",
 };
 
+const circleOfHopeSummary = {
+  title: "Circle of Hope Community Roundtable: A Collective Purpose",
+  intro:
+    "The Circle of Hope Community Roundtable is a collaborative forum where patients, caregivers, and patient advocacy organizations come together to learn, share, and inspire meaningful progress.",
+  points: [
+    "A collaborative forum that encourages open dialogue among patients, caregivers, and advocacy groups.",
+    "A trusted, supportive space to share personal experiences, ask questions, and learn from one another.",
+    "A community built on respect, connection, and shared understanding, where every voice is valued.",
+    "A focus on collaboration and innovation, generating constructive ideas and actionable solutions that improve the lives of those affected by sarcoma and leiomyosarcoma.",
+    "A commitment to advancing patient-centered care, ensuring that the experiences and perspectives of patients and caregivers help shape research, education, and advocacy efforts.",
+  ],
+  closing:
+    "Together, we are stronger. Together, we can create positive change for the entire sarcoma community. One conversation, one idea, and one shared voice at a time.",
+  image: "/images/circle-of-hope.png",
+  imageAlt:
+    "LMS/Sarcoma Community Roundtable — The Circle of Hope — Patients and Caregivers",
+};
+
+const clinicalTrialPerspectivesSummary = {
+  title: "Patient & Caregiver Clinical Trial Perspectives",
+  intro:
+    "Join fellow patients and caregivers for an open discussion about the clinical trial experience, with insights from those who have participated firsthand.",
+  points: [
+    "Hear firsthand experiences from patients who have completed a clinical trial — what they learned, what they wish they had known, and how they prepared.",
+    "Learn from participants currently enrolled in clinical trials as they share common challenges, unmet needs, and encouraging experiences.",
+    "Gain practical guidance for patients and caregivers considering a clinical trial, including questions to ask, how to prepare, and what to expect throughout the process.",
+    "Share your own questions and experiences in a supportive, patient-centered community where every perspective helps others navigate their journey.",
+  ],
+  closing:
+    "Together, we can learn from one another, empower informed decision-making, and help improve the clinical trial experience for future patients.",
+  image: "/images/clincal-trials-logo.png",
+  imageAlt:
+    "Clinical Trials Patient-Caregiver Perspectives Network — Virtual Discussions",
+};
+
 const whyInputMatters = [
   "Clinicians and researchers value patient perspectives",
   "Your experiences inform treatment approaches and clinical trial design",
@@ -174,6 +209,12 @@ export default function PatientUnmetNeedsPage() {
                 Circle of Hope
               </a>
               <a
+                href="#initiative-summaries"
+                className="block py-2 pl-4 border-l-4 border-teal-600 text-gray-600 no-underline font-medium text-sm hover:text-teal-800 hover:border-teal-800 transition-colors"
+              >
+                Initiative Summaries
+              </a>
+              <a
                 href="#why-input-matters"
                 className="block py-2 pl-4 border-l-4 border-violet-500 text-gray-600 no-underline font-medium text-sm hover:text-violet-700 hover:border-violet-700 transition-colors"
               >
@@ -250,6 +291,60 @@ export default function PatientUnmetNeedsPage() {
               </Link>
               .
             </p>
+          </section>
+
+          <section
+            id="initiative-summaries"
+            className="scroll-mt-24 space-y-8"
+          >
+            <h2 className="text-2xl font-bold text-emerald-900 m-0">
+              Initiative Summaries
+            </h2>
+            <p className="text-gray-600 m-0 -mt-4">
+              Tight summaries of each Circle of Hope initiative.
+            </p>
+
+            {[circleOfHopeSummary, clinicalTrialPerspectivesSummary].map(
+              (summary) => (
+                <article
+                  key={summary.title}
+                  className="rounded-xl border border-emerald-200 bg-white p-6 md:p-8 shadow-sm"
+                >
+                  <div className="flex flex-col gap-6 md:flex-row md:items-start">
+                    <Image
+                      src={summary.image}
+                      alt={summary.imageAlt}
+                      width={175}
+                      height={175}
+                      className="h-36 w-36 shrink-0 object-contain mx-auto md:mx-0"
+                    />
+                    <div className="min-w-0">
+                      <h3 className="text-xl font-bold text-emerald-900 mb-3">
+                        {summary.title}
+                      </h3>
+                      <p className="text-gray-700 mb-4">{summary.intro}</p>
+                      <ul className="space-y-3 mb-4">
+                        {summary.points.map((point) => (
+                          <li
+                            key={point}
+                            className="flex gap-3 text-gray-700 leading-relaxed"
+                          >
+                            <span
+                              className="mt-2 flex-shrink-0 w-2 h-2 rounded-full bg-emerald-600"
+                              aria-hidden
+                            />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="text-gray-700 mb-0 font-medium">
+                        {summary.closing}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              )
+            )}
           </section>
 
           <section id="why-input-matters" className="scroll-mt-24 text-center">

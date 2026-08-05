@@ -82,6 +82,17 @@ export default function NutritionAndPhysicalActivityClient() {
             <span>Survivorship</span>
           </div>
         </div>
+
+        <div className="hero-logo">
+          <Image
+            src="/images/patient-quality-of-life-support-tips-logo.png"
+            alt="Patient Quality of Life Support Tips Foundation — supportive hands, figure, and leafy branch"
+            width={220}
+            height={220}
+            className="hero-logo-img"
+            priority
+          />
+        </div>
       </div>
 
       <div className="motto-banner">

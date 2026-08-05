@@ -27,6 +27,15 @@ type ListResponse = {
 
 type DonorEntry = { name: string; amount: number };
 
+/**
+ * Offline / unmatched gifts that do not appear in Fundraise Up campaign
+ * FUNRBJGPJSK or GoFundMe (e.g. employer match processed outside those feeds).
+ * Confirmed by Joseph Jang (Achieve Retirement company match screenshots, Jul 28 2026).
+ */
+const MANUAL_FUNDRAISE_UP_DONATIONS: DonorEntry[] = [
+  { name: "Achieve Retirement", amount: 1000 },
+];
+
 type SourceResult = {
   raised: number;
   donors: number;
@@ -145,6 +154,29 @@ async function fetchGoFundMeData(): Promise<SourceResult> {
   return { raised: Math.round(raised * 100) / 100, donors, donorMap };
 }
 
+function applyManualDonations(
+  data: SourceResult,
+  manuals: DonorEntry[]
+): SourceResult {
+  if (manuals.length === 0) return data;
+
+  const donorMap = new Map(data.donorMap);
+  let raised = data.raised;
+  let donors = data.donors;
+
+  for (const entry of manuals) {
+    raised += entry.amount;
+    donors += 1;
+    donorMap.set(entry.name, (donorMap.get(entry.name) ?? 0) + entry.amount);
+  }
+
+  return {
+    raised: Math.round(raised * 100) / 100,
+    donors,
+    donorMap,
+  };
+}
+
 function topDonorsFromMap(donorMap: Map<string, number>, limit = 10): DonorEntry[] {
   return [...donorMap.entries()]
     .map(([name, amount]) => ({ name, amount: Math.round(amount * 100) / 100 }))
@@ -153,10 +185,11 @@ function topDonorsFromMap(donorMap: Map<string, number>, limit = 10): DonorEntry
 }
 
 export async function GET() {
-  const [fuData, gfmData] = await Promise.all([
+  const [fuRaw, gfmData] = await Promise.all([
     fetchFundraiseUpData(),
     fetchGoFundMeData(),
   ]);
+  const fuData = applyManualDonations(fuRaw, MANUAL_FUNDRAISE_UP_DONATIONS);
 
   return NextResponse.json(
     {

@@ -117,6 +117,19 @@
   font-size: 0.875rem;
 }
 
+.nutrition-activity-page .hero-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.nutrition-activity-page .hero-logo-img {
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /* Motto Banner Styles */
 .nutrition-activity-page .motto-banner {
   display: flex;

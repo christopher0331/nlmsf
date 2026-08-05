@@ -83,6 +83,14 @@ export default function IronmanFundraiser() {
           fight against leiomyosarcoma.
         </p>
 
+        <div className="imf-match-callout" role="status">
+          <strong>Thank you, Achieve Retirement!</strong>
+          <span>
+            A generous <strong>$1,000</strong> company donation match for LMS
+            research.
+          </span>
+        </div>
+
         <div className="imf-progress-section">
           <div className="imf-progress-labels">
             <span className="imf-raised">

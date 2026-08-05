@@ -113,6 +113,12 @@ export default function FundraiserPageClient() {
             )}
           </div>
 
+          <div className="imfp-match-banner" role="status">
+            <strong>Thank you, Achieve Retirement!</strong> A generous{" "}
+            <strong>$1,000</strong> company donation match supporting LMS research
+            through Joseph&apos;s IRONMAN fundraiser.
+          </div>
+
           <div className="imfp-donate-actions">
             <button type="button" className="imfp-donate-btn" onClick={handleDonate}>
               <i className="fas fa-heart" aria-hidden /> Donate via NLMSF
