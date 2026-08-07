@@ -241,22 +241,7 @@ export default function OurBoardClient() {
         ],
       },
       {
-        id: "jacqueline-sebany",
-        name: "Jacqueline (Jacque) Sebany",
-        role: "Brand Strategy Coordinator",
-        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2022/01/Jacque-Sebany.png",
-        bio: [
-          "Jacqueline (Jacque) Sebany is the Chief Experience Officer for Shift'd - a marketing and payments consulting brand.",
-          "Prior to becoming a marketing consultant, she was the Chief Marketing & Digital Officer at the American Diabetes Association (ADA). She was responsible for optimizing the marketing infrastructure to create efficient and effective campaigns, elevate the brand presence and bring fresh innovative ways to grow revenue and emotional connections between the ADA brand and the diabetes community.",
-          "Jacque has also served as Vice President of Digital Content at the American Heart Association (AHA).",
-          "Jacque has over 25 years' experience across the entire spectrum of Marketing and Digital: front-end development, brand/marketing strategy, direct response marketing (including mail, email, mobile, social), project management (waterfall & agile), UX/UI and content strategy.",
-          "She has worked across a broad spectrum of organizations in addition to AHA, including FedEx, The US Department of Treasury, Bahamas Ministry of Tourism, Golds Gym, Hyatt Hotels and multiple Consumer Package Good Brands.",
-          "Jacque holds a degree in Fashion and Interior Design and is a passionate creative who uses her design talents to transform organizations and brand experiences. She is very enthused and inspired to work with the National Leiomyosarcoma Foundation - as a Community Awareness Ambassador to advance the mission, vision, and purpose of the NLMSF.",
-        ],
-      },
-      {
-        id: "taylor-tomlinson",
-        name: "Taylor Tomlinson",
+        id: "taylor-tomlinson",        name: "Taylor Tomlinson",
         role: "Technical Advisor",
         imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/09/taylor-tomlinson.webp",
         bio: [
@@ -507,14 +492,6 @@ export default function OurBoardClient() {
                       className="nlmsf-sidebar-link nlmsf-sidebar-link-support"
                     >
                       Kelly Murphy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#jacqueline-sebany"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-support"
-                    >
-                      Jacqueline Sebany
                     </a>
                   </li>
                   <li>
