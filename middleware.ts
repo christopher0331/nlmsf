@@ -30,13 +30,6 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  if (pathname.startsWith("/accountability-reports/") && pathname.endsWith("/summary.pdf")) {
-    return NextResponse.redirect(
-      new URL("/accountability-reports/", request.url),
-      301,
-    );
-  }
-
   const response = NextResponse.next();
 
   if (searchParams.has("form")) {

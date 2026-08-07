@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import MissionSection from "@/components/MissionSection";
 import "./mission.css";
@@ -52,7 +53,7 @@ export default function MissionPage() {
                 <div className="subnav">
                   <a href="#milestones" className="subnav-link">Key Milestones</a>
                   <a href="#founding-members" className="subnav-link">Founding Members</a>
-                  <a href="#achievements" className="subnav-link">Major Achievements</a>
+                  <a href="#achievements" className="subnav-link">Action Accomplishments</a>
                 </div>
               </div>
               <div className="nav-item">
@@ -126,15 +127,25 @@ export default function MissionPage() {
               <div className="testimonial-content">
                 <p className="testimonial-text">&quot;The National Leiomyosarcoma Foundation is an important organization that strives to gather a critical mass of patients, scientists, patient advocates and physicians to learn more about this rare disease. Within the NLMSF, the LMS Research Roundtable organizes cutting edge research in this area and strives to innovate the ways that this disease is treated.&quot;</p>
                 <div className="testimonial-author">
-                  <h4>Arun Singh, M.D.</h4>
-                  <p>Associate Professor Sarcoma Service</p>
-                  <p>Division of Hematology</p>
-                  <p>UCLA, Santa Monica, CA</p>
+                  <div className="testimonial-author-photo">
+                    <Image
+                      src="/images/dr-singh-testimonial.png"
+                      alt="Arun Singh, M.D."
+                      width={113}
+                      height={113}
+                    />
+                  </div>
+                  <div className="testimonial-author-info">
+                    <h4>Arun Singh, M.D.</h4>
+                    <p>Associate Professor Sarcoma Service</p>
+                    <p>Division of Hematology</p>
+                    <p>UCLA, Santa Monica, CA</p>
+                  </div>
                 </div>
               </div>
-              <a href="https://nlmsf.org/testimonials/" className="testButton" target="_blank" rel="noopener noreferrer">
+              <Link href="/testimonials/" className="testButton">
                 View More Testimonials
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -244,7 +255,7 @@ export default function MissionPage() {
               </div>
 
               <div id="achievements">
-                <h4 className="section-subtitle">Notable Achievements</h4>
+                <h4 className="section-subtitle">Action Accomplishments</h4>
                 <div className="key-achievements">
                   <div className="achievement-box">
                     <div className="achievement-content">
@@ -273,7 +284,94 @@ export default function MissionPage() {
                       </div>
                     </div>
                   </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-flask" aria-hidden /></div>
+                      <div>
+                        <h5>NCI Sarcoma Steering Committee</h5>
+                        <p>NLMSF — NCI Sarcoma Steering Committee — 2026</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-handshake" aria-hidden /></div>
+                      <div>
+                        <h5>Foundation Collaborations</h5>
+                        <ul className="achievement-list">
+                          <li>Haystack Project Foundation collaboration — 2025</li>
+                          <li>NORD — 2023</li>
+                          <li>EveryLife Foundation — 2020</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-project-diagram" aria-hidden /></div>
+                      <div>
+                        <h5>Sarcoma Working Group Committees</h5>
+                        <ul className="achievement-list">
+                          <li>Repurposing Drugs Taskforce — 2023</li>
+                          <li>Repurposing Drugs — Tracer Project collaboration — 2025</li>
+                          <li>Sarcoma Working Groups in various research organizations — 2023</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-comments" aria-hidden /></div>
+                      <div>
+                        <h5>Patient / Caregiver / Advocacy Community Roundtable</h5>
+                        <p>NLMSF Patient / Caregiver / Advocacy Community Roundtable — 2026</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-notes-medical" aria-hidden /></div>
+                      <div>
+                        <h5>Clinical Trial Patient Perspectives Network</h5>
+                        <p>NLMSF Clinical Trial Patient Perspectives Network — 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-book-medical" aria-hidden /></div>
+                      <div>
+                        <h5>ABC&apos;s of a New Diagnosis</h5>
+                        <p>ABC&apos;s of a NEW DIAGNOSIS for new patients/families — 2018</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-clinic-medical" aria-hidden /></div>
+                      <div>
+                        <h5>Survivorship Care Clinic</h5>
+                        <p>Survivorship Care Clinic for Patients / Families — care planning during and after treatment is completed — 2018</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievement-box">
+                    <div className="achievement-content">
+                      <div className="achievement-icon"><i className="fas fa-user-graduate" aria-hidden /></div>
+                      <div>
+                        <h5>Annual Early Career Awards</h5>
+                        <ul className="achievement-list">
+                          <li>Early Career Award — 2023</li>
+                          <li>Dr. Brian Van Tine Faculty Recognition Award — 2025</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <p className="achievements-reports-note">
+                  Review annual accountability reports for further accomplishments summaries here:{" "}
+                  <Link href="/accountability-reports-hub/">Accountability Reports Hub</Link>
+                </p>
               </div>
             </div>
           </section>

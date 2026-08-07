@@ -1,5 +1,11 @@
 import { getPrisma } from "@/lib/prisma";
-import { unstable_cache } from "next/cache";
+import { revalidateTag, unstable_cache } from "next/cache";
+
+export const COMMUNITY_NEWS_CACHE_TAG = "community-news-full-feed";
+
+export function revalidateCommunityNewsCache() {
+  revalidateTag(COMMUNITY_NEWS_CACHE_TAG);
+}
 
 function formatDisplayDate(manualDate: string): string {
   const [y, m, d] = manualDate.split("-").map(Number);
@@ -43,24 +49,59 @@ const STATIC_NEWS_TRACKER_ENTRIES: Array<{
   },
 ];
 
-function mergeNewsTracker(dbEntries: FeedEntry[]): FeedEntry[] {
+/** Code-shipped Snapshot News issues (merged with DB; deduped by URL). */
+const STATIC_SNAPSHOT_ENTRIES: Array<{
+  id: string;
+  title: string;
+  summary: string;
+  url: string;
+  manualDate: string;
+}> = [
+  {
+    id: "static-snapshot-2026-07-15",
+    title: "NLMSF Sarcoma Snapshot News - July 15, 2026",
+    summary:
+      "National Leiomyosarcoma Awareness Day Snapshot News for archives posting.",
+    url: "https://mailchi.mp/nlmsf.org/sarcoma-snapshot-news-august-11-6766074",
+    manualDate: "2026-07-15",
+  },
+];
+
+function mergeByUrl(
+  dbEntries: FeedEntry[],
+  staticEntries: Array<{
+    id: string;
+    title: string;
+    summary: string;
+    url: string;
+    manualDate: string;
+  }>
+): FeedEntry[] {
   const urls = new Set(dbEntries.map((entry) => entry.url));
-  const staticEntries = STATIC_NEWS_TRACKER_ENTRIES.filter((entry) => !urls.has(entry.url)).map(
-    (entry) => ({
+  const extras = staticEntries
+    .filter((entry) => !urls.has(entry.url))
+    .map((entry) => ({
       id: entry.id,
       title: entry.title,
       summary: entry.summary,
       url: entry.url,
       display_date: formatDisplayDate(entry.manualDate),
       year: getYear(entry.manualDate),
-    })
-  );
+    }));
 
-  return [...staticEntries, ...dbEntries].sort((a, b) => {
+  return [...extras, ...dbEntries].sort((a, b) => {
     const dateA = a.display_date ? new Date(a.display_date).getTime() : 0;
     const dateB = b.display_date ? new Date(b.display_date).getTime() : 0;
     return dateB - dateA;
   });
+}
+
+function mergeNewsTracker(dbEntries: FeedEntry[]): FeedEntry[] {
+  return mergeByUrl(dbEntries, STATIC_NEWS_TRACKER_ENTRIES);
+}
+
+function mergeSnapshots(dbEntries: FeedEntry[]): FeedEntry[] {
+  return mergeByUrl(dbEntries, STATIC_SNAPSHOT_ENTRIES);
 }
 
 function toFeedEntry(entry: {
@@ -98,7 +139,7 @@ const getFullFeedCached = unstable_cache(async (): Promise<{
       }),
     ]);
     return {
-      snapshots: snapshots.map(toFeedEntry),
+      snapshots: mergeSnapshots(snapshots.map(toFeedEntry)),
       newsTracker: mergeNewsTracker(newsTracker.map(toFeedEntry)),
     };
   } catch (error) {
@@ -107,11 +148,11 @@ const getFullFeedCached = unstable_cache(async (): Promise<{
         ? (error as { code?: string }).code
         : undefined;
     if (prismaError === "P2021") {
-      return { snapshots: [], newsTracker: mergeNewsTracker([]) };
+      return { snapshots: mergeSnapshots([]), newsTracker: mergeNewsTracker([]) };
     }
     throw error;
   }
-}, ["community-news-full-feed"], { revalidate: 900 });
+}, [COMMUNITY_NEWS_CACHE_TAG], { revalidate: 900, tags: [COMMUNITY_NEWS_CACHE_TAG] });
 
 export async function getFullFeed(): Promise<{
   snapshots: FeedEntry[];

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
+import { revalidateCommunityNewsCache } from "@/lib/community-news";
 
 export async function PATCH(
   request: NextRequest,
@@ -31,6 +32,7 @@ export async function PATCH(
     return NextResponse.json(entry);
   }
   const entry = await prisma.communityEntry.update({ where: { id }, data: update });
+  revalidateCommunityNewsCache();
   return NextResponse.json(entry);
 }
 
@@ -44,5 +46,6 @@ export async function DELETE(
   const id = (await params).id;
   const prisma = await getPrisma();
   await prisma.communityEntry.delete({ where: { id } });
+  revalidateCommunityNewsCache();
   return NextResponse.json({ ok: true });
 }

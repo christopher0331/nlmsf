@@ -15,9 +15,45 @@ export default function ReportsSection() {
       </p>
       <div className="flex justify-center gap-5 flex-wrap">
         <div className="bg-[#f0f7f4] rounded-[10px] p-5 w-[450px] max-w-full shadow-[0_4px_8px_rgba(0,0,0,0.1)] text-left md:w-full md:max-w-[350px]">
-          <h3 className="text-3xl text-[#26a69a] mb-2.5">2024</h3>
+          <h3 className="text-3xl text-[#26a69a] mb-2.5">2025</h3>
           <span className="inline-block bg-[#e0f2f1] py-1.5 px-2.5 rounded-md text-[0.9rem] text-[#26a69a] mb-2.5">
             Latest Report
+          </span>
+          <h4 className="text-xl mb-2.5 font-semibold text-gray-800">
+            2025 Accountability Report
+          </h4>
+          <p className="text-[0.9rem] text-gray-500 mb-4">
+            What we accomplished for the LMS community in 2025 — Circle of Hope,
+            research funding, awards, Snapshot News, and new collaborations.
+          </p>
+          <ul className="list-none p-0 m-0 mb-4">
+            <li className="text-[0.9rem] mb-1.5">
+              <span className="text-[#26a69a] mr-1.5">✔</span> Circle of Hope
+            </li>
+            <li className="text-[0.9rem] mb-1.5">
+              <span className="text-[#26a69a] mr-1.5">✔</span> LMS Research Funding
+            </li>
+            <li className="text-[0.9rem] mb-1.5">
+              <span className="text-[#26a69a] mr-1.5">✔</span> Early Career Awards
+            </li>
+            <li className="text-[0.9rem] mb-1.5">
+              <span className="text-[#26a69a] mr-1.5">✔</span> Snapshot News
+            </li>
+          </ul>
+          <div className="flex gap-2.5 justify-center">
+            <Link
+              href="/2025-accountability-report"
+              className="py-2.5 px-5 border-0 rounded-md text-white no-underline text-[0.9rem] inline-block bg-[#26a69a] hover:bg-[#1d7d73] transition-colors"
+            >
+              View Full Report
+            </Link>
+          </div>
+        </div>
+
+        <div className="bg-[#f0f7f4] rounded-[10px] p-5 w-[450px] max-w-full shadow-[0_4px_8px_rgba(0,0,0,0.1)] text-left md:w-full md:max-w-[350px]">
+          <h3 className="text-3xl text-[#26a69a] mb-2.5">2024</h3>
+          <span className="inline-block bg-[#e0f2f1] py-1.5 px-2.5 rounded-md text-[0.9rem] text-[#26a69a] mb-2.5">
+            Previous Report
           </span>
           <h4 className="text-xl mb-2.5 font-semibold text-gray-800">
             2024 Accountability Report

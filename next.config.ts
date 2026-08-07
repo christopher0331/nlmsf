@@ -164,6 +164,7 @@ const nextConfig: NextConfig = {
       { source: "/what-is-lms/faq", destination: "/what-is-leiomyosarcoma", permanent: true },
       { source: "/accountability-reports/2023", destination: "/2023-accountability-report", permanent: true },
       { source: "/accountability-reports/2024", destination: "/accountability-reports", permanent: true },
+      { source: "/accountability-reports/2025", destination: "/2025-accountability-report", permanent: true },
 
       // ============================================================
       // Phase 3: Sound bytes date routes → single page

@@ -471,7 +471,7 @@ export default function Header() {
                         </div>
                         <div className={CATEGORY_COLUMN}>
                           <h4 className={CATEGORY_TITLE}>
-                            Unmet Needs
+                            Addressing Patients&apos; Common Challenges
                           </h4>
                           <ul className={CATEGORY_LINKS}>
                             <li>
@@ -479,7 +479,7 @@ export default function Header() {
                                 href="/patient-unmet-needs"
                                 className={DROPDOWN_LINK}
                               >
-                                Patient Unmet Needs
+                                Addressing Patients&apos; Common Challenges
                               </Link>
                             </li>
                           </ul>
@@ -734,7 +734,7 @@ export default function Header() {
                           </div>
                           <div className={DROPDOWN_COLUMN}>
                             <Link
-                              href="/accountability-reports"
+                              href="/accountability-reports-hub"
                               className={DROPDOWN_LINK}
                             >
                               Accountability Reports
@@ -1289,7 +1289,7 @@ export default function Header() {
               </div>
               <div className={MOBILE_CATEGORY}>
                 <h4 className={MOBILE_CATEGORY_TITLE}>
-                  Unmet Needs
+                  Addressing Patients&apos; Common Challenges
                 </h4>
                 <ul className={MOBILE_SUBMENU}>
                   <li>
@@ -1298,7 +1298,7 @@ export default function Header() {
                       className={MOBILE_SUBMENU_LINK}
                       onClick={() => setMobileNavOpen(false)}
                     >
-                      Patient Unmet Needs
+                      Addressing Patients&apos; Common Challenges
                     </Link>
                   </li>
                 </ul>
@@ -1502,7 +1502,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      href="/accountability-reports"
+                      href="/accountability-reports-hub"
                       className={MOBILE_SUBMENU_LINK}
                       onClick={() => setMobileNavOpen(false)}
                     >

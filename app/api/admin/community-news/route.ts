@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getPrisma } from "@/lib/prisma";
 import { isAuthenticated } from "@/lib/auth";
+import { revalidateCommunityNewsCache } from "@/lib/community-news";
 
 export async function GET() {
   const ok = await isAuthenticated();
@@ -49,5 +50,6 @@ export async function POST(request: Request) {
       manualDate: manualDate.trim(),
     },
   });
+  revalidateCommunityNewsCache();
   return NextResponse.json(entry);
 }

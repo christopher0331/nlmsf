@@ -112,15 +112,41 @@ export default function AccountabilityReportsHubPage() {
               <h4 className="mb-4 text-lg font-semibold text-gray-800">Quick Access</h4>
               <div className="flex flex-col gap-3">
                 <Link
-                  href="/accountability-reports/"
+                  href="/2025-accountability-report/"
                   className="flex items-center gap-3 rounded-lg border border-teal-500 bg-gradient-to-br from-teal-50 to-green-50 p-3 no-underline transition-all hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-teal-400 text-white">
                     <i className="fas fa-star text-sm" aria-hidden />
                   </div>
                   <div>
-                    <strong className="block text-sm text-gray-800">2024 Report</strong>
+                    <strong className="block text-sm text-gray-800">2025 Report</strong>
                     <span className="text-xs text-gray-500">Latest Annual Report</span>
+                  </div>
+                </Link>
+                <a
+                  href="/accountability-reports/2025/summary.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 p-3 no-underline transition-all hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-teal-400 text-white">
+                    <i className="fas fa-download text-sm" aria-hidden />
+                  </div>
+                  <div>
+                    <strong className="block text-sm text-gray-800">Download PDF</strong>
+                    <span className="text-xs text-gray-500">2025 Summary</span>
+                  </div>
+                </a>
+                <Link
+                  href="/accountability-reports/"
+                  className="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 p-3 no-underline transition-all hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-teal-400 text-white">
+                    <i className="fas fa-file-alt text-sm" aria-hidden />
+                  </div>
+                  <div>
+                    <strong className="block text-sm text-gray-800">2024 Report</strong>
+                    <span className="text-xs text-gray-500">Previous Annual Report</span>
                   </div>
                 </Link>
                 <a
@@ -313,7 +339,7 @@ export default function AccountabilityReportsHubPage() {
                   >
                     <span className="text-2xl font-bold">2024</span>
                     <span className="rounded-[20px] bg-white/20 px-3 py-1 text-xs font-semibold">
-                      Latest Report
+                      Previous Report
                     </span>
                   </div>
                   <div className="p-6">
@@ -455,12 +481,15 @@ export default function AccountabilityReportsHubPage() {
                   </div>
                 </div>
 
-                {/* 2025 Coming Soon */}
-                <div className="overflow-hidden rounded-2xl border-2 border-dashed border-gray-300 bg-white opacity-90">
-                  <div className="flex items-center justify-between bg-gradient-to-br from-gray-400 to-gray-300 px-6 py-5 text-white">
+                {/* 2025 */}
+                <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+                  <div
+                    className="flex items-center justify-between px-6 py-5 text-white"
+                    style={{ background: "linear-gradient(45deg, #0d9488, #14b8a6)" }}
+                  >
                     <span className="text-2xl font-bold">2025</span>
-                    <span className="rounded-[20px] bg-white/30 px-3 py-1 text-xs font-semibold">
-                      Coming Soon
+                    <span className="rounded-[20px] bg-white/20 px-3 py-1 text-xs font-semibold">
+                      Latest Report
                     </span>
                   </div>
                   <div className="p-6">
@@ -468,20 +497,43 @@ export default function AccountabilityReportsHubPage() {
                       2025 Accountability Report
                     </h3>
                     <p className="mb-6 text-gray-600">
-                      Our upcoming report will detail continued progress in research funding, expanded
-                      patient support programs, and new partnership initiatives.
+                      What we accomplished to help and support the LMS community — 2025 in review,
+                      including Circle of Hope, research funding, awards, Snapshot News, and new
+                      collaborations.
                     </p>
-                    <div className="mb-6 py-10 text-center text-gray-500">
-                      <i className="fas fa-calendar-alt mb-3 block text-3xl" aria-hidden />
-                      <p>Expected Publication: Q1 2026</p>
+                    <div className="mb-6 grid grid-cols-2 gap-3">
+                      {[
+                        { icon: "fa-users", label: "Circle of Hope Launch" },
+                        { icon: "fa-flask", label: "LMS Research Funding" },
+                        { icon: "fa-award", label: "Early Career Awards" },
+                        { icon: "fa-newspaper", label: "Snapshot News" },
+                      ].map((h) => (
+                        <div
+                          key={h.label}
+                          className="flex items-center gap-2 rounded-lg bg-teal-50 px-3 py-2 text-sm text-teal-700"
+                        >
+                          <i className={`fas ${h.icon}`} aria-hidden />
+                          <span>{h.label}</span>
+                        </div>
+                      ))}
                     </div>
-                    <button
-                      type="button"
-                      disabled
-                      className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg bg-gray-200 px-6 py-3 font-semibold text-gray-400"
-                    >
-                      <i className="fas fa-clock" aria-hidden /> Coming Soon
-                    </button>
+                    <div className="flex flex-wrap gap-3">
+                      <Link
+                        href="/2025-accountability-report/"
+                        className="inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold text-white no-underline transition hover:-translate-y-0.5"
+                        style={{ background: "linear-gradient(45deg, #0d9488, #14b8a6)" }}
+                      >
+                        <i className="fas fa-file-alt" aria-hidden /> View Full Report
+                      </Link>
+                      <a
+                        href="/accountability-reports/2025/summary.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border-2 border-teal-500 bg-transparent px-6 py-3 font-semibold text-teal-600 no-underline transition hover:bg-teal-500 hover:text-white"
+                      >
+                        <i className="fas fa-download" aria-hidden /> Download PDF
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -453,6 +453,33 @@ export default function NutritionAndPhysicalActivityClient() {
                     </a>
                   </div>
                 </div>
+
+                <div className="resource-highlight survivorship-exercise-highlight">
+                  <div className="resource-photo">
+                    <Image
+                      src="/images/physical-activity-exercise.png"
+                      alt="People exercising outdoors together"
+                      width={152}
+                      height={101}
+                    />
+                  </div>
+                  <div className="resource-info">
+                    <h4>Exercise as Part of Survivorship Care</h4>
+                    <p>
+                      Exercise (during treatment is helpful too) after cancer treatment is completed — part of the
+                      Survivorship Care Plan toolbox for patients and caregivers.
+                    </p>
+                    <a
+                      href="https://copingmag.com/how-to-make-exercise-a-part-of-your-post-cancer-life/"
+                      className="highlight-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      How to Make Exercise a Part of Your Post-Cancer Life
+                      <i className="fas fa-arrow-right" aria-hidden />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 

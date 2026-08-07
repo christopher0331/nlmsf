@@ -350,6 +350,30 @@
 .mission-page .testimonial-author {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mission-page .testimonial-author-photo {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 3px solid #bfdbfe;
+  background: #fff;
+}
+
+.mission-page .testimonial-author-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mission-page .testimonial-author-info {
+  min-width: 0;
 }
 
 .mission-page .testimonial-author h4 {
@@ -363,6 +387,31 @@
   font-size: 0.875rem;
   color: #4b5563;
   margin: 0.125rem 0;
+}
+
+.mission-page .achievement-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.15rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.mission-page .achievement-list li {
+  margin: 0.2rem 0;
+}
+
+.mission-page .achievements-reports-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.mission-page .achievements-reports-note a {
+  color: #6d28d9;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .mission-page .testButton {

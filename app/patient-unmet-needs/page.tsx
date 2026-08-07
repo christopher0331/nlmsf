@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Patient Unmet Needs | NLMSF",
+  title: "Addressing Patients' Common Challenges | NLMSF",
   description:
     "Join the NLMSF Circle of Hope—the LMS/All Sarcoma Patient-Family and Patient Advocacy Foundations Community Roundtable—a Think Tank Network identifying common challenges and unmet needs in care and treatment.",
 };
@@ -124,7 +124,7 @@ export default function PatientUnmetNeedsPage() {
             color: "transparent",
           }}
         >
-          Patient Unmet Needs
+          Addressing Patients&apos; Common Challenges
         </h1>
 
         <div
@@ -169,7 +169,7 @@ export default function PatientUnmetNeedsPage() {
             Caregivers
           </span>
           <span className="inline-flex items-center py-2 px-4 rounded-full font-medium bg-amber-50 text-amber-800 border border-amber-200">
-            <i className="fas fa-lightbulb mr-2 text-sm" aria-hidden /> Unmet Needs
+            <i className="fas fa-lightbulb mr-2 text-sm" aria-hidden /> Common Challenges
           </span>
           <span className="inline-flex items-center py-2 px-4 rounded-full font-medium bg-lime-50 text-lime-800 border border-lime-200">
             <i className="fas fa-comments mr-2 text-sm" aria-hidden /> Think Tank
