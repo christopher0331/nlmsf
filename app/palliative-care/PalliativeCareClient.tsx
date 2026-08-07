@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useMemo, useState } from "react";
 
 type FaqItem = {
@@ -85,6 +86,16 @@ export default function PalliativeCareClient() {
             improve quality of life, and help you live as well as possible—at
             any stage of illness.
           </p>
+          <div className="wp-hero-logo">
+            <Image
+              src="/images/patient-quality-of-life-nlmsf-support-tips-logo.png"
+              alt="Patient Quality of Life — NLMSF Support Tips logo"
+              width={200}
+              height={200}
+              className="wp-hero-logo-img"
+              priority
+            />
+          </div>
         </div>
       </section>
 

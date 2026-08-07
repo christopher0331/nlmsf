@@ -40,6 +40,21 @@
   max-width: 760px;
 }
 
+.palliative-care-page .wp-hero-logo {
+  margin-top: 1.25rem;
+}
+
+.palliative-care-page .wp-hero-logo-img {
+  width: 160px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.5rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.18);
+}
+
 /* Typography/sections */
 .palliative-care-page .section {
   margin: 18px 0;
