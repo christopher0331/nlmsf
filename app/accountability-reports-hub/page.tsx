@@ -330,212 +330,155 @@ export default function AccountabilityReportsHubPage() {
                 Access our comprehensive annual reports documenting our progress, achievements, and
                 financial stewardship.
               </p>
-              <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
-                {/* 2024 */}
-                <div className="overflow-hidden rounded-2xl border-2 border-teal-500 bg-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
-                  <div
-                    className="flex items-center justify-between px-6 py-5 text-white"
-                    style={{ background: "linear-gradient(45deg, #38b2ac, #4fd1c7)" }}
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 items-stretch">
+                {[
+                  {
+                    year: "2025",
+                    badge: "Latest Report",
+                    latest: true,
+                    title: "2025 Accountability Report",
+                    description:
+                      "What we accomplished for the LMS community — Circle of Hope, funded research, early-career awards, TARGET imaging, Snapshot News, and more.",
+                    highlights: [
+                      "Circle of Hope Roundtable",
+                      "3 funded research projects",
+                      "TARGET LMS Imaging",
+                      "Snapshot News launch",
+                    ],
+                    stats: [
+                      { value: "3", label: "Research projects" },
+                      { value: "2", label: "Early-career awards" },
+                      { value: "2025", label: "Accomplishments" },
+                    ],
+                    viewHref: "/2025-accountability-report/",
+                    pdfHref: "/accountability-reports/2025/summary.pdf",
+                  },
+                  {
+                    year: "2024",
+                    badge: "Previous Report",
+                    latest: false,
+                    title: "2024 Accountability Report",
+                    description:
+                      "25th anniversary report covering research funding, grant awards, repurposed drug initiatives, and international collaborations.",
+                    highlights: [
+                      "4 research awardees",
+                      "60+ roundtable researchers",
+                      "Repurposed drug initiative",
+                      "International collaborations",
+                    ],
+                    stats: [
+                      { value: "4", label: "Research grants" },
+                      { value: "60+", label: "Roundtable attendees" },
+                      { value: "25th", label: "Anniversary year" },
+                    ],
+                    viewHref: "/accountability-reports/",
+                    pdfHref: null,
+                  },
+                  {
+                    year: "2023",
+                    badge: "Previous Report",
+                    latest: false,
+                    title: "2023 Accountability Report",
+                    description:
+                      "Year in review covering LMS research, patient support programs, and community advocacy initiatives.",
+                    highlights: [
+                      "Research awardees",
+                      "SPORE LMS project",
+                      "MD Anderson collaboration",
+                      "23 years of service",
+                    ],
+                    stats: [
+                      { value: "2", label: "New research grants" },
+                      { value: "5", label: "Support programs" },
+                      { value: "23rd", label: "Anniversary year" },
+                    ],
+                    viewHref: "/2023-accountability-report/",
+                    pdfHref: null,
+                  },
+                ].map((report) => (
+                  <article
+                    key={report.year}
+                    className={`flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:-translate-y-1 hover:shadow-xl ${
+                      report.latest
+                        ? "border-2 border-teal-500"
+                        : "border border-gray-200"
+                    }`}
                   >
-                    <span className="text-2xl font-bold">2024</span>
-                    <span className="rounded-[20px] bg-white/20 px-3 py-1 text-xs font-semibold">
-                      Previous Report
-                    </span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="mb-3 text-xl font-semibold text-gray-800">
-                      2024 Accountability Report
-                    </h3>
-                    <p className="mb-6 text-gray-600">
-                      Our comprehensive 25th anniversary report detailing research funding, grant
-                      awards, repurposed drug initiatives, and expanded international collaborations.
-                    </p>
-                    <div className="mb-6 grid grid-cols-2 gap-3">
-                      {[
-                        { icon: "fa-microscope", label: "4 Research Awardees" },
-                        { icon: "fa-users", label: "60+ Roundtable Researchers" },
-                        { icon: "fa-pills", label: "Repurposed Drug Initiative" },
-                        { icon: "fa-globe", label: "International Collaborations" },
-                      ].map((h) => (
-                        <div
-                          key={h.label}
-                          className="flex items-center gap-2 rounded-lg bg-green-50 px-3 py-2 text-sm text-green-700"
-                        >
-                          <i className={`fas ${h.icon}`} aria-hidden />
-                          <span>{h.label}</span>
-                        </div>
-                      ))}
+                    <div
+                      className="flex items-center justify-between gap-3 px-5 py-4 text-white"
+                      style={{
+                        background: report.latest
+                          ? "linear-gradient(45deg, #0d9488, #14b8a6)"
+                          : "linear-gradient(45deg, #38b2ac, #4fd1c7)",
+                      }}
+                    >
+                      <span className="text-2xl font-bold">{report.year}</span>
+                      <span className="shrink-0 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold">
+                        {report.badge}
+                      </span>
                     </div>
-                    <div className="mb-6 grid grid-cols-3 gap-4 rounded-xl bg-gray-50 p-5">
-                      <div className="text-center">
-                        <div className="text-xl font-bold text-teal-600">4</div>
-                        <div className="text-xs font-semibold uppercase text-gray-500">
-                          Current Research Grants
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-xl font-bold text-teal-600">60+</div>
-                        <div className="text-xs font-semibold uppercase text-gray-500">
-                          Roundtable Attendees
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-xl font-bold text-teal-600">25th</div>
-                        <div className="text-xs font-semibold uppercase text-gray-500">
-                          Anniversary Year
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-3">
-                      <Link
-                        href="/accountability-reports/"
-                        className="inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold text-white no-underline transition hover:-translate-y-0.5"
-                        style={{ background: "linear-gradient(45deg, #38b2ac, #4fd1c7)" }}
-                      >
-                        <i className="fas fa-file-alt" aria-hidden /> View Full Report
-                      </Link>
-                      <a
-                        href="/accountability-reports/2024/summary.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg border-2 border-teal-500 bg-transparent px-6 py-3 font-semibold text-teal-600 no-underline transition hover:bg-teal-500 hover:text-white"
-                      >
-                        <i className="fas fa-download" aria-hidden /> Download PDF
-                      </a>
-                    </div>
-                  </div>
-                </div>
 
-                {/* 2023 */}
-                <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
-                  <div
-                    className="flex items-center justify-between px-6 py-5 text-white"
-                    style={{ background: "linear-gradient(45deg, #38b2ac, #4fd1c7)" }}
-                  >
-                    <span className="text-2xl font-bold">2023</span>
-                    <span className="rounded-[20px] bg-white/20 px-3 py-1 text-xs font-semibold">
-                      Previous Report
-                    </span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="mb-3 text-xl font-semibold text-gray-800">
-                      2023 Accountability Report
-                    </h3>
-                    <p className="mb-6 text-gray-600">
-                      Our annual report highlighting achievements in leiomyosarcoma research, patient
-                      support programs, and community advocacy initiatives.
-                    </p>
-                    <div className="mb-6 grid grid-cols-2 gap-3">
-                      {[
-                        { icon: "fa-microscope", label: "2 Research Awardees" },
-                        { icon: "fa-handshake", label: "SPORE LMS Project" },
-                        { icon: "fa-user-md", label: "MD Anderson Collaboration" },
-                        { icon: "fa-users", label: "23 Years of Service" },
-                      ].map((h) => (
-                        <div
-                          key={h.label}
-                          className="flex items-center gap-2 rounded-lg bg-green-50 px-3 py-2 text-sm text-green-700"
-                        >
-                          <i className={`fas ${h.icon}`} aria-hidden />
-                          <span>{h.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mb-6 grid grid-cols-3 gap-4 rounded-xl bg-gray-50 p-5">
-                      <div className="text-center">
-                        <div className="text-xl font-bold text-teal-600">2</div>
-                        <div className="text-xs font-semibold uppercase text-gray-500">
-                          New Research Grants
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-xl font-bold text-teal-600">5</div>
-                        <div className="text-xs font-semibold uppercase text-gray-500">
-                          Patient Support Programs
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-xl font-bold text-teal-600">23rd</div>
-                        <div className="text-xs font-semibold uppercase text-gray-500">
-                          Anniversary Year
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-3">
-                      <Link
-                        href="/2023-accountability-report/"
-                        className="inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold text-white no-underline transition hover:-translate-y-0.5"
-                        style={{ background: "linear-gradient(45deg, #38b2ac, #4fd1c7)" }}
-                      >
-                        <i className="fas fa-file-alt" aria-hidden /> View Full Report
-                      </Link>
-                      <a
-                        href="/accountability-reports/2023/summary.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg border-2 border-teal-500 bg-transparent px-6 py-3 font-semibold text-teal-600 no-underline transition hover:bg-teal-500 hover:text-white"
-                      >
-                        <i className="fas fa-download" aria-hidden /> Download PDF
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                        {report.title}
+                      </h3>
+                      <p className="mb-4 text-sm leading-relaxed text-gray-600">
+                        {report.description}
+                      </p>
 
-                {/* 2025 */}
-                <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
-                  <div
-                    className="flex items-center justify-between px-6 py-5 text-white"
-                    style={{ background: "linear-gradient(45deg, #0d9488, #14b8a6)" }}
-                  >
-                    <span className="text-2xl font-bold">2025</span>
-                    <span className="rounded-[20px] bg-white/20 px-3 py-1 text-xs font-semibold">
-                      Latest Report
-                    </span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="mb-3 text-xl font-semibold text-gray-800">
-                      2025 Accountability Report
-                    </h3>
-                    <p className="mb-6 text-gray-600">
-                      What we accomplished to help and support the LMS community — 2025 in review,
-                      including Circle of Hope, research funding, awards, Snapshot News, and new
-                      collaborations.
-                    </p>
-                    <div className="mb-6 grid grid-cols-2 gap-3">
-                      {[
-                        { icon: "fa-users", label: "Circle of Hope Launch" },
-                        { icon: "fa-flask", label: "LMS Research Funding" },
-                        { icon: "fa-award", label: "Early Career Awards" },
-                        { icon: "fa-newspaper", label: "Snapshot News" },
-                      ].map((h) => (
-                        <div
-                          key={h.label}
-                          className="flex items-center gap-2 rounded-lg bg-teal-50 px-3 py-2 text-sm text-teal-700"
+                      <ul className="mb-5 space-y-2">
+                        {report.highlights.map((item) => (
+                          <li
+                            key={item}
+                            className="flex items-start gap-2 text-sm text-teal-800"
+                          >
+                            <span className="mt-0.5 text-teal-600" aria-hidden>
+                              ✓
+                            </span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="mb-5 grid grid-cols-3 gap-2 rounded-xl bg-slate-50 p-3">
+                        {report.stats.map((stat) => (
+                          <div key={stat.label} className="min-w-0 text-center">
+                            <div className="text-lg font-bold text-teal-700">
+                              {stat.value}
+                            </div>
+                            <div className="text-[0.7rem] font-medium leading-snug text-slate-500">
+                              {stat.label}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="mt-auto flex flex-col gap-2">
+                        <Link
+                          href={report.viewHref}
+                          className="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-white no-underline transition hover:opacity-90"
+                          style={{
+                            background: report.latest
+                              ? "linear-gradient(45deg, #0d9488, #14b8a6)"
+                              : "linear-gradient(45deg, #38b2ac, #4fd1c7)",
+                          }}
                         >
-                          <i className={`fas ${h.icon}`} aria-hidden />
-                          <span>{h.label}</span>
-                        </div>
-                      ))}
+                          <i className="fas fa-file-alt" aria-hidden /> View Full Report
+                        </Link>
+                        {report.pdfHref && (
+                          <a
+                            href={report.pdfHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-teal-500 bg-transparent px-4 py-2.5 text-sm font-semibold text-teal-700 no-underline transition hover:bg-teal-500 hover:text-white"
+                          >
+                            <i className="fas fa-download" aria-hidden /> Download PDF
+                          </a>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex flex-wrap gap-3">
-                      <Link
-                        href="/2025-accountability-report/"
-                        className="inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold text-white no-underline transition hover:-translate-y-0.5"
-                        style={{ background: "linear-gradient(45deg, #0d9488, #14b8a6)" }}
-                      >
-                        <i className="fas fa-file-alt" aria-hidden /> View Full Report
-                      </Link>
-                      <a
-                        href="/accountability-reports/2025/summary.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg border-2 border-teal-500 bg-transparent px-6 py-3 font-semibold text-teal-600 no-underline transition hover:bg-teal-500 hover:text-white"
-                      >
-                        <i className="fas fa-download" aria-hidden /> Download PDF
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                  </article>
+                ))}
               </div>
             </div>
           </section>
@@ -559,36 +502,36 @@ export default function AccountabilityReportsHubPage() {
                   color: "transparent",
                 }}
               >
-                2024 Foundation Impact
+                2025 Foundation Impact
               </h2>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {[
                   {
                     icon: "fa-microscope",
-                    number: "4",
-                    label: "Active Research Grants",
-                    period: "Current awardees (2023-2026)",
+                    number: "3",
+                    label: "Funded Research Projects",
+                    period: "Named LMS research awards",
                     gradient: "linear-gradient(45deg, #667eea, #764ba2)",
                   },
                   {
                     icon: "fa-users",
-                    number: "60+",
-                    label: "Research Roundtable Attendees",
-                    period: "Toronto 2024 meeting",
+                    number: "1",
+                    label: "Circle of Hope Launch",
+                    period: "Patient-caregiver think tank",
                     gradient: "linear-gradient(45deg, #f6ad55, #ed8936)",
                   },
                   {
-                    icon: "fa-pills",
-                    number: "5",
-                    label: "Drug Repurposing Partners",
-                    period: "Expanding treatment options",
+                    icon: "fa-award",
+                    number: "2",
+                    label: "Early-Career Awards",
+                    period: "Van Tine + Early Career",
                     gradient: "linear-gradient(45deg, #48bb78, #38b2ac)",
                   },
                   {
-                    icon: "fa-calendar",
-                    number: "25",
-                    label: "Years of Service",
-                    period: "Since 2001 founding",
+                    icon: "fa-newspaper",
+                    number: "New",
+                    label: "Snapshot News",
+                    period: "Biweekly community updates",
                     gradient: "linear-gradient(45deg, #ed64a6, #9f7aea)",
                   },
                 ].map((m) => (
