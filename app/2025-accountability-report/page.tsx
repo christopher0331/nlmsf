@@ -54,10 +54,10 @@ export default function Report2025Page() {
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
           <h2 className="mb-3 text-xl font-bold text-teal-800">Circle of Hope Roundtable</h2>
           <p className="m-0 leading-relaxed text-slate-700">
-            Newly created NLMSF Patient-Caregiver Circle of Hope Roundtable — the Community THINK
-            TANK for sarcoma patients and families, as well as other sarcoma patient advocacy
-            foundations, to come together to prioritize unmet needs in treatment and care and
-            tackle strategies to improve the patient experience. Launch date: January 8, 2026.
+            Launched January 8 — the NLMSF Patient-Caregiver Circle of Hope Roundtable, a community
+            “think tank” that brings together sarcoma patients and families alongside other patient
+            advocacy foundations to identify and prioritize unmet needs in treatment and care, and to
+            develop strategies that improve the overall patient experience.
           </p>
           <p className="mt-4 mb-0">
             <Link href="/patient-unmet-needs/" className="font-semibold text-teal-700 underline">
@@ -84,20 +84,38 @@ export default function Report2025Page() {
           <h2 className="mb-3 text-xl font-bold text-teal-800">Funded Research</h2>
           <ul className="m-0 list-disc space-y-3 pl-5 text-slate-700">
             <li>
-              Three LMS-specific research projects — one new for 2025–2026 and two completing their
-              two-year research funding grants for 2024–2025. Details are on the NLMSF website under
-              Research.
+              <strong>Marisa Nucci, M.D.</strong> (Boston, MA) — Exploiting High-throughput Deep
+              Learning to Improve Uterine Leiomyosarcoma Diagnostics (Deep ULMS).
             </li>
             <li>
-              Fourth year of funding of a five-year NLMSF commitment in support of the LMS SPORE
-              (Specialized Programs of Research Excellence) — translational LMS research projects
-              largely funded by a grant from the NCI/NIH.
+              <strong>Robert J. Canter, M.D.</strong> (Sacramento, CA) — Pre-Clinical Evaluation of
+              Placental-Derived Natural Killer (NK) Cells to Target Leiomyosarcoma.
+            </li>
+            <li>
+              <strong>Frederic Amant, M.D.</strong> (Belgium) — Exploiting the Immunomodulatory Effect
+              of PI3K/mTOR Inhibitors to Improve Immunotherapy Response in Leiomyosarcoma.
+            </li>
+            <li>
+              Continued support of the LMS SPORE (Specialized Programs of Research Excellence) —
+              translational LMS research led by the Rogel Cancer Center with an international team,
+              endorsed and supported by the NIH/NCI.
             </li>
           </ul>
           <p className="mt-4 mb-0">
             <Link href="/research-funding-2/" className="font-semibold text-teal-700 underline">
               View research projects
             </Link>
+          </p>
+        </article>
+
+        <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+          <h2 className="mb-3 text-xl font-bold text-teal-800">
+            Special Initiative — TARGET LMS Imaging
+          </h2>
+          <p className="m-0 leading-relaxed text-slate-700">
+            Launched TARGET LMS Imaging to advance novel imaging strategies for leiomyosarcoma. The
+            TARGET Project was initiated by Dr. Scott Okuno (Mayo Clinic) as an outgrowth of the most
+            recent International LMS Research Roundtable.
           </p>
         </article>
 
