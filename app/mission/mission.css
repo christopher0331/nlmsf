@@ -357,19 +357,24 @@
 
 .mission-page .testimonial-author-photo {
   flex-shrink: 0;
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   border-radius: 9999px;
   overflow: hidden;
-  border: 3px solid #bfdbfe;
-  background: #fff;
+  border: 3px solid #93c5fd;
+  background: #e2e8f0;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.18);
 }
 
-.mission-page .testimonial-author-photo img {
-  width: 100%;
-  height: 100%;
+.mission-page .testimonial-author-photo img,
+.mission-page .testimonial-author-img {
+  width: 96px !important;
+  height: 96px !important;
+  max-width: none !important;
   object-fit: cover;
   display: block;
+  opacity: 1 !important;
+  position: static !important;
 }
 
 .mission-page .testimonial-author-info {

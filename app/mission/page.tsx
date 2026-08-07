@@ -131,8 +131,11 @@ export default function MissionPage() {
                     <Image
                       src="/images/dr-singh-testimonial.png"
                       alt="Arun Singh, M.D."
-                      width={113}
-                      height={113}
+                      width={160}
+                      height={160}
+                      priority
+                      unoptimized
+                      className="testimonial-author-img"
                     />
                   </div>
                   <div className="testimonial-author-info">
