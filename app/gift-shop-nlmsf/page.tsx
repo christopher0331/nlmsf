@@ -408,12 +408,6 @@ export default function GiftShopNlmsfPage() {
                 <a href="https://www.bonfire.com/nlmsf-hat/" className="resource-card-link" {...ext}>Shop on Bonfire</a>
               </div>
               <div className="resource-card">
-                <i className="fas fa-pump-soap" aria-hidden />
-                <h4>Soap For The Cure</h4>
-                <p>The National Leiomyosarcoma Foundation Is Partnering with Soap For The Cure</p>
-                <span className="resource-card-link disabled">Coming Soon</span>
-              </div>
-              <div className="resource-card">
                 <i className="fas fa-tshirt" aria-hidden />
                 <h4>HOPE in SURVIVORSHIP Collection</h4>
                 <p>T-Shirts, Hoodies, and more apparel to help fund LMS research projects</p>
