@@ -19,30 +19,16 @@ export default function GiftShopPage() {
       {/* Hero */}
       <section className="hero-section gift-shop-hero">
         <div className="hero-inner">
-          <p className="hero-eyebrow">
-            <i className="fas fa-gift" aria-hidden />
-            Shop to Support
-          </p>
-          <h1>NLMSF Gift Shop</h1>
-          <div className="hero-divider" aria-hidden />
-          <p className="hero-subtitle">Support LMS Research with Every Purchase</p>
-          <p className="hero-lead">
-            Every purchase directly supports vital LMS research initiatives
-          </p>
-          <div className="hero-badges">
-            <div className="badge">
-              <span className="badge-icon shop" aria-hidden />
-              <span className="badge-text">Unique Gifts</span>
-            </div>
-            <div className="badge">
-              <span className="badge-icon research" aria-hidden />
-              <span className="badge-text">Support Research</span>
-            </div>
-            <div className="badge">
-              <span className="badge-icon community" aria-hidden />
-              <span className="badge-text">Build Community</span>
-            </div>
+          <div className="hero-logo">
+            <Image
+              src="/images/gift-shop/shop-for-the-cause-logo.png"
+              alt="Shop for the Cause — Advance research through being a Champion of Hope with your purchases"
+              width={640}
+              height={640}
+              priority
+            />
           </div>
+          <h1 className="sr-only">NLMSF Gift Shop</h1>
           <div className="hero-actions">
             <a href="#bonfire-shop" className="cta-button">Shop Apparel</a>
             <a href="#shop-section" className="cta-button cta-secondary">Browse the Shop</a>
@@ -111,10 +97,10 @@ export default function GiftShopPage() {
               <div className="intro-content">
                 <div className="intro-logo">
                   <Image
-                    src="https://media.nlmsf.org/wp-content/uploads/2021/02/Gift-shop-box.jpg"
-                    alt="Gift Shop Box"
+                    src="/images/gift-shop/shop-for-the-cause-logo.png"
+                    alt="Shop for the Cause — Champion of Hope"
                     width={640}
-                    height={360}
+                    height={640}
                   />
                 </div>
                 <div className="intro-text">
