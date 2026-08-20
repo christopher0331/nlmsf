@@ -32,70 +32,94 @@
 
 /* Hero */
 .gift-shop-page .hero-section {
-  background: linear-gradient(to right, #f9fafb, #f3f4f6);
-  padding: 4rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  width: min(1400px, calc(100% - 2.5rem));
+  max-width: 1400px;
+  margin: 1.25rem auto 0;
+  padding: 3.5rem 1.75rem 3.25rem;
+  text-align: center;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(168, 85, 247, 0.16), transparent 42%),
+    radial-gradient(circle at 88% 10%, rgba(67, 56, 202, 0.14), transparent 38%),
+    linear-gradient(180deg, #f7f4ff 0%, #eef2ff 100%);
+  border: 1px solid rgba(126, 34, 206, 0.12);
+  box-shadow: 0 18px 40px rgba(88, 28, 135, 0.08);
+}
+
+.gift-shop-page .hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.gift-shop-page .hero-eyebrow {
+  display: inline-flex;
   align-items: center;
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.gift-shop-page .hero-content {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-}
-
-.gift-shop-page .hero-image {
-  flex: 0 0 auto;
-  width: 220px;
-  height: 220px;
-  margin-left: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.gift-shop-page .hero-image img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 50%;
-  border: 8px solid #fff;
-  box-shadow: 0 10px 25px rgba(126, 34, 206, 0.15);
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7e22ce, #4338ca);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .gift-shop-page .hero-section h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #7e22ce, #4338ca);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  background: linear-gradient(90deg, #6b21a8, #4338ca);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+.gift-shop-page .hero-divider {
+  width: 56px;
+  height: 4px;
+  margin: 0 auto 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7e22ce, #4338ca);
+}
+
 .gift-shop-page .hero-subtitle {
   font-size: 1.25rem;
-  color: #4b5563;
-  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.5rem;
+}
+
+.gift-shop-page .hero-lead {
+  font-size: 1.05rem;
+  color: #6b7280;
+  margin: 0 auto 1.75rem;
+  max-width: 34rem;
 }
 
 .gift-shop-page .hero-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
 }
 
 .gift-shop-page .badge {
   display: flex;
   align-items: center;
   background-color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(126, 34, 206, 0.1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
 .gift-shop-page .badge-icon {
@@ -135,35 +159,47 @@
 }
 
 .gift-shop-page .badge-text {
-  font-weight: 500;
-  color: #4b5563;
+  font-weight: 600;
+  color: #374151;
 }
 
-.gift-shop-page .hero-cta {
-  margin-top: 2rem;
-}
-
-.gift-shop-page .hero-cta p {
-  font-size: 1.125rem;
-  color: #4b5563;
-  margin-bottom: 1rem;
+.gift-shop-page .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .gift-shop-page .cta-button {
-  display: inline-block;
-  background: linear-gradient(to right, #7e22ce, #6b21a8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #7e22ce, #5b21b6);
   color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(126, 34, 206, 0.25);
+  font-weight: 700;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(126, 34, 206, 0.22);
 }
 
 .gift-shop-page .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(126, 34, 206, 0.3);
+  box-shadow: 0 14px 24px rgba(126, 34, 206, 0.28);
   color: white;
+}
+
+.gift-shop-page .cta-button.cta-secondary {
+  background: #fff;
+  color: #6b21a8;
+  box-shadow: none;
+  border: 1px solid rgba(107, 33, 168, 0.2);
+}
+
+.gift-shop-page .cta-button.cta-secondary:hover {
+  color: #6b21a8;
+  background: #faf5ff;
+  box-shadow: 0 8px 16px rgba(88, 28, 135, 0.08);
 }
 
 /* Layout: sidebar + content */
@@ -1009,22 +1045,9 @@
 
 @media (max-width: 768px) {
   .gift-shop-page .hero-section {
-    padding: 3rem 1.5rem;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .gift-shop-page .hero-content {
-    max-width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .gift-shop-page .hero-image {
-    margin-left: 0;
-  }
-
-  .gift-shop-page .hero-badges {
-    justify-content: center;
+    margin: 0.75rem 1rem 0;
+    padding: 2.5rem 1.25rem 2.25rem;
+    border-radius: 18px;
   }
 
   .gift-shop-page .gift-shop-layout {
@@ -1060,7 +1083,11 @@
 
 @media (max-width: 520px) {
   .gift-shop-page .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 2.15rem;
+  }
+
+  .gift-shop-page .hero-actions .cta-button {
+    width: 100%;
   }
 
   .gift-shop-page .section-header h2 {

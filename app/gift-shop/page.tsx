@@ -18,9 +18,17 @@ export default function GiftShopPage() {
     <div className="gift-shop-page">
       {/* Hero */}
       <section className="hero-section gift-shop-hero">
-        <div className="hero-content">
+        <div className="hero-inner">
+          <p className="hero-eyebrow">
+            <i className="fas fa-gift" aria-hidden />
+            Shop to Support
+          </p>
           <h1>NLMSF Gift Shop</h1>
+          <div className="hero-divider" aria-hidden />
           <p className="hero-subtitle">Support LMS Research with Every Purchase</p>
+          <p className="hero-lead">
+            Every purchase directly supports vital LMS research initiatives
+          </p>
           <div className="hero-badges">
             <div className="badge">
               <span className="badge-icon shop" aria-hidden />
@@ -35,18 +43,10 @@ export default function GiftShopPage() {
               <span className="badge-text">Build Community</span>
             </div>
           </div>
-          <div className="hero-cta">
-            <p>Every purchase directly supports vital LMS research initiatives</p>
-            <a href="#shop-section" className="cta-button">Shop Now</a>
+          <div className="hero-actions">
+            <a href="#bonfire-shop" className="cta-button">Shop Apparel</a>
+            <a href="#shop-section" className="cta-button cta-secondary">Browse the Shop</a>
           </div>
-        </div>
-        <div className="hero-image">
-          <Image
-            src="https://media.nlmsf.org/wp-content/uploads/2020/07/unnamed-70.jpg"
-            alt="NLMSF Gift Shop"
-            width={1200}
-            height={800}
-          />
         </div>
       </section>
 
