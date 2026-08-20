@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import {
+  BONFIRE_ORG_URL,
+  BONFIRE_STORE_URL,
+  bonfireProducts,
+} from "./bonfire-products";
 import "./gift-shop.css";
 
 export const metadata: Metadata = {
@@ -66,6 +71,12 @@ export default function GiftShopPage() {
                 <a href="#featured-book" className="nav-link">
                   <span className="nav-icon featured" aria-hidden />
                   <span>Goodnight, Mama</span>
+                </a>
+              </li>
+              <li>
+                <a href="#bonfire-shop" className="nav-link">
+                  <span className="nav-icon products" aria-hidden />
+                  <span>Bonfire Apparel</span>
                 </a>
               </li>
               <li>
@@ -150,6 +161,79 @@ export default function GiftShopPage() {
                   width={640}
                   height={360}
                 />
+              </div>
+            </div>
+          </section>
+
+          {/* Official Bonfire merchandise — checkout happens on Bonfire */}
+          <section id="bonfire-shop" className="content-section">
+            <div className="section-header">
+              <h2>Official Bonfire Merchandise</h2>
+              <p>Checkout on Bonfire — proceeds support LMS research</p>
+            </div>
+            <div className="content-panel bonfire-panel">
+              <div className="bonfire-intro">
+                <p>
+                  Official National Leiomyosarcoma Foundation merchandise, professionally printed in the USA.
+                  Select a size and color on Bonfire to complete checkout. 20% of sales from Champions of Hope
+                  NLMSF merchandise in collaboration with Bonfire goes directly to LMS research.
+                </p>
+                <div className="bonfire-intro-actions">
+                  <a href={BONFIRE_STORE_URL} className="shop-button external-link" {...ext}>
+                    Browse the Bonfire Store
+                  </a>
+                  <a href={BONFIRE_ORG_URL} className="shop-button" {...ext}>
+                    View Organization Shop
+                  </a>
+                </div>
+              </div>
+              <div className="bonfire-grid">
+                {bonfireProducts.map((product) => (
+                  <article key={product.id} className="bonfire-card">
+                    <a
+                      href={product.checkoutUrl}
+                      className="bonfire-card-media"
+                      {...ext}
+                      aria-label={`Checkout ${product.name} — ${product.productType} on Bonfire`}
+                    >
+                      <span className="bonfire-card-badge">Bonfire</span>
+                      <Image
+                        src={product.image}
+                        alt={product.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+                        className="bonfire-card-img bonfire-card-img-front"
+                      />
+                      {product.imageBack ? (
+                        <Image
+                          src={product.imageBack}
+                          alt={`${product.alt} (back view)`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+                          className="bonfire-card-img bonfire-card-img-back"
+                        />
+                      ) : null}
+                    </a>
+                    <div className="bonfire-card-body">
+                      <p className="bonfire-card-type">{product.productType}</p>
+                      <h3>{product.name}</h3>
+                      <p className="bonfire-card-desc">{product.description}</p>
+                      <ul className="bonfire-card-styles">
+                        {product.styles.map((style) => (
+                          <li key={style}>{style}</li>
+                        ))}
+                      </ul>
+                      <div className="bonfire-card-footer">
+                        <p className="bonfire-card-price">
+                          <span>From</span> {product.priceFrom}
+                        </p>
+                        <a href={product.checkoutUrl} className="shop-button external-link" {...ext}>
+                          Checkout on Bonfire
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
             </div>
           </section>
