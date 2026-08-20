@@ -11,8 +11,8 @@ export default function PatientDrivenResearchClient() {
       "count-me-in",
       "pattern-org",
       "cure-id",
+      "tracer",
       "patient-initiatives",
-      "cmi-details",
       "cmi-news",
       "who-can-join",
     ],
@@ -81,8 +81,22 @@ export default function PatientDrivenResearchClient() {
           <i className="fas fa-microscope" aria-hidden />
           <span>Patient Participation</span>
         </div>
-        <h1 className="hero-title">Patient-Driven Research</h1>
+        <div className="hero-research-brand">
+          <Image
+            src="/images/patient-driven-research/be-part-of-research.png"
+            alt="Be Part of Research"
+            width={260}
+            height={152}
+            className="hero-research-logo"
+            priority
+          />
+        </div>
+        <h1 className="hero-title">Be a Part of Research</h1>
         <div className="hero-divider"></div>
+        <p className="hero-tagline">
+          Accelerating research, clinical trials, and treatment options to further
+          survivorship
+        </p>
         <p className="hero-description">
           Patients play a vital role in advancing LMS research through direct
           participation and advocacy. Learn how your involvement can help
@@ -135,6 +149,9 @@ export default function PatientDrivenResearchClient() {
               <a href="#cure-id" className="nav-link" onClick={handleNavClick}>
                 CURE ID Initiative
               </a>
+              <a href="#tracer" className="nav-link" onClick={handleNavClick}>
+                TRACER Project
+              </a>
             </div>
 
             <div className="nav-section section-participation">
@@ -144,9 +161,6 @@ export default function PatientDrivenResearchClient() {
                 onClick={handleNavClick}
               >
                 Patient-Driven Initiatives
-              </a>
-              <a href="#cmi-details" className="nav-link" onClick={handleNavClick}>
-                Count Me In Details
               </a>
               <a href="#cmi-news" className="nav-link" onClick={handleNavClick}>
                 Latest Updates
@@ -540,6 +554,96 @@ export default function PatientDrivenResearchClient() {
               </div>
             </section>
 
+            <section id="tracer">
+              <div className="research-initiative-card tracer-section">
+                <div className="research-section-header">
+                  <h2 className="section-title">
+                    THE TRACER PROJECT — GUJRAL LAB
+                  </h2>
+                  <div className="subtitle-wrapper">
+                    <p className="section-subtitle">
+                      Transformative Rare Cancer Initiative · Fred Hutchinson Cancer
+                      Center
+                    </p>
+                  </div>
+                </div>
+
+                <div className="research-content">
+                  <div className="tracer-images">
+                    <Image
+                      src="/images/patient-driven-research/tracer-overview.png"
+                      alt="TRACER Transformative Rare Cancer Initiative with Dr. Taran Gujral"
+                      width={1024}
+                      height={576}
+                      className="tracer-image"
+                    />
+                    <Image
+                      src="/images/patient-driven-research/tracer-gujral-lab.png"
+                      alt="The TRACER Project — Gujral Lab at Fred Hutchinson Cancer Center, in partnership with NLMSF"
+                      width={1024}
+                      height={576}
+                      className="tracer-image"
+                    />
+                  </div>
+
+                  <ul className="research-benefits">
+                    <li>
+                      TRACER is a collaborative research program focused on advancing
+                      treatments for rare and understudied cancers through innovative
+                      science and partnerships between researchers, clinicians, and
+                      patient communities.
+                    </li>
+                    <li>
+                      Led by <strong>Dr. Taran Gujral</strong>, Associate Professor at
+                      Fred Hutch Cancer Center, the program drives transformative
+                      approaches by fostering cross-disciplinary collaboration and
+                      creating a shared platform that unites and strengthens efforts
+                      across organ-specific tumor programs.
+                    </li>
+                    <li>
+                      Dr. Gujral&apos;s dual vision: fast-forward rare cancer research by
+                      enabling collaboration with rare cancer researchers across the
+                      United States and beyond.
+                    </li>
+                  </ul>
+
+                  <div className="highlight-box">
+                    <p>
+                      The National Leiomyosarcoma Foundation is most grateful for this
+                      collaborative partnership on behalf of the LMS Patient Community
+                      to advance Repurposing Drug initiatives for LMS / SARCOMA.
+                    </p>
+                  </div>
+
+                  <div className="contact-info tracer-contact">
+                    <h3>How to Participate</h3>
+                    <p>
+                      <strong>Contact Annie Achee</strong> to receive more information
+                      on how to participate in this research program:
+                    </p>
+                    <ul>
+                      <li>
+                        Email:{" "}
+                        <a href="mailto:annieachee@aol.com" className="email-link">
+                          annieachee@aol.com
+                        </a>
+                      </li>
+                      <li>
+                        Call directly:{" "}
+                        <a href="tel:3037830924" className="email-link">
+                          303-783-0924
+                        </a>{" "}
+                        or{" "}
+                        <a href="tel:3038083437" className="email-link">
+                          303-808-3437
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <section id="patient-initiatives">
               <div className="research-initiative-card pattern-details-section">
                 <div className="research-section-header">
@@ -632,173 +736,6 @@ export default function PatientDrivenResearchClient() {
                       Click here to watch a quick step-by-step guide for
                       patients to easily participate with Pattern.org
                     </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="cmi-details">
-              <div className="research-initiative-card cmi-details-section">
-                <div className="research-section-header">
-                  <h2 className="section-title">THE COUNT ME IN LMS PROJECT</h2>
-                  <div className="subtitle-wrapper">
-                    <p className="section-subtitle">
-                      Count Me In Gives LMS Patients a Way to Impact Future
-                      Treatments
-                    </p>
-                  </div>
-                </div>
-
-                <div className="research-content">
-                  <div className="highlight-box">
-                    <h3>YOU can help accelerate new treatments for LMS!</h3>
-                  </div>
-
-                  <p>
-                    In early 2022, we will have a greater impact in our future
-                    through a project called Count Me In. This non-profit
-                    organization will collect samples and information from
-                    anyone who has ever had LMS in the United States and
-                    Canada—with appropriate privacy protections—and release the
-                    anonymous data publicly so that researchers can share their
-                    ideas on new, more effective ways to treat LMS.
-                  </p>
-
-                  <p className="emphasis-text">
-                    All you do is sign a consent and the rest is taken care of!
-                  </p>
-
-                  <p>
-                    Count Me In started in 2015 as a project run by the Broad
-                    Institute and Dana-Farber Cancer Institute (which has a
-                    sarcoma center) for metastatic breast cancer patients.
-                  </p>
-
-                  <p>Here is what The Leiomyosarcoma Count Me In project will do:</p>
-                  <ul className="research-benefits">
-                    <li>
-                      Ask LMS patients in the United States and Canada to submit
-                      samples of their tumors so they can undergo molecular and
-                      genomic research at the Broad Institute.
-                    </li>
-                    <li>
-                      Use this research to produce a large set of data that can
-                      be provided to researchers. Because LMS is so rare, this
-                      data will first help researchers to gain a better
-                      understanding of the disease—then expanded knowledge to
-                      work on better treatments.
-                    </li>
-                    <li>
-                      Provide you information about your individual data AT NO
-                      COST (available for patients who live in the United
-                      States, except New York; not available for Canadians).
-                    </li>
-                  </ul>
-
-                  <blockquote className="research-quote">
-                    <p>
-                      &quot;We&apos;ve been working closely with a committee of 10
-                      LMS patients and caregivers to provide input and feedback
-                      on the project design. As the project launches and gets
-                      going, we will have more opportunities for members of the
-                      community to get involved with providing feedback and
-                      input on the project and we will share those as they&apos;re
-                      available. After we launch the project in early 2022,
-                      participants can provide questions or comments on their
-                      experience in the project through surveys and reaching
-                      out to the team.&quot;
-                    </p>
-                    <cite>- Taylor Custer of Count Me In</cite>
-                  </blockquote>
-
-                  <p>
-                    Patients will have two chances to learn more about their DNA
-                    from the project, one for tumor DNA and one for germline or
-                    normal DNA.
-                  </p>
-
-                  <blockquote className="research-quote">
-                    <p>
-                      &quot;If a participant elects during the consent process to
-                      share archive tissue samples with the project and the
-                      tumor sample is successfully sequenced, we can share
-                      information from the genomic sequencing of the tumor
-                      sample back with the participant. Participants can choose
-                      whether or not to receive this information about their
-                      tumor sample during the consent process. The information
-                      about a participant&apos;s tumor is intended to highlight
-                      how participant sample(s) are contributing to research
-                      and will not have implications for their treatment or
-                      prognosis,&quot;
-                    </p>
-                    <cite>Cusher explained</cite>
-                  </blockquote>
-
-                  <p>
-                    However, regulatory restrictions prohibit the sharing of
-                    results with participants in New York and Canada.
-                  </p>
-
-                  <blockquote className="research-quote">
-                    <p>
-                      &quot;The project is also partnering with Invitae in order
-                      to sequence and share information on germline DNA (or
-                      &quot;normal&quot; DNA) from saliva samples. During the
-                      project, participants will be able to decide if they would
-                      like to provide an additional saliva sample to learn more
-                      about their normal DNA and speak with a genetic counselor
-                      to understand these results,&quot;
-                    </p>
-                    <cite>Cusher added</cite>
-                  </blockquote>
-
-                  <p>
-                    &quot;If a participant chooses not to participate in this
-                    process, the data will not be shared with Invitae. This
-                    process is not available for participants in Canada, as
-                    Invitae is not licensed to provide genetic counseling
-                    services there.&quot;
-                  </p>
-
-                  <p>
-                    More information on the Count Me In model and other projects
-                    can be found at{" "}
-                    <a
-                      href="https://joincountmein.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="section-link"
-                    >
-                      joincountmein.org
-                    </a>
-                    .
-                  </p>
-
-                  <div className="cta-box">
-                    <p>
-                      To make sure you are notified about when you can sign up,
-                      go to{" "}
-                      <a
-                        href="https://joincountmein.org/lms"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="section-link"
-                      >
-                        https://joincountmein.org/lms
-                      </a>
-                      .
-                    </p>
-                    <p>
-                      Need more information? The Count Me In staff welcomes
-                      questions and comments through email at{" "}
-                      <a
-                        href="mailto:info@lmsproject.org"
-                        className="email-link"
-                      >
-                        info@lmsproject.org
-                      </a>
-                      .
-                    </p>
                   </div>
                 </div>
               </div>

@@ -3,9 +3,9 @@ import PatientDrivenResearchClient from "./PatientDrivenResearchClient";
 import "./patient-driven-research.css";
 
 export const metadata: Metadata = {
-  title: "Patient-Driven Research | NLMSF",
+  title: "Be a Part of Research | Patient-Driven Research | NLMSF",
   description:
-    "Learn how patient participation and advocacy accelerate LMS research and treatment options.",
+    "Be a part of research — accelerating research, clinical trials, and treatment options to further LMS survivorship through patient-driven initiatives.",
 };
 
 export default function PatientDrivenResearchPage() {
