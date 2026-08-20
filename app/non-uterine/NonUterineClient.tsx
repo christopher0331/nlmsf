@@ -58,12 +58,66 @@ export default function NonUterineClient() {
         {/* Nav */}
         <nav className="nulms-nav">
           <h3>On This Page</h3>
+          <a href="#stanford-hipec">Stanford HIPEC Research</a>
           <a href="#ngs-video">NGS Updates (ASCO 2025)</a>
           <a href="#maintenance">Maintenance Therapy</a>
           <a href="#surgical">Surgical Outcomes</a>
           <a href="#therapy-chart">Drug Therapy Chart</a>
           <a href="#tnt-study">TNT Phase 2 Study</a>
         </nav>
+
+        <section id="stanford-hipec" className="nulms-section">
+          <h2 className="nulms-section-title purple">
+            Stanford: Surgery &amp; HIPEC Research
+          </h2>
+          <div className="nulms-panel purple">
+            <div className="nulms-panel-header">
+              <div className="nulms-icon purple">
+                <i className="fas fa-hospital" aria-hidden />
+              </div>
+              <div>
+                <h3>Cytoreductive Surgery &amp; HIPEC for Leiomyosarcoma</h3>
+                <p>Stanford Health Care publication and clinical trial</p>
+              </div>
+            </div>
+            <p>
+              Uterine leiomyosarcoma (uLMS) is an aggressive malignancy with high rates of
+              peritoneal recurrence and poor survival. Although surgery for recurrent uLMS has
+              shown encouraging results, addition of hyperthermic intraperitoneal chemotherapy
+              (HIPEC) is not well described. Stanford researchers are studying whether giving a
+              dose of heated chemotherapy in the abdomen immediately after surgery that removes
+              uterine leiomyosarcoma can help.
+            </p>
+            <div className="nulms-trials-grid">
+              <a
+                href="https://stanfordhealthcare.org/publications/981/981907.html"
+                className="nulms-trial-card"
+                {...ext}
+              >
+                <div className="nulms-trial-icon">
+                  <i className="fas fa-file-medical" aria-hidden />
+                </div>
+                <h4>Stanford Health Care Publication</h4>
+                <p>Abstract on surgery and HIPEC in recurrent uLMS</p>
+                <span className="nulms-trial-source">stanfordhealthcare.org</span>
+              </a>
+              <a
+                href="https://clinicaltrials.stanford.edu/trials/c/NCT04727242.html"
+                className="nulms-trial-card"
+                {...ext}
+              >
+                <div className="nulms-trial-icon">
+                  <i className="fas fa-clipboard-list" aria-hidden />
+                </div>
+                <h4>Clinical Trial NCT04727242</h4>
+                <p>
+                  Cytoreductive surgery &amp; HIPEC with gemcitabine + chemotherapy
+                </p>
+                <span className="nulms-trial-source">clinicaltrials.stanford.edu</span>
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* NGS Updates — Featured Video */}
         <section id="ngs-video" className="nulms-section">

@@ -51,6 +51,9 @@ export default function VolunteerPage() {
             <h3 className="vol-sidebar-title">Ways to Help</h3>
             <ul className="vol-nav-links">
               <li>
+                <a href="#leadership-through-action">Leadership Through Action</a>
+              </li>
+              <li>
                 <a href="#team-ambassador">Become an Ambassador</a>
               </li>
               <li>
@@ -93,6 +96,75 @@ export default function VolunteerPage() {
                 We are a caring, genuine group that only wants to do the best for patients and their
                 families. Together we make an impact for the better!
               </p>
+            </div>
+          </section>
+
+          <section id="leadership-through-action" className="vol-section">
+            <div className="vol-section-header purple">
+              <h2>Leadership Through Action</h2>
+            </div>
+            <div className="vol-section-body">
+              <div className="vol-image">
+                <Image
+                  src="/images/leadership-through-action/logo.jpg"
+                  alt="Leadership Through Action logo"
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="vol-text">
+                <h3>
+                  Honoring Our NLMSF Board of Directors and NLMSF Community Ambassadors!
+                </h3>
+                <p>
+                  Everyone can be a Volunteer Community Ambassador to help spread the word
+                  throughout the country! The Foundation can help support you in this!
+                </p>
+                <p>
+                  The National Leiomyosarcoma Foundation is proud to recognize our dedicated Board
+                  of Directors for their outstanding leadership, unwavering commitment, and
+                  compassionate service to the leiomyosarcoma community.
+                </p>
+                <p>
+                  This month, one of our Board members represented the voices of patients and
+                  families on Capitol Hill, advocating for policies that strengthen cancer research
+                  and improve the future of rare cancer care. Her advocacy did not end in Washington.
+                  Across the country, Board members also proudly displayed National Leiomyosarcoma
+                  Awareness Day yard signs in their communities on July 15.
+                </p>
+                <p>
+                  <strong>VERY GRATEFUL — THANK YOU SHARON GORRELL, CHRISTINA RACEVICH and BONNIE SHAW</strong>
+                </p>
+                <p>
+                  <a
+                    href="https://mailchi.mp/nlmsf.org/nlmsf-leadership-through-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="vol-action-button"
+                  >
+                    Read the full Leadership Through Action update
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="vol-spotlight" style={{ marginTop: "1.5rem" }}>
+              <div className="vol-spotlight-image">
+                <Image
+                  src="/images/community-ambassadors/joseph-jang-ironman.jpg"
+                  alt="Joseph Jang competing in the Ironman fundraiser for NLMSF"
+                  width={320}
+                  height={320}
+                />
+              </div>
+              <div className="vol-spotlight-text">
+                <h4>IRONMAN Ambassador: Joseph Jang</h4>
+                <p>
+                  College student competing in the IronMan competition in Boulder, Colorado and
+                  Sacramento, California on behalf of the LMS community.{" "}
+                  <a href="/ironman-fundraiser/">Support Joseph&apos;s Ironman fundraiser</a>.
+                </p>
+              </div>
             </div>
           </section>
 

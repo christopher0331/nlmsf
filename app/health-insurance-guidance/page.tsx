@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./health-insurance-guidance.css";
 
 export const metadata: Metadata = {
@@ -61,6 +62,11 @@ export default function HealthInsuranceGuidancePage() {
               <a href="#costs" className="sidebar-section-link">
                 <span className="sidebar-icon teal-icon">▸</span>
                 Cost Limits
+              </a>
+
+              <a href="#nord-webinar" className="sidebar-section-link">
+                <span className="sidebar-icon purple-icon">▸</span>
+                NORD Webinar
               </a>
 
               <a href="#financial-help" className="sidebar-section-link">
@@ -163,6 +169,53 @@ export default function HealthInsuranceGuidancePage() {
                     <h3 className="card-title">Cancer Insurance Coverage</h3>
                     <p className="card-text">Coverage options for cancer, heart attack & stroke, help to pay medical & non-medical expenses</p>
                   </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="nord-webinar" className="content-section purple-section">
+            <h2 className="section-title">NORD: Overcoming Insurance Barriers</h2>
+
+            <div className="section-content">
+              <div className="nord-webinar-box">
+                <p className="nord-webinar-org">
+                  The National Organization for Rare Diseases (NORD)
+                </p>
+                <p className="nord-webinar-presents">
+                  Presents the following webinar with experts on the topic of:
+                </p>
+                <div className="nord-webinar-card">
+                  <a
+                    href="https://www.youtube.com/watch?v=O6lU2wojryY"
+                    className="nord-webinar-media"
+                    {...ext}
+                  >
+                    <Image
+                      src="/images/insurance/nord-overcoming-insurance-barriers.jpg"
+                      alt="Overcoming Insurance Barriers Webinar — NORD"
+                      width={480}
+                      height={360}
+                      className="nord-webinar-thumb"
+                    />
+                    <span className="nord-webinar-play" aria-hidden>
+                      ▶
+                    </span>
+                  </a>
+                  <div className="nord-webinar-copy">
+                    <h3 className="nord-webinar-title">Overcoming Insurance Barriers Webinar</h3>
+                    <p className="nord-webinar-text">
+                      Navigating health insurance can be challenging, especially for people living
+                      with a rare disease and their caregivers.
+                    </p>
+                    <a
+                      href="https://www.youtube.com/watch?v=O6lU2wojryY"
+                      className="nord-webinar-link"
+                      {...ext}
+                    >
+                      Watch on YouTube
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

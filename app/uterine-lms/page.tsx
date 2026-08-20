@@ -493,6 +493,35 @@ export default function UterineLmsPage() {
         <section id="more" className="ulms-section">
           <h2 className="ulms-section-title indigo">More Research &amp; Videos</h2>
           <div className="ulms-more-grid">
+            <a
+              href="https://stanfordhealthcare.org/publications/981/981907.html"
+              className="ulms-more-card"
+              {...ext}
+            >
+              <i className="fas fa-book" aria-hidden />
+              <div>
+                <h4>Stanford Health Care: Cytoreductive Surgery &amp; HIPEC in Recurrent uLMS</h4>
+                <p>
+                  Abstract on uterine leiomyosarcoma — aggressive malignancy with high rates of
+                  peritoneal recurrence; surgery for recurrent uLMS has shown encouraging results,
+                  while addition of HIPEC is not well described.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://clinicaltrials.stanford.edu/trials/c/NCT04727242.html"
+              className="ulms-more-card"
+              {...ext}
+            >
+              <i className="fas fa-flask" aria-hidden />
+              <div>
+                <h4>Stanford Clinical Trial: Cytoreductive Surgery &amp; HIPEC (NCT04727242)</h4>
+                <p>
+                  Study evaluating heated intraperitoneal chemotherapy with gemcitabine plus
+                  chemotherapy immediately after surgery to remove uterine leiomyosarcoma.
+                </p>
+              </div>
+            </a>
             {/* VuMedi ASCO 2022 recording URL returned 404; NLMSF roundtable YouTube link below covers related content. */}
             <div className="ulms-more-card opacity-90 cursor-default" role="note">
               <i className="fas fa-play-circle" aria-hidden />

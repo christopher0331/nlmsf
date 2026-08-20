@@ -40,6 +40,14 @@ const STATIC_NEWS_TRACKER_ENTRIES: Array<{
   manualDate: string;
 }> = [
   {
+    id: "static-news-2026-08-08",
+    title: "NLMSF/Sarcoma Community Connection - August 8, 2026",
+    summary:
+      "Community Connection newsletter for August 8, 2026 — updates for the LMS / sarcoma community.",
+    url: "https://mailchi.mp/nlmsf.org/nlmsf-news-tracker-8z011ysyoc-6766953",
+    manualDate: "2026-08-08",
+  },
+  {
     id: "static-news-2026-07-25",
     title: "NLMSF/Sarcoma Community Connection - July 25, 2026",
     summary:

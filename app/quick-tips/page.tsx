@@ -51,6 +51,13 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "Treatment",
   },
   {
+    title: "HIPEC Procedure",
+    description:
+      "What patients should know about Hyperthermic Intraperitoneal Chemotherapy (HIPEC)—how it is used with surgery for LMS, why it is not standard for uLMS, and questions to ask your sarcoma team.",
+    pdfHref: "/documents/quick-tips/HIPEC Procedure.pdf",
+    category: "Treatment",
+  },
+  {
     title: "Uterine Imaging",
     description: "Imaging-focused quick tips for uterine leiomyosarcoma (uLMS).",
     pdfHref: "/documents/quick-tips/uterine-imaging.pdf",

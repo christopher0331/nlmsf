@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 
 type Slide = {
@@ -823,17 +822,22 @@ export default function PatientPerspectivesClient() {
               </div>
             </div>
 
-            <div className="cta-section">
+            <div className="cta-section" id="share-your-stories">
               <div className="cta-container">
-                <h3>Your Story Matters</h3>
+                <h3>Share Your Stories Here</h3>
                 <p>
-                  Sharing your experience can provide hope and guidance to others facing an LMS
-                  diagnosis. Your journey, challenges, and triumphs can make a significant
-                  difference in someone else's life.
+                  YOUR VOICES / YOUR STORIES MATTER TO US ALL – BECAUSE WE ADMIRE ALL THE COURAGE,
+                  RESILIENCE, STRENGTH WITHIN THIS COMMUNITY OF PATIENTS AND CAREGIVERS! Coming
+                  together to share stories is what brings us closer together.
                 </p>
-                <Link href="/contact" className="cta-button">
+                <a
+                  href="https://lms-story-share.replit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-button"
+                >
                   Share Your Story
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -895,11 +899,19 @@ export default function PatientPerspectivesClient() {
             </div>
 
             <div className="sidebar-cta">
-              <h4>Share Your Story</h4>
-              <p>Your experience can provide hope and guidance to others on their LMS journey.</p>
-              <Link href="/contact" className="cta-button">
-                Contact Us
-              </Link>
+              <h4>Share Your Stories</h4>
+              <p>
+                Your voices and stories matter — courage, resilience, and strength bring this
+                community closer together.
+              </p>
+              <a
+                href="https://lms-story-share.replit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-button"
+              >
+                Share Your Story
+              </a>
             </div>
           </aside>
         </div>

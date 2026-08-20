@@ -90,8 +90,8 @@ export default function PalliativeCareClient() {
             <Image
               src="/images/patient-quality-of-life-nlmsf-support-tips-logo.png"
               alt="Patient Quality of Life — NLMSF Support Tips logo"
-              width={200}
-              height={200}
+              width={280}
+              height={280}
               className="wp-hero-logo-img"
               priority
             />

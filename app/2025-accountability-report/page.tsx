@@ -31,7 +31,7 @@ export default function Report2025Page() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-5 py-2.5 font-semibold text-white no-underline transition hover:bg-teal-700"
           >
-            <i className="fas fa-download" aria-hidden /> Download PDF Summary
+            <i className="fas fa-download" aria-hidden /> Download PDF Report
           </a>
           <a
             href={YEAR_END_MESSAGE}

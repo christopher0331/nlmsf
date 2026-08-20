@@ -441,6 +441,153 @@ export default function ResearchFundingPage() {
             </div>
           </section>
 
+          <section className="year-section" id="year-2024">
+            <h3 className="year-title">2024</h3>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Marisa Nucci, M.D.</h4>
+                <p className="institution">
+                  Division Chief, Perinatal Pathology, Brigham and Women&apos;s Hospital; Professor
+                  of Pathology, Harvard Medical School, Boston, MA
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>
+                  Exploiting High-throughput Deep Learning to Improve Uterine Leiomyosarcoma
+                  Diagnostics - Deep ULMS
+                </h5>
+                <p>
+                  Establish an innovative platform utilizing advanced Artificial Intelligence
+                  techniques for the comprehensive characterization of uterine leiomyosarcoma. The
+                  research integrates genetic and histology markers to explore the relationship
+                  between genetic factors, histological features, and disease outcomes, with the
+                  goal of developing an AI model that enhances the prediction of recurrence for
+                  patients with uterine leiomyosarcoma.
+                </p>
+                <p className="grant-note">Awarded in 2024, with funding for 2025–2026</p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Frederic Amant, M.D., Ph.D.</h4>
+                <p className="institution">
+                  Professor of Gynecologic Oncology at the University of Leuven, Univ. Hospitals
+                  Leuven, Belgium
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>
+                  Exploiting the Immunomodulatory Effect of PI3K/mTOR Inhibitors to Improve
+                  Immunotherapy Response in Leiomyosarcoma
+                </h5>
+                <p>
+                  Enhancing the adaptive immune response in LMS tumors through PI3K/mTOR inhibition
+                  may render them more receptive to immune checkpoint blockade (ICB). This project
+                  explores the immune-modulatory impacts of PI3K/mTOR inhibitors on the tumor
+                  microenvironment (TME) and their capacity to overcome primary ICB resistance in
+                  LMS.
+                </p>
+                <p className="grant-note">Awarded in 2024, with funding for 2025–2026</p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Priya Chudasama, Ph.D.</h4>
+                <p className="institution">German Cancer Research Center, Heidelberg, Germany</p>
+              </div>
+              <div className="project-details">
+                <h5>
+                  Spatial heterogeneity and therapeutic implications of activated telomere
+                  maintenance mechanisms in leiomyosarcoma
+                </h5>
+                <p className="grant-note">
+                  Awarded in 2023, with funding for 2023–2024 · 1st year of a 2-year grant
+                </p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Joanna Przybyl, Ph.D.</h4>
+                <p className="institution">
+                  Department of Surgery, Division of Orthopedic Surgery, McGill University,
+                  Montreal, Quebec, Canada
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>
+                  Development of the multi-omic liquid biopsy assay for the pre-operative diagnosis
+                  of uterine leiomyosarcoma and benign leiomyoma
+                </h5>
+                <p className="grant-note">
+                  Awarded in 2023, with funding for 2023–2024 · 1st year of a 2-year grant
+                </p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>NLMSF Early Career Award 2024</h4>
+                <p className="institution">Dr. Jeff Ryts</p>
+              </div>
+              <div className="project-details">
+                <h5>Early Career Award — Research Roundtable travel stipend and mentorship</h5>
+                <p>
+                  This award, launched in 2024, supports fellows and post-doc specialists with a
+                  travel stipend to attend the Research Roundtable, contribute to a Workgroup of
+                  choice, present during the Roundtable, and receive mentorship from the Workgroup
+                  leader. Our 2024 awardee was Dr. Jeff Ryts.
+                </p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>SARC Catalyst Program</h4>
+                <p className="institution">
+                  Sarcoma Alliance for Research through Collaboration
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>Funding support for young researchers</h5>
+                <p>
+                  The NLMSF contributes financial support to the SARC Catalyst Program, which
+                  provides awardees support for small-scale sarcoma research projects as well as
+                  monthly expert coaching sessions.
+                </p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Strategic Advances in Sarcoma Science (SASS)</h4>
+                <p className="institution">Annual Conference</p>
+              </div>
+              <div className="project-details">
+                <h5>LMS SPORE research project</h5>
+                <p className="grant-note">2nd year of a 5-year grant</p>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="researcher-info">
+                <h4>Leiomyosarcoma SPORE</h4>
+                <p className="institution">
+                  University of Michigan — Specialized Program of Research Excellence
+                </p>
+              </div>
+              <div className="project-details">
+                <h5>Leiomyosarcoma SPORE Project</h5>
+                <p className="grant-note">
+                  5-Year Funding Commitment by the National LMS Foundation since 2020
+                </p>
+              </div>
+            </div>
+          </section>
+
           <section className="year-section" id="year-2023">
             <h3 className="year-title">2023</h3>
 

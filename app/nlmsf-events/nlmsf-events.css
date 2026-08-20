@@ -292,6 +292,27 @@
   transform: scale(1.05);
 }
 
+.nlmsf-events-page .ambassador-photo-gallery {
+  margin-top: 1.5rem;
+}
+
+.nlmsf-events-page .ambassador-photo-caption {
+  padding: 0.85rem 1rem;
+  text-align: center;
+  color: #771f6d;
+  font-size: 0.95rem;
+}
+
+.nlmsf-events-page .ambassador-photo-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nlmsf-events-page .ambassador-photo-link:hover .ambassador-photo-caption {
+  text-decoration: underline;
+}
+
 /* Research Roundtable Styles */
 .nlmsf-events-page .roundtable-intro {
   text-align: center;

@@ -395,6 +395,88 @@
   border-left: 4px solid #a78bfa;
 }
 
+.health-insurance-guidance-page .nord-webinar-box {
+  background: #faf5ff;
+  border: 1px solid #e9d5ff;
+  border-left: 4px solid #7c3aed;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.35rem;
+}
+
+.health-insurance-guidance-page .nord-webinar-org {
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+  color: #5b21b6;
+  font-size: 1.05rem;
+}
+
+.health-insurance-guidance-page .nord-webinar-presents {
+  margin: 0 0 1rem;
+  color: #4b5563;
+}
+
+.health-insurance-guidance-page .nord-webinar-card {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.health-insurance-guidance-page .nord-webinar-media {
+  position: relative;
+  display: block;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.health-insurance-guidance-page .nord-webinar-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.health-insurance-guidance-page .nord-webinar-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.28);
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.health-insurance-guidance-page .nord-webinar-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  color: #4c1d95;
+}
+
+.health-insurance-guidance-page .nord-webinar-text {
+  margin: 0 0 0.85rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.health-insurance-guidance-page .nord-webinar-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #6d28d9;
+  text-decoration: underline;
+}
+
+.health-insurance-guidance-page .nord-webinar-link:hover {
+  color: #5b21b6;
+}
+
+@media (max-width: 700px) {
+  .health-insurance-guidance-page .nord-webinar-card {
+    grid-template-columns: 1fr;
+  }
+}
+
 .health-insurance-guidance-page .note-text {
   color: #4b5563;
   font-style: italic;

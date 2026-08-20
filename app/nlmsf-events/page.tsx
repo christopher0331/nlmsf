@@ -46,6 +46,18 @@ export default function NlmsfEventsPage() {
               <h3 className="sidebar-title">Events Navigation</h3>
               <ul className="nav-links">
                 <li>
+                  <a href="#leadership-in-action" className="nav-link">
+                    <i className="fas fa-flag"></i>
+                    <span>Leadership in Action</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#community-ambassadors" className="nav-link">
+                    <i className="fas fa-hands-helping"></i>
+                    <span>Community Ambassadors</span>
+                  </a>
+                </li>
+                <li>
                   <a href="#get-involved" className="nav-link">
                     <i className="fas fa-heart"></i>
                     <span>Get Involved</span>
@@ -110,6 +122,121 @@ export default function NlmsfEventsPage() {
         </aside>
 
         <div className="events-content">
+          <div className="content-section" id="leadership-in-action">
+            <h2 className="section-title indigo">Leadership in Action</h2>
+            <div className="content-panel indigo">
+              <div className="panel-header">
+                <div className="icon-circle indigo">
+                  <i className="fas fa-flag"></i>
+                </div>
+                <div>
+                  <h3>NLMSF Board &amp; Community Ambassadors</h3>
+                  <p>Carrying your voice to Washington, DC and communities nationwide</p>
+                </div>
+              </div>
+              <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
+                <Image
+                  src="/images/leadership-through-action/logo.jpg"
+                  alt="Leadership Through Action — NLMSF"
+                  width={300}
+                  height={300}
+                  style={{ margin: "0 auto", borderRadius: "8px" }}
+                />
+              </div>
+              <p className="panel-text">
+                LEADERSHIP IN ACTION — Update on what your Support Team (the NLMSF Board and Community
+                Ambassadors) have been up to lately — carrying your voice to Washington DC throughout
+                communities nationwide. Next update will feature Joseph Jang — representing all of us
+                at the IRONMAN Competition in Boulder and in California!
+              </p>
+              <div className="panel-actions">
+                <a
+                  href="https://mailchi.mp/nlmsf.org/nlmsf-leadership-through-action"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="action-button secondary"
+                >
+                  <i className="fas fa-external-link-alt"></i>
+                  Read the Leadership Through Action update
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="content-section" id="community-ambassadors">
+            <h2 className="section-title purple">National Leiomyosarcoma Community Ambassadors</h2>
+            <div className="content-panel purple">
+              <div className="panel-header">
+                <div className="icon-circle purple">
+                  <i className="fas fa-hands-helping"></i>
+                </div>
+                <div>
+                  <h3>Standing Up for the LMS Patient Community</h3>
+                  <p>Making a Difference — One Passionate Person at a time!!!</p>
+                </div>
+              </div>
+              <p className="panel-text">
+                National Leiomyosarcoma Community Ambassadors – standing up for the LMS Patient
+                Community to strongly support LMS Research by hosting / organizing / executing
+                amazingly successful fundraisers this year.
+              </p>
+              <p className="panel-text">
+                We are funding research projects and initiatives that are truly game changers for the
+                future of research progress, clinical trial design, for the sake of advancing treatment
+                options and ultimately survivorship of this disease.
+              </p>
+              <p className="panel-text">
+                <strong>
+                  Let&apos;s salute more of our Community Ambassadors that inspire what is possible in
+                  building community awareness of LMS and the NLMSF!
+                </strong>
+              </p>
+              <p
+                className="panel-text"
+                style={{ marginTop: "1rem", color: "#771f6d", fontWeight: 700, textAlign: "center" }}
+              >
+                Making a Difference – One Passionate Person at a time!!!
+              </p>
+              <div className="image-gallery ambassador-photo-gallery">
+                <div className="gallery-item">
+                  <Image
+                    src="/images/community-ambassadors/truman-charities.jpg"
+                    alt="Truman Charities fundraiser event"
+                    width={1024}
+                    height={682}
+                  />
+                  <div className="ambassador-photo-caption">
+                    <strong>Truman Charities</strong>
+                  </div>
+                </div>
+                <div className="gallery-item">
+                  <Image
+                    src="/images/community-ambassadors/neal-jacobs-golf-tournament.jpg"
+                    alt="Neal Jacobs Golf Tournament group photo"
+                    width={1024}
+                    height={768}
+                  />
+                  <div className="ambassador-photo-caption">
+                    <strong>Neal Jacobs Golf Tournament</strong>
+                  </div>
+                </div>
+                <div className="gallery-item">
+                  <a href="/ironman-fundraiser/" className="ambassador-photo-link">
+                    <Image
+                      src="/images/community-ambassadors/joseph-jang-ironman.jpg"
+                      alt="Joseph Jang competing in the Ironman fundraiser"
+                      width={509}
+                      height={509}
+                    />
+                    <div className="ambassador-photo-caption">
+                      <strong>Joseph Jang – Ironman Competition</strong>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Research Roundtable Section */}
           <div className="content-section">
             <h2 className="section-title indigo">NLMSF International LMS Research Roundtable</h2>
