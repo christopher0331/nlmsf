@@ -360,6 +360,96 @@
   pointer-events: none;
 }
 
+/* Gift shop order forms (yard sign / wristbands → Annie via contact email) */
+.gift-shop-page .gift-order-form {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.gift-shop-page .gift-order-form-intro {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #4b5563;
+}
+
+.gift-shop-page .gift-order-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.gift-shop-page .gift-order-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.gift-shop-page .gift-order-field-full {
+  grid-column: 1 / -1;
+}
+
+.gift-shop-page .gift-order-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.gift-shop-page .gift-order-field input,
+.gift-shop-page .gift-order-field textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: #fff;
+}
+
+.gift-shop-page .gift-order-field input:focus,
+.gift-shop-page .gift-order-field textarea:focus {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 1px;
+  border-color: #7e22ce;
+}
+
+.gift-shop-page .gift-order-turnstile {
+  margin: 0.5rem 0 0.75rem;
+}
+
+.gift-shop-page .gift-order-submit {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.gift-shop-page .gift-order-submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.gift-shop-page .gift-order-status {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.gift-shop-page .gift-order-status.is-success {
+  color: #166534;
+}
+
+.gift-shop-page .gift-order-status.is-error {
+  color: #b91c1c;
+}
+
+@media (max-width: 640px) {
+  .gift-shop-page .gift-order-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Special products */
 .gift-shop-page .special-products-grid {
   display: grid;
@@ -781,12 +871,87 @@
   line-height: 1.55;
 }
 
-.gift-shop-page .bonfire-card-styles {
-  margin: 0.25rem 0 0;
-  padding-left: 1.1rem;
+.gift-shop-page .bonfire-picker-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: #6b7280;
-  font-size: 0.85rem;
-  line-height: 1.5;
+}
+
+.gift-shop-page .bonfire-picker-label span {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.gift-shop-page .bonfire-style-picker,
+.gift-shop-page .bonfire-color-picker {
+  margin-top: 0.35rem;
+}
+
+.gift-shop-page .bonfire-style-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.gift-shop-page .bonfire-style-chip {
+  appearance: none;
+  font-family: inherit;
+  background: #f4f1fb;
+  border: 1px solid #e5dcf5;
+  color: #4b5563;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.gift-shop-page .bonfire-style-chip:hover {
+  border-color: #7e22ce;
+  color: #6b21a8;
+}
+
+.gift-shop-page .bonfire-style-chip.is-active,
+.gift-shop-page .bonfire-style-chip.is-active:hover {
+  background: #7e22ce;
+  border-color: #7e22ce;
+  color: #fff;
+}
+
+.gift-shop-page .bonfire-color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.gift-shop-page .bonfire-swatch {
+  appearance: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 24, 39, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0;
+}
+
+.gift-shop-page .bonfire-swatch.is-active {
+  outline: 2px solid #7e22ce;
+  outline-offset: 2px;
+  border-color: #7e22ce;
+}
+
+.gift-shop-page .bonfire-color-name {
+  margin: 0.25rem 0 0;
+  font-size: 0.88rem;
+  color: #4b5563;
 }
 
 .gift-shop-page .bonfire-card-footer {

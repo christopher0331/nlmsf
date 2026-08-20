@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import {
-  BONFIRE_ORG_URL,
-  BONFIRE_STORE_URL,
-  bonfireProducts,
-} from "./bonfire-products";
+import BonfireProductGrid from "./BonfireProductGrid";
+import GiftShopOrderForm from "./GiftShopOrderForm";
+import { BONFIRE_ORG_URL, BONFIRE_STORE_URL } from "./bonfire-products";
 import "./gift-shop.css";
 
 export const metadata: Metadata = {
@@ -175,7 +173,7 @@ export default function GiftShopPage() {
               <div className="bonfire-intro">
                 <p>
                   Official National Leiomyosarcoma Foundation merchandise, professionally printed in the USA.
-                  Select a size and color on Bonfire to complete checkout. 20% of sales from Champions of Hope
+                  Select a color and style on each item to preview it, then checkout on Bonfire. 20% of sales from Champions of Hope
                   NLMSF merchandise in collaboration with Bonfire goes directly to LMS research.
                 </p>
                 <div className="bonfire-intro-actions">
@@ -187,54 +185,7 @@ export default function GiftShopPage() {
                   </a>
                 </div>
               </div>
-              <div className="bonfire-grid">
-                {bonfireProducts.map((product) => (
-                  <article key={product.id} className="bonfire-card">
-                    <a
-                      href={product.checkoutUrl}
-                      className="bonfire-card-media"
-                      {...ext}
-                      aria-label={`Checkout ${product.name} — ${product.productType} on Bonfire`}
-                    >
-                      <span className="bonfire-card-badge">Bonfire</span>
-                      <Image
-                        src={product.image}
-                        alt={product.alt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
-                        className="bonfire-card-img bonfire-card-img-front"
-                      />
-                      {product.imageBack ? (
-                        <Image
-                          src={product.imageBack}
-                          alt={`${product.alt} (back view)`}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
-                          className="bonfire-card-img bonfire-card-img-back"
-                        />
-                      ) : null}
-                    </a>
-                    <div className="bonfire-card-body">
-                      <p className="bonfire-card-type">{product.productType}</p>
-                      <h3>{product.name}</h3>
-                      <p className="bonfire-card-desc">{product.description}</p>
-                      <ul className="bonfire-card-styles">
-                        {product.styles.map((style) => (
-                          <li key={style}>{style}</li>
-                        ))}
-                      </ul>
-                      <div className="bonfire-card-footer">
-                        <p className="bonfire-card-price">
-                          <span>From</span> {product.priceFrom}
-                        </p>
-                        <a href={product.checkoutUrl} className="shop-button external-link" {...ext}>
-                          Checkout on Bonfire
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
+              <BonfireProductGrid />
             </div>
           </section>
 
@@ -261,23 +212,33 @@ export default function GiftShopPage() {
                       <p>July 15 Is National LeioMyoSarcoma Awareness Day. Help Us Spread Awareness To Your Neighborhood Friends And Family With Our Signature Purple Signs!</p>
                     </div>
                     <div className="product-price"><span>$24.00</span></div>
-                    <a href="#" className="shop-button">Add to Cart</a>
+                    <GiftShopOrderForm
+                      formId="order-yard-sign"
+                      itemName="NLMSF Support Yard Sign"
+                      itemPrice="$24.00"
+                    />
                   </div>
                 </div>
                 <div className="product-item">
                   <div className="product-image">
                     <Image
-                      src="https://media.nlmsf.org/wp-content/uploads/2022/04/Keyring.png"
-                      alt="LMS Wrist Bands"
+                      src="/images/gift-shop/lms-wristband-courage-hope-strength.png"
+                      alt="LMS wristband with Courage, Hope, Strength"
                       width={640}
                       height={360}
                     />
                   </div>
                   <div className="product-info">
                     <h3>LMS Wrist Bands</h3>
-                    <div className="product-description"><p>$5.00 each - donated to Research</p></div>
+                    <div className="product-description">
+                      <p>$5.00 each - donated to Research. Courage, Hope, Strength.</p>
+                    </div>
                     <div className="product-price"><span>$5.00</span></div>
-                    <a href="#" className="shop-button">Add to Cart</a>
+                    <GiftShopOrderForm
+                      formId="order-wrist-bands"
+                      itemName="LMS Wrist Bands"
+                      itemPrice="$5.00 each"
+                    />
                   </div>
                 </div>
               </div>

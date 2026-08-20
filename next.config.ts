@@ -269,6 +269,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "staging5.nlmsf.org",
       },
+      {
+        protocol: "https",
+        hostname: "dynamic.bonfireassets.com",
+      },
+      {
+        protocol: "https",
+        hostname: "c.bonfireassets.com",
+      },
     ],
   },
   webpack: (config) => {
