@@ -7,6 +7,7 @@ const EXCLUDED_STATIC_ROUTES = new Set([
   // These routes intentionally redirect and should not be in sitemap.xml
   "/caregiver-traits",
   "/social-security-coverage-guidance",
+  "/gift-shop-nlmsf",
 ]);
 
 function discoverAppRoutes(): string[] {

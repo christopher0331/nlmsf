@@ -52,6 +52,7 @@ const nextConfig: NextConfig = {
       { source: "/financial-statements", destination: "/accountability-reports", permanent: true },
       { source: "/financial-assistance", destination: "/financial-assistance-2", permanent: true },
       { source: "/funded-projects", destination: "/research-funding-2", permanent: true },
+      { source: "/gift-shop-nlmsf", destination: "/gift-shop", permanent: true },
       { source: "/gift-shop-old", destination: "/gift-shop", permanent: true },
       { source: "/history", destination: "/mission", permanent: true },
       { source: "/insurance-2", destination: "/health-insurance-deep-dive", permanent: true },
