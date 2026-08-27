@@ -487,6 +487,14 @@ export default function NlmsfEventsPage() {
             <div className="image-gallery">
               <div className="gallery-item">
                 <Image
+                  src="/images/nlmsf-events/community-outdoor-dinner-event.png"
+                  alt="NLMSF community outdoor dinner and fundraising gathering"
+                  width={600}
+                  height={396}
+                />
+              </div>
+              <div className="gallery-item">
+                <Image
                   src="https://media.nlmsf.org/wp-content/uploads/2023/03/Beau-Arts-Ball-Flyer.png"
                   alt="Beaux Arts Ball Event"
                   width={640}

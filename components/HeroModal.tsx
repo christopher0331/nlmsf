@@ -1,6 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, type ReactNode } from "react";
+import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
+import {
+  NEWSLETTER_SOURCE_MERGE_TAG,
+  NEWSLETTER_SOURCE_OPTIONS,
+} from "@/lib/newsletter-source";
 
 type HeroModalProps = {
   open: boolean;
@@ -111,6 +115,32 @@ export function HeroSubscribeModalContent({
 }: {
   mailchimpAction: string;
 }) {
+  const [source, setSource] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const email = new FormData(form).get("EMAIL");
+    const emailStr = typeof email === "string" ? email.trim() : "";
+    if (!emailStr) return;
+
+    try {
+      await fetch("/api/newsletter-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: emailStr,
+          source,
+          page: typeof window !== "undefined" ? window.location.pathname : "/",
+        }),
+      });
+    } catch {
+      // Attribution is best-effort; Mailchimp subscribe still proceeds.
+    }
+
+    form.submit();
+  }
+
   return (
     <form
       action={mailchimpAction}
@@ -120,6 +150,7 @@ export function HeroSubscribeModalContent({
       className="validate"
       target="_blank"
       noValidate
+      onSubmit={handleSubmit}
     >
       <div id="mc_embed_signup_scroll">
         <p className="m-0 mb-4 text-sm text-gray-600 leading-relaxed">
@@ -141,6 +172,25 @@ export function HeroSubscribeModalContent({
             required
             defaultValue=""
           />
+        </div>
+        <div className="mb-5">
+          <label htmlFor="mce-SOURCE" className="block text-sm font-semibold text-gray-800 mb-1.5">
+            How did you hear about us?
+          </label>
+          <select
+            id="mce-SOURCE"
+            name={NEWSLETTER_SOURCE_MERGE_TAG}
+            value={source}
+            onChange={(e) => setSource(e.target.value)}
+            className={inputClass}
+            aria-label="How did you hear about us?"
+          >
+            {NEWSLETTER_SOURCE_OPTIONS.map((opt) => (
+              <option key={opt.value || "empty"} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
         </div>
         <div id="mce-responses" className="clear">
           <div className="response" id="mce-error-response" style={{ display: "none" }} />

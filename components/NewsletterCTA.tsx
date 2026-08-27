@@ -1,6 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import {
+  NEWSLETTER_SOURCE_MERGE_TAG,
+  NEWSLETTER_SOURCE_OPTIONS,
+} from "@/lib/newsletter-source";
 
 const MAILCHIMP_ACTION =
   "https://nlmsf.us13.list-manage.com/subscribe/post?u=7882c1010a69171493a3bed4b&id=7958b212a8&f_id=00a19fedf0";
@@ -8,17 +12,36 @@ const MAILCHIMP_ACTION =
 const PATTERN_BG =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='10' cy='10' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='40' cy='40' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='70' cy='70' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='90' cy='20' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3Ccircle cx='20' cy='80' r='5' fill='rgba(255, 255, 255, 0.1)'/%3E%3C/svg%3E\") repeat";
 
+async function reportSignupAttribution(email: string, source: string) {
+  try {
+    await fetch("/api/newsletter-signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email,
+        source,
+        page: typeof window !== "undefined" ? window.location.pathname : "/",
+      }),
+    });
+  } catch {
+    // Attribution is best-effort; Mailchimp subscribe still proceeds.
+  }
+}
+
 export default function NewsletterCTA() {
   const [email, setEmail] = useState("");
+  const [source, setSource] = useState("");
   const [successOpen, setSuccessOpen] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
+    await reportSignupAttribution(email.trim(), source);
     formRef.current?.submit();
     setSuccessOpen(true);
     setEmail("");
+    setSource("");
   }
 
   function closeModal() {
@@ -78,6 +101,23 @@ export default function NewsletterCTA() {
             required
             aria-label="Email address"
           />
+          <label htmlFor="newsletter-source" className="sr-only">
+            How did you hear about us?
+          </label>
+          <select
+            id="newsletter-source"
+            name={NEWSLETTER_SOURCE_MERGE_TAG}
+            value={source}
+            onChange={(e) => setSource(e.target.value)}
+            className="w-[280px] py-3 px-4 text-base border border-white/50 rounded-md bg-white/85 text-[#2b2b2b] outline-none transition-[border-color,box-shadow] duration-200 focus:border-white focus:shadow-[0_0_5px_rgba(43,130,234,0.5)] md:w-full md:max-w-[320px] md:box-border"
+            aria-label="How did you hear about us?"
+          >
+            {NEWSLETTER_SOURCE_OPTIONS.map((opt) => (
+              <option key={opt.value || "empty"} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
           <div aria-hidden="true" style={{ position: "absolute", left: -5000 }}>
             <input
               type="text"

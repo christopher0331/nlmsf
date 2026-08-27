@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./treatment-options.css";
 
 export const metadata: Metadata = {
@@ -224,6 +225,29 @@ export default function TreatmentOptionsPage() {
           </section>
 
           <section id="medical-team" className="to-section">
+            <div className="to-nci-resource">
+              <a
+                href="https://www.cancer.gov/types/soft-tissue-sarcoma/patient/adult-soft-tissue-treatment-pdq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="to-nci-resource-link"
+              >
+                <Image
+                  src="/images/treatment-options/nih-nci-logo.png"
+                  alt="National Institutes of Health / National Cancer Institute"
+                  width={480}
+                  height={120}
+                  className="to-nci-logo"
+                />
+                <p className="to-nci-resource-text">
+                  National Institutes of Health / National Cancer Institute — Information on Sarcoma
+                  Diagnosis and Treatment:{" "}
+                  <span className="to-nci-resource-emphasis">
+                    Soft Tissue Sarcoma Treatment – NCI
+                  </span>
+                </p>
+              </a>
+            </div>
             <div className="to-section-header teal">
               <h2>The Multidisciplinary Care Team</h2>
             </div>
