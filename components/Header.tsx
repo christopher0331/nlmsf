@@ -467,6 +467,14 @@ export default function Header() {
                                 Quick Tips for Newly Diagnosed
                               </Link>
                             </li>
+                            <li>
+                              <Link
+                                href="/navigating-support#buddy-program"
+                                className={DROPDOWN_LINK}
+                              >
+                                LMS LifeLine Buddy Program
+                              </Link>
+                            </li>
                           </ul>
                         </div>
                         <div className={CATEGORY_COLUMN}>
@@ -1283,6 +1291,15 @@ export default function Header() {
                       onClick={() => setMobileNavOpen(false)}
                     >
                       Quick Tips for Newly Diagnosed
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/navigating-support#buddy-program"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      LMS LifeLine Buddy Program
                     </Link>
                   </li>
                 </ul>
