@@ -259,6 +259,40 @@
   border-radius: 50%;
 }
 
+.navigating-support-page .buddy-program-overview {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem 1.35rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+}
+
+.navigating-support-page .buddy-program-overview h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.navigating-support-page .buddy-program-overview .panel-text {
+  margin-bottom: 0.85rem;
+}
+
+.navigating-support-page .buddy-program-features {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.navigating-support-page .buddy-program-features li {
+  margin-bottom: 0.65rem;
+}
+
+.navigating-support-page .buddy-program-features li:last-child {
+  margin-bottom: 0;
+}
+
 .navigating-support-page .contact-info {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;

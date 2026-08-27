@@ -264,10 +264,36 @@ export default function NavigatingSupportPage() {
               </div>
 
               <p className="panel-text">
-                The NLMSF Lifeline Buddy Program connects LMS patients with trained peer supporters who have personal experience
-                with LMS. These buddies provide emotional support, share experiences, and help navigate the challenges of an LMS
-                diagnosis.
+                The National Leiomyosarcoma Foundation&apos;s Buddy Program provides one-on-one support for
+                patients and caregivers affected by leiomyosarcoma, pairing them with others who are at a
+                similar stage in their journey. This initiative aims to foster courage, strength, and
+                resilience through shared experiences.
               </p>
+
+              <div className="buddy-program-overview">
+                <h4>Overview of the Buddy Program</h4>
+                <p className="panel-text">
+                  The Buddy Program offers valuable support for those affected by leiomyosarcoma.
+                </p>
+                <ul className="buddy-program-features">
+                  <li>
+                    <strong>Support System</strong> — Participants are matched with a buddy who shares
+                    similar experiences, providing emotional and practical support.
+                  </li>
+                  <li>
+                    <strong>Community Connection</strong> — The program helps individuals connect with
+                    others facing similar challenges, reducing feelings of isolation.
+                  </li>
+                  <li>
+                    <strong>Resource Sharing</strong> — Buddies can exchange information about treatments,
+                    coping strategies, and resources available for leiomyosarcoma.
+                  </li>
+                  <li>
+                    <strong>Volunteer Opportunities</strong> — Individuals interested in becoming a buddy
+                    can reach out to the foundation for participation.
+                  </li>
+                </ul>
+              </div>
 
               <div className="text-center">
                 <p>To learn more about the Buddy Program or to be connected with a buddy, contact the Foundation at:</p>
