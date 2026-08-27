@@ -101,8 +101,8 @@ export default function NlmsfProgramsPage() {
             <div className="program-card-image">
               <a href="https://nlmsf.org/navigating-support/#buddy-program" {...ext}>
                 <Image
-                  src="https://media.nlmsf.org/wp-content/uploads/2020/07/3-buddy.jpg"
-                  alt=""
+                  src="/images/buddy-program/lms-lifeline-buddy-program-logo.png"
+                  alt="LMS LifeLine Buddy Program — patient matched one-on-one support"
                   width={564}
                   height={564}
                   loading="lazy"

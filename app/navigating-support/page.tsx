@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./navigating-support.css";
 
 export const metadata: Metadata = {
@@ -250,6 +251,16 @@ export default function NavigatingSupportPage() {
                   <h3>Peer Support Network</h3>
                   <p>Connect with others who understand your journey</p>
                 </div>
+              </div>
+
+              <div className="buddy-program-logo">
+                <Image
+                  src="/images/buddy-program/lms-lifeline-buddy-program-logo.png"
+                  alt="LMS LifeLine Buddy Program — patient matched one-on-one support"
+                  width={480}
+                  height={480}
+                  priority={false}
+                />
               </div>
 
               <p className="panel-text">
