@@ -6,12 +6,12 @@ const reports = [
     badge: "Latest Report",
     title: "2025 Accountability Report",
     description:
-      "What we accomplished for the LMS community in 2025 — Circle of Hope, research funding, awards, Snapshot News, and new collaborations.",
+      "Full 2025 report to the LMS-sarcoma community — research awardees, Berlin Roundtable, Count Me In evaluation, and moving forward in 2026.",
     highlights: [
-      "Circle of Hope",
-      "LMS Research Funding",
-      "Early Career Awards",
-      "Snapshot News",
+      "Berlin Research Roundtable",
+      "Canter NK-cell award",
+      "Count Me In evaluation",
+      "Sharing Voices forums",
     ],
     href: "/2025-accountability-report",
   },
