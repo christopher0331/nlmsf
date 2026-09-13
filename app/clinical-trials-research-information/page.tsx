@@ -504,9 +504,14 @@ export default function ClinicalTrialsResearchInformationPage() {
                   <p className="text-gray-600 text-sm m-0 mb-3">
                     Learn about the informed consent process for clinical trials and what you need to know before participating.
                   </p>
-                  <a href="https://www.linkedin.com/pulse/informed-consent-form-clinical-trials-eub8c/" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
-                    Read Guide <i className="fas fa-external-link-alt text-xs" aria-hidden />
-                  </a>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                    <a href="https://www.linkedin.com/pulse/informed-consent-form-clinical-trials-eub8c/" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
+                      Read Guide <i className="fas fa-external-link-alt text-xs" aria-hidden />
+                    </a>
+                    <a href="https://youtu.be/Slt6k7ICBWk" className="inline-flex items-center gap-1 text-violet-600 font-medium text-sm no-underline hover:underline" {...ext}>
+                      Watch Recording <i className="fas fa-play-circle text-xs" aria-hidden />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

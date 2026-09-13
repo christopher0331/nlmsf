@@ -21,6 +21,15 @@ type VideoItem = {
 
 const clinicalTrialsVideos: VideoItem[] = [
   {
+    id: "Slt6k7ICBWk",
+    title: "Informed Consent - What You Need to Know About It",
+    presenter: "Dr. Dale Shepard, Cleveland Clinic",
+    date: "August 31, 2026",
+    description:
+      "Dr. Dale Shepard of the Cleveland Clinic discusses informed consent for patients and caregivers.",
+    url: "https://youtu.be/Slt6k7ICBWk",
+  },
+  {
     id: "jVMw7irewYI",
     title: "General discussion about clinical trials and Peposertib (M3814) Trial",
     presenter: "Dr. Candace Haddox, Dana-Farber Cancer Institute and Harvard Medical School",
