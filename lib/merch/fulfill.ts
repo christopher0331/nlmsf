@@ -1,4 +1,4 @@
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { getColor, getMedium, type MerchMediumId } from "@/lib/merch/catalog";
 import { designImagePath } from "@/lib/merch/dto";
 import {
@@ -28,7 +28,7 @@ function siteOrigin(fallback?: string): string {
 }
 
 export async function fulfillMerchOrder(orderId: string, origin?: string) {
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const order = await prisma.merchOrder.findUnique({ where: { id: orderId } });
   if (!order) throw new Error("Order not found");
   if (order.status !== "paid" && order.status !== "print_failed") {

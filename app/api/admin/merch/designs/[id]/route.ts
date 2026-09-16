@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isAuthenticated } from "@/lib/auth";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { toDesignDto } from "@/lib/merch/dto";
 
 export async function PATCH(
@@ -19,7 +19,7 @@ export async function PATCH(
     data.status = body.status;
   }
 
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const design = await prisma.merchDesign.update({ where: { id }, data });
   return NextResponse.json(toDesignDto(design));
 }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isAuthenticated } from "@/lib/auth";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import {
   colorsForMedium,
   getMedium,
@@ -10,7 +10,7 @@ import { slugify } from "@/lib/merch/slug";
 import { toListingDto } from "@/lib/merch/dto";
 
 async function uniqueSlug(base: string) {
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   let slug = slugify(base);
   let i = 2;
   while (await prisma.merchListing.findUnique({ where: { slug } })) {
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Pick a design and at least one merch type." }, { status: 400 });
   }
 
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const design = await prisma.merchDesign.findUnique({ where: { id: designId } });
   if (!design) return NextResponse.json({ error: "Design not found." }, { status: 404 });
   if (design.status !== "approved") {

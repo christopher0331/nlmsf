@@ -85,14 +85,28 @@ export default function MerchStudioClient() {
   const [uploadTitle, setUploadTitle] = useState("");
 
   const load = useCallback(async () => {
-    const res = await fetch("/api/admin/merch");
-    if (res.status === 401) {
-      window.location.href = "/admin?next=/admin/merch";
-      return;
+    try {
+      const res = await fetch("/api/admin/merch/");
+      if (res.status === 401) {
+        window.location.href = "/admin?next=/admin/merch";
+        return;
+      }
+      const text = await res.text();
+      let json: StudioData & { error?: string };
+      try {
+        json = JSON.parse(text) as StudioData & { error?: string };
+      } catch {
+        throw new Error("Merch studio could not load (the database is missing merch tables).");
+      }
+      if (!res.ok) {
+        throw new Error(json.error || "Failed to load merch studio");
+      }
+      setData(json);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to load merch studio");
+    } finally {
+      setLoading(false);
     }
-    const json = (await res.json()) as StudioData;
-    setData(json);
-    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -209,8 +223,28 @@ export default function MerchStudioClient() {
     setSelectedId(json.id);
   }
 
-  if (loading || !data) {
+  if (loading) {
     return <div className="py-16 text-center text-gray-500">Loading merch studio…</div>;
+  }
+
+  if (!data) {
+    return (
+      <div className="mx-auto max-w-[720px] px-6 py-16 text-center">
+        <h1 className="text-2xl font-bold text-gray-800">Merch Studio</h1>
+        <p className="mt-4 text-red-700">{error || "Merch studio could not load."}</p>
+        <button
+          type="button"
+          className="mt-4 rounded-lg bg-violet-700 px-4 py-2 font-semibold text-white"
+          onClick={() => {
+            setLoading(true);
+            setError("");
+            void load();
+          }}
+        >
+          Try again
+        </button>
+      </div>
+    );
   }
 
   const pending = data.designs.filter((d) => d.status === "pending");

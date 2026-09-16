@@ -1,5 +1,5 @@
 import Stripe from "stripe";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { fulfillMerchOrder } from "@/lib/merch/fulfill";
 
 export function shippingFromSession(session: Stripe.Checkout.Session) {
@@ -25,7 +25,7 @@ export async function handlePaidMerchSession(session: Stripe.Checkout.Session) {
   const orderId = session.metadata?.orderId;
   if (!orderId) return;
 
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const order = await prisma.merchOrder.findUnique({ where: { id: orderId } });
   if (!order) return;
 

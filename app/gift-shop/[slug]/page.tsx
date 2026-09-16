@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { toListingDto } from "@/lib/merch/dto";
 import { colorsForMedium, getMedium, parseColorIds, type MerchMediumId } from "@/lib/merch/catalog";
 import ProductBuyBox from "./ProductBuyBox";
@@ -10,7 +10,7 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const listing = await prisma.merchListing.findUnique({ where: { slug } });
   if (!listing || !listing.published) {
     return { title: "Gift Shop | NLMSF" };
@@ -24,10 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function MerchProductPage({ params }: Props) {
   const { slug } = await params;
   if (slug === "cart" || slug === "order-confirmation") notFound();
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const listing = await prisma.merchListing.findUnique({
     where: { slug },
-    include: { design: true },
+    include: { design: { select: { id: true, title: true } } },
   });
   if (!listing || !listing.published) notFound();
   const mediumId = listing.mediumId as MerchMediumId;

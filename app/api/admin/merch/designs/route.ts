@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isAuthenticated } from "@/lib/auth";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { artworkFromUpload } from "@/lib/merch/generate";
 import { toDesignDto } from "@/lib/merch/dto";
 
@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Could not read the uploaded image." }, { status: 400 });
   }
 
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const design = await prisma.merchDesign.create({
     data: {
       title,

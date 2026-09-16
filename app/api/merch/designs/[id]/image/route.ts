@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 
 export async function GET(
   _req: Request,
   context: { params: Promise<{ id: string }> },
 ) {
   const { id } = await context.params;
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const design = await prisma.merchDesign.findUnique({
     where: { id },
     select: { imageData: true, imageMime: true, status: true, listings: { select: { published: true } } },

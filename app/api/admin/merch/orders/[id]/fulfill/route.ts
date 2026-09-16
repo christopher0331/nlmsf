@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { isAuthenticated } from "@/lib/auth";
 import { fulfillMerchOrder } from "@/lib/merch/fulfill";
 import { toOrderDto } from "@/lib/merch/dto";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 
 export async function POST(
   _req: Request,
@@ -11,7 +11,7 @@ export async function POST(
   const ok = await isAuthenticated();
   if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const { id } = await context.params;
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const order = await prisma.merchOrder.findUnique({ where: { id } });
   if (!order) return NextResponse.json({ error: "Order not found" }, { status: 404 });
   if (order.status === "pending") {

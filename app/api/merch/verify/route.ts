@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { getStripe } from "@/lib/stripe";
 import { fulfillMerchOrder } from "@/lib/merch/fulfill";
 import { shippingFromSession } from "@/lib/merch/stripe-webhook";
@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Missing session" }, { status: 400 });
   }
 
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const order = sessionId
     ? await prisma.merchOrder.findUnique({ where: { stripeSessionId: sessionId } })
     : await prisma.merchOrder.findUnique({ where: { id: orderId! } });

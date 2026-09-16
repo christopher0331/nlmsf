@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import {
   STANDARD_SHIPPING_CENTS,
   colorsForMedium,
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Your cart is empty." }, { status: 400 });
     }
 
-    const prisma = await getPrisma();
+    const prisma = await getMerchPrisma();
     const listingIds = [...new Set(items.map((item) => item.listingId))];
     const listings = await prisma.merchListing.findMany({
       where: { id: { in: listingIds }, published: true },

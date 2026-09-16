@@ -5,7 +5,17 @@ export function designImagePath(id: string): string {
   return `/api/merch/designs/${id}/image`;
 }
 
-export function toDesignDto(design: MerchDesign) {
+export function toDesignDto(design: {
+  id: string;
+  title: string;
+  prompt: string;
+  themeId: string;
+  source: string;
+  status: string;
+  reviewNote: string | null;
+  createdAt: Date | string;
+}) {
+  const createdAt = design.createdAt instanceof Date ? design.createdAt.toISOString() : String(design.createdAt);
   return {
     id: design.id,
     title: design.title,
@@ -15,7 +25,7 @@ export function toDesignDto(design: MerchDesign) {
     status: design.status,
     reviewNote: design.reviewNote,
     imageUrl: designImagePath(design.id),
-    createdAt: design.createdAt.toISOString(),
+    createdAt,
   };
 }
 
@@ -35,7 +45,7 @@ export function toListingDto(listing: MerchListing & { design?: MerchDesign }) {
     published: listing.published,
     imageUrl: designImagePath(listing.designId),
     designTitle: listing.design?.title,
-    createdAt: listing.createdAt.toISOString(),
+    createdAt: listing.createdAt instanceof Date ? listing.createdAt.toISOString() : String(listing.createdAt),
   };
 }
 
@@ -67,6 +77,6 @@ export function toOrderDto(order: MerchOrder) {
     printifyStatus: order.printifyStatus,
     fulfillError: order.fulfillError,
     shipping,
-    createdAt: order.createdAt.toISOString(),
+    createdAt: order.createdAt instanceof Date ? order.createdAt.toISOString() : String(order.createdAt),
   };
 }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isAuthenticated } from "@/lib/auth";
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { toListingDto } from "@/lib/merch/dto";
 
 export async function PATCH(
@@ -14,7 +14,7 @@ export async function PATCH(
   const data: { published?: boolean; title?: string } = {};
   if (typeof body?.published === "boolean") data.published = body.published;
   if (typeof body?.title === "string" && body.title.trim()) data.title = body.title.trim();
-  const prisma = await getPrisma();
+  const prisma = await getMerchPrisma();
   const listing = await prisma.merchListing.update({
     where: { id },
     data,

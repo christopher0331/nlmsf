@@ -1,11 +1,11 @@
-import { getPrisma } from "@/lib/prisma";
+import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { toListingDto } from "@/lib/merch/dto";
 import { colorsForMedium, getMedium, parseColorIds, type MerchMediumId } from "@/lib/merch/catalog";
 import CustomMerchGrid from "./CustomMerchGrid";
 
 export default async function CustomMerchSection() {
   try {
-    const prisma = await getPrisma();
+    const prisma = await getMerchPrisma();
     const listings = await prisma.merchListing.findMany({
       where: { published: true },
       include: { design: true },
