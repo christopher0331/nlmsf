@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import BonfireProductGrid from "./BonfireProductGrid";
 import GiftShopOrderForm from "./GiftShopOrderForm";
+import CustomMerchSection from "./CustomMerchSection";
 import { BONFIRE_ORG_URL, BONFIRE_STORE_URL } from "./bonfire-products";
 import "./gift-shop.css";
 
@@ -30,8 +31,8 @@ export default function GiftShopPage() {
           </div>
           <h1 className="sr-only">NLMSF Gift Shop</h1>
           <div className="hero-actions">
-            <a href="#bonfire-shop" className="cta-button">Shop Apparel</a>
-            <a href="#shop-section" className="cta-button cta-secondary">Browse the Shop</a>
+            <a href="#custom-merch" className="cta-button">Shop Custom Collection</a>
+            <a href="#bonfire-shop" className="cta-button cta-secondary">Shop Apparel</a>
           </div>
         </div>
       </section>
@@ -55,6 +56,12 @@ export default function GiftShopPage() {
                 <a href="#featured-book" className="nav-link">
                   <span className="nav-icon featured" aria-hidden />
                   <span>Goodnight, Mama</span>
+                </a>
+              </li>
+              <li>
+                <a href="#custom-merch" className="nav-link">
+                  <span className="nav-icon products" aria-hidden />
+                  <span>Custom Collection</span>
                 </a>
               </li>
               <li>
@@ -146,6 +153,20 @@ export default function GiftShopPage() {
                   height={360}
                 />
               </div>
+            </div>
+          </section>
+
+          <section id="custom-merch" className="content-section">
+            <div className="section-header">
+              <h2>Custom NLMSF Collection</h2>
+              <p>Staff-approved designs on hats, hoodies, and short or long sleeve shirts — checkout on NLMSF.org</p>
+            </div>
+            <div className="content-panel">
+              <p className="custom-merch-intro">
+                Unique branded merch created in our studio, then printed and shipped by Printify. You buy from the
+                Foundation; after printing and shipping costs, proceeds support LMS research.
+              </p>
+              <CustomMerchSection />
             </div>
           </section>
 

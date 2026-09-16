@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { AdminTabs } from "@/components/AdminTabs";
 
 type Video = {
   id: string;
@@ -156,23 +157,7 @@ export default function AdminEducationVideosClient() {
         </button>
       </header>
 
-      <div className="flex gap-0 mb-6 border-b-2 border-gray-200">
-        <Link
-          href="/admin/events"
-          className="py-3 px-5 font-semibold text-sm text-gray-500 border-b-2 border-transparent -mb-0.5 no-underline hover:text-gray-700"
-        >
-          Events
-        </Link>
-        <div className="py-3 px-5 font-semibold text-sm text-violet-700 border-b-2 border-b-violet-700 -mb-0.5">
-          Education Videos
-        </div>
-        <Link
-          href="/admin/tributes"
-          className="py-3 px-5 font-semibold text-sm text-gray-500 border-b-2 border-transparent -mb-0.5 no-underline hover:text-gray-700"
-        >
-          Tributes
-        </Link>
-      </div>
+      <AdminTabs active="videos" />
 
       <section className="bg-white rounded-xl border border-gray-200 p-6 shadow-[0_2px_6px_rgba(0,0,0,0.04)] mb-8">
         <h2 className="text-xl font-bold text-violet-700 m-0 mb-4 flex items-center gap-2">Add New Video</h2>

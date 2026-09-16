@@ -110,3 +110,55 @@ model FundraiserOrder {
   stripePaymentIntent   String?
   createdAt             DateTime @default(now())
 }
+
+// Staff-approved merch artwork (AI or studio brand art)
+model MerchDesign {
+  id         String   @id @default(cuid())
+  title      String
+  prompt     String
+  themeId    String
+  imageMime  String   @default("image/png")
+  imageData  Bytes
+  source     String   // gemini | studio | upload
+  status     String   @default("pending") // pending | approved | rejected
+  reviewNote String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  listings   MerchListing[]
+}
+
+// One shop listing = one approved design applied to one merch medium
+model MerchListing {
+  id          String      @id @default(cuid())
+  designId    String
+  design      MerchDesign @relation(fields: [designId], references: [id], onDelete: Cascade)
+  mediumId    String      // short_tee | long_tee | hoodie | hat
+  slug        String      @unique
+  title       String
+  description String
+  priceCents  Int
+  colorsJson  String      // JSON string[] of color ids
+  published   Boolean     @default(false)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model MerchOrder {
+  id                  String   @id @default(cuid())
+  email               String
+  name                String
+  phone               String?
+  status              String   @default("pending") // pending | paid | submitted_to_print | print_failed | canceled
+  itemsJson           String
+  amountCents         Int
+  shippingCents       Int      @default(0)
+  totalCents          Int
+  stripeSessionId     String?  @unique
+  stripePaymentIntent String?
+  shippingJson        String?
+  printifyOrderId     String?
+  printifyStatus      String?
+  fulfillError        String?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { AdminTabs } from "@/components/AdminTabs";
 
 const ACCEPTED_IMAGE_MIME = "image/jpeg,image/png,image/webp,image/gif";
 
@@ -395,23 +396,7 @@ export default function AdminTributesClient() {
         </button>
       </header>
 
-      <div className="mb-6 flex gap-0 border-b-2 border-gray-200">
-        <Link
-          href="/admin/events"
-          className="-mb-0.5 border-b-2 border-transparent py-3 px-5 text-sm font-semibold text-gray-500 no-underline hover:text-gray-700"
-        >
-          Events
-        </Link>
-        <Link
-          href="/admin/education-videos"
-          className="-mb-0.5 border-b-2 border-transparent py-3 px-5 text-sm font-semibold text-gray-500 no-underline hover:text-gray-700"
-        >
-          Education Videos
-        </Link>
-        <div className="-mb-0.5 border-b-2 border-[#7e22ce] py-3 px-5 text-sm font-semibold text-[#7e22ce]">
-          Tributes
-        </div>
-      </div>
+      <AdminTabs active="tributes" />
 
       <section className="mb-8 rounded-xl border border-[#7e22ce]/10 bg-white p-6 shadow-[0_2px_6px_rgba(0,0,0,0.04)]">
         <h2 className="m-0 mb-4 flex items-center gap-2 text-xl font-bold text-[#7e22ce]">

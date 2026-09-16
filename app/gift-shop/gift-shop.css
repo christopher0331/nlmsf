@@ -1167,3 +1167,201 @@
     max-height: 360px;
   }
 }
+
+.gift-shop-page .custom-merch-intro {
+  margin: 0 0 1.5rem;
+  color: #4b5563;
+}
+
+.gift-shop-page .custom-merch-empty {
+  padding: 1rem 0 0.5rem;
+  color: #4b5563;
+}
+
+.gift-shop-page .custom-merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gift-shop-page .custom-merch-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(126, 34, 206, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.gift-shop-page .custom-merch-media {
+  display: block;
+  background: #f3f4f6;
+}
+
+.gift-shop-page .custom-merch-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.1rem 1.15rem 1.25rem;
+  flex: 1;
+}
+
+.gift-shop-page .custom-merch-type,
+.gift-shop-page .custom-product-info .custom-merch-type {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.gift-shop-page .custom-merch-body h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.gift-shop-page .custom-merch-desc,
+.gift-shop-page .custom-product-note {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #4b5563;
+}
+
+.gift-shop-page .custom-merch-size {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.gift-shop-page .custom-merch-size select,
+.gift-shop-page .custom-cart-form input,
+.gift-shop-page .custom-cart-item select {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  font-size: 1rem;
+}
+
+.gift-shop-page .custom-merch-cart-link {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.gift-shop-page .custom-product-page {
+  padding: 2rem 1.25rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gift-shop-page .custom-product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.gift-shop-page .custom-product-preview {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(126, 34, 206, 0.12);
+}
+
+.gift-shop-page .custom-product-info h1 {
+  margin: 0.35rem 0 0.75rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.gift-shop-page .custom-cart {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  gap: 2rem;
+}
+
+.gift-shop-page .custom-cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gift-shop-page .custom-cart-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.gift-shop-page .custom-cart-item h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+}
+
+.gift-shop-page .custom-cart-thumb {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gift-shop-page .custom-cart-summary {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.25rem;
+  background: #fff;
+  height: fit-content;
+}
+
+.gift-shop-page .custom-cart-total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #7e22ce;
+}
+
+.gift-shop-page .custom-cart-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.gift-shop-page .custom-cart-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.gift-shop-page .custom-cart-remove {
+  background: none;
+  border: 0;
+  color: #6b7280;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.35rem 0;
+}
+
+.gift-shop-page .custom-cart-error {
+  color: #b91c1c;
+}
+
+.gift-shop-page .custom-cart-empty,
+.gift-shop-page .custom-confirm {
+  padding: 1rem 0 2rem;
+}
+
+@media (max-width: 800px) {
+  .gift-shop-page .custom-product-layout,
+  .gift-shop-page .custom-cart,
+  .gift-shop-page .custom-cart-item {
+    grid-template-columns: 1fr;
+  }
+}

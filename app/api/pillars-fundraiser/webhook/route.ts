@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import { getPrisma } from "@/lib/prisma";
 import { PACKAGES, isValidPackageKey } from "@/lib/fundraiser-packages";
 import { sendFundraiserConfirmation } from "@/lib/email";
+import { handlePaidMerchSession } from "@/lib/merch/stripe-webhook";
 
 function getStripe() {
   const key = process.env.STRIPE_SECRET_KEY;
@@ -34,6 +35,11 @@ export async function POST(req: NextRequest) {
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
+
+    if (session.metadata?.kind === "merch") {
+      await handlePaidMerchSession(session);
+      return NextResponse.json({ received: true });
+    }
 
     if (session.payment_status !== "paid") {
       return NextResponse.json({ received: true });
