@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     const art = await generateMerchArtwork({
       theme,
       extraPrompt,
-      title,
+      title: titleOverride || theme.title,
       seed,
     });
     const design = await prisma.merchDesign.create({
