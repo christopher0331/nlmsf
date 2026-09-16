@@ -30,14 +30,34 @@ export type PrintifySubmitResult = {
 };
 
 const PRINTIFY_API = "https://api.printify.com/v1";
+const FALLBACK_SHOP_ID = "26344889";
+
+export function getPrintifyToken(): string | undefined {
+  const token =
+    process.env.PRINTIFY_API_TOKEN ||
+    process.env.printify ||
+    process.env.PRINTIFY ||
+    process.env.PRINTIFY_TOKEN;
+  return token?.trim() || undefined;
+}
+
+function getExplicitShopId(): string | undefined {
+  const shopId =
+    process.env.PRINTIFY_SHOP_ID ||
+    process.env.printify_shop_id ||
+    process.env.PRINTIFY_SHOP;
+  return shopId?.trim() || undefined;
+}
 
 export function isPrintifyConfigured(): boolean {
-  return Boolean(process.env.PRINTIFY_API_TOKEN && process.env.PRINTIFY_SHOP_ID);
+  return Boolean(getPrintifyToken());
 }
 
 function printifyHeaders(): HeadersInit {
+  const token = getPrintifyToken();
+  if (!token) throw new Error("Printify token is not configured.");
   return {
-    Authorization: `Bearer ${process.env.PRINTIFY_API_TOKEN}`,
+    Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
     "User-Agent": "NLMSF-Gift-Shop/1.0 (nlmsf.org)",
   };
@@ -92,13 +112,13 @@ function normalizeOption(value: string): string {
 function colorAliases(colorName: string): string[] {
   const n = normalizeOption(colorName);
   const aliases: Record<string, string[]> = {
-    championpurple: ["purple", "violet", "royalpurple"],
-    purple: ["purple", "violet", "heatherpurple"],
+    championpurple: ["purple", "violet", "royalpurple", "heatherpurple", "teampurple"],
+    purple: ["purple", "violet", "heatherpurple", "teampurple", "heatherteampurple"],
     black: ["black"],
     white: ["white"],
-    heathergrey: ["sportsgrey", "heather", "grey", "gray", "athleticgrey"],
-    navy: ["navy", "navyblue", "darknavy"],
-    softpink: ["pink", "lightpink", "hotpink"],
+    heathergrey: ["sportsgrey", "heather", "grey", "gray", "athleticheather", "darkgreyheather", "graphiteheather"],
+    navy: ["navy", "navyblue", "darknavy", "heathernavy"],
+    softpink: ["pink", "lightpink", "hotpink", "cranberry"],
   };
   return aliases[n] ?? [n];
 }
@@ -124,7 +144,7 @@ async function resolveVariantId(
 ): Promise<number> {
   const variants = await listVariants(blueprintId, printProviderId);
   const colorNeedles = colorAliases(colorName).map(normalizeOption);
-  const sizeNeedle = normalizeOption(size === "One Size" ? "onesize" : size);
+  const sizeNeedle = normalizeOption(size === "One Size" || size === "One size" ? "onesize" : size);
   const match = variants.find((variant) => {
     const color = normalizeOption(variant.options?.color ?? variant.title?.split("/")[0] ?? "");
     const variantSize = normalizeOption(variant.options?.size ?? variant.title?.split("/")[1] ?? "");
@@ -191,6 +211,16 @@ async function lineItemsPayload(items: PrintifyLineItem[]) {
   return lines;
 }
 
+async function resolvePrintifyShopId(): Promise<string> {
+  const explicit = getExplicitShopId();
+  if (explicit) return explicit;
+  const json = await printifyFetch("/shops.json", { method: "GET" }) as Array<{ id: number; title?: string }>;
+  const shops = Array.isArray(json) ? json : [];
+  const preferred = shops.find((shop) => /nlmsf/i.test(shop.title ?? "")) ?? shops[0];
+  if (preferred?.id != null) return String(preferred.id);
+  return FALLBACK_SHOP_ID;
+}
+
 export async function submitPrintifyOrder(input: {
   externalId: string;
   label: string;
@@ -203,14 +233,14 @@ export async function submitPrintifyOrder(input: {
       orderId: `mock_${input.externalId}`,
       status: "queued_mock",
       raw: {
-        note: "PRINTIFY_API_TOKEN / PRINTIFY_SHOP_ID not set. Order stored locally for fulfillment later.",
+        note: "Printify token not set. Order stored locally for fulfillment later.",
         items: input.items,
         address: input.address,
       },
     };
   }
 
-  const shopId = process.env.PRINTIFY_SHOP_ID!;
+  const shopId = await resolvePrintifyShopId();
   const body = {
     external_id: input.externalId,
     label: input.label,

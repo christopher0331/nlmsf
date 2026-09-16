@@ -39,7 +39,7 @@ export const MERCH_MEDIUMS: MerchMedium[] = [
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
     printArea: "front",
     blueprintId: Number(process.env.PRINTIFY_BLUEPRINT_SHORT_TEE ?? 12),
-    printProviderId: Number(process.env.PRINTIFY_PROVIDER_SHORT_TEE ?? 29),
+    printProviderId: Number(process.env.PRINTIFY_PROVIDER_SHORT_TEE ?? 99),
   },
   {
     id: "long_tee",
@@ -47,10 +47,10 @@ export const MERCH_MEDIUMS: MerchMedium[] = [
     shortName: "Long Sleeve Tee",
     description: "Long sleeve tee for cooler days, printed with the approved NLMSF design.",
     priceCents: 3400,
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     printArea: "front",
-    blueprintId: Number(process.env.PRINTIFY_BLUEPRINT_LONG_TEE ?? 380),
-    printProviderId: Number(process.env.PRINTIFY_PROVIDER_LONG_TEE ?? 29),
+    blueprintId: Number(process.env.PRINTIFY_BLUEPRINT_LONG_TEE ?? 41),
+    printProviderId: Number(process.env.PRINTIFY_PROVIDER_LONG_TEE ?? 99),
   },
   {
     id: "hoodie",
@@ -61,7 +61,7 @@ export const MERCH_MEDIUMS: MerchMedium[] = [
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
     printArea: "front",
     blueprintId: Number(process.env.PRINTIFY_BLUEPRINT_HOODIE ?? 77),
-    printProviderId: Number(process.env.PRINTIFY_PROVIDER_HOODIE ?? 29),
+    printProviderId: Number(process.env.PRINTIFY_PROVIDER_HOODIE ?? 99),
   },
   {
     id: "hat",
@@ -71,8 +71,8 @@ export const MERCH_MEDIUMS: MerchMedium[] = [
     priceCents: 2499,
     sizes: ["One Size"],
     printArea: "front",
-    blueprintId: Number(process.env.PRINTIFY_BLUEPRINT_HAT ?? 1017),
-    printProviderId: Number(process.env.PRINTIFY_PROVIDER_HAT ?? 29),
+    blueprintId: Number(process.env.PRINTIFY_BLUEPRINT_HAT ?? 1447),
+    printProviderId: Number(process.env.PRINTIFY_PROVIDER_HAT ?? 99),
   },
 ];
 
@@ -88,7 +88,10 @@ export function getColor(id: string): MerchColor | undefined {
 
 export function colorsForMedium(mediumId: MerchMediumId): MerchColor[] {
   if (mediumId === "hat") {
-    return MERCH_COLORS.filter((c) => ["purple", "black", "white", "pink"].includes(c.id));
+    return MERCH_COLORS.filter((c) => ["black", "white", "pink", "navy"].includes(c.id));
+  }
+  if (mediumId === "long_tee") {
+    return MERCH_COLORS.filter((c) => ["black", "white", "heather", "navy"].includes(c.id));
   }
   return MERCH_COLORS.filter((c) => !c.hatOnly);
 }
