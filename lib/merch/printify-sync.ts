@@ -85,41 +85,38 @@ async function resolveImage(
   return { bytes: PIXEL_PNG, mimeType: "image/png" };
 }
 
+async function loadPrintifyProductsById(ids: Iterable<string>): Promise<PrintifyShopProduct[]> {
+  const products: PrintifyShopProduct[] = [];
+  for (const id of ids) {
+    try {
+      products.push(await getPrintifyProduct(id));
+    } catch (err) {
+      console.warn(`Printify product ${id} could not be loaded:`, err);
+    }
+  }
+  return products;
+}
+
 export async function collectPrintifyProducts(productIds?: string[]): Promise<{
   shopId: string;
   products: PrintifyShopProduct[];
 }> {
   const shopId = await resolvePrintifyShopId();
-  const wanted = new Set((productIds ?? []).map((id) => id.trim()).filter(Boolean));
-  let products: PrintifyShopProduct[] = [];
+  const wanted = [...new Set((productIds ?? []).map((id) => id.trim()).filter(Boolean))];
 
+  if (wanted.length) {
+    return { shopId, products: await loadPrintifyProductsById(wanted) };
+  }
+
+  let products: PrintifyShopProduct[] = [];
   try {
     products = await listPrintifyProducts();
   } catch (err) {
     console.warn("Printify product list failed, falling back to specific IDs:", err);
   }
 
-  if (wanted.size) {
-    const have = new Set(products.map((product) => product.id));
-    for (const id of wanted) {
-      if (have.has(id)) continue;
-      try {
-        products.push(await getPrintifyProduct(id));
-      } catch (err) {
-        console.warn(`Printify product ${id} could not be loaded:`, err);
-      }
-    }
-    products = products.filter((product) => wanted.has(product.id));
-  }
-
   if (!products.length) {
-    for (const id of fallbackProductIds()) {
-      try {
-        products.push(await getPrintifyProduct(id));
-      } catch (err) {
-        console.warn(`Printify fallback product ${id} could not be loaded:`, err);
-      }
-    }
+    products = await loadPrintifyProductsById(fallbackProductIds());
   }
 
   return { shopId, products };
@@ -314,4 +311,86 @@ export async function previewPrintifyShop() {
       };
     }),
   };
+}
+
+type EnsurePrintifyResult = {
+  complete: boolean;
+  publishedExisting: number;
+  created: number;
+  updated: number;
+  missing: string[];
+  error?: string;
+};
+
+const globalForEnsure = globalThis as unknown as {
+  printifyEnsureInflight: Promise<EnsurePrintifyResult> | null;
+  printifyEnsureDone: EnsurePrintifyResult | null;
+};
+
+export async function ensurePublishedPrintifyListings(
+  productIds: string[] = [...NLMSF_PRINTIFY_TEST_PRODUCT_IDS],
+): Promise<EnsurePrintifyResult> {
+  if (globalForEnsure.printifyEnsureDone?.complete) return globalForEnsure.printifyEnsureDone;
+  if (globalForEnsure.printifyEnsureInflight) return globalForEnsure.printifyEnsureInflight;
+
+  const run = (async (): Promise<EnsurePrintifyResult> => {
+    const wanted = [...new Set(productIds.map((id) => id.trim()).filter(Boolean))];
+    const prisma = await getMerchPrisma();
+    const existing = await prisma.merchListing.findMany({
+      where: { printifyProductId: { in: wanted } },
+      select: { id: true, printifyProductId: true, published: true },
+    });
+    const unpublishedIds = existing.filter((row) => !row.published).map((row) => row.id);
+    if (unpublishedIds.length) {
+      await prisma.merchListing.updateMany({
+        where: { id: { in: unpublishedIds } },
+        data: { published: true },
+      });
+    }
+    const have = new Set(existing.map((row) => row.printifyProductId).filter((id): id is string => Boolean(id)));
+    const missing = wanted.filter((id) => !have.has(id));
+    if (!missing.length) {
+      return {
+        complete: true,
+        publishedExisting: unpublishedIds.length,
+        created: 0,
+        updated: 0,
+        missing: [],
+      };
+    }
+    if (!isPrintifyConfigured()) {
+      return {
+        complete: false,
+        publishedExisting: unpublishedIds.length,
+        created: 0,
+        updated: 0,
+        missing,
+        error: "Printify is not configured. Set PRINTIFY_API_TOKEN (or printify) on the host.",
+      };
+    }
+
+    const result = await syncConnectedPrintifyShop({ productIds: missing, publish: true });
+    const imported = new Set([
+      ...result.created.map((item) => item.productId),
+      ...result.updated.map((item) => item.productId),
+    ]);
+    const stillMissing = missing.filter((id) => !imported.has(id));
+    return {
+      complete: stillMissing.length === 0,
+      publishedExisting: unpublishedIds.length,
+      created: result.created.length,
+      updated: result.updated.length,
+      missing: stillMissing,
+      error: stillMissing.length ? result.skipped.map((row) => row.reason).join("; ") || "Import incomplete" : undefined,
+    };
+  })();
+
+  globalForEnsure.printifyEnsureInflight = run;
+  try {
+    const result = await run;
+    if (result.complete) globalForEnsure.printifyEnsureDone = result;
+    return result;
+  } finally {
+    globalForEnsure.printifyEnsureInflight = null;
+  }
 }

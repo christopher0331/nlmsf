@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { mapPrintifyProduct, type PrintifyShopProduct } from "../lib/merch/printify-map";
 import { getMerchPrisma } from "../lib/merch/ensure-schema";
-import { syncPrintifyProductsToListings } from "../lib/merch/printify-sync";
+import { ensurePublishedPrintifyListings, syncPrintifyProductsToListings } from "../lib/merch/printify-sync";
 import { toShopListing } from "../lib/merch/dto";
 
 const PIXEL_PNG = Buffer.from(
@@ -142,6 +142,24 @@ async function main() {
   assert.ok(firstShop);
   assert.ok(firstShop.colorOptions.some((color) => color.id === "purple"));
   assert.ok(firstShop.sizes.includes("M"));
+
+  const g = globalThis as unknown as { printifyEnsureDone: unknown; printifyEnsureInflight: unknown };
+  g.printifyEnsureDone = null;
+  g.printifyEnsureInflight = null;
+  const ensured = await ensurePublishedPrintifyListings();
+  assert.equal(ensured.complete, true);
+  assert.deepEqual(ensured.missing, []);
+
+  await prisma.merchListing.updateMany({
+    where: { printifyProductId: first.id },
+    data: { published: false },
+  });
+  g.printifyEnsureDone = null;
+  const republished = await ensurePublishedPrintifyListings();
+  assert.equal(republished.complete, true);
+  assert.ok(republished.publishedExisting >= 1);
+  const after = await prisma.merchListing.findFirst({ where: { printifyProductId: first.id } });
+  assert.equal(after?.published, true);
 
   console.log(
     JSON.stringify(
