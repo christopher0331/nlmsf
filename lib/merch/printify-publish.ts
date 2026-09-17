@@ -9,6 +9,7 @@ import { toListingDto } from "@/lib/merch/dto";
 import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import {
   NLMSF_PRINTIFY_TEST_PRODUCT_IDS,
+  isPrintifyTestProductId,
   mapPrintifyProduct,
   merchColorFromPrintify,
   parsePrintifyMockups,
@@ -123,7 +124,15 @@ function placementForVariant(mediumId: MerchMediumId, variant: PrintifyCatalogVa
   return first ? { ...preferred, position: first } : preferred;
 }
 
-function listingNeedsPrintifyProduct(listing: MerchListing): boolean {
+function isTestListing(listing: Pick<MerchListing, "title" | "printifyProductId">): boolean {
+  return (
+    isPrintifyTestProductId(listing.printifyProductId) ||
+    /nlmsf test tee/i.test(listing.title)
+  );
+}
+
+export function listingNeedsPrintifyProduct(listing: MerchListing): boolean {
+  if (isTestListing(listing)) return false;
   if (!listing.printifyProductId) return true;
   const mockups = parsePrintifyMockups(listing.printifyVariantsJson);
   return !mockups.mockupUrl && !Object.keys(mockups.mockupsByColor).length;
@@ -339,7 +348,7 @@ export async function publishListingsToPrintify(options?: {
   const listings = wanted.length
     ? await prisma.merchListing.findMany({ where: { id: { in: wanted } } })
     : await prisma.merchListing.findMany({
-        where: { published: true },
+        where: { published: true, printifyProductId: null },
       });
 
   const targets = listings.filter(listingNeedsPrintifyProduct);

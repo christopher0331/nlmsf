@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AdminTabs } from "@/components/AdminTabs";
 import MerchMockup from "@/components/merch/MerchMockup";
 import {
@@ -63,6 +63,11 @@ type StudioData = {
   stripeConfigured: boolean;
 };
 
+function needsPrintifyPush(listing: Listing): boolean {
+  if (/nlmsf test tee/i.test(listing.title)) return false;
+  return listing.published && !listing.printifyProductId;
+}
+
 const STATUS_LABEL: Record<string, string> = {
   pending: "Needs review",
   approved: "Approved",
@@ -88,6 +93,7 @@ export default function MerchStudioClient() {
   const [uploadTitle, setUploadTitle] = useState("");
   const [syncing, setSyncing] = useState(false);
   const [syncNote, setSyncNote] = useState("");
+  const autoPushStarted = useRef(false);
   const [printifyPreview, setPrintifyPreview] = useState<{
     shopId: string | null;
     products: Array<{
@@ -148,6 +154,18 @@ export default function MerchStudioClient() {
   useEffect(() => {
     load();
   }, [load]);
+
+  const pendingPrintify = useMemo(
+    () => (data?.listings ?? []).filter(needsPrintifyPush),
+    [data?.listings],
+  );
+
+  useEffect(() => {
+    if (!data?.printifyConfigured || autoPushStarted.current || !pendingPrintify.length) return;
+    autoPushStarted.current = true;
+    setSyncNote(`Pushing ${pendingPrintify.length} listing${pendingPrintify.length === 1 ? "" : "s"} to Printify shop 26344889…`);
+    void createPrintifyPhotos(pendingPrintify.map((listing) => listing.id));
+  }, [data?.printifyConfigured, pendingPrintify]);
 
   const selected = useMemo(
     () => data?.designs.find((d) => d.id === selectedId) ?? data?.designs.find((d) => d.status === "approved") ?? null,
@@ -241,9 +259,9 @@ export default function MerchStudioClient() {
     try {
       const ids = listingIds?.length
         ? listingIds
-        : (data?.listings.filter((listing) => !listing.hasPrintifyMockup).map((listing) => listing.id) ?? []);
+        : (data?.listings.filter(needsPrintifyPush).map((listing) => listing.id) ?? []);
       if (!ids.length) {
-        setSyncNote("Every published listing already has a Printify product photo.");
+        setSyncNote("Every published studio listing already has a Printify product.");
         return;
       }
       let created = 0;
@@ -253,6 +271,8 @@ export default function MerchStudioClient() {
       let hidden = 0;
       const skipReasons: string[] = [];
       for (const listingId of ids) {
+        const listingTitle = data?.listings.find((listing) => listing.id === listingId)?.title ?? listingId;
+        setSyncNote(`Pushing ${listingTitle} to Printify…`);
         const res = await fetch("/api/admin/merch/printify-publish/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -447,7 +467,7 @@ export default function MerchStudioClient() {
           disabled={syncing || !data.printifyConfigured}
           className="ml-3 mt-3 cursor-pointer rounded-lg border border-violet-700 bg-white px-5 py-2.5 font-semibold text-violet-700 disabled:cursor-not-allowed disabled:opacity-70 sm:mt-0"
         >
-          {syncing ? "Creating photos…" : "Create Printify products & mockups"}
+          {syncing ? "Pushing to Printify…" : "Push listings to Printify"}
         </button>
         {!data.printifyConfigured ? (
           <p className="mt-3 text-sm text-amber-800">Set PRINTIFY_API_TOKEN on the host to import the shop catalog.</p>
@@ -674,21 +694,20 @@ export default function MerchStudioClient() {
           </>
         )}
 
-        {data.listings.some((listing) => !listing.hasPrintifyMockup) ? (
+        {pendingPrintify.length ? (
           <div className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
             <p className="m-0 mb-2">
-              {data.listings.filter((listing) => !listing.hasPrintifyMockup).length} listing
-              {data.listings.filter((listing) => !listing.hasPrintifyMockup).length === 1 ? " is" : "s are"} still using
-              the placeholder diagram. Create Printify products so the gift shop shows real mockups (Hope Courage
-              Strength 2 Hoodie and Champion of Hope items).
+              {pendingPrintify.length} published listing{pendingPrintify.length === 1 ? " has" : "s have"} no Printify
+              product yet (Hope Courage Strength 2 Hoodie and Champion of Hope items). Push them into shop 26344889 so
+              the gift shop can show real mockups.
             </p>
             <button
               type="button"
-              onClick={() => void createPrintifyPhotos()}
+              onClick={() => void createPrintifyPhotos(pendingPrintify.map((listing) => listing.id))}
               disabled={syncing || !data.printifyConfigured}
               className="cursor-pointer rounded-lg border-0 bg-violet-700 px-4 py-2 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {syncing ? "Creating Printify photos…" : "Create Printify products & mockups"}
+              {syncing ? "Pushing to Printify…" : "Push to Printify"}
             </button>
           </div>
         ) : null}
@@ -724,9 +743,21 @@ export default function MerchStudioClient() {
                       </Link>
                     </td>
                     <td className="py-2">
-                      <button type="button" className="text-violet-700 underline" onClick={() => togglePublished(listing)}>
-                        {listing.published ? "Published — hide" : "Hidden — publish"}
-                      </button>
+                      <div className="flex flex-col items-start gap-1">
+                        {needsPrintifyPush(listing) ? (
+                          <button
+                            type="button"
+                            className="text-violet-700 underline"
+                            disabled={syncing}
+                            onClick={() => void createPrintifyPhotos([listing.id])}
+                          >
+                            Push to Printify
+                          </button>
+                        ) : null}
+                        <button type="button" className="text-violet-700 underline" onClick={() => togglePublished(listing)}>
+                          {listing.published ? "Published — hide" : "Hidden — publish"}
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
