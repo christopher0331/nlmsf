@@ -5,6 +5,7 @@ import type { PrintifyCatalogVariant, PrintifyCreateProductInput } from "../lib/
 import {
   attachPrintifyProductToListing,
   hidePrintifyTestListings,
+  listingNeedsPrintifyProduct,
   printPlacement,
   selectCatalogVariantsForListing,
 } from "../lib/merch/printify-publish";
@@ -210,6 +211,14 @@ async function main() {
       printifyProductId: "6aaaf7a0d6dccab5fb0d9ccc-hide",
     },
   });
+  assert.equal(listingNeedsPrintifyProduct(saved!), false, "listing with mockup should not need another push");
+  assert.equal(listingNeedsPrintifyProduct(testListing), false, "test tees are left alone");
+  assert.equal(
+    listingNeedsPrintifyProduct({ ...saved!, printifyProductId: null, printifyVariantsJson: null }),
+    true,
+    "published studio listings without a Printify id need a push",
+  );
+
   const hidden = await hidePrintifyTestListings(prisma);
   assert.ok(hidden.unpublished >= 1);
   const afterHide = await prisma.merchListing.findUnique({ where: { id: testListing.id } });
