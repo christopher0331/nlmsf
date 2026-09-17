@@ -8,6 +8,8 @@ import {
 } from "@/lib/merch/catalog";
 import { uniqueListingSlug } from "@/lib/merch/slug";
 import { toListingDto } from "@/lib/merch/dto";
+import { isPrintifyConfigured } from "@/lib/merch/printify";
+import { attachPrintifyProductToListing } from "@/lib/merch/printify-publish";
 
 export async function POST(req: NextRequest) {
   const ok = await isAuthenticated();
@@ -31,6 +33,7 @@ export async function POST(req: NextRequest) {
   }
 
   const listings = [];
+  const printifyWarnings: string[] = [];
   for (const mediumId of mediumIds) {
     const medium = getMedium(mediumId);
     if (!medium) continue;
@@ -55,11 +58,38 @@ export async function POST(req: NextRequest) {
       include: { design: true },
     });
     listings.push(toListingDto(listing));
+
+    if (isPrintifyConfigured()) {
+      try {
+        const printed = await attachPrintifyProductToListing(listing.id, {
+          prisma,
+          waitForMockups: false,
+        });
+        const refreshed = await prisma.merchListing.findUnique({
+          where: { id: listing.id },
+          include: { design: true },
+        });
+        if (refreshed) listings[listings.length - 1] = toListingDto(refreshed);
+        if (!printed.hasPrintifyMockup) {
+          printifyWarnings.push(`${listing.title}: Printify product created; shirt photo is still rendering.`);
+        }
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        printifyWarnings.push(`${listing.title}: ${message}`);
+        console.error("Printify product create during apply failed:", listing.id, err);
+      }
+    } else {
+      printifyWarnings.push("Printify is not configured, so gift-shop placeholders will show until products are created.");
+    }
   }
 
   if (!listings.length) {
     return NextResponse.json({ error: "No valid merch types or colors were selected." }, { status: 400 });
   }
 
-  return NextResponse.json({ listings });
+  return NextResponse.json({
+    listings,
+    printifyConfigured: isPrintifyConfigured(),
+    printifyWarnings: [...new Set(printifyWarnings)],
+  });
 }

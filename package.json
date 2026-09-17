@@ -9,7 +9,8 @@
     "lint": "next lint",
     "postinstall": "prisma generate",
     "db:clone-to-turso": "node scripts/clone-local-db-to-turso.js",
-    "seed:community-news": "node scripts/seed-community-news-from-wp-csv.js"
+    "seed:community-news": "node scripts/seed-community-news-from-wp-csv.js",
+    "test:merch": "npx tsx scripts/test-printify-sync.ts && npx tsx scripts/test-printify-publish.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

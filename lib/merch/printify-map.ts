@@ -6,6 +6,10 @@ export const NLMSF_PRINTIFY_TEST_PRODUCT_IDS = [
   "6aaaf795b04bce66250449a5",
 ] as const;
 
+export function isPrintifyTestProductId(productId: string | null | undefined): boolean {
+  return Boolean(productId && (NLMSF_PRINTIFY_TEST_PRODUCT_IDS as readonly string[]).includes(productId));
+}
+
 export type PrintifyOptionValue = {
   id: number;
   title: string;
@@ -97,6 +101,7 @@ const PRINTIFY_COLOR_TO_MERCH: Record<string, string> = {
   heathergrey: "heather",
   heathergray: "heather",
   sportsgrey: "heather",
+  darkheather: "heather",
   athleticheather: "heather",
   darkgreyheather: "heather",
   graphiteheather: "heather",

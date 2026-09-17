@@ -98,13 +98,14 @@ export function addressFromStripeShipping(input: {
   };
 }
 
-type PrintifyVariant = {
+export type PrintifyCatalogVariant = {
   id: number;
   title?: string;
   options?: { color?: string; size?: string };
+  placeholders?: Array<{ position?: string; decoration_method?: string; width?: number; height?: number }>;
 };
 
-const variantCache = new Map<string, PrintifyVariant[]>();
+const variantCache = new Map<string, PrintifyCatalogVariant[]>();
 
 function normalizeOption(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "");
@@ -124,14 +125,17 @@ function colorAliases(colorName: string): string[] {
   return aliases[n] ?? [n];
 }
 
-async function listVariants(blueprintId: number, printProviderId: number): Promise<PrintifyVariant[]> {
+export async function listPrintifyCatalogVariants(
+  blueprintId: number,
+  printProviderId: number,
+): Promise<PrintifyCatalogVariant[]> {
   const key = `${blueprintId}:${printProviderId}`;
   const cached = variantCache.get(key);
   if (cached) return cached;
   const json = await printifyFetch(
     `/catalog/blueprints/${blueprintId}/print_providers/${printProviderId}/variants.json`,
     { method: "GET" },
-  ) as { variants?: PrintifyVariant[] } | PrintifyVariant[];
+  ) as { variants?: PrintifyCatalogVariant[] } | PrintifyCatalogVariant[];
   const variants = Array.isArray(json) ? json : json.variants ?? [];
   variantCache.set(key, variants);
   return variants;
@@ -143,7 +147,7 @@ async function resolveVariantId(
   colorName: string,
   size: string,
 ): Promise<number> {
-  const variants = await listVariants(blueprintId, printProviderId);
+  const variants = await listPrintifyCatalogVariants(blueprintId, printProviderId);
   const colorNeedles = colorAliases(colorName).map(normalizeOption);
   const sizeNeedle = normalizeOption(size === "One Size" || size === "One size" ? "onesize" : size);
   const match = variants.find((variant) => {
@@ -313,6 +317,81 @@ export async function markPrintifyProductPublished(
   } catch (err) {
     console.warn("Printify publishing_succeeded handshake skipped:", err);
   }
+}
+
+export type PrintifyUploadResult = {
+  id: string;
+  file_name?: string;
+  width?: number;
+  height?: number;
+  preview_url?: string;
+};
+
+export async function uploadPrintifyImage(input: {
+  fileName: string;
+  contents: Buffer | Uint8Array;
+}): Promise<PrintifyUploadResult> {
+  const json = await printifyFetch("/uploads/images.json", {
+    method: "POST",
+    body: JSON.stringify({
+      file_name: input.fileName,
+      contents: Buffer.from(input.contents).toString("base64"),
+    }),
+  }) as PrintifyUploadResult;
+  if (!json?.id) throw new Error("Printify image upload did not return an id.");
+  return json;
+}
+
+export type PrintifyCreateProductInput = {
+  title: string;
+  description: string;
+  blueprintId: number;
+  printProviderId: number;
+  variants: Array<{ id: number; price: number; is_enabled?: boolean }>;
+  printAreas: Array<{
+    variant_ids: number[];
+    placeholders: Array<{
+      position: string;
+      images: Array<{ id: string; x: number; y: number; scale: number; angle: number }>;
+    }>;
+  }>;
+};
+
+export async function createPrintifyShopProduct(
+  input: PrintifyCreateProductInput,
+): Promise<PrintifyShopProduct> {
+  const shopId = await resolvePrintifyShopId();
+  return printifyFetch(`/shops/${shopId}/products.json`, {
+    method: "POST",
+    body: JSON.stringify({
+      title: input.title,
+      description: input.description,
+      blueprint_id: input.blueprintId,
+      print_provider_id: input.printProviderId,
+      variants: input.variants.map((variant) => ({
+        id: variant.id,
+        price: variant.price,
+        is_enabled: variant.is_enabled !== false,
+      })),
+      print_areas: input.printAreas,
+    }),
+  }) as Promise<PrintifyShopProduct>;
+}
+
+export async function waitForPrintifyProductMockups(
+  productId: string,
+  options?: { attempts?: number; delayMs?: number },
+): Promise<PrintifyShopProduct> {
+  const attempts = options?.attempts ?? 6;
+  const delayMs = options?.delayMs ?? 2000;
+  let product = await getPrintifyProduct(productId);
+  for (let i = 0; i < attempts; i += 1) {
+    if ((product.images ?? []).some((image) => image.src)) return product;
+    if (i === attempts - 1) break;
+    await new Promise((resolve) => setTimeout(resolve, delayMs));
+    product = await getPrintifyProduct(productId);
+  }
+  return product;
 }
 
 export type PrintifyCatalogLineItem = {

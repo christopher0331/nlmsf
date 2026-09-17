@@ -117,7 +117,7 @@ async function main() {
 
   assert.equal(result.created.length, 2, `expected 2 created, got ${JSON.stringify(result)}`);
   assert.equal(result.skipped.length, 0, JSON.stringify(result.skipped));
-  assert.ok(result.created.every((item) => item.published));
+  assert.ok(result.created.every((item) => item.published === false), "test tees import unpublished");
 
   const again = await syncPrintifyProductsToListings([first, second], {
     prisma,
@@ -130,7 +130,7 @@ async function main() {
   assert.equal(again.updated.length, 2);
 
   const listings = await prisma.merchListing.findMany({
-    where: { published: true },
+    where: { printifyProductId: { in: [first.id, second.id] } },
     include: { design: { select: { id: true, title: true } } },
     orderBy: { createdAt: "desc" },
   });
@@ -138,7 +138,7 @@ async function main() {
   const titles = shop.map((listing) => listing.title);
   assert.ok(titles.includes("NLMSF Test Tee nlmsf.org"));
   assert.ok(titles.includes("NLMSF Test Tee — nlmsf.org"));
-  assert.ok(shop.every((listing) => listing.published));
+  assert.ok(shop.every((listing) => listing.published === false));
   assert.ok(shop.every((listing) => listing.printifyProductId));
   const firstShop = shop.find((listing) => listing.printifyProductId === "6aaaf7a0d6dccab5fb0d9ccc");
   assert.ok(firstShop);
@@ -147,23 +147,15 @@ async function main() {
   assert.equal(firstShop.mockupUrl, "https://images.printify.com/mockup/example-front.jpg");
   assert.equal(firstShop.hasPrintifyMockup, true);
 
-  const g = globalThis as unknown as { printifyEnsureDone: unknown; printifyEnsureInflight: unknown };
-  g.printifyEnsureDone = null;
-  g.printifyEnsureInflight = null;
+  await prisma.merchListing.updateMany({
+    where: { printifyProductId: { in: [first.id, second.id] } },
+    data: { published: true },
+  });
   const ensured = await ensurePublishedPrintifyListings();
   assert.equal(ensured.complete, true);
-  assert.deepEqual(ensured.missing, []);
-
-  await prisma.merchListing.updateMany({
-    where: { printifyProductId: first.id },
-    data: { published: false },
-  });
-  g.printifyEnsureDone = null;
-  const republished = await ensurePublishedPrintifyListings();
-  assert.equal(republished.complete, true);
-  assert.ok(republished.publishedExisting >= 1);
+  assert.ok((ensured.unpublished ?? 0) >= 1);
   const after = await prisma.merchListing.findFirst({ where: { printifyProductId: first.id } });
-  assert.equal(after?.published, true);
+  assert.equal(after?.published, false);
 
   console.log(
     JSON.stringify(
