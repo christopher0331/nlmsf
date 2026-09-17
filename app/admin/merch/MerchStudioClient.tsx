@@ -117,7 +117,7 @@ export default function MerchStudioClient() {
         throw new Error(json.error || "Failed to load merch studio");
       }
       setData(json);
-      const previewRes = await fetch("/api/admin/merch/printify-sync");
+      const previewRes = await fetch("/api/admin/merch/printify-sync/");
       if (previewRes.ok) {
         const preview = await previewRes.json() as {
           shopId?: string | null;
@@ -228,7 +228,7 @@ export default function MerchStudioClient() {
     setError("");
     setSyncNote("");
     try {
-      const res = await fetch("/api/admin/merch/printify-sync", {
+      const res = await fetch("/api/admin/merch/printify-sync/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: "{}",
