@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import EventScheduleDisplay from "@/components/EventScheduleDisplay";
+import { AdminTabs } from "@/components/AdminTabs";
 import { normalizeEventDateString, timeToInputValue } from "@/lib/event-datetime";
 
 const ALL_US_TIMEZONES = JSON.stringify(["ET", "CT", "MT", "PT"]);
@@ -179,23 +180,7 @@ export default function AdminEventsClient() {
         </button>
       </header>
 
-      <div className="flex gap-0 mb-6 border-b-2 border-gray-200">
-        <div className="py-3 px-5 font-semibold text-sm text-violet-700 border-b-2 border-b-violet-700 -mb-0.5">
-          Events
-        </div>
-        <Link
-          href="/admin/education-videos"
-          className="py-3 px-5 font-semibold text-sm text-gray-500 border-b-2 border-transparent -mb-0.5 no-underline hover:text-gray-700"
-        >
-          Education Videos
-        </Link>
-        <Link
-          href="/admin/tributes"
-          className="py-3 px-5 font-semibold text-sm text-gray-500 border-b-2 border-transparent -mb-0.5 no-underline hover:text-gray-700"
-        >
-          Tributes
-        </Link>
-      </div>
+      <AdminTabs active="events" />
 
       <div className="flex flex-col gap-4 mb-8">
         {events.map((ev) => (

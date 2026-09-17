@@ -8,6 +8,8 @@ const EXCLUDED_STATIC_ROUTES = new Set([
   "/caregiver-traits",
   "/social-security-coverage-guidance",
   "/gift-shop-nlmsf",
+  "/gift-shop/cart",
+  "/gift-shop/order-confirmation",
 ]);
 
 function discoverAppRoutes(): string[] {

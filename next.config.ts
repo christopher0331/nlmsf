@@ -278,6 +278,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "c.bonfireassets.com",
       },
+      {
+        protocol: "https",
+        hostname: "images.printify.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images-api.printify.com",
+      },
     ],
   },
   webpack: (config) => {

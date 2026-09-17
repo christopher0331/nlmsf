@@ -1,0 +1,137 @@
+.merch-mockup {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.08), transparent 40%),
+    #f3f4f6;
+  overflow: hidden;
+}
+
+.merch-mockup-apparel {
+  gap: 0;
+}
+
+.merch-sleeve {
+  width: 18%;
+  height: 28%;
+  border: 1px solid;
+  position: absolute;
+  top: 22%;
+}
+
+.merch-mockup-long_tee .merch-sleeve {
+  height: 38%;
+}
+
+.merch-mockup-hoodie .merch-sleeve {
+  height: 34%;
+  top: 26%;
+}
+
+.merch-sleeve-left {
+  left: 8%;
+  border-radius: 38px 8px 24px 40px;
+  transform: rotate(-18deg);
+}
+
+.merch-sleeve-right {
+  right: 8%;
+  border-radius: 8px 38px 40px 24px;
+  transform: rotate(18deg);
+}
+
+.merch-body {
+  width: 46%;
+  height: 58%;
+  border: 1px solid;
+  border-radius: 18px 18px 22px 22px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 18%;
+}
+
+.merch-mockup-long_tee .merch-body {
+  height: 66%;
+}
+
+.merch-mockup-hoodie .merch-body {
+  height: 62%;
+  border-radius: 28px 28px 22px 22px;
+}
+
+.merch-hood {
+  position: absolute;
+  top: -11%;
+  width: 54%;
+  height: 18%;
+  border: 1px solid;
+  border-radius: 90px 90px 0 0;
+}
+
+.merch-chest-art {
+  width: 58%;
+  height: auto;
+  max-height: 48%;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.18);
+}
+
+.merch-mockup-hat {
+  flex-direction: column;
+}
+
+.merch-hat-crown {
+  width: 54%;
+  height: 34%;
+  border-radius: 90px 90px 24px 24px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.merch-hat-art {
+  width: 48%;
+  height: 58%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.merch-hat-brim {
+  width: 72%;
+  height: 10%;
+  margin-top: -6px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.merch-mockup-photo {
+  background: #f7f6f4;
+}
+
+.merch-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
