@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { toShopListing } from "@/lib/merch/dto";
+import { refreshPrintifyListingMockups } from "@/lib/merch/printify-sync";
 import ProductBuyBox from "./ProductBuyBox";
 import "../gift-shop.css";
 
@@ -25,6 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function MerchProductPage({ params }: Props) {
   const { slug } = await params;
   if (slug === "cart" || slug === "order-confirmation") notFound();
+  await refreshPrintifyListingMockups().catch((err) => {
+    console.error("Printify mockup refresh failed:", err);
+  });
   const prisma = await getMerchPrisma();
   const listing = await prisma.merchListing.findUnique({
     where: { slug },

@@ -16,6 +16,7 @@ export default function ProductBuyBox({ listing }: { listing: ShopListing }) {
     () => listing.colorOptions.find((option) => option.id === colorId) ?? listing.colorOptions[0],
     [listing.colorOptions, colorId],
   );
+  const photoUrl = listing.mockupsByColor?.[colorId] || listing.mockupUrl || null;
 
   if (!color) return null;
 
@@ -23,7 +24,8 @@ export default function ProductBuyBox({ listing }: { listing: ShopListing }) {
     <div className="custom-product-layout">
       <div className="custom-product-preview">
         <MerchMockup
-          imageUrl={listing.imageUrl}
+          imageUrl={listing.designImageUrl || listing.imageUrl}
+          photoUrl={photoUrl}
           colorHex={color.hex}
           mediumId={listing.mediumId as MerchMediumId}
           title={listing.title}
@@ -93,7 +95,8 @@ export default function ProductBuyBox({ listing }: { listing: ShopListing }) {
               size,
               quantity,
               priceCents: listing.priceCents,
-              imageUrl: listing.imageUrl,
+              imageUrl: listing.designImageUrl || listing.imageUrl,
+              photoUrl: photoUrl || undefined,
             });
             setAdded(true);
           }}

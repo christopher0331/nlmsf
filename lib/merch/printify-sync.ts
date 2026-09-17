@@ -4,6 +4,7 @@ import { uniqueListingSlug } from "@/lib/merch/slug";
 import {
   NLMSF_PRINTIFY_TEST_PRODUCT_IDS,
   mapPrintifyProduct,
+  parsePrintifyMockups,
   serializePrintifyVariants,
   type MappedPrintifyProduct,
   type PrintifyShopProduct,
@@ -120,6 +121,51 @@ export async function collectPrintifyProducts(productIds?: string[]): Promise<{
   }
 
   return { shopId, products };
+}
+
+const globalForMockups = globalThis as unknown as {
+  printifyMockupRefresh: Promise<{ updated: number }> | null;
+};
+
+export async function refreshPrintifyListingMockups(options?: {
+  prisma?: PrismaClient;
+}): Promise<{ updated: number }> {
+  if (globalForMockups.printifyMockupRefresh) return globalForMockups.printifyMockupRefresh;
+
+  const run = (async () => {
+    const prisma = options?.prisma ?? (await getMerchPrisma());
+    const listings = await prisma.merchListing.findMany({
+      where: { printifyProductId: { not: null } },
+    });
+    const stale = listings.filter((listing) => !parsePrintifyMockups(listing.printifyVariantsJson).mockupUrl);
+    if (!stale.length) return { updated: 0 };
+
+    const ids = [...new Set(stale.map((listing) => listing.printifyProductId).filter((id): id is string => Boolean(id)))];
+    if (!ids.length || !isPrintifyConfigured()) return { updated: 0 };
+
+    const { products } = await collectPrintifyProducts(ids);
+    const byId = new Map(products.map((product) => [String(product.id), product]));
+    let updated = 0;
+    for (const listing of stale) {
+      const product = listing.printifyProductId ? byId.get(listing.printifyProductId) : undefined;
+      if (!product) continue;
+      const mapped = mapPrintifyProduct(product);
+      if (!mapped?.mockupUrl) continue;
+      await prisma.merchListing.update({
+        where: { id: listing.id },
+        data: { printifyVariantsJson: serializePrintifyVariants(mapped) },
+      });
+      updated += 1;
+    }
+    return { updated };
+  })();
+
+  globalForMockups.printifyMockupRefresh = run;
+  try {
+    return await run;
+  } finally {
+    globalForMockups.printifyMockupRefresh = null;
+  }
 }
 
 export async function upsertMappedPrintifyProduct(
@@ -350,6 +396,9 @@ export async function ensurePublishedPrintifyListings(
     const have = new Set(existing.map((row) => row.printifyProductId).filter((id): id is string => Boolean(id)));
     const missing = wanted.filter((id) => !have.has(id));
     if (!missing.length) {
+      await refreshPrintifyListingMockups({ prisma }).catch((err) => {
+        console.warn("Printify mockup refresh skipped:", err);
+      });
       return {
         complete: true,
         publishedExisting: unpublishedIds.length,

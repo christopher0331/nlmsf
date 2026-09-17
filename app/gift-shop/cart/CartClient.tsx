@@ -88,6 +88,7 @@ export default function CartClient() {
             <div className="custom-cart-thumb">
               <MerchMockup
                 imageUrl={item.imageUrl}
+                photoUrl={item.photoUrl}
                 colorHex={item.colorHex}
                 mediumId={item.mediumId as MerchMediumId}
                 title={item.title}

@@ -36,6 +36,8 @@ type Listing = {
   colors: string[];
   published: boolean;
   imageUrl: string;
+  mockupUrl?: string | null;
+  hasPrintifyMockup?: boolean;
   printifyProductId?: string | null;
 };
 
@@ -353,9 +355,9 @@ export default function MerchStudioClient() {
       <section className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-[0_2px_6px_rgba(0,0,0,0.04)]">
         <h2 className="m-0 mb-1 text-xl font-bold text-violet-700">Import Printify shop products</h2>
         <p className="mb-4 mt-0 text-sm text-gray-500">
-          Creating a product in Printify does not put it on the gift shop by itself. Import copies title, artwork,
-          colors, and sizes from shop {printifyPreview?.shopId || "26344889"} into published Custom Collection listings.
-          Re-run this anytime you add products. Hidden listings stay hidden on later syncs.
+          Creating a product in Printify does not put it on the gift shop by itself. Import copies title, Printify’s
+          shirt photos, colors, and sizes from shop {printifyPreview?.shopId || "26344889"} into published Custom
+          Collection listings. Re-run this anytime you add products. Hidden listings stay hidden on later syncs.
         </p>
         <button
           type="button"
@@ -598,6 +600,7 @@ export default function MerchStudioClient() {
                   <th className="py-2 pr-3 font-semibold">Listing</th>
                   <th className="py-2 pr-3 font-semibold">Medium</th>
                   <th className="py-2 pr-3 font-semibold">Price</th>
+                  <th className="py-2 pr-3 font-semibold">Photo</th>
                   <th className="py-2 pr-3 font-semibold">Shop</th>
                   <th className="py-2 font-semibold">Status</th>
                 </tr>
@@ -611,6 +614,9 @@ export default function MerchStudioClient() {
                       {listing.printifyProductId ? " · Printify" : ""}
                     </td>
                     <td className="py-2 pr-3">{listing.priceLabel}</td>
+                    <td className="py-2 pr-3">
+                      {listing.hasPrintifyMockup ? "Printify shirt photo" : "Placeholder diagram"}
+                    </td>
                     <td className="py-2 pr-3">
                       <Link href={`/gift-shop/${listing.slug}`} className="text-violet-700">
                         /gift-shop/{listing.slug}

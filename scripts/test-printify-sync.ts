@@ -94,6 +94,8 @@ async function main() {
   assert.ok(mappedSecond.colorIds.includes("navy"));
   assert.deepEqual(mappedFirst.sizes, ["S", "M", "L"]);
   assert.equal(mappedFirst.artworkUrl, "https://images.printify.com/artwork-nlmsf.png");
+  assert.equal(mappedFirst.mockupUrl, "https://images.printify.com/mockup/example-front.jpg");
+  assert.equal(mappedFirst.mockupsByColor.black, "https://images.printify.com/mockup/example-front.jpg");
   assert.equal(mappedFirst.priceCents, 2499);
   assert.equal(mappedFirst.variants.length, 3, "disabled variants are omitted");
 
@@ -142,6 +144,8 @@ async function main() {
   assert.ok(firstShop);
   assert.ok(firstShop.colorOptions.some((color) => color.id === "purple"));
   assert.ok(firstShop.sizes.includes("M"));
+  assert.equal(firstShop.mockupUrl, "https://images.printify.com/mockup/example-front.jpg");
+  assert.equal(firstShop.hasPrintifyMockup, true);
 
   const g = globalThis as unknown as { printifyEnsureDone: unknown; printifyEnsureInflight: unknown };
   g.printifyEnsureDone = null;

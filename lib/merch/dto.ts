@@ -8,6 +8,7 @@ import {
 } from "@/lib/merch/catalog";
 import {
   findMappedVariant,
+  parsePrintifyMockups,
   parsePrintifyVariantsJson,
   uniqueColorsFromVariants,
 } from "@/lib/merch/printify-map";
@@ -42,6 +43,9 @@ export function toDesignDto(design: {
 
 export function toListingDto(listing: MerchListing & { design?: { id: string; title?: string } | null }) {
   const medium = getMedium(listing.mediumId);
+  const mockups = parsePrintifyMockups(listing.printifyVariantsJson);
+  const designImageUrl = designImagePath(listing.designId);
+  const mockupUrl = mockups.mockupUrl || Object.values(mockups.mockupsByColor)[0] || null;
   return {
     id: listing.id,
     designId: listing.designId,
@@ -55,7 +59,11 @@ export function toListingDto(listing: MerchListing & { design?: { id: string; ti
     colors: parseColorIds(listing.colorsJson),
     published: listing.published,
     printifyProductId: listing.printifyProductId ?? null,
-    imageUrl: designImagePath(listing.designId),
+    imageUrl: mockupUrl || designImageUrl,
+    designImageUrl,
+    mockupUrl,
+    mockupsByColor: mockups.mockupsByColor,
+    hasPrintifyMockup: Boolean(mockupUrl),
     designTitle: listing.design?.title,
     createdAt: listing.createdAt instanceof Date ? listing.createdAt.toISOString() : String(listing.createdAt),
   };

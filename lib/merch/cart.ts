@@ -13,6 +13,7 @@ export type StoredCartItem = {
   quantity: number;
   priceCents: number;
   imageUrl: string;
+  photoUrl?: string;
 };
 
 export function readCart(): StoredCartItem[] {

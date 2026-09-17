@@ -77,6 +77,7 @@ export type MappedPrintifyProduct = {
   variants: MappedPrintifyVariant[];
   artworkUrl: string | null;
   mockupUrl: string | null;
+  mockupsByColor: Record<string, string>;
 };
 
 const SIZE_ORDER = ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "One Size", "One size"];
@@ -253,10 +254,54 @@ export function pickArtworkUrl(product: PrintifyShopProduct): string | null {
 export function pickMockupUrl(product: PrintifyShopProduct): string | null {
   const images = product.images ?? [];
   const preferred =
-    images.find((image) => image.is_default) ||
-    images.find((image) => (image.position ?? "").toLowerCase() === "front") ||
-    images[0];
+    images.find((image) => image.is_default && image.src) ||
+    images.find((image) => (image.position ?? "").toLowerCase() === "front" && image.src) ||
+    images.find((image) => image.src);
   return preferred?.src ?? null;
+}
+
+const FRONT_POSITIONS = ["front", "front_cropped", "other", "embroidery_front"];
+
+function mockupImageScore(
+  image: NonNullable<PrintifyShopProduct["images"]>[number],
+  variantIds: Set<number>,
+): number {
+  const covers = (image.variant_ids ?? []).some((id) => variantIds.has(id));
+  if (!covers && variantIds.size) return -1;
+  const position = (image.position ?? "").toLowerCase();
+  let score = 1;
+  if (image.is_default) score += 10;
+  const frontIndex = FRONT_POSITIONS.indexOf(position);
+  if (frontIndex >= 0) score += 8 - frontIndex;
+  if (position === "back") score -= 4;
+  return score;
+}
+
+export function mockupsByColorFromProduct(
+  product: PrintifyShopProduct,
+  variants: MappedPrintifyVariant[],
+): Record<string, string> {
+  const images = (product.images ?? []).filter((image) => Boolean(image.src));
+  const byColor: Record<string, string> = {};
+  const idsByColor = new Map<string, Set<number>>();
+  for (const variant of variants) {
+    const ids = idsByColor.get(variant.colorId) ?? new Set<number>();
+    ids.add(variant.id);
+    idsByColor.set(variant.colorId, ids);
+  }
+  for (const [colorId, variantIds] of idsByColor) {
+    let bestSrc: string | undefined;
+    let bestScore = -1;
+    for (const image of images) {
+      const score = mockupImageScore(image, variantIds);
+      if (score > bestScore && image.src) {
+        bestSrc = image.src;
+        bestScore = score;
+      }
+    }
+    if (bestSrc) byColor[colorId] = bestSrc;
+  }
+  return byColor;
 }
 
 function sortSizes(sizes: string[]): string[] {
@@ -316,6 +361,7 @@ export function mapPrintifyProduct(product: PrintifyShopProduct): MappedPrintify
     variants: mappedVariants,
     artworkUrl: pickArtworkUrl(product),
     mockupUrl: pickMockupUrl(product),
+    mockupsByColor: mockupsByColorFromProduct(product, mappedVariants),
   };
 }
 
@@ -335,7 +381,35 @@ export function serializePrintifyVariants(mapped: MappedPrintifyProduct): string
     productId: mapped.productId,
     mediumId: mapped.mediumId,
     variants: mapped.variants,
+    mockupUrl: mapped.mockupUrl,
+    mockupsByColor: mapped.mockupsByColor,
   });
+}
+
+export function parsePrintifyMockups(raw: string | null | undefined): {
+  mockupUrl?: string;
+  mockupsByColor: Record<string, string>;
+} {
+  if (!raw) return { mockupsByColor: {} };
+  try {
+    const parsed = JSON.parse(raw) as {
+      mockupUrl?: unknown;
+      mockupsByColor?: unknown;
+    };
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return { mockupsByColor: {} };
+    }
+    const byColor: Record<string, string> = {};
+    if (parsed.mockupsByColor && typeof parsed.mockupsByColor === "object") {
+      for (const [key, value] of Object.entries(parsed.mockupsByColor as Record<string, unknown>)) {
+        if (typeof value === "string" && value.trim()) byColor[key] = value.trim();
+      }
+    }
+    const mockupUrl = typeof parsed.mockupUrl === "string" && parsed.mockupUrl.trim() ? parsed.mockupUrl.trim() : undefined;
+    return { mockupUrl, mockupsByColor: byColor };
+  } catch {
+    return { mockupsByColor: {} };
+  }
 }
 
 export function findMappedVariant(

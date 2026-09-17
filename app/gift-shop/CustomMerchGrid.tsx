@@ -16,6 +16,9 @@ export type ShopListing = {
   priceCents: number;
   priceLabel: string;
   imageUrl: string;
+  designImageUrl?: string;
+  mockupUrl?: string | null;
+  mockupsByColor?: Record<string, string>;
   sizes: string[];
   colorOptions: { id: string; name: string; hex: string }[];
 };
@@ -49,6 +52,7 @@ function ShopCard({ listing }: { listing: ShopListing }) {
     () => listing.colorOptions.find((option) => option.id === colorId) ?? listing.colorOptions[0],
     [listing.colorOptions, colorId],
   );
+  const photoUrl = listing.mockupsByColor?.[colorId] || listing.mockupUrl || null;
 
   if (!color) return null;
 
@@ -56,7 +60,8 @@ function ShopCard({ listing }: { listing: ShopListing }) {
     <article className="custom-merch-card">
       <Link href={`/gift-shop/${listing.slug}`} className="custom-merch-media">
         <MerchMockup
-          imageUrl={listing.imageUrl}
+          imageUrl={listing.designImageUrl || listing.imageUrl}
+          photoUrl={photoUrl}
           colorHex={color.hex}
           mediumId={listing.mediumId as MerchMediumId}
           title={listing.title}
@@ -118,7 +123,8 @@ function ShopCard({ listing }: { listing: ShopListing }) {
                 size,
                 quantity: 1,
                 priceCents: listing.priceCents,
-                imageUrl: listing.imageUrl,
+                imageUrl: listing.designImageUrl || listing.imageUrl,
+                photoUrl: photoUrl || undefined,
               });
               setAdded(true);
             }}

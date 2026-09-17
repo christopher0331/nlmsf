@@ -7,9 +7,18 @@ type Props = {
   mediumId: MerchMediumId;
   title: string;
   className?: string;
+  photoUrl?: string | null;
 };
 
-export default function MerchMockup({ imageUrl, colorHex, mediumId, title, className = "" }: Props) {
+export default function MerchMockup({ imageUrl, colorHex, mediumId, title, className = "", photoUrl }: Props) {
+  if (photoUrl) {
+    return (
+      <div className={`merch-mockup merch-mockup-photo ${className}`}>
+        <img src={photoUrl} alt={title} className="merch-photo" />
+      </div>
+    );
+  }
+
   const isLight = colorHex.toLowerCase() === "#f8f7f4" || colorHex.toLowerCase() === "#ffffff";
   const stitch = isLight ? "rgba(17,24,39,0.12)" : "rgba(255,255,255,0.18)";
 
