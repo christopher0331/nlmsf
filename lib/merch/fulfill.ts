@@ -3,6 +3,7 @@ import { getColor, getMedium, type MerchMediumId } from "@/lib/merch/catalog";
 import { designImagePath } from "@/lib/merch/dto";
 import {
   addressFromStripeShipping,
+  submitPrintifyCatalogOrder,
   submitPrintifyOrder,
   type PrintifyLineItem,
 } from "@/lib/merch/printify";
@@ -16,6 +17,8 @@ export type StoredOrderItem = {
   size: string;
   quantity: number;
   priceCents: number;
+  printifyProductId?: string | null;
+  printifyVariantId?: number | null;
 };
 
 function siteOrigin(fallback?: string): string {
@@ -60,7 +63,16 @@ export async function fulfillMerchOrder(orderId: string, origin?: string) {
     throw new Error("Missing shipping address");
   }
 
-  const printItems: PrintifyLineItem[] = items.map((item) => {
+  const address = addressFromStripeShipping({
+    name: shipping.name || order.name,
+    email: order.email,
+    phone: shipping.phone || order.phone,
+    address: shipping.address,
+  });
+
+  const catalogItems = items.filter((item) => item.printifyProductId && item.printifyVariantId);
+  const expressItems = items.filter((item) => !(item.printifyProductId && item.printifyVariantId));
+  const printItems: PrintifyLineItem[] = expressItems.map((item) => {
     const color = getColor(item.colorId);
     const medium = getMedium(item.mediumId);
     return {
@@ -74,24 +86,41 @@ export async function fulfillMerchOrder(orderId: string, origin?: string) {
   });
 
   try {
-    const result = await submitPrintifyOrder({
-      externalId: order.id,
-      label: `NLMSF ${order.id.slice(-8).toUpperCase()}`,
-      address: addressFromStripeShipping({
-        name: shipping.name || order.name,
-        email: order.email,
-        phone: shipping.phone || order.phone,
-        address: shipping.address,
-      }),
-      items: printItems,
-    });
+    const results = [];
+    if (catalogItems.length) {
+      results.push(
+        await submitPrintifyCatalogOrder({
+          externalId: expressItems.length ? `${order.id}-cat` : order.id,
+          label: `NLMSF ${order.id.slice(-8).toUpperCase()}`,
+          address,
+          items: catalogItems.map((item) => ({
+            productId: item.printifyProductId as string,
+            variantId: item.printifyVariantId as number,
+            quantity: item.quantity,
+          })),
+        }),
+      );
+    }
+    if (printItems.length) {
+      results.push(
+        await submitPrintifyOrder({
+          externalId: catalogItems.length ? `${order.id}-exp` : order.id,
+          label: `NLMSF ${order.id.slice(-8).toUpperCase()}`,
+          address,
+          items: printItems,
+        }),
+      );
+    }
+
+    const primary = results[0];
+    if (!primary) throw new Error("No merch items to send to Printify.");
 
     return prisma.merchOrder.update({
       where: { id: orderId },
       data: {
         status: "submitted_to_print",
-        printifyOrderId: result.orderId,
-        printifyStatus: `${result.mode}:${result.status}`,
+        printifyOrderId: results.map((result) => result.orderId).filter(Boolean).join(",") || primary.orderId,
+        printifyStatus: results.map((result) => `${result.mode}:${result.status}`).join(" | "),
         fulfillError: null,
       },
     });

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMerchPrisma } from "@/lib/merch/ensure-schema";
-import { toListingDto } from "@/lib/merch/dto";
-import { colorsForMedium, getMedium, parseColorIds, type MerchMediumId } from "@/lib/merch/catalog";
+import { toShopListing } from "@/lib/merch/dto";
 import ProductBuyBox from "./ProductBuyBox";
 import "../gift-shop.css";
+
+export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -30,13 +31,7 @@ export default async function MerchProductPage({ params }: Props) {
     include: { design: { select: { id: true, title: true } } },
   });
   if (!listing || !listing.published) notFound();
-  const mediumId = listing.mediumId as MerchMediumId;
-  const selected = parseColorIds(listing.colorsJson);
-  const shopListing = {
-    ...toListingDto(listing),
-    sizes: getMedium(mediumId)?.sizes ?? ["M"],
-    colorOptions: colorsForMedium(mediumId).filter((color) => selected.includes(color.id)),
-  };
+  const shopListing = toShopListing(listing);
 
   return (
     <div className="gift-shop-page">

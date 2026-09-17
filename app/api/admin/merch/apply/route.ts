@@ -6,19 +6,8 @@ import {
   getMedium,
   type MerchMediumId,
 } from "@/lib/merch/catalog";
-import { slugify } from "@/lib/merch/slug";
+import { uniqueListingSlug } from "@/lib/merch/slug";
 import { toListingDto } from "@/lib/merch/dto";
-
-async function uniqueSlug(base: string) {
-  const prisma = await getMerchPrisma();
-  let slug = slugify(base);
-  let i = 2;
-  while (await prisma.merchListing.findUnique({ where: { slug } })) {
-    slug = `${slugify(base)}-${i}`;
-    i += 1;
-  }
-  return slug;
-}
 
 export async function POST(req: NextRequest) {
   const ok = await isAuthenticated();
@@ -51,7 +40,7 @@ export async function POST(req: NextRequest) {
     );
     if (!chosen.length) continue;
     const title = `${design.title} ${medium.shortName}`;
-    const slug = await uniqueSlug(`${design.title}-${medium.shortName}`);
+    const slug = await uniqueListingSlug(prisma, `${design.title}-${medium.shortName}`);
     const listing = await prisma.merchListing.create({
       data: {
         designId: design.id,

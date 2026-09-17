@@ -25,8 +25,8 @@ export default function CustomMerchGrid({ listings }: { listings: ShopListing[] 
     return (
       <div className="custom-merch-empty">
         <p>
-          The first staff-approved custom designs are being prepared. Bonfire apparel below remains available, and this
-          collection will appear here as soon as a design is published from Merch Studio.
+          The first staff-approved custom designs are being prepared. Import products from the NLMSF Printify shop in
+          Merch Studio, or generate and publish artwork there. Bonfire apparel below remains available.
         </p>
       </div>
     );

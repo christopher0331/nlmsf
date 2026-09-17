@@ -1,4 +1,5 @@
 import { getMedium, type MerchMediumId } from "@/lib/merch/catalog";
+import type { PrintifyShopProduct } from "@/lib/merch/printify-map";
 
 export type PrintifyAddress = {
   first_name: string;
@@ -211,7 +212,7 @@ async function lineItemsPayload(items: PrintifyLineItem[]) {
   return lines;
 }
 
-async function resolvePrintifyShopId(): Promise<string> {
+export async function resolvePrintifyShopId(): Promise<string> {
   const explicit = getExplicitShopId();
   if (explicit) return explicit;
   const json = await printifyFetch("/shops.json", { method: "GET" }) as Array<{ id: number; title?: string }>;
@@ -253,6 +254,103 @@ export async function submitPrintifyOrder(input: {
   const created = await printifyFetch(`/shops/${shopId}/orders/express.json`, {
     method: "POST",
     body: JSON.stringify(body),
+  }) as { id?: string | number; status?: string };
+
+  const printifyId = created?.id != null ? String(created.id) : null;
+  if (printifyId) {
+    try {
+      await printifyFetch(`/shops/${shopId}/orders/${printifyId}/send_to_production.json`, {
+        method: "POST",
+      });
+    } catch (err) {
+      console.error("Printify send_to_production failed:", err);
+    }
+  }
+
+  return {
+    mode: "printify",
+    orderId: printifyId,
+    status: created?.status ?? "submitted",
+    raw: created,
+  };
+}
+
+export async function listPrintifyProducts(): Promise<PrintifyShopProduct[]> {
+  const shopId = await resolvePrintifyShopId();
+  const products: PrintifyShopProduct[] = [];
+  let page = 1;
+  let lastPage = 1;
+  do {
+    const json = await printifyFetch(`/shops/${shopId}/products.json?limit=50&page=${page}`, {
+      method: "GET",
+    }) as { data?: PrintifyShopProduct[]; last_page?: number } | PrintifyShopProduct[];
+    const batch = Array.isArray(json) ? json : json.data ?? [];
+    products.push(...batch);
+    lastPage = Array.isArray(json) ? page : json.last_page ?? page;
+    page += 1;
+  } while (page <= lastPage && page <= 40);
+  return products;
+}
+
+export async function getPrintifyProduct(productId: string): Promise<PrintifyShopProduct> {
+  const shopId = await resolvePrintifyShopId();
+  return printifyFetch(`/shops/${shopId}/products/${encodeURIComponent(productId)}.json`, {
+    method: "GET",
+  }) as Promise<PrintifyShopProduct>;
+}
+
+export async function markPrintifyProductPublished(
+  productId: string,
+  external: { id: string; handle: string },
+): Promise<void> {
+  if (!isPrintifyConfigured()) return;
+  const shopId = await resolvePrintifyShopId();
+  try {
+    await printifyFetch(`/shops/${shopId}/products/${encodeURIComponent(productId)}/publishing_succeeded.json`, {
+      method: "POST",
+      body: JSON.stringify({ external }),
+    });
+  } catch (err) {
+    console.warn("Printify publishing_succeeded handshake skipped:", err);
+  }
+}
+
+export type PrintifyCatalogLineItem = {
+  productId: string;
+  variantId: number;
+  quantity: number;
+};
+
+export async function submitPrintifyCatalogOrder(input: {
+  externalId: string;
+  label: string;
+  address: PrintifyAddress;
+  items: PrintifyCatalogLineItem[];
+}): Promise<PrintifySubmitResult> {
+  if (!isPrintifyConfigured()) {
+    return {
+      mode: "mock",
+      orderId: `mock_${input.externalId}`,
+      status: "queued_mock",
+      raw: { note: "Printify token not set.", items: input.items, address: input.address },
+    };
+  }
+
+  const shopId = await resolvePrintifyShopId();
+  const created = await printifyFetch(`/shops/${shopId}/orders.json`, {
+    method: "POST",
+    body: JSON.stringify({
+      external_id: input.externalId,
+      label: input.label,
+      line_items: input.items.map((item) => ({
+        product_id: item.productId,
+        variant_id: item.variantId,
+        quantity: item.quantity,
+      })),
+      shipping_method: 1,
+      send_shipping_notification: true,
+      address_to: input.address,
+    }),
   }) as { id?: string | number; status?: string };
 
   const printifyId = created?.id != null ? String(created.id) : null;

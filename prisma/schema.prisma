@@ -139,6 +139,8 @@ model MerchListing {
   priceCents  Int
   colorsJson  String      // JSON string[] of color ids
   published   Boolean     @default(false)
+  printifyProductId    String?  @unique
+  printifyVariantsJson String?  // mapped Printify variant ids / colors / sizes
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
 }

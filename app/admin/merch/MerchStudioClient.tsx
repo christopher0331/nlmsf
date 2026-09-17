@@ -36,6 +36,7 @@ type Listing = {
   colors: string[];
   published: boolean;
   imageUrl: string;
+  printifyProductId?: string | null;
 };
 
 type Order = {
@@ -83,6 +84,20 @@ export default function MerchStudioClient() {
   const [colorIds, setColorIds] = useState<string[]>(["purple", "black", "white"]);
   const [applying, setApplying] = useState(false);
   const [uploadTitle, setUploadTitle] = useState("");
+  const [syncing, setSyncing] = useState(false);
+  const [syncNote, setSyncNote] = useState("");
+  const [printifyPreview, setPrintifyPreview] = useState<{
+    shopId: string | null;
+    products: Array<{
+      id: string;
+      title: string;
+      enabledVariantCount: number;
+      mediumId: string | null;
+      importedListingId: string | null;
+      importedSlug: string | null;
+      published: boolean;
+    }>;
+  } | null>(null);
 
   const load = useCallback(async () => {
     try {
@@ -102,6 +117,25 @@ export default function MerchStudioClient() {
         throw new Error(json.error || "Failed to load merch studio");
       }
       setData(json);
+      const previewRes = await fetch("/api/admin/merch/printify-sync");
+      if (previewRes.ok) {
+        const preview = await previewRes.json() as {
+          shopId?: string | null;
+          products?: Array<{
+            id: string;
+            title: string;
+            enabledVariantCount: number;
+            mediumId: string | null;
+            importedListingId: string | null;
+            importedSlug: string | null;
+            published: boolean;
+          }>;
+        };
+        setPrintifyPreview({
+          shopId: preview.shopId ?? null,
+          products: preview.products ?? [],
+        });
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load merch studio");
     } finally {
@@ -189,6 +223,37 @@ export default function MerchStudioClient() {
     await load();
   }
 
+  async function syncPrintify() {
+    setSyncing(true);
+    setError("");
+    setSyncNote("");
+    try {
+      const res = await fetch("/api/admin/merch/printify-sync", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: "{}",
+      });
+      const json = await res.json() as {
+        error?: string;
+        created?: unknown[];
+        updated?: unknown[];
+        skipped?: Array<{ title?: string; reason?: string }>;
+      };
+      if (!res.ok) throw new Error(json.error || "Printify sync failed");
+      const created = json.created?.length ?? 0;
+      const updated = json.updated?.length ?? 0;
+      const skipped = json.skipped?.length ?? 0;
+      setSyncNote(
+        `Imported ${created} new gift-shop listing${created === 1 ? "" : "s"} from Printify, updated ${updated}, skipped ${skipped}.`,
+      );
+      await load();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Printify sync failed");
+    } finally {
+      setSyncing(false);
+    }
+  }
+
   async function retryFulfill(orderId: string) {
     await fetch(`/api/admin/merch/orders/${orderId}/fulfill`, { method: "POST" });
     await load();
@@ -273,6 +338,7 @@ export default function MerchStudioClient() {
       <p className="mb-6 max-w-3xl text-gray-600">
         Generate branded NLMSF artwork, approve what should go to print, apply it to the hats, hoodies, and
         short/long sleeve shirts you already sell, then let supporters buy on the gift shop. Printify prints and ships.
+        Products already created in the NLMSF Printify shop can be imported below so they appear in Custom Collection.
       </p>
 
       <div className="mb-6 grid gap-3 sm:grid-cols-3">
@@ -282,6 +348,59 @@ export default function MerchStudioClient() {
       </div>
 
       {error ? <p className="mb-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{error}</p> : null}
+      {syncNote ? <p className="mb-4 rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-800">{syncNote}</p> : null}
+
+      <section className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-[0_2px_6px_rgba(0,0,0,0.04)]">
+        <h2 className="m-0 mb-1 text-xl font-bold text-violet-700">Import Printify shop products</h2>
+        <p className="mb-4 mt-0 text-sm text-gray-500">
+          Creating a product in Printify does not put it on the gift shop by itself. Import copies title, artwork,
+          colors, and sizes from shop {printifyPreview?.shopId || "26344889"} into published Custom Collection listings.
+          Re-run this anytime you add products. Hidden listings stay hidden on later syncs.
+        </p>
+        <button
+          type="button"
+          onClick={() => void syncPrintify()}
+          disabled={syncing || !data.printifyConfigured}
+          className="cursor-pointer rounded-lg border-0 bg-violet-700 px-5 py-2.5 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
+        >
+          {syncing ? "Importing…" : "Import Printify products"}
+        </button>
+        {!data.printifyConfigured ? (
+          <p className="mt-3 text-sm text-amber-800">Set PRINTIFY_API_TOKEN on the host to import the shop catalog.</p>
+        ) : null}
+        {printifyPreview?.products?.length ? (
+          <div className="mt-5 overflow-x-auto">
+            <table className="w-full border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b border-gray-200 text-gray-500">
+                  <th className="py-2 pr-3 font-semibold">Printify product</th>
+                  <th className="py-2 pr-3 font-semibold">Variants</th>
+                  <th className="py-2 font-semibold">Gift shop</th>
+                </tr>
+              </thead>
+              <tbody>
+                {printifyPreview.products.map((product) => (
+                  <tr key={product.id} className="border-b border-gray-100">
+                    <td className="py-2 pr-3">{product.title}</td>
+                    <td className="py-2 pr-3">{product.enabledVariantCount}</td>
+                    <td className="py-2">
+                      {product.importedSlug ? (
+                        <Link href={`/gift-shop/${product.importedSlug}`} className="text-violet-700">
+                          {product.published ? "Published" : "Imported, hidden"} — /gift-shop/{product.importedSlug}
+                        </Link>
+                      ) : (
+                        "Not imported yet"
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : data.printifyConfigured ? (
+          <p className="mt-3 text-sm text-gray-500">No Printify products were returned for this shop yet.</p>
+        ) : null}
+      </section>
 
       <section className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-[0_2px_6px_rgba(0,0,0,0.04)]">
         <h2 className="m-0 mb-1 text-xl font-bold text-violet-700">1. Generate branded designs</h2>
@@ -487,7 +606,10 @@ export default function MerchStudioClient() {
                 {data.listings.map((listing) => (
                   <tr key={listing.id} className="border-b border-gray-100">
                     <td className="py-2 pr-3">{listing.title}</td>
-                    <td className="py-2 pr-3">{listing.mediumName}</td>
+                    <td className="py-2 pr-3">
+                      {listing.mediumName}
+                      {listing.printifyProductId ? " · Printify" : ""}
+                    </td>
                     <td className="py-2 pr-3">{listing.priceLabel}</td>
                     <td className="py-2 pr-3">
                       <Link href={`/gift-shop/${listing.slug}`} className="text-violet-700">

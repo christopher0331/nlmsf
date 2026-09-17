@@ -7,3 +7,16 @@ export function slugify(value: string): string {
     .slice(0, 60);
   return slug || "nlmsf-merch";
 }
+
+export async function uniqueListingSlug(
+  prisma: { merchListing: { findUnique: (args: { where: { slug: string } }) => Promise<{ id: string } | null> } },
+  base: string,
+): Promise<string> {
+  let slug = slugify(base);
+  let i = 2;
+  while (await prisma.merchListing.findUnique({ where: { slug } })) {
+    slug = `${slugify(base)}-${i}`;
+    i += 1;
+  }
+  return slug;
+}

@@ -24,6 +24,8 @@ const CREATE_STATEMENTS = [
     "priceCents" INTEGER NOT NULL,
     "colorsJson" TEXT NOT NULL,
     "published" BOOLEAN NOT NULL DEFAULT false,
+    "printifyProductId" TEXT,
+    "printifyVariantsJson" TEXT,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL,
     CONSTRAINT "MerchListing_designId_fkey" FOREIGN KEY ("designId") REFERENCES "MerchDesign" ("id") ON DELETE CASCADE ON UPDATE CASCADE
@@ -53,12 +55,31 @@ const CREATE_STATEMENTS = [
 
 const globalForMerch = globalThis as unknown as { merchSchemaPromise: Promise<void> | null };
 
+async function listingColumnNames(prisma: PrismaClient): Promise<Set<string>> {
+  try {
+    const rows = await prisma.$queryRawUnsafe(`PRAGMA table_info("MerchListing")`) as Array<{ name?: string }>;
+    return new Set(rows.map((row) => String(row.name ?? "")).filter(Boolean));
+  } catch {
+    return new Set();
+  }
+}
+
 export async function ensureMerchSchema(prisma: PrismaClient): Promise<void> {
   if (!globalForMerch.merchSchemaPromise) {
     globalForMerch.merchSchemaPromise = (async () => {
       for (const sql of CREATE_STATEMENTS) {
         await prisma.$executeRawUnsafe(sql);
       }
+      const columns = await listingColumnNames(prisma);
+      if (!columns.has("printifyProductId")) {
+        await prisma.$executeRawUnsafe(`ALTER TABLE "MerchListing" ADD COLUMN "printifyProductId" TEXT`);
+      }
+      if (!columns.has("printifyVariantsJson")) {
+        await prisma.$executeRawUnsafe(`ALTER TABLE "MerchListing" ADD COLUMN "printifyVariantsJson" TEXT`);
+      }
+      await prisma.$executeRawUnsafe(
+        `CREATE UNIQUE INDEX IF NOT EXISTS "MerchListing_printifyProductId_key" ON "MerchListing"("printifyProductId")`,
+      );
     })().catch((err) => {
       globalForMerch.merchSchemaPromise = null;
       throw err;

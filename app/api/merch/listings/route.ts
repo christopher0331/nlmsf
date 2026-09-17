@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { getMerchPrisma } from "@/lib/merch/ensure-schema";
-import { toListingDto } from "@/lib/merch/dto";
-import { colorsForMedium, getMedium, parseColorIds, type MerchMediumId } from "@/lib/merch/catalog";
+import { toShopListing } from "@/lib/merch/dto";
 
 export async function GET() {
   try {
@@ -13,13 +12,7 @@ export async function GET() {
     });
 
     return NextResponse.json({
-      listings: listings.map((listing) => ({
-        ...toListingDto(listing),
-        sizes: getMedium(listing.mediumId)?.sizes ?? ["M"],
-        colorOptions: colorsForMedium((listing.mediumId as MerchMediumId) || "short_tee").filter((color) =>
-          parseColorIds(listing.colorsJson).includes(color.id),
-        ),
-      })),
+      listings: listings.map(toShopListing),
     });
   } catch (err) {
     console.error("Merch listings failed:", err);

@@ -6,6 +6,8 @@ import CustomMerchSection from "./CustomMerchSection";
 import { BONFIRE_ORG_URL, BONFIRE_STORE_URL } from "./bonfire-products";
 import "./gift-shop.css";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Gift Shop | NLMSF",
   description:

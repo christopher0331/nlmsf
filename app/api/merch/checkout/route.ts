@@ -10,6 +10,7 @@ import {
   parseColorIds,
   type MerchMediumId,
 } from "@/lib/merch/catalog";
+import { listingVariantForCart } from "@/lib/merch/dto";
 import { getStripe, merchIntegrationIdentifier } from "@/lib/stripe";
 import type { StoredOrderItem } from "@/lib/merch/fulfill";
 
@@ -53,17 +54,23 @@ export async function POST(req: NextRequest) {
       }
       const mediumId = listing.mediumId as MerchMediumId;
       const quantity = normalizeQuantity(raw.quantity);
-      const allowedColors = parseColorIds(listing.colorsJson);
-      if (!allowedColors.includes(raw.colorId) || !getColor(raw.colorId)) {
-        return NextResponse.json({ error: "Choose a valid color." }, { status: 400 });
+      const printifyMatch = listingVariantForCart(listing, raw.colorId, raw.size);
+      if (listing.printifyProductId) {
+        if (!printifyMatch) {
+          return NextResponse.json({ error: "Choose a valid color and size for this Printify item." }, { status: 400 });
+        }
+      } else {
+        const allowedColors = parseColorIds(listing.colorsJson);
+        if (!allowedColors.includes(raw.colorId) || !getColor(raw.colorId)) {
+          return NextResponse.json({ error: "Choose a valid color." }, { status: 400 });
+        }
+        if (!colorsForMedium(mediumId).some((c) => c.id === raw.colorId)) {
+          return NextResponse.json({ error: "That color is not available on this item." }, { status: 400 });
+        }
+        if (!isValidSize(mediumId, raw.size)) {
+          return NextResponse.json({ error: "Choose a valid size." }, { status: 400 });
+        }
       }
-      if (!colorsForMedium(mediumId).some((c) => c.id === raw.colorId)) {
-        return NextResponse.json({ error: "That color is not available on this item." }, { status: 400 });
-      }
-      if (!isValidSize(mediumId, raw.size)) {
-        return NextResponse.json({ error: "Choose a valid size." }, { status: 400 });
-      }
-      const medium = getMedium(mediumId);
       orderItems.push({
         listingId: listing.id,
         designId: listing.designId,
@@ -73,9 +80,10 @@ export async function POST(req: NextRequest) {
         size: raw.size,
         quantity,
         priceCents: listing.priceCents,
+        printifyProductId: printifyMatch?.productId ?? null,
+        printifyVariantId: printifyMatch?.variant.id ?? null,
       });
       amountCents += listing.priceCents * quantity;
-      void medium;
     }
 
     const shippingCents = STANDARD_SHIPPING_CENTS;
@@ -117,7 +125,8 @@ export async function POST(req: NextRequest) {
       ],
       line_items: orderItems.map((item) => {
         const listing = listingMap.get(item.listingId)!;
-        const color = getColor(item.colorId);
+        const printifyMatch = listingVariantForCart(listing, item.colorId, item.size);
+        const colorName = printifyMatch?.variant.colorName ?? getColor(item.colorId)?.name ?? item.colorId;
         const medium = getMedium(item.mediumId);
         return {
           price_data: {
@@ -125,7 +134,7 @@ export async function POST(req: NextRequest) {
             unit_amount: item.priceCents,
             product_data: {
               name: `${listing.title} — ${medium?.shortName ?? item.mediumId}`,
-              description: `${color?.name ?? item.colorId} / ${item.size}. Proceeds support LMS research.`,
+              description: `${colorName} / ${item.size}. Proceeds support LMS research.`,
               images: [`${origin.replace(/\/$/, "")}/api/merch/designs/${item.designId}/image`],
             },
           },
