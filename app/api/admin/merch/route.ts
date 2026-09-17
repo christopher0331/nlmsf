@@ -5,6 +5,7 @@ import { toDesignDto, toListingDto, toOrderDto } from "@/lib/merch/dto";
 import { isPrintifyConfigured } from "@/lib/merch/printify";
 import { MERCH_COLORS, MERCH_MEDIUMS } from "@/lib/merch/catalog";
 import { MERCH_THEMES } from "@/lib/merch/prompts";
+import { hidePrintifyTestListings } from "@/lib/merch/printify-publish";
 
 const DESIGN_LIST_SELECT = {
   id: true,
@@ -23,6 +24,9 @@ export async function GET() {
     if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
     const prisma = await getMerchPrisma();
+    await hidePrintifyTestListings(prisma).catch((err) => {
+      console.warn("Could not hide Printify test listings:", err);
+    });
     const [designs, listings, orders] = await Promise.all([
       prisma.merchDesign.findMany({
         orderBy: { createdAt: "desc" },

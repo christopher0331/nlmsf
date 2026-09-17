@@ -3,12 +3,14 @@ import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { uniqueListingSlug } from "@/lib/merch/slug";
 import {
   NLMSF_PRINTIFY_TEST_PRODUCT_IDS,
+  isPrintifyTestProductId,
   mapPrintifyProduct,
   parsePrintifyMockups,
   serializePrintifyVariants,
   type MappedPrintifyProduct,
   type PrintifyShopProduct,
 } from "@/lib/merch/printify-map";
+import { hidePrintifyTestListings } from "@/lib/merch/printify-publish";
 import {
   getPrintifyProduct,
   isPrintifyConfigured,
@@ -174,7 +176,7 @@ export async function upsertMappedPrintifyProduct(
   image: { bytes: Buffer; mimeType: string },
   options?: { publish?: boolean; origin?: string; markPublished?: boolean },
 ): Promise<{ action: "created" | "updated"; item: PrintifySyncItem }> {
-  const publish = options?.publish !== false;
+  const publish = isPrintifyTestProductId(mapped.productId) ? false : options?.publish !== false;
   const origin = options?.origin ?? siteOrigin();
   const existing = await prisma.merchListing.findFirst({
     where: { printifyProductId: mapped.productId },
@@ -362,84 +364,27 @@ export async function previewPrintifyShop() {
 type EnsurePrintifyResult = {
   complete: boolean;
   publishedExisting: number;
+  unpublished?: number;
   created: number;
   updated: number;
   missing: string[];
   error?: string;
 };
 
-const globalForEnsure = globalThis as unknown as {
-  printifyEnsureInflight: Promise<EnsurePrintifyResult> | null;
-  printifyEnsureDone: EnsurePrintifyResult | null;
-};
-
 export async function ensurePublishedPrintifyListings(
-  productIds: string[] = [...NLMSF_PRINTIFY_TEST_PRODUCT_IDS],
+  _productIds: string[] = [...NLMSF_PRINTIFY_TEST_PRODUCT_IDS],
 ): Promise<EnsurePrintifyResult> {
-  if (globalForEnsure.printifyEnsureDone?.complete) return globalForEnsure.printifyEnsureDone;
-  if (globalForEnsure.printifyEnsureInflight) return globalForEnsure.printifyEnsureInflight;
-
-  const run = (async (): Promise<EnsurePrintifyResult> => {
-    const wanted = [...new Set(productIds.map((id) => id.trim()).filter(Boolean))];
-    const prisma = await getMerchPrisma();
-    const existing = await prisma.merchListing.findMany({
-      where: { printifyProductId: { in: wanted } },
-      select: { id: true, printifyProductId: true, published: true },
-    });
-    const unpublishedIds = existing.filter((row) => !row.published).map((row) => row.id);
-    if (unpublishedIds.length) {
-      await prisma.merchListing.updateMany({
-        where: { id: { in: unpublishedIds } },
-        data: { published: true },
-      });
-    }
-    const have = new Set(existing.map((row) => row.printifyProductId).filter((id): id is string => Boolean(id)));
-    const missing = wanted.filter((id) => !have.has(id));
-    if (!missing.length) {
-      await refreshPrintifyListingMockups({ prisma }).catch((err) => {
-        console.warn("Printify mockup refresh skipped:", err);
-      });
-      return {
-        complete: true,
-        publishedExisting: unpublishedIds.length,
-        created: 0,
-        updated: 0,
-        missing: [],
-      };
-    }
-    if (!isPrintifyConfigured()) {
-      return {
-        complete: false,
-        publishedExisting: unpublishedIds.length,
-        created: 0,
-        updated: 0,
-        missing,
-        error: "Printify is not configured. Set PRINTIFY_API_TOKEN (or printify) on the host.",
-      };
-    }
-
-    const result = await syncConnectedPrintifyShop({ productIds: missing, publish: true });
-    const imported = new Set([
-      ...result.created.map((item) => item.productId),
-      ...result.updated.map((item) => item.productId),
-    ]);
-    const stillMissing = missing.filter((id) => !imported.has(id));
-    return {
-      complete: stillMissing.length === 0,
-      publishedExisting: unpublishedIds.length,
-      created: result.created.length,
-      updated: result.updated.length,
-      missing: stillMissing,
-      error: stillMissing.length ? result.skipped.map((row) => row.reason).join("; ") || "Import incomplete" : undefined,
-    };
-  })();
-
-  globalForEnsure.printifyEnsureInflight = run;
-  try {
-    const result = await run;
-    if (result.complete) globalForEnsure.printifyEnsureDone = result;
-    return result;
-  } finally {
-    globalForEnsure.printifyEnsureInflight = null;
-  }
+  const prisma = await getMerchPrisma();
+  const hidden = await hidePrintifyTestListings(prisma);
+  await refreshPrintifyListingMockups({ prisma }).catch((err) => {
+    console.warn("Printify mockup refresh skipped:", err);
+  });
+  return {
+    complete: true,
+    publishedExisting: 0,
+    unpublished: hidden.unpublished,
+    created: 0,
+    updated: 0,
+    missing: [],
+  };
 }

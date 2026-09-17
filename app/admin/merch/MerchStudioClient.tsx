@@ -195,8 +195,9 @@ export default function MerchStudioClient() {
     if (!selected) return;
     setApplying(true);
     setError("");
+    setSyncNote("");
     try {
-      const res = await fetch("/api/admin/merch/apply", {
+      const res = await fetch("/api/admin/merch/apply/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -206,13 +207,85 @@ export default function MerchStudioClient() {
           publish: true,
         }),
       });
-      const json = await res.json();
+      const json = await res.json() as {
+        error?: string;
+        listings?: Listing[];
+        printifyWarnings?: string[];
+      };
       if (!res.ok) throw new Error(json.error || "Could not apply to merch");
+      const created = json.listings ?? [];
+      const missingPhoto = created.filter((listing) => !listing.hasPrintifyMockup);
+      if (missingPhoto.length && data?.printifyConfigured) {
+        await createPrintifyPhotos(missingPhoto.map((listing) => listing.id));
+      } else if (created.length) {
+        const withPhotos = created.filter((listing) => listing.hasPrintifyMockup).length;
+        setSyncNote(
+          `Published ${created.length} listing${created.length === 1 ? "" : "s"}. ${withPhotos} already have Printify photos.`,
+        );
+      }
+      if (json.printifyWarnings?.length) {
+        setError(json.printifyWarnings.join(" "));
+      }
       await load();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not apply to merch");
     } finally {
       setApplying(false);
+    }
+  }
+
+  async function createPrintifyPhotos(listingIds?: string[]) {
+    setSyncing(true);
+    setError("");
+    setSyncNote("");
+    try {
+      const ids = listingIds?.length
+        ? listingIds
+        : (data?.listings.filter((listing) => !listing.hasPrintifyMockup).map((listing) => listing.id) ?? []);
+      if (!ids.length) {
+        setSyncNote("Every published listing already has a Printify product photo.");
+        return;
+      }
+      let created = 0;
+      let linked = 0;
+      let refreshed = 0;
+      let skipped = 0;
+      let hidden = 0;
+      const skipReasons: string[] = [];
+      for (const listingId of ids) {
+        const res = await fetch("/api/admin/merch/printify-publish/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ listingIds: [listingId], waitForMockups: true }),
+        });
+        const json = await res.json() as {
+          error?: string;
+          created?: unknown[];
+          linked?: unknown[];
+          refreshed?: unknown[];
+          skipped?: Array<{ title?: string; reason?: string }>;
+          hiddenTestListings?: number;
+        };
+        if (!res.ok) throw new Error(json.error || "Could not create Printify products");
+        created += json.created?.length ?? 0;
+        linked += json.linked?.length ?? 0;
+        refreshed += json.refreshed?.length ?? 0;
+        skipped += json.skipped?.length ?? 0;
+        hidden += json.hiddenTestListings ?? 0;
+        for (const row of json.skipped ?? []) {
+          skipReasons.push(`${row.title}: ${row.reason}`);
+        }
+      }
+      setSyncNote(
+        `Printify photos: created ${created}, linked ${linked}, refreshed ${refreshed}, skipped ${skipped}.` +
+          (hidden ? ` Hid ${hidden} test tee listing${hidden === 1 ? "" : "s"}.` : ""),
+      );
+      if (skipReasons.length) setError(skipReasons.slice(0, 4).join(" "));
+      await load();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not create Printify products");
+    } finally {
+      setSyncing(false);
     }
   }
 
@@ -338,9 +411,9 @@ export default function MerchStudioClient() {
       <AdminTabs active="merch" />
 
       <p className="mb-6 max-w-3xl text-gray-600">
-        Generate branded NLMSF artwork, approve what should go to print, apply it to the hats, hoodies, and
-        short/long sleeve shirts you already sell, then let supporters buy on the gift shop. Printify prints and ships.
-        Products already created in the NLMSF Printify shop can be imported below so they appear in Custom Collection.
+        Generate branded NLMSF artwork, approve what should go to print, then publish it. Publishing creates the Printify
+        product and pulls real product photos onto the gift shop. After checkout, Printify prints and ships. Existing
+        Printify shop products can still be imported below. Test tees stay hidden from the public shop.
       </p>
 
       <div className="mb-6 grid gap-3 sm:grid-cols-3">
@@ -356,8 +429,9 @@ export default function MerchStudioClient() {
         <h2 className="m-0 mb-1 text-xl font-bold text-violet-700">Import Printify shop products</h2>
         <p className="mb-4 mt-0 text-sm text-gray-500">
           Creating a product in Printify does not put it on the gift shop by itself. Import copies title, Printify’s
-          shirt photos, colors, and sizes from shop {printifyPreview?.shopId || "26344889"} into published Custom
-          Collection listings. Re-run this anytime you add products. Hidden listings stay hidden on later syncs.
+          shirt photos, colors, and sizes from shop {printifyPreview?.shopId || "26344889"} into Custom Collection
+          listings. NLMSF Test Tee products stay hidden. Re-run this anytime you add products. Hidden listings stay
+          hidden on later syncs.
         </p>
         <button
           type="button"
@@ -366,6 +440,14 @@ export default function MerchStudioClient() {
           className="cursor-pointer rounded-lg border-0 bg-violet-700 px-5 py-2.5 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
         >
           {syncing ? "Importing…" : "Import Printify products"}
+        </button>
+        <button
+          type="button"
+          onClick={() => void createPrintifyPhotos()}
+          disabled={syncing || !data.printifyConfigured}
+          className="ml-3 mt-3 cursor-pointer rounded-lg border border-violet-700 bg-white px-5 py-2.5 font-semibold text-violet-700 disabled:cursor-not-allowed disabled:opacity-70 sm:mt-0"
+        >
+          {syncing ? "Creating photos…" : "Create Printify products & mockups"}
         </button>
         {!data.printifyConfigured ? (
           <p className="mt-3 text-sm text-amber-800">Set PRINTIFY_API_TOKEN on the host to import the shop catalog.</p>
@@ -524,8 +606,8 @@ export default function MerchStudioClient() {
       <section className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-[0_2px_6px_rgba(0,0,0,0.04)]">
         <h2 className="m-0 mb-1 text-xl font-bold text-violet-700">3. Apply to merch and publish</h2>
         <p className="mb-4 mt-0 text-sm text-gray-500">
-          Approved art is placed on the same mediums you already sell: hats, hoodies, short sleeve, and long sleeve, in
-          multiple colors. Publishing adds them to the gift shop.
+          Approved art is placed on hats, hoodies, short sleeve, and long sleeve. Publishing creates the matching
+          Printify product and saves the real shirt/hat photo so the gift shop does not show the CSS placeholder.
         </p>
         {!selected || selected.status !== "approved" ? (
           <p className="text-gray-500">Approve a design, then select it to apply it across merch types.</p>
@@ -591,6 +673,25 @@ export default function MerchStudioClient() {
             </button>
           </>
         )}
+
+        {data.listings.some((listing) => !listing.hasPrintifyMockup) ? (
+          <div className="mt-5 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            <p className="m-0 mb-2">
+              {data.listings.filter((listing) => !listing.hasPrintifyMockup).length} listing
+              {data.listings.filter((listing) => !listing.hasPrintifyMockup).length === 1 ? " is" : "s are"} still using
+              the placeholder diagram. Create Printify products so the gift shop shows real mockups (Hope Courage
+              Strength 2 Hoodie and Champion of Hope items).
+            </p>
+            <button
+              type="button"
+              onClick={() => void createPrintifyPhotos()}
+              disabled={syncing || !data.printifyConfigured}
+              className="cursor-pointer rounded-lg border-0 bg-violet-700 px-4 py-2 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
+            >
+              {syncing ? "Creating Printify photos…" : "Create Printify products & mockups"}
+            </button>
+          </div>
+        ) : null}
 
         {data.listings.length ? (
           <div className="mt-6 overflow-x-auto">
