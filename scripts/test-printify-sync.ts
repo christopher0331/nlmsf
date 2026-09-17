@@ -117,7 +117,7 @@ async function main() {
 
   assert.equal(result.created.length, 2, `expected 2 created, got ${JSON.stringify(result)}`);
   assert.equal(result.skipped.length, 0, JSON.stringify(result.skipped));
-  assert.ok(result.created.every((item) => item.published));
+  assert.ok(result.created.every((item) => !item.published), "NLMSF Test Tees stay unpublished on import");
 
   const again = await syncPrintifyProductsToListings([first, second], {
     prisma,
@@ -129,16 +129,17 @@ async function main() {
   assert.equal(again.created.length, 0);
   assert.equal(again.updated.length, 2);
 
-  const listings = await prisma.merchListing.findMany({
-    where: { published: true },
+  const imported = await prisma.merchListing.findMany({
+    where: { printifyProductId: { in: [first.id, second.id] } },
     include: { design: { select: { id: true, title: true } } },
     orderBy: { createdAt: "desc" },
   });
-  const shop = listings.map(toShopListing);
+  assert.equal(imported.length, 2);
+  assert.ok(imported.every((listing) => listing.published === false));
+  const shop = imported.map(toShopListing);
   const titles = shop.map((listing) => listing.title);
   assert.ok(titles.includes("NLMSF Test Tee nlmsf.org"));
   assert.ok(titles.includes("NLMSF Test Tee — nlmsf.org"));
-  assert.ok(shop.every((listing) => listing.published));
   assert.ok(shop.every((listing) => listing.printifyProductId));
   const firstShop = shop.find((listing) => listing.printifyProductId === "6aaaf7a0d6dccab5fb0d9ccc");
   assert.ok(firstShop);
@@ -147,23 +148,19 @@ async function main() {
   assert.equal(firstShop.mockupUrl, "https://images.printify.com/mockup/example-front.jpg");
   assert.equal(firstShop.hasPrintifyMockup, true);
 
-  const g = globalThis as unknown as { printifyEnsureDone: unknown; printifyEnsureInflight: unknown };
-  g.printifyEnsureDone = null;
-  g.printifyEnsureInflight = null;
-  const ensured = await ensurePublishedPrintifyListings();
-  assert.equal(ensured.complete, true);
-  assert.deepEqual(ensured.missing, []);
+  const publicBefore = await prisma.merchListing.findMany({ where: { published: true } });
+  assert.ok(!publicBefore.some((listing) => /test tee/i.test(listing.title)));
 
   await prisma.merchListing.updateMany({
-    where: { printifyProductId: first.id },
-    data: { published: false },
+    where: { printifyProductId: { in: [first.id, second.id] } },
+    data: { published: true },
   });
-  g.printifyEnsureDone = null;
-  const republished = await ensurePublishedPrintifyListings();
-  assert.equal(republished.complete, true);
-  assert.ok(republished.publishedExisting >= 1);
-  const after = await prisma.merchListing.findFirst({ where: { printifyProductId: first.id } });
-  assert.equal(after?.published, true);
+  const hidden = await ensurePublishedPrintifyListings();
+  assert.ok(hidden.unpublishedTests >= 2, `expected test tees unpublished, got ${JSON.stringify(hidden)}`);
+  const afterHide = await prisma.merchListing.findMany({
+    where: { printifyProductId: { in: [first.id, second.id] } },
+  });
+  assert.ok(afterHide.every((listing) => listing.published === false));
 
   console.log(
     JSON.stringify(

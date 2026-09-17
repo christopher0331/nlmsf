@@ -1,7 +1,9 @@
+import { after } from "next/server";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { toShopListing } from "@/lib/merch/dto";
+import { unpublishTestMerchListings, preparePublicMerchCatalog } from "@/lib/merch/printify-publish";
 import { refreshPrintifyListingMockups } from "@/lib/merch/printify-sync";
 import ProductBuyBox from "./ProductBuyBox";
 import "../gift-shop.css";
@@ -26,6 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function MerchProductPage({ params }: Props) {
   const { slug } = await params;
   if (slug === "cart" || slug === "order-confirmation") notFound();
+  await unpublishTestMerchListings().catch((err) => {
+    console.error("Could not hide test merch listings:", err);
+  });
+  after(() =>
+    preparePublicMerchCatalog({ waitForMockupsMs: 0 }).catch((err) => {
+      console.error("Printify catalog prepare failed:", err);
+    }),
+  );
   await refreshPrintifyListingMockups().catch((err) => {
     console.error("Printify mockup refresh failed:", err);
   });

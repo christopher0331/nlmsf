@@ -98,13 +98,13 @@ export function addressFromStripeShipping(input: {
   };
 }
 
-type PrintifyVariant = {
+export type PrintifyCatalogVariant = {
   id: number;
   title?: string;
   options?: { color?: string; size?: string };
 };
 
-const variantCache = new Map<string, PrintifyVariant[]>();
+const variantCache = new Map<string, PrintifyCatalogVariant[]>();
 
 function normalizeOption(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "");
@@ -124,17 +124,41 @@ function colorAliases(colorName: string): string[] {
   return aliases[n] ?? [n];
 }
 
-async function listVariants(blueprintId: number, printProviderId: number): Promise<PrintifyVariant[]> {
+export function catalogVariantMatches(
+  variant: PrintifyCatalogVariant,
+  colorName: string,
+  size: string,
+): boolean {
+  const colorNeedles = colorAliases(colorName).map(normalizeOption);
+  const sizeNeedle = normalizeOption(size === "One Size" || size === "One size" ? "onesize" : size);
+  const color = normalizeOption(variant.options?.color ?? variant.title?.split("/")[0] ?? "");
+  const variantSize = normalizeOption(variant.options?.size ?? variant.title?.split("/")[1] ?? "");
+  const colorOk = colorNeedles.some((needle) => color.includes(needle) || needle.includes(color));
+  const sizeOk =
+    variantSize === sizeNeedle ||
+    variantSize.includes(sizeNeedle) ||
+    (sizeNeedle === "onesize" && (variantSize === "osfa" || variantSize === "onesize" || variantSize === ""));
+  return colorOk && sizeOk;
+}
+
+async function listVariants(blueprintId: number, printProviderId: number): Promise<PrintifyCatalogVariant[]> {
   const key = `${blueprintId}:${printProviderId}`;
   const cached = variantCache.get(key);
   if (cached) return cached;
   const json = await printifyFetch(
     `/catalog/blueprints/${blueprintId}/print_providers/${printProviderId}/variants.json`,
     { method: "GET" },
-  ) as { variants?: PrintifyVariant[] } | PrintifyVariant[];
+  ) as { variants?: PrintifyCatalogVariant[] } | PrintifyCatalogVariant[];
   const variants = Array.isArray(json) ? json : json.variants ?? [];
   variantCache.set(key, variants);
   return variants;
+}
+
+export async function listPrintifyCatalogVariants(
+  blueprintId: number,
+  printProviderId: number,
+): Promise<PrintifyCatalogVariant[]> {
+  return listVariants(blueprintId, printProviderId);
 }
 
 async function resolveVariantId(
@@ -144,18 +168,7 @@ async function resolveVariantId(
   size: string,
 ): Promise<number> {
   const variants = await listVariants(blueprintId, printProviderId);
-  const colorNeedles = colorAliases(colorName).map(normalizeOption);
-  const sizeNeedle = normalizeOption(size === "One Size" || size === "One size" ? "onesize" : size);
-  const match = variants.find((variant) => {
-    const color = normalizeOption(variant.options?.color ?? variant.title?.split("/")[0] ?? "");
-    const variantSize = normalizeOption(variant.options?.size ?? variant.title?.split("/")[1] ?? "");
-    const colorOk = colorNeedles.some((needle) => color.includes(needle) || needle.includes(color));
-    const sizeOk =
-      variantSize === sizeNeedle ||
-      variantSize.includes(sizeNeedle) ||
-      (sizeNeedle === "onesize" && (variantSize === "osfa" || variantSize === "onesize" || variantSize === ""));
-    return colorOk && sizeOk;
-  });
+  const match = variants.find((variant) => catalogVariantMatches(variant, colorName, size));
   if (!match) {
     throw new Error(
       `No Printify variant for ${colorName} / ${size} on blueprint ${blueprintId}. Check PRINTIFY_BLUEPRINT_* env values.`,
@@ -370,4 +383,72 @@ export async function submitPrintifyCatalogOrder(input: {
     status: created?.status ?? "submitted",
     raw: created,
   };
+}
+
+export type PrintifyUploadResult = {
+  id: string;
+  file_name?: string;
+  height?: number;
+  width?: number;
+  mime_type?: string;
+};
+
+export async function uploadPrintifyImage(input: {
+  fileName: string;
+  contents?: string;
+  url?: string;
+}): Promise<PrintifyUploadResult> {
+  if (!input.contents && !input.url) {
+    throw new Error("Printify image upload needs file contents or a public URL.");
+  }
+  const json = await printifyFetch("/uploads/images.json", {
+    method: "POST",
+    body: JSON.stringify({
+      file_name: input.fileName,
+      ...(input.url ? { url: input.url } : { contents: input.contents }),
+    }),
+  }) as PrintifyUploadResult;
+  if (!json?.id) throw new Error("Printify image upload did not return an id.");
+  return json;
+}
+
+export type PrintifyProductCreatePayload = {
+  title: string;
+  description?: string;
+  blueprint_id: number;
+  print_provider_id: number;
+  tags?: string[];
+  variants: Array<{ id: number; price: number; is_enabled: boolean }>;
+  print_areas: Array<{
+    variant_ids: number[];
+    placeholders: Array<{
+      position: string;
+      images: Array<{ id: string; x: number; y: number; scale: number; angle: number }>;
+    }>;
+  }>;
+};
+
+export async function createPrintifyProduct(payload: PrintifyProductCreatePayload): Promise<PrintifyShopProduct> {
+  const shopId = await resolvePrintifyShopId();
+  const created = await printifyFetch(`/shops/${shopId}/products.json`, {
+    method: "POST",
+    body: JSON.stringify(payload),
+  }) as PrintifyShopProduct;
+  if (!created?.id) throw new Error("Printify product create did not return an id.");
+  return created;
+}
+
+export async function waitForPrintifyProductImages(
+  productId: string,
+  options?: { timeoutMs?: number; intervalMs?: number },
+): Promise<PrintifyShopProduct> {
+  const timeoutMs = options?.timeoutMs ?? 8000;
+  const intervalMs = options?.intervalMs ?? 2000;
+  const started = Date.now();
+  let product = await getPrintifyProduct(productId);
+  while (!(product.images ?? []).some((image) => image.src) && Date.now() - started < timeoutMs) {
+    await new Promise((resolve) => setTimeout(resolve, intervalMs));
+    product = await getPrintifyProduct(productId);
+  }
+  return product;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import MerchMockup from "@/components/merch/MerchMockup";
 import { addToCart } from "@/lib/merch/cart";
 import type { MerchMediumId } from "@/lib/merch/catalog";
@@ -19,11 +19,44 @@ export type ShopListing = {
   designImageUrl?: string;
   mockupUrl?: string | null;
   mockupsByColor?: Record<string, string>;
+  hasPrintifyMockup?: boolean;
   sizes: string[];
   colorOptions: { id: string; name: string; hex: string }[];
 };
 
-export default function CustomMerchGrid({ listings }: { listings: ShopListing[] }) {
+export default function CustomMerchGrid({ listings: initialListings }: { listings: ShopListing[] }) {
+  const [listings, setListings] = useState(initialListings);
+
+  useEffect(() => {
+    setListings(initialListings);
+  }, [initialListings]);
+
+  useEffect(() => {
+    if (!initialListings.some((listing) => !listing.hasPrintifyMockup)) return;
+    let cancelled = false;
+    let attempts = 0;
+    let timer = 0;
+    const poll = async () => {
+      attempts += 1;
+      try {
+        const res = await fetch("/api/merch/listings/");
+        if (!res.ok) return;
+        const json = (await res.json()) as { listings?: ShopListing[] };
+        if (cancelled || !json.listings) return;
+        setListings(json.listings);
+        if (json.listings.every((listing) => listing.hasPrintifyMockup) || attempts >= 5) return;
+        timer = window.setTimeout(() => void poll(), 7000);
+      } catch {
+        if (!cancelled && attempts < 5) timer = window.setTimeout(() => void poll(), 7000);
+      }
+    };
+    timer = window.setTimeout(() => void poll(), 4000);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [initialListings]);
+
   if (!listings.length) {
     return (
       <div className="custom-merch-empty">

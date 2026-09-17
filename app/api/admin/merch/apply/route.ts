@@ -8,6 +8,8 @@ import {
 } from "@/lib/merch/catalog";
 import { uniqueListingSlug } from "@/lib/merch/slug";
 import { toListingDto } from "@/lib/merch/dto";
+import { isPrintifyConfigured } from "@/lib/merch/printify";
+import { ensurePrintifyProductsForListings } from "@/lib/merch/printify-publish";
 
 export async function POST(req: NextRequest) {
   const ok = await isAuthenticated();
@@ -30,7 +32,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Approve the design before applying it to merch." }, { status: 400 });
   }
 
-  const listings = [];
+  const createdIds: string[] = [];
   for (const mediumId of mediumIds) {
     const medium = getMedium(mediumId);
     if (!medium) continue;
@@ -52,14 +54,28 @@ export async function POST(req: NextRequest) {
         colorsJson: JSON.stringify(chosen),
         published: publish,
       },
-      include: { design: true },
     });
-    listings.push(toListingDto(listing));
+    createdIds.push(listing.id);
   }
 
-  if (!listings.length) {
+  if (!createdIds.length) {
     return NextResponse.json({ error: "No valid merch types or colors were selected." }, { status: 400 });
   }
 
-  return NextResponse.json({ listings });
+  let printifyWarning: string | undefined;
+  if (publish && isPrintifyConfigured()) {
+    const printify = await ensurePrintifyProductsForListings(createdIds, { waitForMockupsMs: 6000 });
+    if (printify.error) printifyWarning = printify.error;
+  }
+
+  const listings = await prisma.merchListing.findMany({
+    where: { id: { in: createdIds } },
+    include: { design: true },
+    orderBy: { createdAt: "asc" },
+  });
+
+  return NextResponse.json({
+    listings: listings.map(toListingDto),
+    warning: printifyWarning,
+  });
 }

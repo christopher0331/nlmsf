@@ -1,18 +1,28 @@
+import { after } from "next/server";
 import { NextResponse } from "next/server";
 import { getMerchPrisma } from "@/lib/merch/ensure-schema";
 import { toShopListing } from "@/lib/merch/dto";
-import { ensurePublishedPrintifyListings, refreshPrintifyListingMockups } from "@/lib/merch/printify-sync";
+import { preparePublicMerchCatalog } from "@/lib/merch/printify-publish";
+import { refreshPrintifyListingMockups } from "@/lib/merch/printify-sync";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    await ensurePublishedPrintifyListings().catch((err) => {
-      console.error("Printify auto-import failed:", err);
+    const prepared = await preparePublicMerchCatalog({ waitForMockupsMs: 0 }).catch((err) => {
+      console.error("Printify catalog prepare failed:", err);
+      return null;
     });
     await refreshPrintifyListingMockups().catch((err) => {
       console.error("Printify mockup refresh failed:", err);
     });
+    if (prepared && prepared.items.some((item) => item.linked && !item.hasMockup)) {
+      after(() =>
+        refreshPrintifyListingMockups().catch((err) => {
+          console.error("Printify delayed mockup refresh failed:", err);
+        }),
+      );
+    }
     const prisma = await getMerchPrisma();
     const listings = await prisma.merchListing.findMany({
       where: { published: true },

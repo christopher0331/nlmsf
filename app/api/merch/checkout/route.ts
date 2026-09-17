@@ -11,6 +11,7 @@ import {
   type MerchMediumId,
 } from "@/lib/merch/catalog";
 import { listingVariantForCart } from "@/lib/merch/dto";
+import { parsePrintifyMockups } from "@/lib/merch/printify-map";
 import { getStripe, merchIntegrationIdentifier } from "@/lib/stripe";
 import type { StoredOrderItem } from "@/lib/merch/fulfill";
 
@@ -128,6 +129,10 @@ export async function POST(req: NextRequest) {
         const printifyMatch = listingVariantForCart(listing, item.colorId, item.size);
         const colorName = printifyMatch?.variant.colorName ?? getColor(item.colorId)?.name ?? item.colorId;
         const medium = getMedium(item.mediumId);
+        const mockups = parsePrintifyMockups(listing.printifyVariantsJson);
+        const photoUrl =
+          mockups.mockupsByColor[item.colorId] || mockups.mockupUrl || null;
+        const image = photoUrl || `${origin.replace(/\/$/, "")}/api/merch/designs/${item.designId}/image/`;
         return {
           price_data: {
             currency: "usd",
@@ -135,7 +140,7 @@ export async function POST(req: NextRequest) {
             product_data: {
               name: `${listing.title} — ${medium?.shortName ?? item.mediumId}`,
               description: `${colorName} / ${item.size}. Proceeds support LMS research.`,
-              images: [`${origin.replace(/\/$/, "")}/api/merch/designs/${item.designId}/image`],
+              images: [image],
             },
           },
           quantity: item.quantity,

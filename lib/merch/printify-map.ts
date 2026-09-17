@@ -6,6 +6,33 @@ export const NLMSF_PRINTIFY_TEST_PRODUCT_IDS = [
   "6aaaf795b04bce66250449a5",
 ] as const;
 
+export function isTestPrintifyProductId(id: string | null | undefined): boolean {
+  if (!id) return false;
+  return (NLMSF_PRINTIFY_TEST_PRODUCT_IDS as readonly string[]).includes(id);
+}
+
+export function isTestMerchTitle(title: string | null | undefined): boolean {
+  const value = String(title ?? "").trim();
+  if (!value) return false;
+  return /nlmsf\s*test\s*tee/i.test(value) || /\btest tees?\b/i.test(value);
+}
+
+export function isTestMerchListing(listing: {
+  title?: string | null;
+  printifyProductId?: string | null;
+  design?: { title?: string | null } | null;
+}): boolean {
+  return (
+    isTestPrintifyProductId(listing.printifyProductId) ||
+    isTestMerchTitle(listing.title) ||
+    isTestMerchTitle(listing.design?.title)
+  );
+}
+
+export function printifyListingTag(listingId: string): string {
+  return `nlmsf-listing:${listingId}`;
+}
+
 export type PrintifyOptionValue = {
   id: number;
   title: string;

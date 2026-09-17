@@ -87,6 +87,7 @@ export default function MerchStudioClient() {
   const [applying, setApplying] = useState(false);
   const [uploadTitle, setUploadTitle] = useState("");
   const [syncing, setSyncing] = useState(false);
+  const [publishingPrintify, setPublishingPrintify] = useState(false);
   const [syncNote, setSyncNote] = useState("");
   const [printifyPreview, setPrintifyPreview] = useState<{
     shopId: string | null;
@@ -208,6 +209,11 @@ export default function MerchStudioClient() {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Could not apply to merch");
+      if (json.warning) {
+        setSyncNote(
+          `Listings published. Printify is still finishing shirt photos: ${json.warning}`,
+        );
+      }
       await load();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not apply to merch");
@@ -253,6 +259,40 @@ export default function MerchStudioClient() {
       setError(err instanceof Error ? err.message : "Printify sync failed");
     } finally {
       setSyncing(false);
+    }
+  }
+
+  async function publishPrintifyPhotos() {
+    setPublishingPrintify(true);
+    setError("");
+    setSyncNote("");
+    try {
+      const res = await fetch("/api/admin/merch/printify-publish/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: "{}",
+      });
+      const json = await res.json() as {
+        error?: string;
+        created?: number;
+        linked?: number;
+        unpublishedTests?: number;
+        mockupsUpdated?: number;
+        items?: Array<{ title?: string; hasMockup?: boolean; error?: string }>;
+      };
+      if (!res.ok) throw new Error(json.error || "Could not create Printify products");
+      const created = json.created ?? 0;
+      const linked = json.linked ?? 0;
+      const photos = json.items?.filter((item) => item.hasMockup).length ?? json.mockupsUpdated ?? 0;
+      const hidden = json.unpublishedTests ?? 0;
+      setSyncNote(
+        `Linked ${linked} Printify product${linked === 1 ? "" : "s"} (${created} new), ${photos} with shirt photos so far. ${hidden ? `Hid ${hidden} test tee${hidden === 1 ? "" : "s"} from the public shop. ` : ""}Refresh if photos are still rendering.`,
+      );
+      await load();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not create Printify products");
+    } finally {
+      setPublishingPrintify(false);
     }
   }
 
@@ -339,8 +379,9 @@ export default function MerchStudioClient() {
 
       <p className="mb-6 max-w-3xl text-gray-600">
         Generate branded NLMSF artwork, approve what should go to print, apply it to the hats, hoodies, and
-        short/long sleeve shirts you already sell, then let supporters buy on the gift shop. Printify prints and ships.
-        Products already created in the NLMSF Printify shop can be imported below so they appear in Custom Collection.
+        short/long sleeve shirts you already sell, then let supporters buy on the gift shop. Publishing creates matching
+        Printify products so the gift shop can show real shirt photos. Printify prints and ships. Products already
+        created in the NLMSF Printify shop can be imported below. NLMSF Test Tees stay hidden from the public shop.
       </p>
 
       <div className="mb-6 grid gap-3 sm:grid-cols-3">
@@ -356,8 +397,10 @@ export default function MerchStudioClient() {
         <h2 className="m-0 mb-1 text-xl font-bold text-violet-700">Import Printify shop products</h2>
         <p className="mb-4 mt-0 text-sm text-gray-500">
           Creating a product in Printify does not put it on the gift shop by itself. Import copies title, Printify’s
-          shirt photos, colors, and sizes from shop {printifyPreview?.shopId || "26344889"} into published Custom
-          Collection listings. Re-run this anytime you add products. Hidden listings stay hidden on later syncs.
+          shirt photos, colors, and sizes from shop {printifyPreview?.shopId || "26344889"} into Custom Collection.
+          Test tees stay hidden. Use “Create Printify products & sync photos” to backfill studio listings that are
+          missing mockups. Re-run import anytime you add products in Printify. Hidden listings stay hidden on later
+          syncs.
         </p>
         <button
           type="button"
@@ -366,6 +409,14 @@ export default function MerchStudioClient() {
           className="cursor-pointer rounded-lg border-0 bg-violet-700 px-5 py-2.5 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
         >
           {syncing ? "Importing…" : "Import Printify products"}
+        </button>
+        <button
+          type="button"
+          onClick={() => void publishPrintifyPhotos()}
+          disabled={publishingPrintify || !data.printifyConfigured}
+          className="ml-3 cursor-pointer rounded-lg border border-violet-700 bg-white px-5 py-2.5 font-semibold text-violet-700 disabled:cursor-not-allowed disabled:opacity-70"
+        >
+          {publishingPrintify ? "Syncing photos…" : "Create Printify products & sync photos"}
         </button>
         {!data.printifyConfigured ? (
           <p className="mt-3 text-sm text-amber-800">Set PRINTIFY_API_TOKEN on the host to import the shop catalog.</p>
@@ -525,7 +576,8 @@ export default function MerchStudioClient() {
         <h2 className="m-0 mb-1 text-xl font-bold text-violet-700">3. Apply to merch and publish</h2>
         <p className="mb-4 mt-0 text-sm text-gray-500">
           Approved art is placed on the same mediums you already sell: hats, hoodies, short sleeve, and long sleeve, in
-          multiple colors. Publishing adds them to the gift shop.
+          multiple colors. Publishing adds them to the gift shop and creates Printify products so supporters see real
+          shirt photos, not placeholder diagrams.
         </p>
         {!selected || selected.status !== "approved" ? (
           <p className="text-gray-500">Approve a design, then select it to apply it across merch types.</p>
