@@ -49,6 +49,7 @@ type ListingWithDesign = MerchListing & { design: MerchDesign };
 
 const listingLocks = new Map<string, Promise<PrintifyPublishItem>>();
 const designUploadCache = new Map<string, string>();
+const designUploadLocks = new Map<string, Promise<string>>();
 
 const globalForShopProducts = globalThis as unknown as {
   printifyShopProductsCache: { at: number; products: PrintifyShopProduct[] } | null;
@@ -177,13 +178,21 @@ function rememberShopProduct(product: PrintifyShopProduct) {
 async function uploadDesignImage(design: MerchDesign): Promise<string> {
   const cached = designUploadCache.get(design.id);
   if (cached) return cached;
-  const ext = mimeExtension(design.imageMime || "image/png");
-  const uploaded = await uploadPrintifyImage({
-    fileName: `${slugify(design.title)}-${design.id.slice(-6)}.${ext}`,
-    contents: Buffer.from(design.imageData).toString("base64"),
+  const inflight = designUploadLocks.get(design.id);
+  if (inflight) return inflight;
+  const run = (async () => {
+    const ext = mimeExtension(design.imageMime || "image/png");
+    const uploaded = await uploadPrintifyImage({
+      fileName: `${slugify(design.title)}-${design.id.slice(-6)}.${ext}`,
+      contents: Buffer.from(design.imageData).toString("base64"),
+    });
+    designUploadCache.set(design.id, uploaded.id);
+    return uploaded.id;
+  })().finally(() => {
+    designUploadLocks.delete(design.id);
   });
-  designUploadCache.set(design.id, uploaded.id);
-  return uploaded.id;
+  designUploadLocks.set(design.id, run);
+  return run;
 }
 
 function productMatchesListing(
