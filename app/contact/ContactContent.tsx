@@ -3,6 +3,8 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
+import HoneypotField from "@/components/HoneypotField";
+import { HONEYPOT_FIELD } from "@/lib/form-guard";
 
 const FAQ_ITEMS: Array<{
   q: string;
@@ -48,7 +50,7 @@ const FAQ_ITEMS: Array<{
   },
 ];
 
-export default function ContactContent() {
+export default function ContactContent({ formToken }: { formToken: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [formStatus, setFormStatus] = useState<string>("");
   const [sending, setSending] = useState(false);
@@ -85,6 +87,8 @@ export default function ContactContent() {
           message: data.get("message"),
           newsletter: data.get("newsletter") === "on",
           turnstileToken,
+          formToken: data.get("formToken"),
+          [HONEYPOT_FIELD]: data.get(HONEYPOT_FIELD) ?? "",
         }),
       });
 
@@ -181,9 +185,11 @@ export default function ContactContent() {
           </div>
           <form
             id="nlmsf-contact-form"
-            className="contact-form mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
+            className="contact-form relative mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
             onSubmit={handleSubmit}
           >
+            <HoneypotField id="nlmsf-extra" />
+            <input type="hidden" name="formToken" value={formToken} />
             <div className="form-group flex flex-col">
               <label htmlFor="nlmsf-name" className="mb-2 font-semibold text-slate-800">
                 Full Name *

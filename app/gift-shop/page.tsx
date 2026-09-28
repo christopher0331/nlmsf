@@ -5,6 +5,7 @@ import GiftShopOrderForm from "./GiftShopOrderForm";
 import CustomMerchSection from "./CustomMerchSection";
 import { BONFIRE_ORG_URL, BONFIRE_STORE_URL } from "./bonfire-products";
 import "./gift-shop.css";
+import { issueFormToken } from "@/lib/bot-filter";
 
 export const dynamic = "force-dynamic";
 
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 const ext = { target: "_blank" as const, rel: "noopener noreferrer" };
 
 export default function GiftShopPage() {
+  const formToken = issueFormToken();
   return (
     <div className="gift-shop-page">
       {/* Hero */}
@@ -225,6 +227,7 @@ export default function GiftShopPage() {
                       formId="order-yard-sign"
                       itemName="NLMSF Support Yard Sign"
                       itemPrice="$24.00"
+                      formToken={formToken}
                     />
                   </div>
                 </div>
@@ -247,6 +250,7 @@ export default function GiftShopPage() {
                       formId="order-wrist-bands"
                       itemName="LMS Wrist Bands"
                       itemPrice="$5.00 each"
+                      formToken={formToken}
                     />
                   </div>
                 </div>

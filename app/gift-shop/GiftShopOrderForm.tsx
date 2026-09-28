@@ -2,17 +2,21 @@
 
 import { useRef, useState } from "react";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
+import HoneypotField from "@/components/HoneypotField";
+import { HONEYPOT_FIELD } from "@/lib/form-guard";
 
 type GiftShopOrderFormProps = {
   itemName: string;
   itemPrice: string;
   formId: string;
+  formToken: string;
 };
 
 export default function GiftShopOrderForm({
   itemName,
   itemPrice,
   formId,
+  formToken,
 }: GiftShopOrderFormProps) {
   const [formStatus, setFormStatus] = useState("");
   const [sending, setSending] = useState(false);
@@ -67,6 +71,8 @@ export default function GiftShopOrderForm({
           message,
           newsletter: false,
           turnstileToken,
+          formToken: data.get("formToken"),
+          [HONEYPOT_FIELD]: data.get(HONEYPOT_FIELD) ?? "",
         }),
       });
 
@@ -95,10 +101,12 @@ export default function GiftShopOrderForm({
   return (
     <form
       id={formId}
-      className="gift-order-form"
+      className="gift-order-form relative"
       onSubmit={handleSubmit}
       aria-label={`Order form for ${itemName}`}
     >
+      <HoneypotField id={`${formId}-extra`} />
+      <input type="hidden" name="formToken" value={formToken} />
       <p className="gift-order-form-intro">
         Request an order below. Your request is emailed to Annie Achee, who will follow up to
         complete your purchase.

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactContent from "./ContactContent";
+import { issueFormToken } from "@/lib/bot-filter";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Contact Us | NLMSF",
@@ -11,6 +14,7 @@ export const metadata: Metadata = {
 const ext = { target: "_blank" as const, rel: "noopener noreferrer" };
 
 export default function ContactPage() {
+  const formToken = issueFormToken();
   return (
     <main>
       {/* Hero */}
@@ -207,7 +211,7 @@ export default function ContactPage() {
         </aside>
 
         <div className="main-content min-w-0 flex-1 p-4">
-          <ContactContent />
+          <ContactContent formToken={formToken} />
         </div>
       </div>
     </main>
