@@ -11,8 +11,6 @@ import HeroModal, {
 const HERO_IMG =
   "https://media.nlmsf.org/wp-content/uploads/2025/06/hero-section-1.png";
 const DONATE_URL = "https://nlmsf.org/?form=DONATE";
-const MAILCHIMP_ACTION =
-  "https://nlmsf.us13.list-manage.com/subscribe/post?u=7882c1010a69171493a3bed4b&id=7958b212a8&f_id=00a19fedf0";
 
 const btnOutline =
   "inline-block font-semibold text-sm py-2 px-5 rounded-md transition-all duration-300 border-2 border-white/75 cursor-pointer font-[inherit] text-white bg-white/15 hover:bg-white/25 hover:border-violet-100 hover:-translate-y-0.5";
@@ -20,7 +18,7 @@ const btnOutline =
 const heroTextShadow =
   "[text-shadow:0_1px_3px_rgba(15,23,42,0.5),0_2px_8px_rgba(15,23,42,0.25)]";
 
-export default function HeroSection() {
+export default function HeroSection({ formToken }: { formToken: string }) {
   const [subscribeOpen, setSubscribeOpen] = useState(false);
   const [communityOpen, setCommunityOpen] = useState(false);
   const [scrollArrowHidden, setScrollArrowHidden] = useState(false);
@@ -155,7 +153,7 @@ export default function HeroSection() {
         titleId="subscribe-modal-title"
       >
         <div id="mc_embed_signup">
-          <HeroSubscribeModalContent mailchimpAction={MAILCHIMP_ACTION} />
+          <HeroSubscribeModalContent formToken={formToken} />
         </div>
       </HeroModal>
 

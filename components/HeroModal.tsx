@@ -1,10 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import {
   NEWSLETTER_SOURCE_MERGE_TAG,
   NEWSLETTER_SOURCE_OPTIONS,
 } from "@/lib/newsletter-source";
+import NewsletterGuardFields from "@/components/NewsletterGuardFields";
+import { HONEYPOT_FIELD } from "@/lib/form-guard";
 
 type HeroModalProps = {
   open: boolean;
@@ -110,49 +113,68 @@ const COMMUNITY_GROUPS = [
   },
 ] as const;
 
-export function HeroSubscribeModalContent({
-  mailchimpAction,
-}: {
-  mailchimpAction: string;
-}) {
+export function HeroSubscribeModalContent({ formToken }: { formToken: string }) {
+  const pathname = usePathname() || "/";
   const [source, setSource] = useState("");
+  const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const email = new FormData(form).get("EMAIL");
+    const data = new FormData(form);
+    const email = data.get("EMAIL");
     const emailStr = typeof email === "string" ? email.trim() : "";
     if (!emailStr) return;
+    setError("");
+    setSubscribed(false);
+    setSending(true);
 
+    const extra = data.get(HONEYPOT_FIELD);
     try {
-      await fetch("/api/newsletter-signup", {
+      const res = await fetch("/api/newsletter-signup/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           email: emailStr,
           source,
-          page: typeof window !== "undefined" ? window.location.pathname : "/",
+          page: pathname,
+          formToken,
+          [HONEYPOT_FIELD]: typeof extra === "string" ? extra : "",
         }),
       });
+      const json = (await res.json().catch(() => null)) as { error?: string } | null;
+      if (!res.ok) {
+        setError(json?.error || "Something went wrong. Please try again.");
+        return;
+      }
+      form.reset();
+      setSource("");
+      setSubscribed(true);
     } catch {
-      // Attribution is best-effort; Mailchimp subscribe still proceeds.
+      setError("Network error. Please try again.");
+    } finally {
+      setSending(false);
     }
-
-    form.submit();
   }
 
   return (
     <form
-      action={mailchimpAction}
+      action="/api/newsletter-signup/"
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
       className="validate"
-      target="_blank"
       noValidate
       onSubmit={handleSubmit}
     >
-      <div id="mc_embed_signup_scroll">
+        <div id="mc_embed_signup_scroll">
+        <NewsletterGuardFields
+          formToken={formToken}
+          page={pathname}
+          honeypotId="hero-subscribe-extra"
+        />
         <p className="m-0 mb-4 text-sm text-gray-600 leading-relaxed">
           Get research updates, event news, and community resources delivered to your inbox.
         </p>
@@ -196,23 +218,26 @@ export function HeroSubscribeModalContent({
           <div className="response" id="mce-error-response" style={{ display: "none" }} />
           <div className="response" id="mce-success-response" style={{ display: "none" }} />
         </div>
-        <div aria-hidden="true" style={{ position: "absolute", left: -5000 }}>
-          <input
-            type="text"
-            name="b_7882c1010a69171493a3bed4b_7958b212a8"
-            tabIndex={-1}
-            defaultValue=""
-          />
-        </div>
+        {error ? (
+          <p role="alert" className="mb-3 text-sm text-red-700">
+            {error}
+          </p>
+        ) : null}
+        {subscribed ? (
+          <p role="status" className="mb-3 text-sm text-green-800">
+            Thank you for subscribing. You&apos;ll receive updates soon!
+          </p>
+        ) : null}
         <input
           type="submit"
           name="subscribe"
           id="mc-embedded-subscribe"
           className={btnPrimaryClass}
-          value="Subscribe to updates"
+          value={sending ? "Subscribing…" : "Subscribe to updates"}
+          disabled={sending}
         />
         <p className="mt-3 mb-0 text-xs text-gray-500 text-center leading-relaxed">
-          Opens Mailchimp in a new tab to complete signup.
+          You may get a confirmation email to finish signing up.
         </p>
       </div>
     </form>

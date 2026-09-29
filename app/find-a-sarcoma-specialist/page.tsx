@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import "./find-a-sarcoma-specialist.css";
+import NewsletterGuardFields from "@/components/NewsletterGuardFields";
+import { issueFormToken } from "@/lib/bot-filter";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Find a Sarcoma Specialist | NLMSF",
@@ -10,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function FindASarcomaSpecialistPage() {
+  const formToken = issueFormToken();
   return (
     <div className="find-sarcoma-specialist-page">
       {/* Hero */}
@@ -155,12 +160,18 @@ export default function FindASarcomaSpecialistPage() {
                   <h3>Newsletter &amp; Snapshots</h3>
                 </div>
                 <div className="newsletter-form">
-                  <form action="/api/send-email" method="POST">
+                  <form action="/api/newsletter-signup/" method="POST">
+                    <NewsletterGuardFields
+                      formToken={formToken}
+                      page="/find-a-sarcoma-specialist"
+                      honeypotId="find-specialist-newsletter-extra"
+                    />
+                    <input type="hidden" name="requireName" value="1" />
                     <div className="form-group">
-                      <input type="text" name="name" placeholder="Name" required />
+                      <input type="text" name="name" placeholder="Name" required autoComplete="name" />
                     </div>
                     <div className="form-group">
-                      <input type="email" name="email" placeholder="Email" required />
+                      <input type="email" name="email" placeholder="Email" required autoComplete="email" />
                     </div>
                     <button type="submit" className="newsletter-submit-btn">Subscribe</button>
                   </form>
