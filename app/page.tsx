@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
+import JamaConsensusSpotlight from "@/components/JamaConsensusSpotlight";
 import HomeThreeColumns from "@/components/HomeThreeColumns";
 import RecentUpdates from "@/components/RecentUpdates";
 import EducationVideosSection from "@/components/EducationVideosSection";
@@ -37,6 +38,7 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
+      <JamaConsensusSpotlight />
       <HomeThreeColumns />
       <TestimonialsScrollSection />
       <SharingVoicesSection />
