@@ -17,6 +17,19 @@ export interface YearSection {
 
 export const YEARS: YearSection[] = [
   {
+    year: "2026",
+    pubs: [
+      { title: "Cabozantinib and Temozolomide in Unresectable or Metastatic Leiomyosarcoma and Other Soft Tissue Sarcomas: Multicentre Phase 2 Trial", authors: "Monga V, Okuno S, Van Tine B, Pollack SM, Agulnik M et al.", journal: "Lancet Oncol. 2026;27(2):223-232", date: "Jan 16, 2026", url: "https://pubmed.ncbi.nlm.nih.gov/41554272/", type: "Clinical Trial", note: "NCT04200443 — 12-week PFS 74% in LMS cohort" },
+      { title: "Phase 1/2 Study of Ontorpacept (TTI-621) plus Doxorubicin in Unresectable or Metastatic High-Grade Leiomyosarcoma", authors: "Movva S, Allgood V, Chugh R, Davis LE, Chawla S et al.", journal: "British Journal of Cancer", date: "Aug 4, 2026", url: "https://pubmed.ncbi.nlm.nih.gov/42552364/", type: "Clinical Trial", note: "NCT04996004" },
+      { title: "Phase II Multi-Cohort Study of Pemetrexed plus Cisplatin in Relapsed or Refractory Advanced STS: Leiomyosarcoma Cohort (ALBATROSS-SARC-LMS01)", authors: "Kim HS, Yun KH, Kim JH, Lee S, Rha SY et al.", journal: "J Clin Oncology (ASCO 2026)", date: "May 27, 2026", url: "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.11559", type: "Clinical Trial", note: "NCT04605770" },
+      { title: "Real-World Outcomes of Doxorubicin plus Trabectedin (D+T) in Leiomyosarcoma", authors: "Soewito S, El Assaad N, Nakazawa MS, Somaiah N, Nassif Haddad EF et al.", journal: "J Clin Oncology (ASCO 2026)", url: "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.e23536", type: "Research Article" },
+      { title: "Predicting Immunotherapy Benefit in Leiomyosarcoma through Active Chromatin cfDNA Profiling", authors: "Lopes CDH, Wu HT, Dilger K, Siu LL, Abdul Razak AR et al.", journal: "npj Precision Oncology", date: "May 5, 2026", url: "https://pubmed.ncbi.nlm.nih.gov/42086706/", type: "Research Article" },
+      { title: "Uterine Sarcomas: Clinical Management and a Review of Systemic Therapy", authors: "Kouri A, Lara O, Stein J", journal: "Obstetrical & Gynecological Survey", date: "May 1, 2026", url: "https://pubmed.ncbi.nlm.nih.gov/42096621/", type: "Review" },
+      { title: "Liquid Biopsy in Uterine Leiomyosarcoma: Current Biomarkers, Emerging Technologies, and Future Perspectives", authors: "Zhang D, Wang H", journal: "Current Oncology Reports", date: "Mar 31, 2026", url: "https://link.springer.com/article/10.1007/s11912-026-01767-6", type: "Review" },
+      { title: "Identification of Key Genes via Integrated Multi-Omics and Machine Learning Uncovers Tumor Biological Features and Prognostic Biomarkers in Uterine Leiomyosarcoma", authors: "Lu W, Jiang S, Sun Q, Guo Y, Chen R et al.", journal: "Int J Med Sci 2026;23(3):927-949", date: "Feb 4, 2026", url: "https://pubmed.ncbi.nlm.nih.gov/41799759/", type: "Research Article" },
+    ],
+  },
+  {
     year: "2025",
     pubs: [
       { title: "Clinical Outcomes Following Stereotactic Radiosurgery for Brain Metastases from Sarcoma Primaries", journal: "Cancer, Jul 2025;131(13):e35931", url: "https://pubmed.ncbi.nlm.nih.gov/40543045/", type: "Research Article" },
