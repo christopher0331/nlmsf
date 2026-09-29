@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import "./home-page.css";
+import NewsletterGuardFields from "@/components/NewsletterGuardFields";
+import { issueFormToken } from "@/lib/bot-filter";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Home (Legacy) | NLMSF",
@@ -12,6 +16,7 @@ export const metadata: Metadata = {
 const ext = { target: "_blank" as const, rel: "noopener noreferrer" };
 
 export default function HomeOrphanPage() {
+  const formToken = issueFormToken();
   return (
     <div className="home-page">
       <section className="home-hero">
@@ -95,13 +100,19 @@ export default function HomeOrphanPage() {
           </h2>
           <p className="heart-help">We Have A Heart To Help!</p>
           <h4>Subscribe To The Weekly News Tracker Newsletters</h4>
-          <form className="home-newsletter-form" action="#" method="post" aria-label="Newsletter signup">
+          <form className="home-newsletter-form" action="/api/newsletter-signup/" method="post" aria-label="Newsletter signup">
+            <NewsletterGuardFields
+              formToken={formToken}
+              page="/home"
+              honeypotId="legacy-home-newsletter-extra"
+            />
             <input
               type="email"
               name="email"
               placeholder="Email"
               required
               aria-label="Email address"
+              autoComplete="email"
             />
             <button type="submit">Send</button>
           </form>

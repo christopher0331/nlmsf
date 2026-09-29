@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CopayAssistancePrograms from "@/components/CopayAssistancePrograms";
+import NewsletterGuardFields from "@/components/NewsletterGuardFields";
+import { issueFormToken } from "@/lib/bot-filter";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Financial Assistance | NLMSF",
@@ -28,6 +32,7 @@ const CFAC_ORGS = [
 ];
 
 export default function FinancialAssistance2Page() {
+  const formToken = issueFormToken();
   return (
     <main>
       {/* Hero */}
@@ -140,9 +145,15 @@ export default function FinancialAssistance2Page() {
                   </span>
                   <h3 className="text-sm font-semibold text-gray-800">Newsletter &amp; Snapshots</h3>
                 </div>
-                <form action="/api/send-email" method="POST" className="space-y-2">
-                  <input type="text" name="name" placeholder="Name" required className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-[#e91e63] focus:outline-none focus:ring-1 focus:ring-[#e91e63]" />
-                  <input type="email" name="email" placeholder="Email" required className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-[#e91e63] focus:outline-none focus:ring-1 focus:ring-[#e91e63]" />
+                <form action="/api/newsletter-signup/" method="POST" className="space-y-2">
+                  <NewsletterGuardFields
+                    formToken={formToken}
+                    page="/financial-assistance-2"
+                    honeypotId="financial-assistance-newsletter-extra"
+                  />
+                  <input type="hidden" name="requireName" value="1" />
+                  <input type="text" name="name" placeholder="Name" required autoComplete="name" className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-[#e91e63] focus:outline-none focus:ring-1 focus:ring-[#e91e63]" />
+                  <input type="email" name="email" placeholder="Email" required autoComplete="email" className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-[#e91e63] focus:outline-none focus:ring-1 focus:ring-[#e91e63]" />
                   <button type="submit" className="mt-2 w-full rounded bg-[#e91e63] px-3 py-2 text-sm font-medium text-white hover:bg-[#c2185b]">
                     Subscribe
                   </button>
