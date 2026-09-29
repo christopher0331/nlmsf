@@ -31,6 +31,9 @@ export default function InternationalResearchRoundtablePage() {
           <div className="nav-section section-intro">
             <a href="#intro" className="nav-link">Introduction</a>
           </div>
+          <div className="nav-section section-publications">
+            <a href="#publications" className="nav-link">Publications</a>
+          </div>
           <div className="nav-section section-rfp">
             <a href="#rfp-announcement" className="nav-link">RFP Announcement</a>
           </div>
@@ -91,6 +94,51 @@ export default function InternationalResearchRoundtablePage() {
                 <li>Clinical Trials Assessment</li>
                 <li>Imaging Strategies and Radiomics</li>
               </ul>
+            </div>
+          </div>
+
+          <div id="publications" className="content-section">
+            <h2 className="section-title rose">Publications</h2>
+            <div className="content-panel rose">
+              <p>
+                Consensus papers from the International LMS Research Roundtable and its patient-advocacy partners.
+              </p>
+              <div className="pub-list">
+                <article className="pub-card pub-card-featured">
+                  <p className="pub-kicker">New · September 10, 2026</p>
+                  <h3>Management of Soft Tissue and Visceral Leiomyosarcomas</h3>
+                  <p className="pub-meta">
+                    Campos F, Gladdy R, Achee A, et al., for the Leiomyosarcoma Global Consensus Group. <em>JAMA Oncology</em>. September 10, 2026.
+                  </p>
+                  <p>
+                    The first international consensus on the diagnosis and management of soft tissue and visceral leiomyosarcoma. Clinicians, researchers, and patient advocates — including the National Leiomyosarcoma Foundation — reviewed the evidence and set shared recommendations, and named the questions that still need LMS-specific trials.
+                  </p>
+                  <p>
+                    <a href="https://jamanetwork.com/journals/jamaoncology/article-abstract/2853976" {...ext}>
+                      Read in JAMA Oncology
+                    </a>
+                  </p>
+                </article>
+                <article className="pub-card">
+                  <p className="pub-kicker">2021 · Cancers</p>
+                  <h3>Unmet Medical Needs and Future Perspectives for Leiomyosarcoma Patients</h3>
+                  <p className="pub-meta">
+                    Kasper B, Achee A, Schuster K, et al. A position paper from the National Leiomyosarcoma Foundation (NLMSF) and Sarcoma Patients EuroNet (SPAEN). <em>Cancers</em>. February 20, 2021;13(4):886.
+                  </p>
+                  <p>
+                    This white paper arose from a leiomyosarcoma research meeting in October 2020 hosted by the National Leiomyosarcoma Foundation (NLMSF) and Sarcoma Patients EuroNet (SPAEN). It summarizes state-of-the-art treatments, identifies knowledge gaps and unmet needs, and guides the community toward clinical trials and basic research that can close those gaps.
+                  </p>
+                  <p>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7924026/" {...ext}>
+                      Read on PubMed Central
+                    </a>
+                    {" · "}
+                    <a href="https://www.mdpi.com/2072-6694/13/4/886" {...ext}>
+                      Read on MDPI
+                    </a>
+                  </p>
+                </article>
+              </div>
             </div>
           </div>
 

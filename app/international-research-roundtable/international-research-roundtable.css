@@ -134,6 +134,10 @@
   border-left-color: #3b82f6;
 }
 
+.irr-page .section-publications .nav-link {
+  border-left-color: #e11d48;
+}
+
 .irr-page .section-rfp .nav-link {
   border-left-color: #6366f1;
 }
@@ -216,6 +220,11 @@
   border-color: #fde68a;
 }
 
+.irr-page .section-title.rose {
+  color: #be123c;
+  border-color: #fecdd3;
+}
+
 /* Content panels */
 .irr-page .content-panel {
   border-radius: 0.75rem;
@@ -244,6 +253,51 @@
 .irr-page .content-panel.amber {
   background: linear-gradient(to right, #fffbeb, #fef3c7);
   border-color: #fde68a;
+}
+
+.irr-page .content-panel.rose {
+  background: linear-gradient(to right, #fff1f2, #ffe4e6);
+  border-color: #fecdd3;
+}
+
+.irr-page .pub-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.irr-page .pub-card {
+  background: #ffffff;
+  border: 1px solid #fecdd3;
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.15rem;
+}
+
+.irr-page .pub-card-featured {
+  border-color: #fb7185;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.08);
+}
+
+.irr-page .pub-kicker {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #be123c;
+}
+
+.irr-page .pub-card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: #111827;
+}
+
+.irr-page .pub-meta {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.9rem;
+  color: #4b5563;
 }
 
 .irr-page .content-panel p,
