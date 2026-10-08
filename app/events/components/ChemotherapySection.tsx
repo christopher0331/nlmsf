@@ -23,6 +23,62 @@ export default function ChemotherapySection() {
           chemotherapy and targeted treatment options for Leiomyosarcoma patients.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
+          <article
+            id="cardiotoxicity-sarcoma-treatments"
+            className="flex h-full scroll-mt-28 flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm"
+          >
+            <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
+              YouTube Recording
+            </div>
+            <a
+              href="https://youtu.be/qclMiIS4d08"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative overflow-hidden rounded-xl">
+                <Image
+                  src="https://img.youtube.com/vi/qclMiIS4d08/mqdefault.jpg"
+                  alt="Cardiotoxicity and Sarcoma Treatments - Video Thumbnail"
+                  width={640}
+                  height={360}
+                  className="h-auto w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+                <i
+                  className="fas fa-play-circle absolute inset-0 flex items-center justify-center text-5xl text-white/90 drop-shadow"
+                  aria-hidden
+                />
+              </div>
+            </a>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 text-xs font-bold text-purple-700">
+                JU
+              </div>
+              <div>
+                <h5 className="text-sm font-semibold text-purple-700">Jenica Upshaw, M.D.</h5>
+              </div>
+            </div>
+            <h4 className="mt-4 text-lg font-semibold text-slate-900">
+              Cardiotoxicity and Sarcoma Treatments
+            </h4>
+            <p className="mt-2 text-sm text-slate-500">
+              <i className="far fa-calendar mr-2" aria-hidden /> September 25, 2026
+            </p>
+            <p className="mt-3 text-sm text-slate-600">
+              Discussion by Jenica Upshaw, M.D. on cardiac effects of sarcoma chemotherapy
+              and radiation treatments.
+            </p>
+            <a
+              href="https://youtu.be/qclMiIS4d08"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-700 hover:text-purple-800"
+            >
+              <i className="fas fa-play-circle" aria-hidden /> Watch Recording
+            </a>
+          </article>
+
           <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
               YouTube Podcast
