@@ -4,13 +4,53 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+type FeaturedItem = {
+  id: string;
+  source: string;
+  title: string;
+  href: string;
+  summary: string;
+};
+
 type Member = {
   id: string;
   name: string;
   role: string;
   imageUrl: string;
   bio: string[];
+  featured?: FeaturedItem[];
 };
+
+function MemberInTheNews({
+  items,
+  withAnchor = false,
+}: {
+  items: FeaturedItem[];
+  withAnchor?: boolean;
+}) {
+  return (
+    <>
+      {items.map((item) => (
+        <aside
+          key={item.id}
+          id={withAnchor ? item.id : undefined}
+          className="nlmsf-member-news"
+        >
+          <span className="nlmsf-member-news-label">In the News</span>
+          <a
+            href={item.href}
+            className="nlmsf-member-news-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {item.source} “{item.title}”
+          </a>
+          <p>{item.summary}</p>
+        </aside>
+      ))}
+    </>
+  );
+}
 
 export default function OurBoardClient() {
   const medicalBoardMembers = useMemo<Member[]>(
@@ -82,6 +122,16 @@ export default function OurBoardClient() {
           "My goal is to continue the necessary focus of providing resource support through patient-centric programs and initiatives to promote support and advocacy within the LMS Community. I am also committed to the Sarcoma Research Community — to always stand and be ready to provide the support requested of the researchers who are the Heroes Among Us, while the Patient/Family community are the Champions of Hope in survivorship.",
           "Launched the Patient-Family Advocacy Sarcoma Think Tank Roundtable Initiative and the Clinical Trials Patient-Family Perspectives Network.",
           "Co-founder of the Sarcoma Coalition of 30+ sarcoma organizations (www.sarcomacoalition.us) and a Steering Committee Member of the National Cancer Institute for Sarcoma, and Patient Advocacy Committee for Sarcoma; a member of the following oncology organizations: Connective Tissue Oncology Society (CTOS), American Society of Clinical Oncologists (ASCO), European Society of Medical Oncologists (ESMO), American Association of Cancer Research (AACR), ECOG-ACIN, HAYSTACK Foundation, National Rare Diseases Organization (NORD) / Rare Cancer Coalition, the Colorado Survivorship Taskforce.",
+        ],
+        featured: [
+          {
+            id: "annie-achee-in-the-news",
+            source: "Global Genes",
+            title: "Rare Leader",
+            href: "https://globalgenes.org/blog/rare-leader-annie-achee-president-of-the-national-leiomyosarcoma-foundation/",
+            summary:
+              "Global Genes featured Annie Achee in its March 22, 2018 Rare Leader series. She describes becoming involved after her husband's 2011 leiomyosarcoma diagnosis, and how the foundation educates and supports patients, families, and caregivers while funding and partnering on research.",
+          },
         ],
       },
     ],
@@ -603,6 +653,9 @@ export default function OurBoardClient() {
                     />
                     <h3 className="nlmsf-member-name">{member.name}</h3>
                     <p className="nlmsf-member-role">{member.role}</p>
+                    {member.featured ? (
+                      <MemberInTheNews items={member.featured} withAnchor />
+                    ) : null}
                     <button
                       className="nlmsf-read-more nlmsf-read-more-leadership"
                       onClick={() => openModal(member)}
@@ -769,6 +822,9 @@ export default function OurBoardClient() {
                   <p key={`${activeMember.id}-bio-${index}`}>{paragraph}</p>
                 ))
               : null}
+            {activeMember?.featured ? (
+              <MemberInTheNews items={activeMember.featured} />
+            ) : null}
           </div>
         </div>
         <button
