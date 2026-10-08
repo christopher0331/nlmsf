@@ -17,6 +17,7 @@ type VideoItem = {
   description?: string;
   url: string;
   customImage?: string;
+  anchor?: string;
 };
 
 const clinicalTrialsVideos: VideoItem[] = [
@@ -85,6 +86,16 @@ const clinicalTrialsVideos: VideoItem[] = [
 
 const chemoVideos: VideoItem[] = [
   {
+    id: "qclMiIS4d08",
+    title: "Cardiotoxicity and Sarcoma Treatments",
+    presenter: "Jenica Upshaw, M.D.",
+    date: "September 25, 2026",
+    description:
+      "Discussion by Jenica Upshaw, M.D. on cardiac effects of sarcoma chemotherapy and radiation treatments.",
+    url: "https://youtu.be/qclMiIS4d08",
+    anchor: "cardiotoxicity-sarcoma-treatments",
+  },
+  {
     id: "h6Ks9U7F5ek",
     title: "Sarcoma Treatmenting Counseling Program",
     presenter: "Dr. Mark Agulnik, City of Hope",
@@ -141,7 +152,10 @@ const sarculatorVideos: VideoItem[] = [
 
 function VideoCard({ video }: { video: VideoItem }) {
   return (
-    <article className="video-item">
+    <article
+      id={video.anchor}
+      className={video.anchor ? "video-item scroll-mt-28" : "video-item"}
+    >
       <a
         href={video.url}
         target="_blank"

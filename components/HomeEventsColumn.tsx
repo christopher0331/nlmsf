@@ -1,9 +1,20 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import EventScheduleDisplay from "@/components/EventScheduleDisplay";
 import { formatEventDayBadge } from "@/lib/event-datetime";
+
+const FEATURED_RECORDING = {
+  id: "qclMiIS4d08",
+  title: "Cardiotoxicity and Sarcoma Treatments",
+  date: "2026-09-25",
+  when: "September 25, 2026 · 1:00 PM ET",
+  description:
+    "Discussion by Jenica Upshaw, M.D. on cardiac effects of sarcoma chemotherapy and radiation treatments.",
+  url: "https://youtu.be/qclMiIS4d08",
+};
 
 type EventItem = {
   id: string;
@@ -92,6 +103,9 @@ export default function HomeEventsColumn() {
     );
   }
 
+  const featuredAlreadyListed = past.some((ev) =>
+    (ev.recordingUrl ?? "").includes(FEATURED_RECORDING.id),
+  );
   const sectionTitle =
     "text-xl font-bold text-violet-700 m-0 mb-3 flex items-center gap-2 pb-2 border-b-2 border-violet-700";
   const dateBlock =
@@ -160,10 +174,59 @@ export default function HomeEventsColumn() {
           <span className="text-lg" aria-hidden>↩</span>
           Recent Recordings
         </h2>
-        {past.length === 0 ? (
+        {past.length === 0 && featuredAlreadyListed ? (
           <p className="p-4 text-gray-500 text-sm m-0">No recordings yet.</p>
         ) : (
           <ul className="list-none m-0 p-0 flex flex-col gap-4 bg-[#f8f5fb] rounded-xl border border-gray-200 p-4 shadow-[0_4px_12px_rgba(15,23,42,0.06)]">
+            {!featuredAlreadyListed && (
+              <li
+                id="cardiotoxicity-sarcoma-treatments"
+                className={`${cardBase} scroll-mt-28`}
+              >
+                <div className={dateBlock}>
+                  <span className="text-[0.65rem] uppercase tracking-wider leading-tight">
+                    {formatEventDayBadge(FEATURED_RECORDING.date).month}
+                  </span>
+                  <span className="text-[1.35rem] leading-tight">
+                    {formatEventDayBadge(FEATURED_RECORDING.date).day}
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-[0.95rem] font-bold text-gray-800 m-0 mb-1.5 uppercase tracking-wide leading-snug">
+                    {FEATURED_RECORDING.title}
+                  </h4>
+                  <p className="text-[0.8rem] text-gray-500 m-0 mb-2">{FEATURED_RECORDING.when}</p>
+                  <a
+                    href={FEATURED_RECORDING.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block mb-2 rounded-lg overflow-hidden"
+                  >
+                    <Image
+                      src={`https://img.youtube.com/vi/${FEATURED_RECORDING.id}/mqdefault.jpg`}
+                      alt="Cardiotoxicity and Sarcoma Treatments - Video Thumbnail"
+                      width={320}
+                      height={180}
+                      loading="lazy"
+                      className="h-auto w-full object-cover"
+                      sizes="280px"
+                    />
+                  </a>
+                  <p className="text-[0.85rem] text-gray-600 m-0 mb-2 leading-snug">
+                    {FEATURED_RECORDING.description}
+                  </p>
+                  <a
+                    href={FEATURED_RECORDING.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={btnBase}
+                  >
+                    <span className="text-[0.7rem]" aria-hidden>▶</span>
+                    Watch recording
+                  </a>
+                </div>
+              </li>
+            )}
             {past.slice(0, 5).map((ev) => (
               <li key={ev.id} className={cardBase}>
                 <div className={dateBlock}>
