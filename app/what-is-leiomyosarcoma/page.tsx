@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "./what-is-leiomyosarcoma.css";
 import SidebarNav from "./SidebarNav";
+import NewsletterGuardFields from "@/components/NewsletterGuardFields";
+import { issueFormToken } from "@/lib/bot-filter";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "What Is Leiomyosarcoma? | NLMSF",
@@ -37,6 +41,7 @@ const ONCLIVE_LMS_VIDEO = {
 } as const;
 
 export default function WhatIsLmsPage() {
+  const formToken = issueFormToken();
   return (
     <main className="what-lms-page">
       <section className="what-lms-hero">
@@ -219,9 +224,15 @@ export default function WhatIsLmsPage() {
 
               <div className="what-lms-community-card">
                 <h3>Newsletter &amp; Snapshots</h3>
-                <form className="what-lms-form" action="/api/send-email" method="POST">
-                  <input type="text" name="name" placeholder="Name" required />
-                  <input type="email" name="email" placeholder="Email" required />
+                <form className="what-lms-form" action="/api/newsletter-signup/" method="POST">
+                  <NewsletterGuardFields
+                    formToken={formToken}
+                    page="/what-is-leiomyosarcoma"
+                    honeypotId="what-lms-newsletter-extra"
+                  />
+                  <input type="hidden" name="requireName" value="1" />
+                  <input type="text" name="name" placeholder="Name" required autoComplete="name" />
+                  <input type="email" name="email" placeholder="Email" required autoComplete="email" />
                   <button type="submit">Subscribe</button>
                 </form>
               </div>

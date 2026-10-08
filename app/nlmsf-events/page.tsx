@@ -548,22 +548,46 @@ export default function NlmsfEventsPage() {
           <div className="content-section" id="community-events">
             <h2 className="section-title purple">Our Community Events</h2>
 
-            <div className="content-panel purple" id="fundraising">
-              <div className="panel-header">
-                <div className="icon-circle purple">
-                  <i className="fas fa-calendar-alt"></i>
+            <div id="fundraising">
+              <div className="content-panel purple" id="ice-cream-social-cincinnati">
+                <div className="panel-header">
+                  <div className="icon-circle purple">
+                    <i className="fas fa-ice-cream"></i>
+                  </div>
+                  <div>
+                    <h3>Ice Cream Social Fundraiser</h3>
+                    <p>Cincinnati, Ohio</p>
+                  </div>
                 </div>
-                <div>
-                  <h3>Drury College Beaux Arts Ball</h3>
-                  <p>In Honor of Susie Kapal</p>
+                <div className="event-photo">
+                  <Image
+                    src="/images/nlmsf-events/ice-cream-social-cincinnati.webp"
+                    alt="Three women standing together in front of a pink wall with a large circular sign"
+                    width={196}
+                    height={196}
+                  />
                 </div>
+                <p className="panel-text">
+                  A community Ice Cream Social held in Cincinnati to raise funds and awareness for leiomyosarcoma (LMS) research through the National Leiomyosarcoma Foundation.
+                </p>
               </div>
-              <p className="panel-text">
-                Annual fundraising event supporting LMS research and patient advocacy through community engagement and celebration.
-              </p>
-            </div>
 
-            <div className="content-panel indigo">
+              <div className="content-panel purple">
+                <div className="panel-header">
+                  <div className="icon-circle purple">
+                    <i className="fas fa-calendar-alt"></i>
+                  </div>
+                  <div>
+                    <h3>Drury College Beaux Arts Ball</h3>
+                    <p>In Honor of Susie Kapal</p>
+                  </div>
+                </div>
+                <p className="panel-text">
+                  Annual fundraising event supporting LMS research and patient advocacy through community engagement and celebration.
+                </p>
+              </div>
+
+              <div className="content-panel indigo">
               <div className="panel-header">
                 <div className="icon-circle indigo">
                   <i className="fas fa-heart"></i>
@@ -639,6 +663,7 @@ export default function NlmsfEventsPage() {
                   View Event Details
                 </a>
               </div>
+            </div>
             </div>
 
             <div className="content-panel amber" id="memorial-events">

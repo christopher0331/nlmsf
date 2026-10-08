@@ -278,20 +278,28 @@
   box-shadow: 0 4px 14px rgba(225, 29, 72, 0.08);
 }
 
-.irr-page .pub-kicker {
-  margin: 0 0 0.35rem 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #be123c;
+.irr-page .content-panel h3.pub-year {
+  margin: 1.25rem 0 0.65rem 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #9f1239;
 }
 
-.irr-page .pub-card h3 {
+.irr-page .content-panel h3.pub-year:first-of-type {
+  margin-top: 0.35rem;
+}
+
+.irr-page .pub-card h4 {
   margin: 0 0 0.4rem 0;
   font-size: 1.15rem;
   line-height: 1.35;
+  font-weight: 700;
   color: #111827;
+}
+
+.irr-page #roundtable-publications,
+.irr-page #publications {
+  scroll-margin-top: 1.25rem;
 }
 
 .irr-page .pub-meta {

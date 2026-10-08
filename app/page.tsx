@@ -13,6 +13,9 @@ import PatientVideoTestimonialsSection from "@/components/PatientVideoTestimonia
 import CTASection from "@/components/CTASection";
 import TestimonialsScrollSection from "@/components/TestimonialsScrollSection";
 import SharingVoicesSection from "@/components/SharingVoicesSection";
+import { issueFormToken } from "@/lib/bot-filter";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "National Leiomyosarcoma Foundation | NLMSF",
@@ -35,16 +38,17 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const formToken = issueFormToken();
   return (
     <main>
-      <HeroSection />
+      <HeroSection formToken={formToken} />
       <JamaConsensusSpotlight />
       <HomeThreeColumns />
       <TestimonialsScrollSection />
       <SharingVoicesSection />
       <RecentUpdates />
       <EducationVideosSection />
-      <NewsletterCTA />
+      <NewsletterCTA formToken={formToken} />
       <ImpactInActionSection />
       <ReportsSection />
       <StatsSection />
