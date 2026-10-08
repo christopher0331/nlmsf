@@ -47,7 +47,7 @@ export default function JamaConsensusSpotlight() {
               <i className="fas fa-external-link-alt text-xs" aria-hidden />
             </a>
             <Link
-              href="/international-research-roundtable#publications"
+              href="/international-research-roundtable#roundtable-publications"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white no-underline transition hover:bg-white/20"
             >
               Roundtable publications

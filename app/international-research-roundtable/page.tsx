@@ -32,7 +32,7 @@ export default function InternationalResearchRoundtablePage() {
             <a href="#intro" className="nav-link">Introduction</a>
           </div>
           <div className="nav-section section-publications">
-            <a href="#publications" className="nav-link">Publications</a>
+            <a href="#roundtable-publications" className="nav-link">Roundtable Publications</a>
           </div>
           <div className="nav-section section-rfp">
             <a href="#rfp-announcement" className="nav-link">RFP Announcement</a>
@@ -97,38 +97,50 @@ export default function InternationalResearchRoundtablePage() {
             </div>
           </div>
 
-          <div id="publications" className="content-section">
-            <h2 className="section-title rose">Publications</h2>
+          <div id="roundtable-publications" className="content-section">
+            <h2 id="publications" className="section-title rose">International Research Roundtable Publications</h2>
             <div className="content-panel rose">
               <p>
                 Consensus papers from the International LMS Research Roundtable and its patient-advocacy partners.
               </p>
+              <h3 className="pub-year">2026</h3>
               <div className="pub-list">
                 <article className="pub-card pub-card-featured">
-                  <p className="pub-kicker">New · September 10, 2026</p>
-                  <h3>Management of Soft Tissue and Visceral Leiomyosarcomas</h3>
+                  <h4>Management of Soft Tissue and Visceral Leiomyosarcomas</h4>
                   <p className="pub-meta">
-                    Campos F, Gladdy R, Achee A, et al., for the Leiomyosarcoma Global Consensus Group. <em>JAMA Oncology</em>. September 10, 2026.
+                    Campos F, Gladdy R, Achee A, et al; Leiomyosarcoma Global Consensus Group. <em>JAMA Oncology</em>. Published online September 10, 2026. doi:10.1001/jamaoncol.2026.3366
                   </p>
                   <p>
-                    The first international consensus on the diagnosis and management of soft tissue and visceral leiomyosarcoma. Clinicians, researchers, and patient advocates — including the National Leiomyosarcoma Foundation — reviewed the evidence and set shared recommendations, and named the questions that still need LMS-specific trials.
+                    This publication brings together an international group of leiomyosarcoma specialists, researchers, and patient advocates to provide a current consensus on how leiomyosarcoma should be diagnosed, treated, and studied, and to identify the questions researchers still need to answer.
                   </p>
                   <p>
-                    <a href="https://jamanetwork.com/journals/jamaoncology/article-abstract/2853976" {...ext}>
+                    <a href="https://doi.org/10.1001/jamaoncol.2026.3366" {...ext}>
                       Read in JAMA Oncology
+                    </a>
+                    {" · "}
+                    <a href="/documents/patient-family-summary-management-of-soft-tissue-and-visceral-leiomyosarcomas.pdf">
+                      Patient-Family summary (PDF)
                     </a>
                   </p>
                 </article>
+              </div>
+              <h3 className="pub-year">2021</h3>
+              <div className="pub-list">
                 <article className="pub-card">
-                  <p className="pub-kicker">2021 · Cancers</p>
-                  <h3>Unmet Medical Needs and Future Perspectives for Leiomyosarcoma Patients</h3>
+                  <h4>
+                    Unmet Medical Needs and Future Perspectives for Leiomyosarcoma Patients—A Position Paper from the National LeioMyoSarcoma Foundation (NLMSF) and Sarcoma Patients EuroNet (SPAEN)
+                  </h4>
                   <p className="pub-meta">
-                    Kasper B, Achee A, Schuster K, et al. A position paper from the National Leiomyosarcoma Foundation (NLMSF) and Sarcoma Patients EuroNet (SPAEN). <em>Cancers</em>. February 20, 2021;13(4):886.
+                    Kasper B, Achee A, Schuster K, et al. <em>Cancers</em>. 2021;13(4):886. Published online February 20, 2021. doi:10.3390/cancers13040886
                   </p>
                   <p>
                     This white paper arose from a leiomyosarcoma research meeting in October 2020 hosted by the National Leiomyosarcoma Foundation (NLMSF) and Sarcoma Patients EuroNet (SPAEN). It summarizes state-of-the-art treatments, identifies knowledge gaps and unmet needs, and guides the community toward clinical trials and basic research that can close those gaps.
                   </p>
                   <p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/33672607/" {...ext}>
+                      Read on PubMed
+                    </a>
+                    {" · "}
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7924026/" {...ext}>
                       Read on PubMed Central
                     </a>
