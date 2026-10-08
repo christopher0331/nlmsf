@@ -361,6 +361,51 @@
   margin-bottom: 1rem;
 }
 
+.our-board-page .nlmsf-member-news {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto 1.25rem;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  scroll-margin-top: 1.5rem;
+}
+
+.our-board-page .nlmsf-member-news-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.our-board-page .nlmsf-member-news-link {
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.our-board-page .nlmsf-member-news-link:hover {
+  text-decoration: underline;
+}
+
+.our-board-page .nlmsf-member-news p {
+  margin: 0.4rem 0 0;
+  color: #4b5563;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.our-board-page .nlmsf-modal-body .nlmsf-member-news {
+  max-width: none;
+  margin-top: 0.5rem;
+}
+
 /* Sidebar Styles */
 .our-board-page .nlmsf-sidebar {
   position: sticky;
