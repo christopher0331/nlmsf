@@ -68,18 +68,6 @@ export default function DebGatesRunPage() {
             <i className="fas fa-person-running" aria-hidden />
             <span>Story shared with NLMSF</span>
           </div>
-          {showPhoto ? (
-            <div className="relative mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full shadow-md">
-              <Image
-                src={DEB_GATES_RUN.photoSrc}
-                alt={DEB_GATES_RUN.photoAlt}
-                fill
-                className="object-cover"
-                sizes="160px"
-                priority
-              />
-            </div>
-          ) : null}
           <h1
             className="mb-4 pb-1 text-3xl font-bold leading-tight md:text-5xl"
             style={sectionTitle}
@@ -110,6 +98,37 @@ export default function DebGatesRunPage() {
             This is Deb&apos;s story, as she shared it with the National
             Leiomyosarcoma Foundation.
           </p>
+          {showPhoto ? (
+            <div className="mx-auto mt-8 grid w-full max-w-[800px] grid-cols-1 items-center justify-items-center gap-6 md:grid-cols-2 md:gap-10">
+              <figure className="m-0 w-full max-w-[400px]">
+                <Image
+                  src={DEB_GATES_RUN.photoSrc}
+                  alt={DEB_GATES_RUN.photoAlt}
+                  width={DEB_GATES_RUN.photoWidth}
+                  height={DEB_GATES_RUN.photoHeight}
+                  className="h-auto w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+                  sizes="(min-width: 768px) 380px, 90vw"
+                  priority
+                />
+                <figcaption className="mt-2 text-center text-sm text-gray-500">
+                  {DEB_GATES_RUN.photoCaption}
+                </figcaption>
+              </figure>
+              <figure className="m-0 w-full max-w-[400px]">
+                <Image
+                  src={DEB_GATES_RUN.logoSrc}
+                  alt={DEB_GATES_RUN.logoAlt}
+                  width={DEB_GATES_RUN.logoWidth}
+                  height={DEB_GATES_RUN.logoHeight}
+                  className="h-auto w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+                  sizes="(min-width: 768px) 380px, 90vw"
+                />
+                <figcaption className="mt-2 text-center text-sm text-gray-500">
+                  {DEB_GATES_RUN.logoCaption}
+                </figcaption>
+              </figure>
+            </div>
+          ) : null}
         </div>
       </section>
 

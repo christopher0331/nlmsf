@@ -1,23 +1,34 @@
 /**
  * Deb Gates run — homepage card and /deb-gates-run/.
  *
- * Christopher must approve this wording and confirm Deb's permission before merge.
+ * showEventDetails stays off until a confirmed event name, date, and location
+ * exist. Do not invent them.
  *
- * TODO(christopher): do not flip these on with empty or guessed values.
- * - showEventDetails: event name, date, location, and distance, once Deb confirms them.
- * - showPhoto: a photo Deb has permitted. Never a stock image or someone else's photo.
- * - donateHref: confirm the NLMSF FundraiseUp form, or replace the URL.
- *   Do not point this at Joseph Jang's campaign (FUNRBJGPJSK) or the GoFundMe page.
+ * showPhoto is the race-day photo supplied for this page. It shows two people.
+ * Alt text and the caption must not name them or attach a specific event or
+ * date. It is not a portrait, so the homepage card does not crop it into an avatar.
+ *
+ * donateHref stays on the NLMSF FundraiseUp form.
+ * Do not point this at Joseph Jang's campaign (FUNRBJGPJSK) or the GoFundMe page.
  */
 export const DEB_GATES_RUN = {
   path: "/deb-gates-run/",
   showEventDetails: false,
-  showPhoto: false,
+  showPhoto: true,
   eventName: "",
   eventDate: "",
   eventLocation: "",
-  photoSrc: "",
-  photoAlt: "",
+  photoSrc: "/images/deb-gates/deb-race-day.webp",
+  photoAlt: "Two women with finisher medals and race bibs at a race event.",
+  photoWidth: 300,
+  photoHeight: 209,
+  photoCaption: "Race day",
+  logoSrc: "/images/deb-gates/champions-of-hope.webp",
+  logoAlt:
+    "Champions of Hope logo: Hope Drives Change, for LMS / Sarcoma Research.",
+  logoWidth: 285,
+  logoHeight: 291,
+  logoCaption: "Champions of Hope",
   donateHref:
     "/donate/?form=DONATE&utm_source=deb-gates-run&utm_medium=website&utm_campaign=deb-gates-run",
 } as const;
