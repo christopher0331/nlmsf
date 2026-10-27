@@ -118,6 +118,35 @@
  .resource-support-page .content-section {
    margin-bottom: 2rem;
  }
+
+ .resource-support-page #nccn-caregiver-guidelines {
+   scroll-margin-top: 7.5rem;
+ }
+
+ .resource-support-page .guideline-copy p {
+   color: #5a6a7e;
+   line-height: 1.7;
+   margin: 0 0 1rem;
+ }
+
+ .resource-support-page .guideline-copy p:last-child {
+   margin-bottom: 0;
+ }
+
+ .resource-support-page .guideline-copy a {
+   color: #1976d2;
+   font-weight: 600;
+   text-decoration: underline;
+ }
+
+ .resource-support-page .guideline-copy a:hover {
+   color: #0d47a1;
+ }
+
+ .resource-support-page .guideline-copy a i {
+   margin-left: 0.35rem;
+   font-size: 0.8rem;
+ }
  
  .resource-support-page .section-header {
    margin-bottom: 1.5rem;

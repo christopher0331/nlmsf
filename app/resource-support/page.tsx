@@ -50,6 +50,12 @@ export default function ResourceSupportPage() {
 
             <ul className="nav-links">
               <li>
+                <a href="#nccn-caregiver-guidelines" className="nav-link">
+                  <span className="nav-icon" aria-hidden />
+                  <span>New 2026 NCCN Guidelines for Caregivers</span>
+                </a>
+              </li>
+              <li>
                 <a href="#nccn-guidelines" className="nav-link">
                   <span className="nav-icon" aria-hidden />
                   <span>NCCN Guidelines</span>
@@ -111,6 +117,51 @@ export default function ResourceSupportPage() {
         </aside>
 
         <div className="content-container">
+          <div className="content-section" id="nccn-caregiver-guidelines">
+            <div className="section-header">
+              <h2>New 2026 NCCN Guidelines for Caregivers</h2>
+            </div>
+            <div className="content-panel">
+              <div className="guideline-copy">
+                <p>
+                  Today NCCN released a brand-new patient guideline to support those caregiving for
+                  loved ones with cancer.
+                </p>
+                <p>
+                  The new{" "}
+                  <a
+                    href="https://www.nccn.org/patientresources/patient-resources/guidelines-for-patients/guidelines-for-patients-details?patientGuidelineId=81"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    NCCN Guidelines for Patients: Caregiving for People with Cancer
+                    <i className="fas fa-external-link-alt" aria-hidden />
+                  </a>{" "}
+                  acknowledges the challenges of caregiving and provides support and encouragement.
+                </p>
+                <p>
+                  Caregivers often balance caring for a loved one, alongside the logistical,
+                  emotional and practical tasks for themselves and the person facing cancer.
+                </p>
+                <p>
+                  Through this new guide, NCCN and NCCN Foundation deliver tips for emotional
+                  support, finances, household tasks, legal concerns and medical management.
+                </p>
+                <p>
+                  Patrick Delaney, Executive Director of NCCN Foundation, shares: &quot;As more
+                  people are diagnosed with cancer every day, more loved ones are stepping into
+                  support roles, often for the first time. We wanted to meet this growing need by
+                  providing access to a free, dedicated resource specifically for caregivers.&quot;
+                </p>
+                <p>
+                  NCCN Foundation and the National LMS Foundation acknowledge the incredible
+                  dedication and care provided by caregivers, and sincerely hope this new, free
+                  guideline will provide real-life advice to support them.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="content-section" id="nccn-guidelines">
             <div className="section-header">
               <h2>Resources for Cancer Caregivers</h2>
