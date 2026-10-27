@@ -121,17 +121,76 @@ export default function HomeThreeColumns() {
             <DebGatesRunCard />
           </div>
 
-          <div className="mt-6 rounded-xl border border-gray-200 bg-white px-4 py-5 shadow-[0_4px_12px_rgba(15,23,42,0.06)] sm:px-5 sm:py-6">
-            <p className="m-0 text-[0.9375rem] leading-relaxed text-gray-700">
-              Through our website, educational programs, resources, and direct support, NLMSF is committed to helping patients and their families and caregivers:
-            </p>
-            <ul className="m-0 mt-4 list-disc space-y-2.5 pl-5 text-[0.9375rem] leading-relaxed text-gray-700 marker:text-[#6b46c1]">
-              <li>Understand your diagnosis through clear, credible, patient-friendly information.</li>
-              <li>Ask informed questions and have more meaningful conversations with their healthcare team.</li>
-              <li>Find knowledgeable specialists and resources to help guide their care.</li>
-              <li>Strengthen their voice and advocate for themselves throughout their journey.</li>
-              <li>Feel supported and empowered from diagnosis through treatment, survivorship, and beyond.</li>
-            </ul>
+          <div className="mt-6 overflow-hidden rounded-xl border border-[#ddd6fe] bg-gradient-to-br from-[#f5f3ff] via-white to-[#faf5ff] shadow-[0_6px_22px_rgba(107,70,193,0.13)]">
+            <div
+              className="h-1.5 bg-gradient-to-r from-[#6b46c1] via-[#7c3aed] to-[#c4b5fd]"
+              aria-hidden
+            />
+            <div className="px-4 py-4 sm:px-5 sm:py-5">
+              <p className="m-0 mb-2 text-xs font-semibold uppercase tracking-widest text-[#5b21b6]">
+                Our commitment
+              </p>
+              <p className="m-0 text-[0.9375rem] font-medium leading-relaxed text-[#3b2768]">
+                Through our website, educational programs, resources, and direct support, NLMSF is committed to helping patients and their families and caregivers:
+              </p>
+              <ul className="m-0 mt-3.5 list-none space-y-1 p-0">
+                <li className="flex items-start gap-2.5 rounded-lg px-1.5 py-1 motion-safe:animate-commitment-in motion-safe:transition-colors motion-safe:duration-200 hover:bg-white/80">
+                  <span
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-xs font-bold leading-none text-white"
+                    aria-hidden
+                  >
+                    1
+                  </span>
+                  <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-gray-800">
+                    Understand your diagnosis through clear, credible, patient-friendly information.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5 rounded-lg px-1.5 py-1 motion-safe:animate-commitment-in motion-safe:[animation-delay:70ms] motion-safe:transition-colors motion-safe:duration-200 hover:bg-white/80">
+                  <span
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-xs font-bold leading-none text-white"
+                    aria-hidden
+                  >
+                    2
+                  </span>
+                  <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-gray-800">
+                    Ask informed questions and have more meaningful conversations with their healthcare team.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5 rounded-lg px-1.5 py-1 motion-safe:animate-commitment-in motion-safe:[animation-delay:140ms] motion-safe:transition-colors motion-safe:duration-200 hover:bg-white/80">
+                  <span
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-xs font-bold leading-none text-white"
+                    aria-hidden
+                  >
+                    3
+                  </span>
+                  <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-gray-800">
+                    Find knowledgeable specialists and resources to help guide their care.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5 rounded-lg px-1.5 py-1 motion-safe:animate-commitment-in motion-safe:[animation-delay:210ms] motion-safe:transition-colors motion-safe:duration-200 hover:bg-white/80">
+                  <span
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-xs font-bold leading-none text-white"
+                    aria-hidden
+                  >
+                    4
+                  </span>
+                  <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-gray-800">
+                    Strengthen their voice and advocate for themselves throughout their journey.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5 rounded-lg px-1.5 py-1 motion-safe:animate-commitment-in motion-safe:[animation-delay:280ms] motion-safe:transition-colors motion-safe:duration-200 hover:bg-white/80">
+                  <span
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-xs font-bold leading-none text-white"
+                    aria-hidden
+                  >
+                    5
+                  </span>
+                  <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-gray-800">
+                    Feel supported and empowered from diagnosis through treatment, survivorship, and beyond.
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

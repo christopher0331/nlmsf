@@ -30,12 +30,17 @@ export default {
           "0%": { transform: "rotate(0deg) scale(1)" },
           "100%": { transform: "rotate(180deg) scale(1.1)" },
         },
+        "commitment-in": {
+          "0%": { opacity: "0", transform: "translateY(4px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "hero-bounce": "hero-bounce 1.5s ease-in-out infinite",
         "report-2023-float": "report-2023-float 8s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
         "hero-glow": "heroGlow 8s ease-in-out infinite alternate",
+        "commitment-in": "commitment-in 0.45s ease both",
       },
     },
   },
