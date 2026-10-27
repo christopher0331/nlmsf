@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import HomeEventsColumn from "@/components/HomeEventsColumn";
-import IronmanFundraiser from "@/components/IronmanFundraiser";
+import DebGatesRunCard from "@/components/DebGatesRunCard";
 import ClinicalTrialsCard from "@/components/ClinicalTrialsCard";
 import StormTrialAlert from "@/components/StormTrialAlert";
 import WebsiteNavigator from "@/components/WebsiteNavigator";
@@ -57,7 +57,7 @@ export default function HomeThreeColumns() {
 
         </div>
 
-        {/* Center column: Support Hotline + Ironman Fundraiser + OncLive image */}
+        {/* Center column: Support Hotline + Deb Gates run + OncLive image */}
         <div className="flex flex-col">
           <div className="rounded-xl bg-gradient-to-br from-[#6b46c1] to-[#4c1d95] p-6 text-center text-white shadow-[0_4px_20px_rgba(107,70,193,0.25)] relative overflow-hidden">
             <div
@@ -108,7 +108,7 @@ export default function HomeThreeColumns() {
           </div>
 
           <div className="mt-6">
-            <IronmanFundraiser />
+            <DebGatesRunCard />
           </div>
 
           <div className="mt-6 flex justify-center">
