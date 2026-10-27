@@ -47,7 +47,7 @@ export default function HomeThreeColumns() {
       aria-label="Resources and navigation"
     >
       <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-3">
-        {/* Left column: Journey Navigator + Storm trial alert + Clinical Trials */}
+        {/* Left column: Journey Navigator + Storm trial alert + Clinical Trials + OncLive image */}
         <div className="flex flex-col gap-0">
           <WebsiteNavigator />
 
@@ -55,9 +55,19 @@ export default function HomeThreeColumns() {
 
           <ClinicalTrialsCard />
 
+          <div className="mt-6">
+            <Image
+              src={ONCLIVE_IMG}
+              alt="OncLive Sarcoma"
+              width={640}
+              height={360}
+              className="h-auto w-full rounded-xl object-cover shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+              sizes="(min-width: 1024px) 420px, 90vw"
+            />
+          </div>
         </div>
 
-        {/* Center column: Support Hotline + Deb Gates run + OncLive image */}
+        {/* Center column: Support Hotline + Deb Gates run + commitment list */}
         <div className="flex flex-col">
           <div className="rounded-xl bg-gradient-to-br from-[#6b46c1] to-[#4c1d95] p-6 text-center text-white shadow-[0_4px_20px_rgba(107,70,193,0.25)] relative overflow-hidden">
             <div
@@ -111,15 +121,17 @@ export default function HomeThreeColumns() {
             <DebGatesRunCard />
           </div>
 
-          <div className="mt-6 flex justify-center">
-            <Image
-              src={ONCLIVE_IMG}
-              alt="OncLive Sarcoma"
-              width={640}
-              height={360}
-              className="w-full h-auto rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] object-cover"
-              sizes="(min-width: 1024px) 420px, 90vw"
-            />
+          <div className="mt-6 rounded-xl border border-gray-200 bg-white px-4 py-5 shadow-[0_4px_12px_rgba(15,23,42,0.06)] sm:px-5 sm:py-6">
+            <p className="m-0 text-[0.9375rem] leading-relaxed text-gray-700">
+              Through our website, educational programs, resources, and direct support, NLMSF is committed to helping patients and their families and caregivers:
+            </p>
+            <ul className="m-0 mt-4 list-disc space-y-2.5 pl-5 text-[0.9375rem] leading-relaxed text-gray-700 marker:text-[#6b46c1]">
+              <li>Understand your diagnosis through clear, credible, patient-friendly information.</li>
+              <li>Ask informed questions and have more meaningful conversations with their healthcare team.</li>
+              <li>Find knowledgeable specialists and resources to help guide their care.</li>
+              <li>Strengthen their voice and advocate for themselves throughout their journey.</li>
+              <li>Feel supported and empowered from diagnosis through treatment, survivorship, and beyond.</li>
+            </ul>
           </div>
         </div>
 
