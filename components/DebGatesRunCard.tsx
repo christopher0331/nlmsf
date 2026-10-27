@@ -1,8 +1,6 @@
-import Image from "next/image";
 import {
   DEB_GATES_RUN,
   debGatesEventReady,
-  debGatesPhotoReady,
 } from "@/lib/deb-gates-run";
 
 const donateClass =
@@ -10,7 +8,6 @@ const donateClass =
 
 export default function DebGatesRunCard() {
   const showEvent = debGatesEventReady();
-  const showPhoto = debGatesPhotoReady();
 
   return (
     <article className="overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-[0_4px_20px_rgba(107,70,193,0.12)]">
@@ -23,17 +20,6 @@ export default function DebGatesRunCard() {
           <p className="m-0 text-xs font-semibold uppercase tracking-widest text-white/75">
             Story shared with NLMSF
           </p>
-          {showPhoto ? (
-            <div className="relative mx-auto mt-4 h-28 w-28 overflow-hidden rounded-full border-2 border-white/40">
-              <Image
-                src={DEB_GATES_RUN.photoSrc}
-                alt={DEB_GATES_RUN.photoAlt}
-                fill
-                className="object-cover"
-                sizes="112px"
-              />
-            </div>
-          ) : null}
           <h3 className="m-0 mt-2 text-2xl font-bold text-white">Deb Gates</h3>
           <p className="m-0 mt-1 text-sm text-white/85">
             Running in memory of Stephen A. Gates, MD
@@ -53,9 +39,10 @@ export default function DebGatesRunCard() {
 
       <div className="px-6 py-5">
         <p className="m-0 text-[0.95rem] leading-relaxed text-gray-600">
-          Deb Gates runs in memory of her husband, Stephen A. Gates, MD. She
-          shared her story of uterine leiomyosarcoma survivorship — and of a
-          life built around running — with the National Leiomyosarcoma
+          Deb says she ran the Seattle Marathon on November 30, 2007 — her
+          husband&apos;s birthday — in memory of Stephen A. Gates, MD, and that
+          she is the longest uterine leiomyosarcoma survivor in the world, 30
+          years out. She shared her story with the National Leiomyosarcoma
           Foundation.
         </p>
         <div className="mt-5 flex flex-col gap-3">
