@@ -1,3 +1,9 @@
+/**
+ * Joseph Jang homepage card. No longer mounted.
+ * The dedicated page remains at app/ironman-fundraiser/, which volunteer and
+ * events pages still link to. Kept so that campaign UI is not removed with
+ * the homepage swap.
+ */
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
