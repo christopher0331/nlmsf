@@ -1,3 +1,4 @@
+import ReadDebFullStoryLink from "@/components/ReadDebFullStoryLink";
 import {
   DEB_GATES_RUN,
   debGatesEventReady,
@@ -57,6 +58,7 @@ export default function DebGatesRunCard() {
             <i className="fas fa-heart" aria-hidden />
             Donate to NLMSF
           </a>
+          <ReadDebFullStoryLink variant="card" />
           <a
             href={DEB_GATES_RUN.path}
             className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-[#7e22ce] no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7e22ce]"

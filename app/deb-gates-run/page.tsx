@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
+import ReadDebFullStoryLink from "@/components/ReadDebFullStoryLink";
 import {
   DEB_GATES_RUN,
   debGatesEventReady,
@@ -98,6 +99,9 @@ export default function DebGatesRunPage() {
             This is Deb&apos;s story, as she shared it with the National
             Leiomyosarcoma Foundation.
           </p>
+          <div className="mt-6 flex justify-center">
+            <ReadDebFullStoryLink />
+          </div>
           {showPhoto ? (
             <div className="mx-auto mt-8 grid w-full max-w-[800px] grid-cols-1 items-center justify-items-center gap-6 md:grid-cols-2 md:gap-10">
               <figure className="m-0 w-full max-w-[400px]">
@@ -211,6 +215,10 @@ export default function DebGatesRunPage() {
             Deb thanks the LMS advocacy community and fellow patients.
           </p>
         </section>
+
+        <div className="flex justify-center">
+          <ReadDebFullStoryLink />
+        </div>
 
         <section className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-lg shadow-gray-200/50">
           <div className="flex flex-col items-center gap-4 px-6 py-10 text-center md:px-12">

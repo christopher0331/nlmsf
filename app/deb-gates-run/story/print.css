@@ -1,0 +1,67 @@
+/* Print styles for /deb-gates-run/story/ only. */
+@media print {
+  @page {
+    margin: 0.75in;
+  }
+
+  body:has(.deb-gates-story) {
+    background: #fff !important;
+  }
+
+  body:has(.deb-gates-story) > :not(.deb-gates-story) {
+    display: none !important;
+  }
+
+  .deb-gates-story {
+    background: #fff !important;
+    min-height: 0 !important;
+  }
+
+  .deb-gates-story .story-chrome {
+    display: none !important;
+  }
+
+  .deb-gates-story .story-hero {
+    margin: 0 !important;
+    border: none !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    padding-top: 0 !important;
+  }
+
+  .deb-gates-story .story-hero-wash,
+  .deb-gates-story .story-accent {
+    display: none !important;
+  }
+
+  .deb-gates-story h1,
+  .deb-gates-story .story-kicker {
+    background: none !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  .deb-gates-story .story-column,
+  .deb-gates-story .story-column p,
+  .deb-gates-story blockquote,
+  .deb-gates-story blockquote p,
+  .deb-gates-story .story-signoff {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .deb-gates-story a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  .deb-gates-story blockquote {
+    border-left-color: #000 !important;
+    break-inside: avoid;
+  }
+
+  .deb-gates-story .story-drop-letter {
+    color: #000 !important;
+  }
+}
