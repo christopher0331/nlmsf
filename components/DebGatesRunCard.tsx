@@ -40,11 +40,11 @@ export default function DebGatesRunCard() {
 
       <div className="px-6 py-5">
         <p className="m-0 text-[0.95rem] leading-relaxed text-gray-600">
-          Deb says she ran the Seattle Marathon on November 30, 2007 — her
-          husband&apos;s birthday — in memory of Stephen A. Gates, MD, and that
-          she is the longest uterine leiomyosarcoma survivor in the world, 30
-          years out. She shared her story with the National Leiomyosarcoma
-          Foundation.
+          Deb is running the Seattle Marathon on November 29, 2026 to raise
+          money for the National Leiomyosarcoma Foundation, in memory of her
+          husband, Stephen A. Gates, MD. Thirty years after her uterine
+          leiomyosarcoma diagnosis, she runs for every LMS patient still
+          fighting. Please donate to support her run.
         </p>
         <div className="mt-5 flex flex-col gap-3">
           <a
