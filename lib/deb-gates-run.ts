@@ -19,10 +19,11 @@ export const DEB_GATES_RUN = {
   eventDate: "",
   eventLocation: "",
   photoSrc: "/images/deb-gates/deb-race-day.webp",
-  photoAlt: "Two women with finisher medals and race bibs at a race event.",
+  photoAlt: "Deb Gates and her mother Mimi with finisher medals and race bibs on race day.",
   photoWidth: 300,
   photoHeight: 209,
-  photoCaption: "Race day",
+  photoCaption:
+    "Deb and her mother Mimi on race day; Mimi is also a sarcoma survivor (Desmoid Tumor.)",
   logoSrc: "/images/deb-gates/champions-of-hope.webp",
   logoAlt:
     "Champions of Hope logo: Hope Drives Change, for LMS / Sarcoma Research.",
