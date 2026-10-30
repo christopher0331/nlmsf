@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
-import ReadDebFullStoryLink from "@/components/ReadDebFullStoryLink";
+import {
+  DEB_GATES_STORY_MEMORIAL_URL,
+  DEB_GATES_STORY_PARAGRAPHS,
+} from "@/lib/deb-gates-story";
 import {
   DEB_GATES_RUN,
   debGatesEventReady,
@@ -67,7 +70,7 @@ export default function DebGatesRunPage() {
             style={{ background: "linear-gradient(90deg, #7e22ce, #4338ca)" }}
           >
             <i className="fas fa-person-running" aria-hidden />
-            <span>Story shared with NLMSF</span>
+            <span>Running for NLMSF · November 29, 2026</span>
           </div>
           <h1
             className="mb-4 pb-1 text-3xl font-bold leading-tight md:text-5xl"
@@ -96,12 +99,10 @@ export default function DebGatesRunPage() {
             </p>
           ) : null}
           <p className="mx-auto max-w-[640px] text-base leading-relaxed text-gray-500">
-            This is Deb&apos;s story, as she shared it with the National
-            Leiomyosarcoma Foundation.
+            Deb is running the Seattle Marathon on November 29, 2026 to raise
+            money for the National Leiomyosarcoma Foundation. Please donate to
+            support her run.
           </p>
-          <div className="mt-6 flex justify-center">
-            <ReadDebFullStoryLink />
-          </div>
           {showPhoto ? (
             <div className="mx-auto mt-8 grid w-full max-w-[800px] grid-cols-1 items-center justify-items-center gap-6 md:grid-cols-2 md:gap-10">
               <figure className="m-0 w-full max-w-[400px]">
@@ -138,130 +139,37 @@ export default function DebGatesRunPage() {
 
       <div className="mx-auto max-w-[800px] space-y-8 px-4 pb-16 md:px-6">
         <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-lg shadow-gray-200/50 md:p-10">
-          <SectionHeading>Nearly thirty years of survivorship</SectionHeading>
-          <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
-            <p>
-              On Christmas Eve 1997, Deb Gates was diagnosed with uterine
-              leiomyosarcoma after a hysterectomy with morcellation. She has
-              since faced melanomas and nine surgeries, and she has received
-              care at Memorial Sloan Kettering.
-            </p>
-            <p>
-              Deb says she is the longest uterine leiomyosarcoma survivor in
-              the world, 30 years out. The foundation shares that as her own
-              statement.
-            </p>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-lg shadow-gray-200/50 md:p-10">
-          <SectionHeading>Running in his memory</SectionHeading>
-          <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
-            <p>
-              Her husband, Stephen A. Gates, MD, died on July 22, 2006, at age
-              53. Deb says the Seattle Marathon on November 30, 2007 — his
-              birthday — turned her toward life. She went on to triathlons,
-              relays, and rides, always running in his memory with a banner.
-            </p>
-            <p className="font-semibold text-gray-900">
-              On November 29, 2026, Deb is running the Seattle Marathon again,
-              this time to raise money for the National Leiomyosarcoma
-              Foundation. Please donate to support her run and LMS research.
-            </p>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-lg shadow-gray-200/50 md:p-10">
-          <SectionHeading>Why Deb Fights for Hospital Pull Cords</SectionHeading>
-          <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
-            <p>
-              On July 22, 2006, Deb&apos;s husband, Dr. Steve Gates, died of a
-              heart attack at just 53. Deb believes he might have been
-              resuscitated if Washington hospitals had been required to have
-              emergency pull cords in every patient bathroom. Out of that loss
-              came a mission.
-            </p>
-            <p>
-              Deb led a campaign for Washington State to adopt the National
-              Hospital Safety Construction Standards, set by the Facilities
-              Guidelines Institute of the American Institute of Architects.
-              Physicians, nurses, medical societies, disability advocates and
-              retirees joined her with letters, petitions and calls to
-              legislators. She testified at hearing after hearing, and she
-              cried at every one. In 2008, Washington adopted the standards for
-              the first time, requiring an emergency pull cord in every
-              hospital bathroom a patient might use, along with many other
-              safety improvements. In 2010 she won additional hospital safety
-              rules, and Washington now ranks second only to Connecticut.
-            </p>
-            <p>
-              Today Deb is taking the fight national. Seven states still
-              haven&apos;t adopted the standards, and they also need to cover
-              military, federal and tribal hospitals. When she started, a pull
-              cord cost $125. Today a wireless emergency call device costs about
-              $10 and sticks right onto a bathroom wall. &ldquo;Why should anyone
-              else die in a hospital bathroom because they could not access
-              emergency care?&rdquo; With support from Senators Murray and
-              Cantwell and Representative Emily Randall, Deb won&apos;t stop
-              until every hospital in America is covered.
-            </p>
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-lg shadow-gray-200/50 md:p-10">
-          <SectionHeading>Hospital safety advocacy</SectionHeading>
-          <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
-            <p>
-              Deb says she successfully advocated for Washington State to adopt
-              national hospital safety construction standards in 2008, with more
-              in 2010, including emergency pull cords in hospital bathrooms. She
-              says she is now advocating at the federal level.
-            </p>
-            <p>
-              Her advocacy is also on the public record. In a Washington State
-              Department of Health comment report, Deborah W. Gates proposed
-              emergency assistance systems in hospital toilets, and she wrote
-              that the department adopted a 2006 Facility Guidelines Institute
-              standard for hospital toilets after formal comments she submitted
-              in March 2008. In 2010, Washington adopted most of the 2010
-              Guidelines for Design and Construction of Health Care Facilities.
-              That text encourages hospitals to install assistance systems in
-              public and staff toilets when they build or renovate.
-            </p>
-            <ul className="list-disc space-y-2 pl-5 text-base">
-              <li>
-                <a
-                  href="https://doh.wa.gov/sites/default/files/legacy/Documents/2300/2014/346-070ReportComments.pdf"
-                  className="font-semibold text-[#7e22ce] no-underline hover:underline"
-                  {...ext}
+          <SectionHeading>Deb&apos;s Story, in Her Own Words</SectionHeading>
+          <div className="space-y-5 text-base leading-relaxed text-gray-700 md:text-lg">
+            {DEB_GATES_STORY_PARAGRAPHS.map((para, i) => {
+              const isLast = i === DEB_GATES_STORY_PARAGRAPHS.length - 1;
+              if (para.includes(DEB_GATES_STORY_MEMORIAL_URL)) {
+                const [before, after] = para.split(DEB_GATES_STORY_MEMORIAL_URL);
+                return (
+                  <p key={i}>
+                    {before}
+                    <a
+                      href={DEB_GATES_STORY_MEMORIAL_URL}
+                      className="break-all font-semibold text-[#7e22ce] underline"
+                      {...ext}
+                    >
+                      {DEB_GATES_STORY_MEMORIAL_URL}
+                    </a>
+                    {after}
+                  </p>
+                );
+              }
+              return (
+                <p
+                  key={i}
+                  className={isLast ? "text-right text-xl font-semibold italic text-gray-900" : undefined}
                 >
-                  Washington State Department of Health comment report (PDF)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://lawfilesext.leg.wa.gov/law/wsr/2010/17/10-17-120.htm"
-                  className="font-semibold text-[#7e22ce] no-underline hover:underline"
-                  {...ext}
-                >
-                  2010 Washington State Register notice (WSR 10-17-120)
-                </a>
-              </li>
-            </ul>
+                  {para}
+                </p>
+              );
+            })}
           </div>
         </section>
-
-        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-lg shadow-gray-200/50 md:p-10">
-          <SectionHeading>With thanks</SectionHeading>
-          <p className="text-base leading-relaxed text-gray-700 md:text-lg">
-            Deb thanks the LMS advocacy community and fellow patients.
-          </p>
-        </section>
-
-        <div className="flex justify-center">
-          <ReadDebFullStoryLink />
-        </div>
-
         <section className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-lg shadow-gray-200/50">
           <div className="flex flex-col items-center gap-4 px-6 py-10 text-center md:px-12">
             <div
@@ -271,7 +179,7 @@ export default function DebGatesRunPage() {
               <i className="fas fa-hand-holding-heart text-2xl text-white" aria-hidden />
             </div>
             <h2 className="text-2xl font-bold text-gray-900 md:text-[1.75rem]">
-              Support NLMSF
+              Support Deb&apos;s Run
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-gray-600 md:text-lg">
               Give through the foundation&apos;s donation form. Your gift
@@ -298,8 +206,8 @@ export default function DebGatesRunPage() {
               </a>
             </div>
             <p className="m-0 max-w-xl text-sm leading-relaxed text-gray-500">
-              Story shared with NLMSF. This page does not track a separate
-              fundraising total.
+              Every gift in honor of Deb&apos;s November 29, 2026 Seattle
+              Marathon run supports leiomyosarcoma research.
             </p>
           </div>
         </section>
