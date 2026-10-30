@@ -163,6 +163,48 @@ export default function DebGatesRunPage() {
               birthday — turned her toward life. She went on to triathlons,
               relays, and rides, always running in his memory with a banner.
             </p>
+            <p className="font-semibold text-gray-900">
+              On November 29, 2026, Deb is running the Seattle Marathon again,
+              this time to raise money for the National Leiomyosarcoma
+              Foundation. Please donate to support her run and LMS research.
+            </p>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-lg shadow-gray-200/50 md:p-10">
+          <SectionHeading>Why Deb Fights for Hospital Pull Cords</SectionHeading>
+          <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
+            <p>
+              On July 22, 2006, Deb&apos;s husband, Dr. Steve Gates, died of a
+              heart attack at just 53. Deb believes he might have been
+              resuscitated if Washington hospitals had been required to have
+              emergency pull cords in every patient bathroom. Out of that loss
+              came a mission.
+            </p>
+            <p>
+              Deb led a campaign for Washington State to adopt the National
+              Hospital Safety Construction Standards, set by the Facilities
+              Guidelines Institute of the American Institute of Architects.
+              Physicians, nurses, medical societies, disability advocates and
+              retirees joined her with letters, petitions and calls to
+              legislators. She testified at hearing after hearing, and she
+              cried at every one. In 2008, Washington adopted the standards for
+              the first time, requiring an emergency pull cord in every
+              hospital bathroom a patient might use, along with many other
+              safety improvements. In 2010 she won additional hospital safety
+              rules, and Washington now ranks second only to Connecticut.
+            </p>
+            <p>
+              Today Deb is taking the fight national. Seven states still
+              haven&apos;t adopted the standards, and they also need to cover
+              military, federal and tribal hospitals. When she started, a pull
+              cord cost $125. Today a wireless emergency call device costs about
+              $10 and sticks right onto a bathroom wall. &ldquo;Why should anyone
+              else die in a hospital bathroom because they could not access
+              emergency care?&rdquo; With support from Senators Murray and
+              Cantwell and Representative Emily Randall, Deb won&apos;t stop
+              until every hospital in America is covered.
+            </p>
           </div>
         </section>
 
