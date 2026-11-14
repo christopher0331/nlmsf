@@ -175,7 +175,7 @@ export default function HomeThreeColumns() {
                     4
                   </span>
                   <span className="min-w-0 flex-1 text-[0.9375rem] leading-relaxed text-gray-800">
-                    Strengthen their voice and advocate for themselves throughout their journey.
+                    Strengthen YOUR voice and advocate for themselves throughout their journey.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5 rounded-lg px-1.5 py-1 motion-safe:animate-commitment-in motion-safe:[animation-delay:280ms] motion-safe:transition-colors motion-safe:duration-200 hover:bg-white/80">

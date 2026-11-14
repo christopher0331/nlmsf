@@ -196,7 +196,7 @@ export default function DebGatesRunPage() {
                 }}
               >
                 <i className="fas fa-donate" aria-hidden />
-                Donate to NLMSF
+                Invest in Survivorship - Donate to Leiomyosarcoma Research
               </a>
               <a
                 href="/donate/"

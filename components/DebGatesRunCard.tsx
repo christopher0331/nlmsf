@@ -21,7 +21,12 @@ export default function DebGatesRunCard() {
           <p className="m-0 text-xs font-semibold uppercase tracking-widest text-white/75">
             Story shared with NLMSF
           </p>
-          <h3 className="m-0 mt-2 text-2xl font-bold text-white">Deb Gates</h3>
+          <h3 className="m-0 mt-2 text-xl font-bold leading-snug text-white">
+            DEB GATES - LMS 30 YEAR SURVIVOR, THRIVER, RESEARCH ADVOCATE
+          </h3>
+          <p className="m-0 mt-1 text-sm font-bold uppercase tracking-wider text-amber-200">
+            CHAMPION OF HOPE
+          </p>
           <p className="m-0 mt-1 text-sm text-white/85">
             Running in memory of Stephen A. Gates, MD
           </p>
@@ -56,7 +61,7 @@ export default function DebGatesRunCard() {
             }}
           >
             <i className="fas fa-heart" aria-hidden />
-            Donate to NLMSF
+            Invest in Survivorship - Donate to Leiomyosarcoma Research
           </a>
           <ReadDebFullStoryLink variant="card" />
           <a
