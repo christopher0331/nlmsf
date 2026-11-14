@@ -33,6 +33,13 @@ const QUICK_TIPS: QuickTipTopic[] = [
     category: "General",
   },
   {
+    title: "Understanding How LMS Is Classified",
+    description:
+      "Quick Tips – Care Guide based on the publication by Ashley Hickman, MD, and Brittany L. Siontis, MD, Mayo Clinic, published in Current Treatment Options in Oncology, April 2023.",
+    pdfHref: "/documents/quick-tips/understanding-how-lms-is-classified.pdf",
+    category: "General",
+  },
+  {
     title: "1st Chemo Appointment",
     description: "What to expect and how to prepare for your first chemotherapy visit.",
     pdfHref: "/documents/quick-tips/first-chemo-appointment.pdf",
