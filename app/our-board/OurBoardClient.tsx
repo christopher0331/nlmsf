@@ -21,6 +21,11 @@ type Member = {
   featured?: FeaturedItem[];
 };
 
+/** Replace public/images/board/carol-rowe.jpg to swap in the real photo. */
+const CAROL_ROWE_PHOTO = "/images/board/carol-rowe.jpg";
+/** Replace public/images/board/chris-rowe.jpg to swap in the real photo. */
+const CHRIS_ROWE_PHOTO = "/images/board/chris-rowe.jpg";
+
 function MemberInTheNews({
   items,
   withAnchor = false,
@@ -164,6 +169,34 @@ export default function OurBoardClient() {
           "An LMS survivor, diagnosed in 2011. A retired Board Certified Diagnostic Radiologist in practice for 40 years.",
           'I wish to "pay it forward" to the LMS Community through assisting in answering general questions about the disease and explaining the results of a patient\'s imaging studies to help the patient and their family have a better understanding of their disease, and thereby be able to ask the right questions of their sarcoma care team.',
           "Dr. Achee is a member of the following oncology organizations: Connective Tissue Oncology Society (CTOS), American Society of Clinical Oncologists (ASCO), European Society of Medical Oncologists (ESMO), American Association of Cancer Research (AACR), ECOG-ACIN.",
+        ],
+      },
+    ],
+    [],
+  );
+
+  const directorMembers = useMemo<Member[]>(
+    () => [
+      {
+        id: "carol-rowe",
+        name: "Carol Rowe",
+        role: "Director",
+        imageUrl: CAROL_ROWE_PHOTO,
+        bio: [
+          "Carol Rowe joins the National Leiomyosarcoma Foundation (NLMSF) Board of Directors, bringing a personal dedication to patient advocacy combined with corporate technical leadership and NFP board governance experience. Diagnosed with Uterine Leiomyosarcoma (ULMS) in 2014, Carol navigated a seven-year recurrence-free period followed by advanced treatments. As a proud parent of four adult children, she felt a powerful calling to give back, investing her energy and firsthand patient perspective into the NLMSF.",
+          "Professionally, Carol built a successful career in the food and beverage industry. She spent many years at PepsiCo in technical roles focused on project management, data-driven strategy, and cross-functional leadership before establishing a robust independent consulting practice.",
+          "Carol also brings experience in NFP board governance, fiduciary responsibility, and strategic oversight. Her background includes serving as Chairman of a Christian preschool board and sitting on the boards of Sarcoma Strands and BYFS, a youth mental health organization. She is excited to bridge her professional skills and personal journey to advance support and hope for the LMS community.",
+        ],
+      },
+      {
+        id: "chris-rowe",
+        name: "Chris Rowe",
+        role: "Director",
+        imageUrl: CHRIS_ROWE_PHOTO,
+        bio: [
+          "Chris Rowe joins the National Leiomyosarcoma Foundation (NLMSF) Board of Directors, bringing a wealth of experience from a career of leadership positions in the consumer-packaged goods industry. He retired from Mars, Inc. as Global Vice President of Research & Development after a more than 30-year career working on some of the world's most beloved consumer brands - Gatorade, Wrigley, M&M's, Snickers and Skittles. More recently, he joined the McKinsey Senior Advisor program providing strategic advising to its corporate clients. He also serves on the board of directors of small companies in the consumer goods space. During his career journey he lived and worked in Russia, Germany and the United Kingdom in addition to the United States.",
+          "Chris' LMS journey began when his wife Carol, who is also joining the NLMSF board, was diagnosed with Uterine LMS in 2014. Over the last twelve years, they have navigated her care journey across numerous surgeries and lines of treatment. Chris and Carol are the proud parents of four adult children - Allison, Abby, Evan and Ella. They split their time between Barrington, Illinois and Savannah, Georgia.",
+          "Chris was inspired to join the board to bring his professional experience to help the foundation continue to thrive and achieve its ambitious vision for the future. He looks forward to working with the board to continue advancing care for LMS patients and their families.",
         ],
       },
     ],
@@ -463,6 +496,28 @@ export default function OurBoardClient() {
                   </li>
                 </ul>
 
+                <h4 className="nlmsf-category-title nlmsf-category-title-director">
+                  Directors
+                </h4>
+                <ul className="nlmsf-sidebar-nav-list">
+                  <li>
+                    <a
+                      href="#carol-rowe"
+                      className="nlmsf-sidebar-link nlmsf-sidebar-link-director"
+                    >
+                      Carol Rowe
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#chris-rowe"
+                      className="nlmsf-sidebar-link nlmsf-sidebar-link-director"
+                    >
+                      Chris Rowe
+                    </a>
+                  </li>
+                </ul>
+
                 <h4 className="nlmsf-category-title nlmsf-category-title-outreach">
                   Community Outreach
                 </h4>
@@ -718,6 +773,36 @@ export default function OurBoardClient() {
                     <p className="nlmsf-member-role">{member.role}</p>
                     <button
                       className="nlmsf-read-more nlmsf-read-more-medical"
+                      onClick={() => openModal(member)}
+                      type="button"
+                    >
+                      Read Full Bio
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="nlmsf-testimonial-section nlmsf-section-director">
+              <h3 className="nlmsf-section-title">Directors</h3>
+              <div className="nlmsf-members-grid">
+                {directorMembers.map((member) => (
+                  <div
+                    key={member.id}
+                    id={member.id}
+                    className="nlmsf-member-grid-card nlmsf-member-director"
+                  >
+                    <Image
+                      src={member.imageUrl}
+                      alt={member.name}
+                      className="nlmsf-member-image"
+                      width={240}
+                      height={240}
+                    />
+                    <h3 className="nlmsf-member-name">{member.name}</h3>
+                    <p className="nlmsf-member-role">{member.role}</p>
+                    <button
+                      className="nlmsf-read-more nlmsf-read-more-director"
                       onClick={() => openModal(member)}
                       type="button"
                     >

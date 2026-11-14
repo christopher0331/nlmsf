@@ -215,6 +215,12 @@
   border-color: #fbcfe8;
 }
 
+/* Directors - Indigo */
+.our-board-page .nlmsf-member-director {
+  background-color: #eef2ff;
+  border-color: #c7d2fe;
+}
+
 .our-board-page .nlmsf-member-medical .nlmsf-member-title {
   color: #7e22ce;
   border-bottom: 1px solid #e9d5ff;
@@ -324,6 +330,14 @@
   background-color: #9d174d;
 }
 
+.our-board-page .nlmsf-read-more-director {
+  background-color: #4338ca;
+}
+
+.our-board-page .nlmsf-read-more-director:hover {
+  background-color: #3730a3;
+}
+
 .our-board-page .nlmsf-section-leadership .nlmsf-section-title {
   background: linear-gradient(to right, #2563eb, #1d4ed8);
   -webkit-background-clip: text;
@@ -354,6 +368,14 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   border-bottom: 2px solid #fbcfe8;
+}
+
+.our-board-page .nlmsf-section-director .nlmsf-section-title {
+  background: linear-gradient(to right, #4338ca, #3730a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid #c7d2fe;
 }
 
 .our-board-page .nlmsf-member-bio {
@@ -514,6 +536,17 @@
   border-left-color: #be185d;
 }
 
+.our-board-page .nlmsf-sidebar-link-director {
+  color: #4338ca;
+  border-left-color: #c7d2fe;
+}
+
+.our-board-page .nlmsf-sidebar-link-director:hover {
+  background-color: #eef2ff;
+  color: #3730a3;
+  border-left-color: #4338ca;
+}
+
 .our-board-page .nlmsf-category-title {
   font-size: 1.125rem;
   font-weight: 600;
@@ -538,6 +571,10 @@
 
 .our-board-page .nlmsf-category-title-support {
   color: #be185d;
+}
+
+.our-board-page .nlmsf-category-title-director {
+  color: #4338ca;
 }
 
 .our-board-page .nlmsf-resources {
