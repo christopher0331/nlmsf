@@ -1,17 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import HomeEventsColumn from "@/components/HomeEventsColumn";
 import DebGatesRunCard from "@/components/DebGatesRunCard";
 import ClinicalTrialsCard from "@/components/ClinicalTrialsCard";
 import StormTrialAlert from "@/components/StormTrialAlert";
 import WebsiteNavigator from "@/components/WebsiteNavigator";
+import WelcomeStatementCard from "@/components/WelcomeStatementCard";
 import {
   AT_THE_HEART_OPENING,
   AT_THE_HEART_PATH,
   AT_THE_HEART_TITLE,
 } from "@/lib/at-the-heart-message";
-
-const ONCLIVE_IMG = "/images/nlmsf-science.png";
 
 function PhoneIcon({ className }: { className?: string }) {
   return (
@@ -52,7 +50,7 @@ export default function HomeThreeColumns() {
       aria-label="Resources and navigation"
     >
       <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-3">
-        {/* Left column: Journey Navigator + Storm trial alert + Clinical Trials + OncLive image */}
+        {/* Left column: Journey Navigator + Storm trial alert + Clinical Trials + welcome statement */}
         <div className="flex flex-col gap-0">
           <WebsiteNavigator />
 
@@ -60,16 +58,7 @@ export default function HomeThreeColumns() {
 
           <ClinicalTrialsCard />
 
-          <div className="mt-6">
-            <Image
-              src={ONCLIVE_IMG}
-              alt="OncLive Sarcoma"
-              width={640}
-              height={360}
-              className="h-auto w-full rounded-xl object-cover shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
-              sizes="(min-width: 1024px) 420px, 90vw"
-            />
-          </div>
+          <WelcomeStatementCard />
         </div>
 
         {/* Center column: Support Hotline + Deb Gates run + commitment list */}
