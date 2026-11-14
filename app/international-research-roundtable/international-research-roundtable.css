@@ -138,6 +138,10 @@
   border-left-color: #e11d48;
 }
 
+.irr-page .section-testimonials .nav-link {
+  border-left-color: #2563eb;
+}
+
 .irr-page .section-rfp .nav-link {
   border-left-color: #6366f1;
 }
@@ -448,4 +452,37 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: #4b5563;
+}
+
+.irr-page .roundtable-testimonial {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #2563eb;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.irr-page .roundtable-testimonial blockquote {
+  margin: 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+.irr-page .roundtable-testimonial figcaption {
+  margin-top: 0.85rem;
+  color: #1d4ed8;
+}
+
+.irr-page .roundtable-testimonial figcaption span {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.irr-page .roundtable-testimonial-link {
+  margin: 1rem 0 0;
+  font-weight: 600;
 }

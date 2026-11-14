@@ -34,6 +34,9 @@ export default function InternationalResearchRoundtablePage() {
           <div className="nav-section section-publications">
             <a href="#roundtable-publications" className="nav-link">Roundtable Publications</a>
           </div>
+          <div className="nav-section section-testimonials">
+            <a href="#roundtable-testimonials" className="nav-link">Roundtable Testimonials</a>
+          </div>
           <div className="nav-section section-rfp">
             <a href="#rfp-announcement" className="nav-link">RFP Announcement</a>
           </div>
@@ -163,6 +166,26 @@ export default function InternationalResearchRoundtablePage() {
                   </p>
                 </article>
               </div>
+            </div>
+          </div>
+
+          <div id="roundtable-testimonials" className="content-section">
+            <h2 className="section-title blue">Roundtable Testimonials</h2>
+            <div className="content-panel blue">
+              <figure className="roundtable-testimonial">
+                <blockquote>
+                  &ldquo;Even though I have not joined the NLMSF from the very beginning, I was truly inspired by the dedication and commitment of this group of medical experts together with patient advocates helping to shape the future management strategies and research areas for patients with leiomyosarcomas.&rdquo;
+                </blockquote>
+                <figcaption>
+                  <strong>Dr. Bernd Kasper</strong>, Germany
+                  <span>Workgroup Leader, Clinical Trials Workgroup &middot; author of the September 10, 2026 JAMA Oncology consensus publication</span>
+                </figcaption>
+              </figure>
+              <p className="roundtable-testimonial-link">
+                <a href="https://jamanetwork.com/journals/jamaoncology/article-abstract/2853976" {...ext}>
+                  Read the JAMA Oncology publication: Management of Soft Tissue and Visceral Leiomyosarcomas
+                </a>
+              </p>
             </div>
           </div>
 
