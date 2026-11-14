@@ -5,6 +5,11 @@ import DebGatesRunCard from "@/components/DebGatesRunCard";
 import ClinicalTrialsCard from "@/components/ClinicalTrialsCard";
 import StormTrialAlert from "@/components/StormTrialAlert";
 import WebsiteNavigator from "@/components/WebsiteNavigator";
+import {
+  AT_THE_HEART_OPENING,
+  AT_THE_HEART_PATH,
+  AT_THE_HEART_TITLE,
+} from "@/lib/at-the-heart-message";
 
 const ONCLIVE_IMG = "/images/nlmsf-science.png";
 
@@ -119,6 +124,22 @@ export default function HomeThreeColumns() {
 
           <div className="mt-6">
             <DebGatesRunCard />
+          </div>
+
+          <div className="mt-6 rounded-xl border border-[#ddd6fe] bg-white px-5 py-5 shadow-[0_4px_20px_rgba(107,70,193,0.10)]">
+            <h2 className="m-0 text-base font-bold uppercase leading-snug tracking-wide text-[#4c1d95]">
+              {AT_THE_HEART_TITLE}
+            </h2>
+            <p className="m-0 mt-3 text-[0.9375rem] leading-relaxed text-gray-700">
+              {AT_THE_HEART_OPENING}
+            </p>
+            <Link
+              href={AT_THE_HEART_PATH}
+              className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#7e22ce] no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7e22ce]"
+            >
+              Read the entire message
+              <span aria-hidden>→</span>
+            </Link>
           </div>
 
           <div className="mt-6 overflow-hidden rounded-xl border border-[#ddd6fe] bg-gradient-to-br from-[#f5f3ff] via-white to-[#faf5ff] shadow-[0_6px_22px_rgba(107,70,193,0.13)]">
