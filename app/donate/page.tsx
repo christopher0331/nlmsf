@@ -57,8 +57,33 @@ export default function DonatePage() {
               <i className="fas fa-hand-holding-usd" aria-hidden />
               <span>Planned Giving</span>
             </a>
+            <Link href="/gift-of-giving/" className="inline-flex items-center gap-2 rounded-lg bg-gray-100 px-5 py-2.5 text-gray-600 text-[0.95rem] font-medium no-underline transition-all duration-300 hover:bg-[#7e22ce] hover:text-white hover:-translate-y-0.5">
+              <i className="fas fa-gift" aria-hidden />
+              <span>The Gift of Giving</span>
+            </Link>
           </div>
         </div>
+      </section>
+
+      {/* The Gift of Giving */}
+      <section className="max-w-[1400px] mx-auto mb-8 px-4 md:px-6">
+        <Link
+          href="/gift-of-giving/"
+          className="group flex flex-col items-start gap-4 rounded-2xl p-6 text-white no-underline shadow-lg transition hover:shadow-xl md:flex-row md:items-center md:p-8"
+          style={{ background: "linear-gradient(135deg, #6b46c1, #4c1d95)" }}
+        >
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/20" aria-hidden>
+            <i className="fas fa-gift text-xl text-white" />
+          </span>
+          <span className="flex-1">
+            <span className="block text-xs font-semibold uppercase tracking-widest text-white/75">Paying It Forward in Survivorship</span>
+            <span className="mt-1 block text-xl font-bold md:text-2xl">The Gift of Giving as a Champion of Hope for Survivorship</span>
+            <span className="mt-1 block text-white/85">QCDs, donor-advised funds, matching gifts, giving circles, planned giving, stock, and workplace giving.</span>
+          </span>
+          <span className="inline-flex items-center gap-1 text-sm font-semibold whitespace-nowrap group-hover:gap-2 transition-all">
+            Explore ways to give <span aria-hidden>→</span>
+          </span>
+        </Link>
       </section>
 
       {/* Elev8 Round-Up Donations */}
