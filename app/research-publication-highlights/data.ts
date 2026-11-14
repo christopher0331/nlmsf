@@ -19,6 +19,7 @@ export const YEARS: YearSection[] = [
   {
     year: "2026",
     pubs: [
+      { title: "Immunotherapy for Leiomyosarcoma: Current Status and Perspectives", journal: "Journal of Immunology Research (2026)", url: "https://onlinelibrary.wiley.com/doi/10.1155/jimr/6614578", type: "Review" },
       { title: "Cabozantinib and Temozolomide in Unresectable or Metastatic Leiomyosarcoma and Other Soft Tissue Sarcomas: Multicentre Phase 2 Trial", authors: "Monga V, Okuno S, Van Tine B, Pollack SM, Agulnik M et al.", journal: "Lancet Oncol. 2026;27(2):223-232", date: "Jan 16, 2026", url: "https://pubmed.ncbi.nlm.nih.gov/41554272/", type: "Clinical Trial", note: "NCT04200443 — 12-week PFS 74% in LMS cohort" },
       { title: "Phase 1/2 Study of Ontorpacept (TTI-621) plus Doxorubicin in Unresectable or Metastatic High-Grade Leiomyosarcoma", authors: "Movva S, Allgood V, Chugh R, Davis LE, Chawla S et al.", journal: "British Journal of Cancer", date: "Aug 4, 2026", url: "https://pubmed.ncbi.nlm.nih.gov/42552364/", type: "Clinical Trial", note: "NCT04996004" },
       { title: "Phase II Multi-Cohort Study of Pemetrexed plus Cisplatin in Relapsed or Refractory Advanced STS: Leiomyosarcoma Cohort (ALBATROSS-SARC-LMS01)", authors: "Kim HS, Yun KH, Kim JH, Lee S, Rha SY et al.", journal: "J Clin Oncology (ASCO 2026)", date: "May 27, 2026", url: "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.11559", type: "Clinical Trial", note: "NCT04605770" },

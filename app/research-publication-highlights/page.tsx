@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { YEARS, TYPE_STYLES, type Publication, type PubType } from "./data";
 import AISummaryButton from "@/components/AISummaryButton";
+import {
+  RESEARCH_UPDATES_OCT_2026_HEADING,
+  RESEARCH_UPDATES_OCT_2026_LABEL,
+  RESEARCH_UPDATES_OCT_2026_PATH,
+} from "@/lib/research-updates-oct-2026";
 
 function isAISummaryUrl(url: string) {
   return (
@@ -104,8 +109,29 @@ export default function ResearchPublicationHighlightsPage() {
         </div>
       </section>
 
-      {/* Featured */}
+      {/* Latest research update */}
       <div className="max-w-5xl mx-auto px-6 pt-8">
+        <Link
+          href={RESEARCH_UPDATES_OCT_2026_PATH}
+          className="group flex flex-col sm:flex-row items-start gap-4 bg-gradient-to-r from-[#1e1b4b] to-[#4338ca] rounded-2xl p-6 text-white hover:shadow-lg transition"
+        >
+          <div className="shrink-0 w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+            <i className="fas fa-flask text-white text-sm" aria-hidden />
+          </div>
+          <div className="flex-1">
+            <p className="text-xs font-bold text-white/75 uppercase tracking-widest mb-1">
+              {RESEARCH_UPDATES_OCT_2026_LABEL}
+            </p>
+            <p className="font-bold text-white leading-snug">{RESEARCH_UPDATES_OCT_2026_HEADING}</p>
+          </div>
+          <span className="text-xs font-semibold text-white whitespace-nowrap flex items-center gap-1 group-hover:gap-2 transition-all mt-1">
+            Read <i className="fas fa-arrow-right text-[10px]" aria-hidden />
+          </span>
+        </Link>
+      </div>
+
+      {/* Featured */}
+      <div className="max-w-5xl mx-auto px-6 pt-4">
         <a
           href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7924026/"
           target="_blank"
