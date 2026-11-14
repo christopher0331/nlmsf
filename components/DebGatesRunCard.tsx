@@ -45,11 +45,13 @@ export default function DebGatesRunCard() {
 
       <div className="px-6 py-5">
         <p className="m-0 text-[0.95rem] leading-relaxed text-gray-600">
-          Deb is running the Seattle Marathon on November 29, 2026 to raise
-          money for the National Leiomyosarcoma Foundation, in memory of her
-          husband, Stephen A. Gates, MD. Thirty years after her uterine
-          leiomyosarcoma diagnosis, she runs for every LMS patient still
-          fighting. Please donate to support her run.
+          <strong className="text-gray-800">Seattle Marathon 2026.</strong>{" "}
+          Champion of Hope — an LMS survivor tells her powerful story and is a
+          champion for fundraising to advance LMS research and accelerate LMS
+          treatment options. Deb is representing all and fighting this disease
+          through funding LMS-specific research through the Seattle
+          Marathon — let&apos;s run with her in our hearts. Run with Deb for
+          the sake of funding LMS research and advancing survivorship.
         </p>
         <div className="mt-5 flex flex-col gap-3">
           <a
@@ -68,7 +70,7 @@ export default function DebGatesRunCard() {
             href={DEB_GATES_RUN.path}
             className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-[#7e22ce] no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7e22ce]"
           >
-            Read Deb&apos;s story
+            Learn more about Deb and donate to support this valiant effort
             <span aria-hidden>→</span>
           </a>
         </div>
