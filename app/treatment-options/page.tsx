@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import "./treatment-options.css";
+import GeneticChangesSection from "./GeneticChangesSection";
 
 export const metadata: Metadata = {
   title: "Treatment Options | NLMSF",
@@ -178,6 +179,9 @@ export default function TreatmentOptionsPage() {
               </li>
               <li>
                 <a href="#targeted-therapy">Targeted Therapy</a>
+              </li>
+              <li>
+                <a href="#genetic-changes">Genetic Changes in LMS</a>
               </li>
               <li>
                 <a href="#treatment-plan">Treatment Planning</a>
@@ -532,6 +536,8 @@ export default function TreatmentOptionsPage() {
               </p>
             </div>
           </section>
+
+          <GeneticChangesSection />
 
           <section id="immunotherapy" className="to-section">
             <div className="to-section-header teal">

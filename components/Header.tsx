@@ -271,6 +271,16 @@ export default function Header() {
                               </Link>
                             </li>
                             <li>
+                              <a
+                                href="https://www.cancer.gov/about-cancer/causes-prevention/genetics/genetic-testing-fact-sheet"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={DROPDOWN_LINK}
+                              >
+                                NIH Genetic Testing Fact Sheet
+                              </a>
+                            </li>
+                            <li>
                               <Link
                                 href="/staging-lms-tumors"
                                 className={DROPDOWN_LINK}
@@ -1073,6 +1083,17 @@ export default function Header() {
                     >
                       Genomic/Molecular Testing
                     </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.cancer.gov/about-cancer/causes-prevention/genetics/genetic-testing-fact-sheet"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={MOBILE_SUBMENU_LINK}
+                      onClick={() => setMobileNavOpen(false)}
+                    >
+                      NIH Genetic Testing Fact Sheet
+                    </a>
                   </li>
                   <li>
                     <Link
