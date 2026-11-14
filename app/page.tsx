@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import JamaConsensusSpotlight from "@/components/JamaConsensusSpotlight";
 import HomeThreeColumns from "@/components/HomeThreeColumns";
+import NovemberMessageSection from "@/components/NovemberMessageSection";
 import RecentUpdates from "@/components/RecentUpdates";
 import EducationVideosSection from "@/components/EducationVideosSection";
 import NewsletterCTA from "@/components/NewsletterCTA";
@@ -44,6 +45,7 @@ export default function HomePage() {
       <HeroSection formToken={formToken} />
       <JamaConsensusSpotlight />
       <HomeThreeColumns />
+      <NovemberMessageSection />
       <TestimonialsScrollSection />
       <SharingVoicesSection />
       <RecentUpdates />
