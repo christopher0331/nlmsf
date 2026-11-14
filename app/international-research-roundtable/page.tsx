@@ -94,6 +94,18 @@ export default function InternationalResearchRoundtablePage() {
                 <li>Clinical Trials Assessment</li>
                 <li>Imaging Strategies and Radiomics</li>
               </ul>
+              <figure className="roundtable-group-photo">
+                <Image
+                  src="/images/roundtable/2024-nlmsf-spagn-roundtable-group-photo.jpg"
+                  alt="Group photo of participants at the 2024 NLMSF-SPAGN International LMS Research Roundtable, September 27, 2024"
+                  width={2000}
+                  height={1333}
+                  sizes="(min-width: 1024px) 800px, 95vw"
+                />
+                <figcaption>
+                  2024 NLMSF-SPAGN International LMS Research Roundtable &mdash; September 27, 2024
+                </figcaption>
+              </figure>
             </div>
           </div>
 

@@ -429,3 +429,23 @@
     align-items: flex-start;
   }
 }
+
+.irr-page .roundtable-group-photo {
+  margin: 1.75rem 0 0;
+}
+
+.irr-page .roundtable-group-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.irr-page .roundtable-group-photo figcaption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+}
