@@ -45,13 +45,13 @@ export default function HomePage() {
     <main>
       <HeroSection formToken={formToken} />
       <JamaConsensusSpotlight />
-      <Milan2026RoundtableSection />
       <HomeThreeColumns />
       <NovemberMessageSection />
       <TestimonialsScrollSection />
       <SharingVoicesSection />
       <RecentUpdates />
       <EducationVideosSection />
+      <Milan2026RoundtableSection />
       <NewsletterCTA formToken={formToken} />
       <ImpactInActionSection />
       <ReportsSection />
