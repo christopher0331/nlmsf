@@ -21,9 +21,7 @@ type Member = {
   featured?: FeaturedItem[];
 };
 
-/** Replace public/images/board/carol-rowe.jpg to swap in the real photo. */
 const CAROL_ROWE_PHOTO = "/images/board/carol-rowe.jpg";
-/** Replace public/images/board/chris-rowe.jpg to swap in the real photo. */
 const CHRIS_ROWE_PHOTO = "/images/board/chris-rowe.jpg";
 
 function MemberInTheNews({
