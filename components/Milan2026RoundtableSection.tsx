@@ -10,7 +10,7 @@ export default function Milan2026RoundtableSection() {
   return (
     <section
       id="milan-2026-roundtable"
-      className="mx-auto w-full max-w-[1600px] px-8 py-8"
+      className="mx-auto w-full max-w-[1280px] px-8 py-8"
       aria-labelledby="milan-2026-roundtable-title"
     >
       <article className="overflow-hidden rounded-xl border border-[#ddd6fe] bg-white shadow-[0_6px_22px_rgba(107,70,193,0.13)]">
