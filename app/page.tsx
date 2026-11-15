@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import JamaConsensusSpotlight from "@/components/JamaConsensusSpotlight";
+import Milan2026RoundtableSection from "@/components/Milan2026RoundtableSection";
 import HomeThreeColumns from "@/components/HomeThreeColumns";
 import NovemberMessageSection from "@/components/NovemberMessageSection";
 import RecentUpdates from "@/components/RecentUpdates";
@@ -44,6 +45,7 @@ export default function HomePage() {
     <main>
       <HeroSection formToken={formToken} />
       <JamaConsensusSpotlight />
+      <Milan2026RoundtableSection />
       <HomeThreeColumns />
       <NovemberMessageSection />
       <TestimonialsScrollSection />

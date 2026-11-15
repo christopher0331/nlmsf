@@ -100,13 +100,13 @@ export default function InternationalResearchRoundtablePage() {
               <figure id="milan-roundtable-photo" className="roundtable-group-photo">
                 <Image
                   src="/images/roundtable/milan-roundtable-group-photo.jpg"
-                  alt="Group photo of participants at the Milan Roundtable"
+                  alt="Group photo of participants at the 2026 International Leiomyosarcoma Roundtable, Milan, Italy (IEO, October 2–3, 2026)"
                   width={2048}
                   height={873}
                   sizes="(min-width: 1024px) 800px, 95vw"
                 />
                 <figcaption>
-                  Milan group photo
+                  2026 International Leiomyosarcoma Roundtable &mdash; Milan, Italy (IEO, October 2&ndash;3, 2026)
                 </figcaption>
               </figure>
               <figure className="roundtable-group-photo">
