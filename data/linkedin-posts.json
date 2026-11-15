@@ -1,0 +1,30 @@
+{
+  "_schema": "The homepage shows the 3 newest objects in posts. To publish, append an object here — do not change component code. id: stable unique slug, usually YYYY-MM-DD plus the first words of the post. date: ISO date or datetime (YYYY-MM-DD or YYYY-MM-DDTHH:MM:SS); newer dates rank first, and the same date keeps earlier array order. text: the post copy. url (optional): link for Read on LinkedIn; omit it to use https://www.linkedin.com/company/national-leiomyosarcoma-foundation-nlmsf/. image (optional): a site path (/images/...) or an https image URL.",
+  "posts": [
+    {
+      "id": "2026-11-14-to-our-caregivers",
+      "date": "2026-11-14",
+      "text": "To our caregivers: We see you. We appreciate you. We thank you. Let us serve you! Please check out our resources just for you."
+    },
+    {
+      "id": "2026-11-01-a-bit-about-who",
+      "date": "2026-11-01",
+      "text": "A bit about who we are. We are here for patients, researchers, practitioners, caregivers, funders, and fellow advocates. We are in this together to fight sarcoma. Thank you to all for standing together for a cure for all types of sarcoma!"
+    },
+    {
+      "id": "2026-11-01-we-hope-to-see",
+      "date": "2026-11-01",
+      "text": "We hope to see you at the 2026 Annual Meeting of CTOS, November 18 – 21, 2026, in Seoul, Korea!"
+    },
+    {
+      "id": "2026-10-25-thank-you-joseph",
+      "date": "2026-10-25",
+      "text": "Thank you Joseph Jang for your commitment to cancer research and choosing us as one of your benefactors! You have made a difference for us and we are so grateful!"
+    },
+    {
+      "id": "2026-10-15-to-our-extraordinary",
+      "date": "2026-10-15",
+      "text": "To Our Extraordinary LMS Research Community — With Heartfelt Gratitude. Eight years of success of the NLMSF–SPAGN International LMS Research Roundtable in Milan — because of YOU."
+    }
+  ]
+}

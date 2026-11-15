@@ -4,6 +4,7 @@ import JamaConsensusSpotlight from "@/components/JamaConsensusSpotlight";
 import HomeThreeColumns from "@/components/HomeThreeColumns";
 import NovemberMessageSection from "@/components/NovemberMessageSection";
 import RecentUpdates from "@/components/RecentUpdates";
+import LatestFromLinkedIn from "@/components/LatestFromLinkedIn";
 import EducationVideosSection from "@/components/EducationVideosSection";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import ImpactInActionSection from "@/components/ImpactInActionSection";
@@ -49,6 +50,7 @@ export default function HomePage() {
       <TestimonialsScrollSection />
       <SharingVoicesSection />
       <RecentUpdates />
+      <LatestFromLinkedIn />
       <EducationVideosSection />
       <NewsletterCTA formToken={formToken} />
       <ImpactInActionSection />
