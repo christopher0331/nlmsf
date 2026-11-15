@@ -438,6 +438,10 @@
   margin: 1.75rem 0 0;
 }
 
+.irr-page .roundtable-group-photo + .roundtable-group-photo {
+  margin-top: 2.25rem;
+}
+
 .irr-page .roundtable-group-photo img {
   display: block;
   width: 100%;
