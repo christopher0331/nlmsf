@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function ImpactInActionSection() {
   return (
     <section
+      id="impact-in-action"
       className="py-12 px-6 pb-16 bg-white text-gray-800 md:py-8 md:px-4 md:pb-12"
       aria-label="NLMSF Impact in Action"
     >
@@ -16,8 +17,7 @@ export default function ImpactInActionSection() {
           <p className="text-[1.1rem] leading-relaxed m-0 max-w-[800px] mx-auto text-gray-700">
             A visual overview of how the National Leiomyosarcoma Foundation advances
             research, strengthens the global LMS community, and supports patients,
-            caregivers, and families across key programs and initiatives.{" "}
-            <strong>Click the image to view it at full size.</strong>
+            caregivers, and families across key programs and initiatives.
           </p>
         </div>
 
