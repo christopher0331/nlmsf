@@ -97,6 +97,18 @@ export default function InternationalResearchRoundtablePage() {
                 <li>Clinical Trials Assessment</li>
                 <li>Imaging Strategies and Radiomics</li>
               </ul>
+              <figure id="milan-roundtable-photo" className="roundtable-group-photo">
+                <Image
+                  src="/images/roundtable/milan-roundtable-group-photo.jpg"
+                  alt="Group photo of participants at the Milan Roundtable"
+                  width={2048}
+                  height={873}
+                  sizes="(min-width: 1024px) 800px, 95vw"
+                />
+                <figcaption>
+                  Milan group photo
+                </figcaption>
+              </figure>
               <figure className="roundtable-group-photo">
                 <Image
                   src="/images/roundtable/2024-nlmsf-spagn-roundtable-group-photo.jpg"
