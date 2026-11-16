@@ -22,6 +22,7 @@ const LEFT: Program[] = [
     title: "Advancing Research & Treatment Innovation",
     description: [
       "Accelerating and advancing global research initiatives focused on precision clinical trial development to expand treatment options for patients with leiomyosarcoma (LMS).",
+      "Each year, NLMSF funds researchers pursuing LMS-specific research projects, advancing the science toward better treatments and outcomes.",
     ],
     logo: `${LOGO_DIR}/advancing-research.webp`,
     logoAlt: "LMS Sarcoma Research in Review logo",
