@@ -9,15 +9,22 @@ export const metadata: Metadata = {
     "Education videos for patients and caregivers covering diagnosis, treatment, research, and caregiving.",
 };
 
+type VideoResource = {
+  href: string;
+  label: string;
+  icon: string;
+};
+
 type VideoItem = {
   id: string;
   title: string;
-  presenter: string;
-  date: string;
+  presenter?: string;
+  date?: string;
   description?: string;
   url: string;
   customImage?: string;
   anchor?: string;
+  resources?: VideoResource[];
 };
 
 const clinicalTrialsVideos: VideoItem[] = [
@@ -138,6 +145,46 @@ const imagingVideos: VideoItem[] = [
   },
 ];
 
+const nlmsfPodcastVideos: VideoItem[] = [
+  {
+    id: "XhLg-x1dBAM",
+    title:
+      "NLMSF Anxiety and Coping Podcast (less than 10 minutes): The Power in your Thoughts - Self-Care in combating Stress and Anxiety",
+    description:
+      "An NLMSF anxiety and coping podcast, less than 10 minutes, on the power in your thoughts and self-care in combating stress and anxiety.",
+    url: "https://youtu.be/XhLg-x1dBAM",
+  },
+  {
+    id: "W8KbRJpOOXI",
+    title:
+      "Sharing Knowledge, Sharing Hope NLMSF Podcast Series, Episode 1: Dimensions in Resilience",
+    description:
+      "The first episode of the Sharing Knowledge, Sharing Hope NLMSF Podcast Series, Dimensions in Resilience.",
+    url: "https://www.youtube.com/watch?v=W8KbRJpOOXI",
+  },
+  {
+    id: "n4OOczeh1LQ",
+    title: "Caring for the Caregiver",
+    description:
+      "NLMSF recording, Supporting Caregivers, on caring for the caregiver, with an accompanying PowerPoint.",
+    url: "https://youtu.be/n4OOczeh1LQ",
+    resources: [
+      {
+        href: "https://nlmsf.org/wp-content/uploads/2022/02/NLMSF-Caregivers-PowerPoint.pdf",
+        label: "Caring for the Caregiver PowerPoint",
+        icon: "fa-file-powerpoint",
+      },
+    ],
+  },
+  {
+    id: "0fv3DoEWFtQ",
+    title: "Introducing Morning Pages - A self-driven Cognitive Support Therapy Concept",
+    description:
+      "An introduction to Morning Pages, a self-driven cognitive support therapy concept and a first step toward cognitive behavioral support therapy.",
+    url: "https://youtu.be/0fv3DoEWFtQ",
+  },
+];
+
 const sarculatorVideos: VideoItem[] = [
   {
     id: "V7Rn7ZBCTw8",
@@ -175,15 +222,31 @@ function VideoCard({ video }: { video: VideoItem }) {
       </a>
       <div className="video-body">
         <h3 className="video-title">{video.title}</h3>
-        <p className="video-presenter">{video.presenter}</p>
-        <p className="video-date">{video.date}</p>
+        {video.presenter ? <p className="video-presenter">{video.presenter}</p> : null}
+        {video.date ? <p className="video-date">{video.date}</p> : null}
         {video.description && <p className="video-description">{video.description}</p>}
-        <a href={video.url} className="video-link" target="_blank" rel="noopener noreferrer">
-          <span className="video-link-icon">
-            <i className="fas fa-play" aria-hidden />
-          </span>
-          Watch Video
-        </a>
+        <div className="video-actions">
+          <a href={video.url} className="video-link" target="_blank" rel="noopener noreferrer">
+            <span className="video-link-icon">
+              <i className="fas fa-play" aria-hidden />
+            </span>
+            Watch Video
+          </a>
+          {video.resources?.map((resource) => (
+            <a
+              key={resource.href}
+              href={resource.href}
+              className="video-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="video-link-icon">
+                <i className={`fas ${resource.icon}`} aria-hidden />
+              </span>
+              {resource.label}
+            </a>
+          ))}
+        </div>
       </div>
     </article>
   );
@@ -226,6 +289,9 @@ export default function RecordedPresentationsPage() {
             <a href="#imaging" className="hero-tag tag-sky">
               Imaging
             </a>
+            <a href="#nlmsf-podcast" className="hero-tag tag-purple">
+              NLMSF Podcast
+            </a>
           </div>
         </div>
       </section>
@@ -262,6 +328,9 @@ export default function RecordedPresentationsPage() {
               </a>
               <a href="#imaging" className="sidebar-link tag-sky">
                 Imaging Studies
+              </a>
+              <a href="#nlmsf-podcast" className="sidebar-link tag-purple">
+                NLMSF Podcast
               </a>
             </div>
           </div>
@@ -345,6 +414,18 @@ export default function RecordedPresentationsPage() {
             <h2 className="video-section-title">Sarculator</h2>
             <div className="video-grid">
               {sarculatorVideos.map((video) => (
+                <VideoCard key={video.id} video={video} />
+              ))}
+            </div>
+          </section>
+
+          <section id="nlmsf-podcast" className="video-section purple-section">
+            <h2 className="video-section-title">
+              NLMSF Podcast
+              <span className="video-section-kicker">NLMSF Programs</span>
+            </h2>
+            <div className="video-grid">
+              {nlmsfPodcastVideos.map((video) => (
                 <VideoCard key={video.id} video={video} />
               ))}
             </div>
