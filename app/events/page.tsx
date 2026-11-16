@@ -11,6 +11,7 @@ import GeneralInfoSarcomaCareSection from "./components/GeneralInfoSarcomaCareSe
 import ImagingSection from "./components/ImagingSection";
 import ImmunotherapySection from "./components/ImmunotherapySection";
 import MicrobiomeSection from "./components/MicrobiomeSection";
+import NlmsfPodcastSection from "./components/NlmsfPodcastSection";
 import NutritionSection from "./components/NutritionSection";
 import PathologySection from "./components/PathologySection";
 import PatientResearchSection from "./components/PatientResearchSection";
@@ -211,6 +212,12 @@ export default function EventsPage() {
                   </a>
                 </li>
                 <li>
+                  <a href="#nlmsf-podcast" className="sidebar-link" data-section="nlmsf-podcast">
+                    <span className="icon">🎙️</span>
+                    <span>NLMSF Podcast</span>
+                  </a>
+                </li>
+                <li>
                   <a href="#nutrition" className="sidebar-link" data-section="nutrition">
                     <span className="icon">🍎</span>
                     <span>Nutrition</span>
@@ -344,6 +351,10 @@ export default function EventsPage() {
                       <i className="fas fa-bacteria" aria-hidden />
                       <span>Microbiome</span>
                     </a>
+                    <a href="#nlmsf-podcast" className="topic-button purple">
+                      <i className="fas fa-podcast" aria-hidden />
+                      <span>NLMSF Podcast</span>
+                    </a>
                     <a href="#nutrition" className="topic-button green">
                       <i className="fas fa-apple-alt" aria-hidden />
                       <span>Nutrition</span>
@@ -396,6 +407,7 @@ export default function EventsPage() {
             <ImagingSection />
             <ImmunotherapySection />
             <MicrobiomeSection />
+            <NlmsfPodcastSection />
             <NutritionSection />
             <PathologySection />
             <PecomaSection />
