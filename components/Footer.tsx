@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const FOOTER_FONT =
@@ -138,6 +139,25 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+            <div className="mt-2" id="nlmsf-qr">
+              <p className="m-0 mb-2 text-sm font-semibold text-[#6a3ea1]">
+                Scan to visit nlmsf.org
+              </p>
+              <Image
+                src="/images/qr/nlmsf-qr.png"
+                alt="QR code that opens nlmsf.org"
+                width={112}
+                height={112}
+                className="block rounded-md border border-gray-200 bg-white"
+              />
+              <a
+                href="/images/qr/nlmsf-qr.png"
+                download="nlmsf-qr-code.png"
+                className="inline-block mt-2 text-sm text-[#4b5563] underline underline-offset-2 transition-colors duration-200 hover:text-violet-500"
+              >
+                Download QR code
+              </a>
+            </div>
           </div>
         </div>
 
