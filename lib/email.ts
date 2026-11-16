@@ -116,7 +116,7 @@ export async function sendFundraiserConfirmation(data: {
 }
 
 export async function sendQrScanEmail(data: {
-  to: string;
+  to: string[];
   scannedAt: string;
   location?: string | null;
   device?: string | null;
@@ -125,7 +125,7 @@ export async function sendQrScanEmail(data: {
   const r = getResend();
   await r.emails.send({
     from: FROM,
-    to: [data.to],
+    to: data.to,
     subject: "Someone scanned the NLMSF QR code",
     html: `
       <h2>Someone scanned the NLMSF QR code</h2>
@@ -138,7 +138,7 @@ export async function sendQrScanEmail(data: {
   });
 }
 
-export const QR_SCAN_NOTIFY_EMAIL = FOUNDATION_EMAIL;
+export const QR_SCAN_NOTIFY_EMAILS = [FOUNDATION_EMAIL, "admin@reactivlabs.com"];
 
 function esc(s: string): string {
   return s
