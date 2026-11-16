@@ -1,10 +1,10 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { QR_SCAN_NOTIFY_EMAIL, sendQrScanEmail } from "@/lib/email";
+import { QR_SCAN_NOTIFY_EMAILS, sendQrScanEmail } from "@/lib/email";
 import { clientIpFromHeaders } from "@/lib/rate-limit";
 
 /**
  * Printed QR code target (https://nlmsf.org/qr).
- * Emails Annie that someone scanned it, then redirects to the homepage.
+ * Emails Annie and admin@reactivlabs.com that someone scanned it, then redirects to the homepage.
  * The redirect never fails because of the email: errors are swallowed and the
  * send is capped by a short timeout.
  */
@@ -85,8 +85,9 @@ export async function GET(request: NextRequest) {
     const ua = h.get("user-agent")?.trim() ?? "";
     const host = (h.get("x-forwarded-host") || h.get("host") || request.nextUrl.hostname).split(":")[0].toLowerCase();
 
-    // Production emails Annie. Deploy previews / local only email if QR_SCAN_TEST_TO is set.
-    const to = PRODUCTION_HOSTS.has(host) ? QR_SCAN_NOTIFY_EMAIL : process.env.QR_SCAN_TEST_TO?.trim();
+    // Production emails Annie + admin@reactivlabs.com. Deploy previews / local only email if QR_SCAN_TEST_TO is set.
+    const testTo = process.env.QR_SCAN_TEST_TO?.trim();
+    const to = PRODUCTION_HOSTS.has(host) ? QR_SCAN_NOTIFY_EMAILS : testTo ? [testTo] : null;
 
     if (to && ua && !BOT_UA.test(ua) && !isPrefetch(h)) {
       const now = Date.now();
