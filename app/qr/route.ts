@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
 
 const DESTINATION = "https://nlmsf.org/?utm_source=qr&utm_medium=print";
 const PRODUCTION_HOSTS = new Set(["nlmsf.org", "www.nlmsf.org"]);
-const SEND_TIMEOUT_MS = 1500;
+const SEND_TIMEOUT_MS = 4000;
 const DEDUPE_WINDOW_MS = 2 * 60 * 1000;
 
 const BOT_UA =
@@ -89,10 +89,24 @@ export async function GET(request: NextRequest) {
     const testTo = process.env.QR_SCAN_TEST_TO?.trim();
     const to = PRODUCTION_HOSTS.has(host) ? QR_SCAN_NOTIFY_EMAILS : testTo ? [testTo] : null;
 
-    if (to && ua && !BOT_UA.test(ua) && !isPrefetch(h)) {
+    const skip = !to
+      ? "non-production host"
+      : !ua
+        ? "no user agent"
+        : BOT_UA.test(ua)
+          ? "bot user agent"
+          : isPrefetch(h)
+            ? "prefetch"
+            : null;
+
+    if (skip || !to) {
+      console.log(`[qr] scan skipped (${skip}) host=${host} ua=${ua.slice(0, 120)}`);
+    } else {
       const now = Date.now();
       const key = `${clientIpFromHeaders(h) ?? "unknown"}|${ua}`;
-      if (shouldNotify(key, now)) {
+      if (!shouldNotify(key, now)) {
+        console.log(`[qr] scan skipped (repeat within 2 min) host=${host}`);
+      } else {
         const scannedAt = `${new Intl.DateTimeFormat("en-US", {
           timeZone: "America/Denver",
           dateStyle: "full",
@@ -104,10 +118,23 @@ export async function GET(request: NextRequest) {
           scannedAt,
           location: geoFromHeaders(h),
           device: describeDevice(ua.slice(0, 300)),
-        }).catch((err) => {
-          console.error("[qr] scan notification failed", err);
-        });
-        await Promise.race([send, new Promise((resolve) => setTimeout(resolve, SEND_TIMEOUT_MS))]);
+        }).then(
+          (id) => {
+            console.log(`[qr] scan email sent id=${id} to=${to.join(",")} host=${host}`);
+            return "sent" as const;
+          },
+          (err) => {
+            console.error(`[qr] scan email failed to=${to.join(",")} host=${host}`, err);
+            return "failed" as const;
+          },
+        );
+        const outcome = await Promise.race([
+          send,
+          new Promise<"timeout">((resolve) => setTimeout(() => resolve("timeout"), SEND_TIMEOUT_MS)),
+        ]);
+        if (outcome === "timeout") {
+          console.warn(`[qr] scan email still pending after ${SEND_TIMEOUT_MS}ms; redirecting anyway`);
+        }
       }
     }
   } catch (err) {

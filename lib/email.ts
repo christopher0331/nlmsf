@@ -123,7 +123,8 @@ export async function sendQrScanEmail(data: {
   referrer?: string | null;
 }) {
   const r = getResend();
-  await r.emails.send({
+  // Resend's SDK returns { data, error } instead of throwing, so surface errors explicitly.
+  const { data: sent, error } = await r.emails.send({
     from: FROM,
     to: data.to,
     subject: "Someone scanned the NLMSF QR code",
@@ -136,6 +137,10 @@ export async function sendQrScanEmail(data: {
       <p style="color:#888;font-size:13px;margin-top:24px;">Location is estimated from the network and may be approximate. Repeat scans from the same connection within a few minutes are not re-sent.</p>
     `,
   });
+  if (error) {
+    throw new Error(`Resend rejected QR scan email: ${error.name ?? "error"}: ${error.message}`);
+  }
+  return sent?.id ?? null;
 }
 
 export const QR_SCAN_NOTIFY_EMAILS = [FOUNDATION_EMAIL, "admin@reactivlabs.com"];
