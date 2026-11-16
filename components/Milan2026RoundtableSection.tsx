@@ -13,16 +13,16 @@ export default function Milan2026RoundtableSection() {
       className="mx-auto w-full max-w-[1600px] px-8 py-8"
       aria-labelledby="milan-2026-roundtable-title"
     >
-      <article className="overflow-hidden rounded-xl border border-[#ddd6fe] bg-white shadow-[0_6px_22px_rgba(107,70,193,0.13)]">
+      <article className="mx-auto max-w-[600px] overflow-hidden rounded-xl border border-[#ddd6fe] bg-white shadow-[0_6px_22px_rgba(107,70,193,0.13)]">
         <Image
           src="/images/roundtable/milan-roundtable-group-photo.jpg"
           alt="Group photo of participants at the 2026 International Leiomyosarcoma Roundtable, Milan, Italy (IEO, October 2–3, 2026)"
           width={2048}
           height={873}
           className="h-auto w-full"
-          sizes="(min-width: 1600px) 1600px, 100vw"
+          sizes="(min-width: 640px) 600px, 100vw"
         />
-        <div className="px-6 py-6 md:px-8">
+        <div className="px-5 py-5 md:px-6">
           <p className="m-0 text-xs font-semibold uppercase tracking-widest text-[#7c3aed]">
             International Research Roundtable
           </p>

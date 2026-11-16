@@ -46,7 +46,6 @@ export default function HomePage() {
     <main>
       <HeroSection formToken={formToken} />
       <JamaConsensusSpotlight />
-      <Milan2026RoundtableSection />
       <HomeThreeColumns />
       <NovemberMessageSection />
       <TestimonialsScrollSection />
@@ -54,6 +53,7 @@ export default function HomePage() {
       <RecentUpdates />
       <LatestFromLinkedIn />
       <EducationVideosSection />
+      <Milan2026RoundtableSection />
       <NewsletterCTA formToken={formToken} />
       <ImpactInActionSection />
       <ReportsSection />
