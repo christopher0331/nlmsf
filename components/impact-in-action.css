@@ -1,4 +1,127 @@
 /* NLMSF Impact in Action wheel (homepage). */
+
+.impact-heading {
+  display: grid;
+  grid-template-columns: minmax(8.75rem, 1fr) auto minmax(8.75rem, 1fr);
+  align-items: center;
+  column-gap: 1rem;
+  margin: 0 auto 1.15rem;
+  max-width: 100%;
+}
+
+.impact-heading-logo {
+  width: 72px;
+  height: 72px;
+  justify-self: start;
+  object-fit: contain;
+}
+
+.impact-heading-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.impact-heading-eyebrow {
+  margin: 0 0 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c9a227;
+}
+
+.impact-heading-title {
+  margin: 0;
+  font-size: clamp(1.85rem, 3.4vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #5b2d8e;
+  background-image: linear-gradient(90deg, #5b2d8e 0%, #7b5a9a 48%, #c9a227 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.impact-heading-rule {
+  display: block;
+  width: 5.5rem;
+  height: 4px;
+  margin-top: 0.55rem;
+  margin-inline: auto;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #7b5a9a 0%, #d4ad4f 100%);
+}
+
+.impact-heading-qr {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.55rem 0.45rem;
+  background: #fff;
+  border: 1px solid #ece7f1;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(40, 24, 56, 0.08);
+  text-decoration: none;
+  color: inherit;
+}
+
+.impact-heading-qr-image {
+  display: block;
+  width: 128px;
+  height: 128px;
+}
+
+.impact-heading-qr-caption {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  color: #5b2d8e;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 799px) {
+  .impact-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .impact-heading-logo {
+    width: 56px;
+    height: 56px;
+    justify-self: center;
+  }
+
+  .impact-heading-copy {
+    align-items: center;
+    text-align: center;
+  }
+
+  .impact-heading-title {
+    font-size: 1.7rem;
+  }
+
+  .impact-heading-qr {
+    justify-self: center;
+  }
+
+  .impact-heading-qr-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 .impact-board {
   margin: 0;
   display: grid;

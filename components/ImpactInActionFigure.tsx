@@ -13,7 +13,7 @@ type Program = {
 };
 
 const LOGO_DIR = "/images/impact-in-action";
-const SEGMENT = 360 / 7;
+const SEGMENT = 360 / 8;
 
 /** Left column, top to bottom (matches the wheel, counter-clockwise from top-left). */
 const LEFT: Program[] = [
@@ -22,12 +22,22 @@ const LEFT: Program[] = [
     title: "Advancing Research & Treatment Innovation",
     description: [
       "Accelerating and advancing global research initiatives focused on precision clinical trial development to expand treatment options for patients with leiomyosarcoma (LMS).",
-      "Each year, NLMSF funds researchers pursuing LMS-specific research projects, advancing the science toward better treatments and outcomes.",
     ],
     logo: `${LOGO_DIR}/advancing-research.webp`,
     logoAlt: "LMS Sarcoma Research in Review logo",
     color: "#805891",
-    angle: 360 - SEGMENT * 0.75,
+    angle: 360 - SEGMENT * 0.5,
+  },
+  {
+    id: "annual-research-funding",
+    title: "NLMSF Annual Research Funding",
+    description: [
+      "The Foundation funds a well-vetted research project recommended by the Executive Review Committee each year, along with special projects requested of the Research Community, to support corollary studies, fellowship programs, and special research initiatives such as the Count Me In Project as one example.",
+    ],
+    logo: `${LOGO_DIR}/annual-research-funding.webp`,
+    logoAlt: "Annual Funding of LMS Research Grants logo",
+    color: "#3a7a72",
+    angle: 360 - SEGMENT * 1.5,
   },
   {
     id: "family-community-roundtable",
@@ -38,7 +48,7 @@ const LEFT: Program[] = [
     logo: `${LOGO_DIR}/family-community-roundtable.webp`,
     logoAlt: "LMS/Sarcoma Community Roundtable, The Circle of Hope logo",
     color: "#a2a459",
-    angle: 270,
+    angle: 360 - SEGMENT * 2.5,
   },
   {
     id: "community-empowerment",
@@ -50,7 +60,7 @@ const LEFT: Program[] = [
     logo: `${LOGO_DIR}/community-empowerment.webp`,
     logoAlt: "National Leiomyosarcoma Foundation logo",
     color: "#de9d66",
-    angle: 270 - SEGMENT,
+    angle: 360 - SEGMENT * 3.5,
   },
 ];
 
@@ -65,7 +75,7 @@ const RIGHT: Program[] = [
     logo: `${LOGO_DIR}/international-roundtable.webp`,
     logoAlt: "NLMSF–SPAGN International Leiomyosarcoma Research Roundtable logo",
     color: "#6f7346",
-    angle: 90 - SEGMENT * 1.5,
+    angle: SEGMENT * 0.5,
   },
   {
     id: "patient-perspectives-clinical-trials",
@@ -76,7 +86,7 @@ const RIGHT: Program[] = [
     logo: `${LOGO_DIR}/patient-perspectives-clinical-trials.webp`,
     logoAlt: "Clinical Trials Patient-Caregiver Perspectives Network logo",
     color: "#b49fbd",
-    angle: 90 - SEGMENT * 0.5,
+    angle: SEGMENT * 1.5,
   },
   {
     id: "caregiving-counts",
@@ -87,7 +97,7 @@ const RIGHT: Program[] = [
     logo: `${LOGO_DIR}/caregiving-counts.webp`,
     logoAlt: "NLMSF Caregiving Counts Program logo",
     color: "#d4ad4f",
-    angle: 90 + SEGMENT * 0.5,
+    angle: SEGMENT * 2.5,
   },
   {
     id: "early-career-awards",
@@ -98,7 +108,7 @@ const RIGHT: Program[] = [
     logo: `${LOGO_DIR}/early-career-awards.webp`,
     logoAlt: "NLMSF Early Career Researcher Recognition Awards logo",
     color: "#c1b9af",
-    angle: 90 + SEGMENT * 1.5,
+    angle: SEGMENT * 3.5,
   },
 ];
 
