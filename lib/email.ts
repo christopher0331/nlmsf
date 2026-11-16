@@ -115,6 +115,31 @@ export async function sendFundraiserConfirmation(data: {
   });
 }
 
+export async function sendQrScanEmail(data: {
+  to: string;
+  scannedAt: string;
+  location?: string | null;
+  device?: string | null;
+  referrer?: string | null;
+}) {
+  const r = getResend();
+  await r.emails.send({
+    from: FROM,
+    to: [data.to],
+    subject: "Someone scanned the NLMSF QR code",
+    html: `
+      <h2>Someone scanned the NLMSF QR code</h2>
+      <p>The QR code was scanned and the visitor was sent to <a href="https://nlmsf.org">nlmsf.org</a>.</p>
+      <p><strong>When:</strong> ${esc(data.scannedAt)}</p>
+      <p><strong>Approximate location:</strong> ${esc(data.location || "Not available")}</p>
+      <p><strong>Device:</strong> ${esc(data.device || "Not available")}</p>
+      <p style="color:#888;font-size:13px;margin-top:24px;">Location is estimated from the network and may be approximate. Repeat scans from the same connection within a few minutes are not re-sent.</p>
+    `,
+  });
+}
+
+export const QR_SCAN_NOTIFY_EMAIL = FOUNDATION_EMAIL;
+
 function esc(s: string): string {
   return s
     .replace(/&/g, "&amp;")
