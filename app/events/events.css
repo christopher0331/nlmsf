@@ -166,6 +166,33 @@
   margin-bottom: 2rem;
 }
 
+.event-highlight {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem 1.35rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 2rem;
+  max-width: 32rem;
+  text-align: center;
+}
+
+.event-highlight img {
+  display: block;
+  width: 100%;
+  max-width: 396px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+}
+
+.event-highlight figcaption {
+  margin: 0.85rem 0 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .events-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -552,6 +579,10 @@
   }
 
   .content-section {
+    padding: 1rem;
+  }
+
+  .event-highlight {
     padding: 1rem;
   }
 }

@@ -74,6 +74,19 @@ export default function EventsPage() {
           </p>
         </div>
 
+        <figure className="event-highlight">
+          <img
+            src="/images/events/shrivers-achees-ctos.png"
+            alt="The Shriver and Achee families together at CTOS"
+            width={396}
+            height={296}
+          />
+          <figcaption>
+            The Shrivers connect with The Achees at CTOS - in the spirit of
+            support/collaboration!
+          </figcaption>
+        </figure>
+
         <div className="events-layout">
           <aside className="sidebar">
             <div className="sidebar-container">
