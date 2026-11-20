@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function ChemotherapySection() {
   return (
@@ -25,7 +26,7 @@ export default function ChemotherapySection() {
         <div className="grid gap-6 lg:grid-cols-2">
           <article
             id="cardiotoxicity-sarcoma-treatments"
-            className="flex h-full scroll-mt-28 flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm"
+            className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm"
           >
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
               YouTube Recording
@@ -77,9 +78,10 @@ export default function ChemotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Recording
             </a>
+            <CopyEntryLink id="cardiotoxicity-sarcoma-treatments" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="current-treatment-options-for-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
               YouTube Podcast
             </div>
@@ -123,9 +125,10 @@ export default function ChemotherapySection() {
             <a href="#" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-700 hover:text-purple-800">
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="current-treatment-options-for-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="how-patient-co-morbidities-impact-chemotherapy-treatment" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
               YouTube Podcast
             </div>
@@ -179,9 +182,10 @@ export default function ChemotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="how-patient-co-morbidities-impact-chemotherapy-treatment" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="the-use-of-trabectedin-in-the-treatment-of-lms" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
               YouTube Podcast
             </div>
@@ -235,9 +239,10 @@ export default function ChemotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="the-use-of-trabectedin-in-the-treatment-of-lms" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="the-use-of-votrient-in-the-treatment-of-sarcomas" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
               YouTube Podcast
             </div>
@@ -291,6 +296,7 @@ export default function ChemotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="the-use-of-votrient-in-the-treatment-of-sarcomas" />
           </article>
         </div>
       </div>

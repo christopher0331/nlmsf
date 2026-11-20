@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function BasicResearchSection() {
   return (
@@ -23,7 +24,7 @@ export default function BasicResearchSection() {
           implications for treatment.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
+          <article id="novel-leiomyosarcoma-subtypes-using-spatial-transcriptomics" className="share-entry flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">
               YouTube Podcast
             </div>
@@ -78,8 +79,9 @@ export default function BasicResearchSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="novel-leiomyosarcoma-subtypes-using-spatial-transcriptomics" />
           </article>
-          <article className="flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
+          <article id="lms-project-updates-ulms-pilot-and-nih-lms-spore-collaboration" className="share-entry flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">
               YouTube Event
             </div>
@@ -137,8 +139,9 @@ export default function BasicResearchSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Event
             </a>
+            <CopyEntryLink id="lms-project-updates-ulms-pilot-and-nih-lms-spore-collaboration" />
           </article>
-          <article className="flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
+          <article id="the-importance-of-telomeres-in-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">
               YouTube Podcast
             </div>
@@ -192,8 +195,9 @@ export default function BasicResearchSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="the-importance-of-telomeres-in-leiomyosarcoma" />
           </article>
-          <article className="flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
+          <article id="lms-connect-live" className="share-entry flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">
               YouTube Podcast
             </div>
@@ -246,6 +250,7 @@ export default function BasicResearchSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="lms-connect-live" />
           </article>
         </div>
       </div>

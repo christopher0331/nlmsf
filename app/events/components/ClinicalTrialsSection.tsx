@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function ClinicalTrialsSection() {
   return (
@@ -22,7 +23,7 @@ export default function ClinicalTrialsSection() {
           a trial is right for you.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="informed-consent-what-you-need-to-know-about-it" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Recording
             </div>
@@ -76,9 +77,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Recording
             </a>
+            <CopyEntryLink id="informed-consent-what-you-need-to-know-about-it" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="leiomyosarcoma-lurbinectedin-trial-update" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Recording
             </div>
@@ -132,9 +134,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Recording
             </a>
+            <CopyEntryLink id="leiomyosarcoma-lurbinectedin-trial-update" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="leiomyosarcoma-specific-research-clinical-trials-and-forthcoming-ctdna-research-project" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Recording
             </div>
@@ -184,9 +187,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Recording
             </a>
+            <CopyEntryLink id="leiomyosarcoma-specific-research-clinical-trials-and-forthcoming-ctdna-research-project" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="phase-1-clinical-trial-using-peposertib-and-liposomal-doxorubicin" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -243,9 +247,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="phase-1-clinical-trial-using-peposertib-and-liposomal-doxorubicin" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="phase-ii-clinical-trial-using-zanzalintinib-xl092" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -300,9 +305,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="phase-ii-clinical-trial-using-zanzalintinib-xl092" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="strass-2-3-clinical-trial-for-retroperitoneal-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -356,9 +362,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="strass-2-3-clinical-trial-for-retroperitoneal-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="phase-1a-2-clinical-trial-of-gi-102-for-advanced-sarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -413,9 +420,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="phase-1a-2-clinical-trial-of-gi-102-for-advanced-sarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="clinical-trials-perspectives" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -467,9 +475,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="clinical-trials-perspectives" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="lurbinectedin-in-combination-with-doxorubicin-for-advanced-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -523,9 +532,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="lurbinectedin-in-combination-with-doxorubicin-for-advanced-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="cabozantinib-with-pd-1-and-ctla-4-inhibition-and-other-trials" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -580,9 +590,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="cabozantinib-with-pd-1-and-ctla-4-inhibition-and-other-trials" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="updates-on-three-promising-active-lms-clinical-trials" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -636,9 +647,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="updates-on-three-promising-active-lms-clinical-trials" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="the-efficacy-of-early-phase-clinical-trials-in-soft-tissue-sarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -692,9 +704,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="the-efficacy-of-early-phase-clinical-trials-in-soft-tissue-sarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="unesbulin-new-treatment-for-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -748,9 +761,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="unesbulin-new-treatment-for-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="new-treatment-approaches-for-lms-in-preclinical-or-clinical-trials" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -805,9 +819,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="new-treatment-approaches-for-lms-in-preclinical-or-clinical-trials" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="olaparib-and-temozolomide-for-advanced-uterine-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -862,9 +877,10 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="olaparib-and-temozolomide-for-advanced-uterine-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
+          <article id="clinical-trials-discussion" className="share-entry flex h-full flex-col rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
               YouTube Podcast
             </div>
@@ -915,6 +931,7 @@ export default function ClinicalTrialsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="clinical-trials-discussion" />
           </article>
         </div>
       </div>

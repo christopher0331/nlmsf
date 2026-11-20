@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function ImmunotherapySection() {
   return (
@@ -23,7 +24,7 @@ export default function ImmunotherapySection() {
           including current research, clinical applications, and future directions.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="immunotherapy-in-sarcoma-current-data-and-promising-strategies" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -77,9 +78,10 @@ export default function ImmunotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="immunotherapy-in-sarcoma-current-data-and-promising-strategies" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="immunotherapy-targeting-the-molecular-and-immunological-features-of-lms" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -133,9 +135,10 @@ export default function ImmunotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="immunotherapy-targeting-the-molecular-and-immunological-features-of-lms" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="current-status-and-future-directions-of-immunotherapy-for-soft-tissue-sarcomas" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -190,9 +193,10 @@ export default function ImmunotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="current-status-and-future-directions-of-immunotherapy-for-soft-tissue-sarcomas" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="immunotherapy-immunotherapy-for-sarcoma-a-work-in-progress" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -247,9 +251,10 @@ export default function ImmunotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="immunotherapy-immunotherapy-for-sarcoma-a-work-in-progress" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="immunotherapy-for-sarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -303,9 +308,10 @@ export default function ImmunotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="immunotherapy-for-sarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="immune-microenvironment-of-lms" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -357,6 +363,7 @@ export default function ImmunotherapySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="immune-microenvironment-of-lms" />
           </article>
         </div>
       </div>

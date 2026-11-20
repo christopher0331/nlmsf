@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function CaregivingSection() {
   return (
@@ -20,7 +21,7 @@ export default function CaregivingSection() {
           practical guidance.
         </p>
         <div className="grid gap-6">
-          <article className="flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
+          <article id="caregiving-counts" className="share-entry flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-600">
               YouTube Podcast
             </div>
@@ -70,6 +71,7 @@ export default function CaregivingSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="caregiving-counts" />
           </article>
         </div>
       </div>

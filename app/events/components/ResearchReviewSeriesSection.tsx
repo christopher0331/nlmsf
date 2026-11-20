@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function ResearchReviewSeriesSection() {
   return (
@@ -32,7 +33,7 @@ export default function ResearchReviewSeriesSection() {
         <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
 
           {/* Maki */}
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="legubicin-a-new-soft-tissue-sarcoma-treatment-update" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700">
               Research in Review
             </div>
@@ -85,10 +86,11 @@ export default function ResearchReviewSeriesSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Presentation
             </a>
+            <CopyEntryLink id="legubicin-a-new-soft-tissue-sarcoma-treatment-update" />
           </article>
 
           {/* Zhou */}
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="lms-specific-research-and-clinical-trials-overview-of-the-forthcoming-ctdna-research-project" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700">
               Research in Review
             </div>
@@ -140,10 +142,11 @@ export default function ResearchReviewSeriesSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Presentation
             </a>
+            <CopyEntryLink id="lms-specific-research-and-clinical-trials-overview-of-the-forthcoming-ctdna-research-project" />
           </article>
 
           {/* Monga */}
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="lms-research-in-review-argsarc-xl092-and-storm-therapeutics" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700">
               Research in Review
             </div>
@@ -194,6 +197,7 @@ export default function ResearchReviewSeriesSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Presentation
             </a>
+            <CopyEntryLink id="lms-research-in-review-argsarc-xl092-and-storm-therapeutics" />
           </article>
 
         </div>

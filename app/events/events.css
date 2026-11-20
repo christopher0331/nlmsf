@@ -456,6 +456,18 @@
   height: calc(100vh - 24px);
 }
 
+@media (max-width: 979px) {
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .sidebar-container {
+    height: auto;
+    overflow: visible;
+  }
+}
+
 .sidebar-container {
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
@@ -567,6 +579,46 @@
   .content-section {
     padding: 1.5rem;
   }
+}
+
+/* Shared entry anchors. 7rem matches the header offset already used on event cards. */
+.events-page .share-entry,
+.events-page section[id],
+.events-page .content-section[id],
+.events-page .content-panel[id] {
+  scroll-margin-top: 7rem;
+}
+
+.entry-copy {
+  margin-top: 0.85rem;
+}
+
+.entry-copy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #475569;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.entry-copy-button:hover {
+  border-color: #c4b5fd;
+  background: #f5f3ff;
+  color: #6d28d9;
+}
+
+.entry-copy-button:focus-visible {
+  outline: 2px solid #6d28d9;
+  outline-offset: 2px;
 }
 
 @media (max-width: 480px) {

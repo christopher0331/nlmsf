@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function NutritionSection() {
   return (
@@ -19,7 +20,7 @@ export default function NutritionSection() {
           dietary recommendations during chemotherapy and clinical trials.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
+          <article id="guidance-on-diet-during-chemo-and-clinical-trials" className="share-entry flex h-full flex-col rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-600">
               YouTube Podcast
             </div>
@@ -75,9 +76,10 @@ export default function NutritionSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="guidance-on-diet-during-chemo-and-clinical-trials" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
+          <article id="pathology-perspectives-and-recent-research" className="share-entry flex h-full flex-col rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-600">
               YouTube Recording
             </div>
@@ -133,9 +135,10 @@ export default function NutritionSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="pathology-perspectives-and-recent-research" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
+          <article id="nutrition-basic-lecture-on-pathology-of-sarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-600">
               YouTube Recording
             </div>
@@ -189,6 +192,7 @@ export default function NutritionSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="nutrition-basic-lecture-on-pathology-of-sarcoma" />
           </article>
         </div>
       </div>

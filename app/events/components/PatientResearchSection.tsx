@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function PatientResearchSection() {
   return (
@@ -25,7 +26,7 @@ export default function PatientResearchSection() {
           initiatives like Count-Me-In and Pattern.org to advance Leiomyosarcoma research.
         </p>
         <div className="grid gap-6">
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="count-me-in-lms-project-and-how-to-participate" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Podcast
             </div>
@@ -79,6 +80,7 @@ export default function PatientResearchSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="count-me-in-lms-project-and-how-to-participate" />
           </article>
         </div>
       </div>

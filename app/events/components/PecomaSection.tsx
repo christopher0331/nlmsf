@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function PecomaSection() {
   return (
@@ -19,7 +20,7 @@ export default function PecomaSection() {
           type of sarcoma related to Leiomyosarcoma.
         </p>
         <div className="grid gap-6">
-          <article className="flex h-full flex-col rounded-2xl border border-amber-100 bg-white p-5 shadow-sm">
+          <article id="pecoma-research-updates-and-drug-repurposing" className="share-entry flex h-full flex-col rounded-2xl border border-amber-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-600">
               YouTube Podcast
             </div>
@@ -75,6 +76,7 @@ export default function PecomaSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="pecoma-research-updates-and-drug-repurposing" />
           </article>
         </div>
       </div>

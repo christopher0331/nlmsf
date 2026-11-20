@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function SurvivorshipSection() {
   return (
@@ -19,7 +20,7 @@ export default function SurvivorshipSection() {
           patients, focusing on long-term health and quality of life.
         </p>
         <div className="grid gap-6">
-          <article className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
+          <article id="survivorship-care-planning" className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
               Video Recording
             </div>
@@ -72,6 +73,7 @@ export default function SurvivorshipSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="survivorship-care-planning" />
           </article>
         </div>
       </div>

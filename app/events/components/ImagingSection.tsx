@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function ImagingSection() {
   return (
@@ -21,7 +22,7 @@ export default function ImagingSection() {
           monitoring, and treatment planning for Leiomyosarcoma patients.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="imaging-targeting-the-molecular-and-immunological-features-of-lms" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Recording
             </div>
@@ -77,9 +78,10 @@ export default function ImagingSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="imaging-targeting-the-molecular-and-immunological-features-of-lms" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="current-status-and-future-directions-of-immunotherapies-in-soft-tissue-sarcomas" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Recording
             </div>
@@ -146,9 +148,10 @@ export default function ImagingSection() {
                 <i className="fas fa-external-link-alt" aria-hidden /> Related Article
               </a>
             </div>
+            <CopyEntryLink id="current-status-and-future-directions-of-immunotherapies-in-soft-tissue-sarcomas" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="what-patients-should-know-about-imaging-studies-and-their-utility-in-treatment-of-sarcoma-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Recording
             </div>
@@ -200,9 +203,10 @@ export default function ImagingSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="what-patients-should-know-about-imaging-studies-and-their-utility-in-treatment-of-sarcoma-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="preparing-for-an-imaging-study-what-a-patient-caregiver-should-know" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Recording
             </div>
@@ -254,9 +258,10 @@ export default function ImagingSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="preparing-for-an-imaging-study-what-a-patient-caregiver-should-know" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="imaging-immunotherapy-for-sarcoma-a-work-in-progress" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Recording
             </div>
@@ -321,6 +326,7 @@ export default function ImagingSection() {
                 <i className="fas fa-external-link-alt" aria-hidden /> Read the Article
               </a>
             </div>
+            <CopyEntryLink id="imaging-immunotherapy-for-sarcoma-a-work-in-progress" />
           </article>
         </div>
       </div>

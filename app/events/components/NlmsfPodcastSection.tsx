@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 type PodcastResource = {
   href: string;
@@ -8,6 +9,7 @@ type PodcastResource = {
 
 type PodcastItem = {
   id: string;
+  slug: string;
   title: string;
   description: string;
   url: string;
@@ -17,6 +19,7 @@ type PodcastItem = {
 const podcasts: PodcastItem[] = [
   {
     id: "XhLg-x1dBAM",
+    slug: "nlmsf-anxiety-and-coping-podcast-less-than-10-minutes-the-power-in-your-thoughts-self-care-in-combating-stress-and-anxiety",
     title:
       "NLMSF Anxiety and Coping Podcast (less than 10 minutes): The Power in your Thoughts - Self-Care in combating Stress and Anxiety",
     description:
@@ -25,6 +28,7 @@ const podcasts: PodcastItem[] = [
   },
   {
     id: "W8KbRJpOOXI",
+    slug: "sharing-knowledge-sharing-hope-nlmsf-podcast-series-episode-1-dimensions-in-resilience",
     title:
       "Sharing Knowledge, Sharing Hope NLMSF Podcast Series, Episode 1: Dimensions in Resilience",
     description:
@@ -33,6 +37,7 @@ const podcasts: PodcastItem[] = [
   },
   {
     id: "n4OOczeh1LQ",
+    slug: "caring-for-the-caregiver",
     title: "Caring for the Caregiver",
     description:
       "NLMSF recording, Supporting Caregivers, on caring for the caregiver, with an accompanying PowerPoint.",
@@ -47,6 +52,7 @@ const podcasts: PodcastItem[] = [
   },
   {
     id: "0fv3DoEWFtQ",
+    slug: "introducing-morning-pages-a-self-driven-cognitive-support-therapy-concept",
     title: "Introducing Morning Pages - A self-driven Cognitive Support Therapy Concept",
     description:
       "An introduction to Morning Pages, a self-driven cognitive support therapy concept and a first step toward cognitive behavioral support therapy.",
@@ -76,7 +82,8 @@ export default function NlmsfPodcastSection() {
           {podcasts.map((podcast) => (
             <article
               key={podcast.id}
-              className="flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm"
+              id={podcast.slug}
+              className="share-entry flex h-full flex-col rounded-2xl border border-purple-100 bg-white p-5 shadow-sm"
             >
               <div className="mb-3 inline-flex w-fit rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700">
                 NLMSF Podcast
@@ -125,6 +132,7 @@ export default function NlmsfPodcastSection() {
                   </a>
                 ))}
               </div>
+              <CopyEntryLink id={podcast.slug} />
             </article>
           ))}
         </div>

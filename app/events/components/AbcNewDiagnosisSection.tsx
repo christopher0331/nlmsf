@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function AbcNewDiagnosisSection() {
   return (
@@ -25,7 +26,7 @@ export default function AbcNewDiagnosisSection() {
           expect.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="the-abcs-of-a-new-diagnosis" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Podcast
             </div>
@@ -77,8 +78,9 @@ export default function AbcNewDiagnosisSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="the-abcs-of-a-new-diagnosis" />
           </article>
-          <article className="flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+          <article id="introduction-to-the-abcs-of-a-new-diagnosis" className="share-entry flex h-full flex-col rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600">
               YouTube Podcast
             </div>
@@ -130,6 +132,7 @@ export default function AbcNewDiagnosisSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="introduction-to-the-abcs-of-a-new-diagnosis" />
           </article>
         </div>
       </div>

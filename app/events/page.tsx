@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import EntryHashScroll from "@/components/EntryHashScroll";
 import AbcNewDiagnosisSection from "./components/AbcNewDiagnosisSection";
 import ResearchReviewSeriesSection from "./components/ResearchReviewSeriesSection";
 import BasicResearchSection from "./components/BasicResearchSection";
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   return (
     <main className="events-page">
+      <EntryHashScroll />
       <div className="events-container">
         <section className="hero">
           <div className="badge">
