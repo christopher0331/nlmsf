@@ -672,3 +672,94 @@ body {
   animation: mega-title-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
+/* Awareness banner marquee. Custom CSS because the loop, pause, and
+   reduced-motion swap cannot be expressed reliably with utilities alone. */
+@keyframes awareness-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.awareness-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: awareness-marquee 45s linear infinite;
+}
+
+.awareness-banner:hover .awareness-track,
+.awareness-banner:focus-within .awareness-track {
+  animation-play-state: paused;
+}
+
+.awareness-banner:focus-within .awareness-track {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Soft edges so scrolling text does not hard-cut against the logo or the phone link. */
+.awareness-banner::before,
+.awareness-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1.75rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.awareness-banner::before {
+  left: 0;
+  background: linear-gradient(to right, #4c1d95, transparent);
+}
+
+.awareness-banner::after {
+  right: 0;
+  background: linear-gradient(to left, #4c1d95, transparent);
+}
+
+.awareness-static {
+  display: none;
+}
+
+.awareness-focus-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.awareness-focus-link:focus {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  z-index: 20;
+  padding: 0.5rem 0.75rem;
+  outline: 2px solid #fde68a;
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .awareness-track,
+  .awareness-focus-link {
+    display: none;
+  }
+
+  .awareness-static {
+    display: block;
+  }
+}
+

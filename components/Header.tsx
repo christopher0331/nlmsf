@@ -1,18 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useLayoutEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import AwarenessBanner from "@/components/AwarenessBanner";
 
 const LOGO_SRC = "/images/nlmsf_logo_no_background-removebg-preview.png";
 const PHONE = "(303) 808-3437";
 const DONATE_URL = "?form=DONATE";
 
 const FONT_HEADER = "font-quicksand relative";
-const TOP_BAR = "w-full bg-white border-b border-gray-200 h-[50px] relative z-[5] box-border";
+const TOP_BAR = "w-full bg-white border-b border-gray-200 min-h-[50px] relative z-[5] box-border flex items-stretch";
 const CONTAINER_HEADER = "max-w-full w-full mx-auto pl-4 pr-10 flex items-center justify-between box-border relative lg:px-8 min-h-full";
-const LOGO_SPACE = "flex-[0_0_25%] max-w-[200px]";
 const NAVBAR = "w-full bg-white z-[200] relative border-b border-gray-200 shadow-sm py-3 min-h-[90px] box-border overflow-visible lg:py-5 lg:min-h-[110px] flex items-center";
 const LOGO_SPANNING = "absolute top-1 left-4 z-[202] bg-transparent flex items-center w-[clamp(130px,20vw,180px)] h-[140px] lg:h-[155px] pointer-events-none [&>a]:pointer-events-auto";
 const LOGO_IMG = "w-full h-auto max-h-[130px] object-contain lg:max-h-[145px]";
@@ -21,7 +21,7 @@ const MENU = "flex list-none m-0 p-0 gap-2 flex-wrap justify-center w-full";
 const MENU_ITEM = "relative flex justify-center";
 const MENU_LINK = "py-2 px-2.5 text-[#333] font-medium text-[clamp(1.05rem,2.2vw,1.15rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white";
 const MENU_LINK_DROPDOWN = "py-2 pl-2.5 pr-[1.1rem] text-[#333] font-medium text-[clamp(1.05rem,2.2vw,1.15rem)] no-underline rounded transition-all duration-200 whitespace-nowrap bg-transparent border-0 cursor-pointer hover:bg-[#6a3ea1] hover:text-white relative inline-flex items-center gap-0.5 hover:[&>svg]:border-white";
-/* Dropdown sits flush under header: top bar 50px + navbar min-height (80px / 96px lg) */
+/* Fallback top until the header is measured. Inline style replaces it so a taller banner still sits flush. */
 const DROPDOWN_WRAPPER_BASE = "fixed left-0 right-0 w-full flex justify-center opacity-0 pointer-events-none transition-[opacity] duration-300 delay-100 z-[1000] top-[198px] lg:top-[208px]";
 const DROPDOWN_WRAPPER_OPEN = "!opacity-100 !pointer-events-auto mega-open";
 const DROPDOWN_PANEL = "mega-panel-animated relative w-full max-w-[1280px] bg-white border-t-2 border-[#6a3ea1] border-b border-gray-200 shadow-lg mx-auto max-h-[calc(100vh-208px)] overflow-y-auto py-6 px-4 box-border -mt-px";
@@ -87,7 +87,10 @@ export default function Header() {
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
+  const [menuTop, setMenuTop] = useState<number | null>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const dropdownStyle = menuTop == null ? undefined : { top: menuTop };
 
   const closeDesktop = useCallback(() => setDesktopDropdown(null), []);
   const closeDropdowns = useCallback(() => {
@@ -144,8 +147,28 @@ export default function Header() {
     closeDropdowns();
   }, [closeDropdowns, pathname]);
 
+  useLayoutEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const measure = () => setMenuTop(Math.round(el.getBoundingClientRect().bottom));
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    window.addEventListener("resize", measure);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    const el = headerRef.current;
+    if (!el || desktopDropdown == null) return;
+    setMenuTop(Math.round(el.getBoundingClientRect().bottom));
+  }, [desktopDropdown]);
+
   return (
-    <div className={FONT_HEADER}>
+    <div className={FONT_HEADER} ref={headerRef}>
       <div className={LOGO_SPANNING}>
         <Link href="/">
           <Image
@@ -162,19 +185,19 @@ export default function Header() {
       </div>
 
       <div className={TOP_BAR}>
-        <div className={CONTAINER_HEADER}>
-          <div className={LOGO_SPACE} />
-          <div className={ACTIONS}>
-            <a href="tel:+13038083437" className={PHONE_LINK}>
-              <span className={PHONE_ICON}>
-                <PhoneIcon />
-              </span>
-              <span>{PHONE}</span>
-            </a>
-            <a href={DONATE_URL} className={DONATE_BTN}>
-              Donate Now
-            </a>
-          </div>
+        {/* Clears the overlapping logo so the banner text does not run underneath it. */}
+        <div className="w-[158px] shrink-0 sm:w-[182px] lg:w-[208px]" aria-hidden />
+        <AwarenessBanner />
+        <div className={`${ACTIONS} shrink-0 self-center pr-4 lg:pr-8`}>
+          <a href="tel:+13038083437" className={PHONE_LINK}>
+            <span className={PHONE_ICON}>
+              <PhoneIcon />
+            </span>
+            <span>{PHONE}</span>
+          </a>
+          <a href={DONATE_URL} className={DONATE_BTN}>
+            Donate Now
+          </a>
         </div>
       </div>
 
@@ -203,7 +226,7 @@ export default function Header() {
                   Patients
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
-                <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "patients" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
+                <div data-dropdown-panel style={dropdownStyle} className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "patients" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>Patients</h3>
@@ -554,7 +577,7 @@ export default function Header() {
                   Survivorship
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
-                <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "survivorship" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
+                <div data-dropdown-panel style={dropdownStyle} className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "survivorship" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>Survivorship</h3>
@@ -598,7 +621,7 @@ export default function Header() {
                   Caregiving Counts
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
-                <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "caregiving" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
+                <div data-dropdown-panel style={dropdownStyle} className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "caregiving" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>
@@ -660,7 +683,7 @@ export default function Header() {
                   Get Involved
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
-                <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "involved" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
+                <div data-dropdown-panel style={dropdownStyle} className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "involved" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>Get Involved</h3>
@@ -712,7 +735,7 @@ export default function Header() {
                   About Us
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
-                <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "about" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
+                <div data-dropdown-panel style={dropdownStyle} className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "about" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>About Us</h3>
@@ -780,7 +803,7 @@ export default function Header() {
                   Research
                   <ChevronDown className="shrink-0 text-[#6a3ea1]" />
                 </button>
-                <div data-dropdown-panel className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "research" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
+                <div data-dropdown-panel style={dropdownStyle} className={`${DROPDOWN_WRAPPER_BASE} ${desktopDropdown === "research" ? DROPDOWN_WRAPPER_OPEN : ""}`}>
                   <div className={DROPDOWN_PANEL} onClick={handleDropdownLinkClick}>
                     <div className={DROPDOWN_CONTENT}>
                       <h3 className={DROPDOWN_TITLE}>Research</h3>
