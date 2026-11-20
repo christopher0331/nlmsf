@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function UterineFibroidsSection() {
   return (
@@ -24,7 +25,7 @@ export default function UterineFibroidsSection() {
           Leiomyosarcoma, and important considerations before undergoing fibroid surgery.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-rose-100 bg-white p-5 shadow-sm">
+          <article id="circulating-dna-in-uterine-leiomyosarcoma-and-benign-uterine-leiomyomas" className="share-entry flex h-full flex-col rounded-2xl border border-rose-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-rose-600">
               YouTube Podcast
             </div>
@@ -78,9 +79,10 @@ export default function UterineFibroidsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="circulating-dna-in-uterine-leiomyosarcoma-and-benign-uterine-leiomyomas" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-rose-100 bg-white p-5 shadow-sm">
+          <article id="uterine-fibroids-what-you-should-know-before-having-surgery" className="share-entry flex h-full flex-col rounded-2xl border border-rose-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-rose-600">
               Video Recording
             </div>
@@ -138,9 +140,10 @@ export default function UterineFibroidsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="uterine-fibroids-what-you-should-know-before-having-surgery" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-rose-100 bg-white p-5 shadow-sm">
+          <article id="differentiating-leiomyosarcoma-from-benign-leiomyoma-toward-a-blood-biomarker" className="share-entry flex h-full flex-col rounded-2xl border border-rose-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-rose-600">
               Video Recording
             </div>
@@ -197,6 +200,7 @@ export default function UterineFibroidsSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="differentiating-leiomyosarcoma-from-benign-leiomyoma-toward-a-blood-biomarker" />
           </article>
         </div>
       </div>

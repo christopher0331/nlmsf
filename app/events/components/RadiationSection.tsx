@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function RadiationSection() {
   return (
@@ -21,7 +22,7 @@ export default function RadiationSection() {
           Leiomyosarcoma, including its applications and effectiveness.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="hypofractionated-radiation-for-extremity-and-truncal-sarcomas" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -77,9 +78,10 @@ export default function RadiationSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="hypofractionated-radiation-for-extremity-and-truncal-sarcomas" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
+          <article id="the-role-of-radiation-in-the-treatment-of-sarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-red-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-600">
               YouTube Podcast
             </div>
@@ -133,6 +135,7 @@ export default function RadiationSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="the-role-of-radiation-in-the-treatment-of-sarcoma" />
           </article>
         </div>
       </div>

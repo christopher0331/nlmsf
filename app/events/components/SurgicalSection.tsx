@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function SurgicalSection() {
   return (
@@ -19,7 +20,7 @@ export default function SurgicalSection() {
           techniques and considerations for optimal outcomes.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
+          <article id="surgery-for-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-600">
               YouTube Podcast
             </div>
@@ -73,9 +74,10 @@ export default function SurgicalSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="surgery-for-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
+          <article id="current-thoracic-surgical-procedures-for-sarcoma-lung-metastases" className="share-entry flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-600">
               Video Recording
             </div>
@@ -128,9 +130,10 @@ export default function SurgicalSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="current-thoracic-surgical-procedures-for-sarcoma-lung-metastases" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
+          <article id="retroperitoneal-leiomyosarcoma-consensus-guidelines-and-daily-practice" className="share-entry flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-600">
               Video Recording
             </div>
@@ -183,9 +186,10 @@ export default function SurgicalSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="retroperitoneal-leiomyosarcoma-consensus-guidelines-and-daily-practice" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
+          <article id="surgical-management-of-lms" className="share-entry flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-600">
               Video Recording
             </div>
@@ -240,9 +244,10 @@ export default function SurgicalSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="surgical-management-of-lms" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
+          <article id="perspectives-on-surgical-management-of-lms-sarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-teal-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-600">
               Video Recording
             </div>
@@ -296,6 +301,7 @@ export default function SurgicalSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Video
             </a>
+            <CopyEntryLink id="perspectives-on-surgical-management-of-lms-sarcoma" />
           </article>
         </div>
       </div>

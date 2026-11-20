@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function GeneralInfoSarcomaCareSection() {
   return (
@@ -24,7 +25,7 @@ export default function GeneralInfoSarcomaCareSection() {
           in the field.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
+          <article id="patient-learning-hour-sarcoma-and-its-treatment" className="share-entry flex h-full flex-col rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-600">
               YouTube Podcast
             </div>
@@ -80,9 +81,10 @@ export default function GeneralInfoSarcomaCareSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="patient-learning-hour-sarcoma-and-its-treatment" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
+          <article id="treatment-of-leiomyosarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-600">
               YouTube Podcast
             </div>
@@ -138,9 +140,10 @@ export default function GeneralInfoSarcomaCareSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="treatment-of-leiomyosarcoma" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
+          <article id="ucla-nlmsf-patient-family-lms-education-symposium" className="share-entry flex h-full flex-col rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-600">
               YouTube Podcast
             </div>
@@ -193,6 +196,7 @@ export default function GeneralInfoSarcomaCareSection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="ucla-nlmsf-patient-family-lms-education-symposium" />
           </article>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CopyEntryLink from "@/components/CopyEntryLink";
 
 export default function PathologySection() {
   return (
@@ -19,7 +20,7 @@ export default function PathologySection() {
           sarcomas, discussing diagnostic techniques and recent research.
         </p>
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
+          <article id="perspectives-on-pathology-and-recent-research" className="share-entry flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">
               YouTube Podcast
             </div>
@@ -73,9 +74,10 @@ export default function PathologySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="perspectives-on-pathology-and-recent-research" />
           </article>
 
-          <article className="flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
+          <article id="pathology-basic-lecture-on-pathology-of-sarcoma" className="share-entry flex h-full flex-col rounded-2xl border border-indigo-100 bg-white p-5 shadow-sm">
             <div className="mb-3 inline-flex w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">
               YouTube Podcast
             </div>
@@ -129,6 +131,7 @@ export default function PathologySection() {
             >
               <i className="fas fa-play-circle" aria-hidden /> Watch Podcast
             </a>
+            <CopyEntryLink id="pathology-basic-lecture-on-pathology-of-sarcoma" />
           </article>
         </div>
       </div>
