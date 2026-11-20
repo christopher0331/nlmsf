@@ -490,3 +490,121 @@
   margin: 1rem 0 0;
   font-weight: 600;
 }
+
+
+/* 2027 Save the Date */
+.irr-page .section-save-the-date .nav-link {
+  border-left-color: #6b46c1;
+}
+
+.irr-page .save-the-date-2027-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #ddd6fe;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f5f3ff, #ffffff);
+  box-shadow: 0 4px 16px rgba(76, 29, 149, 0.1);
+}
+
+.irr-page .save-the-date-2027-thumb {
+  flex: 0 0 11rem;
+  display: block;
+  line-height: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(49, 16, 85, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.irr-page .save-the-date-2027-thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(49, 16, 85, 0.22);
+}
+
+.irr-page .save-the-date-2027-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.irr-page .save-the-date-2027-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.irr-page .save-the-date-2027-kicker {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b46c1;
+}
+
+.irr-page .save-the-date-2027-title {
+  margin: 0.4rem 0 0.75rem;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #4c1d95;
+}
+
+.irr-page .save-the-date-2027-detail {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.irr-page .save-the-date-2027-audience {
+  display: inline-block;
+  margin: 0.9rem 0 0;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  background: #4c1d95;
+  color: #fde68a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.irr-page .save-the-date-2027-download {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.15rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: 0.5rem;
+  background: #6b46c1;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(107, 70, 193, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.irr-page .save-the-date-2027-download:hover {
+  background: #4c1d95;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .irr-page .save-the-date-2027-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .irr-page .save-the-date-2027-thumb {
+    flex: none;
+    width: min(14rem, 70%);
+    margin: 0 auto;
+  }
+
+  .irr-page .save-the-date-2027-download {
+    justify-content: center;
+  }
+}

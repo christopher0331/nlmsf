@@ -28,6 +28,9 @@ export default function InternationalResearchRoundtablePage() {
       <div className="wp-lms-container">
         <aside className="page-nav">
           <h3 className="sidebar-title">Page Contents</h3>
+          <div className="nav-section section-save-the-date">
+            <a href="#save-the-date-2027" className="nav-link">2027 Save the Date</a>
+          </div>
           <div className="nav-section section-intro">
             <a href="#intro" className="nav-link">Introduction</a>
           </div>
@@ -49,6 +52,40 @@ export default function InternationalResearchRoundtablePage() {
         </aside>
 
         <div className="main-content">
+          <div id="save-the-date-2027" className="content-section">
+            <h2 className="section-title indigo">Save the Date</h2>
+            <div className="save-the-date-2027-card">
+              <a
+                href="/documents/roundtable/nlmsf-2027-boston-roundtable-save-the-date.pdf"
+                className="save-the-date-2027-thumb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/images/roundtable/nlmsf-2027-boston-roundtable-save-the-date.jpg"
+                  alt="Save the Date flyer for the 9th Annual Roundtable, October 8-9, 2027, Boston, Massachusetts, for researchers only"
+                  width={800}
+                  height={1035}
+                />
+              </a>
+              <div className="save-the-date-2027-body">
+                <p className="save-the-date-2027-kicker">Save the Date</p>
+                <h3 className="save-the-date-2027-title">9th Annual Roundtable</h3>
+                <p className="save-the-date-2027-detail">October 8-9, 2027</p>
+                <p className="save-the-date-2027-detail">Boston, Massachusetts</p>
+                <p className="save-the-date-2027-audience">For Researchers Only</p>
+                <a
+                  href="/documents/roundtable/nlmsf-2027-boston-roundtable-save-the-date.pdf"
+                  className="save-the-date-2027-download"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download the Save the Date (PDF)
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div id="intro" className="content-section">
             <h2 className="section-title indigo">International LMS Research Roundtable</h2>
             <div className="content-panel indigo">
