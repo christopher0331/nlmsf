@@ -55,6 +55,60 @@ function MemberInTheNews({
   );
 }
 
+function MemberCard({
+  member,
+  variant,
+  onOpen,
+}: {
+  member: Member;
+  variant: "leadership" | "medical" | "board";
+  onOpen: (member: Member) => void;
+}) {
+  const cardClass =
+    variant === "leadership"
+      ? "nlmsf-member-leadership"
+      : variant === "medical"
+        ? "nlmsf-member-medical"
+        : "nlmsf-member-board";
+  const buttonClass =
+    variant === "leadership"
+      ? "nlmsf-read-more-leadership"
+      : variant === "medical"
+        ? "nlmsf-read-more-medical"
+        : "nlmsf-read-more-board";
+
+  return (
+    <div id={member.id} className={`nlmsf-member-grid-card ${cardClass}`}>
+      <Image
+        src={member.imageUrl}
+        alt={member.name}
+        className="nlmsf-member-image"
+        width={240}
+        height={240}
+      />
+      <h3 className="nlmsf-member-name">{member.name}</h3>
+      <p className="nlmsf-member-role">
+        {member.role.split("\n").map((line, index) => (
+          <span key={`${member.id}-role-${index}`}>
+            {line}
+            {index < member.role.split("\n").length - 1 ? <br /> : null}
+          </span>
+        ))}
+      </p>
+      {member.featured ? (
+        <MemberInTheNews items={member.featured} withAnchor />
+      ) : null}
+      <button
+        className={`nlmsf-read-more ${buttonClass}`}
+        onClick={() => onOpen(member)}
+        type="button"
+      >
+        Read Full Bio
+      </button>
+    </div>
+  );
+}
+
 export default function OurBoardClient() {
   const medicalBoardMembers = useMemo<Member[]>(
     () => [
@@ -142,21 +196,6 @@ export default function OurBoardClient() {
     [],
   );
 
-  const treasuryMembers = useMemo<Member[]>(
-    () => [
-      {
-        id: "rita-pecuch",
-        name: "Rita Pecuch",
-        role: "NLMSF Treasurer",
-        imageUrl: "/images/Rita_Pecuch.png",
-        bio: [
-          "Rita Pecuch is a Senior Data Configuration Engineer in Data Configuration Engineering within Testing, Innovation & Data Enablement (TIDE) at Takeda Pharmaceuticals Company Limited.",
-        ],
-      },
-    ],
-    [],
-  );
-
   const medicalLeadershipMembers = useMemo<Member[]>(
     () => [
       {
@@ -216,18 +255,6 @@ export default function OurBoardClient() {
         ],
       },
       {
-        id: "dale-ayscue",
-        name: "Dale Ayscue",
-        role: "Community Outreach",
-        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2022/07/asy-284x300.jpg",
-        bio: [
-          "I am a survivor of sarcoma for the past 13 years. I also have a FB group - Sarcoma (Cancer) Awareness to help others and pay it forward, and now as a Board Member of the NLMSF, I feel even more empowered to support patients and their families.",
-          "I have appreciated the NLMSF's approach and professional integrity in the work being done for support, education, and research on behalf of the sarcoma community and I am happy to be a part.",
-          "I am still employed, and I am a grandfather of 2 granddaughters. I am also an amputee of my left leg because of sarcoma cancer.",
-          '"Hope is the only thing stronger than fear." is my message to all.',
-        ],
-      },
-      {
         id: "david-boles",
         name: "David Boles",
         role: "Community Outreach",
@@ -251,17 +278,6 @@ export default function OurBoardClient() {
         ],
       },
       {
-        id: "jim-matthews",
-        name: "Jim Matthews",
-        role: "Community Awareness Coordinator",
-        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/01/JimMatthews-300x300.jpg",
-        bio: [
-          "I hail from New Jersey, and am a graduate in Economics from Seton Hall University. I am long time survivor, having been diagnosed in 1996 and treated at Memorial Sloan Kettering in NY. I was one of the original members of the National Leiomyosarcoma Foundation, having attend their first HugFest in Lancaster, PA.",
-          "I am blessed with a loving family and blessed to be affiliated with the NLMSF.",
-          "I believe in the goodness of my fellow board members and want to help the LMS Community through collaborative Foundation support and advocacy in to honor the legacy of Mr. Edmund Hoag and his board members - carrying on their original mission of supporting the LMS patients and their families.",
-        ],
-      },
-      {
         id: "michele-przypyszny",
         name: "Michele Przypyszny",
         role: "Community Outreach",
@@ -280,18 +296,6 @@ export default function OurBoardClient() {
         bio: [
           "Born and raised in Michigan, where I spend half the year, and a Florida snowbird in the winter months. I'm a 20-year survivor of thyroid cancer and an 18-year survivor of uterine LMS. The University of Michigan has played a vital role in my journey and survival.",
           "I believe strongly in the power of second opinions and staying informed with the latest research, especially when it comes to uterine LMS. Every new day is a blessing—one I cherish with my family and use to support and uplift others navigating their own cancer journeys.",
-        ],
-      },
-      {
-        id: "chandalyn-williams",
-        name: "Chandalyn Williams",
-        role: "Community Outreach",
-        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2021/02/BM-300x300.jpg",
-        bio: [
-          "Chandalyn Williams is a highly motivated and experienced executive professional, regarded for her ability to deliver outstanding results with the highest degree of expertise and professionalism.",
-          "She holds a Bachelor of Arts degree in Business Administration and Communication Management from Jones International University, graduating Cum Laude; a Master of Business Administration from Texas Woman's University and; is currently within one year of completing her Doctorate of Business Administration at Trident International University.",
-          "Chandalyn has served as an inpatient volunteer with M. D. Anderson Cancer Center, advocated on public platforms such as Rare Disease Day at the Texas State Capitol and led annual 5K Run/Walks for over nine years in support of Leiomyosarcoma (LMS) Cancer research.",
-          '"When my mother, Cynthia Solomon Holmes, was diagnosed on April 8, 2010 with Leiomyosarcoma (LMS) after visiting her doctor for a persistent cough, I was not prepared for how my world as I knew it would be turned upside down. Watching my mother fight this disease with the strength and vigor I knew to be her was an overwhelmingly painful experience. I felt physically helpless – but I knew how to pray. For her, my family and me. Following only a three-month battle with this dragon, my mother succumbed to the disease, passing away at the age of 52. I vowed to turn my personal tragedy into something that could be triumph for others who are faced with this disease through the creation of The Cynthia Solomon Holmes Foundation. I pray that through my efforts, individuals are inspired to support those battling this disease and in the daily fight for their right to live!" ~ Chandalyn Williams',
         ],
       },
     ],
@@ -313,17 +317,6 @@ export default function OurBoardClient() {
         ],
       },
       {
-        id: "kelly-murphy",
-        name: "Kelly Murphy",
-        role: "Technical Advisor",
-        imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/08/kelly_murphy-1-scaled.jpeg",
-        bio: [
-          "At 34, while building a career as a data scientist with a passion for discovery, I was diagnosed with retroperitoneal leiomyosarcoma. Since then, I have endured surgery, radiation, chemotherapy, and the loss of my ability to have children, but I refuse to let this disease take my purpose.",
-          "Together with my partner, I founded Light in the Dark, an AI-driven effort to uncover new treatments and bring hope to others facing LMS. Partnering with NLMSF is the first step in turning this vision into reality.",
-          "My journey has been painful and turbulent, yet it has ignited an unshakable resolve: to fight not only for my life but for every life touched by this disease. I am determined to ensure no one walks this road alone and to help light the path toward a cure.",
-        ],
-      },
-      {
         id: "taylor-tomlinson",        name: "Taylor Tomlinson",
         role: "Technical Advisor",
         imageUrl: "https://media.nlmsf.org/wp-content/uploads/2025/09/taylor-tomlinson.webp",
@@ -337,6 +330,24 @@ export default function OurBoardClient() {
       },
     ],
     [],
+  );
+
+  const boardMembers = useMemo<Member[]>(
+    () => [
+      {
+        id: "rita-pecuch",
+        name: "Rita Pecuch",
+        role: "NLMSF Treasurer",
+        imageUrl: "/images/Rita_Pecuch.png",
+        bio: [
+          "Rita Pecuch is a Senior Data Configuration Engineer in Data Configuration Engineering within Testing, Innovation & Data Enablement (TIDE) at Takeda Pharmaceuticals Company Limited.",
+        ],
+      },
+      ...directorMembers,
+      ...outreachMembers,
+      ...supportMembers,
+    ],
+    [directorMembers, outreachMembers, supportMembers],
   );
 
   const [activeMember, setActiveMember] = useState<Member | null>(null);
@@ -433,24 +444,6 @@ export default function OurBoardClient() {
           <aside className="nlmsf-sidebar">
             <div className="nlmsf-sidebar-container">
               <div className="nlmsf-sidebar-navigation">
-                <h3 className="nlmsf-sidebar-title">Medical Board Members</h3>
-                <ul className="nlmsf-sidebar-nav-list">
-                  {medicalBoardMembers.map((member) => (
-                    <li key={member.id}>
-                      <a
-                        href={`#${member.id}`}
-                        className="nlmsf-sidebar-link nlmsf-sidebar-link-leadership"
-                      >
-                        {member.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="nlmsf-sidebar-container">
-              <div className="nlmsf-sidebar-navigation">
                 <h3 className="nlmsf-sidebar-title">Our Board Members</h3>
 
                 <h4 className="nlmsf-category-title nlmsf-category-title-leadership">
@@ -465,26 +458,6 @@ export default function OurBoardClient() {
                       Annie Achee
                     </a>
                   </li>
-                </ul>
-
-                <h4 className="nlmsf-category-title nlmsf-category-title-treasury">
-                  Treasury
-                </h4>
-                <ul className="nlmsf-sidebar-nav-list">
-                  <li>
-                    <a
-                      href="#rita-pecuch"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-treasury"
-                    >
-                      Rita Pecuch
-                    </a>
-                  </li>
-                </ul>
-
-                <h4 className="nlmsf-category-title nlmsf-category-title-medical">
-                  Medical
-                </h4>
-                <ul className="nlmsf-sidebar-nav-list">
                   <li>
                     <a
                       href="#mitchell-achee"
@@ -495,118 +468,20 @@ export default function OurBoardClient() {
                   </li>
                 </ul>
 
-                <h4 className="nlmsf-category-title nlmsf-category-title-director">
-                  Directors
+                <h4 className="nlmsf-category-title nlmsf-category-title-board">
+                  Board
                 </h4>
                 <ul className="nlmsf-sidebar-nav-list">
-                  <li>
-                    <a
-                      href="#carol-rowe"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-director"
-                    >
-                      Carol Rowe
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#chris-rowe"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-director"
-                    >
-                      Chris Rowe
-                    </a>
-                  </li>
-                </ul>
-
-                <h4 className="nlmsf-category-title nlmsf-category-title-outreach">
-                  Community Outreach
-                </h4>
-                <ul className="nlmsf-sidebar-nav-list">
-                  <li>
-                    <a
-                      href="#alex-aguilera"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      Alex Aguilera
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#dale-ayscue"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      Dale Ayscue
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#david-boles"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      David Boles
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#sharon-gorrell"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      Sharon Gorrell
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#jim-matthews"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      Jim Matthews
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#christina-raicevich"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      Christina Raicevich
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#chandalyn-williams"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-outreach"
-                    >
-                      Chandalyn Williams
-                    </a>
-                  </li>
-                </ul>
-
-                <h4 className="nlmsf-category-title nlmsf-category-title-support">
-                  Support &amp; Services
-                </h4>
-                <ul className="nlmsf-sidebar-nav-list">
-                  <li>
-                    <a
-                      href="#christopher-hancock"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-support"
-                    >
-                      Christopher Hancock
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#kelly-murphy"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-support"
-                    >
-                      Kelly Murphy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#taylor-tomlinson"
-                      className="nlmsf-sidebar-link nlmsf-sidebar-link-support"
-                    >
-                      Taylor Tomlinson
-                    </a>
-                  </li>
+                  {boardMembers.map((member) => (
+                    <li key={member.id}>
+                      <a
+                        href={`#${member.id}`}
+                        className="nlmsf-sidebar-link nlmsf-sidebar-link-board"
+                      >
+                        {member.name}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -640,237 +515,91 @@ export default function OurBoardClient() {
                 </ul>
               </div>
             </div>
+
+            <div className="nlmsf-sidebar-container">
+              <div className="nlmsf-sidebar-navigation">
+                <h3 className="nlmsf-sidebar-title">Medical Advisory Board</h3>
+                <ul className="nlmsf-sidebar-nav-list">
+                  {medicalBoardMembers.map((member) => (
+                    <li key={member.id}>
+                      <a
+                        href={`#${member.id}`}
+                        className="nlmsf-sidebar-link nlmsf-sidebar-link-medical"
+                      >
+                        {member.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </aside>
 
           <div className="nlmsf-board-content">
-            <div className="medical-board-header">
-              <h2>Medical Board</h2>
-              <p>
-                World-renowned sarcoma experts who guide our research priorities
-                and ensure clinical accuracy
-              </p>
-            </div>
-
-            <div className="nlmsf-members-grid medical-board-grid">
-              {medicalBoardMembers.map((member) => (
-                <div
-                  key={member.id}
-                  id={member.id}
-                  className="nlmsf-member-grid-card nlmsf-member-medical"
-                >
-                  <Image
-                    src={member.imageUrl}
-                    alt={member.name}
-                    className="nlmsf-member-image"
-                    width={240}
-                    height={240}
-                  />
-                  <h3 className="nlmsf-member-name">{member.name}</h3>
-                  <p className="nlmsf-member-role">
-                    {member.role.split("\n").map((line, index) => (
-                      <span key={`${member.id}-role-${index}`}>
-                        {line}
-                        <br />
-                      </span>
-                    ))}
-                  </p>
-                  <button
-                    className="nlmsf-read-more nlmsf-read-more-medical"
-                    onClick={() => openModal(member)}
-                    type="button"
-                  >
-                    Read Full Bio
-                  </button>
-                </div>
-              ))}
-            </div>
-
             <div className="board-section-header">
               <h2>Our Board</h2>
             </div>
 
             <div className="nlmsf-testimonial-section nlmsf-section-leadership">
               <h3 className="nlmsf-section-title">Leadership</h3>
-              <div className="nlmsf-members-grid">
+              <div className="nlmsf-members-grid nlmsf-members-grid-featured">
                 {leadershipMembers.map((member) => (
-                  <div
+                  <MemberCard
                     key={member.id}
-                    id={member.id}
-                    className="nlmsf-member-grid-card nlmsf-member-leadership"
-                  >
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      className="nlmsf-member-image"
-                      width={240}
-                      height={240}
-                    />
-                    <h3 className="nlmsf-member-name">{member.name}</h3>
-                    <p className="nlmsf-member-role">{member.role}</p>
-                    {member.featured ? (
-                      <MemberInTheNews items={member.featured} withAnchor />
-                    ) : null}
-                    <button
-                      className="nlmsf-read-more nlmsf-read-more-leadership"
-                      onClick={() => openModal(member)}
-                      type="button"
-                    >
-                      Read Full Bio
-                    </button>
-                  </div>
+                    member={member}
+                    variant="leadership"
+                    onOpen={openModal}
+                  />
                 ))}
-              </div>
-            </div>
-
-            <div className="nlmsf-testimonial-section nlmsf-section-treasury">
-              <h3 className="nlmsf-section-title">Treasury</h3>
-              <div className="nlmsf-members-grid">
-                {treasuryMembers.map((member) => (
-                  <div
-                    key={member.id}
-                    id={member.id}
-                    className="nlmsf-member-grid-card nlmsf-member-treasury"
-                  >
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      className="nlmsf-member-image"
-                      width={240}
-                      height={240}
-                    />
-                    <h3 className="nlmsf-member-name">{member.name}</h3>
-                    <p className="nlmsf-member-role">{member.role}</p>
-                    <button
-                      className="nlmsf-read-more nlmsf-read-more-treasury"
-                      onClick={() => openModal(member)}
-                      type="button"
-                    >
-                      Read Full Bio
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="nlmsf-testimonial-section nlmsf-section-medical">
-              <h3 className="nlmsf-section-title">Medical</h3>
-              <div className="nlmsf-members-grid">
                 {medicalLeadershipMembers.map((member) => (
-                  <div
+                  <MemberCard
                     key={member.id}
-                    id={member.id}
-                    className="nlmsf-member-grid-card nlmsf-member-medical"
-                  >
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      className="nlmsf-member-image"
-                      width={240}
-                      height={240}
-                    />
-                    <h3 className="nlmsf-member-name">{member.name}</h3>
-                    <p className="nlmsf-member-role">{member.role}</p>
-                    <button
-                      className="nlmsf-read-more nlmsf-read-more-medical"
-                      onClick={() => openModal(member)}
-                      type="button"
-                    >
-                      Read Full Bio
-                    </button>
-                  </div>
+                    member={member}
+                    variant="medical"
+                    onOpen={openModal}
+                  />
                 ))}
               </div>
             </div>
 
-            <div className="nlmsf-testimonial-section nlmsf-section-director">
-              <h3 className="nlmsf-section-title">Directors</h3>
-              <div className="nlmsf-members-grid">
-                {directorMembers.map((member) => (
-                  <div
+            <div className="nlmsf-testimonial-section nlmsf-section-board">
+              <h3 className="nlmsf-section-title">Board</h3>
+              <div className="nlmsf-members-grid nlmsf-members-grid-shared">
+                {boardMembers.map((member) => (
+                  <MemberCard
                     key={member.id}
-                    id={member.id}
-                    className="nlmsf-member-grid-card nlmsf-member-director"
-                  >
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      className="nlmsf-member-image"
-                      width={240}
-                      height={240}
-                    />
-                    <h3 className="nlmsf-member-name">{member.name}</h3>
-                    <p className="nlmsf-member-role">{member.role}</p>
-                    <button
-                      className="nlmsf-read-more nlmsf-read-more-director"
-                      onClick={() => openModal(member)}
-                      type="button"
-                    >
-                      Read Full Bio
-                    </button>
-                  </div>
+                    member={member}
+                    variant="board"
+                    onOpen={openModal}
+                  />
                 ))}
               </div>
             </div>
 
-            <div className="nlmsf-testimonial-section nlmsf-section-outreach">
-              <h3 className="nlmsf-section-title">Community Outreach</h3>
-              <div className="nlmsf-members-grid">
-                {outreachMembers.map((member) => (
-                  <div
-                    key={member.id}
-                    id={member.id}
-                    className="nlmsf-member-grid-card nlmsf-member-outreach"
-                  >
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      className="nlmsf-member-image"
-                      width={240}
-                      height={240}
-                    />
-                    <h3 className="nlmsf-member-name">{member.name}</h3>
-                    <p className="nlmsf-member-role">{member.role}</p>
-                    <button
-                      className="nlmsf-read-more nlmsf-read-more-outreach"
-                      onClick={() => openModal(member)}
-                      type="button"
-                    >
-                      Read Full Bio
-                    </button>
-                  </div>
-                ))}
+            <section
+              id="medical-advisory-board"
+              className="nlmsf-advisory-band"
+              aria-labelledby="medical-advisory-heading"
+            >
+              <div className="medical-board-header">
+                <h2 id="medical-advisory-heading">Medical Advisory Board</h2>
+                <p>
+                  World-renowned sarcoma experts who guide our research priorities
+                  and ensure clinical accuracy
+                </p>
               </div>
-            </div>
 
-            <div className="nlmsf-testimonial-section nlmsf-section-support">
-              <h3 className="nlmsf-section-title">Support &amp; Services</h3>
-              <div className="nlmsf-members-grid">
-                {supportMembers.map((member) => (
-                  <div
+              <div className="nlmsf-members-grid nlmsf-members-grid-shared">
+                {medicalBoardMembers.map((member) => (
+                  <MemberCard
                     key={member.id}
-                    id={member.id}
-                    className="nlmsf-member-grid-card nlmsf-member-support"
-                  >
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      className="nlmsf-member-image"
-                      width={240}
-                      height={240}
-                    />
-                    <h3 className="nlmsf-member-name">{member.name}</h3>
-                    <p className="nlmsf-member-role">{member.role}</p>
-                    <button
-                      className="nlmsf-read-more nlmsf-read-more-support"
-                      onClick={() => openModal(member)}
-                      type="button"
-                    >
-                      Read Full Bio
-                    </button>
-                  </div>
+                    member={member}
+                    variant="medical"
+                    onOpen={openModal}
+                  />
                 ))}
               </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>

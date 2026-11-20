@@ -179,6 +179,31 @@
   justify-content: center;
 }
 
+.our-board-page .nlmsf-members-grid-shared {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+}
+
+.our-board-page .nlmsf-members-grid-featured {
+  grid-template-columns: 1fr;
+}
+
+.our-board-page .nlmsf-members-grid-featured .nlmsf-member-image {
+  width: 10.5rem;
+  height: 10.5rem;
+}
+
+.our-board-page .nlmsf-advisory-band {
+  margin-top: 3.5rem;
+  padding: 2rem 0.25rem 2.25rem;
+  background: #faf5ff;
+  border: 1px solid #e9d5ff;
+  border-radius: 1rem;
+}
+
+.our-board-page .nlmsf-advisory-band .medical-board-header {
+  margin-top: 0;
+}
+
 @media (min-width: 640px) {
   .our-board-page .nlmsf-members-grid {
     gap: 2rem;
@@ -213,6 +238,12 @@
 .our-board-page .nlmsf-member-support {
   background-color: #fdf2f8;
   border-color: #fbcfe8;
+}
+
+/* Shared board tier */
+.our-board-page .nlmsf-member-board {
+  background-color: #f8fafc;
+  border-color: #e2e8f0;
 }
 
 /* Directors - Indigo */
@@ -338,6 +369,14 @@
   background-color: #3730a3;
 }
 
+.our-board-page .nlmsf-read-more-board {
+  background-color: #475569;
+}
+
+.our-board-page .nlmsf-read-more-board:hover {
+  background-color: #334155;
+}
+
 .our-board-page .nlmsf-section-leadership .nlmsf-section-title {
   background: linear-gradient(to right, #2563eb, #1d4ed8);
   -webkit-background-clip: text;
@@ -376,6 +415,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   border-bottom: 2px solid #c7d2fe;
+}
+
+.our-board-page .nlmsf-section-board .nlmsf-section-title {
+  color: #334155;
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .our-board-page .nlmsf-member-bio {
@@ -547,6 +591,17 @@
   border-left-color: #4338ca;
 }
 
+.our-board-page .nlmsf-sidebar-link-board {
+  color: #334155;
+  border-left-color: #cbd5e1;
+}
+
+.our-board-page .nlmsf-sidebar-link-board:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border-left-color: #475569;
+}
+
 .our-board-page .nlmsf-category-title {
   font-size: 1.125rem;
   font-weight: 600;
@@ -575,6 +630,10 @@
 
 .our-board-page .nlmsf-category-title-director {
   color: #4338ca;
+}
+
+.our-board-page .nlmsf-category-title-board {
+  color: #334155;
 }
 
 .our-board-page .nlmsf-resources {
@@ -702,6 +761,10 @@
 
 /* Responsive Styles */
 @media (min-width: 768px) {
+  .our-board-page .nlmsf-members-grid-featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .our-board-page .nlmsf-hero-section {
     padding: 4rem 2rem;
   }
